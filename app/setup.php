@@ -12,10 +12,10 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
 
-    wp_enqueue_style('typography/gotham.css','https://cloud.typography.com/6831932/618846/css/fonts.css', false, null);
+    wp_enqueue_style('typography/gotham.css', 'https://cloud.typography.com/6831932/618846/css/fonts.css', false, null);
 
     wp_enqueue_style('ut/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_script('ut/main.js', asset_path('scripts/main.js'), [],null, true);
+    wp_enqueue_script('ut/main.js', asset_path('scripts/main.js'), [], null, true);
 
     wp_enqueue_style('ut/header.css', asset_path('styles/header.css'), false, null);
     wp_enqueue_script('ut/header.js', asset_path('scripts/header.js'), [], null, true);
@@ -32,7 +32,6 @@ add_action('wp_enqueue_scripts', function () {
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
-
 }, 100);
 
 add_filter('upload_dir', function ($upload) {
@@ -46,7 +45,7 @@ add_filter('upload_dir', function ($upload) {
 /**
  * Image Sizes
  */
-add_image_size('hero', 1364, 521, FALSE);
+add_image_size('hero', 1364, 521, false);
 
 /**
  * Theme setup

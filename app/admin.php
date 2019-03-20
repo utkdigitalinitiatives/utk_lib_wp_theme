@@ -27,7 +27,7 @@ add_action('customize_preview_init', function () {
  * little adjustments to accommodate the fixed wp admin toolbar
  */
 add_action('wp_head', function () {
-    if ( is_admin_bar_showing() ) {
+    if (is_admin_bar_showing()) {
         echo "
             <style type='text/css' media='screen'> 
                 html { 

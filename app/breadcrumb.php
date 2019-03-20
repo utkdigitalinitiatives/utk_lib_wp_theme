@@ -2,9 +2,11 @@
 
 namespace App;
 
-class Subsite_Breadcumb {
+class Subsite_Breadcumb
+{
 
-    public static function breadcrumb_inline($theme_location = 'subsite') {
+    public static function breadcrumb_inline($theme_location = 'subsite')
+    {
 
         $details = get_blog_details();
 
@@ -19,13 +21,11 @@ class Subsite_Breadcumb {
         foreach ($items as $item) {
             if ($item->current_item_ancestor) {
                 $crumbs[] = "<a href=\"{$item->url}\" title=\"{$item->title}\">{$item->title}</a>";
-            } else if ($item->current) {
+            } elseif ($item->current) {
                 $crumbs[] = "<span class='current-menu-item'>{$item->title}</span>";
             }
         }
 
         echo implode('<span class="icon-angle-right"></span>', $crumbs);
-
     }
-
 }
