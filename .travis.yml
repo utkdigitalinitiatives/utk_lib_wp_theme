@@ -36,5 +36,6 @@ install:
 
 script:
   - composer install
+  - composer test
   - yarn
   - yarn run "build:production"
