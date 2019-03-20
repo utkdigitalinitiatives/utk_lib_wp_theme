@@ -416,7 +416,7 @@ class WalkerBreadcrumb extends \Walker_Nav_Menu
      * @param int      $depth  Depth of menu item. Used for padding.
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      */
-    å
+
     public function startLevel(&$output, $depth = 0, $args = array())
     {
 
@@ -679,13 +679,13 @@ class WalkerBreadcrumb extends \Walker_Nav_Menu
 }
 
 // standard walker for subsite menu
-if (! class_exists('WP_Bootstrap_Navwalker')) {
+if (! class_exists('WordPressBootstrapNavwalker')) {
     /**
-     * WP_Bootstrap_Navwalker class.
+     * WordPressBootstrapNavwalker class.
      *
      * @extends Walker_Nav_Menu
      */
-    class WP_Bootstrap_Navwalker extends \Walker_Nav_Menu
+    class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
     {
         /**
          * Starts the list before the elements are added.

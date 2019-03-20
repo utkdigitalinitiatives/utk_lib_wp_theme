@@ -4,8 +4,8 @@
 
   $defaults = [
    'menu'         => $subsite_menu_slug,
-    'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-   'walker'       => new \App\WP_Bootstrap_Navwalker(),
+    'fallback_cb' => 'WordPressBootstrapNavwalker::fallback',
+   'walker'       => new \App\WordPressBootstrapNavwalker(),
   ];
 
 @endphp

@@ -1,6 +1,6 @@
 @php
 
-    use App\Preprocess_Subsite;
+    use App\PreprocessSubsite;
 
     $subsite_details = get_blog_details(get_current_blog_id());
     $subsite_path = $subsite_details->path;
@@ -8,21 +8,9 @@
     $post_id = get_the_ID();
     $is_front = is_front_page();
 
-    $initial_menu_trail = Preprocess_Subsite::prepareSubsiteMenu($post_id, $subsite_menu_slug);
+    $initial_menu_trail = PreprocessSubsite::prepareSubsiteMenu($post_id, $subsite_menu_slug);
     $initial_depth = count($initial_menu_trail) - 1;
     $initial_menu_id = $initial_menu_trail[$initial_depth]['menu_id'];
-
-    /*
-    if (!$is_front) :
-      $initial_menu_trail = Preprocess_Subsite::prepareSubsiteMenu($post_id, $subsite_menu_slug);
-      $initial_depth = count($initial_menu_trail) - 1;
-      $initial_menu_id = $initial_menu_trail[$initial_depth]['menu_id'];
-    else :
-      $initial_menu_trail = [];
-      $initial_depth = 0;
-      $initial_menu_id = 0;
-    endif;
-    */
 
     $defaults = [
      'menu'     => $subsite_menu_slug

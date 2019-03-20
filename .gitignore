@@ -30,6 +30,7 @@ dist
 dist/*
 vendor
 vendor/*
+!**/vendor
 
 # Jetbrains IDE Crap
 .idea
