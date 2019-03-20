@@ -17,8 +17,7 @@ matrix:
 addons:
   apt:
     packages:
-      - yarn
-      - node
+      - nodejs
 
 cache:
   apt: true
@@ -29,7 +28,6 @@ cache:
 
 before_install:
   - composer self-update
-  - source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION && nvm use $TRAVIS_NODE_VERSION
   - export PATH=$HOME/.yarn/bin:$PATH && travis_retry curl -o- -L https://yarnpkg.com/install.sh | bash
 
 install:
@@ -38,8 +36,5 @@ install:
   - composer install -o --prefer-dist --no-interaction
 
 script:
-  - yarn run test
-  - yarn run build
-  - yarn run rmdist
-  - yarn run "build:production"
   - composer test
+  - yarn run "build:production"
