@@ -25,8 +25,12 @@ wp-rocket-config/*
 advanced-cache.php
 wp-cache-config.php
 
+# Sage 9 Theme
 dist
 dist/*
-
 vendor
 vendor/*
+
+# Jetbrains IDE Crap
+.idea
+.idea/*
