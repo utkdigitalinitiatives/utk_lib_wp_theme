@@ -1,0 +1,12 @@
+.page-body--content--body {
+  ul,
+  ol {
+    &:not(.wp-block-gallery) {
+      li {
+        @extend p;
+
+        margin-bottom: $golden-ratio-0 !important;
+      }
+    }
+  }
+}

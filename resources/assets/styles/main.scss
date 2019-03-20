@@ -1,0 +1,50 @@
+@import "common/variables";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+
+// imports Fontello icons
+@import "../vendor/fontello/css/fontello.css";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+/** Import theme styles */
+@import "common/global";
+@import "common/bootstrap-vars";
+@import "common/mixins";
+@import "components/breadcrumb";
+@import "components/buttons";
+@import "components/blockquote";
+@import "components/callouts";
+@import "components/comments";
+@import "components/event-footer";
+@import "components/forms";
+@import "components/header-subsite-menu";
+@import "components/headings";
+@import "components/img";
+@import "components/list";
+@import "components/news-footer";
+@import "components/notices";
+@import "components/options";
+@import "components/paragraph";
+@import "components/wp-classes";
+@import "gutenburg/block-image";
+@import "layouts/body-content";
+@import "layouts/call-to-action";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/sections";
+@import "layouts/footer";
+@import "layouts/footer-libraries";
+@import "layouts/footer-system";
+@import "layouts/footer-university";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/subsite-menu";
+@import "layouts/tinymce";
+@import "wordpress/admin";

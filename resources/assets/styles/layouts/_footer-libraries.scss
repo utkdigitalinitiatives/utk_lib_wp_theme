@@ -1,0 +1,143 @@
+.footer-libraries {
+  &--inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--anchor {
+    width: 303px;
+
+    p {
+      font-size: $type-2;
+    }
+  }
+
+  &--identity--brand {
+    display: flex;
+
+    &--logo {
+      display: block;
+      width: $golden-ratio-4;
+
+      img {
+        width: $golden-ratio-4;
+        height: $golden-ratio-4;
+      }
+    }
+
+    &--unit {
+      display: block;
+      font-size: $type-3;
+      font-weight: 700;
+    }
+  }
+
+  &--options {
+    .options--item {
+      color: $smokeyx;
+      background-color: $gray-0 !important;
+      box-shadow: $box-shadow-inset;
+      margin: 0 0 $golden-ratio-2;
+      width: auto;
+      float: left;
+      clear: left;
+
+      &:visited,
+      &:focus,
+      &:hover {
+        color: $smokeyx;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &--menu-extras {
+    ul.menu {
+      padding: 0;
+      margin: 0;
+
+      li.menu-item {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-size: $type-1;
+
+        @include standard-body-link();
+      }
+    }
+  }
+
+  &--menu {
+    flex-grow: 1;
+
+    #menu-drawer {
+      display: flex;
+
+      > li {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+
+      /*
+       * target second level item as title
+       */
+      > li > ul > li > a {
+        display: block;
+        font-weight: 700;
+        font-size: $type-3;
+        margin-bottom: $golden-ratio-0;
+        color: $smokeyx !important;
+      }
+
+      /*
+       * fixes margins on first level lists
+       */
+      > li > ul {
+        margin-bottom: 0;
+      }
+
+      /*
+       * hide fourth level items and deeper
+       */
+      > li > ul > li > ul > li > ul {
+        display: none;
+      }
+
+      /*
+       * fixes margins on multiple lists in columns
+       */
+      > li > ul > li:last-child ul {
+        margin-bottom: 0;
+      }
+    }
+
+    ul.menu {
+      margin: 0;
+      padding: 0;
+
+      li.menu-item {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @include standard-body-link();
+      }
+    }
+
+    ul.dropdown-menu {
+      margin: 0;
+      padding: 0;
+      margin-bottom: $golden-ratio-2;
+
+      li.menu-item {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: $type-2;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.page-body {
+  &--flex {
+    display: flex;
+    flex-direction: row-reverse;
+
+    @include respond(xs, sm) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &--content {
+    width: calc(100% - 332px);
+    position: relative;
+    z-index: 1;
+    margin-bottom: $golden-ratio-3;
+
+    @include standard-body-link();
+
+    @include respond(xs, sm) {
+      width: 100%;
+    }
+  }
+
+  &--aside {
+    width: 303px;
+    margin-right: 29px;
+    position: relative;
+    z-index: 3;
+
+    @include respond(xs, sm) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}

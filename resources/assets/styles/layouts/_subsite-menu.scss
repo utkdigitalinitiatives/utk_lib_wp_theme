@@ -1,0 +1,21 @@
+.preload {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+#utk-subsite-menu {
+  width: 303px;
+}
+
+.subsite-menu-absolute #utk-subsite-menu {
+  .subsite-menu-wrap {
+    transition: $transition-opacity;
+
+    a,
+    a:visited {
+      cursor: default;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+/*
+ * global
+ */
+/*
+ * colors
+ */
+/*
+ * typography
+ */
+/*
+ * font-size for typography
+ */
+/*
+ * incremental spacers by golden ratio
+ */
+/*
+ * transitions
+ */
+/*
+ * box-shadows
+ */
+/*
+ * bootstrap 4 overrides
+ */
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+/*
+ * define bootstrap vars according to externally hosted bootstrap library
+ */
+/*
+ * utilities
+ */
+.font-script {
+  font-family: "bickham-script-pro-3", "clarendon-text-pro", Georgia, Times, "Times New Roman", serif; }
+
+/*
+ * layout
+ */
+#utk-social-slider {
+  overflow: hidden;
+  padding: 0 0 76px;
+  width: 100%;
+  background-color: #fff; }
+  #utk-social-slider .social-slider-title {
+    margin: 0;
+    margin-bottom: 29px;
+    font-size: 23px;
+    text-align: center;
+    font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Gotham-Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400 !important;
+    color: #333; }
+
+.social-slider-icon {
+  display: block;
+  width: 29px;
+  height: 29px;
+  line-height: 29px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  margin-top: 0px;
+  text-align: center; }
+  .social-slider-icon span {
+    line-height: inherit;
+    color: #333;
+    font-size: 15px; }
+
+#utk-social-slider .slick-slider {
+  width: calc(100% + 47px);
+  margin-left: -23.5px; }
+
+#utk-social-slider .slick-dots {
+  margin: 0;
+  bottom: -47px; }
+  #utk-social-slider .slick-dots li button:before {
+    color: #a7a9ac;
+    opacity: 1;
+    font-size: 11px; }
+  #utk-social-slider .slick-dots li.slick-active button:before {
+    color: #ff8200; }
+
+#utk-social-slider .slick-arrow,
+#utk-social-slider .slick-arrow:before {
+  color: #58595b !important;
+  font-family: fontello !important;
+  opacity: 1 !important; }
+  #utk-social-slider .slick-arrow:hover,
+  #utk-social-slider .slick-arrow:before:hover {
+    color: #333 !important;
+    opacity: 1 !important; }
+
+#utk-social-slider .slick-prev:before {
+  content: '\E803'; }
+
+#utk-social-slider .slick-next:before {
+  content: '\E802'; }
+
+#utk-social-slider {
+  position: relative;
+  /*
+   * isolates and hides the second slide of .slick-active class set
+   */
+  /*
+   * general slide styling
+   */ }
+  #utk-social-slider .social-slider-over {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; }
+    #utk-social-slider .social-slider-over .container {
+      position: relative;
+      height: 100%;
+      background-color: transparent;
+      padding: 0; }
+    #utk-social-slider .social-slider-over--block {
+      position: absolute;
+      background-color: transparent;
+      left: calc(((((100% + 30px) - (47px * 3)) / 4)) - 2px);
+      width: calc((((100% - 30px) + (47px * 3)) / 4) + 4px);
+      height: 100%;
+      padding-bottom: 76px;
+      z-index: 1;
+      background-color: #fff;
+      display: flex;
+      align-items: center; }
+      #utk-social-slider .social-slider-over--block h3 {
+        font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Gotham-Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 1.5em;
+        color: #333;
+        text-align: center;
+        flex-grow: 1; }
+        #utk-social-slider .social-slider-over--block h3 span {
+          display: block;
+          text-align: center;
+          font-weight: 700; }
+  #utk-social-slider .slick-track > .slick-current ~ .slick-active {
+    opacity: 1; }
+  #utk-social-slider .slick-track > .slick-current ~ .slick-active ~ .slick-active {
+    opacity: 1; }
+  #utk-social-slider .slick-slide {
+    overflow: hidden;
+    position: relative;
+    font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Gotham-Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    opacity: 1;
+    transition: none !important; }
+    #utk-social-slider .slick-slide .social-slide--inner {
+      display: block;
+      margin: 0 calc(23.5px);
+      background-color: #fff;
+      position: relative; }
+      #utk-social-slider .slick-slide .social-slide--inner a,
+      #utk-social-slider .slick-slide .social-slide--inner a:visited {
+        cursor: pointer; }
+      #utk-social-slider .slick-slide .social-slide--inner .social-slide--metadata {
+        height: 47px;
+        background-color: rgba(51, 51, 51, 0.9);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        color: #fff;
+        justify-content: space-between; }
+        #utk-social-slider .slick-slide .social-slide--inner .social-slide--metadata > div {
+          color: #fff;
+          font-size: 13px;
+          font-weight: 700;
+          line-height: 47px;
+          padding: 0 18px; }
+          #utk-social-slider .slick-slide .social-slide--inner .social-slide--metadata > div > span {
+            color: #e65933;
+            margin-right: 6px; }
+    #utk-social-slider .slick-slide.slick-active {
+      display: block; }
+    #utk-social-slider .slick-slide img {
+      width: 100%;
+      height: auto; }

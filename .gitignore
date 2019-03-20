@@ -1,0 +1,32 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+.cache-loader
+node_modules
+npm-debug.log
+yarn-error.log
+resources/assets/config-local.json
+
+# ignore all of this...
+.DS_Store
+blogs.dir/
+cache/
+external-uploads/
+log/
+uploads/
+uploads.huh/
+ngg/
+w3tc-config/
+wflogs/
+plugins/wordfence
+
+# ignore cache junk
+wp-rocket-config
+wp-rocket-config/*
+advanced-cache.php
+wp-cache-config.php
+
+dist
+dist/*
+
+vendor
+vendor/*

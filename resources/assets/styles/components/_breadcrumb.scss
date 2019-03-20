@@ -1,0 +1,20 @@
+.page-body--content--breadcrumb {
+  padding: $golden-ratio-3 0;
+  background-color: inherit;
+  font-size: 13px;
+
+  @include standard-body-link();
+
+  @include respond(xs, sm) {
+    padding: $golden-ratio-2 0;
+  }
+
+  .current-menu-item {
+    font-weight: 700;
+    color: $smokey;
+  }
+
+  span.icon-angle-right {
+    color: $rock;
+  }
+}

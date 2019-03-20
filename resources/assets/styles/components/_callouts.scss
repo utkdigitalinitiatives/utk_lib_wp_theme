@@ -1,0 +1,62 @@
+.section-vibrant-content {
+  position: relative;
+  z-index: 0;
+  background-color: $rock;
+  overflow: hidden;
+  min-height: auto;
+  max-height: $golden-ratio-9;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $white;
+  }
+
+  .section--content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+
+    &--inner {
+      margin-left: 332px;
+      padding: $golden-ratio-4;
+      margin-bottom: $golden-ratio-4;
+      background-color: $globe;
+      color: $white;
+      font-size: $type-2;
+
+      h3 {
+        font-weight: 400;
+        font-size: $type-4;
+      }
+
+      p {
+        font-size: inherit;
+      }
+    }
+  }
+
+  .section--background-video {
+    background: $smokeyx;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 0;
+    z-index: 1;
+    padding-bottom: 56.25%; /* 16:9 */
+    margin-top: -10%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  }
+}

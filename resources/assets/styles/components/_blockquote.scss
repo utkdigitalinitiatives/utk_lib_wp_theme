@@ -1,0 +1,53 @@
+blockquote {
+  position: relative;
+  font-family: $serif;
+  font-size: $type-4;
+  line-height: 1.65em;
+  color: $smokey;
+  max-width: 61.8%;
+  margin: $golden-ratio-4 auto;
+  quotes: "“" "”" "‘" "’";
+
+  p {
+    margin: 0;
+    font-size: inherit !important;
+  }
+
+  cite {
+    margin-top: $golden-ratio-1;
+    color: $smokeyx;
+    font-size: $type-2 !important;
+    font-family: $sans !important;
+    font-style: normal;
+    text-transform: uppercase;
+    display: block;
+
+    &::before {
+      content: '\2015';
+      margin-right: $golden-ratio-0;
+    }
+  }
+
+  * {
+    font-family: inherit !important;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    color: $gray-3;
+    font-size: $type-6;
+  }
+
+  &::before {
+    content: open-quote;
+    margin-left: -$golden-ratio-4;
+  }
+
+  &::after {
+    bottom: $golden-ratio-2;
+    right: 0;
+    content: close-quote;
+    margin-right: -$golden-ratio-4;
+  }
+}

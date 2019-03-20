@@ -1,0 +1,61 @@
+.btn,
+a.btn,
+a.btn:visited {
+  display: inline-block;
+  background-color: $globe;
+  color: $white;
+  padding: $golden-ratio-1 $golden-ratio-2;
+  margin-right: $golden-ratio-2;
+  font-size: $type-2;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.7em;
+
+  &a:hover,
+  &a:focus {
+    color: $white;
+  }
+
+  &.btn-secondary {
+    background-color: $smokey;
+  }
+
+  &.btn-primary.btn-inverse {
+    background-color: $white;
+    color: $smokeyx;
+  }
+
+  &.btn-secondary.btn-inverse {
+    background-color: $gray-1;
+    color: $smokey;
+  }
+
+  &.btn-secondary.btn-inverse.btn-outline {
+    background-color: transparent;
+    color: $white;
+    border: 1px solid rgba($white, 0.47);
+    padding: calc(#{$golden-ratio-1 - 2}) calc(#{$golden-ratio-2 - 2});
+  }
+
+  &.btn-with-icon {
+    position: relative;
+    padding-right: calc(#{$golden-ratio-2 + $golden-ratio-4});
+
+    span {
+      width: $golden-ratio-4;
+      height: $golden-ratio-4;
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-align: center;
+      line-height: $golden-ratio-4;
+      background-color: $orange;
+      color: $white;
+    }
+  }
+}
+
+input[type="submit"],
+input[type="button"] {
+  font-family: $sans !important;
+}

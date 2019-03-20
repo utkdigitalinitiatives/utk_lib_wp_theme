@@ -1,0 +1,91 @@
+.library-notice {
+  background-color: $smokeyx;
+  color: $white;
+  position: relative;
+  z-index: 99;
+  box-shadow: $box-shadow-float;
+  border-top: $golden-ratio-2 solid $smokey;
+  display: none;
+
+  &--wrap {
+    padding-left: 303px;
+  }
+
+  &--content {
+    padding: 29px 29px;
+  }
+
+  h3 {
+    color: $white;
+    margin: 0;
+    padding: 0;
+    font-size: $type-4;
+    margin-bottom: $golden-ratio-1;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: $type-2;
+
+    a,
+    a:visited {
+      color: $white;
+      text-decoration: underline !important;
+    }
+
+    a:hover,
+    a:focus {
+      color: $white;
+    }
+  }
+
+  &.library-notice-general {
+    border-color: $smokey;
+  }
+
+  &.library-notice-weather {
+    border-color: $fountain;
+  }
+
+  &.library-notice-warning {
+    border-color: $sunsphere;
+
+    h3 {
+      font-size: $type-4;
+      font-weight: 700 !important;
+    }
+
+    p {
+      font-size: $type-3;
+    }
+  }
+
+  &.library-notice-danger {
+    border-top: $golden-ratio-5 solid $torch;
+
+    .library-notice--wrap {
+      padding-left: 0;
+    }
+
+    .library-notice--content {
+      padding: $golden-ratio-3 0;
+    }
+
+    h3 {
+      font-size: $type-5;
+      font-weight: 700 !important;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: $type-3;
+    }
+  }
+}
+
+body.library-notice-override {
+  .page-header-hero {
+    height: $golden-ratio-8;
+  }
+}

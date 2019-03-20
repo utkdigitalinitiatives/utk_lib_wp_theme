@@ -1,0 +1,29 @@
+/*
+ * overrides the wordpress override
+ */
+html {
+  margin-top: 129px !important;
+
+  @include respond(xs) {
+    margin-top: 66px !important;
+  }
+
+  #utk-lib-header .utk-header {
+    z-index: 99997;
+  }
+}
+
+body.admin-bar {
+  #utk-lib-header .utk-header {
+    margin-top: 32px;
+    z-index: 99997;
+  }
+
+  #utk-lib-main {
+    margin-top: 32px;
+  }
+}
+
+#placeholder {
+  display: none;
+}
