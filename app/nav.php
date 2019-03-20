@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Walker_Subsite extends \Walker_Nav_Menu
+class WalkerSubsite extends \Walker_Nav_Menu
 {
 
     private $current_item;
@@ -35,21 +35,27 @@ class Walker_Subsite extends \Walker_Nav_Menu
      *
      * @since 3.0.0
      *
-     * @see Walker::start_lvl()
+     * @see Walker::startLevel()
      *
      * @param string   $output Used to append additional content (passed by reference).
      * @param int      $depth  Depth of menu item. Used for padding.
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      */
-    public function start_lvl(&$output, $depth = 0, $args = array())
+    public function startLevel(&$output, $depth = 0, $args = array())
     {
 
         self::$menu_lvl++;
 
-        $parent_menu_item = '<a href="' . $this->current_item->url .'" class="submenu-parent-item" >' . $this->current_item->title . '</a>';
-        $submenu_overlay = '<div class="submenu-overlay submenu-overlay-depth-'. $depth . '"></div>';
+        $parent_menu_item =
+            '<a href="' .
+            $this->current_item->url .
+            '" class="submenu-parent-item" >' .
+            $this->current_item->title . '</a>';
 
-//            var_dump($this->current_item);
+        $submenu_overlay =
+            '<div class="submenu-overlay submenu-overlay-depth-'.
+            $depth .
+            '"></div>';
 
         if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
             $t = '';
@@ -70,7 +76,10 @@ class Walker_Subsite extends \Walker_Nav_Menu
         }
 
         // back button
-        $back = '<a href="#back-' . $depth .'" class="menu-back menu-back-' . $depth . '"><span class="icon-left-open"></span></a>';
+        $back =
+            '<a href="#back-' . $depth .'" class="menu-back menu-back-' .
+            $depth .
+            '"><span class="icon-left-open"></span></a>';
 
         /**
          * Filters the CSS class(es) applied to a menu list element.
@@ -94,13 +103,13 @@ class Walker_Subsite extends \Walker_Nav_Menu
      *
      * @since 3.0.0
      *
-     * @see Walker::end_lvl()
+     * @see Walker::endLevel()
      *
      * @param string   $output Used to append additional content (passed by reference).
      * @param int      $depth  Depth of menu item. Used for padding.
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      */
-    public function end_lvl(&$output, $depth = 0, $args = array())
+    public function endLevel(&$output, $depth = 0, $args = array())
     {
         if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
             $t = '';
@@ -119,7 +128,7 @@ class Walker_Subsite extends \Walker_Nav_Menu
      * @since 3.0.0
      * @since 4.4.0 The {@see 'nav_menu_item_args'} filter was added.
      *
-     * @see Walker::start_el()
+     * @see Walker::startElement()
      *
      * @param string   $output Used to append additional content (passed by reference).
      * @param WP_Post  $item   Menu item data object.
@@ -127,7 +136,7 @@ class Walker_Subsite extends \Walker_Nav_Menu
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      * @param int      $id     Current item ID.
      */
-    public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
+    public function startElement(&$output, $item, $depth = 0, $args = array(), $id = 0)
     {
 
         $this->current_item = $item;
@@ -262,7 +271,7 @@ class Walker_Subsite extends \Walker_Nav_Menu
          * @param int      $depth       Depth of menu item. Used for padding.
          * @param stdClass $args        An object of wp_nav_menu() arguments.
          */
-        $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+        $output .= apply_filters('walker_nav_menu_startElement', $item_output, $item, $depth, $args);
     }
 
     /**
@@ -270,14 +279,14 @@ class Walker_Subsite extends \Walker_Nav_Menu
      *
      * @since 3.0.0
      *
-     * @see Walker::end_el()
+     * @see Walker::endElement()
      *
      * @param string   $output Used to append additional content (passed by reference).
      * @param WP_Post  $item   Page data object. Not used.
      * @param int      $depth  Depth of page. Not Used.
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      */
-    public function end_el(&$output, $item, $depth = 0, $args = array())
+    public function endElement(&$output, $item, $depth = 0, $args = array())
     {
         if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
             $t = '';
@@ -290,10 +299,10 @@ class Walker_Subsite extends \Walker_Nav_Menu
     }
 }
 
-class Preprocess_Subsite
+class PreprocessSubsite
 {
 
-    public static function prepare_subsite_menu($post_id, $subsite_menu_slug)
+    public static function prepareSubsiteMenu($post_id, $subsite_menu_slug)
     {
 
         global $wpdb;
@@ -357,7 +366,7 @@ class Preprocess_Subsite
         return $prepared_menu;
     }
 
-    static function traceMenuAncestry($id, $array, $column)
+    public static function traceMenuAncestry($id, $array, $column)
     {
         $key = array_search($id, array_column($array, $column));
         if (isset($key)) {
@@ -368,7 +377,7 @@ class Preprocess_Subsite
     }
 }
 
-class Walker_Breadcrumb extends \Walker_Nav_Menu
+class WalkerBreadcrumb extends \Walker_Nav_Menu
 {
 
     private $current_item;
@@ -401,19 +410,27 @@ class Walker_Breadcrumb extends \Walker_Nav_Menu
      *
      * @since 3.0.0
      *
-     * @see Walker::start_lvl()
+     * @see Walker::startLevel()
      *
      * @param string   $output Used to append additional content (passed by reference).
      * @param int      $depth  Depth of menu item. Used for padding.
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      */
-    public function start_lvl(&$output, $depth = 0, $args = array())
+    å
+    public function startLevel(&$output, $depth = 0, $args = array())
     {
 
         self::$menu_lvl++;
 
-        $parent_menu_item = '<a href="' . $this->current_item->url .'" class="submenu-parent-item" >' . $this->current_item->title . '</a>';
-        $submenu_overlay = '<div class="submenu-overlay submenu-overlay-depth-'. $depth . '"></div>';
+        $parent_menu_item =
+            '<a href="' . $this->current_item->url .
+            '" class="submenu-parent-item" >' .
+            $this->current_item->title . '</a>';
+
+        $submenu_overlay =
+            '<div class="submenu-overlay submenu-overlay-depth-'.
+            $depth .
+            '"></div>';
 
 //            var_dump($this->current_item);
 
@@ -436,7 +453,12 @@ class Walker_Breadcrumb extends \Walker_Nav_Menu
         }
 
         // back button
-        $back = '<a href="#back-' . $depth .'" class="menu-back menu-back-' . $depth . '"><span class="icon-left-open"></span></a>';
+        $back =
+            '<a href="#back-' .
+            $depth .
+            '" class="menu-back menu-back-' .
+            $depth .
+            '"><span class="icon-left-open"></span></a>';
 
         /**
          * Filters the CSS class(es) applied to a menu list element.
@@ -460,13 +482,13 @@ class Walker_Breadcrumb extends \Walker_Nav_Menu
      *
      * @since 3.0.0
      *
-     * @see Walker::end_lvl()
+     * @see Walker::endLevel()
      *
      * @param string   $output Used to append additional content (passed by reference).
      * @param int      $depth  Depth of menu item. Used for padding.
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      */
-    public function end_lvl(&$output, $depth = 0, $args = array())
+    public function endLevel(&$output, $depth = 0, $args = array())
     {
         if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
             $t = '';
@@ -485,7 +507,7 @@ class Walker_Breadcrumb extends \Walker_Nav_Menu
      * @since 3.0.0
      * @since 4.4.0 The {@see 'nav_menu_item_args'} filter was added.
      *
-     * @see Walker::start_el()
+     * @see Walker::startElement()
      *
      * @param string   $output Used to append additional content (passed by reference).
      * @param WP_Post  $item   Menu item data object.
@@ -493,7 +515,7 @@ class Walker_Breadcrumb extends \Walker_Nav_Menu
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      * @param int      $id     Current item ID.
      */
-    public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
+    public function startElement(&$output, $item, $depth = 0, $args = array(), $id = 0)
     {
 
         $this->current_item = $item;
@@ -628,7 +650,7 @@ class Walker_Breadcrumb extends \Walker_Nav_Menu
          * @param int      $depth       Depth of menu item. Used for padding.
          * @param stdClass $args        An object of wp_nav_menu() arguments.
          */
-        $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+        $output .= apply_filters('walker_nav_menu_startElement', $item_output, $item, $depth, $args);
     }
 
     /**
@@ -636,14 +658,14 @@ class Walker_Breadcrumb extends \Walker_Nav_Menu
      *
      * @since 3.0.0
      *
-     * @see Walker::end_el()
+     * @see Walker::endElement()
      *
      * @param string   $output Used to append additional content (passed by reference).
      * @param WP_Post  $item   Page data object. Not used.
      * @param int      $depth  Depth of page. Not Used.
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      */
-    public function end_el(&$output, $item, $depth = 0, $args = array())
+    public function endElement(&$output, $item, $depth = 0, $args = array())
     {
         if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
             $t = '';
@@ -670,13 +692,13 @@ if (! class_exists('WP_Bootstrap_Navwalker')) {
          *
          * @since WP 3.0.0
          *
-         * @see Walker_Nav_Menu::start_lvl()
+         * @see Walker_Nav_Menu::startLevel()
          *
          * @param string   $output Used to append additional content (passed by reference).
          * @param int      $depth  Depth of menu item. Used for padding.
          * @param stdClass $args   An object of wp_nav_menu() arguments.
          */
-        public function start_lvl(&$output, $depth = 0, $args = array())
+        public function startLevel(&$output, $depth = 0, $args = array())
         {
             if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
                 $t = '';
@@ -722,7 +744,7 @@ if (! class_exists('WP_Bootstrap_Navwalker')) {
          * @since WP 3.0.0
          * @since WP 4.4.0 The {@see 'nav_menu_item_args'} filter was added.
          *
-         * @see Walker_Nav_Menu::start_el()
+         * @see Walker_Nav_Menu::startElement()
          *
          * @param string   $output Used to append additional content (passed by reference).
          * @param WP_Post  $item   Menu item data object.
@@ -730,7 +752,7 @@ if (! class_exists('WP_Bootstrap_Navwalker')) {
          * @param stdClass $args   An object of wp_nav_menu() arguments.
          * @param int      $id     Current item ID.
          */
-        public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
+        public function startElement(&$output, $item, $depth = 0, $args = array(), $id = 0)
         {
             if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
                 $t = '';
@@ -910,7 +932,7 @@ if (! class_exists('WP_Bootstrap_Navwalker')) {
             /**
              * END appending the internal item contents to the output.
              */
-            $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+            $output .= apply_filters('walker_nav_menu_startElement', $item_output, $item, $depth, $args);
         }
         /**
          * Traverse elements to create list from elements.
@@ -924,7 +946,7 @@ if (! class_exists('WP_Bootstrap_Navwalker')) {
          *
          * @since WP 2.5.0
          *
-         * @see Walker::start_lvl()
+         * @see Walker::startLevel()
          *
          * @param object $element           Data object.
          * @param array  $children_elements List of elements to continue traversing (passed by reference).
@@ -1186,13 +1208,13 @@ if (! class_exists('WP_Bootstrap_Navwalker_Footer')) {
          *
          * @since WP 3.0.0
          *
-         * @see Walker_Nav_Menu::start_lvl()
+         * @see Walker_Nav_Menu::startLevel()
          *
          * @param string   $output Used to append additional content (passed by reference).
          * @param int      $depth  Depth of menu item. Used for padding.
          * @param stdClass $args   An object of wp_nav_menu() arguments.
          */
-        public function start_lvl(&$output, $depth = 0, $args = array())
+        public function startLevel(&$output, $depth = 0, $args = array())
         {
             if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
                 $t = '';
@@ -1239,7 +1261,7 @@ if (! class_exists('WP_Bootstrap_Navwalker_Footer')) {
          * @since WP 3.0.0
          * @since WP 4.4.0 The {@see 'nav_menu_item_args'} filter was added.
          *
-         * @see Walker_Nav_Menu::start_el()
+         * @see Walker_Nav_Menu::startElement()
          *
          * @param string   $output Used to append additional content (passed by reference).
          * @param WP_Post  $item   Menu item data object.
@@ -1247,7 +1269,7 @@ if (! class_exists('WP_Bootstrap_Navwalker_Footer')) {
          * @param stdClass $args   An object of wp_nav_menu() arguments.
          * @param int      $id     Current item ID.
          */
-        public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
+        public function startElement(&$output, $item, $depth = 0, $args = array(), $id = 0)
         {
             if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
                 $t = '';
@@ -1439,7 +1461,7 @@ if (! class_exists('WP_Bootstrap_Navwalker_Footer')) {
              * END appending the internal item contents to the output.
              */
 
-            $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+            $output .= apply_filters('walker_nav_menu_startElement', $item_output, $item, $depth, $args);
         }
         /**
          * Traverse elements to create list from elements.
@@ -1453,7 +1475,7 @@ if (! class_exists('WP_Bootstrap_Navwalker_Footer')) {
          *
          * @since WP 2.5.0
          *
-         * @see Walker::start_lvl()
+         * @see Walker::startLevel()
          *
          * @param object $element           Data object.
          * @param array  $children_elements List of elements to continue traversing (passed by reference).

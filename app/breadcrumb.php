@@ -2,10 +2,10 @@
 
 namespace App;
 
-class Subsite_Breadcumb
+class SubsiteBreadcumb
 {
 
-    public static function breadcrumb_inline($theme_location = 'subsite')
+    public static function breadcrumbInline($theme_location = 'subsite')
     {
 
         $details = get_blog_details();
