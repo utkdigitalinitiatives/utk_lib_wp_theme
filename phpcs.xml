@@ -17,12 +17,20 @@
   <!-- Use PSR-2 as a base -->
   <rule ref="PSR2"/>
 
-  <!-- Exclusions below are for resources/views/ folder -->
+
+  <!-- Exclusions below are for apps/walkers/ folder -->
+
+  <!-- Allow php files without any PHP in them -->
+  <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
+    <exclude-pattern>app/walkers</exclude-pattern>
+  </rule>
+
 
   <!-- Allow php files without any PHP in them -->
   <rule ref="Internal.NoCodeFound">
     <exclude-pattern>resources/views</exclude-pattern>
   </rule>
+  <!-- Exclusions below are for resources/views/ folder -->
 
   <!-- Allow braces on same line for named functions -->
   <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine">
