@@ -1,12 +1,13 @@
 @php
 
-  $subsite_menu_slug = 'subsite'; /* this must remain static */
+  $locations = get_nav_menu_locations();
+  $subsite_menu = wp_get_nav_menu_object($locations['sidebar_subsite']);
 
-  $defaults = [
-   'menu'         => $subsite_menu_slug,
-    'fallback_cb' => 'WordPressBootstrapNavwalker::fallback',
-   'walker'       => new \App\WordPressBootstrapNavwalker(),
-  ];
+$defaults = [
+ 'menu'         => $subsite_menu->name,
+ 'fallback_cb' => 'WordPressBootstrapNavwalker::fallback',
+ 'walker'       => new \App\WordPressBootstrapNavwalker(),
+];
 
 @endphp
 
