@@ -5,21 +5,12 @@ namespace App;
 class PreprocessSubsite
 {
 
-    public static function prepareSubsiteMenu($post_id, $subsite_menu_slug)
+    public static function prepareSubsiteMenu($post_id, $subsite_menu_id)
     {
 
         global $wpdb;
 
         $prefix = $wpdb->prefix;
-
-        $menu_term_results = $wpdb->get_col(
-            "SELECT t.term_id
-                FROM {$prefix}terms AS t
-                LEFT JOIN {$prefix}term_taxonomy AS tt ON tt.term_id = t.term_id
-                WHERE tt.taxonomy = 'nav_menu' and t.name = '{$subsite_menu_slug}'"
-        );
-
-        $menu_term_id = $menu_term_results[0];
 
         $menu_data = $wpdb->get_results(
             "SELECT menu.menu_id, menu.menu_parent, post.post_id FROM
@@ -30,7 +21,7 @@ class PreprocessSubsite
                 LEFT JOIN {$prefix}postmeta AS pm ON p.ID = pm.post_id
                 WHERE p.post_type = 'nav_menu_item'
                 AND pm.meta_key = '_menu_item_object_id'
-                AND tt.term_id = {$menu_term_id}) as post
+                AND tt.term_id = {$subsite_menu_id}) as post
                 LEFT JOIN
                 (SELECT p.ID as menu_id, pm.meta_value as menu_parent
                 FROM {$prefix}posts AS p
@@ -39,7 +30,7 @@ class PreprocessSubsite
                 LEFT JOIN {$prefix}postmeta AS pm ON p.ID = pm.post_id
                 WHERE p.post_type = 'nav_menu_item'
                 AND pm.meta_key = '_menu_item_menu_item_parent'
-                AND tt.term_id = {$menu_term_id}) as menu
+                AND tt.term_id = {$subsite_menu_id}) as menu
                 ON post.menu_id = menu.menu_id
                 GROUP BY post.post_id
                 ORDER BY menu.menu_id ASC",
