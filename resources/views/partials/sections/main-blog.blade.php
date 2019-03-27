@@ -1,4 +1,10 @@
+@php
+$size = 'large';
+$featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size );
+@endphp
+
 <div id="detach-sticky-top"></div>
+
 <div class="container page-body--container">
     @include('partials.components.breadcrumb')
     <div class="page-body--flex">

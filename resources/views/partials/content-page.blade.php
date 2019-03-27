@@ -3,14 +3,6 @@
     <h1>@php echo get_the_title(); @endphp</h1>
   </div>
   <div class="page-body--content--body">
-    @if (get_the_content())
-
-      @php the_content() @endphp
-
-    @else
-
-      @include('partials.components.placeholder')
-
-    @endif
+    @php the_content() @endphp
   </div>
 </div>

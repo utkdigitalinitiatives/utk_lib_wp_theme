@@ -11,7 +11,7 @@
         <div class="page-body @if($postStyleClass)page-body-{{$postStyleClass}}@endif">
 
             @if('Blog' == $postStyle)
-                @include('partials.sections.main-full-width')
+                @include('partials.sections.main-blog')
 
             @elseif('Standard' === $postStyle)
                 @include('partials.sections.main')

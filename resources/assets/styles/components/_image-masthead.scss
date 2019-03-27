@@ -1,0 +1,12 @@
+.page-body--image-masthead {
+  width: 100%;
+  height: $golden-ratio-8;
+  max-height: 29vh;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto !important;
+    max-height: 10000%;
+  }
+}
