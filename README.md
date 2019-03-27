@@ -1,7 +1,13 @@
 # [UT Libraries](https://www.lib.utk.edu/sage)
 [![Build Status](https://travis-ci.org/utkdigitalinitiatives/utk_lib_wp_theme.svg?style=flat-square)](https://travis-ci.org/utkdigitalinitiatives/utk_lib_wp_theme)
 
-Custom theme for WordPress built with Sage 9 framework.
+Custom theme for UT Libraries WordPress built with Sage 9 framework with single-site or multi-site capabilities.
+
+## WordPress Dependencies
+
+### Custom Plugins
+* [UT Libraries](https://github.com/utkdigitalinitiatives/utk_wp_lib_mu_plugin) (mu-plugin)
+* [UT Libraries Event Calendar](https://github.com/utkdigitalinitiatives/utk_wp_lib_mu_plugin)
 
 ## Features
 
