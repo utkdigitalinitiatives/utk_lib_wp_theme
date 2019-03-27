@@ -8,8 +8,10 @@
 
     if ($subisite) :
         $title = $subisite->blogname;
+        $siteURL = $subisite->siteurl;
     else :
         $title = get_option('blogname');
+        $siteURL = "/";
     endif;
 
 @endphp
@@ -17,12 +19,12 @@
 <div id="page-header-trigger" class="page-header--float">
   <div class="container">
     @if ($long_title != '')
-      <a href="#" aria-label="@php echo $long_title; @endphp" role="heading" class="page-header--title-wrap page-header--title-wrap-long">
+      <a href="{{$siteURL}}" aria-label="@php echo $long_title; @endphp" role="heading" class="page-header--title-wrap page-header--title-wrap-long">
         <h2 class="page-header--title" id="subsite-title">@php echo $title @endphp</h2>
         <p id="subsite-long-title">@php echo $long_title; @endphp</p>
       </a>
     @else
-      <a href="#" aria-label="@php echo $title; @endphp" role="heading" class="page-header--title-wrap">
+      <a href="{{$siteURL}}" aria-label="@php echo $title; @endphp" role="heading" class="page-header--title-wrap">
         <h2 class="page-header--title" id="subsite-title">@php echo $title; @endphp</h2>
       </a>
     @endif
