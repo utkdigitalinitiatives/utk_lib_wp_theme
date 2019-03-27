@@ -1,9 +1,17 @@
 @php
 
-  $subsite = get_blog_details();
+    if (function_exists('get_blog_details')) {
 
-  $hero = get_field('hero_image');
-  $size = 'hero';
+      $subsite = get_blog_details();
+
+    } else {
+
+      $subsite = null;
+
+    }
+
+    $hero = get_field('hero_image');
+    $size = 'hero';
 
 @endphp
 <div class="page-header page-header-hero">
