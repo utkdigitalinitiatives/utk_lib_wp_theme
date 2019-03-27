@@ -9,3 +9,60 @@ img.lazyloaded {
   transition: opacity 0.5s linear 0.2s;
   opacity: 1;
 }
+
+.wp-block-image {
+  &.full {
+    width: 100%;
+
+    figure {
+      width: inherit;
+
+      img {
+        width: inherit;
+      }
+    }
+  }
+
+  &.offset-full {
+    margin-left: -$golden-ratio-5;
+    width: calc(100% + #{$golden-ratio-5 * 2});
+
+    figure {
+      width: inherit;
+
+      img {
+        width: inherit;
+      }
+    }
+  }
+
+  &.offset-right {
+    margin-bottom: 0;
+
+    figure {
+      position: relative;
+      margin-right: -$golden-ratio-5;
+      margin-left: $golden-ratio-4;
+      margin-bottom: $golden-ratio-2;
+
+      img {
+        margin-top: -10px;
+      }
+    }
+  }
+
+  &.offset-left {
+    margin-bottom: 0;
+
+    figure {
+      position: relative;
+      margin-right: $golden-ratio-4;
+      margin-left: -$golden-ratio-5;
+      margin-bottom: $golden-ratio-2;
+
+      img {
+        margin-top: -10px;
+      }
+    }
+  }
+}
