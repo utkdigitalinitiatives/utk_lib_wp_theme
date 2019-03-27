@@ -19,6 +19,10 @@
     @include respond(xs, sm) {
       width: 100%;
     }
+
+    &.page-body--content-full {
+      width: 100%;
+    }
   }
 
   &--aside {
