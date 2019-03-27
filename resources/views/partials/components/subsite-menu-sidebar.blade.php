@@ -5,8 +5,17 @@
     $locations = get_nav_menu_locations();
     $subsite_menu = wp_get_nav_menu_object($locations['sidebar_subsite']);
 
-    $subsite_details = get_blog_details(get_current_blog_id());
-    $subsite_path = $subsite_details->path;
+    if (function_exists('get_blog_details')) {
+
+        $subsite_details = get_blog_details(get_current_blog_id());
+        $subsite_path = $subsite_details->path;
+
+    } else {
+
+        $subsite_path = null;
+
+    }
+
     $post_id = get_the_ID();
     $is_front = is_front_page();
 
