@@ -9,7 +9,7 @@ $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ),
     @include('partials.components.breadcrumb')
     <div class="page-body--flex">
         <main class="page-body--content page-body--content-full">
-            @include('partials.content-page')
+            @include('partials.content-post-blog')
         </main>
     </div>
     <div id="detach-sticky-bottom"></div>

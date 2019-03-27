@@ -31,4 +31,22 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    /*
+     * calculate read time like medium.com based on 125 words per minute.
+     */
+
+    public static function estimateReadTime($content) {
+
+        $wordsPerMinute = 125;
+
+        $words = str_word_count(strip_tags($content));
+        $minutes = floor($words / $wordsPerMinute);
+        $seconds = floor($words % $wordsPerMinute / ($wordsPerMinute / 60));
+        $estimate = ($seconds > 30 ? $minutes + 1 : $minutes);
+
+        return $estimate;
+    }
+
+
 }
