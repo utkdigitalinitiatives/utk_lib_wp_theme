@@ -7,6 +7,7 @@ export default class Subsite {
 
   subsiteListener () {
 
+
     $( "#page-header-subsite-menu" ).mouseenter(function() {
       $( "body" ).addClass( "subsite-menu-dropdown-expand" );
     });

@@ -8,7 +8,7 @@
 
 @endphp
 
-<div class="page-header--float">
+<div id="page-header-trigger" class="page-header--float">
   <div class="container">
     @if ($long_title != '')
       <a href="#" aria-label="@php echo $long_title; @endphp" role="heading" class="page-header--title-wrap page-header--title-wrap-long">
