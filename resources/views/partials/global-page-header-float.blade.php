@@ -6,9 +6,9 @@
 
     $long_title = get_theme_mod('title_tagline__long_title');
 
-    if ($subisite) :
-        $title = $subisite->blogname;
-        $siteURL = $subisite->siteurl;
+    if ($subsite) :
+        $title = $subsite->blogname;
+        $siteURL = $subsite->siteurl;
     else :
         $title = get_option('blogname');
         $siteURL = "/";
