@@ -19,6 +19,14 @@
   }
 }
 
+@mixin serif-body-rendering() {
+  font-family: $serif;
+  font-size: 21px;
+  line-height: 1.58;
+  word-break: break-word;
+  letter-spacing: -0.003em;
+}
+
 // Named Breakpoints are phone, tablet-portrait, tablet-landscape-desktop, large-desktop, non-retina, retina
 @mixin do-the-responds($media) {
   /* Mobile Devices for Mice */

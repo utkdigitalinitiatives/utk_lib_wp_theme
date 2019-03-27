@@ -69,11 +69,10 @@
     p {
       color: $rock;
       display: block;
-      font-size: $type-3;
-      font-family: $serif;
       margin: 0;
-      font-weight: 300;
       margin-top: -$golden-ratio-0;
+
+      @include serif-body-rendering();
     }
   }
 

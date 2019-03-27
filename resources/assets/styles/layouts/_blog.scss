@@ -18,11 +18,7 @@
     }
 
     p {
-      font-family: $serif;
-      font-size: 21px;
-      line-height: 1.58;
-      word-break: break-word;
-      letter-spacing: -0.003em;
+      @include serif-body-rendering();
     }
   }
 }
