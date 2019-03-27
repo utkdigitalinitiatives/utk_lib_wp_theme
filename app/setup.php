@@ -46,8 +46,10 @@ add_action('wp_enqueue_scripts', function () {
 
 add_filter('upload_dir', function ($upload) {
 
-    $upload['baseurl'] = network_site_url() . 'wp-content/blogs.dir/' . get_current_blog_id() . '/files';
-    $upload['url'] = $upload['baseurl'] . $upload['subdir'];
+    if ( is_multisite() ) {
+        $upload['baseurl'] = network_site_url() . 'wp-content/blogs.dir/' . get_current_blog_id() . '/files';
+        $upload['url'] = $upload['baseurl'] . $upload['subdir'];
+    }
 
     return $upload;
 }, 100);
