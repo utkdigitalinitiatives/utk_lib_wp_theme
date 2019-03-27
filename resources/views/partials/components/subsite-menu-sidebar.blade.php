@@ -21,12 +21,15 @@
 
     if ($subsite_menu) :
         $initial_menu_trail = PreprocessSubsite::prepareSubsiteMenu($post_id, $subsite_menu->term_id);
+        $initial_depth = count($initial_menu_trail) - 1;
+        $initial_menu_id = $initial_menu_trail[$initial_depth]['menu_id'];
+
     else :
         $initial_menu_trail = '{}';
-    endif;
+        $initial_depth = 0;
+        $initial_menu_id = 0;
 
-    $initial_depth = count($initial_menu_trail) - 1;
-    $initial_menu_id = $initial_menu_trail[$initial_depth]['menu_id'];
+    endif;
 
     $defaults = [
      'menu'     => $subsite_menu_slug
