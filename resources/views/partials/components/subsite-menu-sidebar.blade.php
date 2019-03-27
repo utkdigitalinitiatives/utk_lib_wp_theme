@@ -5,19 +5,31 @@
     $locations = get_nav_menu_locations();
     $subsite_menu = wp_get_nav_menu_object($locations['sidebar_subsite']);
 
-    $subsite_details = get_blog_details(get_current_blog_id());
-    $subsite_path = $subsite_details->path;
+    if (function_exists('get_blog_details')) {
+
+        $subsite_details = get_blog_details(get_current_blog_id());
+        $subsite_path = $subsite_details->path;
+
+    } else {
+
+        $subsite_path = null;
+
+    }
+
     $post_id = get_the_ID();
     $is_front = is_front_page();
 
     if ($subsite_menu) :
         $initial_menu_trail = PreprocessSubsite::prepareSubsiteMenu($post_id, $subsite_menu->term_id);
+        $initial_depth = count($initial_menu_trail) - 1;
+        $initial_menu_id = $initial_menu_trail[$initial_depth]['menu_id'];
+
     else :
         $initial_menu_trail = '{}';
-    endif;
+        $initial_depth = 0;
+        $initial_menu_id = 0;
 
-    $initial_depth = count($initial_menu_trail) - 1;
-    $initial_menu_id = $initial_menu_trail[$initial_depth]['menu_id'];
+    endif;
 
     $defaults = [
      'menu'     => $subsite_menu_slug
