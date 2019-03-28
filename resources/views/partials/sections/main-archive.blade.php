@@ -18,7 +18,8 @@
         </main>
         <aside class="page-body--aside">
             @php
-                echo facetwp_display( 'facet', 'categories' );
+                echo facetwp_display( 'facet', 'post_search' );
+                echo facetwp_display( 'facet', 'post_categories' );
             @endphp
             @include('partials.sidebar')
         </aside>
