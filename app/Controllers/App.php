@@ -36,7 +36,8 @@ class App extends Controller
      * calculate read time like medium.com based on 125 words per minute.
      */
 
-    public static function estimateReadTime($content) {
+    public static function estimateReadTime($content)
+    {
 
         $wordsPerMinute = 125;
 
@@ -47,6 +48,4 @@ class App extends Controller
 
         return $estimate;
     }
-
-
 }
