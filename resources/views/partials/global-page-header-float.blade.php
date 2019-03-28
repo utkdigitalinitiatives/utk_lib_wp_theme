@@ -1,8 +1,8 @@
 @php
 
     /*
-    * get long title for subsite if available.
-    */
+     * get long title for subsite if available.
+     */
 
     $long_title = get_theme_mod('title_tagline__long_title');
 
