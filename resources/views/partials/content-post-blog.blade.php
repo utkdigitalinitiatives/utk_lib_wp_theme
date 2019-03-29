@@ -14,10 +14,18 @@ Namespace App\Controllers;
         @endphp
         <h1>@php echo get_the_title(); @endphp</h1>
 
-        <div>
-            <div>{{$author}}</div>
-            <div>
+        <div class="page-body-blog--article">
+            <div class="page-body-blog--author" >
+                <div>by <strong><a>{{$author}}</a></strong></div>
+                @if($post->post_author == 4)
+                    <div><em>Special Collections</em></div>
+                    @else
+                    <div><em>Digital Initiatives</em></div>
+                @endif
+            </div>
+            <div class="page-body-blog--meta" style="font-size: 13px">
                 <span>{{$dateline}}</span>
+                <span style="color: #b6b6b6;">&nbsp;&bullet;&nbsp;</span>
                 <span>{{$estimate}} minute read</span>
             </div>
         </div>
