@@ -13,7 +13,9 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 
-/** Import theme styles */
+/**
+ * Components
+ */
 @import "common/global";
 @import "common/bootstrap-vars";
 @import "common/mixins";
@@ -34,7 +36,10 @@
 @import "components/options";
 @import "components/paragraph";
 @import "components/wp-classes";
-@import "gutenburg/block-image";
+
+/**
+ * Layouts
+ */
 @import "layouts/blog";
 @import "layouts/body-content";
 @import "layouts/call-to-action";
@@ -49,4 +54,13 @@
 @import "layouts/posts";
 @import "layouts/subsite-menu";
 @import "layouts/tinymce";
+
+/**
+ * Gutenberg
+ */
+@import "gutenburg/block-image";
+
+/**
+ * WordPress Mysticism
+ */
 @import "wordpress/admin";
