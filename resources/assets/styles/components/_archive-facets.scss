@@ -23,14 +23,22 @@
     font-weight: 700;
 
     &::before {
-      color: $white;
       border: 2px solid $orange;
       background-color: $orange;
-      content: "\E801"; /* begin custom fontello based "X" */
+    }
+
+    &::after {
+      position: absolute;
+      width: $type-1;
+      height: $type-1;
+      color: $white;
+      left: 2px;
+      top: 1px;
+      content: "\e806"; /* begin custom fontello based "X" */
       font-family: fontello, monospace;
       font-style: normal;
       font-weight: 400;
-      font-size: 9px;
+      font-size: $type-1;
       line-height: 1em;
       text-align: center;
     }
