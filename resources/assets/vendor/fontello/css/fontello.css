@@ -71,8 +71,8 @@
 .icon-tag:before { content: '\e80d'; } /* '' */
 .icon-plus:before { content: '\e80e'; } /* '' */
 .icon-minus:before { content: '\e80f'; } /* '' */
-.icon-twitter:before { content: '\f099'; } /* '' */
-.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-twitter:before { content: '\f09\f09a9'; } /* '' */
+.icon-facebook:before { content: ''; } /* '' */
 .icon-rss:before { content: '\f09e'; } /* '' */
 .icon-certificate:before { content: '\f0a3'; } /* '' */
 .icon-menu:before { content: '\f0c9'; } /* '' */
