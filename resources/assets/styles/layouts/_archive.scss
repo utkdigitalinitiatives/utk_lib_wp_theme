@@ -20,13 +20,16 @@
 
           .article--meta {
             font-size: $type-2;
+            color: $smokey;
           }
         }
       }
 
       .article--thumbnail {
         margin-left: $golden-ratio-3;
-        width: 199px;
+        background-color: $gray-1;
+        width: $golden-ratio-7;
+        height: $golden-ratio-7;
 
         img {
           width: inherit;
