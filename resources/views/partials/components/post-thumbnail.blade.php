@@ -7,7 +7,6 @@
 $id         = get_post_thumbnail_id();
 $img        = get_the_post_thumbnail();
 $pre        = wp_get_attachment_image_src($id, 'post-thumbnail-pre')[0];
-$alt        = get_post_meta($id, '_wp_attachment_image_alt')[0];
 
 @endphp
 
