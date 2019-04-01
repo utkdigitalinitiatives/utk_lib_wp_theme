@@ -4,7 +4,7 @@ Namespace App\Controllers;
 
 @endphp
 <div class="page-body--content--inner">
-    <div class="page-body--content--title">
+    <div class="page-body--content--title">s
         @php
             $dateline2   = $post->post_modified;
             $dateline   = date('F j, Y', strtotime($post->post_date));
