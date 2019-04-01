@@ -1,3 +1,38 @@
 .page-body--archive {
   background-color: inherit;
+
+  /*
+   * see components/_archive-facets.scss for component styling
+   */
+
+  .page-body--content {
+    article {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: $golden-ratio-3;
+
+      .article--context {
+        header.article--header {
+          h2.article--header--title {
+            font-size: $type-4;
+            margin-bottom: $golden-ratio-1;
+          }
+
+          .article--meta {
+            font-size: $type-2;
+          }
+        }
+      }
+
+      .article--thumbnail {
+        margin-left: $golden-ratio-3;
+        width: 199px;
+
+        img {
+          width: inherit;
+          height: auto;
+        }
+      }
+    }
+  }
 }
