@@ -40,13 +40,15 @@ class SubsiteBreadcumb
     {
         $crumbs = self::breadcrumbGetTrunk($details);
 
-        foreach ($items as $item) :
-            if ($item->current_item_ancestor) :
-                $crumbs[] = "<a href=\"{$item->url}\" title=\"{$item->title}\">{$item->title}</a>";
-            elseif ($item->current) :
-                $crumbs[] = "<span class='current-menu-item'>{$item->title}</span>";
-            endif;
-        endforeach;
+        if ($items) :
+            foreach ($items as $item) :
+                if ($item->current_item_ancestor) :
+                    $crumbs[] = "<a href=\"{$item->url}\" title=\"{$item->title}\">{$item->title}</a>";
+                elseif ($item->current) :
+                    $crumbs[] = "<span class='current-menu-item'>{$item->title}</span>";
+                endif;
+            endforeach;
+        endif;
 
         echo implode('<span class="icon-angle-right"></span>', $crumbs);
     }
