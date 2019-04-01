@@ -57,6 +57,8 @@ add_filter('upload_dir', function ($upload) {
 /**
  * Image Sizes
  */
+add_image_size('post-thumbnail', 400, 400, TRUE);
+add_image_size('post-thumbnail-pre', 11, 11, TRUE);
 add_image_size('hero', 1364, 521, false);
 
 /**

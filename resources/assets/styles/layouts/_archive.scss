@@ -28,12 +28,41 @@
       .article--thumbnail {
         margin-left: $golden-ratio-3;
         background-color: $gray-1;
+        position: relative;
         width: $golden-ratio-7;
         height: $golden-ratio-7;
+        min-width: $golden-ratio-7;
+        min-height: $golden-ratio-7;
+        overflow: hidden;
+
+        &--pre {
+          position: absolute;
+          z-index: 0;
+          display: block;
+          width: $golden-ratio-7;
+          height: $golden-ratio-7;
+          min-width: $golden-ratio-7;
+          min-height: $golden-ratio-7;
+          overflow: hidden;
+          background-size: cover;
+          background-position: 50% 50%;
+          filter: blur(3px);
+        }
 
         img {
-          width: inherit;
-          height: auto;
+          position: relative;
+          z-index: 1;
+          width: $golden-ratio-7 !important;
+          height: $golden-ratio-7 !important;
+        }
+
+        img.lazyloaded {
+          opacity: 0.76;
+          transition: $transition-all-fast;
+        }
+
+        img.lazyloaded[data-was-processed] {
+          opacity: 1;
         }
       }
     }
