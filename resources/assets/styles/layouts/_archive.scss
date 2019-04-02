@@ -67,4 +67,15 @@
       }
     }
   }
+
+  .page-body--aside {
+    &--facets {
+      h4 {
+        color: $smokey;
+        font-size: $type-1;
+        text-transform: uppercase;
+        margin-bottom: $golden-ratio-1;
+      }
+    }
+  }
 }

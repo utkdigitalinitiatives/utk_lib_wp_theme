@@ -17,11 +17,13 @@
             {!! get_the_posts_navigation() !!}
         </main>
         <aside class="page-body--aside">
-            @php
-                echo facetwp_display( 'facet', 'post_search' );
-                echo facetwp_display( 'facet', 'post_month_year' );
-                echo facetwp_display( 'facet', 'post_categories' );
-            @endphp
+            <div class="page-body--aside--facets">
+                @php echo facetwp_display( 'facet', 'post_search' ); @endphp
+                <h4>Filter by Date</h4>
+                @php echo facetwp_display( 'facet', 'post_month_year' ); @endphp
+                <h4>Filter by Category</h4>
+                @php echo facetwp_display( 'facet', 'post_categories' ); @endphp
+            </div>
             @include('partials.sidebar')
         </aside>
     </div>
