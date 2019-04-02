@@ -18,12 +18,18 @@
         </main>
         <aside class="page-body--aside">
             <div class="page-body--aside--facets">
-                <h4>Search Articles</h4>
-                @php echo facetwp_display( 'facet', 'post_search' ); @endphp
-                <h4>Filter by Date</h4>
-                @php echo facetwp_display( 'facet', 'post_month_year' ); @endphp
-                <h4>Filter by Category</h4>
-                @php echo facetwp_display( 'facet', 'post_categories' ); @endphp
+                <div class="page-body--aside--facets--item">
+                    <h4>Search Articles</h4>
+                    @php echo facetwp_display( 'facet', 'post_search' ); @endphp
+                </div>
+                <div class="page-body--aside--facets--item">
+                    <h4>Filter by Date</h4>
+                    @php echo facetwp_display( 'facet', 'post_month_year' ); @endphp
+                </div>
+                <div class="page-body--aside--facets--item">
+                    <h4>Filter by Category</h4>
+                    @php echo facetwp_display( 'facet', 'post_categories' ); @endphp
+                </div>
             </div>
             @include('partials.sidebar')
         </aside>
