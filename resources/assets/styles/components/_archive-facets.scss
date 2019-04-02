@@ -73,5 +73,35 @@
         right: 11px;
       }
     }
+
+    .fs-search {
+      input {
+        font-size: $type-2;
+        font-family: $sans;
+
+        &::placeholder {
+          color: $rock;
+        }
+      }
+    }
+  }
+}
+
+.facetwp-type-search {
+  .facetwp-search-wrap {
+    input.facetwp-search {
+      width: auto !important;
+      max-width: 100%;
+      min-width: $golden-ratio-7;
+      font-size: $type-2;
+      font-family: $sans;
+      padding: 5px $golden-ratio-3 4px $golden-ratio-1;
+      border: 1px solid $gray-1;
+      background-color: $gray-0;
+
+      &::placeholder {
+        color: $rock;
+      }
+    }
   }
 }

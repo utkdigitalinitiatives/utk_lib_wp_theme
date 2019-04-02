@@ -18,6 +18,7 @@
         </main>
         <aside class="page-body--aside">
             <div class="page-body--aside--facets">
+                <h4>Search Articles</h4>
                 @php echo facetwp_display( 'facet', 'post_search' ); @endphp
                 <h4>Filter by Date</h4>
                 @php echo facetwp_display( 'facet', 'post_month_year' ); @endphp
