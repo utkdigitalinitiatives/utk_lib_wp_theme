@@ -64,6 +64,7 @@ array_map(function ($file) use ($sage_error) {
     'filters',
     'admin',
     'customizer',
+    'plugins/facetwp',
     'walkers/generic',
     'walkers/subsite',
     'walkers/drawer',
