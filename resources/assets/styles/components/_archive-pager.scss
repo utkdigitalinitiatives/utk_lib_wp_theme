@@ -1,0 +1,41 @@
+.facetwp-pager {
+  display: flex;
+  justify-content: center;
+  font-size: $type-2;
+  color: $smokey;
+
+  span.facetwp-pager-label {
+    font-weight: 400;
+    display: block;
+    border: 1px solid $gray-1;
+    padding: $golden-ratio-0 $golden-ratio-2;
+    margin: 0;
+  }
+
+  a,
+  a:visited {
+    font-weight: 700;
+    display: block;
+    border: 1px solid $gray-1;
+    border-left: none !important;
+    padding: $golden-ratio-0 $golden-ratio-2;
+    margin: 0;
+
+    &.active {
+      background-color: $globe !important;
+      color: $white !important;
+      border-color: $globe !important;
+    }
+  }
+
+  a:hover,
+  a:focus {
+    background-color: $gray-1;
+
+    &.active {
+      background-color: $globe !important;
+      color: $white !important;
+      border-color: $globe !important;
+    }
+  }
+}
