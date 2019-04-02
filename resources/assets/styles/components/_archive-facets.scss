@@ -1,4 +1,8 @@
-.facetwp-checkbox {
+.facetwp-facet {
+  margin-bottom: $golden-ratio-3 !important;
+}
+
+.facetwp-type-checkboxes .facetwp-checkbox {
   position: relative;
   background-image: none !important; /* overrides FacetWP styling in favor of custom ::before */
   font-size: $type-2;
@@ -14,16 +18,15 @@
     content: ' ';
     left: 0;
     top: 2px;
-    border: 2px solid $gray-2;
-    background-color: $white;
-    border-radius: 2px;
+    border: 1px solid $gray-2;
+    background-color: $gray-0;
   }
 
   &.checked {
     font-weight: 700;
 
     &::before {
-      border: 2px solid $orange;
+      border: 1px solid $orange;
       background-color: $orange;
     }
 
@@ -46,5 +49,29 @@
 
   .facetwp-counter {
     display: none !important; /* hiding default FacetWP post count */
+  }
+}
+
+.facetwp-type-fselect {
+  font-size: $type-2;
+
+  .fs-wrap {
+    width: auto !important;
+    max-width: 100%;
+    min-width: $golden-ratio-6;
+
+    .fs-label-wrap {
+      border: 1px solid $gray-1;
+      background-color: $gray-0;
+      cursor: pointer;
+
+      .fs-label {
+        padding: $golden-ratio-0 $golden-ratio-3 $golden-ratio-0 $golden-ratio-1;
+      }
+
+      .fs-arrow {
+        right: 11px;
+      }
+    }
   }
 }
