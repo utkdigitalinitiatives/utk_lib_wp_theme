@@ -300,3 +300,11 @@ body.subsite-menu-absolute.utk-search-open {
     }
   }
 }
+
+.utk-menu-open {
+  #utk-lib-main,
+  #utk-lib-midsection,
+  #utk-lib-footer {
+    filter: blur(11px);
+  }
+}
