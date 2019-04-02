@@ -35,6 +35,11 @@
       max-width: 100%;
       padding: $golden-ratio-2 $golden-ratio-3;
 
+      &::before,
+      &::after {
+        content: none;
+      }
+
       p {
         margin-bottom: 1em;
       }
