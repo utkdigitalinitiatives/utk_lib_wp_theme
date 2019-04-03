@@ -1,34 +1,32 @@
 /* Subsite */
 
 export default class Header {
+
     constructor() {
         this.headerListener();
     }
 
     headerListener() {
-
-        this.doThatFunc('xyz');
-
         document.addEventListener('scroll', this.trackScrolling);
-
     }
 
-    doThatFunc (that) {
-        return that;
+    static getBounds(el) {
+        return el.getBoundingClientRect();
     }
 
-    static isTop(el) {
-        return el.getBoundingClientRect().top;
-    }
+    trackScrolling() {
 
-    static isBottom (el) {
-        return el.getBoundingClientRect().bottom;
-    }
+        let detach = document.getElementById('detach-sticky-top');
+        let detachBounds = Header.getBounds(detach);
 
-    trackScrolling () {
+        console.log(detachBounds.top);
 
-        let dog = this.doThatFunc('xyz');
-        console.log(dog);
+        if (detachBounds.top < 150) {
+            document.body.classList.add('subsite-menu-absolute');
+        } else {
+            document.body.classList.remove('subsite-menu-absolute');
+        }
+
 
         // document.getElementById("page-header");
         // let pageHeaderBottom = this.isBottom('page-header-trigger');

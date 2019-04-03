@@ -4,7 +4,7 @@ Namespace App\Controllers;
 
 @endphp
 <div class="page-body--content--inner">
-    <div class="page-body--content--title">s
+    <div class="page-body--content--title">
         @php
             $dateline2   = $post->post_modified;
             $dateline   = date('F j, Y', strtotime($post->post_date));
@@ -15,7 +15,7 @@ Namespace App\Controllers;
         <h1>@php echo get_the_title(); @endphp</h1>
 
         <div class="page-body-blog--article">
-            <div class="page-body-blog--author" >
+            <div class="page-body-blog--author">
                 <div>by <strong><a>{{$author}}</a></strong></div>
                 @if($post->post_author == 4)
                     <div><em>Special Collections</em></div>
