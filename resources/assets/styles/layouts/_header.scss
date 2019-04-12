@@ -193,8 +193,6 @@ body.subsite-menu-absolute {
       }
 
       .page-header--title-wrap {
-        margin-left: 332px;
-
         @include respond(xs) {
           margin-left: 0;
         }
@@ -289,7 +287,6 @@ body.subsite-menu-absolute.utk-search-open {
 
       .page-header--title-wrap {
         margin-left: 0;
-        min-width: 304px;
       }
 
       h2.page-header--title {

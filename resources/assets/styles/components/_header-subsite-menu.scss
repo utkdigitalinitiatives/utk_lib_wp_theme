@@ -1,7 +1,5 @@
 #page-header-subsite-menu {
-  margin-left: 10px;
   display: none;
-  float: left;
   position: relative;
 
   a.menu-subsite-trigger,
@@ -32,7 +30,7 @@
     }
   }
 
-  > div {
+  > div#menu-subsite-dropdown-wrap {
     position: absolute;
     z-index: 9;
     display: none;
@@ -85,10 +83,10 @@
       }
     }
 
-    li.dropdown {
+    li.menu-item-has-children {
       position: relative;
 
-      ul.dropdown-menu {
+      ul.sub-menu {
         position: absolute;
         display: none;
       }
@@ -114,7 +112,7 @@
           margin-left: 5px !important;
         }
 
-        > ul.dropdown-menu {
+        > ul.sub-menu {
           border: none;
           border-radius: 0 !important;
           display: block;
@@ -148,4 +146,12 @@
 
 .subsite-menu-absolute #page-header-subsite-menu {
   display: block;
+}
+
+body.subsite-menu-dropdown-expand {
+  #page-header-subsite-menu {
+    #menu-subsite-dropdown-wrap {
+      display: block;
+    }
+  }
 }

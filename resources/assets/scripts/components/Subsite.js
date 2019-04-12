@@ -7,12 +7,11 @@ export default class Subsite {
 
   subsiteListener () {
 
-
-    $( "#page-header-subsite-menu" ).mouseenter(function() {
+    $( "#page-header-subsite-menu " ).mouseenter(function() {
       $( "body" ).addClass( "subsite-menu-dropdown-expand" );
     });
 
-    $( "#page-header-subsite-menu" ).mouseleave(function() {
+    $( "#page-header-subsite-menu " ).mouseleave(function() {
       $( "body" ).removeClass( "subsite-menu-dropdown-expand" );
     });
 
