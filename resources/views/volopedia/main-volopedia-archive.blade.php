@@ -1,7 +1,5 @@
 <div id="detach-sticky-top"></div>
-@php
-    ecms_alpha_menu();
-@endphp
+@php ecms_alpha_menu() @endphp
 <div class="container page-body--container">
     @include('partials.components.breadcrumb')
     <div class="page-body--flex">
@@ -13,7 +11,7 @@
                     </div>
                 @else
                     @while (have_posts()) @php the_post() @endphp
-                    @include('partials.content-'.get_post_type())
+                        @include('volopedia.partials.content')
                     @endwhile
                 @endif
             </div>
@@ -22,7 +20,7 @@
             </div>
         </main>
         <aside class="page-body--aside">
-            @include('volopedia.sidebar-volopedia')
+            @include('volopedia.partials.sidebar-volopedia')
         </aside>
     </div>
     <div id="detach-sticky-bottom"></div>
