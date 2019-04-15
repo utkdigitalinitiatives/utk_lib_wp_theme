@@ -36,6 +36,7 @@
     display: none;
     top: 47px;
     left: 18px;
+    border-top: 1px solid lighten($smokey, 5);
 
     ul {
       margin: 0;
@@ -58,9 +59,8 @@
           display: block;
           background-color: inherit;
           font-size: 15px;
-          padding: 3px 17px 0;
-          line-height: 44px;
-          height: 47px;
+          padding: 11px 17px;
+          line-height: 1.29;
         }
 
         a:hover,
