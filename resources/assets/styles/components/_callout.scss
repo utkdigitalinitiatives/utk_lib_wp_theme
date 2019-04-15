@@ -11,6 +11,13 @@
       padding: $golden-ratio-4;
       align-self: flex-end;
 
+      h3 {
+        font-weight: 700;
+        font-size: $type-4;
+        line-height: 1.18em;
+        padding-right: $golden-ratio-3;
+      }
+
       &--paragraphs {
         p:last-child {
           margin-bottom: 0;
