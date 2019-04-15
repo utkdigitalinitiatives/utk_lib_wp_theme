@@ -1,4 +1,7 @@
-video-background
+<div class="utk-content--inner">
+    <div>[content]</div>
+    <div>[image]</div>
+</div>
 {{--<div class="section--content">--}}
     {{--<div class="section--content--inner">--}}
         {{--<h3>Example Headline for Callout@php // echo $callout['fields']['callout_headline']; @endphp</h3>--}}

@@ -1,1 +1,1 @@
-default
+@include('partials.components.callout-image-text')

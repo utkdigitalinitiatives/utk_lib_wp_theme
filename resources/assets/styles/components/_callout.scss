@@ -1,11 +1,36 @@
 .utk-callout {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $white;
+  background-color: $gray-0;
+  min-height: $golden-ratio-7;
+
+  .utk-callout--inner {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+
+    .utk-callout--content {
+      padding: $golden-ratio-4;
+      align-self: flex-end;
+
+      &--paragraphs {
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    > figure {
+      margin: 0;
+      min-width: 61.8%;
+      max-width: 100%;
+      align-self: flex-end;
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
   }
 
   .section--content {
@@ -13,23 +38,6 @@
     bottom: 0;
     width: 100%;
     z-index: 2;
-
-    &--inner {
-      padding: $golden-ratio-4;
-      margin-bottom: $golden-ratio-4;
-      background-color: $globe;
-      color: $white;
-      font-size: $type-2;
-
-      h3 {
-        font-weight: 400;
-        font-size: $type-4;
-      }
-
-      p {
-        font-size: inherit;
-      }
-    }
   }
 
   .section--background-video {
@@ -54,8 +62,6 @@
 }
 
 .section-callout {
-  min-height: $golden-ratio-5;
-
   .utk-callout {
     width: 100%;
     position: relative;
