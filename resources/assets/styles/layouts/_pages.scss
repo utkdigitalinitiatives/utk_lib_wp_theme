@@ -12,7 +12,7 @@
     width: calc(100% - 332px);
     position: relative;
     z-index: 1;
-    margin-bottom: $golden-ratio-3;
+    margin-bottom: $golden-ratio-5;
 
     @include standard-body-link();
 
@@ -30,6 +30,7 @@
     margin-left: $golden-ratio-4;
     position: relative;
     z-index: 3;
+    margin-bottom: $golden-ratio-5;
 
     @include respond(xs, sm) {
       width: 100%;
