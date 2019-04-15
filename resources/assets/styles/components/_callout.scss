@@ -4,8 +4,16 @@
 
   .utk-callout--inner {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: end;
+
+    &.utk-callout--orientation-left {
+      flex-direction: row-reverse;
+    }
+
+    &.utk-callout--orientation-right {
+      flex-direction: row;
+    }
 
     .utk-callout--content {
       padding: $golden-ratio-4;
