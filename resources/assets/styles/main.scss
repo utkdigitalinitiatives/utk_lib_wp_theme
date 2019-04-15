@@ -14,11 +14,17 @@
  */
 
 /**
- * Components
+ * Variables, Bootstrap Grid and Mixins
  */
 @import "common/global";
 @import "common/bootstrap-vars";
+@import "common/bootstrap-mixins";
+@import "common/bootstrap-grid";
 @import "common/mixins";
+
+/**
+ * Components
+ */
 @import "components/archive-facets";
 @import "components/archive-pager";
 @import "components/breadcrumb";

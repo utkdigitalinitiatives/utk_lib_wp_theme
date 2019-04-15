@@ -14,3 +14,13 @@ $lg-lwr:                1200px;
 $lg-upr:                1439px;
 $xl-lwr:                1440px;
 $xl-upr:                4200px;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$utk-container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1000px,
+  xl: 1280px
+) !default;
