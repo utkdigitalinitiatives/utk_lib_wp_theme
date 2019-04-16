@@ -1,6 +1,4 @@
-.btn,
-a.btn,
-a.btn:visited {
+.btn-default {
   display: inline-block;
   background-color: $globe;
   color: $white;
@@ -10,34 +8,58 @@ a.btn:visited {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.7em;
+}
+
+.btn,
+a.btn,
+a.btn:visited {
+  @extend .btn-default;
 
   &a:hover,
   &a:focus {
     color: $white;
   }
 
-  &.btn-secondary {
-    background-color: $smokey;
-  }
-
-  &.btn-primary.btn-inverse {
+  &.btn-inverse {
     background-color: $white;
-    color: $smokeyx;
+    color: $globe;
   }
 
-  &.btn-secondary.btn-inverse {
-    background-color: $gray-1;
-    color: $smokey;
-  }
-
-  &.btn-secondary.btn-inverse.btn-outline {
+  &.btn-outline {
     background-color: transparent;
-    color: $white;
-    border: 1px solid rgba($white, 0.47);
+    color: $globe;
+    border: 2px solid $globe;
     padding: calc(#{$golden-ratio-1 - 2}) calc(#{$golden-ratio-2 - 2});
   }
 
+  &.btn-inverse.btn-outline {
+    background-color: transparent !important;
+    color: $white;
+    border-color: $white;
+  }
+
+  &.btn-secondary {
+    background-color: $smokey;
+
+    &.btn-inverse {
+      background-color: $gray-1;
+      color: $smokey;
+    }
+
+    &.btn-outline {
+      color: $gray-1;
+      background-color: transparent !important;
+      border-color: $rock;
+    }
+  }
+
+  /*
+   * the following should be universal for all container styles
+   */
+
   &.btn-with-icon {
+    background-color: $white !important;
+    color: $smokeyx !important;
     position: relative;
     padding-right: calc(#{$golden-ratio-2 + $golden-ratio-4});
 

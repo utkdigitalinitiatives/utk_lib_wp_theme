@@ -1,14 +1,14 @@
 @php
-    if ($button['link_type'] === 'page') {
-        $url = $button['link_page'];
 
-    } else if ($button['link_type'] === 'url') {
-        $url = $button['link_url'];
+Namespace App\Controllers;
+$btn = Button::buildButton($buttonFields, $containerStyle);
 
-    } else {
-        $url = null;
-    }
 @endphp
-<div class="utk-button-{{$button['link_type']}}">
-    <a class="btn" href="{{$url}}">@php echo $button['link_button_text']@endphp</a>
+<div class="utk-button-{{$btn['type']}}">
+    <a class="{{$btn['classes']}}" href="{{$btn['url']}}">
+        @php echo $btn['text']@endphp
+        @if($btn['has_icon'])
+            <span class="icon-right-open"></span>
+        @endif
+    </a>
 </div>

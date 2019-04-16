@@ -69,7 +69,7 @@
       min-width: 61.8%;
       max-width: 100%;
       align-self: flex-end;
-      clip-path: polygon($golden-ratio-4 0, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, $golden-ratio-4 100%);
 
       @include respond(xs, sm) {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - #{$golden-ratio-4})) !important;
@@ -95,7 +95,7 @@
       flex-direction: row;
 
       figure {
-        clip-path: polygon($golden-ratio-4 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, $golden-ratio-4 100%);
       }
     }
   }
