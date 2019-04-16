@@ -3,8 +3,6 @@
     $image_post_id = $callout['fields']['callout_media']['callout_image']['id'];
     $image  = wp_get_attachment_image($image_post_id, $size);
     $orientation = $callout['fields']['callout_orientation'];
-
-    print_r ($callout);
 @endphp
 <div class="utk-callout--inner utk-callout--orientation-{{$orientation}}">
     <div class="utk-callout--content">
