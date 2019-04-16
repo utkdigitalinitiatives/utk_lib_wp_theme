@@ -1,9 +1,9 @@
 @php
-  $callout = UTKLibrary\Library\Models\Callout::render_callout();
+  $fields = UTKLibrary\Library\Models\Callout::render_callout();
 @endphp
-@if($callout)
+@if($fields)
   @php
-    $type = $callout['fields']['callout_type'];
+    $type = $fields['fields']['callout_type'];
   @endphp
   <section class="utk-section section-callout section-callout--{{$type}}">
     <div class="container">

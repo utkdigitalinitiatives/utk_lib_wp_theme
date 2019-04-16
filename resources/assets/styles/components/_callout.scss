@@ -62,12 +62,6 @@
         font-size: $type-4;
         line-height: 1.18em;
       }
-
-      &--paragraphs {
-        p:last-child {
-          margin-bottom: 0;
-        }
-      }
     }
 
     > figure {
