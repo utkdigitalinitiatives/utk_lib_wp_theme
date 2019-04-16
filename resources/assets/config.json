@@ -23,7 +23,7 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/wp-content/themes/ut-libraries",
+  "publicPath": "/wp-content/themes/utk_lib_wp_theme",
   "devUrl": "https://utklibrary.test/marketing",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
