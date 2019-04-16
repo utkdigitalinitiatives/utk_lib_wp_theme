@@ -15,7 +15,7 @@ class Button extends Controller
 
         if ($linkFields['link_type'] === 'page') {
             $url = $linkFields['link_page'];
-        } else if ($linkFields['link_type'] === 'url') {
+        } elseif ($linkFields['link_type'] === 'url') {
             $url = $linkFields['link_url'];
         }
 
@@ -29,9 +29,9 @@ class Button extends Controller
 
         if ($containerStyle === 'default') {
             array_push($classes, 'btn-default');
-        } else if ($containerStyle === 'smokey') {
+        } elseif ($containerStyle === 'smokey') {
             array_push($classes, 'btn-secondary btn-inverse');
-        } else if ($containerStyle === 'globe'){
+        } elseif ($containerStyle === 'globe') {
             array_push($classes, 'btn-default btn-inverse');
         }
 
@@ -42,7 +42,7 @@ class Button extends Controller
         if ($linkFields['link_button_style'] === 'solid_icon') {
             array_push($classes, 'btn-with-icon');
             $button['has_icon'] = true;
-        } else if ($linkFields['link_button_style'] === 'bordered') {
+        } elseif ($linkFields['link_button_style'] === 'bordered') {
             array_push($classes, 'btn-outline');
         }
 
