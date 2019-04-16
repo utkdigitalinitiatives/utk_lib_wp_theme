@@ -39,6 +39,14 @@
       padding: $golden-ratio-4;
       align-self: flex-end;
 
+      @include respond(sm) {
+        padding: $golden-ratio-2 $golden-ratio-4 $golden-ratio-4;
+      }
+
+      @include respond(xs) {
+        padding: $golden-ratio-2 $golden-ratio-3 $golden-ratio-4;
+      }
+
       &::before {
         display: block;
         width: 100%;
@@ -70,7 +78,7 @@
       clip-path: polygon($golden-ratio-4 0, 100% 0, 100% 100%, 0 100%);
 
       @include respond(xs, sm) {
-        clip-path: none !important;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - #{$golden-ratio-4})) !important;
       }
 
       img {
