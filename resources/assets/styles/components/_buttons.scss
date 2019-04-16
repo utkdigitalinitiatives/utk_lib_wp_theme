@@ -74,6 +74,17 @@ a.btn:visited {
       background-color: $orange;
       color: $white;
     }
+
+    &.btn-default:not(.btn-inverse) {
+      padding: calc(#{$golden-ratio-1 - 2}) calc(#{$golden-ratio-2 - 2});
+      padding-right: calc(#{$golden-ratio-2 + $golden-ratio-4});
+      border: 2px solid $gray-1;
+      border-right: none;
+
+      span {
+        top: -2px;
+      }
+    }
   }
 }
 
