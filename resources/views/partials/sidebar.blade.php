@@ -1,3 +1,4 @@
+@include('partials.components.hours-by-location')
 <div class="aside-subsite-menu preload">
   @include('partials.components.subsite-menu-sidebar')
 </div>
