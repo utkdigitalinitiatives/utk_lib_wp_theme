@@ -10,12 +10,12 @@
 @mixin standard-body-link() {
   a,
   a:visited {
-    color: $globe !important;
+    color: $globe;
   }
 
   a:hover,
   a:focus {
-    color: $leconte !important;
+    color: $leconte;
   }
 }
 
