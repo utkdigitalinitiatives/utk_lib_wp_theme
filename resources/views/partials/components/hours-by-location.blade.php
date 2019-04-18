@@ -18,7 +18,7 @@ if (strlen($url)!=0 && $location > -1 && $location < 8) {
 
     if ($headers[0] === 'HTTP/1.1 200 OK') {
 
-        echo '<div class="utk-hours--today">';
+        echo '<a class="utk-hours--today" href="' . get_permalink(get_option('options_site_hours_site_hours_page')) . '">';
 
         echo '<span class="utk-hours--today--label">Hours Today</span>';
 
@@ -26,7 +26,7 @@ if (strlen($url)!=0 && $location > -1 && $location < 8) {
 
         echo '<span class="utk-hours--today--range">' . $hours_today . '</span>';
 
-        echo '</div>';
+        echo '</a>';
 
     } else echo "There has been an error";  // if the API doesn't connect
 }
