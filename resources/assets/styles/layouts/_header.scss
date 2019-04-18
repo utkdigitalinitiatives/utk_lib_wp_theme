@@ -141,8 +141,8 @@ body.subsite-menu-absolute {
     }
 
     .utk-logo-unit {
-      left: $golden-ratio-4;
-      padding-left: $golden-ratio-2;
+      left: $golden-ratio-4 !important;
+      padding-left: $golden-ratio-2 !important;
     }
   }
 }
