@@ -31,6 +31,9 @@
     <div id="page-header-subsite-menu">
       @include('partials.components.subsite-menu-dropdown')
     </div>
+    <div class="page-header--current-page">
+        @php echo $post->post_title; @endphp
+    </div>
     <div class="page-header--options">
       @include('partials.components.help')
       @include('partials.components.chat')
