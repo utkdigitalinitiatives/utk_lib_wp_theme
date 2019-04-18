@@ -1,0 +1,26 @@
+.utk-hours {
+  &--today {
+    background-color: $orange;
+    color: $smokeyx;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $golden-ratio-3;
+    padding: $golden-ratio-2;
+    text-align: center;
+
+    &--label {
+      display: block;
+      text-transform: uppercase;
+      font-size: $type-1;
+      font-weight: 700;
+      color: $smokeyx;
+    }
+
+    &--range {
+      display: block;
+      font-size: $type-4;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
