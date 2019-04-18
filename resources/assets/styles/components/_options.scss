@@ -60,7 +60,7 @@ body.subsite-menu-dropdown-expand .page-header--options {
     height: $golden-ratio-4;
     background-color: $rock;
     text-align: center;
-    clip-path: polygon(6px 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 6px 100%);
 
     > span {
       color: $white;
