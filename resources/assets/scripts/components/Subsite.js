@@ -15,8 +15,12 @@ export default class Subsite {
       $( "body" ).removeClass( "subsite-menu-dropdown-expand" );
     });
 
-    $( "#page-header-subsite-menu-mobile" ).click(function() {
+    $( "#page-header-subsite-menu-mobile-expand" ).click(function() {
       $( "body" ).addClass( "subsite-menu-mobile-expand" );
+    });
+
+    $( "#page-header-subsite-menu-mobile-close" ).click(function() {
+      $( "body" ).removeClass( "subsite-menu-mobile-expand" );
     });
 
   }

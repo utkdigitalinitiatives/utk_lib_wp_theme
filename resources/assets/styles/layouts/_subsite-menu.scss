@@ -17,6 +17,10 @@
       background-color: $gray-1 !important;
       height: calc(100% - 160px) !important;
 
+      #subsite-menu-0 {
+        border-bottom: 2px solid $gray-1;
+      }
+
       .subsite-menu-wrap {
         position: fixed;
         background-color: $gray-1;
@@ -34,17 +38,13 @@
 
       .subsite-call-to-actions {
         margin-top: 0 !important;
-        padding: 0 15px 15px !important;
+        padding: 15px !important;
         position: fixed;
         bottom: 0;
         left: 0;
         z-index: 100;
-        background-color: $gray-1;
+        background-color: $gray-0;
         width: 100%;
-
-        &--item {
-          border-color: $white !important;
-        }
 
         &::before {
           display: block;
@@ -57,7 +57,7 @@
           position: absolute;
           z-index: 10;
 
-          @include filter-gradient(transparent, 0%, $gray-1, 100%);
+          @include filter-gradient(transparent, 0%, $gray-0, 100%);
         }
       }
     }
@@ -75,6 +75,23 @@ body.subsite-menu-mobile-expand {
   .aside-subsite-menu.preload {
     #utk-subsite-menu {
       display: block;
+    }
+  }
+
+  .page-header--current-page-expand {
+    display: none !important;
+  }
+
+  .page-header--current-page-close {
+    display: block !important;
+
+    .icon-cancel {
+      display: inline-block !important;
+      color: $white !important;
+
+      @include respond(xs, sm) {
+        display: inline-block !important;
+      }
     }
   }
 }
