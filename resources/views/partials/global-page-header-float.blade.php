@@ -20,18 +20,23 @@
   <div class="container">
     @if ($long_title != '')
       <a href="{{$siteURL}}" aria-label="@php echo $long_title; @endphp" role="heading" class="page-header--title-wrap page-header--title-wrap-long">
-        <h2 class="page-header--title" id="subsite-title">@php echo $title @endphp</h2>
+        <h2 class="page-header--title" id="subsite-title">
+            @php echo $title @endphp
+        </h2>
         <p id="subsite-long-title">@php echo $long_title; @endphp</p>
       </a>
     @else
       <a href="{{$siteURL}}" aria-label="@php echo $title; @endphp" role="heading" class="page-header--title-wrap">
-        <h2 class="page-header--title" id="subsite-title">@php echo $title; @endphp</h2>
+        <h2 class="page-header--title" id="subsite-title">
+            @php echo $title; @endphp
+        </h2>
       </a>
     @endif
     <div id="page-header-subsite-menu">
       @include('partials.components.subsite-menu-dropdown')
     </div>
-    <div class="page-header--current-page">
+    <div id="page-header-subsite-menu-mobile" class="page-header--current-page">
+        <span class="icon-sort"></span>
         @php echo $post->post_title; @endphp
     </div>
     <div class="page-header--options">

@@ -11,6 +11,7 @@
 </div>
 @php do_action('get_footer') @endphp
 @include('partials.footer')
+@include('partials.triggers')
 @php wp_footer() @endphp
 </body>
 </html>

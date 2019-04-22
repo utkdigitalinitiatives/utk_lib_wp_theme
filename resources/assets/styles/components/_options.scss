@@ -4,9 +4,9 @@
   align-items: flex-end;
   flex-grow: 1;
   margin-top: 0;
+  top: 0;
   position: relative;
   z-index: 1010;
-  top: 0;
   transition: $transition-top;
 
   @include respond(xs, sm) {
@@ -14,8 +14,8 @@
   }
 }
 
-body.subsite-menu-sticky .page-header--options {
-  margin-top: 14.5px;
+body.header-scroll-down .page-header--options {
+  top: 23.5px;
 }
 
 body.utk-search-open .page-header--options {
@@ -96,8 +96,4 @@ a.options--item:hover,
 a.options--item:focus {
   background-color: $white;
   color: $smokeyx;
-}
-
-body.subsite-menu-absolute .page-header--options .options--item {
-  margin-top: $golden-ratio-3;
 }

@@ -11,7 +11,7 @@
   &--anchor {
     margin-right: $golden-ratio-5;
     position: relative;
-    z-index: 3;
+    z-index: 0;
     font-size: $type-2;
 
     @include respond(xs, sm) {

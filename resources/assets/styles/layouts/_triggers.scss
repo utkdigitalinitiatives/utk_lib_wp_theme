@@ -1,0 +1,19 @@
+#utk-trigger-header {
+  position: absolute;
+  top: 66px;
+  width: 1px;
+  height: 1px;
+  z-index: -100;
+
+  @include respond(xs) {
+    top: 66px;
+  }
+
+  @include respond(sm) {
+    top: 81px;
+  }
+
+  @include respond(md, lg, xl) {
+    top: 181px;
+  }
+}
