@@ -18,14 +18,15 @@ export default class Header {
 
         let detach = document.getElementById('detach-sticky-top');
         let detachBounds = Header.getBounds(detach);
-
         console.log(detachBounds.top);
 
-        if (detachBounds.top < 150) {
-            document.body.classList.add('subsite-menu-absolute');
-        } else {
-            document.body.classList.remove('subsite-menu-absolute');
-        }
+        //
+        // this was good but just need to be reintegrated differently.
+        // if (detachBounds.top < 150) {
+        //     document.body.classList.add('subsite-menu-absolute');
+        // } else {
+        //     document.body.classList.remove('subsite-menu-absolute');
+        // }
 
 
         // document.getElementById("page-header");
