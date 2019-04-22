@@ -1,6 +1,7 @@
 /*
  * overrides the wordpress override
  */
+
 html {
   margin-top: 129px !important;
 
@@ -17,10 +18,73 @@ body.admin-bar {
   #utk-lib-header .utk-header {
     margin-top: 32px;
     z-index: 99997;
+
+    @include respond(xs) {
+      margin-top: 46px;
+    }
   }
 
   #utk-lib-main {
     margin-top: 32px;
+
+    @include respond(xs) {
+      margin-top: 46px;
+    }
+  }
+
+  /*
+   * default behaviors at sm (tablet)
+   */
+  @include respond(md, lg, xl) {
+    &.header-scroll-down {
+      .page-header {
+        .page-header--float {
+          top: calc(81px + #{$admin-default});
+        }
+      }
+    }
+  }
+
+  /*
+   * default behaviors at sm (tablet)
+   */
+  @include respond(sm) {
+    .page-header {
+      .page-header--float {
+        top: calc(81px + #{$admin-default});
+      }
+    }
+
+    &.header-scroll-down:not(.header-show) {
+      .page-header .page-header--float {
+        top: $admin-default !important;
+      }
+
+      .aside-subsite-menu.preload #utk-subsite-menu {
+        top: calc(94px + #{$admin-default}) !important;
+      }
+    }
+  }
+
+  /*
+   * default behaviors at xs (mobile)
+   */
+  @include respond(xs) {
+    .page-header {
+      .page-header--float {
+        top: calc(66px + #{$admin-mobile});
+      }
+    }
+
+    &.header-scroll-down:not(.header-show) {
+      .page-header .page-header--float {
+        top: $admin-mobile !important;
+      }
+
+      .aside-subsite-menu.preload #utk-subsite-menu {
+        top: calc(94px + #{$admin-mobile}) !important;
+      }
+    }
   }
 }
 

@@ -17,3 +17,21 @@
     top: 181px;
   }
 }
+
+body.admin-bar #utk-trigger-header {
+  @include respond(xs) {
+    top: calc(66px + 46px);
+  }
+
+  /*
+   *  todo: dumb wordpress media query, so add 46px .admin-bar exception for widths 768px thru appx. 782px
+   */
+
+  @include respond(sm) {
+    top: calc(81px + 32px);
+  }
+
+  @include respond(md, lg, xl) {
+    top: calc(181px + 32px);
+  }
+}

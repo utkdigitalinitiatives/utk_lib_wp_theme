@@ -101,10 +101,19 @@ $theme-colors: (
   primary:    $globe
 );
 
+/*
+ * WordPress vars
+ */
+
+$admin-default : 32px;
+$admin-mobile : 46px;
+
+/*
+ * Misc
+ */
+
 $font-family-sans-serif:  $sans !default;
 $font-family-serif:       $serif !default;
-////** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-//$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
