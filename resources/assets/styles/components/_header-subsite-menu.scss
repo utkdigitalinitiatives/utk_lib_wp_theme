@@ -195,12 +195,12 @@
     }
   }
 
-  &-close {
+  &.page-header--current-page-close {
     display: none !important;
     background-color: $globe !important;
     color: $white !important;
 
-    .icon-cancel {
+    .icon-left-open {
       font-size: $type-2;
       margin-right: $golden-ratio-0;
       color: $gray-1;

@@ -40,8 +40,8 @@
         @php echo $post->post_title; @endphp
     </div>
     <div id="page-header-subsite-menu-mobile-close" class="page-header--current-page page-header--current-page-close">
-        <span class="icon-cancel"></span>
-        Close Menu
+        <span class="icon-left-open"></span>
+        Back to Current Page
     </div>
     <div class="page-header--options">
       @include('partials.components.help')
