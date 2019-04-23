@@ -81,6 +81,9 @@
         z-index: 101;
         opacity: 1;
         transition: $transition-opacity;
+        text-shadow: 0 0 11px $gray-0;
+
+        @include filter-gradient(rgba($gray-0, 0), 0%, $gray-0, 100%);
 
         &#subsite-menu-help {
           opacity: 1;
