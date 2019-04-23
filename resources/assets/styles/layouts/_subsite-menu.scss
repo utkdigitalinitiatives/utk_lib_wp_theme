@@ -27,7 +27,7 @@
         overflow: scroll;
         z-index: 99;
         height: calc(100% - 160px);
-        padding-bottom: $golden-ratio-4;
+        padding-bottom: 0;
       }
 
       .subsite-menu {
@@ -46,6 +46,14 @@
         background-color: $gray-0;
         width: 100%;
 
+        > a.subsite-call-to-actions--item {
+          margin-bottom: 15px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
         &::before {
           display: block;
           content: ' ';
@@ -58,6 +66,59 @@
           z-index: 10;
 
           @include filter-gradient(transparent, 0%, $gray-0, 100%);
+        }
+      }
+
+      .subsite-menu-help {
+        display: block;
+        position: fixed;
+        width: 100%;
+        z-index: 101;
+      }
+
+      /*
+       * compute measurements for cta fade on bottom in xs/sm
+       */
+
+      .subsite-menu-elements {
+        &.subsite-cta-count-null {
+          .subsite-menu-wrap {
+            padding-bottom: 0;
+          }
+
+          .subsite-menu-help {
+            bottom: 15px;
+          }
+        }
+
+        &.subsite-cta-count-1 {
+          .subsite-menu-wrap {
+            padding-bottom: $golden-ratio-4;
+          }
+
+          .subsite-menu-help {
+            bottom: calc((#{$golden-ratio-4} * 1) + 15px + 11px); // 47px base + 15px bottom margin + 11px top margin
+          }
+        }
+
+        &.subsite-cta-count-2 {
+          .subsite-menu-wrap {
+            padding-bottom: calc((#{$golden-ratio-4} * 2) + 15px); // two buttons + margin between
+          }
+
+          .subsite-menu-help {
+            bottom: calc((#{$golden-ratio-4} * 2) + 30px + 11px); // 47px base + 30px margins + 11px top margin
+          }
+        }
+
+        &.subsite-cta-count-3 {
+          .subsite-menu-wrap {
+            padding-bottom: calc((#{$golden-ratio-4} * 3) + 30px); // two buttons + margin between
+          }
+
+          .subsite-menu-help {
+            bottom: calc((#{$golden-ratio-4} * 3) + 45px + 11px); // 47px base + 45px margins + 11px top margin
+          }
         }
       }
     }
