@@ -14,7 +14,7 @@
       top: 160px !important;
       display: none;
       left: 0 !important;
-      background-color: $gray-1 !important;
+      background-color: $gray-0 !important;
       height: calc(100% - 160px) !important;
 
       #subsite-menu-0 {
@@ -23,7 +23,7 @@
 
       .subsite-menu-wrap {
         position: fixed;
-        background-color: $gray-1;
+        background-color: $gray-0;
         overflow: scroll;
         z-index: 99;
         height: calc(100% - 160px);
@@ -65,7 +65,7 @@
           position: absolute;
           z-index: 10;
 
-          @include filter-gradient(transparent, 0%, $gray-0, 100%);
+          @include filter-gradient(rgba($gray-0, 0), 0%, $gray-0, 100%);
         }
       }
 
@@ -83,7 +83,7 @@
       .subsite-menu-elements {
         &.subsite-cta-count-null {
           .subsite-menu-wrap {
-            padding-bottom: 0;
+            padding-bottom: calc((#{$golden-ratio-1} * 1) + 15px);
           }
 
           .subsite-menu-help {
@@ -93,7 +93,7 @@
 
         &.subsite-cta-count-1 {
           .subsite-menu-wrap {
-            padding-bottom: $golden-ratio-4;
+            padding-bottom: calc((#{$golden-ratio-4} * 2) + 15px);
           }
 
           .subsite-menu-help {
@@ -103,7 +103,7 @@
 
         &.subsite-cta-count-2 {
           .subsite-menu-wrap {
-            padding-bottom: calc((#{$golden-ratio-4} * 2) + 15px); // two buttons + margin between
+            padding-bottom: calc((#{$golden-ratio-4} * 3) + 30px); // two buttons + margin between
           }
 
           .subsite-menu-help {
@@ -113,7 +113,7 @@
 
         &.subsite-cta-count-3 {
           .subsite-menu-wrap {
-            padding-bottom: calc((#{$golden-ratio-4} * 3) + 30px); // two buttons + margin between
+            padding-bottom: calc((#{$golden-ratio-4} * 4) + 45px); // two buttons + margin between
           }
 
           .subsite-menu-help {
@@ -152,6 +152,20 @@ body.subsite-menu-mobile-expand {
 
       @include respond(xs, sm) {
         display: inline-block !important;
+      }
+    }
+  }
+}
+
+body.subsite-menu-mobile-expand.header-scroll-down:not(.header-show) {
+  .aside-subsite-menu.preload {
+    #utk-subsite-menu {
+      @include respond(xs, sm) {
+        height: calc(100% - 94px) !important;
+
+        .subsite-menu-wrap {
+          height: calc(100% - 94px) !important;
+        }
       }
     }
   }
