@@ -15,7 +15,6 @@ export default class Subsite {
     }
 
     $('#subsite-menu-top').click(function() {
-      console.log('x');
       $('.subsite-menu-wrap').animate(
           { scrollTop: 0 }, 290
       );
