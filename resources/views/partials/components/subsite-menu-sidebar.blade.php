@@ -35,10 +35,6 @@
      'menu'     => $subsite_menu_slug
     ];
 
-    // $ctas = get_option('options_site_cta_site_cta_enabled');
-
-    $ctas = get_field('site_cta_site_cta_enabled', 'option');
-
 @endphp
 
 <div id="utk-subsite-menu"
@@ -51,7 +47,6 @@
      data-initial-menu-id="@php echo $initial_menu_id; @endphp"
      data-initial-depth="@php echo $initial_depth; @endphp"
      data-initial-trail='@php echo json_encode($initial_menu_trail) @endphp'
-     data-ctas='@php echo json_encode($ctas) @endphp'
 >
 </div>
 
