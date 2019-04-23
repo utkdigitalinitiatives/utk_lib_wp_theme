@@ -79,6 +79,26 @@
         position: fixed;
         width: 100%;
         z-index: 101;
+        opacity: 1;
+        transition: $transition-opacity;
+
+        &#subsite-menu-help {
+          opacity: 1;
+
+          &.subsite-menu-help--scrolled {
+            opacity: 0;
+          }
+        }
+
+        &#subsite-menu-top {
+          opacity: 0;
+          cursor: pointer;
+          color: $globe;
+
+          &.subsite-menu-help--scrolled {
+            opacity: 1;
+          }
+        }
       }
 
       /*
