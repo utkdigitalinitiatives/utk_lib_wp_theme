@@ -28,6 +28,11 @@
         z-index: 99;
         height: calc(100% - 160px);
         padding-bottom: 0;
+
+        * {
+          min-height: 0;
+          min-width: 0;
+        }
       }
 
       .subsite-menu {
@@ -82,8 +87,8 @@
 
       .subsite-menu-elements {
         &.subsite-cta-count-null {
-          .subsite-menu-wrap {
-            padding-bottom: calc((#{$golden-ratio-1} * 1) + 15px);
+          .subsite-menu-wrap > .subsite-menu {
+            margin-bottom: calc((#{$golden-ratio-1} * 1) + 15px);
           }
 
           .subsite-menu-help {
@@ -92,8 +97,8 @@
         }
 
         &.subsite-cta-count-1 {
-          .subsite-menu-wrap {
-            padding-bottom: calc((#{$golden-ratio-4} * 2) + 15px);
+          .subsite-menu-wrap > .subsite-menu {
+            margin-bottom: calc((#{$golden-ratio-4} * 2) + 15px);
           }
 
           .subsite-menu-help {
@@ -102,8 +107,8 @@
         }
 
         &.subsite-cta-count-2 {
-          .subsite-menu-wrap {
-            padding-bottom: calc((#{$golden-ratio-4} * 3) + 30px); // two buttons + margin between
+          .subsite-menu-wrap > .subsite-menu {
+            margin-bottom: calc((#{$golden-ratio-4} * 3) + 30px); // two buttons + margin between
           }
 
           .subsite-menu-help {
@@ -112,8 +117,8 @@
         }
 
         &.subsite-cta-count-3 {
-          .subsite-menu-wrap {
-            padding-bottom: calc((#{$golden-ratio-4} * 4) + 45px); // two buttons + margin between
+          .subsite-menu-wrap > .subsite-menu {
+            margin-bottom: calc((#{$golden-ratio-4} * 4) + 45px); // two buttons + margin between
           }
 
           .subsite-menu-help {
