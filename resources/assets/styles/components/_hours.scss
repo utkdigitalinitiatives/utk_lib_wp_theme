@@ -1,26 +1,128 @@
-.utk-hours {
-  &--today {
-    background-color: transparent;
-    color: $smokeyx;
-    display: flex;
+section.utk-hours-section {
+  background-color: $smokey;
+}
+
+.utk-hours--wrap {
+  background-color: $smokey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include respond(xs) {
     flex-direction: column;
-    margin-bottom: $golden-ratio-3;
-    text-align: center;
+  }
+
+  .utk-hours--today {
+    display: flex;
+    align-content: flex-end;
+    flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 0;
+    padding: $golden-ratio-2 $golden-ratio-3 $golden-ratio-2 0;
 
     &--label {
       display: block;
-      text-transform: uppercase;
-      font-size: $type-1;
+      font-size: $type-0;
       font-weight: 700;
-      color: $smokey;
+      text-transform: uppercase;
+      color: $gray-1;
     }
 
     &--range {
-      color: $smokeyx !important;
+      color: $white !important;
       display: block;
       font-size: $type-4;
       font-weight: 700;
       text-transform: uppercase;
+      position: relative;
+      padding-left: 26px;
+
+      &::before {
+        position: absolute;
+        display: inline-block;
+        margin-left: -26px;
+        width: 15px;
+        height: 15px;
+        margin-top: 5px;
+        content: ' ';
+        border-radius: 100%;
+        background-color: $switchgrass;
+      }
+    }
+  }
+
+  .utk-hours--more {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    flex-grow: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15px 100%);
+    background-color: $smokey;
+    box-shadow: $box-shadow-float;
+
+    @include respond(xs) {
+      clip-path: polygon(0 0, 100% 15px, 100% 100%, 0 100%) !important;
+    }
+
+    &--image {
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      position: absolute;
+      background-size: cover;
+      background-position: 50% 50%;
+      opacity: 1;
+      filter: blur(11px);
+
+      @include respond(xs) {
+        opacity: 0.47;
+      }
+    }
+
+    &--overlay {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      height: 100%;
+      width: 61.8%;
+      z-index: 1;
+      background-color: $smokeyx;
+      padding: $golden-ratio-2 0;
+
+      @include filter-gradient-horizontal(rgba($smokey, 0), 0, rgba($smokey, 1), 61.8%);
+
+      @include respond(xs) {
+        justify-content: center;
+        width: 100%;
+        padding: $golden-ratio-3 $golden-ratio-2 $golden-ratio-2;
+      }
+
+      a,
+      a:visited {
+        color: $white;
+        font-size: $type-2;
+
+        strong {
+          display: block;
+        }
+
+        em {
+          font-size: $type-2;
+          font-style: normal;
+        }
+
+        span {
+          color: $orange;
+        }
+      }
+
+      a:hover,
+      a:focus {
+        color: $white;
+      }
     }
   }
 }

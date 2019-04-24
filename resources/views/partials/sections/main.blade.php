@@ -1,4 +1,10 @@
 <div id="detach-sticky-top"></div>
+@php
+  $hoursbyLocation = get_option('options_site_hours_site_hours_on');
+@endphp
+@if ($hoursbyLocation)
+  @include('partials.components.hours-by-location')
+@endif
 <div class="container page-body--container">
   @include('partials.components.breadcrumb')
   @include('partials.components.onesearch')

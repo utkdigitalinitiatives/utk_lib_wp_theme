@@ -15,6 +15,10 @@
 .icon-tag:before { content: '\e80d'; } /* '' */
 .icon-plus:before { content: '\e80e'; } /* '' */
 .icon-minus:before { content: '\e80f'; } /* '' */
+.icon-down-big:before { content: '\e810'; } /* '' */
+.icon-left-big:before { content: '\e811'; } /* '' */
+.icon-right-big:before { content: '\e812'; } /* '' */
+.icon-up-big:before { content: '\e813'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-rss:before { content: '\f09e'; } /* '' */
