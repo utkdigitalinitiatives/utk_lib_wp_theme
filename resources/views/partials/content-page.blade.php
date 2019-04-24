@@ -1,3 +1,9 @@
+@php
+    $hoursbyLocation = get_option('options_site_hours_site_hours_on');
+@endphp
+@if ($hoursbyLocation)
+    @include('partials.components.hours-by-location')
+@endif
 <div class="page-body--content--inner">
   @if(get_the_title())
     <div class="page-body--content--title">
@@ -5,7 +11,6 @@
     </div>
   @endif
   <div class="page-body--content--body">
-    @include('partials.components.onesearch')
     @php the_content() @endphp
   </div>
 </div>
