@@ -18,14 +18,6 @@ body.admin-bar {
     }
   }
 
-  #utk-lib-main {
-    margin-top: 32px;
-
-    @include respond(xs) {
-      margin-top: 46px;
-    }
-  }
-
   /*
    * default behaviors at sm (tablet)
    */
