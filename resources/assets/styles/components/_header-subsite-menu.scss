@@ -174,7 +174,6 @@
 
   @include respond(xs, sm) {
     display: block !important;
-    background-color: $smokey;
     color: $gray-1 !important;
     padding: 10px 15px !important;
     margin-left: -15px !important;
@@ -182,6 +181,8 @@
     width: calc(100% + 30px) !important;
     cursor: pointer !important;
     height: auto;
+    background-color: $globe !important;
+    box-shadow: $box-shadow-float;
   }
 
   .icon-sort {
