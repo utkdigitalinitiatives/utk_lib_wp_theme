@@ -11,9 +11,9 @@ use Roots\Sage\Template\BladeProvider;
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    
+
     wp_enqueue_style('typography/gotham.css', 'https://cloud.typography.com/6831932/618846/css/fonts.css', false, null);
-    wp_enqueue_style('typography/gotham.css', 'https://cloud.typography.com/6831932/6180392/css/fonts.css', false, null);
+    wp_enqueue_style('typography/gotham-dev.css', 'https://cloud.typography.com/6831932/6180392/css/fonts.css', false, null);
 
     wp_enqueue_style('ut/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('ut/main.js', asset_path('scripts/main.js'), [], null, true);
