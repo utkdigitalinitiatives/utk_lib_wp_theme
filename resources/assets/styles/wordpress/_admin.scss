@@ -3,12 +3,6 @@
  */
 
 html {
-  margin-top: 129px !important;
-
-  @include respond(xs) {
-    margin-top: 66px !important;
-  }
-
   #utk-lib-header .utk-header {
     z-index: 99997;
   }

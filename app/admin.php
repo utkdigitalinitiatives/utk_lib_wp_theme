@@ -29,18 +29,23 @@ add_action('customize_preview_init', function () {
 add_action('wp_head', function () {
     if (is_admin_bar_showing()) {
         echo "
-            <style type='text/css' media='screen'> 
-                html { 
-                    margin-top: 129px !important; 
-                }
-                .subsite-menu-sticky .page-header .page-header--float {
-                    top: 161px !important;
-                } 
-                .subsite-menu-absolute .page-header .page-header--float{
-                    top: 114px !important;
-                }
-            </style>
-            ";
+<style type='text/css' media='screen'> 
+    html {
+        margin-top: 129px !important;
+        font-size: 18px
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        html {
+            margin-top: 82px !important;
+        }
+    }
+    @media (max-width:767px){ 
+        html {
+            margin-top: 66px !important;
+        }
+    }
+</style>
+";
     } else {
         return false;
     }
