@@ -174,7 +174,7 @@
 
   @include respond(xs, sm) {
     display: block !important;
-    color: $gray-1 !important;
+    color: $white !important;
     padding: 10px 15px !important;
     margin-left: -15px !important;
     margin-right: -15px !important;
@@ -188,7 +188,7 @@
   .icon-sort {
     font-size: $type-2;
     margin-right: $golden-ratio-0;
-    color: $gray-1;
+    color: $white !important;
     display: none;
 
     @include respond(xs, sm) {
