@@ -41,8 +41,6 @@ section.utk-hours-section {
       @include respond(xs) {
         margin-right: $golden-ratio-2;
         color: $smokey;
-        font-size: $type-2;
-        text-transform: none;
       }
     }
 
