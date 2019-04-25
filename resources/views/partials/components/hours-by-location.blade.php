@@ -39,7 +39,7 @@ $location = get_option('options_site_hours_site_hours_lid');
                         <div class="utk-hours--more--image" style="background-image: url('@php print $hoursImageRender; @endphp')"></div>
                         <div class="utk-hours--more--overlay">
                             <a href="@php echo $hoursPage @endphp">
-                                <em>View Full Schedule</em>
+                                <em>More Hours</em>
                                 <span class="icon-right-big"></span>
                             </a>
                         </div>
