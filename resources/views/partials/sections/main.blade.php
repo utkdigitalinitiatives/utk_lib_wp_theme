@@ -7,9 +7,9 @@
 @endif
 <div class="container page-body--container">
   @include('partials.components.breadcrumb')
-  @include('partials.components.onesearch')
   <div class="page-body--flex">
     <main class="page-body--content">
+      @include('partials.components.onesearch')
       @include('partials.content-page')
     </main>
     <aside class="page-body--aside">
