@@ -5,8 +5,8 @@
 @if ($hoursbyLocation)
   @include('partials.components.hours-by-location')
 @endif
+@include('partials.components.breadcrumb')
 <div class="container page-body--container">
-  @include('partials.components.breadcrumb')
   <div class="page-body--flex">
     <main class="page-body--content">
       @include('partials.components.onesearch')

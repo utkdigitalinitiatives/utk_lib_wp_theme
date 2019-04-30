@@ -1,3 +1,5 @@
 <div class="page-body--content--breadcrumb">
-  @php \App\SubsiteBreadcumb::breadcrumbInline() @endphp
+    <div class="container">
+        @php \App\SubsiteBreadcumb::breadcrumbInline() @endphp
+    </div>
 </div>

@@ -1,6 +1,6 @@
 <div id="detach-sticky-top"></div>
+@include('partials.components.breadcrumb')
 <div class="container page-body--container">
-    @include('partials.components.breadcrumb')
     <div class="page-body--flex">
         <main class="page-body--content page-body--content-full">
             @include('partials.content-post-blog')

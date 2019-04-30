@@ -1,12 +1,13 @@
 .page-body--content--breadcrumb {
-  padding: $golden-ratio-3 $golden-ratio-2;
-  background-color: inherit;
+  padding: $golden-ratio-1 0;
+  background-color: $gray-0;
   font-size: 13px;
+  margin-bottom: $golden-ratio-3;
 
   @include standard-body-link();
 
   @include respond(xs, sm) {
-    padding: $golden-ratio-2 0;
+    display: none;
   }
 
   .current-menu-item {
