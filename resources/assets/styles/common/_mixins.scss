@@ -28,6 +28,18 @@
   }
 }
 
+@mixin muted-body-link() {
+  a,
+  a:visited {
+    color: $smokey;
+  }
+
+  a:hover,
+  a:focus {
+    color: $globe;
+  }
+}
+
 @mixin serif-body-rendering() {
   font-family: $serif;
   font-size: 21px;
