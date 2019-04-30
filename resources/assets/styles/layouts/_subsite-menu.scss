@@ -35,12 +35,6 @@
         }
       }
 
-      .subsite-menu {
-        background-color: $white;
-        border-left: none !important;
-        border-right: none !important;
-      }
-
       .subsite-call-to-actions {
         margin-top: 0 !important;
         padding: 15px !important;
@@ -48,7 +42,7 @@
         bottom: 0;
         left: 0;
         z-index: 100;
-        background-color: $gray-0;
+        background-color: $white;
         width: 100%;
 
         > a.subsite-call-to-actions--item {
@@ -64,26 +58,30 @@
           content: ' ';
           width: 100%;
           left: 0;
-          top: -$golden-ratio-4;
-          height: $golden-ratio-4;
-          background-color: $torch;
+          top: -33px;
+          height: 33px;
           position: absolute;
+          border-top: 2px solid $white;
           z-index: 10;
-
-          @include filter-gradient(rgba($gray-0, 0), 0%, $gray-0, 100%);
+          background-color: transparent;
+          box-shadow: $box-shadow-float-reverse;
         }
       }
 
       .subsite-menu-help {
-        display: block;
+        display: flex;
         position: fixed;
         width: 100%;
         z-index: 101;
+        height: 35px;
         opacity: 1;
         transition: $transition-opacity;
         text-shadow: 0 0 11px $gray-0;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: flex-end;
 
-        @include filter-gradient(rgba($gray-0, 0), 0%, $gray-0, 100%);
+        @include filter-gradient(rgba($white, 0.76), 0%, $white, 100%);
 
         &#subsite-menu-help {
           opacity: 1;
