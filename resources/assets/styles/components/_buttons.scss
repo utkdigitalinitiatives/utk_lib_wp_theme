@@ -1,5 +1,5 @@
 .btn-default {
-  display: inline-block;
+  display: inline-flex;
   background-color: $globe;
   color: $white;
   padding: $golden-ratio-1 $golden-ratio-2;
@@ -8,6 +8,7 @@
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.7em;
+  box-shadow: $box-shadow;
 }
 
 .btn,
@@ -78,7 +79,7 @@ a.btn:visited {
     &.btn-default:not(.btn-inverse) {
       padding: calc(#{$golden-ratio-1 - 2}) calc(#{$golden-ratio-2 - 2});
       padding-right: calc(#{$golden-ratio-2 + $golden-ratio-4});
-      border: 2px solid $gray-1;
+      border: 2px solid $white;
       border-right: none;
 
       span {
