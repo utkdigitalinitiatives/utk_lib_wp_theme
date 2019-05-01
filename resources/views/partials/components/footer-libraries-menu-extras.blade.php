@@ -11,7 +11,7 @@
 
         $defaults = [
          'menu'         => $subsite_menu_slug,
-         'walker'       => new \App\WordPressBootstrapNavwalkerDrawer(),
+         'walker'       => new \App\WordPressBootstrapNavwalker(),
         ];
 
         wp_nav_menu($defaults);
