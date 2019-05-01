@@ -85,8 +85,35 @@
         justify-content: center;
         align-items: flex-end;
         align-content: flex-end;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
 
-        @include filter-gradient(rgba($white, 0.92), 0%, $white, 100%);
+        @include filter-gradient(rgba($white, 0.76), 0%, $white, 76%);
+
+        &::before {
+          width: 15px;
+          height: 15px;
+          border-radius: 15px;
+          position: fixed;
+          margin-top: -30px;
+          font-family: fontello, monospace;
+          font-style: normal;
+          font-weight: 400;
+          speak: none;
+          display: inline-block;
+          text-decoration: inherit;
+          text-align: center;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 15px;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          transition: $transition-all-fast;
+          content: '\f107';
+          color: $white;
+          background-color: $orange;
+          box-shadow: $box-shadow-float;
+        }
 
         &#subsite-menu-help {
           opacity: 1;
@@ -103,6 +130,11 @@
 
           &.subsite-menu-help--scrolled {
             opacity: 1;
+          }
+
+          &::before {
+            content: '\f106';
+            background-color: $globe;
           }
         }
       }
