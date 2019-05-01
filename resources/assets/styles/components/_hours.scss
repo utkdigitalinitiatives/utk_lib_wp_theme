@@ -144,6 +144,10 @@ section.utk-hours-section {
         em {
           font-size: $type-2;
           font-style: normal;
+
+          @include respond(xs) {
+            font-size: $type-1 !important;
+          }
         }
 
         span {
