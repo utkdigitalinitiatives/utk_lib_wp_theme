@@ -85,7 +85,8 @@
             <?php } ?>
 
         </div>
-        <?php else: ?>
+        <?php else : ?>
+
         <?php endif; ?>
 
         <?php if ($step == 1) : ?>

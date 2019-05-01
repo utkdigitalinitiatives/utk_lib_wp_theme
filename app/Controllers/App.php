@@ -59,7 +59,7 @@ class App extends Controller
 
         echo facetwp_display('facet', 'employment_department');
 
+
         return;
     }
-
 }
