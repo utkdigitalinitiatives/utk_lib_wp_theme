@@ -70,10 +70,13 @@
 
   .page-body--aside {
     &--facets {
+      margin-bottom: $golden-ratio-3;
+      padding-left: $golden-ratio-2;
+
       &--item {
         margin-bottom: $golden-ratio-2 !important;
 
-        &:last-of-type {
+        &:last-child {
           margin-bottom: 0 !important;
         }
 
