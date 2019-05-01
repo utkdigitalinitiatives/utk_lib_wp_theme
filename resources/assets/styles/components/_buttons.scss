@@ -31,6 +31,7 @@ a.btn:visited {
     color: $globe;
     border: 2px solid $globe;
     padding: calc(#{$golden-ratio-1 - 2}) calc(#{$golden-ratio-2 - 2});
+    box-shadow: none !important;
   }
 
   &.btn-inverse.btn-outline {
