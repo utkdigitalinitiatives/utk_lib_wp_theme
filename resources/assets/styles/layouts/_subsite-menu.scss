@@ -88,7 +88,7 @@
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
 
-        @include filter-gradient(rgba($white, 0.76), 0%, $white, 76%);
+        @include filter-gradient(rgba($white, 0.47), 0%, $white, 76%);
 
         &::before {
           width: 15px;
