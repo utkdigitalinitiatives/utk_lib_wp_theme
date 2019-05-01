@@ -10,7 +10,7 @@
                     </div>
                 @else
                     @while (have_posts()) @php the_post() @endphp
-                        @include('partials.content-'.get_post_type())
+                        @include('partials.content-'.get_post_type() . '-teaser')
                     @endwhile
                 @endif
             </div>

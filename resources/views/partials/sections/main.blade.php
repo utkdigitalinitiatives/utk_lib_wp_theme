@@ -10,7 +10,7 @@
   <div class="page-body--flex">
     <main class="page-body--content">
       @include('partials.components.onesearch')
-      @include('partials.content-page')
+      @include('partials.content-'.get_post_type())
     </main>
     <aside class="page-body--aside">
       @include('partials.sidebar')
