@@ -48,4 +48,18 @@ class App extends Controller
 
         return $estimate;
     }
+
+    /*
+     * calculate read time like medium.com based on 125 words per minute.
+     */
+
+    public static function renderFacets()
+    {
+        $enabled = get_field('site_facetwp_site_facetwp_enable', 'option');
+
+        echo facetwp_display('facet', 'employment_department');
+
+        return;
+    }
+
 }
