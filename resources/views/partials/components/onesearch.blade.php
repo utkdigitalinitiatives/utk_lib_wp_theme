@@ -32,7 +32,8 @@
                        placeholder="Search for books, articles, media, digital collections . . ."
                        width="100%" />
                 <div class="utk-onesearch--box--options">
-                    Limit search to: &nbsp; <input checked="checked" name="searchtype" type="radio" value="onesearch" hidden="yes" />
+                    Limit search to:
+                    <input checked="checked" name="searchtype" type="radio" value="onesearch" hidden="yes" />
                     <span class="utk-onesearch--box--options--item">
                         <input name="searchtype" type="radio" value="utcollections" />
                         UT Collections
