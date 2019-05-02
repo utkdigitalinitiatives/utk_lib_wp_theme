@@ -48,18 +48,81 @@
       font-size: $type-2;
       font-weight: 400;
       background-color: $white;
-      padding: 0 $golden-ratio-2;
+      padding: 0 $golden-ratio-2 0 $golden-ratio-4;
       margin: 0 0 $golden-ratio-2;
       font-family: $sans;
       box-shadow: none;
-      position: relative;
       border: 1px solid $gray-1;
       outline: none;
+      color: $smokeyx;
+
+      &::placeholder {
+        color: $rock;
+        opacity: 1;
+        transition: $transition-opacity;
+      }
 
       &:hover,
       &:focus {
         border-color: $white;
         box-shadow: $box-shadow-focus;
+      }
+
+      &:focus {
+        &::placeholder {
+          opacity: 0;
+        }
+      }
+    }
+
+    &--icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: $golden-ratio-4;
+      height: $golden-ratio-4;
+      background-color: transparent;
+      z-index: 2;
+      border-top-left-radius: $golden-ratio-3;
+      border-bottom-left-radius: $golden-ratio-3;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 100%, 0 100%);
+
+      > span {
+        color: $rock;
+        font-size: $type-2;
+        transition: $transition-all;
+      }
+    }
+
+    &--submit {
+      @extend .btn;
+      @extend .btn-default;
+
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: $golden-ratio-4;
+      border: none;
+      z-index: 2;
+      margin-right: 0;
+      box-shadow: none;
+      border-top-right-radius: $golden-ratio-3;
+      border-bottom-right-radius: $golden-ratio-3;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 6px 100%);
+    }
+
+    &--wrap {
+      display: flex;
+      position: relative;
+
+      &:focus-within {
+        span {
+          color: $smokey;
+        }
       }
     }
 

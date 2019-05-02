@@ -25,12 +25,19 @@
         </div>
         <div class="utk-onesearch--box">
             <form accept-charset="UTF-8" action="/onesearch.php" method="post">
-                <input class="form-control utk-onesearch--box--search"
-                       title="search"
-                       type="text"
-                       value=""
-                       placeholder="Search for books, articles, media, digital collections . . ."
-                       width="100%" />
+                <div class="utk-onesearch--box--wrap">
+                    <span class="utk-onesearch--box--icon">
+                        <span class="icon-search"></span>
+                    </span>
+                    <input class="form-control utk-onesearch--box--search"
+                           title="search"
+                           type="text"
+                           value=""
+                           placeholder="Search for books, articles, media, digital collections, etc..." />
+                    <input class="form-control utk-onesearch--box--submit"
+                           type="submit"
+                           value="Search" />
+                </div>
                 <div class="utk-onesearch--box--options">
                     Limit search to:
                     <input checked="checked" name="searchtype" type="radio" value="onesearch" hidden="yes" />
