@@ -33,7 +33,7 @@
                            title="search"
                            type="text"
                            value=""
-                           placeholder="Search for books, articles, media, digital collections, etc..." />
+                           placeholder="Search books, articles, media, digital collections, etc..." />
                     <input class="form-control utk-onesearch--box--submit"
                            type="submit"
                            value="Search" />

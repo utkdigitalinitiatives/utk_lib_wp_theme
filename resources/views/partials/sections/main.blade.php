@@ -8,13 +8,13 @@
 @include('partials.components.breadcrumb')
 <div class="container page-body--container">
   <div class="page-body--flex">
+    <aside class="page-body--aside">
+      @include('partials.sidebar')
+    </aside>
     <main class="page-body--content">
       @include('partials.components.onesearch')
       @include('partials.content-'.get_post_type())
     </main>
-    <aside class="page-body--aside">
-      @include('partials.sidebar')
-    </aside>
   </div>
   <div id="detach-sticky-bottom"></div>
 </div>

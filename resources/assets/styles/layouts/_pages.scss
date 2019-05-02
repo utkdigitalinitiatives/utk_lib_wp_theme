@@ -1,7 +1,7 @@
 .page-body {
   &--flex {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
 
     @include respond(xs, sm) {
       flex-direction: column-reverse;
@@ -16,8 +16,14 @@
 
     @include standard-body-link();
 
-    @include respond(xs, sm) {
+    @include respond(sm, xs) {
       width: 100%;
+      margin-bottom: 0;
+      padding: $golden-ratio-3 0;
+    }
+
+    @include respond(xs) {
+      padding: $golden-ratio-2 0;
     }
 
     &.page-body--content-full {
@@ -34,8 +40,7 @@
 
     @include respond(xs, sm) {
       width: 100%;
-      margin-right: 0;
-      margin-left: 0;
+      margin: 0;
     }
   }
 }

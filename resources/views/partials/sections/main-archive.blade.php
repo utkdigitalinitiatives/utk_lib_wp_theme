@@ -2,6 +2,10 @@
 @include('partials.components.breadcrumb')
 <div class="container page-body--container">
     <div class="page-body--flex">
+        <aside class="page-body--aside">
+            @include('partials.facets')
+            @include('partials.sidebar')
+        </aside>
         <main class="page-body--content">
             <div class="facetwp-template">
                 @if (!have_posts())
@@ -18,10 +22,6 @@
                 @php echo facetwp_display('pager') @endphp
             </div>
         </main>
-        <aside class="page-body--aside">
-            @include('partials.facets')
-            @include('partials.sidebar')
-        </aside>
     </div>
     <div id="detach-sticky-bottom"></div>
 </div>
