@@ -1,0 +1,26 @@
+body.wp-admin .edit-post-visual-editor {
+  .wp-block {
+    max-width: 900px;
+    margin: 0 $golden-ratio-5;
+
+    &.editor-post-title__block {
+      .editor-post-title__input {
+        color: $smokey;
+        font-family: $sans;
+        font-size: $type-5;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+    }
+
+    &.wp-block:not([data-type^="acf/"]),
+    &.wp-block[data-type^="acf/"] .acf-block-preview {
+      color: $smokeyx;
+      font-family: $sans;
+      font-size: $type-3;
+      font-weight: 400;
+      line-height: 1.5em;
+      letter-spacing: -0.03em;
+    }
+  }
+}
