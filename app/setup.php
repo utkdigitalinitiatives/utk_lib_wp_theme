@@ -74,7 +74,6 @@ add_action('admin_enqueue_scripts', function () {
     );
 
     wp_enqueue_style('ut/admin.css', asset_path('styles/admin.css'), false, null);
-
 });
 
 add_filter('upload_dir', function ($upload) {
