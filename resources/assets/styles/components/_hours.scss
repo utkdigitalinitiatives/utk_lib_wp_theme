@@ -1,5 +1,5 @@
 section.utk-hours-section {
-  background-color: $smokey;
+  background-color: $smokeyx;
 
   @include respond(xs) {
     background-color: $gray-0;
@@ -7,7 +7,6 @@ section.utk-hours-section {
 }
 
 .utk-hours--wrap {
-  background-color: $smokey;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -36,7 +35,7 @@ section.utk-hours-section {
       font-size: $type-0;
       font-weight: 700;
       text-transform: uppercase;
-      color: $gray-1;
+      color: $rock;
 
       @include respond(xs) {
         margin-right: $golden-ratio-2;
@@ -79,7 +78,6 @@ section.utk-hours-section {
   .utk-hours--more {
     position: relative;
     display: flex;
-    background-color: $smokey;
     align-items: flex-end;
     justify-content: flex-end;
     flex-shrink: 0;
@@ -120,7 +118,7 @@ section.utk-hours-section {
       background-color: $smokeyx;
       padding: $golden-ratio-2 0;
 
-      @include filter-gradient-horizontal(rgba($smokey, 0), 0, rgba($smokey, 1), 61.8%);
+      @include filter-gradient-horizontal(rgba($smokeyx, 0), 0, rgba($smokeyx, 1), 61.8%);
 
       @include respond(xs) {
         width: 100%;
