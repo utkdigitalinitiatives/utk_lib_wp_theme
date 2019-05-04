@@ -1,0 +1,50 @@
+.utk-directory {
+  &--single {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: $golden-ratio-3;
+
+    > figure {
+      width: $golden-ratio-6;
+      height: 150px;
+      background-color: $gray-0;
+      margin: 0;
+    }
+
+    &--content {
+      margin-left: $golden-ratio-2;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        font-size: $type-3;
+        margin: 0;
+      }
+
+      &--person {
+        font-weight: 700 !important;
+        margin: 0 0 $golden-ratio-0;
+      }
+
+      &--title {
+        color: $smokey;
+      }
+
+      &--contact {
+        display: flex;
+        flex-direction: column;
+        font-size: $type-2;
+        margin: $golden-ratio-1 0 0;
+        padding: 0;
+
+        > li {
+          display: block;
+          list-style: none;
+          font-size: inherit !important;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

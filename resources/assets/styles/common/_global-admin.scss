@@ -23,4 +23,13 @@ body.wp-admin .edit-post-visual-editor {
       letter-spacing: -0.03em;
     }
   }
+
+  .wp-block-columns {
+    padding: 0 15px;
+
+    .wp-block {
+      max-width: 100%;
+      margin: 0;
+    }
+  }
 }
