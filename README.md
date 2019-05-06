@@ -7,7 +7,11 @@ Custom theme for UT Libraries WordPress built with Sage 9 framework with single-
 
 ### Custom Plugins
 * [UT Libraries](https://github.com/utkdigitalinitiatives/utk_wp_lib_mu_plugin) (mu-plugin)
-* [UT Libraries Event Calendar](https://github.com/utkdigitalinitiatives/utk_wp_calendar)
+* [UT Event Calendar](https://github.com/utkdigitalinitiatives/utk_wp_calendar)
+
+### Contributed Plugins
+* [Advanced Custom Fields PRO](https://www.advancedcustomfields.com/pro/)
+* [FacetWP](https://facetwp.com/)
 
 ## Features
 
