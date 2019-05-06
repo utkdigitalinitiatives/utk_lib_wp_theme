@@ -8,7 +8,7 @@
   // set wp_query args
   $args = [
     'post_type' => 'post',
-    'posts_per_page' => 5
+    'posts_per_page' => 8
   ];
 
   // get news posts
