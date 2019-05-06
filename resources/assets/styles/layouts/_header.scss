@@ -44,10 +44,10 @@
 
   &--title {
     margin: 0;
-    font-size: $type-5;
-    line-height: 47px;
+    font-size: $type-4;
+    line-height: $golden-ratio-4;
     color: $white;
-    font-weight: 400;
+    font-weight: 700;
 
     @include respond(xs, sm) {
       line-height: $golden-ratio-4;
@@ -70,7 +70,6 @@
       color: $gray-1;
       display: block;
       margin: 0;
-      margin-top: -$golden-ratio-0;
       font-size: $type-3;
 
       @include respond(xs, sm) {
