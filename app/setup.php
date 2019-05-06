@@ -119,6 +119,20 @@ add_filter('image_resize_dimensions', function ($default, $orig_w, $orig_h, $new
 }, 10, 6);
 
 /**
+ * load favicons
+ */
+
+add_action('wp_head', function () {
+    echo '<link rel="apple-touch-icon" sizes="180x180" href="'. asset_path('images/favicon/apple-touch-icon.png') . '">';
+    echo '<link rel="icon" type="image/png" sizes="32x32" href="'. asset_path('images/favicon/favicon-32x32.png') . '">';
+    echo '<link rel="icon" type="image/png" sizes="16x16" href="'. asset_path('images/favicon/favicon-16x16.png') . '">';
+    echo '<link rel="manifest" href="'. asset_path('images/favicon/site.webmanifest') . '">';
+    echo '<link rel="mask-icon" href="'. asset_path('images/favicon/safari-pinned-tab.svg') . '" color="#ff8200">';
+    echo '<meta name="msapplication-TileColor" content="#ffffff">';
+    echo '<meta name="theme-color" content="#ffffff">';
+});
+
+/**
  * Theme setup
  */
 add_action('after_setup_theme', function () {
