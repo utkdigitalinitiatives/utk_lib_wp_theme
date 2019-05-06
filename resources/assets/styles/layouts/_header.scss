@@ -127,13 +127,22 @@ body.utk-search-open {
   }
 
   &.header-scroll-down {
+    .page-header--float {
+      box-shadow: inset 0 -1px 0 lighten($smokey, 5);
+    }
+
     .utk-header-search {
       box-shadow: inset $box-shadow-float;
     }
 
     .utk-search-wrapper {
       width: 100%;
-      left: auto;
+      max-width: 100%;
+      left: 0;
+
+      .utk-search-options {
+        padding-left: 0;
+      }
     }
   }
 }
@@ -194,6 +203,7 @@ header.utk-header {
         position: fixed;
         top: 82px;
         bottom: auto;
+        z-index: 99998;
 
         .page-header--title-wrap {
           margin-left: 0;
