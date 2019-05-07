@@ -53,7 +53,7 @@ class WordPressBootstrapNavwalkerDrawer extends \Walker_Nav_Menu
             // build a string to use as aria-labelledby.
             $labelledby = 'aria-labelledby="' . end($matches[2]) . '"';
         }
-        $output .= "{$n}{$indent}<ul$class_names $labelledby role=\"menu\">{$n}";
+        $output .= "{$n}{$indent}<ul role=\"menu\" $class_names $labelledby>{$n}";
     }
     /**
      * Starts the element output.
@@ -133,7 +133,7 @@ class WordPressBootstrapNavwalkerDrawer extends \Walker_Nav_Menu
         $id = $id ? ' id="' . esc_attr($id) . '"' : '';
         $output .=
             $indent .
-            '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' .
+            '<li role="menuitem"' .
             $id .
             $class_names .
             '>';
@@ -161,7 +161,6 @@ class WordPressBootstrapNavwalkerDrawer extends \Walker_Nav_Menu
             // Items in dropdowns use .dropdown-item instead of .nav-link.
             if ($depth > 0) {
                 $atts['class'] = 'dropdown-item';
-                $atts['role'] = 'menuitem';
             } else {
                 $atts['class'] = 'nav-link';
             }
@@ -326,7 +325,7 @@ class WordPressBootstrapNavwalkerDrawer extends \Walker_Nav_Menu
                 if ($container_class) {
                     $fallback_output .= ' class="' . esc_attr($container_class) . '"';
                 }
-                $fallback_output .= '>';
+                $fallback_output .= ' role="menu">';
             }
             $fallback_output .= '<ul';
             if ($menu_id) {
@@ -335,9 +334,9 @@ class WordPressBootstrapNavwalkerDrawer extends \Walker_Nav_Menu
             if ($menu_class) {
                 $fallback_output .= ' class="' . esc_attr($menu_class) . '"';
             }
-            $fallback_output .= '>';
+            $fallback_output .= ' role="menu">';
             $fallback_output .=
-                '<li><a role="menuitem" href="' .
+                '<li><a href="' .
                 esc_url(admin_url('nav-menus.php')) .
                 '" title="' .
                 esc_attr__('Add a menu', 'wp-bootstrap-navwalker') .
