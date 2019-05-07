@@ -19,14 +19,22 @@
 <div id="page-header-trigger" class="page-header--float">
   <div class="container">
     @if ($long_title != '')
-      <a href="{{$siteURL}}" aria-label="@php echo $long_title; @endphp" role="heading" class="page-header--title-wrap page-header--title-wrap-long">
+      <a href="{{$siteURL}}"
+         role="heading"
+         aria-label="@php echo $long_title; @endphp"
+         aria-level="2"
+         class="page-header--title-wrap page-header--title-wrap-long">
         <h2 class="page-header--title" id="subsite-title">
             @php echo $title @endphp
         </h2>
         <p id="subsite-long-title">@php echo $long_title; @endphp</p>
       </a>
     @else
-      <a href="{{$siteURL}}" aria-label="@php echo $title; @endphp" role="heading" class="page-header--title-wrap">
+      <a href="{{$siteURL}}"
+         role="heading"
+         aria-label="@php echo $title; @endphp"
+         aria-level="2"
+         class="page-header--title-wrap">
         <h2 class="page-header--title" id="subsite-title">
             @php echo $title; @endphp
         </h2>
