@@ -133,7 +133,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
         $id = $id ? ' id="' . esc_attr($id) . '"' : '';
         $output .=
             $indent .
-            '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' .
+            '<li role="menuitem"' .
             $id .
             $class_names .
             '>';
