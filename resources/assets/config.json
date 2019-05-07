@@ -15,9 +15,6 @@
       "./react/subsite-menu/subsite-menu.js",
       "./react/subsite-menu/subsite-menu.css"
     ],
-    "service-worker": [
-      "./react/subsite-menu/service-worker.js"
-    ],
     "social-slider": [
       "./react/social-slider/social-slider.js",
       "./react/social-slider/social-slider.css"
