@@ -161,6 +161,7 @@ class WordPressBootstrapNavwalkerDrawer extends \Walker_Nav_Menu
             // Items in dropdowns use .dropdown-item instead of .nav-link.
             if ($depth > 0) {
                 $atts['class'] = 'dropdown-item';
+                $atts['role'] = 'menuitem';
             } else {
                 $atts['class'] = 'nav-link';
             }
@@ -336,7 +337,7 @@ class WordPressBootstrapNavwalkerDrawer extends \Walker_Nav_Menu
             }
             $fallback_output .= '>';
             $fallback_output .=
-                '<li><a href="' .
+                '<li><a role="menuitem" href="' .
                 esc_url(admin_url('nav-menus.php')) .
                 '" title="' .
                 esc_attr__('Add a menu', 'wp-bootstrap-navwalker') .
