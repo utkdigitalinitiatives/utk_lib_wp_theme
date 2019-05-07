@@ -1,11 +1,16 @@
 @php
+
     // styling
     $orientation = $fields['fields']['callout_orientation'];
     $containerStyle = $fields['fields']['callout_style'];
+
     // media
-    $size = 'callout_image';
+    $render_size = 'callout_image';
+    $preload_size = 'preload_gr_horz';
     $image_post_id = $fields['fields']['callout_media']['callout_image']['id'];
-    $image  = wp_get_attachment_image($image_post_id, $size);
+    $image  = $fields['fields']['callout_media']['callout_image'];
+    $srcset = wp_get_attachment_image_srcset($image_post_id);
+
 @endphp
 <div class="utk-callout--inner utk-callout--style-{{$containerStyle}} utk-callout--orientation-{{$orientation}}">
     <div class="utk-callout--content">
@@ -16,5 +21,7 @@
             @include('partials.components.button')
         @endif
     </div>
-    <figure class="utk-callout--image">@php echo $image @endphp</figure>
+    <div class="utk-callout--image">
+        @include('partials.components.image')
+    </div>
 </div>

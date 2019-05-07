@@ -65,7 +65,7 @@
       }
     }
 
-    > figure {
+    .utk-callout--image {
       margin: 0;
       min-width: $gr-long;
       max-width: 100%;
@@ -87,7 +87,7 @@
     &.utk-callout--orientation-left {
       flex-direction: row-reverse;
 
-      figure {
+      .utk-callout--image {
         clip-path: polygon(0 0, calc(100% - #{$golden-ratio-4}) 0, 100% 100%, 0 100%);
       }
     }
@@ -95,7 +95,7 @@
     &.utk-callout--orientation-right {
       flex-direction: row;
 
-      figure {
+      .utk-callout--image {
         clip-path: polygon(0 0, 100% 0, 100% 100%, $golden-ratio-4 100%);
       }
     }

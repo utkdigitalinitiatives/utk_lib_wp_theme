@@ -93,10 +93,12 @@ add_filter('upload_dir', function ($upload) {
  * Image Sizes
  */
 add_image_size('post-thumbnail', 400, 400, true);
-add_image_size('post-thumbnail-pre', 11, 11, true);
 add_image_size('callout_image', 1000, 618, true);
-add_image_size('callout_image_pre', 18, 11, true);
 add_image_size('hero', 1364, 521, false);
+
+// common aspect ratios for lazyloads
+add_image_size('preload_square', 11, 11, true);
+add_image_size('preload_gr_horz', 18, 11, true);
 
 /**
  *  Upscale smaller than ascribed dimension images
