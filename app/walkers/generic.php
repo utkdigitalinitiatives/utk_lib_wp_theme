@@ -9,13 +9,13 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
      *
      * @since WP 3.0.0
      *
-     * @see Walker_Nav_Menu::startLevel()
+     * @see Walker_Nav_Menu::start_lvl()
      *
      * @param string   $output Used to append additional content (passed by reference).
      * @param int      $depth  Depth of menu item. Used for padding.
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      */
-    public function startLevel(&$output, $depth = 0, $args = array())
+    public function start_lvl(&$output, $depth = 0, $args = array())
     {
         if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
             $t = '';
@@ -61,7 +61,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
      * @since WP 3.0.0
      * @since WP 4.4.0 The {@see 'nav_menu_item_args'} filter was added.
      *
-     * @see Walker_Nav_Menu::startElement()
+     * @see Walker_Nav_Menu::start_el()
      *
      * @param string   $output Used to append additional content (passed by reference).
      * @param WP_Post  $item   Menu item data object.
@@ -69,7 +69,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      * @param int      $id     Current item ID.
      */
-    public function startElement(&$output, $item, $depth = 0, $args = array(), $id = 0)
+    public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
     {
         if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
             $t = '';
@@ -90,7 +90,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
          * NOTE: linkmod and icon class arrays are passed by reference and
          * are maybe modified before being used later in this function.
          */
-        $classes = self::separateLinkmodsAndIconsFromClasses($classes, $linkmod_classes, $icon_classes, $depth);
+        $classes = self::seporate_linkmods_and_icons_from_classes($classes, $linkmod_classes, $icon_classes, $depth);
         // Join any icon classes plucked from $classes into a string.
         $icon_class_string = join(' ', $icon_classes);
         /**
@@ -166,7 +166,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
             }
         }
         // update atts of this item based on any custom linkmod classes.
-        $atts = self::updateAttsForLinkmodType($atts, $linkmod_classes);
+        $atts = self::update_atts_for_linkmod_type($atts, $linkmod_classes);
         // Allow filtering of the $atts array before using it.
         $atts = apply_filters('nav_menu_link_attributes', $atts, $item, $args, $depth);
         // Build a string of html containing all the atts for the item.
@@ -180,7 +180,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
         /**
          * Set a typeflag to easily test if this is a linkmod or not.
          */
-        $linkmod_type = self::getLinkmodType($linkmod_classes);
+        $linkmod_type = self::get_linkmod_type($linkmod_classes);
         /**
          * START appending the internal item contents to the output.
          */
@@ -191,7 +191,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
          */
         if ('' !== $linkmod_type) {
             // is linkmod, output the required element opener.
-            $item_output .= self::linkmodElementOpen($linkmod_type, $attributes);
+            $item_output .= self::linkmod_element_open($linkmod_type, $attributes);
         } else {
             // With no link mod type set this must be a standard <a> tag.
             $item_output .= '<a' . $attributes . '>';
@@ -223,7 +223,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
          * If the .sr-only class was set apply to the nav items text only.
          */
         if (in_array('sr-only', $linkmod_classes, true)) {
-            $title         = self::wrapForScreenReader($title);
+            $title         = self::wrap_for_screen_reader($title);
             $keys_to_unset = array_keys($linkmod_classes, 'sr-only');
             foreach ($keys_to_unset as $k) {
                 unset($linkmod_classes[ $k ]);
@@ -244,7 +244,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
          */
         if ('' !== $linkmod_type) {
             // is linkmod, output the required element opener.
-            $item_output .= self::linkmodElementClose($linkmod_type, $attributes);
+            $item_output .= self::linkmod_element_close($linkmod_type, $attributes);
         } else {
             // With no link mod type set this must be a standard <a> tag.
             $item_output .= $arrowIcon;
@@ -254,7 +254,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
         /**
          * END appending the internal item contents to the output.
          */
-        $output .= apply_filters('walker_nav_menu_startElement', $item_output, $item, $depth, $args);
+        $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
     /**
      * Traverse elements to create list from elements.
@@ -268,7 +268,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
      *
      * @since WP 2.5.0
      *
-     * @see Walker::startLevel()
+     * @see Walker::start_lvl()
      *
      * @param object $element           Data object.
      * @param array  $children_elements List of elements to continue traversing (passed by reference).
@@ -277,7 +277,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
      * @param array  $args              An array of arguments.
      * @param string $output            Used to append additional content (passed by reference).
      */
-    public function displayElement($element, &$children_elements, $max_depth, $depth, $args, &$output)
+    public function display_element($element, &$children_elements, $max_depth, $depth, $args, &$output)
     {
         if (! $element) {
             return;
@@ -287,7 +287,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
         if (is_object($args[0])) {
             $args[0]->has_children = ! empty($children_elements[ $element->$id_field ]);
         }
-        parent::displayElement($element, $children_elements, $max_depth, $depth, $args, $output);
+        parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
     }
     /**
      * Menu Fallback
@@ -330,7 +330,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
             }
             $fallback_output .= '>';
             $fallback_output .=
-                '<li><a href="' .
+                '<li role="menuitem"><a href="' .
                 esc_url(admin_url('nav-menus.php')) .
                 '" title="' .
                 esc_attr__('Add a menu', 'wp-bootstrap-navwalker') .
@@ -368,7 +368,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
      *
      * @return array  $classes         a maybe modified array of classnames.
      */
-    private function separateLinkmodsAndIconsFromClasses($classes, &$linkmod_classes, &$icon_classes, $depth)
+    private function seporate_linkmods_and_icons_from_classes($classes, &$linkmod_classes, &$icon_classes, $depth)
     {
         // Loop through $classes array to find linkmod or icon classes.
         foreach ($classes as $key => $class) {
@@ -405,7 +405,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
      *
      * @return string                empty for default, a linkmod type string otherwise.
      */
-    private function getLinkmodType($linkmod_classes = array())
+    private function get_linkmod_type($linkmod_classes = array())
     {
         $linkmod_type = '';
         // Loop through array of linkmod classes to handle their $atts.
@@ -435,7 +435,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
      *
      * @return array                 maybe updated array of attributes for item.
      */
-    private function updatt($atts = array(), $linkmod_classes = array())
+    private function update_atts_for_linkmod_type($atts = array(), $linkmod_classes = array())
     {
         if (! empty($linkmod_classes)) {
             foreach ($linkmod_classes as $link_class) {
@@ -468,7 +468,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
      * @param string $text the string of text to be wrapped in a screen reader class.
      * @return string      the string wrapped in a span with the class.
      */
-    private function wrapForScreenReader($text = '')
+    private function wrap_for_screen_reader($text = '')
     {
         if ($text) {
             $text = '<span class="sr-only">' . $text . '</span>';
@@ -485,7 +485,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
      *
      * @return string              a string with the openign tag for the element with attribibutes added.
      */
-    private function linkmodElementOpen($linkmod_type, $attributes = '')
+    private function linkmod_element_open($linkmod_type, $attributes = '')
     {
         $output = '';
         if ('dropdown-item-text' === $linkmod_type) {
@@ -509,7 +509,7 @@ class WordPressBootstrapNavwalker extends \Walker_Nav_Menu
      *
      * @return string              a string with the closing tag for this linkmod type.
      */
-    private function linkmodElementClose($linkmod_type)
+    private function linkmod_element_close($linkmod_type)
     {
         $output = '';
         if ('dropdown-header' === $linkmod_type || 'dropdown-item-text' === $linkmod_type) {
