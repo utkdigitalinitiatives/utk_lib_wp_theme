@@ -21,6 +21,9 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "jquery": [
+      "./scripts/jquery-3.4.1.min.js"
     ]
   },
   "publicPath": "/wp-content/themes/utk_lib_wp_theme",
