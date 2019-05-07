@@ -131,21 +131,12 @@ class WordPressBootstrapNavwalkerDrawer extends \Walker_Nav_Menu
          */
         $id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth);
         $id = $id ? ' id="' . esc_attr($id) . '"' : '';
-        if ($depth === 0) :
-            $output .=
-                $indent .
-                '<li ' .
-                $id .
-                $class_names .
-                '>';
-        else :
-            $output .=
-                $indent .
-                '<li role="menuitem"' .
-                $id .
-                $class_names .
-                '>';
-        endif;
+        $output .=
+            $indent .
+            '<li role="menuitem"' .
+            $id .
+            $class_names .
+            '>';
         // initialize array for holding the $atts for the link item.
         $atts = array();
         // Set title from item to the $atts array - if title is empty then
@@ -171,7 +162,7 @@ class WordPressBootstrapNavwalkerDrawer extends \Walker_Nav_Menu
             if ($depth > 0) {
                 $atts['class'] = 'dropdown-item';
             } else {
-                $atts['class'] = 'nav-link';
+                $atts['href'] = null;
             }
         }
         // update atts of this item based on any custom linkmod classes.
@@ -198,16 +189,12 @@ class WordPressBootstrapNavwalkerDrawer extends \Walker_Nav_Menu
          * This is the start of the internal nav item. Depending on what
          * kind of linkmod we have we may need different wrapper elements.
          */
-        if ($depth === 0) {
-            // do nothing
+        if ('' !== $linkmod_type) {
+            // is linkmod, output the required element opener.
+            $item_output .= self::linkmod_element_open($linkmod_type, $attributes);
         } else {
-            if ('' !== $linkmod_type) {
-                // is linkmod, output the required element opener.
-                $item_output .= self::linkmod_element_open($linkmod_type, $attributes);
-            } else {
-                // With no link mod type set this must be a standard <a> tag.
-                $item_output .= '<a' . $attributes . '>';
-            }
+            // With no link mod type set this must be a standard <a> tag.
+            $item_output .= '<a' . $attributes . '>';
         }
         /**
          * Initiate empty icon var, then if we have a string containing any
