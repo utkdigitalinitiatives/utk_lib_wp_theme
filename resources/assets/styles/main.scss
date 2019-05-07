@@ -3,8 +3,10 @@
 /** Import everything from autoload */
 @import "./autoload/**/*";
 
-// imports Fontello icons
+// import vendor files
 @import "../vendor/fontello/css/fontello.css";
+@import "../vendor/slick/slick.min.css";
+@import "../vendor/slick/slick-theme.min.css";
 
 /**
  * Import npm dependencies
