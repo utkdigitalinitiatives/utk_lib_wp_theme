@@ -9,6 +9,7 @@ export default class Header {
     headerListener() {
         var lastScrollTop = 0;
         $(window).scroll(function(){
+            console.log('test');
             var st = $(this).scrollTop();
             if (st > lastScrollTop){
                 document.body.classList.remove('header-show');

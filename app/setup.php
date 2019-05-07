@@ -55,9 +55,6 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_enqueue_style('ut/main.css', asset_path('styles/main.css'), false, null);
 
-    wp_deregister_script('jquery');
-    wp_enqueue_script('jquery', asset_path('scripts/jquery-3.4.1.min.js'), false, '3.4.1');
-
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
