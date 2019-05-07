@@ -12,12 +12,15 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
 
-    wp_enqueue_style(
-        'typography/gotham.css',
-        'https://cloud.typography.com/6831932/618846/css/fonts.css',
-        false,
-        null
-    );
+    // production
+    //    wp_enqueue_style(
+    //        'typography/gotham.css',
+    //        'https://cloud.typography.com/6831932/618846/css/fonts.css',
+    //        false,
+    //        null
+    //    );
+
+    // staging/dev/local
     wp_enqueue_style(
         'typography/gotham-dev.css',
         'https://cloud.typography.com/6831932/6180392/css/fonts.css',
