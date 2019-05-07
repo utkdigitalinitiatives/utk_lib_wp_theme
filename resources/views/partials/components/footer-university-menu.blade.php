@@ -12,6 +12,7 @@
         $defaults = [
          'menu'         => $subsite_menu_slug,
          'walker'       => new \App\WordPressBootstrapNavwalkerDrawer(),
+         'items_wrap'   => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
         ];
 
         wp_nav_menu($defaults);
