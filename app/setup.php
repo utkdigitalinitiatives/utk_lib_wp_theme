@@ -21,21 +21,22 @@ add_action('wp_enqueue_scripts', function () {
     //    );
 
     // staging/dev/local
-//    wp_enqueue_style(
-//        'typography/gotham-dev.css',
-//        'https://cloud.typography.com/6831932/6180392/css/fonts.css',
-//        false,
-//        null
-//    );
+    //    wp_enqueue_style(
+    //        'typography/gotham-dev.css',
+    //        'https://cloud.typography.com/6831932/6180392/css/fonts.css',
+    //        false,
+    //        null
+    //    );
 
     wp_enqueue_style('ut/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_script('ut/main.js', asset_path('scripts/main.js'), [], null, true);
 
     wp_enqueue_style('ut/header.css', asset_path('styles/header.css'), false, null);
     wp_enqueue_script('ut/header.js', asset_path('scripts/header.js'), [], null, true);
 
     wp_enqueue_style('ut/subsite-menu.css', asset_path('styles/subsite-menu.css'), false, null);
     wp_enqueue_script('ut/subsite-menu.js', asset_path('scripts/subsite-menu.js'), [], null, true);
+
+    wp_enqueue_script('ut/main.js', asset_path('scripts/main.js'), [], null, true);
 
     wp_enqueue_style('ut/social-slider.css', asset_path('styles/social-slider.css'), false, null);
     wp_enqueue_script('ut/social-slider.js', asset_path('scripts/social-slider.js'), [], null, true);
@@ -48,18 +49,18 @@ add_action('wp_enqueue_scripts', function () {
 
 add_action('admin_enqueue_scripts', function () {
 
-//    wp_enqueue_style(
-//        'typography/gotham.css',
-//        'https://cloud.typography.com/6831932/618846/css/fonts.css',
-//        false,
-//        null
-//    );
-//    wp_enqueue_style(
-//        'typography/gotham-dev.css',
-//        'https://cloud.typography.com/6831932/6180392/css/fonts.css',
-//        false,
-//        null
-//    );
+    //    wp_enqueue_style(
+    //        'typography/gotham.css',
+    //        'https://cloud.typography.com/6831932/618846/css/fonts.css',
+    //        false,
+    //        null
+    //    );
+    //    wp_enqueue_style(
+    //        'typography/gotham-dev.css',
+    //        'https://cloud.typography.com/6831932/6180392/css/fonts.css',
+    //        false,
+    //        null
+    //    );
 
     wp_enqueue_style('ut/admin.css', asset_path('styles/admin.css'), false, null);
 });
