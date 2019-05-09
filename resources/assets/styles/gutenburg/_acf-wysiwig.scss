@@ -1,0 +1,28 @@
+.acf-block-component .acf-editor-wrap {
+  .mce-menubar.mce-toolbar {
+    display: none !important;
+  }
+
+  .mce-btn-group {
+    .mce-widget {
+      &.mce-btn[aria-label="Underline (⌘U)"],
+      &.mce-btn[aria-label="Blockquote (⌃⌥Q)"],
+      &.mce-btn[aria-label="Strikethrough (⌃⌥D)"],
+      &.mce-btn[aria-label="Align left (⌃⌥L)"],
+      &.mce-btn[aria-label="Align center (⌃⌥C"],
+      &.mce-btn[aria-label="Align right (⌃⌥R)"],
+      &.mce-btn[aria-label="Undo (⌘Z)"],
+      &.mce-btn[aria-label="Redo (⌘Y)"],
+      &.mce-btn[aria-label="Fullscreen"] {
+        display: none;
+      }
+
+      &.mce-btn[aria-label="Bulleted list (⌃⌥U)"],
+      &.mce-btn[aria-label="Numbered list (⌃⌥O)"] {
+        .mce-open {
+          display: none;
+        }
+      }
+    }
+  }
+}
