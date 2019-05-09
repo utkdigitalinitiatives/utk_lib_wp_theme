@@ -81,6 +81,7 @@
     a,
     a:visited {
       &::after {
+        z-index: 1;
         position: absolute;
         top: -$golden-ratio-2;
         right: $golden-ratio-3;
