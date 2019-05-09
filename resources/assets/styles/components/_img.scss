@@ -1,12 +1,11 @@
 img[data-lazy-src] {
   opacity: 0;
-  background-color: $gray-1;
 }
 
 img.lazyloaded {
-  -webkit-transition: opacity 0.5s linear 0.2s;
-  -moz-transition: opacity 0.5s linear 0.2s;
-  transition: opacity 0.5s linear 0.2s;
+  -webkit-transition: $transition-all-fast;
+  -moz-transition: $transition-all-fast;
+  transition: $transition-all-fast;
   opacity: 1;
 }
 
