@@ -1,6 +1,84 @@
 .utk-card {
   display: flex;
   flex-direction: row;
+  box-shadow: $box-shadow;
+  border-radius: $golden-ratio-1;
+  overflow: hidden;
+  margin-bottom: $golden-ratio-3;
+  position: relative;
+  border-top: $golden-ratio-1 solid $orange;
+
+  .utk-card--content {
+    width: $gr-short;
+    padding: $golden-ratio-3;
+
+    p,
+    ul,
+    ol,
+    li {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .utk-card--image {
+    display: flex;
+    position: relative;
+    width: $gr-long;
+    padding-top: $gr-short;
+    height: $gr-short;
+    background-color: $orange;
+
+    img {
+      min-width: 100%;
+      max-width: 100%;
+      height: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: $transition-all-fast;
+    }
+
+    a,
+    a:visited {
+      &::after {
+        position: absolute;
+        top: -$golden-ratio-2;
+        right: $golden-ratio-3;
+        font-size: $type-2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $golden-ratio-4;
+        height: $golden-ratio-4;
+        border-radius: $golden-ratio-4;
+        box-shadow: $box-shadow-float;
+        background-color: $smokey;
+        color: $gray-1 !important;
+        content: "\E812";
+        font-family: fontello, monospace;
+        -webkit-font-smoothing: antialiased;
+        transition: $transition-all-fast;
+      }
+    }
+
+    a:hover,
+    a:focus {
+      &::after {
+        background-color: $globe;
+        color: $white !important;
+      }
+    }
+
+    .utk-lazyload {
+      position: static;
+
+      p {
+        display: none;
+      }
+    }
+  }
 
   &.utk-card-after {
     flex-direction: row-reverse;
@@ -8,12 +86,30 @@
 }
 
 .wp-block-columns {
-  .utk-card {
-    display: flex;
-    flex-direction: column;
+  @include respond(wpnocol) {
+    .utk-card {
+      display: flex;
+      flex-direction: column;
 
-    &.utk-card-after {
-      flex-direction: column-reverse;
+      .utk-card--content {
+        width: 100%;
+      }
+
+      .utk-card--image {
+        width: 100%;
+        padding-right: 0;
+        padding-top: $gr-long;
+        height: $gr-long;
+
+        img {
+          left: 0;
+          right: auto;
+        }
+      }
+
+      &.utk-card-after {
+        flex-direction: column-reverse;
+      }
     }
   }
 }

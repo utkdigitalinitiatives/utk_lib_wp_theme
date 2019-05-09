@@ -5,6 +5,7 @@
       li {
         @extend p;
 
+        color: $smokey;
         margin-bottom: $golden-ratio-0 !important;
       }
     }

@@ -8,3 +8,11 @@
   -webkit-box-sizing: unset;
   box-sizing: unset;
 }
+
+.edit-post-visual-editor {
+  @import "../components/blockquote";
+  @import "../components/buttons";
+  @import "../components/headings";
+  @import "../components/list";
+  @import "../components/paragraph";
+}

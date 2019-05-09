@@ -1,42 +1,47 @@
+h1 {
+  font-size: $type-5;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: $type-4;
+}
+
+h3 {
+  font-size: $type-4;
+  font-weight: 400;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: $type-3;
+}
+
+h5 {
+  font-size: $type-3;
+}
+
+h6 {
+  text-transform: uppercase;
+  font-size: $type-3;
+  font-weight: 700;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 1rem 0;
-  font-family: $sans;
-  font-weight: 700;
-  letter-spacing: -0.02em;
   color: $smokey;
-}
+  font-family: $sans;
+  margin: 1em 0 0.618em;
 
-h1 {
-  font-size: $type-5;
-  margin-bottom: 1em;
-}
+  &:first-child {
+    margin-top: 0;
+  }
 
-h2 {
-  font-size: $type-5;
-}
-
-h3 {
-  font-size: $type-4;
-}
-
-h4 {
-  text-transform: uppercase;
-  font-size: $type-3;
-  color: $smokeyx;
-}
-
-h5 {
-  font-size: $type-3;
-  font-family: $serif;
-  color: $smokeyx;
-}
-
-h6 {
-  font-size: $type-3;
-  color: $smokeyx;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
