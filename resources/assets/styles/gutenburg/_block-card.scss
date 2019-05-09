@@ -6,7 +6,7 @@
   overflow: hidden;
   margin-bottom: $golden-ratio-3;
   position: relative;
-  border-top: $golden-ratio-1 solid $orange;
+  border-left: $golden-ratio-1 solid $orange;
 
   &-style {
     &-orange {
@@ -83,8 +83,10 @@
       &::after {
         z-index: 1;
         position: absolute;
-        top: -$golden-ratio-2;
-        right: $golden-ratio-3;
+        top: $golden-ratio-3;
+        right: -$golden-ratio-2;
+        bottom: auto;
+        left: auto;
         font-size: $type-2;
         display: flex;
         justify-content: center;
@@ -121,33 +123,68 @@
 
   &.utk-card-after {
     flex-direction: row-reverse;
+
+    .utk-card--image {
+      a {
+        &::after {
+          top: $golden-ratio-3;
+          right: auto;
+          bottom: auto;
+          left: -$golden-ratio-2;
+        }
+      }
+    }
   }
 }
 
 .wp-block-columns {
-  @include respond(wpnocol) {
-    .utk-card {
-      display: flex;
-      flex-direction: column;
+  .utk-card {
+    display: flex;
+    flex-direction: column;
+    border-left: none;
+    border-top-width: $golden-ratio-1;
+    border-top-style: solid;
+    //@include respond(wpnocol) {
+    //  margin: 0 $golden-ratio-3;
+    //}
 
-      .utk-card--content {
-        width: 100%;
+    .utk-card--content {
+      width: 100%;
+    }
+
+    .utk-card--image {
+      width: 100%;
+      padding-right: 0;
+      padding-top: $gr-long;
+      height: $gr-long;
+
+      img {
+        left: 0;
+        right: auto;
       }
 
-      .utk-card--image {
-        width: 100%;
-        padding-right: 0;
-        padding-top: $gr-long;
-        height: $gr-long;
-
-        img {
-          left: 0;
-          right: auto;
+      a {
+        &::after {
+          top: auto;
+          right: $golden-ratio-3;
+          bottom: -$golden-ratio-2;
+          left: auto;
         }
       }
+    }
 
-      &.utk-card-after {
-        flex-direction: column-reverse;
+    &.utk-card-after {
+      flex-direction: column-reverse;
+
+      .utk-card--image {
+        a {
+          &::after {
+            top: -$golden-ratio-2;
+            right: $golden-ratio-3;
+            bottom: auto;
+            left: auto;
+          }
+        }
       }
     }
   }

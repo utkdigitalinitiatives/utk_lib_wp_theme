@@ -57,7 +57,7 @@
 
   /* Landscape phones and down */
   @if $media == wpnocol {
-    @media (min-width: 600px) { @content; }
+    @media (max-width: 600px) { @content; }
   }
 
   /* Landscape phones and down */
