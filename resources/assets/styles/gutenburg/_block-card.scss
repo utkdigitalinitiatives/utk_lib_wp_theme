@@ -8,6 +8,44 @@
   position: relative;
   border-top: $golden-ratio-1 solid $orange;
 
+  &-style {
+    &-orange {
+      border-color: $orange;
+    }
+
+    &-smokey {
+      border-color: $smokey;
+    }
+
+    &-rock {
+      border-color: $rock;
+    }
+
+    &-valley {
+      border-color: $valley;
+    }
+
+    &-regalia {
+      border-color: $regalia;
+    }
+
+    &-energy {
+      border-color: $energy;
+    }
+
+    &-summitt {
+      border-color: $summitt;
+    }
+
+    &-eureka {
+      border-color: $eureka;
+    }
+
+    &-fountain {
+      border-color: $fountain;
+    }
+  }
+
   .utk-card--content {
     width: $gr-short;
     padding: $golden-ratio-3;
@@ -28,7 +66,7 @@
     width: $gr-long;
     padding-top: $gr-short;
     height: $gr-short;
-    background-color: $orange;
+    background-color: $gray-1;
 
     img {
       min-width: 100%;
