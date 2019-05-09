@@ -78,13 +78,17 @@ add_filter('upload_dir', function ($upload) {
 /**
  * Image Sizes
  */
-add_image_size('post-thumbnail', 400, 400, true);
-add_image_size('callout_image', 1000, 618, true);
-add_image_size('hero', 1364, 521, false);
+add_image_size('post-thumbnail', 521, 521, true);
+add_image_size('card_image', 521, 322, true);
+add_image_size('callout_image', 843, 521, true);
+add_image_size('hero_image', 1364, 843, false);
+add_image_size('vertical_image', 521, 843, true);
+add_image_size('directory_image', 322, 199, false);
 
 // common aspect ratios for lazyloads
-add_image_size('preload_square', 11, 11, true);
-add_image_size('preload_gr_horz', 18, 11, true);
+add_image_size('preload_square', 18, 18, true);
+add_image_size('preload_gr_horz', 29, 18, true);
+add_image_size('preload_gr_vert', 18, 29, true);
 
 /**
  *  Upscale smaller than ascribed dimension images

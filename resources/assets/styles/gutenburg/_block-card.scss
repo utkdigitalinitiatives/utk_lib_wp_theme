@@ -1,0 +1,19 @@
+.utk-card {
+  display: flex;
+  flex-direction: row;
+
+  &.utk-card-after {
+    flex-direction: row-reverse;
+  }
+}
+
+.wp-block-columns {
+  .utk-card {
+    display: flex;
+    flex-direction: column;
+
+    &.utk-card-after {
+      flex-direction: column-reverse;
+    }
+  }
+}
