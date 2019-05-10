@@ -137,55 +137,81 @@
   }
 }
 
-.wp-block-columns {
-  .utk-card {
-    display: flex;
-    flex-direction: column;
-    border-left: none;
-    border-top-width: $golden-ratio-1;
-    border-top-style: solid;
-    //@include respond(wpnocol) {
-    //  margin: 0 $golden-ratio-3;
-    //}
+.wp-block-columns .utk-card,
+.utk-card.utk-card-align-right,
+.utk-card.utk-card-align-left {
+  display: flex;
+  flex-direction: column;
+  border-left: none;
+  border-top-width: $golden-ratio-1;
+  border-top-style: solid;
 
-    .utk-card--content {
-      width: 100%;
+  .utk-card--content {
+    width: 100%;
+  }
+
+  .utk-card--image {
+    width: 100%;
+    padding-right: 0;
+    padding-top: $gr-long;
+    height: $gr-long;
+
+    img {
+      left: 0;
+      right: auto;
     }
 
-    .utk-card--image {
-      width: 100%;
-      padding-right: 0;
-      padding-top: $gr-long;
-      height: $gr-long;
-
-      img {
-        left: 0;
-        right: auto;
+    a {
+      &::after {
+        top: auto;
+        right: $golden-ratio-3;
+        bottom: -$golden-ratio-2;
+        left: auto;
       }
+    }
+  }
 
+  &.utk-card-after {
+    flex-direction: column-reverse;
+
+    .utk-card--image {
       a {
         &::after {
-          top: auto;
+          top: -$golden-ratio-2;
           right: $golden-ratio-3;
-          bottom: -$golden-ratio-2;
+          bottom: auto;
           left: auto;
         }
       }
     }
+  }
+}
 
-    &.utk-card-after {
-      flex-direction: column-reverse;
-
-      .utk-card--image {
-        a {
-          &::after {
-            top: -$golden-ratio-2;
-            right: $golden-ratio-3;
-            bottom: auto;
-            left: auto;
-          }
-        }
-      }
+body:not(.wp-admin) {
+  .utk-card {
+    &[class*="utk-card-align-"] {
+      width: $gr-short;
+      max-width: 100%;
+      margin-left: $golden-ratio-3;
     }
+
+    &-align-right {
+      float: right;
+      margin-left: $golden-ratio-3;
+    }
+
+    &-align-left {
+      float: left;
+      margin-right: $golden-ratio-3;
+    }
+  }
+}
+
+body.wp-admin {
+  .block-editor-block-list__layout .block-editor-block-list__block[data-align=right] > .block-editor-block-list__block-edit,
+  .block-editor-block-list__layout .block-editor-block-list__block[data-align=left] > .block-editor-block-list__block-edit {
+    width: $gr-short;
+    max-width: 100%;
+    margin-left: $golden-ratio-3;
   }
 }
