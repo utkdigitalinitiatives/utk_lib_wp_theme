@@ -69,7 +69,7 @@ add_action('admin_enqueue_scripts', function () {
 
     wp_enqueue_style('ut/accordion.css', asset_path('styles/accordion.css'), false, null);
     wp_enqueue_script('ut/accordion.js', asset_path('scripts/accordion.js'), [], null, true);
-    
+
 });
 
 add_filter('upload_dir', function ($upload) {
