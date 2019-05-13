@@ -15,6 +15,10 @@
       "./react/subsite-menu/subsite-menu.js",
       "./react/subsite-menu/subsite-menu.css"
     ],
+    "accordion": [
+      "./react/accordion/accordion.js",
+      "./react/accordion/accordion.css"
+    ],
     "social-slider": [
       "./react/social-slider/social-slider.js",
       "./react/social-slider/social-slider.css"
