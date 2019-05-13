@@ -36,9 +36,6 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('ut/subsite-menu.css', asset_path('styles/subsite-menu.css'), false, null);
     wp_enqueue_script('ut/subsite-menu.js', asset_path('scripts/subsite-menu.js'), [], null, true);
 
-    wp_enqueue_style('ut/accordion.css', asset_path('styles/accordion.css'), false, null);
-    wp_enqueue_script('ut/accordion.js', asset_path('scripts/accordion.js'), [], null, true);
-
     wp_enqueue_script('ut/main.js', asset_path('scripts/main.js'), [], null, true);
 
     wp_enqueue_style('ut/social-slider.css', asset_path('styles/social-slider.css'), false, null);
