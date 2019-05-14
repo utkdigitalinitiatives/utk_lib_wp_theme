@@ -48,10 +48,13 @@
       color: #333;
       text-decoration: none;
       display: flex;
-      align-content: center; }
-      .accordion .title a svg,
-      .accordion .title a:visited svg {
+      align-content: center;
+      align-items: center; }
+      .accordion .title a i,
+      .accordion .title a:visited i {
+        font-size: 1.618em;
         height: 1em;
+        line-height: 1em;
         width: auto;
         margin-right: 6px;
         fill: #b6b6b6; }
@@ -59,8 +62,8 @@
     .accordion .title a:focus {
       color: #006c93; }
     .accordion .title:hover a,
-    .accordion .title:hover a svg, .accordion .title:focus-within a,
-    .accordion .title:focus-within a svg {
+    .accordion .title:hover a i, .accordion .title:focus-within a,
+    .accordion .title:focus-within a i {
       color: #006c93;
       fill: #006c93 !important; }
     .accordion .title.active {
@@ -68,7 +71,7 @@
       display: block;
       border-bottom: none;
       border-right-color: #ff8200; }
-      .accordion .title.active a svg {
+      .accordion .title.active a i {
         fill: #333; }
   .accordion .content {
     display: none;

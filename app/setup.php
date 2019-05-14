@@ -28,6 +28,13 @@ add_action('wp_enqueue_scripts', function () {
     //        null
     //    );
 
+    wp_enqueue_style(
+        'typography/material-icons.css',
+        'https://fonts.googleapis.com/icon?family=Material+Icons+Round',
+        false,
+        null
+    );
+
     wp_enqueue_style('ut/main.css', asset_path('styles/main.css'), false, null);
 
     wp_enqueue_style('ut/header.css', asset_path('styles/header.css'), false, null);
