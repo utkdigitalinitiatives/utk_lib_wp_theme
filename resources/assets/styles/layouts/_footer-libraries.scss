@@ -171,11 +171,6 @@
         padding: 0;
         list-style: none;
         font-size: $type-2;
-
-        @include respond(xs, sm) {
-          font-size: $type-1;
-          line-height: 1.34rem;
-        }
       }
     }
   }

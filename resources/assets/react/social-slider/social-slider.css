@@ -8,6 +8,9 @@
  * typography
  */
 /*
+ * relative sizing
+ */
+/*
  * font-size for typography
  */
 /*
@@ -21,6 +24,12 @@
  */
 /*
  * bootstrap 4 overrides
+ */
+/*
+ * WordPress vars
+ */
+/*
+ * Misc
  */
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 /*
@@ -36,146 +45,179 @@
  * layout
  */
 #utk-social-slider {
-  overflow: hidden;
-  padding: 47px 0;
-  width: 100%;
-  background-color: #f6f6f6; }
-  #utk-social-slider .social-slider-title {
-    margin: 0;
-    margin-bottom: 29px;
-    font-size: 23px;
-    text-align: center;
-    font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Gotham-Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 400 !important;
-    color: #333; }
+  background-color: #f6f6f6 !important; }
 
-.social-slider-icon {
+.utk-social {
+  display: flex;
+  flex-direction: row;
+  font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: calc(61.5px) 0;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .utk-social {
+      flex-direction: column-reverse !important; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .utk-social {
+      flex-direction: column-reverse !important; } }
+  .utk-social--mast {
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: row;
+    min-width: calc(100% - (100% / 1.61803));
+    text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-social--mast {
+        margin-bottom: 18px; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .utk-social--mast {
+        margin-bottom: 18px; } }
+    .utk-social--mast h3 {
+      margin-bottom: 18px;
+      line-height: 1.5em;
+      width: 100%; }
+      .utk-social--mast h3 > strong {
+        display: block; }
+    .utk-social--mast--platforms {
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      .utk-social--mast--platforms > li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-bottom: 6px;
+        font-weight: 700;
+        font-size: 15px; }
+        .utk-social--mast--platforms > li > a,
+        .utk-social--mast--platforms > li > a:visited,
+        .utk-social--mast--platforms > li > a:hover,
+        .utk-social--mast--platforms > li > a:focus {
+          text-decoration: none;
+          color: #006c93 !important; }
+  .utk-social--items {
+    flex-grow: 1;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-social--items {
+        margin: calc(14.5px) !important; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .utk-social--items {
+        margin: calc(14.5px) !important; } }
+
+.utk-social--item--icon {
   display: block;
   width: 29px;
   height: 29px;
   line-height: 29px;
-  background-color: #fff;
-  position: absolute;
   right: 0;
-  margin-top: 0px;
+  position: absolute;
   text-align: center; }
-  .social-slider-icon span {
+  .utk-social--item--icon span {
+    max-width: 29px;
     line-height: inherit;
     color: #333;
     font-size: 15px; }
 
-#utk-social-slider .slick-slider {
-  width: calc(100% + 47px);
-  margin-left: -23.5px; }
+.utk-social--items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
 
-#utk-social-slider .slick-dots {
-  margin: 0;
-  bottom: -47px; }
-  #utk-social-slider .slick-dots li button:before {
-    color: #a7a9ac;
-    opacity: 1;
-    font-size: 11px; }
-  #utk-social-slider .slick-dots li.slick-active button:before {
-    color: #ff8200; }
-
-#utk-social-slider .slick-arrow,
-#utk-social-slider .slick-arrow:before {
-  color: #58595b !important;
-  font-family: fontello !important;
-  opacity: 1 !important; }
-  #utk-social-slider .slick-arrow:hover,
-  #utk-social-slider .slick-arrow:before:hover {
-    color: #333 !important;
-    opacity: 1 !important; }
-
-#utk-social-slider .slick-prev:before {
-  content: '\E803'; }
-
-#utk-social-slider .slick-next:before {
-  content: '\E802'; }
-
-#utk-social-slider {
-  position: relative;
-  /*
-   * isolates and hides the second slide of .slick-active class set
-   */
-  /*
-   * general slide styling
-   */ }
-  #utk-social-slider .social-slider-over {
+.utk-social--item {
+  width: 20%;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .utk-social--item {
+      width: 20% !important; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .utk-social--item {
+      width: 20% !important; } }
+  .utk-social--item > a {
     display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent; }
-    #utk-social-slider .social-slider-over .container {
-      position: relative;
-      height: 100%;
-      background-color: transparent;
-      padding: 0; }
-    #utk-social-slider .social-slider-over--block {
-      position: absolute;
-      background-color: transparent;
-      left: calc(((((100% + 30px) - (47px * 4)) / 5)));
-      width: calc((((100% - 30px) + (47px * 4)) / 5) + 14px);
-      height: 100%;
-      padding-bottom: 76px;
-      z-index: 1;
-      background-color: #f6f6f6;
-      display: flex;
-      align-items: center; }
-      #utk-social-slider .social-slider-over--block h3 {
-        font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Gotham-Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 23px;
-        font-weight: 400;
-        line-height: 1.5em;
-        color: #333;
-        text-align: center;
-        flex-grow: 1; }
-        #utk-social-slider .social-slider-over--block h3 span {
-          display: block;
-          text-align: center;
-          font-weight: 700; }
-  #utk-social-slider .slick-track > .slick-current ~ .slick-active {
-    opacity: 1; }
-  #utk-social-slider .slick-track > .slick-current ~ .slick-active ~ .slick-active {
-    opacity: 1; }
-  #utk-social-slider .slick-slide {
-    overflow: hidden;
     position: relative;
-    font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Gotham-Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    opacity: 1;
-    transition: none !important; }
-    #utk-social-slider .slick-slide .social-slide--inner {
+    margin-top: calc(14.5px);
+    margin-bottom: calc(14.5px);
+    margin-right: 29px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-social--item > a {
+        margin: calc(14.5px) !important; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .utk-social--item > a {
+        margin: calc(14.5px) !important; } }
+  .utk-social--item img {
+    display: block;
+    width: 100%;
+    height: auto; }
+  .utk-social--item--metadata {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px;
+    bottom: 0;
+    display: none !important; }
+    .utk-social--item--metadata--likes {
+      border-radius: 6px;
+      padding: 0 4px;
+      font-size: 11px;
+      line-height: 18px;
+      font-weight: 700;
       display: block;
-      margin: 0 calc(23.5px);
+      position: relative;
+      color: #333 !important;
       background-color: #fff;
-      position: relative; }
-      #utk-social-slider .slick-slide .social-slide--inner a,
-      #utk-social-slider .slick-slide .social-slide--inner a:visited {
-        cursor: pointer; }
-      #utk-social-slider .slick-slide .social-slide--inner .social-slide--metadata {
-        height: 47px;
-        background-color: rgba(51, 51, 51, 0.9);
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        display: flex;
-        color: #fff;
-        justify-content: space-between; }
-        #utk-social-slider .slick-slide .social-slide--inner .social-slide--metadata > div {
-          color: #fff;
-          font-size: 13px;
-          font-weight: 700;
-          line-height: 47px;
-          padding: 0 18px; }
-          #utk-social-slider .slick-slide .social-slide--inner .social-slide--metadata > div > span {
-            color: #e65933;
-            margin-right: 6px; }
-    #utk-social-slider .slick-slide.slick-active {
-      display: block; }
-    #utk-social-slider .slick-slide img {
-      width: 100%;
-      height: auto; }
+      box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15); }
+      .utk-social--item--metadata--likes span {
+        color: #ff8200 !important; }

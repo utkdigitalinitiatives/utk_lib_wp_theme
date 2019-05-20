@@ -67,10 +67,20 @@
       display: flex;
       justify-content: space-between;
 
+      @include respond(xs) {
+        flex-wrap: wrap;
+      }
+
       > li {
         flex-grow: 1;
         font-size: $type-1;
         margin-right: $golden-ratio-4;
+
+        @include respond(xs) {
+          width: 50%;
+          margin-right: 0;
+          flex-grow: 0;
+        }
 
         a,
         a:visited,
