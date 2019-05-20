@@ -45,7 +45,6 @@ add_action('wp_enqueue_scripts', function () {
         wp_enqueue_script('ut/panel.js', asset_path('scripts/panel.js'), [], null, true);
     endif;
 
-
     wp_enqueue_style('ut/subsite-menu.css', asset_path('styles/subsite-menu.css'), false, null);
     wp_enqueue_script('ut/subsite-menu.js', asset_path('scripts/subsite-menu.js'), [], null, true);
 

@@ -3,6 +3,10 @@
   background-color: $white;
   color: $smokeyx;
   border-top: 6px solid $orange;
+
+  @include respond(xs, sm) {
+    padding: $golden-ratio-3 0;
+  }
 }
 
 .footer-university {
