@@ -11,6 +11,10 @@
       "./react/header/header.js",
       "./react/header/header.css"
     ],
+    "panel": [
+      "./react/panel/panel.js",
+      "./react/panel/panel.css"
+    ],
     "subsite-menu": [
       "./react/subsite-menu/subsite-menu.js",
       "./react/subsite-menu/subsite-menu.css"

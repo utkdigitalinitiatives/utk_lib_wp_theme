@@ -8,4 +8,3 @@
     // this is left intentionally blank
   @endphp
 </header>
-@include('partials.components.notice')

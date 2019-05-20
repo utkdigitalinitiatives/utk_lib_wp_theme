@@ -4,11 +4,7 @@
 <body @php body_class() @endphp>
 @php do_action('get_header') @endphp
 @include('partials.header')
-<div id="utk-lib-main" role="document">
-  <section class="utk-section section-main content">
-    @yield('content')
-  </section>
-</div>
+@include('partials.libraries-main')
 @php do_action('get_footer') @endphp
 @include('partials.footer')
 @include('partials.triggers')
