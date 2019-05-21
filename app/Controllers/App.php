@@ -59,7 +59,6 @@ class App extends Controller
 
         echo facetwp_display('facet', 'employment_department');
 
-
         return;
     }
 
@@ -69,11 +68,24 @@ class App extends Controller
 
     public static function getLibChatHash()
     {
+
+        $hash = null;
+
         // ut libraries 2019 - subheader global
         $defaultHash = '8a9fa354ff9adc8c085107bc41e587c8';
 
-        $hash = $defaultHash;
+        // get site options for current site
+        $override = get_field('site_libchat_site_libchat_override', 'option');
+        $updateHash = get_field('site_libchat_site_libchat_hash', 'option');
+
+        // set hash
+        if ($override === true && $updateHash != '') {
+            $hash = $updateHash;
+        } else {
+            $hash = $defaultHash;
+        }
 
         return $hash;
+
     }
 }
