@@ -62,4 +62,18 @@ class App extends Controller
 
         return;
     }
+
+    /*
+     * get LibChat hash, using default of override not set
+     */
+
+    public static function getLibChatHash()
+    {
+        // ut libraries 2019 - subheader global
+        $defaultHash = '8a9fa354ff9adc8c085107bc41e587c8';
+
+        $hash = $defaultHash;
+
+        return $hash;
+    }
 }

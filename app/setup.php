@@ -53,6 +53,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('ut/social-slider.css', asset_path('styles/social-slider.css'), false, null);
     wp_enqueue_script('ut/social-slider.js', asset_path('scripts/social-slider.js'), [], null, true);
 
+    wp_enqueue_script( 'ut/libcal', 'https://v2.libanswers.com/load_chat.php?hash=' . \App\Controllers\App::getLibChatHash(), [], null, true);
+
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
