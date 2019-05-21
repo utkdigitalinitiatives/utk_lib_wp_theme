@@ -68,7 +68,6 @@ class App extends Controller
 
     public static function getLibChatHash()
     {
-
         $hash = null;
 
         // ut libraries 2019 - subheader global
@@ -86,6 +85,5 @@ class App extends Controller
         }
 
         return $hash;
-
     }
 }
