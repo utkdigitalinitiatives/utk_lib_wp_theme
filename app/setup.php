@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Controllers\App;
 use Roots\Sage\Container;
 use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
@@ -55,7 +56,7 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_enqueue_script(
         'ut/libcal',
-        'https://v2.libanswers.com/load_chat.php?hash=' . \App\Controllers\App::getLibChatHash(),
+        'https://v2.libanswers.com/load_chat.php?hash=' . App::getLibChatHash(),
         [],
         null,
         true
