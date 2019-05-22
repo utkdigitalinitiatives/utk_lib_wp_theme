@@ -29,13 +29,6 @@ add_action('wp_enqueue_scripts', function () {
     //        null
     //    );
 
-    wp_enqueue_style(
-        'typography/material-icons.css',
-        'https://fonts.googleapis.com/icon?family=Material+Icons+Round',
-        false,
-        null
-    );
-
     wp_enqueue_style('ut/main.css', asset_path('styles/main.css'), false, null);
 
     wp_enqueue_style('ut/header.css', asset_path('styles/header.css'), false, null);
@@ -44,10 +37,10 @@ add_action('wp_enqueue_scripts', function () {
     if (is_main_site() && is_front_page()) :
         wp_enqueue_style('ut/panel.css', asset_path('styles/panel.css'), false, null);
         wp_enqueue_script('ut/panel.js', asset_path('scripts/panel.js'), [], null, true);
+    else :
+        wp_enqueue_style('ut/subsite-menu.css', asset_path('styles/subsite-menu.css'), false, null);
+        wp_enqueue_script('ut/subsite-menu.js', asset_path('scripts/subsite-menu.js'), [], null, true);
     endif;
-
-    wp_enqueue_style('ut/subsite-menu.css', asset_path('styles/subsite-menu.css'), false, null);
-    wp_enqueue_script('ut/subsite-menu.js', asset_path('scripts/subsite-menu.js'), [], null, true);
 
     wp_enqueue_script('ut/main.js', asset_path('scripts/main.js'), [], null, true);
 
