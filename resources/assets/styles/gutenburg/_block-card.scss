@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  margin-bottom: $golden-ratio-3;
+  margin-bottom: $golden-ratio-4;
   position: relative;
   border-left: $golden-ratio-1 solid $orange;
   background-color: $gray-0;
@@ -208,12 +208,12 @@ body:not(.wp-admin) {
 
     &-align-right {
       float: right;
-      margin-left: $golden-ratio-3;
+      margin-left: $golden-ratio-4;
     }
 
     &-align-left {
       float: left;
-      margin-right: $golden-ratio-3;
+      margin-right: $golden-ratio-4;
     }
   }
 }
@@ -223,6 +223,6 @@ body.wp-admin {
   .block-editor-block-list__layout .block-editor-block-list__block[data-align=left] > .block-editor-block-list__block-edit {
     width: $gr-short;
     max-width: 100%;
-    margin-left: $golden-ratio-3;
+    margin-left: $golden-ratio-4;
   }
 }
