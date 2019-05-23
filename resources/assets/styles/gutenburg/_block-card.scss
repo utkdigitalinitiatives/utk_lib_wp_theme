@@ -1,12 +1,11 @@
 .utk-card {
   display: flex;
   flex-direction: row;
-  box-shadow: $box-shadow;
-  border-radius: $golden-ratio-1;
   overflow: hidden;
   margin-bottom: $golden-ratio-3;
   position: relative;
   border-left: $golden-ratio-1 solid $orange;
+  background-color: $gray-0;
 
   &-style {
     &-orange {
@@ -48,7 +47,7 @@
 
   .utk-card--content {
     width: $gr-short;
-    padding: $golden-ratio-3;
+    padding: $golden-ratio-2 $golden-ratio-3;
 
     p,
     ul,
@@ -148,6 +147,19 @@
 
   .utk-card--content {
     width: 100%;
+
+    header {
+      h4 {
+        font-size: $type-2;
+        text-transform: none;
+        margin-bottom: $golden-ratio-0;
+      }
+    }
+
+    p {
+      margin-top: 0;
+      font-size: $type-2;
+    }
   }
 
   .utk-card--image {
@@ -192,7 +204,6 @@ body:not(.wp-admin) {
     &[class*="utk-card-align-"] {
       width: $gr-short;
       max-width: 100%;
-      margin-left: $golden-ratio-3;
     }
 
     &-align-right {
