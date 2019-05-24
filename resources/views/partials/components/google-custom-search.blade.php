@@ -4,9 +4,15 @@
     ];
 @endphp
 @if (is_front_page() && in_array(get_current_blog_id(), $allowedSites))
-    <form>
-        <input name="q" value="" />
-        <input type="submit" value="Search lib.utk.edu" />
+    <form class="utk-gcs">
+        <input name="q"
+               type="text"
+               placeholder="Find Services, News, and More"
+               value="@php echo $_GET['q'] @endphp"
+               class="utk-gcs--search" />
+        <input type="submit"
+               value="Search lib.utk.edu"
+               class="utk-gcs--submit" />
     </form>
     <script>
         (function() {

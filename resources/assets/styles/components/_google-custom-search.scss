@@ -1,6 +1,81 @@
+.utk-gcs {
+  display: flex;
+  border-radius: 47px;
+  overflow: hidden;
+  margin-left: -18px;
+  margin-right: -18px;
+  border: 1px solid $gray-1;
+  transition: $transition-all;
+  position: relative;
+  align-items: center;
+
+  &:focus-within {
+    border-color: $white;
+    box-shadow: $box-shadow-float;
+  }
+
+  &--search {
+    height: $golden-ratio-4;
+    flex-grow: 1;
+    flex-shrink: 0;
+    color: $smokeyx;
+    background-color: transparent;
+    padding: $golden-ratio-1 $golden-ratio-2;
+    font-size: $type-2;
+    font-weight: 400;
+    font-family: $sans;
+    outline: none;
+    border: none;
+
+    &::placeholder {
+      color: $rock;
+    }
+  }
+
+  &--submit {
+    height: 35px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    border: none;
+    background-color: $globe;
+    color: $white;
+    font-weight: 400;
+    font-size: $type-1;
+    font-family: $sans;
+    cursor: pointer;
+    border-radius: 47px;
+    padding: 0 $golden-ratio-2;
+    margin-right: $golden-ratio-0;
+  }
+}
+
+.gsc-control-cse {
+  padding: $golden-ratio-2 0 !important;
+  font-family: $sans !important;
+}
+
+.gsc-tabsArea {
+  border-bottom: 2px solid $gray-1;
+  margin: $golden-ratio-0 0 0;
+}
+
+.gsc-above-wrapper-area {
+  border-bottom: none;
+  padding: $golden-ratio-0 0;
+}
+
+.gsc-tabHeader {
+  padding: 0 $golden-ratio-2 2px;
+  font-size: $type-2;
+  font-family: $sans;
+  margin-bottom: -2px;
+}
+
 .gsc-result-info {
-  font-size: $type-1;
-  color: $smokey;
+  font-family: $sans !important;
+  font-size: $type-1 !important;
+  color: $smokey !important;
+  padding: 0 !important;
 }
 
 .gsc-results {
