@@ -12,6 +12,7 @@
       @include('partials.sidebar')
     </aside>
     <main class="page-body--content">
+      @include('partials.components.google-custom-search')
       @include('partials.components.onesearch')
       @include('partials.content-'.get_post_type())
     </main>
