@@ -119,11 +119,16 @@
 
 .gsc-results {
   font-family: $sans !important;
+  margin-top: $golden-ratio-2;
 
-  .gsc-result,
+  .gsc-result {
+    font-family: $sans !important;
+    margin-bottom: $golden-ratio-3 !important;
+    padding: 0 !important;
+  }
+
   .gs-result {
     font-family: $sans !important;
-    margin-bottom: $golden-ratio-2 !important;
     padding: 0 !important;
 
     > div {
@@ -145,5 +150,21 @@
       font-size: $type-1 !important;
       line-height: 1.6em;
     }
+  }
+}
+
+.gsc-cursor-box {
+  margin-top: $golden-ratio-3 !important;
+}
+
+.gsc-cursor-page {
+  font-size: $type-2;
+}
+
+.gcsc-find-more-on-google-magnifier {
+  fill: $globe !important;
+
+  path {
+    fill: $globe !important;
   }
 }
