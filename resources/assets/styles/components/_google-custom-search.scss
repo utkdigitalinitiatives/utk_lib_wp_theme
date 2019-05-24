@@ -1,17 +1,19 @@
 .utk-gcs {
-  display: flex;
-  border-radius: 47px;
-  overflow: hidden;
-  margin-left: -18px;
-  margin-right: -18px;
-  border: 1px solid $gray-1;
-  transition: $transition-all;
-  position: relative;
-  align-items: center;
+  &--bar {
+    display: flex;
+    border-radius: 47px;
+    overflow: hidden;
+    margin-left: -18px;
+    margin-right: -18px;
+    border: 1px solid $gray-1;
+    transition: $transition-all;
+    position: relative;
+    align-items: center;
 
-  &:focus-within {
-    border-color: $white;
-    box-shadow: $box-shadow-float;
+    &:focus-within {
+      border-color: $white;
+      box-shadow: $box-shadow-float;
+    }
   }
 
   &--search {
@@ -37,15 +39,52 @@
     flex-grow: 0;
     flex-shrink: 1;
     border: none;
-    background-color: $globe;
-    color: $white;
-    font-weight: 400;
+    background-color: transparent;
+    color: $globe;
+    font-weight: 700;
     font-size: $type-1;
     font-family: $sans;
     cursor: pointer;
     border-radius: 47px;
     padding: 0 $golden-ratio-2;
     margin-right: $golden-ratio-0;
+  }
+
+  &--buttons {
+    margin: $golden-ratio-3;
+    display: flex;
+    justify-content: center;
+
+    > input {
+      margin: 0 14.5px;
+    }
+
+    .utk-gcs--submit {
+      height: 35px;
+      flex-grow: 0;
+      flex-shrink: 1;
+      background-color: $gray-0;
+      color: $smokey;
+      font-weight: 400;
+      font-size: $type-1;
+      font-family: $sans;
+      cursor: pointer;
+      border-radius: 6px;
+      padding: 0 $golden-ratio-2;
+      margin-right: $golden-ratio-0;
+      border: 1px solid $gray-0;
+      transition: $transition-all-fast;
+      box-shadow: none;
+
+      &:hover,
+      &:focus {
+        color: $smokeyx;
+        border: 1px solid $gray-1;
+        box-shadow: $box-shadow;
+
+        @include filter-gradient($white, 0, $gray-0, 100%);
+      }
+    }
   }
 }
 
@@ -55,20 +94,20 @@
 }
 
 .gsc-tabsArea {
-  border-bottom: 2px solid $gray-1;
-  margin: $golden-ratio-0 0 0;
+  border-bottom: 2px solid $gray-1 !important;
+  margin: $golden-ratio-0 0 0 !important;
 }
 
 .gsc-above-wrapper-area {
-  border-bottom: none;
-  padding: $golden-ratio-0 0;
+  border-bottom: none !important;
+  padding: $golden-ratio-0 0 !important;
 }
 
 .gsc-tabHeader {
-  padding: 0 $golden-ratio-2 2px;
-  font-size: $type-2;
-  font-family: $sans;
-  margin-bottom: -2px;
+  padding: 0 $golden-ratio-2 2px !important;
+  font-size: $type-2 !important;
+  font-family: $sans !important;
+  margin-bottom: -2px !important;
 }
 
 .gsc-result-info {
@@ -97,8 +136,8 @@
     }
 
     .gsc-url-top {
-      font-size: $type-1;
-      padding: 0;
+      font-size: $type-1 !important;
+      padding: 0 !important;
     }
 
     .gs-snippet {
