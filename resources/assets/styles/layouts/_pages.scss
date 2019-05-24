@@ -46,6 +46,12 @@
   }
 }
 
+.page-body-nosidebar {
+  .page-body--content {
+    width: 100%;
+  }
+}
+
 body.page {
   @include respond(xs, sm) {
     #utk-lib-main {

@@ -4,7 +4,7 @@
     ];
 @endphp
 @if (is_front_page() && in_array(get_current_blog_id(), $allowedSites))
-    <form class="utk-gcs">
+    <form class="utk-gcs @if(isset($_GET['gcs'])) utk-gcs-active @endif">
         <div class="utk-gcs--bar">
             <input name="gcs"
                    type="text"

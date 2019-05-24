@@ -1,3 +1,8 @@
+@php
+    $allowedSites = [
+        91
+    ];
+@endphp
 <div id="detach-sticky-top"></div>
 @php
     $hoursbyLocation = get_option('options_site_hours_site_hours_on');
@@ -5,7 +10,11 @@
 @if ($hoursbyLocation)
     @include('partials.components.hours-by-location')
 @endif
-@include('partials.components.breadcrumb')
+@if (in_array(get_current_blog_id(), $allowedSites))
+    @todo: do horizontal nav walker like espn in place of breadcrumb
+@else
+    @include('partials.components.breadcrumb')
+@endif
 <div class="container page-body--container">
     <div class="page-body--flex">
         <main class="page-body--content">
