@@ -1,0 +1,35 @@
+.gsc-result-info {
+  font-size: $type-1;
+  color: $smokey;
+}
+
+.gsc-results {
+  font-family: $sans !important;
+
+  .gsc-result,
+  .gs-result {
+    font-family: $sans !important;
+    margin-bottom: $golden-ratio-2 !important;
+    padding: 0 !important;
+
+    > div {
+      padding: 0 !important;
+      font-family: $sans !important;
+    }
+
+    .gs-title {
+      font-size: $type-2 !important;
+    }
+
+    .gsc-url-top {
+      font-size: $type-1;
+      padding: 0;
+    }
+
+    .gs-snippet {
+      font-family: $sans !important;
+      font-size: $type-1 !important;
+      line-height: 1.6em;
+    }
+  }
+}
