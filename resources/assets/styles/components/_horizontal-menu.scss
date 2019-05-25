@@ -1,0 +1,57 @@
+.page-body--content--horizontal-menu {
+  background-color: $smokeyx;
+  margin-bottom: $golden-ratio-3;
+
+  ul.menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: $golden-ratio-4;
+
+    li {
+      margin: 0 $golden-ratio-2 0 0;
+      padding: 0;
+      font-size: $type-1;
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a,
+      a:visited {
+        color: $white;
+      }
+
+      a:hover,
+      a:focus {
+        color: $white;
+      }
+
+      &.active {
+        position: relative;
+
+        &::after {
+          width: 12px;
+          height: 12px;
+          display: block;
+          position: absolute;
+          right: 50%;
+          bottom: 0;
+          margin-right: -12px;
+          content: " ";
+          border-left: 12px solid transparent;
+          border-right: 12px solid transparent;
+          border-bottom: 8px solid $white;
+        }
+
+        > a {
+          font-weight: 700;
+          color: $white !important;
+        }
+      }
+    }
+  }
+}

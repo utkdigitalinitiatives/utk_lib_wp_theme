@@ -11,7 +11,7 @@
     @include('partials.components.hours-by-location')
 @endif
 @if (in_array(get_current_blog_id(), $allowedSites))
-    @todo: do horizontal nav walker like espn in place of breadcrumb
+    @include('partials.components.search-options')
 @else
     @include('partials.components.breadcrumb')
 @endif
