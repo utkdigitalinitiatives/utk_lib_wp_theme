@@ -565,6 +565,7 @@ body {
     background-color: #fff;
     top: 0;
     box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
+    transition: all 290ms ease-in-out;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
     /* Landscape phone to portrait tablet */
@@ -629,6 +630,7 @@ body {
     left: 303px;
     color: #58595b !important;
     letter-spacing: -0.03em;
+    transition: all 290ms ease-in-out;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
     /* Landscape phone to portrait tablet */
@@ -946,7 +948,7 @@ body.utk-search-open .utk-header-super {
     .utk-header-super {
       display: none;
       position: relative !important;
-      display: none;
+      transition: all 290ms ease-in-out;
       width: 100%;
       overflow: scroll !important;
       background-color: #e0e0e0 !important; }
@@ -965,7 +967,7 @@ body.utk-search-open .utk-header-super {
     .utk-header-super {
       display: none;
       position: relative !important;
-      display: none;
+      transition: all 290ms ease-in-out;
       width: 100%;
       overflow: scroll !important;
       background-color: #e0e0e0 !important; }
@@ -2477,7 +2479,7 @@ a:hover {
   position: fixed;
   width: 100%;
   overflow: hidden;
-  top: -76px;
+  top: 6px;
   opacity: 0;
   z-index: 0;
   background-color: #58595b;

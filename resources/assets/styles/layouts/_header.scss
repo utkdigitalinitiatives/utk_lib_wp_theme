@@ -146,10 +146,6 @@ header.utk-header {
  */
 @include respond(md, lg, xl) {
   .header-scroll-down {
-    .utk-header-super {
-      height: 0 !important;
-    }
-
     .utk-header-main {
       margin-top: 0 !important;
     }
@@ -203,7 +199,7 @@ header.utk-header {
         position: fixed;
         top: 82px;
         bottom: auto;
-        z-index: 99998;
+        z-index: 99996;
 
         .page-header--title-wrap {
           margin-left: 0;

@@ -8,12 +8,12 @@
         <div class="utk-gcs--bar">
             <input name="gcs"
                    type="text"
-                   placeholder="Find Services, News, and More"
+                   placeholder="Find hours, services, and more..."
                    value="@php echo $_GET['gcs'] @endphp"
                    class="utk-gcs--search" />
             @if(isset($_GET['gcs']))
                 <input type="submit"
-                       value="Search lib.utk.edu"
+                       value="Submit"
                        class="utk-gcs--submit" />
             @endif
         </div>
