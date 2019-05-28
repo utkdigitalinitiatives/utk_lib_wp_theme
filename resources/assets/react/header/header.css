@@ -930,7 +930,8 @@ body.utk-search-open .utk-logo-wrapper .utk-logo-unit {
 body.utk-search-open .utk-search {
   z-index: 999; }
 
-body.utk-menu-open .utk-header-super {
+body.utk-menu-open .utk-header-super,
+body.utk-search-open .utk-header-super {
   height: auto !important; }
 
 .utk-header-super {

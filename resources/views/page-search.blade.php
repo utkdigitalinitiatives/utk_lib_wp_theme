@@ -8,7 +8,6 @@
 */
 
 Namespace App\Controllers;
-
 Search::handleSubmission();
 
 @endphp
