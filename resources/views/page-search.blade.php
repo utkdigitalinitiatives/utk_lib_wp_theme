@@ -1,11 +1,16 @@
 @php
 /**
-* Template Name: Full Width (No Sidebar)
+* Template Name: Search
 * Description: Page for sites or content without need for sidebar.
 *
 * @package Sage
 * @subpackage UT Libraries
 */
+
+Namespace App\Controllers;
+
+Search::handleSubmission();
+
 @endphp
 
 @extends('layouts.app')
