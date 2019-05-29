@@ -7,6 +7,7 @@
 @endif
 @include('partials.components.breadcrumb')
 <div class="container page-body--container">
+  @include('partials.components.notice')
   <div class="page-body--flex">
     <aside class="page-body--aside">
       @include('partials.sidebar')

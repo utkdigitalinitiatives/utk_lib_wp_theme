@@ -11,14 +11,12 @@
 
   @endphp
   <div id="utk-lib-notice" class="library-notice library-notice-{{$type}}">
-    <div class="container">
-      <div class="library-notice--wrap">
-        <div class="library-notice--content">
-          <h3>@php print $title; @endphp</h3>
-          @if ($message != '')
-            <div>@php print $message; @endphp</div>
-          @endif
-        </div>
+    <div class="library-notice--wrap">
+      <div class="library-notice--content">
+        <h3>@php print $title; @endphp</h3>
+        @if ($message != '')
+          <div>@php print $message; @endphp</div>
+        @endif
       </div>
     </div>
   </div>
