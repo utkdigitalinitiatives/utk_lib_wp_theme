@@ -48,8 +48,5 @@
      data-initial-depth="@php echo $initial_depth; @endphp"
      data-initial-trail='@php echo json_encode($initial_menu_trail) @endphp'
 >
+    @include('partials.components.subsite-menu-sidebar-noscript')
 </div>
-
-<noscript>
-    @php wp_nav_menu($defaults); @endphp
-</noscript>
