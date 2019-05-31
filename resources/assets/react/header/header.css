@@ -1138,7 +1138,8 @@ a.utk-help-back:visited {
       border-color: #58595b !important;
       color: #fff !important; }
   a.utk-help-decision > span, a.utk-help-back > span,
-  a.utk-help-decision:visited > span, a.utk-help-back:visited > span {
+  a.utk-help-decision:visited > span,
+  a.utk-help-back:visited > span {
     width: auto;
     display: block;
     padding: 11px; }
