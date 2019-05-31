@@ -4,9 +4,6 @@
       "./scripts/main.js",
       "./styles/main.scss"
     ],
-    "noscript": [
-      "./styles/noscript.scss"
-    ],
     "admin": [
       "./styles/admin.scss"
     ],

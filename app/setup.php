@@ -58,8 +58,6 @@ add_action('wp_enqueue_scripts', function () {
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
-
-    wp_enqueue_style('ut/noscript.css', asset_path('styles/noscript.css'), false, null);
 }, 100);
 
 
