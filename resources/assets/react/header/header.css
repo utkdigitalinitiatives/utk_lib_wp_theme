@@ -659,11 +659,13 @@ body {
         left: 36px; } }
 
 body.utk-menu-open .utk-header-super,
-body.utk-search-open .utk-header-super {
+body.utk-search-open .utk-header-super,
+body.utk-skip-open .utk-header-super {
   height: 47px !important; }
 
 body.utk-menu-open .utk-header-main,
-body.utk-search-open .utk-header-main {
+body.utk-search-open .utk-header-main,
+body.utk-skip-open .utk-header-main {
   margin-top: 47px !important;
   /* Mobile Devices for Mice */
   /* Landscape phones and down */
@@ -677,26 +679,31 @@ body.utk-search-open .utk-header-main {
   /* desktop and large desktop */ }
   @media (max-width: 767px) {
     body.utk-menu-open .utk-header-main,
-    body.utk-search-open .utk-header-main {
+    body.utk-search-open .utk-header-main,
+    body.utk-skip-open .utk-header-main {
       margin-top: 0 !important; } }
   @media (min-width: 768px) and (max-width: 991px) {
     body.utk-menu-open .utk-header-main,
-    body.utk-search-open .utk-header-main {
+    body.utk-search-open .utk-header-main,
+    body.utk-skip-open .utk-header-main {
       margin-top: 0 !important; } }
 
 body.utk-menu-open .utk-logo-wrapper .utk-logo-primary,
-body.utk-search-open .utk-logo-wrapper .utk-logo-primary {
+body.utk-search-open .utk-logo-wrapper .utk-logo-primary,
+body.utk-skip-open .utk-logo-wrapper .utk-logo-primary {
   top: -3000px;
   box-shadow: none;
   padding: 0;
   height: 0; }
 
 body.utk-menu-open .utk-logo-wrapper .utk-logo-square,
-body.utk-search-open .utk-logo-wrapper .utk-logo-square {
+body.utk-search-open .utk-logo-wrapper .utk-logo-square,
+body.utk-skip-open .utk-logo-wrapper .utk-logo-square {
   left: 0 !important; }
 
 body.utk-menu-open .utk-logo-wrapper .utk-logo-unit,
-body.utk-search-open .utk-logo-wrapper .utk-logo-unit {
+body.utk-search-open .utk-logo-wrapper .utk-logo-unit,
+body.utk-skip-open .utk-logo-wrapper .utk-logo-unit {
   left: 47px !important;
   padding-left: 18px !important;
   /* Mobile Devices for Mice */
@@ -706,7 +713,8 @@ body.utk-search-open .utk-logo-wrapper .utk-logo-unit {
   /* desktop and large desktop */ }
   @media (max-width: 767px) {
     body.utk-menu-open .utk-logo-wrapper .utk-logo-unit,
-    body.utk-search-open .utk-logo-wrapper .utk-logo-unit {
+    body.utk-search-open .utk-logo-wrapper .utk-logo-unit,
+    body.utk-skip-open .utk-logo-wrapper .utk-logo-unit {
       left: 30px !important;
       padding-left: 15px !important; } }
 
@@ -2947,6 +2955,61 @@ body.utk-search-open .utk-header-search {
   .utk-secondary-menu .utk-resources-menu--section a:focus,
   .utk-secondary-menu .utk-resources-menu--section a:hover {
     color: #8d2048; }
+
+.utk-skip {
+  background-color: #58595b;
+  border-top: 6px solid #ff8200;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  position: fixed;
+  left: -5000px;
+  z-index: 99998;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  align-content: flex-end;
+  top: 0; }
+  .utk-skip:focus-within {
+    top: 0;
+    left: auto; }
+  .utk-skip > ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-skip > ul {
+        flex-direction: column;
+        padding-top: 11px;
+        padding-bottom: 11px; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .utk-skip > ul {
+        flex-direction: column;
+        padding-top: 11px;
+        padding-bottom: 11px; } }
+    .utk-skip > ul > li {
+      font-size: 15px;
+      list-style: none;
+      margin-right: 29px; }
+      .utk-skip > ul > li:last-child {
+        margin-right: 0; }
+      .utk-skip > ul > li a, .utk-skip > ul > li a:visited {
+        color: #e0e0e0;
+        text-decoration: none; }
+        .utk-skip > ul > li a:hover, .utk-skip > ul > li a:focus, .utk-skip > ul > li a:visited:hover, .utk-skip > ul > li a:visited:focus {
+          color: #fff; }
 
 .utk-resources-toggle {
   float: right;
