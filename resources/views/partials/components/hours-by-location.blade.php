@@ -47,14 +47,13 @@ $url = $base . '_' . $type . '?iid=' . $iid . '&format=' . $format . '&lid=' . $
                         </span>
                     </a>
                     <div class="utk-hours--more">
-                        <div class="utk-hours--more--image" style="background-image: url('@php print $hoursImageRender; @endphp')"></div>
                         <div class="utk-hours--more--overlay">
                             <a href="@php echo $hoursPage @endphp">
                                 <em>More Hours</em>
                                 <span class="icon-right-big"></span>
                             </a>
                         </div>
-
+                        <div class="utk-hours--more--image" style="background-image: url('@php print $hoursImageRender; @endphp')"></div>
                     </div>
                 </div>
             </div>
