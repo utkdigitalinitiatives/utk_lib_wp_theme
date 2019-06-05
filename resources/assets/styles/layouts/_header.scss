@@ -306,6 +306,7 @@ header.utk-header {
       top: 66px;
       bottom: auto;
       z-index: 4;
+      transition: $transition-all;
 
       .page-header--title-wrap {
         margin-left: 0;
