@@ -167,7 +167,11 @@
                 </ul>
             </div>
             <div class="utk-home--blog">
-                [blog]
+                <img src="https://blog.lib.utk.edu/wp-content/uploads/2019/04/new-acquisitions-special-collections-e1554909615987-1024x630.jpg" />
+                <div class="utk-home--blog--content">
+                    <h5>Featured Blog Post</h5>
+                    <a href="#">New Acquisitions Academic Year 2018-2019</a>
+                </div>
             </div>
         </aside>
     </div>
@@ -175,7 +179,7 @@
 <section class="utk-section section-callout section-callout--image-text">
     <div class="container">
         <div class="utk-callout">
-            <div class="utk-callout--inner utk-callout--style-default utk-callout--orientation-right">
+            <div class="utk-callout--inner utk-callout--style-default utk-callout--orientation-left">
                 <div class="utk-callout--content"><h3>Leisure Reading</h3>
                     <div class="utk-callout--content--paragraphs"><p>Catch up on your summer reading by checking out our
                             leisure reading collection.</p></div>

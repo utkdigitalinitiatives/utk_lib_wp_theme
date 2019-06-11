@@ -184,8 +184,52 @@ body.page-id-393 #utk-lib-midsection .section-callout {
   }
 }
 
-.utk-home--blog {
-  background-color: $summitt;
-  padding: $golden-ratio-2;
+body .utk-home .utk-home--blog {
+  background-color: $gray-0;
   flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  margin-top: -$golden-ratio-2;
+  border-radius: $golden-ratio-2;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+
+  img {
+    width: $gr-short;
+    height: auto;
+    clip-path: polygon(0 0, 92% 0, 100% 100%, 0 100%);
+  }
+
+  div.utk-home--blog--content {
+    padding: $golden-ratio-2;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+
+    h5 {
+      margin: 0;
+      padding: 0;
+      font-size: $type-1;
+      color: $smokey;
+      font-weight: 400;
+      flex-grow: 1;
+      align-content: flex-end;
+    }
+
+    > a,
+    > a:visited {
+      display: block;
+      font-size: $type-2;
+      color: $leconte;
+      font-weight: 700;
+      line-height: 1.29em;
+    }
+
+    > a:hover,
+    > a:focus {
+      color: $leconte;
+      text-decoration: underline;
+    }
+  }
 }
