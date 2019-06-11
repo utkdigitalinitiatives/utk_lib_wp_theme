@@ -1,9 +1,4 @@
 .utk-callout {
-  min-height: $golden-ratio-7;
-
-  /*
-   * styling
-   */
   &--style {
     &-default {
       background-color: $gray-0;
@@ -30,6 +25,9 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: end;
+    min-height: $golden-ratio-7;
+    max-height: 400px !important;
+    overflow: hidden;
 
     @include respond(xs, sm) {
       flex-direction: column-reverse !important;
