@@ -34,6 +34,10 @@ body.page-id-393 #utk-lib-midsection .section-callout {
 
       &--item {
         width: 33.333333%;
+
+        &-double {
+          width: 67.777777%;
+        }
       }
     }
   }
@@ -64,6 +68,44 @@ body.page-id-393 #utk-lib-midsection .section-callout {
         a:hover,
         a:focus {
           color: $leconte;
+        }
+      }
+    }
+
+    &-muted {
+      h2 {
+        font-size: $type-1;
+        font-weight: 400;
+        color: $smokey;
+        margin: 0 0 $golden-ratio-0;
+      }
+    }
+
+    &-solid {
+      background-color: $gray-0;
+      padding: $golden-ratio-2;
+      border-radius: $golden-ratio-0;
+      margin-right: $golden-ratio-3;
+
+      ul {
+        li {
+          font-size: $type-1;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &-columns {
+      margin-top: -$golden-ratio-2;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        li {
+          width: 50%;
+          font-size: $type-1;
         }
       }
     }
@@ -108,6 +150,11 @@ body.page-id-393 #utk-lib-midsection .section-callout {
         margin-right: $golden-ratio-3;
         display: flex;
         align-items: center;
+
+        &:first-child {
+          margin-right: $golden-ratio-2;
+          color: $rock;
+        }
 
         &::after {
           display: inline-flex;
@@ -239,11 +286,12 @@ body .utk-home .utk-home--blog {
 }
 
 .utk-home--nav-services {
-  padding: $golden-ratio-1;
+  padding: $golden-ratio-2;
   margin-right: $golden-ratio-4;
   border: 2px solid $gray-0;
   border-radius: $golden-ratio-0;
-  margin-left: -13px;
+  display: flex;
+  flex-wrap: wrap;
 
   &--title {
     font-size: $type-3;
@@ -254,6 +302,8 @@ body .utk-home .utk-home--blog {
 
   &--item {
     margin-bottom: $golden-ratio-1;
+    padding-right: $golden-ratio-1;
+    width: 50%;
 
     &:last-child {
       margin-bottom: 0;
@@ -261,9 +311,14 @@ body .utk-home .utk-home--blog {
 
     &--link {
       font-size: $type-2 !important;
-      font-weight: 400;
+      font-weight: 700;
       color: $globe !important;
       display: block;
+
+      &:hover,
+      &:focus {
+        color: $leconte !important;
+      }
     }
 
     &--desc {

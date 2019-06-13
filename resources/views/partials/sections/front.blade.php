@@ -8,10 +8,10 @@
         <div class="utk-home-subhead--nav-list">
             <h2>Library Services</h2>
             <ul>
+                <li><span class="icon-right-big"></span></li>
                 <li><a href="#">Reserve a Room</a></li>
                 <li><a href="#">Request Items</a></li>
-                <li><a href="#">Borrow or Renew Items</a></li>
-                <li><a href="#">AskUsNow</a></li>
+                <li><a href="#">Talk with a Librarian</a></li>
                 <li><a href="#">Disability Services</a></li>
             </ul>
         </div>
@@ -69,10 +69,22 @@
             </div>
             <div class="utk-grid--row">
                 <div class="utk-grid--row--item">
+                    <div class="utk-home--nav-list utk-home--nav-list-muted utk-home--nav-list-solid">
+                        <h2>Get Help</h2>
+                        <ul>
+                            <li><a href="#">AskUsNow</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Tutorials</a></li>
+                            <li><a href="#">Request Instruction</a></li>
+                            <li><a href="#">Technology Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="utk-grid--row--item utk-grid--row--item-double">
                     <div class="utk-home--nav-services">
                         <div class="utk-home--nav-services--item">
                             <a class="utk-home--nav-services--item--link" href="#">IILiad</a>
-                            <span class="utk-home--nav-services--item--desc">Interlibrary loan services for requesting items from external institutions.</span>
+                            <span class="utk-home--nav-services--item--desc">Interlibrary services for requesting items from external institutions.</span>
                         </div>
                         <div class="utk-home--nav-services--item">
                             <a class="utk-home--nav-services--item--link" href="#">Library Express</a>
@@ -82,32 +94,10 @@
                             <a class="utk-home--nav-services--item--link" href="#">Speciality Printing</a>
                             <span class="utk-home--nav-services--item--desc">Large format and 3D printing services.</span>
                         </div>
-                    </div>
-                </div>
-                <div class="utk-grid--row--item">
-                    <div class="utk-home--nav-list">
-                        <h2>About Libraries</h2>
-                        <ul>
-                            <li><a href="#">Maps &amp; Directions</a></li>
-                            <li><a href="#">Directory</a></li>
-                            <li><a href="#">Employment</a></li>
-                            <li><a href="#">Administration</a></li>
-                            <li><a href="#">Assessment</a></li>
-                            <li><a href="#">The Library Society</a></li>
-                            <li><a href="#">Libraries A-Z</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="utk-grid--row--item">
-                    <div class="utk-home--nav-list">
-                        <h2>Get Help</h2>
-                        <ul>
-                            <li><a href="#">AskUsNow</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Tutorials</a></li>
-                            <li><a href="#">Request Instruction</a></li>
-                            <li><a href="#">Technology Support</a></li>
-                        </ul>
+                        <div class="utk-home--nav-services--item">
+                            <a class="utk-home--nav-services--item--link" href="#">Disability Services</a>
+                            <span class="utk-home--nav-services--item--desc">Assistance for access, research, and technology. </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,13 +164,17 @@
                     </div>
                 </ul>
             </div>
-            <a class="utk-home--blog" href="#">
-                <img src="https://blog.lib.utk.edu/wp-content/uploads/2019/04/new-acquisitions-special-collections-e1554909615987-1024x630.jpg" />
-                <div class="utk-home--blog--content">
-                    <h5>Recent Blog Post</h5>
-                    <span>New Acquisitions Academic Year 2018-2019</span>
-                </div>
-            </a>
+            <div class="utk-home--nav-list utk-home--nav-list-muted utk-home--nav-list-columns">
+                <h2>About University Libraries</h2>
+                <ul>
+                    <li><a href="#">Maps &amp; Directions</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Employment</a></li>
+                    <li><a href="#">Administration</a></li>
+                    <li><a href="#">Assessment</a></li>
+                    <li><a href="#">The Library Society</a></li>
+                </ul>
+            </div>
         </aside>
     </div>
 </section>
