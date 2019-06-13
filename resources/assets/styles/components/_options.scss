@@ -78,6 +78,14 @@ body.subsite-menu-dropdown-expand .page-header--options {
     }
   }
 
+  &.options--item-give .options--item--icon {
+    background-color: $orange;
+
+    > span {
+      margin-top: 0;
+    }
+  }
+
   &.options--item-chat .options--item--icon {
     background-color: $switchgrass;
 
