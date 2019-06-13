@@ -20,10 +20,10 @@
  * Variables, Bootstrap Grid and Mixins
  */
 @import "common/global";
+@import "common/mixins";
 @import "common/bootstrap-vars";
 @import "common/bootstrap-mixins";
 @import "common/bootstrap-grid";
-@import "common/mixins";
 
 /**
  * Components

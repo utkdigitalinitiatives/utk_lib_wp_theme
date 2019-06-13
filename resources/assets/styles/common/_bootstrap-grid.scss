@@ -5,8 +5,18 @@
   @include utk-make-container();
   @include utk-make-container-max-widths();
 
-  padding-left: $golden-ratio-4;
-  padding-right: $golden-ratio-4;
+  padding-left: $golden-ratio-4 !important;
+  padding-right: $golden-ratio-4 !important;
+
+  @include respond(md, sm) {
+    padding-left: $golden-ratio-3 !important;
+    padding-right: $golden-ratio-3 !important;
+  }
+
+  @include respond(xs) {
+    padding-left: $golden-ratio-2 !important;
+    padding-right: $golden-ratio-2 !important;
+  }
 }
 
 // Fluid container
