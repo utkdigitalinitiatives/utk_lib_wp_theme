@@ -9,10 +9,11 @@
             <h2>Library Services</h2>
             <ul>
                 <li><span class="icon-right-big"></span></li>
+                <li><a href="#">Hours</a></li>
                 <li><a href="#">Reserve a Room</a></li>
                 <li><a href="#">Request Items</a></li>
                 <li><a href="#">Talk with a Librarian</a></li>
-                <li><a href="#">Disability Services</a></li>
+                <li><a href="#">A-Z</a></li>
             </ul>
         </div>
         <div class="page-header--options">
