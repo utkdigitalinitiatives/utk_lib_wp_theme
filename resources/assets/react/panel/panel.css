@@ -925,7 +925,8 @@ body {
  */
 #utk-panel .utk-panel-wrap {
   transition: all 290ms ease-in-out;
-  position: relative; }
+  position: relative;
+  z-index: 1020; }
   #utk-panel .utk-panel-wrap > .utk-panel-underlay {
     position: absolute;
     z-index: 0;

@@ -186,22 +186,27 @@ body.page-id-393 #utk-lib-midsection .section-callout {
 
 body .utk-home .utk-home--blog {
   background-color: $gray-0;
-  flex-grow: 1;
   display: flex;
   flex-direction: row;
   margin-top: -$golden-ratio-2;
-  border-radius: $golden-ratio-2;
-  box-shadow: $box-shadow;
+  border-radius: $golden-ratio-0;
   overflow: hidden;
+  padding: $golden-ratio-2;
 
   img {
-    width: $gr-short;
-    height: auto;
-    clip-path: polygon(0 0, 92% 0, 100% 100%, 0 100%);
+    height: $golden-ratio-5;
+    margin-right: $golden-ratio-2;
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    img {
+      opacity: 1;
+    }
   }
 
   div.utk-home--blog--content {
-    padding: $golden-ratio-2;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -214,22 +219,58 @@ body .utk-home .utk-home--blog {
       color: $smokey;
       font-weight: 400;
       flex-grow: 1;
+      display: flex;
       align-content: flex-end;
+      align-items: flex-end;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-bottom: $golden-ratio-0;
     }
 
-    > a,
-    > a:visited {
+    > span {
       display: block;
       font-size: $type-2;
-      color: $leconte;
+      color: $globe;
       font-weight: 700;
       line-height: 1.29em;
+      text-decoration: none;
+    }
+  }
+}
+
+.utk-home--nav-services {
+  padding: $golden-ratio-1;
+  margin-right: $golden-ratio-4;
+  border: 2px solid $gray-0;
+  border-radius: $golden-ratio-0;
+  margin-left: -13px;
+
+  &--title {
+    font-size: $type-3;
+    font-weight: 700;
+    color: $smokeyx;
+    margin: 0 0 $golden-ratio-0;
+  }
+
+  &--item {
+    margin-bottom: $golden-ratio-1;
+
+    &:last-child {
+      margin-bottom: 0;
     }
 
-    > a:hover,
-    > a:focus {
-      color: $leconte;
-      text-decoration: underline;
+    &--link {
+      font-size: $type-2 !important;
+      font-weight: 400;
+      color: $globe !important;
+      display: block;
+    }
+
+    &--desc {
+      display: block;
+      font-size: $type-1;
+      line-height: 1.47em;
+      color: $smokey;
     }
   }
 }

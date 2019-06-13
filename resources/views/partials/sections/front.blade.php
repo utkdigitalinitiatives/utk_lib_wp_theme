@@ -9,10 +9,9 @@
             <h2>Library Services</h2>
             <ul>
                 <li><a href="#">Reserve a Room</a></li>
-                <li><a href="#">Borrow Items</a></li>
-                <li><a href="#">Renew Items</a></li>
                 <li><a href="#">Request Items</a></li>
-                <li><a href="#">Reserve Items</a></li>
+                <li><a href="#">Borrow or Renew Items</a></li>
+                <li><a href="#">AskUsNow</a></li>
                 <li><a href="#">Disability Services</a></li>
             </ul>
         </div>
@@ -69,11 +68,19 @@
             </div>
             <div class="utk-grid--row">
                 <div class="utk-grid--row--item">
-                    <div class="utk-home--static-callout">
-                        <div class="utk-home--static-callout--description">
-                            About UT Libraries &nbsp;<span class="icon-right-big"></span>
+                    <div class="utk-home--nav-services">
+                        <div class="utk-home--nav-services--item">
+                            <a class="utk-home--nav-services--item--link" href="#">IILiad</a>
+                            <span class="utk-home--nav-services--item--desc">Interlibrary loan services for requesting items from external institutions.</span>
                         </div>
-                        <img src="https://scontent-atl3-1.cdninstagram.com/vp/b237b622abc15811b5ccedb705b0d280/5D954F4D/t51.2885-15/sh0.08/e35/s640x640/50839974_353945378791961_5775475618683831405_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com" />
+                        <div class="utk-home--nav-services--item">
+                            <a class="utk-home--nav-services--item--link" href="#">Library Express</a>
+                            <span class="utk-home--nav-services--item--desc">UT Libraries books delivered to you on-campus.</span>
+                        </div>
+                        <div class="utk-home--nav-services--item">
+                            <a class="utk-home--nav-services--item--link" href="#">Speciality Printing</a>
+                            <span class="utk-home--nav-services--item--desc">Large format and 3D printing services.</span>
+                        </div>
                     </div>
                 </div>
                 <div class="utk-grid--row--item">
@@ -86,6 +93,7 @@
                             <li><a href="#">Administration</a></li>
                             <li><a href="#">Assessment</a></li>
                             <li><a href="#">The Library Society</a></li>
+                            <li><a href="#">Libraries A-Z</a></li>
                         </ul>
                     </div>
                 </div>
@@ -98,7 +106,6 @@
                             <li><a href="#">Tutorials</a></li>
                             <li><a href="#">Request Instruction</a></li>
                             <li><a href="#">Technology Support</a></li>
-                            <li><a href="#">Printing</a></li>
                         </ul>
                     </div>
                 </div>
@@ -166,20 +173,20 @@
                     </div>
                 </ul>
             </div>
-            <div class="utk-home--blog">
+            <a class="utk-home--blog" href="#">
                 <img src="https://blog.lib.utk.edu/wp-content/uploads/2019/04/new-acquisitions-special-collections-e1554909615987-1024x630.jpg" />
                 <div class="utk-home--blog--content">
-                    <h5>Featured Blog Post</h5>
-                    <a href="#">New Acquisitions Academic Year 2018-2019</a>
+                    <h5>Recent Blog Post</h5>
+                    <span>New Acquisitions Academic Year 2018-2019</span>
                 </div>
-            </div>
+            </a>
         </aside>
     </div>
 </section>
 <section class="utk-section section-callout section-callout--image-text">
     <div class="container">
         <div class="utk-callout">
-            <div class="utk-callout--inner utk-callout--style-default utk-callout--orientation-left">
+            <div class="utk-callout--inner utk-callout--style-default utk-callout--orientation-right">
                 <div class="utk-callout--content"><h3>Leisure Reading</h3>
                     <div class="utk-callout--content--paragraphs"><p>Catch up on your summer reading by checking out our
                             leisure reading collection.</p></div>
