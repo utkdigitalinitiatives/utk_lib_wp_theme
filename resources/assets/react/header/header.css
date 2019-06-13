@@ -557,14 +557,12 @@ body {
   position: absolute;
   margin-top: calc(-63px / 2); }
   .utk-logo-wrapper .utk-logo {
-    padding: 47px;
+    margin: 46px 0 0;
     height: 47px;
     opacity: 1;
     box-sizing: content-box;
     position: relative;
-    background-color: #fff;
     top: 0;
-    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
     transition: all 290ms ease-in-out;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
@@ -591,7 +589,6 @@ body {
     box-shadow: none;
     position: absolute;
     left: -2000px;
-    top: 46px;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
     /* Landscape phone to portrait tablet */
@@ -621,16 +618,18 @@ body {
   .utk-logo-wrapper a.utk-logo-unit:hover,
   .utk-logo-wrapper a.utk-logo-unit:focus {
     position: absolute;
-    top: calc(63px / 2);
+    display: block;
+    top: calc(60px / 2);
     height: 76px;
     line-height: 76px;
-    font-size: 29px;
-    font-weight: 400;
+    font-size: 23px;
+    font-weight: 700;
     padding: 3px 29px 0;
-    left: 303px;
+    left: 100%;
     color: #58595b !important;
     letter-spacing: -0.03em;
     transition: all 290ms ease-in-out;
+    white-space: nowrap;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
     /* Landscape phone to portrait tablet */
