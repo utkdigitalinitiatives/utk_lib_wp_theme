@@ -4,6 +4,9 @@
 .container {
   @include utk-make-container();
   @include utk-make-container-max-widths();
+
+  padding-left: $golden-ratio-4;
+  padding-right: $golden-ratio-4;
 }
 
 // Fluid container
