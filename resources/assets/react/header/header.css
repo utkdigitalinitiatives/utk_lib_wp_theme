@@ -2944,21 +2944,20 @@ body.utk-search-open .utk-header-search {
     color: #8d2048; }
 
 .utk-skip {
-  background-color: #58595b;
-  border-top: 6px solid #ff8200;
+  background-color: #fed535;
   width: 100%;
   margin: 0;
   list-style: none;
   position: fixed;
   left: -5000px;
   z-index: 99998;
-  min-height: 52px;
+  min-height: 47px;
   display: flex;
   align-items: center;
   align-content: flex-end;
-  top: 0; }
+  top: 50px; }
   .utk-skip:focus-within {
-    top: 0;
+    top: 82px;
     left: auto; }
   .utk-skip > ul {
     margin-top: 0;
@@ -2988,15 +2987,16 @@ body.utk-search-open .utk-header-search {
         padding-bottom: 11px; } }
     .utk-skip > ul > li {
       font-size: 15px;
+      font-weight: 700;
       list-style: none;
       margin-right: 29px; }
       .utk-skip > ul > li:last-child {
         margin-right: 0; }
       .utk-skip > ul > li a, .utk-skip > ul > li a:visited {
-        color: #e0e0e0;
+        color: #333;
         text-decoration: none; }
         .utk-skip > ul > li a:hover, .utk-skip > ul > li a:focus, .utk-skip > ul > li a:visited:hover, .utk-skip > ul > li a:visited:focus {
-          color: #fff; }
+          color: #333; }
 
 .utk-resources-toggle {
   float: right;

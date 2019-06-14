@@ -168,12 +168,10 @@
             <div class="utk-home--nav-list utk-home--nav-list-muted utk-home--nav-list-columns">
                 <h2>About University Libraries</h2>
                 <ul>
+                    <li><a href="#">About</a></li>
                     <li><a href="#">News &amp; Events</a></li>
-                    <li><a href="#">Administration</a></li>
                     <li><a href="#">Maps &amp; Directions</a></li>
-                    <li><a href="#">Assessment</a></li>
                     <li><a href="#">Employment</a></li>
-                    <li><a href="#">The Library Society</a></li>
                     <li><a href="#">Directory</a></li>
                     <li><a href="#">Give to UT Libraries</a></li>
                 </ul>

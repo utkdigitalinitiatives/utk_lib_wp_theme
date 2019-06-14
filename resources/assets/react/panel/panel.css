@@ -53,13 +53,13 @@ body .utk-research-tools .ui.labeled.icon.button {
   height: 47px;
   padding: 0 calc(65px) 0 18px !important;
   box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
-  width: calc(100% / 1.61803);
   max-width: 100%;
   transition: all 110ms ease-in-out;
   position: relative;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  outline: none; }
+  outline: none;
+  width: 100% !important; }
   body .utk-research-tools .ui.labeled.icon.button > .text {
     display: inline-block;
     -webkit-transition: none;
@@ -76,7 +76,6 @@ body .ui.labeled.icon.buttons > .button > .icon {
   margin: 0;
   width: 2.57142857em;
   background-color: rgba(0, 0, 0, 0.05);
-  color: '';
   -webkit-box-shadow: -1px 0 0 0 transparent inset;
   box-shadow: -1px 0 0 0 transparent inset;
   line-height: 45px; }
@@ -488,7 +487,7 @@ body ::-webkit-scrollbar-track {
     margin-top: 0;
     color: #fff !important; }
   .utk-search .utk-search-tabs {
-    padding-right: 76px;
+    padding-right: 123px;
     transition: all 110ms ease-in-out;
     opacity: 1; }
     .utk-search .utk-search-tabs > .ui.menu {
@@ -519,7 +518,7 @@ body ::-webkit-scrollbar-track {
             display: block;
             position: absolute;
             right: 50%;
-            bottom: -22px;
+            bottom: -23px;
             margin-right: -18px;
             content: " ";
             border-left: 18px solid transparent;
@@ -534,7 +533,7 @@ body ::-webkit-scrollbar-track {
         font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
         height: 47px;
         border: none;
-        padding-left: 29px;
+        padding-left: 18px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-radius: 47px !important;
@@ -605,7 +604,7 @@ body ::-webkit-scrollbar-track {
     font-size: 13px;
     font-weight: 700;
     color: #fff;
-    margin-top: 29px;
+    margin-top: 18px;
     align-items: center;
     transition: background-color 110ms ease-in-out;
     border: 2px solid rgba(255, 255, 255, 0.11);
@@ -620,11 +619,12 @@ body ::-webkit-scrollbar-track {
       margin-right: 6px;
       color: #ff8200; }
 
-.utk-panel-focus-research-tools .utk-research-tools .utk-collapse-research-tools {
-  opacity: 1; }
-
-.utk-panel-focus-research-tools .utk-research-tools--option {
-  display: none; }
+.utk-panel-focus-research-tools .utk-research-tools {
+  padding-right: 76px; }
+  .utk-panel-focus-research-tools .utk-research-tools .utk-collapse-research-tools {
+    opacity: 1; }
+  .utk-panel-focus-research-tools .utk-research-tools--option {
+    display: none; }
 
 .utk-recently-viewed {
   transition: all 290ms ease-in-out;
