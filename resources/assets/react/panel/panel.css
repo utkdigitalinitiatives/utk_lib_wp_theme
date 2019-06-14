@@ -492,20 +492,11 @@ body ::-webkit-scrollbar-track {
     transition: all 110ms ease-in-out;
     opacity: 1; }
     .utk-search .utk-search-tabs > .ui.menu {
-      margin-bottom: 18px; }
-      .utk-search .utk-search-tabs > .ui.menu::before {
-        content: 'Search';
-        font-size: 23px;
-        font-weight: 400;
-        transition: all 290ms ease-in-out;
-        text-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
-        margin-top: 0;
-        color: #fff !important;
-        margin-right: 47px; }
+      margin-bottom: 22px; }
       .utk-search .utk-search-tabs > .ui.menu a,
       .utk-search .utk-search-tabs > .ui.menu a:visited {
         color: #b9e1e2 !important;
-        font-size: 18px;
+        font-size: 23px;
         white-space: inherit;
         font-weight: 400;
         text-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
@@ -513,8 +504,7 @@ body ::-webkit-scrollbar-track {
         margin: 0;
         cursor: pointer;
         padding: 0 0;
-        margin-right: 29px;
-        margin-bottom: -2px; }
+        margin-right: 29px; }
         .utk-search .utk-search-tabs > .ui.menu a:hover, .utk-search .utk-search-tabs > .ui.menu a:focus,
         .utk-search .utk-search-tabs > .ui.menu a:visited:hover,
         .utk-search .utk-search-tabs > .ui.menu a:visited:focus {
@@ -529,7 +519,7 @@ body ::-webkit-scrollbar-track {
             display: block;
             position: absolute;
             right: 50%;
-            bottom: -17px;
+            bottom: -22px;
             margin-right: -18px;
             content: " ";
             border-left: 18px solid transparent;
@@ -544,9 +534,12 @@ body ::-webkit-scrollbar-track {
         font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
         height: 47px;
         border: none;
+        padding-left: 29px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        border-left: 11px solid #ff8200; }
+        border-radius: 47px !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important; }
       .utk-search .utk-search-tabs .ui.action.input .ui.selection.dropdown {
         height: 47px;
         font-size: 13px;
@@ -583,8 +576,8 @@ body ::-webkit-scrollbar-track {
         font-weight: 700;
         border: none;
         cursor: pointer;
-        border-top-right-radius: 6px;
-        border-bottom-right-radius: 6px;
+        border-top-right-radius: 47px;
+        border-bottom-right-radius: 47px;
         background-color: #fff;
         color: #58595b; }
 
