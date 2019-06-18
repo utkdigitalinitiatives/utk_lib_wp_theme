@@ -185,8 +185,11 @@
             <div class="utk-callout--inner utk-callout--style-default utk-callout--orientation-right">
                 <div class="utk-callout--content"><h3>Welcome Back, Vols!</h3>
                     <div class="utk-callout--content--paragraphs"><p>Join the libraries during Welcome Week for our Open House. Meet your librarian, see the latest technologies, and start your semester off right.</p></div>
-                    <div class="utk-button-page"><a class="btn btn-default"
-                                                    href="https://www-staging.lib.utk.edu/agvet/leisure-reading/"> Learn More </a></div>
+                    <div class="utk-button-page">
+                        <a class="btn btn-default btn-with-icon" href="https://www-staging.lib.utk.edu/">
+                            Learn More                    <span class="icon-right-open"></span>
+                        </a>
+                    </div>
                 </div>
                 <div class="utk-callout--image">
                     <div class="utk-lazyload"><img class="utk-lazyload--render lazyloaded"

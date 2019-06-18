@@ -503,17 +503,17 @@ body ::-webkit-scrollbar-track {
         margin-right: 29px; }
       .utk-search .utk-search-tabs > .ui.menu a,
       .utk-search .utk-search-tabs > .ui.menu a:visited {
-        color: #ebea64 !important;
-        font-size: 15px;
+        color: #b9e1e2 !important;
+        font-size: 18px;
         white-space: inherit;
-        font-weight: 700;
+        font-weight: 400;
         text-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
         text-transform: none !important;
         margin: 0;
         cursor: pointer;
         padding: 0 0;
         margin-right: 18px;
-        margin-bottom: -5px; }
+        margin-bottom: -3px; }
         .utk-search .utk-search-tabs > .ui.menu a::after,
         .utk-search .utk-search-tabs > .ui.menu a:visited::after {
           width: 18px;
@@ -521,7 +521,7 @@ body ::-webkit-scrollbar-track {
           display: block;
           position: absolute;
           right: 50%;
-          bottom: -18px;
+          bottom: -20px;
           margin-right: -18px;
           border-left: 18px solid transparent;
           border-right: 18px solid transparent;
@@ -529,10 +529,10 @@ body ::-webkit-scrollbar-track {
         .utk-search .utk-search-tabs > .ui.menu a:hover, .utk-search .utk-search-tabs > .ui.menu a:focus,
         .utk-search .utk-search-tabs > .ui.menu a:visited:hover,
         .utk-search .utk-search-tabs > .ui.menu a:visited:focus {
-          color: #ebea64 !important; }
+          color: #b9e1e2 !important; }
         .utk-search .utk-search-tabs > .ui.menu a.active,
         .utk-search .utk-search-tabs > .ui.menu a:visited.active {
-          color: #ebea64 !important; }
+          color: #b9e1e2 !important; }
           .utk-search .utk-search-tabs > .ui.menu a.active::after,
           .utk-search .utk-search-tabs > .ui.menu a:visited.active::after {
             content: " "; }
@@ -942,7 +942,7 @@ body {
     overflow: hidden; }
     #utk-panel .utk-panel-wrap > .utk-panel-underlay > img {
       width: 100%;
-      filter: blur(6px);
+      filter: blur(11px);
       opacity: 0.76;
       position: absolute;
       transition: all 290ms ease-in-out;
