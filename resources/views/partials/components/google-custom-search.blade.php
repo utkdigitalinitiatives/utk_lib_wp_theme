@@ -28,16 +28,5 @@
             </div>
         @endif
     </form>
-    <script>
-        (function() {
-            var cx = '001438504504481982651:oyb3rrwbbbo';
-            var gcse = document.createElement('script');
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);
-        })();
-    </script>
     <gcse:searchresults-only></gcse:searchresults-only>
 @endif

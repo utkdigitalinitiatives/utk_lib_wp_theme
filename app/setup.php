@@ -13,22 +13,6 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
 
-    // production
-    //    wp_enqueue_style(
-    //        'typography/gotham.css',
-    //        'https://cloud.typography.com/6831932/618846/css/fonts.css',
-    //        false,
-    //        null
-    //    );
-
-    // staging/dev/local
-    //    wp_enqueue_style(
-    //        'typography/gotham-dev.css',
-    //        'https://cloud.typography.com/6831932/6180392/css/fonts.css',
-    //        false,
-    //        null
-    //    );
-
     wp_enqueue_style('ut/main.css', asset_path('styles/main.css'), false, null);
 
     wp_enqueue_style('ut/header.css', asset_path('styles/header.css'), false, null);
@@ -55,6 +39,22 @@ add_action('wp_enqueue_scripts', function () {
         true
     );
 
+    if (get_current_blog_id() === 91 && isset($_GET['gcs'])) {
+        wp_add_inline_script(
+            'ut/main.js',
+            "(function() {
+                var cx = '001438504504481982651:oyb3rrwbbbo';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+            })();",
+            'before'
+        );
+    }
+
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
@@ -62,19 +62,6 @@ add_action('wp_enqueue_scripts', function () {
 
 
 add_action('admin_enqueue_scripts', function () {
-
-    //    wp_enqueue_style(
-    //        'typography/gotham.css',
-    //        'https://cloud.typography.com/6831932/618846/css/fonts.css',
-    //        false,
-    //        null
-    //    );
-    //    wp_enqueue_style(
-    //        'typography/gotham-dev.css',
-    //        'https://cloud.typography.com/6831932/6180392/css/fonts.css',
-    //        false,
-    //        null
-    //    );
 
     wp_enqueue_style('ut/admin.css', asset_path('styles/admin.css'), false, null);
 
