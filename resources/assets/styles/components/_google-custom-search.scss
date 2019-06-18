@@ -3,11 +3,21 @@
   flex-direction: row;
 
   .utk-gcs-results {
-    width: $gr-long;
+    width: 100%;
   }
 
   .utk-gcs-aside {
-    width: $gr-short;
+    width: auto;
+  }
+
+  &.utk-gcs-active {
+    .utk-gcs-results {
+      width: $gr-long;
+    }
+
+    .utk-gcs-aside {
+      width: $gr-short;
+    }
   }
 }
 
