@@ -186,6 +186,12 @@
       font-size: $type-1 !important;
       line-height: 1.6em;
     }
+
+    .gs-web-image-box-landscape img.gs-image {
+      max-width: $golden-ratio-5;
+      max-height: $golden-ratio-4;
+      border: 1px solid $gray-0;
+    }
   }
 }
 
@@ -212,4 +218,46 @@
 
 .gcsc-branding {
   display: none !important;
+}
+
+.gsc-imageResult {
+  display: flex;
+  flex-wrap: wrap;
+
+  .gsc-imageResult {
+    width: 50%;
+    margin-right: 0 !important;
+
+    .gs-image-box {
+      text-align: left;
+      height: $golden-ratio-5 !important;
+
+      img {
+        height: 100% !important;
+        width: auto !important;
+      }
+    }
+
+    .gs-text-box {
+      height: 5em;
+      margin-top: $golden-ratio-1;
+      font-size: $type-2;
+
+      .gs-ellipsis {
+        padding-right: $golden-ratio-4;
+      }
+
+      .gs-size {
+        color: $regalia !important;
+        font-size: $type-0;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .gsc-expansionArea {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
