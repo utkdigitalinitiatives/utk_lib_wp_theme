@@ -5,6 +5,15 @@ body.page-id-393 #utk-lib-midsection .section-callout {
 .utk-home {
   padding: $golden-ratio-3 0 $golden-ratio-4;
 
+  .utk-hours .utk-hours-header h3 {
+    color: $smokey;
+  }
+
+  .utk-hours--listing--item a .utk-hours--listing--item--meta span.library-subtitle,
+  .utk-hours--listing--item a:visited .utk-hours--listing--item--meta span.library-subtitle {
+    color: $smokeyx !important;
+  }
+
   &--container {
     display: flex;
 
@@ -46,7 +55,7 @@ body.page-id-393 #utk-lib-midsection .section-callout {
     h2 {
       font-size: $type-3;
       font-weight: 700;
-      color: $smokeyx;
+      color: $smokey;
       margin: 0 0 $golden-ratio-0;
     }
 
@@ -74,8 +83,8 @@ body.page-id-393 #utk-lib-midsection .section-callout {
 
     &-muted {
       h2 {
-        font-size: $type-1;
-        font-weight: 400;
+        font-size: $type-2;
+        font-weight: 700;
         color: $smokey;
         margin: 0 0 $golden-ratio-0;
       }
@@ -263,7 +272,7 @@ body .utk-home .utk-home--blog {
       margin: 0;
       padding: 0;
       font-size: $type-1;
-      color: $smokey;
+      color: $smokeyx;
       font-weight: 400;
       flex-grow: 1;
       display: flex;
@@ -325,7 +334,7 @@ body .utk-home .utk-home--blog {
       display: block;
       font-size: $type-1;
       line-height: 1.47em;
-      color: $smokey;
+      color: $smokeyx;
     }
   }
 }
