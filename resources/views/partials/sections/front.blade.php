@@ -73,6 +73,7 @@
                     <div class="utk-home--nav-list utk-home--nav-list-muted utk-home--nav-list-solid">
                         <h2>Get Help</h2>
                         <ul>
+                            <li><a href="#">Borrow &amp; Renew</a></li>
                             <li><a href="#">AskUsNow</a></li>
                             <li><a href="#">FAQ</a></li>
                             <li><a href="#">Tutorials</a></li>
@@ -84,7 +85,7 @@
                 <div class="utk-grid--row--item utk-grid--row--item-double">
                     <div class="utk-home--nav-services">
                         <div class="utk-home--nav-services--item">
-                            <a class="utk-home--nav-services--item--link" href="#">IILiad</a>
+                            <a class="utk-home--nav-services--item--link" href="#">Interlibrary Loan</a>
                             <span class="utk-home--nav-services--item--desc">Interlibrary services for requesting items from external institutions.</span>
                         </div>
                         <div class="utk-home--nav-services--item">
