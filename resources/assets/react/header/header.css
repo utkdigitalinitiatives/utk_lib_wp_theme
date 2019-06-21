@@ -1371,10 +1371,14 @@ body.utk-search-open .utk-search {
     #utk-lib-header .utk-hours .utk-hours--listing--item {
       display: flex;
       margin-bottom: 0; }
+      #utk-lib-header .utk-hours .utk-hours--listing--item > a {
+        min-width: 175px; }
       #utk-lib-header .utk-hours .utk-hours--listing--item--child {
         padding-left: 0 !important;
         margin-top: 0;
         margin-bottom: 0; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item--child > a {
+          min-width: auto; }
         #utk-lib-header .utk-hours .utk-hours--listing--item--child::before, #utk-lib-header .utk-hours .utk-hours--listing--item--child::after {
           content: none; }
         #utk-lib-header .utk-hours .utk-hours--listing--item--child a::after {
@@ -1404,21 +1408,22 @@ body.utk-search-open .utk-search {
         #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
           padding-left: 0; }
           #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
-            font-size: 13px !important;
+            font-size: 15px !important;
             white-space: nowrap; }
           #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
             height: 29px;
             padding: 6px 18px;
             position: absolute;
             background-color: #e0e0e0;
+            color: #333;
             width: 100%;
-            font-weight: 700;
+            font-weight: 400;
             font-size: 11px !important;
             white-space: nowrap;
             top: 0;
             left: 0; }
         #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
-          font-size: 11px;
+          font-size: 13px;
           white-space: nowrap; } }
 
 /* Landscape phone to portrait tablet */
@@ -1440,10 +1445,14 @@ body.utk-search-open .utk-search {
     #utk-lib-header .utk-hours .utk-hours--listing--item {
       display: flex;
       margin-bottom: 0; }
+      #utk-lib-header .utk-hours .utk-hours--listing--item > a {
+        min-width: 175px; }
       #utk-lib-header .utk-hours .utk-hours--listing--item--child {
         padding-left: 0 !important;
         margin-top: 0;
         margin-bottom: 0; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item--child > a {
+          min-width: auto; }
         #utk-lib-header .utk-hours .utk-hours--listing--item--child::before, #utk-lib-header .utk-hours .utk-hours--listing--item--child::after {
           content: none; }
         #utk-lib-header .utk-hours .utk-hours--listing--item--child a::after {
@@ -1473,21 +1482,22 @@ body.utk-search-open .utk-search {
         #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
           padding-left: 0; }
           #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
-            font-size: 13px !important;
+            font-size: 15px !important;
             white-space: nowrap; }
           #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
             height: 29px;
             padding: 6px 18px;
             position: absolute;
             background-color: #e0e0e0;
+            color: #333;
             width: 100%;
-            font-weight: 700;
+            font-weight: 400;
             font-size: 11px !important;
             white-space: nowrap;
             top: 0;
             left: 0; }
         #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
-          font-size: 11px;
+          font-size: 13px;
           white-space: nowrap; } }
 
 /* Portrait tablet to landscape and desktop */
