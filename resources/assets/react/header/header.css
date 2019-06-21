@@ -1376,9 +1376,22 @@ body.utk-search-open .utk-search {
       #utk-lib-header .utk-hours .utk-hours--listing--item--child {
         padding-left: 0 !important;
         margin-top: 0;
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        /* Mobile Devices for Mice */
+        /* Landscape phones and down */
+        /* Landscape phone to portrait tablet */
+        /* Portrait tablet to landscape and desktop */
+        /* desktop and large desktop */ } }
+      @media (max-width: 767px) and (max-width: 767px) {
+        #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+          display: none; } }
+
+@media (max-width: 767px) {
         #utk-lib-header .utk-hours .utk-hours--listing--item--child > a {
           min-width: auto; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item--child > a .library-title {
+            font-weight: 700;
+            font-size: 15px !important; }
         #utk-lib-header .utk-hours .utk-hours--listing--item--child::before, #utk-lib-header .utk-hours .utk-hours--listing--item--child::after {
           content: none; }
         #utk-lib-header .utk-hours .utk-hours--listing--item--child a::after {
@@ -1408,8 +1421,8 @@ body.utk-search-open .utk-search {
         #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
           padding-left: 0; }
           #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
-            font-size: 15px !important;
-            white-space: nowrap; }
+            white-space: nowrap;
+            line-height: 18px; }
           #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
             height: 29px;
             padding: 6px 18px;
@@ -1461,9 +1474,22 @@ body.utk-search-open .utk-search {
       #utk-lib-header .utk-hours .utk-hours--listing--item--child {
         padding-left: 0 !important;
         margin-top: 0;
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        /* Mobile Devices for Mice */
+        /* Landscape phones and down */
+        /* Landscape phone to portrait tablet */
+        /* Portrait tablet to landscape and desktop */
+        /* desktop and large desktop */ } }
+      @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
+        #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+          display: none; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
         #utk-lib-header .utk-hours .utk-hours--listing--item--child > a {
           min-width: auto; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item--child > a .library-title {
+            font-weight: 700;
+            font-size: 15px !important; }
         #utk-lib-header .utk-hours .utk-hours--listing--item--child::before, #utk-lib-header .utk-hours .utk-hours--listing--item--child::after {
           content: none; }
         #utk-lib-header .utk-hours .utk-hours--listing--item--child a::after {
@@ -1493,8 +1519,8 @@ body.utk-search-open .utk-search {
         #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
           padding-left: 0; }
           #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
-            font-size: 15px !important;
-            white-space: nowrap; }
+            white-space: nowrap;
+            line-height: 18px; }
           #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
             height: 29px;
             padding: 6px 18px;
