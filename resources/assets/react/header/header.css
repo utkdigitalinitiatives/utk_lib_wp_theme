@@ -504,7 +504,6 @@ body {
   z-index: 100;
   width: 100%;
   border-top: 6px solid #ff8200;
-  box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
   font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
   font-size: 15px; }
@@ -513,9 +512,10 @@ body {
     height: 76px;
     width: 100%;
     top: 0;
-    z-index: 97;
+    z-index: 1000;
     transition: all 110ms ease-in-out;
     position: relative;
+    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
     /* Landscape phone to portrait tablet */
@@ -572,6 +572,9 @@ body {
       right: 0;
       margin-top: 0 !important;
       height: 60px; } }
+  @media only screen and (max-width: 460px) {
+    .utk-header-actions {
+      margin-right: -18px !important; } }
   .utk-header-actions .utk-header-actions--item {
     flex-grow: 0;
     flex-shrink: 1;
@@ -1020,7 +1023,6 @@ body.utk-search-open .utk-search {
 
 .utk-header-super {
   width: 100%;
-  box-shadow: inset 0 2px 5px rgba(51, 51, 51, 0.15);
   background-color: #f6f6f6;
   padding: 18px 0;
   /* Mobile Devices for Mice */
@@ -1354,6 +1356,36 @@ body.utk-search-open .utk-search {
   border-top-color: #a7a9ac;
   animation: spinner 1s linear infinite; }
 
+/* Mobile Devices for Mice */
+/* Landscape phones and down */
+@media (max-width: 767px) {
+  #utk-lib-header .utk-hours .utk-hours-header {
+    display: none; }
+  #utk-lib-header .utk-hours .utk-hours--listing--col {
+    display: flex;
+    flex-direction: row;
+    width: auto; }
+  #utk-lib-header .utk-hours .utk-hours--listing--item {
+    display: flex; } }
+
+/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape and desktop */
+/* desktop and large desktop */
+/* Mobile Devices for Mice */
+/* Landscape phones and down */
+/* Landscape phone to portrait tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  #utk-lib-header .utk-hours .utk-hours-header {
+    display: none; }
+  #utk-lib-header .utk-hours .utk-hours--listing--col {
+    display: flex;
+    flex-direction: row;
+    width: auto; }
+  #utk-lib-header .utk-hours .utk-hours--listing--item {
+    display: flex; } }
+
+/* Portrait tablet to landscape and desktop */
+/* desktop and large desktop */
 a,
 a:visited {
   cursor: pointer;
@@ -1492,7 +1524,23 @@ a:hover {
         color: #8d2048; }
 
 .utk-resources-menu--about {
-  margin-left: calc(58px); }
+  margin-left: calc(58px);
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .utk-resources-menu--about {
+      display: none; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .utk-resources-menu--about {
+      display: none; } }
   .utk-resources-menu--about:before {
     display: block;
     width: 76px;
@@ -1526,27 +1574,13 @@ a:hover {
 
 .utk-header-resources {
   width: 100%;
-  background-color: #fff;
   z-index: 999;
   position: fixed;
   display: none;
-  padding: 0 0 29px;
-  box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
-  /* Mobile Devices for Mice */
-  /* Landscape phones and down */
-  /* Landscape phone to portrait tablet */
-  /* Portrait tablet to landscape and desktop */
-  /* desktop and large desktop */
-  /* Mobile Devices for Mice */
-  /* Landscape phones and down */
-  /* Landscape phone to portrait tablet */
-  /* Portrait tablet to landscape and desktop */
-  /* desktop and large desktop */
-  /* Mobile Devices for Mice */
-  /* Landscape phones and down */
-  /* Landscape phone to portrait tablet */
-  /* Portrait tablet to landscape and desktop */
-  /* desktop and large desktop */
+  max-height: calc(100% - 82px);
+  overflow: scroll;
+  padding: 0 0 18px;
+  background-color: #fff;
   /* Mobile Devices for Mice */
   /* Landscape phones and down */
   /* Landscape phone to portrait tablet */
@@ -1562,25 +1596,18 @@ a:hover {
   /* Landscape phone to portrait tablet */
   /* Portrait tablet to landscape and desktop */
   /* desktop and large desktop */ }
-  @media (max-width: 767px) {
-    .utk-header-resources {
-      box-shadow: inset 0 2px 5px rgba(51, 51, 51, 0.15); } }
-  @media (min-width: 768px) and (max-width: 991px) {
-    .utk-header-resources {
-      box-shadow: inset 0 2px 5px rgba(51, 51, 51, 0.15); } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .utk-header-resources {
-      box-shadow: inset 0 2px 5px rgba(51, 51, 51, 0.15); } }
-  @media (min-width: 1200px) and (max-width: 1439px) {
-    .utk-header-resources {
-      box-shadow: inset 0 2px 5px rgba(51, 51, 51, 0.15); } }
-  @media (min-width: 1440px) and (max-width: 4200px) {
-    .utk-header-resources {
-      box-shadow: inset 0 2px 5px rgba(51, 51, 51, 0.15); } }
+      max-height: calc(100% - 66px); } }
   @media (max-width: 767px) {
     .utk-header-resources {
-      padding-bottom: 76px; } }
-  .utk-header-resources > .container {
+      height: calc(100% - 66px);
+      padding-bottom: 123px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .utk-header-resources {
+      height: calc(100% - 66px);
+      padding-bottom: 123px; } }
+  .utk-header-resources .utk-header-main-menu > .container {
     display: flex;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
@@ -1591,13 +1618,24 @@ a:hover {
     /* Landscape phones and down */
     /* Landscape phone to portrait tablet */
     /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
     /* desktop and large desktop */ }
-    @media (min-width: 992px) and (max-width: 1199px) {
-      .utk-header-resources > .container {
-        flex-direction: column-reverse; } }
     @media (max-width: 767px) {
-      .utk-header-resources > .container {
-        flex-direction: column-reverse; } }
+      .utk-header-resources .utk-header-main-menu > .container {
+        flex-wrap: wrap;
+        flex-direction: column; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .utk-header-resources .utk-header-main-menu > .container {
+        flex-wrap: wrap;
+        flex-direction: column; } }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .utk-header-resources .utk-header-main-menu > .container {
+        flex-wrap: wrap;
+        flex-direction: column; } }
   .utk-header-resources::before {
     width: 100%;
     height: 1px;
@@ -1630,11 +1668,6 @@ a:hover {
   /* Landscape phones and down */
   /* Landscape phone to portrait tablet */
   /* Portrait tablet to landscape and desktop */
-  /* desktop and large desktop */
-  /* Mobile Devices for Mice */
-  /* Landscape phones and down */
-  /* Landscape phone to portrait tablet */
-  /* Portrait tablet to landscape and desktop */
   /* desktop and large desktop */ }
   .utk-resources-menu--row {
     display: flex;
@@ -1642,19 +1675,18 @@ a:hover {
     margin-bottom: 18px; }
     .utk-resources-menu--row:last-child {
       margin-bottom: 0; }
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media (max-width: 767px) {
     .utk-resources-menu {
       width: 100%;
       padding-bottom: 29px; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .utk-resources-menu {
-      display: block; } }
-  @media (max-width: 767px) {
+      width: 100%;
+      padding-bottom: 29px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
     .utk-resources-menu {
-      display: block; } }
-  @media (max-width: 767px) {
-    .utk-resources-menu {
-      padding-bottom: 18px; } }
+      width: 100%;
+      padding-bottom: 29px; } }
   .utk-resources-menu--col {
     display: block;
     width: 33.333333%;
@@ -1779,34 +1811,35 @@ a:hover {
   /* Landscape phones and down */
   /* Landscape phone to portrait tablet */
   /* Portrait tablet to landscape and desktop */
-  /* desktop and large desktop */
-  /* Mobile Devices for Mice */
-  /* Landscape phones and down */
-  /* Landscape phone to portrait tablet */
-  /* Portrait tablet to landscape and desktop */
   /* desktop and large desktop */ }
   @media (max-width: 767px) {
     .utk-resources-contact {
+      background: #fff;
       margin-top: 0;
-      padding: 18px 15px !important;
-      background-color: #e0e0e0;
-      border-top: 2px solid #e0e0e0;
-      margin: -15px;
-      width: calc(100% + 30px) !important; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .utk-resources-contact {
-      width: 100%;
-      padding: 0;
       border-left: 0;
-      flex: 1;
-      max-width: 200%; } }
-  @media (max-width: 767px) {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      width: calc(100%);
+      padding: 18px;
+      height: 123px;
+      box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
+      position: fixed;
+      bottom: 0;
+      left: 0; } }
+  @media (min-width: 768px) and (max-width: 991px) {
     .utk-resources-contact {
-      width: 100%;
-      padding: 0;
+      background: #fff;
+      margin-top: 0;
       border-left: 0;
-      flex: 1;
-      max-width: 200%; } }
+      overflow-x: scroll;
+      overflow-y: hidden;
+      width: calc(100%);
+      padding: 18px;
+      height: 123px;
+      box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
+      position: fixed;
+      bottom: 0;
+      left: 0; } }
   .utk-resources-contact p {
     margin: 0;
     padding: 0;
@@ -1904,10 +1937,10 @@ a:hover {
   bottom: calc(-23.5px);
   border-radius: 47px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
   cursor: pointer;
   z-index: 1;
-  box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29); }
+  box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
+  display: none; }
   .utk-resources-close span {
     font-size: 18px;
     color: #fff;
