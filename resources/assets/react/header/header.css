@@ -617,75 +617,25 @@ body {
         .utk-header-actions .utk-header-actions--item em {
           font-size: 15px; } }
     .utk-header-actions .utk-header-actions--item a {
-      padding: calc((47px - 6px - 15px) / 2) calc(29px / 2);
+      margin-top: 2px;
+      padding: 0 calc(29px / 2);
       color: #333 !important;
       font-weight: 700;
       display: flex;
       align-content: center;
-      align-items: center;
-      /* Mobile Devices for Mice */
-      /* Landscape phones and down */
-      /* Landscape phone to portrait tablet */
-      /* Portrait tablet to landscape and desktop */
-      /* desktop and large desktop */
-      /* Mobile Devices for Mice */
-      /* Landscape phones and down */
-      /* Landscape phone to portrait tablet */
-      /* Portrait tablet to landscape and desktop */
-      /* desktop and large desktop */
-      /* Mobile Devices for Mice */
-      /* Landscape phones and down */
-      /* Landscape phone to portrait tablet */
-      /* Portrait tablet to landscape and desktop */
-      /* desktop and large desktop */ }
-      @media (max-width: 767px) {
+      align-items: center; }
+      @media only screen and (max-width: 460px) {
         .utk-header-actions .utk-header-actions--item a {
-          height: 76px; } }
-      @media (min-width: 768px) and (max-width: 991px) {
-        .utk-header-actions .utk-header-actions--item a {
-          height: 76px; } }
-      @media (max-width: 767px) {
-        .utk-header-actions .utk-header-actions--item a {
-          height: 60px;
-          min-width: 60px;
-          text-align: center;
-          border-left: 1px solid #f6f6f6; }
-          .utk-header-actions .utk-header-actions--item a > span {
-            /* Mobile Devices for Mice */
-            /* Landscape phones and down */
-            /* Landscape phone to portrait tablet */
-            /* Portrait tablet to landscape and desktop */
-            /* desktop and large desktop */ } }
-    @media (max-width: 767px) and (max-width: 767px) {
-      .utk-header-actions .utk-header-actions--item a > span {
-        font-size: 15px;
-        margin-right: 5px; } }
-      @media only screen and (max-width: 500px) {
-        .utk-header-actions .utk-header-actions--item a {
-          display: flex;
           flex-direction: column;
           justify-items: center;
           align-items: center;
           align-content: center;
           padding: 0 18px !important;
-          width: 76px; }
-          .utk-header-actions .utk-header-actions--item a > span {
-            font-size: 18px;
-            margin: 0;
-            color: #a7a9ac;
-            padding-top: 12px; }
-          .utk-header-actions .utk-header-actions--item a em {
-            font-size: 11px;
-            flex-shrink: 1;
-            min-height: 18px;
-            margin: 6px 0 6px;
-            color: #333; } }
-      @media only screen and (max-width: 400px) {
-        .utk-header-actions .utk-header-actions--item a {
           width: 60px; }
           .utk-header-actions .utk-header-actions--item a > span {
-            font-size: 23px;
-            padding-top: 19px; }
+            margin: 0;
+            color: #58595b;
+            font-size: 24px; }
           .utk-header-actions .utk-header-actions--item a em {
             display: none; } }
   .utk-header-actions--resources .icon-menu,
