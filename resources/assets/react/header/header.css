@@ -1359,14 +1359,67 @@ body.utk-search-open .utk-search {
 /* Mobile Devices for Mice */
 /* Landscape phones and down */
 @media (max-width: 767px) {
-  #utk-lib-header .utk-hours .utk-hours-header {
-    display: none; }
-  #utk-lib-header .utk-hours .utk-hours--listing--col {
-    display: flex;
-    flex-direction: row;
-    width: auto; }
-  #utk-lib-header .utk-hours .utk-hours--listing--item {
-    display: flex; } }
+  #utk-lib-header .utk-hours {
+    margin-bottom: 0; }
+    #utk-lib-header .utk-hours .utk-hours-header {
+      display: none; }
+    #utk-lib-header .utk-hours .utk-hours--listing--col {
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      padding-left: 0 !important; }
+    #utk-lib-header .utk-hours .utk-hours--listing--item {
+      display: flex;
+      margin-bottom: 0; }
+      #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+        padding-left: 0 !important;
+        margin-top: 0;
+        margin-bottom: 0; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item--child::before, #utk-lib-header .utk-hours .utk-hours--listing--item--child::after {
+          content: none; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item--child a::after {
+          height: 29px;
+          content: ' ';
+          display: block;
+          padding: 6px 18px;
+          position: absolute;
+          background-color: #e0e0e0;
+          width: 100%;
+          font-size: 11px !important;
+          white-space: nowrap;
+          top: 0;
+          left: 0;
+          text-align: center; }
+      #utk-lib-header .utk-hours .utk-hours--listing--item a {
+        display: flex;
+        flex-grow: 1;
+        padding: 40px 18px 6px;
+        border-right: 1px solid #e0e0e0;
+        height: 100%;
+        position: relative; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item a figure {
+          width: 30px;
+          height: 30px;
+          margin-right: 11px; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
+          padding-left: 0; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
+            font-size: 13px !important;
+            white-space: nowrap; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
+            height: 29px;
+            padding: 6px 18px;
+            position: absolute;
+            background-color: #e0e0e0;
+            width: 100%;
+            font-weight: 700;
+            font-size: 11px !important;
+            white-space: nowrap;
+            top: 0;
+            left: 0; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
+          font-size: 11px;
+          white-space: nowrap; } }
 
 /* Landscape phone to portrait tablet */
 /* Portrait tablet to landscape and desktop */
@@ -1375,14 +1428,67 @@ body.utk-search-open .utk-search {
 /* Landscape phones and down */
 /* Landscape phone to portrait tablet */
 @media (min-width: 768px) and (max-width: 991px) {
-  #utk-lib-header .utk-hours .utk-hours-header {
-    display: none; }
-  #utk-lib-header .utk-hours .utk-hours--listing--col {
-    display: flex;
-    flex-direction: row;
-    width: auto; }
-  #utk-lib-header .utk-hours .utk-hours--listing--item {
-    display: flex; } }
+  #utk-lib-header .utk-hours {
+    margin-bottom: 0; }
+    #utk-lib-header .utk-hours .utk-hours-header {
+      display: none; }
+    #utk-lib-header .utk-hours .utk-hours--listing--col {
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      padding-left: 0 !important; }
+    #utk-lib-header .utk-hours .utk-hours--listing--item {
+      display: flex;
+      margin-bottom: 0; }
+      #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+        padding-left: 0 !important;
+        margin-top: 0;
+        margin-bottom: 0; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item--child::before, #utk-lib-header .utk-hours .utk-hours--listing--item--child::after {
+          content: none; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item--child a::after {
+          height: 29px;
+          content: ' ';
+          display: block;
+          padding: 6px 18px;
+          position: absolute;
+          background-color: #e0e0e0;
+          width: 100%;
+          font-size: 11px !important;
+          white-space: nowrap;
+          top: 0;
+          left: 0;
+          text-align: center; }
+      #utk-lib-header .utk-hours .utk-hours--listing--item a {
+        display: flex;
+        flex-grow: 1;
+        padding: 40px 18px 6px;
+        border-right: 1px solid #e0e0e0;
+        height: 100%;
+        position: relative; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item a figure {
+          width: 30px;
+          height: 30px;
+          margin-right: 11px; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
+          padding-left: 0; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
+            font-size: 13px !important;
+            white-space: nowrap; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
+            height: 29px;
+            padding: 6px 18px;
+            position: absolute;
+            background-color: #e0e0e0;
+            width: 100%;
+            font-weight: 700;
+            font-size: 11px !important;
+            white-space: nowrap;
+            top: 0;
+            left: 0; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
+          font-size: 11px;
+          white-space: nowrap; } }
 
 /* Portrait tablet to landscape and desktop */
 /* desktop and large desktop */
@@ -1814,29 +1920,25 @@ a:hover {
   /* desktop and large desktop */ }
   @media (max-width: 767px) {
     .utk-resources-contact {
-      background: #fff;
+      background: #f6f6f6;
       margin-top: 0;
       border-left: 0;
       overflow-x: scroll;
       overflow-y: hidden;
       width: calc(100%);
-      padding: 18px;
-      height: 123px;
-      box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
+      box-shadow: 0 0 29px rgba(51, 51, 51, 0.47);
       position: fixed;
       bottom: 0;
       left: 0; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .utk-resources-contact {
-      background: #fff;
+      background: #f6f6f6;
       margin-top: 0;
       border-left: 0;
       overflow-x: scroll;
       overflow-y: hidden;
       width: calc(100%);
-      padding: 18px;
-      height: 123px;
-      box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
+      box-shadow: 0 0 29px rgba(51, 51, 51, 0.47);
       position: fixed;
       bottom: 0;
       left: 0; } }
