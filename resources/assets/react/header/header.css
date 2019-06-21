@@ -1422,6 +1422,17 @@ body.utk-search-open .utk-search {
             white-space: nowrap;
             top: 0;
             left: 0; }
+            #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle::before {
+              display: block;
+              width: 0;
+              height: 0;
+              position: absolute;
+              content: ' ';
+              top: 23px;
+              margin-left: 4px;
+              border-left: 11px solid transparent;
+              border-right: 11px solid transparent;
+              border-bottom: 6px solid #f6f6f6; }
         #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
           font-size: 13px;
           white-space: nowrap; } }
@@ -1496,6 +1507,17 @@ body.utk-search-open .utk-search {
             white-space: nowrap;
             top: 0;
             left: 0; }
+            #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle::before {
+              display: block;
+              width: 0;
+              height: 0;
+              position: absolute;
+              content: ' ';
+              top: 23px;
+              margin-left: 4px;
+              border-left: 11px solid transparent;
+              border-right: 11px solid transparent;
+              border-bottom: 6px solid #f6f6f6; }
         #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
           font-size: 13px;
           white-space: nowrap; } }
