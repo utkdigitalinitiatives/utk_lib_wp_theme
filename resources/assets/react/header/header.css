@@ -1247,15 +1247,16 @@ body.utk-search-open .utk-search {
           border-radius: 29px;
           margin-top: 3px;
           position: relative;
-          background-color: #e0e0e0;
+          background-color: #58595b;
           z-index: 1;
-          flex-shrink: 0; }
+          flex-shrink: 0;
+          overflow: hidden; }
           .utk-hours--listing--item a figure img,
           .utk-hours--listing--item a:visited figure img {
-            filter: grayscale(1);
+            filter: grayscale(0.9);
             z-index: 0;
             opacity: 0.47;
-            background-color: #a7a9ac;
+            background-color: #58595b;
             border-radius: 29px;
             box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
             width: 100%;
@@ -1360,95 +1361,126 @@ body.utk-search-open .utk-search {
 /* Landscape phones and down */
 @media (max-width: 767px) {
   #utk-lib-header .utk-hours {
-    margin-bottom: 0; }
+    background-color: #e0e0e0;
+    margin-top: 0;
+    border-left: 0;
+    width: calc(100%);
+    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 0;
+    height: 90px; }
     #utk-lib-header .utk-hours .utk-hours-header {
+      width: 100%;
+      text-align: center;
       display: none; }
-    #utk-lib-header .utk-hours .utk-hours--listing--col {
-      display: flex;
-      flex-direction: row;
-      width: auto;
-      padding-left: 0 !important; }
-    #utk-lib-header .utk-hours .utk-hours--listing--item {
-      display: flex;
-      margin-bottom: 0; }
-      #utk-lib-header .utk-hours .utk-hours--listing--item > a {
-        min-width: 175px; }
-      #utk-lib-header .utk-hours .utk-hours--listing--item--child {
-        padding-left: 0 !important;
-        margin-top: 0;
-        margin-bottom: 0;
+      #utk-lib-header .utk-hours .utk-hours-header h3 {
+        font-size: 11px;
+        color: #58595b;
+        margin: 6px 29px;
         /* Mobile Devices for Mice */
         /* Landscape phones and down */
         /* Landscape phone to portrait tablet */
         /* Portrait tablet to landscape and desktop */
         /* desktop and large desktop */ } }
       @media (max-width: 767px) and (max-width: 767px) {
-        #utk-lib-header .utk-hours .utk-hours--listing--item--child {
-          display: none; } }
+        #utk-lib-header .utk-hours .utk-hours-header h3 {
+          margin: 6px 18px; } }
 
 @media (max-width: 767px) {
-        #utk-lib-header .utk-hours .utk-hours--listing--item--child > a {
-          min-width: auto; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item--child > a .library-title {
-            font-weight: 700;
-            font-size: 15px !important; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item--child::before, #utk-lib-header .utk-hours .utk-hours--listing--item--child::after {
-          content: none; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item--child a::after {
-          height: 29px;
-          content: ' ';
-          display: block;
-          padding: 6px 18px;
-          position: absolute;
-          background-color: #e0e0e0;
-          width: 100%;
-          font-size: 11px !important;
-          white-space: nowrap;
-          top: 0;
-          left: 0;
-          text-align: center; }
-      #utk-lib-header .utk-hours .utk-hours--listing--item a {
+    #utk-lib-header .utk-hours .utk-hours--listing {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      width: calc(100%); }
+      #utk-lib-header .utk-hours .utk-hours--listing--col {
         display: flex;
-        flex-grow: 1;
-        padding: 40px 18px 6px;
-        border-right: 1px solid #e0e0e0;
-        height: 100%;
-        position: relative; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item a figure {
-          width: 30px;
-          height: 30px;
-          margin-right: 11px; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
-          padding-left: 0; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
-            white-space: nowrap;
-            line-height: 18px; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
+        flex-direction: row;
+        width: auto;
+        padding-left: 0 !important; }
+      #utk-lib-header .utk-hours .utk-hours--listing--item {
+        display: flex;
+        margin-bottom: 0; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item > a {
+          min-width: 175px; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+          padding-left: 0 !important;
+          margin-top: 0;
+          margin-bottom: 0;
+          /* Mobile Devices for Mice */
+          /* Landscape phones and down */
+          /* Landscape phone to portrait tablet */
+          /* Portrait tablet to landscape and desktop */
+          /* desktop and large desktop */
+          /* Mobile Devices for Mice */
+          /* Landscape phones and down */
+          /* Landscape phone to portrait tablet */
+          /* Portrait tablet to landscape and desktop */
+          /* desktop and large desktop */ } }
+        @media (max-width: 767px) and (max-width: 767px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+            display: none; } }
+        @media (max-width: 767px) and (min-width: 768px) and (max-width: 991px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+            display: none; } }
+
+@media (max-width: 767px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item--child > a {
+            min-width: auto; }
+            #utk-lib-header .utk-hours .utk-hours--listing--item--child > a .library-title {
+              font-weight: 700; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item--child::before, #utk-lib-header .utk-hours .utk-hours--listing--item--child::after {
+            content: none; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item--child a::after {
             height: 29px;
+            content: ' ';
+            display: block;
             padding: 6px 18px;
             position: absolute;
-            background-color: #e0e0e0;
-            color: #333;
             width: 100%;
-            font-weight: 400;
             font-size: 11px !important;
             white-space: nowrap;
-            top: 0;
-            left: 0; }
-            #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle::before {
-              display: block;
-              width: 0;
-              height: 0;
-              position: absolute;
-              content: ' ';
-              top: 23px;
-              margin-left: 4px;
-              border-left: 11px solid transparent;
-              border-right: 11px solid transparent;
-              border-bottom: 6px solid #f6f6f6; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
-          font-size: 13px;
-          white-space: nowrap; } }
+            bottom: 0;
+            left: 0;
+            text-align: center; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item a {
+          display: flex;
+          flex-grow: 1;
+          padding: 11px 29px;
+          border-right: 1px solid #e0e0e0;
+          height: 100%;
+          position: relative;
+          background-color: #f6f6f6;
+          align-items: flex-end;
+          /* Mobile Devices for Mice */
+          /* Landscape phones and down */
+          /* Landscape phone to portrait tablet */
+          /* Portrait tablet to landscape and desktop */
+          /* desktop and large desktop */ } }
+        @media (max-width: 767px) and (max-width: 767px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item a {
+            padding: 11px 18px; } }
+
+@media (max-width: 767px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item a figure {
+            width: 30px;
+            height: 30px;
+            margin-right: 11px;
+            margin-bottom: 32px; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
+            padding-left: 0; }
+            #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
+              white-space: nowrap; }
+            #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
+              color: #333;
+              font-weight: 400;
+              font-size: 13px !important;
+              white-space: nowrap;
+              bottom: 0;
+              left: 0; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
+            font-size: 13px;
+            white-space: nowrap; } }
 
 /* Landscape phone to portrait tablet */
 /* Portrait tablet to landscape and desktop */
@@ -1458,95 +1490,126 @@ body.utk-search-open .utk-search {
 /* Landscape phone to portrait tablet */
 @media (min-width: 768px) and (max-width: 991px) {
   #utk-lib-header .utk-hours {
-    margin-bottom: 0; }
+    background-color: #e0e0e0;
+    margin-top: 0;
+    border-left: 0;
+    width: calc(100%);
+    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 0;
+    height: 90px; }
     #utk-lib-header .utk-hours .utk-hours-header {
+      width: 100%;
+      text-align: center;
       display: none; }
-    #utk-lib-header .utk-hours .utk-hours--listing--col {
-      display: flex;
-      flex-direction: row;
-      width: auto;
-      padding-left: 0 !important; }
-    #utk-lib-header .utk-hours .utk-hours--listing--item {
-      display: flex;
-      margin-bottom: 0; }
-      #utk-lib-header .utk-hours .utk-hours--listing--item > a {
-        min-width: 175px; }
-      #utk-lib-header .utk-hours .utk-hours--listing--item--child {
-        padding-left: 0 !important;
-        margin-top: 0;
-        margin-bottom: 0;
+      #utk-lib-header .utk-hours .utk-hours-header h3 {
+        font-size: 11px;
+        color: #58595b;
+        margin: 6px 29px;
         /* Mobile Devices for Mice */
         /* Landscape phones and down */
         /* Landscape phone to portrait tablet */
         /* Portrait tablet to landscape and desktop */
         /* desktop and large desktop */ } }
       @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
-        #utk-lib-header .utk-hours .utk-hours--listing--item--child {
-          display: none; } }
+        #utk-lib-header .utk-hours .utk-hours-header h3 {
+          margin: 6px 18px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-        #utk-lib-header .utk-hours .utk-hours--listing--item--child > a {
-          min-width: auto; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item--child > a .library-title {
-            font-weight: 700;
-            font-size: 15px !important; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item--child::before, #utk-lib-header .utk-hours .utk-hours--listing--item--child::after {
-          content: none; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item--child a::after {
-          height: 29px;
-          content: ' ';
-          display: block;
-          padding: 6px 18px;
-          position: absolute;
-          background-color: #e0e0e0;
-          width: 100%;
-          font-size: 11px !important;
-          white-space: nowrap;
-          top: 0;
-          left: 0;
-          text-align: center; }
-      #utk-lib-header .utk-hours .utk-hours--listing--item a {
+    #utk-lib-header .utk-hours .utk-hours--listing {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      width: calc(100%); }
+      #utk-lib-header .utk-hours .utk-hours--listing--col {
         display: flex;
-        flex-grow: 1;
-        padding: 40px 18px 6px;
-        border-right: 1px solid #e0e0e0;
-        height: 100%;
-        position: relative; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item a figure {
-          width: 30px;
-          height: 30px;
-          margin-right: 11px; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
-          padding-left: 0; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
-            white-space: nowrap;
-            line-height: 18px; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
+        flex-direction: row;
+        width: auto;
+        padding-left: 0 !important; }
+      #utk-lib-header .utk-hours .utk-hours--listing--item {
+        display: flex;
+        margin-bottom: 0; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item > a {
+          min-width: 175px; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+          padding-left: 0 !important;
+          margin-top: 0;
+          margin-bottom: 0;
+          /* Mobile Devices for Mice */
+          /* Landscape phones and down */
+          /* Landscape phone to portrait tablet */
+          /* Portrait tablet to landscape and desktop */
+          /* desktop and large desktop */
+          /* Mobile Devices for Mice */
+          /* Landscape phones and down */
+          /* Landscape phone to portrait tablet */
+          /* Portrait tablet to landscape and desktop */
+          /* desktop and large desktop */ } }
+        @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+            display: none; } }
+        @media (min-width: 768px) and (max-width: 991px) and (min-width: 768px) and (max-width: 991px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+            display: none; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item--child > a {
+            min-width: auto; }
+            #utk-lib-header .utk-hours .utk-hours--listing--item--child > a .library-title {
+              font-weight: 700; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item--child::before, #utk-lib-header .utk-hours .utk-hours--listing--item--child::after {
+            content: none; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item--child a::after {
             height: 29px;
+            content: ' ';
+            display: block;
             padding: 6px 18px;
             position: absolute;
-            background-color: #e0e0e0;
-            color: #333;
             width: 100%;
-            font-weight: 400;
             font-size: 11px !important;
             white-space: nowrap;
-            top: 0;
-            left: 0; }
-            #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle::before {
-              display: block;
-              width: 0;
-              height: 0;
-              position: absolute;
-              content: ' ';
-              top: 23px;
-              margin-left: 4px;
-              border-left: 11px solid transparent;
-              border-right: 11px solid transparent;
-              border-bottom: 6px solid #f6f6f6; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
-          font-size: 13px;
-          white-space: nowrap; } }
+            bottom: 0;
+            left: 0;
+            text-align: center; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item a {
+          display: flex;
+          flex-grow: 1;
+          padding: 11px 29px;
+          border-right: 1px solid #e0e0e0;
+          height: 100%;
+          position: relative;
+          background-color: #f6f6f6;
+          align-items: flex-end;
+          /* Mobile Devices for Mice */
+          /* Landscape phones and down */
+          /* Landscape phone to portrait tablet */
+          /* Portrait tablet to landscape and desktop */
+          /* desktop and large desktop */ } }
+        @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item a {
+            padding: 11px 18px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item a figure {
+            width: 30px;
+            height: 30px;
+            margin-right: 11px;
+            margin-bottom: 32px; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
+            padding-left: 0; }
+            #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
+              white-space: nowrap; }
+            #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
+              color: #333;
+              font-weight: 400;
+              font-size: 13px !important;
+              white-space: nowrap;
+              bottom: 0;
+              left: 0; }
+          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
+            font-size: 13px;
+            white-space: nowrap; } }
 
 /* Portrait tablet to landscape and desktop */
 /* desktop and large desktop */
@@ -1609,7 +1672,16 @@ a:hover {
   background-color: #f6f6f6;
   padding: 18px;
   border-radius: 6px;
-  margin-right: 29px; }
+  margin-right: 29px;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .utk-resources-menu--help {
+      width: 100%;
+      margin-right: 0; } }
   .utk-resources-menu--help h3 {
     font-size: 15px;
     font-weight: 700;
@@ -1654,7 +1726,16 @@ a:hover {
   border: 2px solid #f6f6f6;
   border-radius: 6px;
   padding: 18px 0 0 18px;
-  margin-right: 29px; }
+  margin-right: 29px;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .utk-resources-menu--services-speciality {
+      width: calc(67.777777%);
+      margin-right: 0; } }
   .utk-resources-menu--services-speciality h3 {
     display: none;
     line-height: 1.47em; }
@@ -1699,12 +1780,6 @@ a:hover {
   /* Landscape phone to portrait tablet */
   /* Portrait tablet to landscape and desktop */
   /* desktop and large desktop */ }
-  @media (max-width: 767px) {
-    .utk-resources-menu--about {
-      display: none; } }
-  @media (min-width: 768px) and (max-width: 991px) {
-    .utk-resources-menu--about {
-      display: none; } }
   .utk-resources-menu--about:before {
     display: block;
     width: 76px;
@@ -1744,7 +1819,7 @@ a:hover {
   max-height: calc(100% - 82px);
   overflow: scroll;
   padding: 0 0 18px;
-  background-color: #fff;
+  background-color: red;
   /* Mobile Devices for Mice */
   /* Landscape phones and down */
   /* Landscape phone to portrait tablet */
@@ -1766,18 +1841,13 @@ a:hover {
   @media (max-width: 767px) {
     .utk-header-resources {
       height: calc(100% - 66px);
-      padding-top: 92px; } }
+      padding-top: 90px; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .utk-header-resources {
       height: calc(100% - 66px);
-      padding-top: 92px; } }
+      padding-top: 90px; } }
   .utk-header-resources .utk-header-main-menu > .container {
     display: flex;
-    /* Mobile Devices for Mice */
-    /* Landscape phones and down */
-    /* Landscape phone to portrait tablet */
-    /* Portrait tablet to landscape and desktop */
-    /* desktop and large desktop */
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
     /* Landscape phone to portrait tablet */
@@ -1793,10 +1863,6 @@ a:hover {
         flex-wrap: wrap;
         flex-direction: column; } }
     @media (min-width: 768px) and (max-width: 991px) {
-      .utk-header-resources .utk-header-main-menu > .container {
-        flex-wrap: wrap;
-        flex-direction: column; } }
-    @media (min-width: 992px) and (max-width: 1199px) {
       .utk-header-resources .utk-header-main-menu > .container {
         flex-wrap: wrap;
         flex-direction: column; } }
@@ -1827,27 +1893,26 @@ a:hover {
   /* Landscape phones and down */
   /* Landscape phone to portrait tablet */
   /* Portrait tablet to landscape and desktop */
-  /* desktop and large desktop */
-  /* Mobile Devices for Mice */
-  /* Landscape phones and down */
-  /* Landscape phone to portrait tablet */
-  /* Portrait tablet to landscape and desktop */
   /* desktop and large desktop */ }
   .utk-resources-menu--row {
     display: flex;
     flex-direction: row;
-    margin-bottom: 18px; }
+    margin-bottom: 18px;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
     .utk-resources-menu--row:last-child {
       margin-bottom: 0; }
+    @media (max-width: 767px) {
+      .utk-resources-menu--row {
+        flex-direction: column; } }
   @media (max-width: 767px) {
     .utk-resources-menu {
       width: 100%;
       padding-bottom: 29px; } }
   @media (min-width: 768px) and (max-width: 991px) {
-    .utk-resources-menu {
-      width: 100%;
-      padding-bottom: 29px; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
     .utk-resources-menu {
       width: 100%;
       padding-bottom: 29px; } }
@@ -1858,22 +1923,10 @@ a:hover {
     /* Landscape phones and down */
     /* Landscape phone to portrait tablet */
     /* Portrait tablet to landscape and desktop */
-    /* desktop and large desktop */
-    /* Mobile Devices for Mice */
-    /* Landscape phones and down */
-    /* Landscape phone to portrait tablet */
-    /* Portrait tablet to landscape and desktop */
     /* desktop and large desktop */ }
-    @media (min-width: 768px) and (max-width: 991px) {
-      .utk-resources-menu--col {
-        width: 100%; }
-        .utk-resources-menu--col .utk-resources-menu--submenu {
-          display: none; } }
     @media (max-width: 767px) {
       .utk-resources-menu--col {
-        width: 100%; }
-        .utk-resources-menu--col .utk-resources-menu--submenu {
-          display: none; } }
+        width: 100%; } }
     .utk-resources-menu--col .utk-resources-menu--section {
       margin-top: 18px;
       margin-bottom: 11px;
@@ -1965,41 +2018,7 @@ a:hover {
   padding: 0;
   margin-top: 18px;
   display: flex;
-  flex-direction: column;
-  /* Mobile Devices for Mice */
-  /* Landscape phones and down */
-  /* Landscape phone to portrait tablet */
-  /* Portrait tablet to landscape and desktop */
-  /* desktop and large desktop */
-  /* Mobile Devices for Mice */
-  /* Landscape phones and down */
-  /* Landscape phone to portrait tablet */
-  /* Portrait tablet to landscape and desktop */
-  /* desktop and large desktop */ }
-  @media (max-width: 767px) {
-    .utk-resources-contact {
-      background: #f6f6f6;
-      margin-top: 0;
-      border-left: 0;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      width: calc(100%);
-      box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
-      position: absolute;
-      top: 0;
-      left: 0; } }
-  @media (min-width: 768px) and (max-width: 991px) {
-    .utk-resources-contact {
-      background: #f6f6f6;
-      margin-top: 0;
-      border-left: 0;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      width: calc(100%);
-      box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
-      position: absolute;
-      top: 0;
-      left: 0; } }
+  flex-direction: column; }
   .utk-resources-contact p {
     margin: 0;
     padding: 0;
