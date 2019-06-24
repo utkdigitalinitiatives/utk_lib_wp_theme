@@ -1631,7 +1631,7 @@ a:hover {
           width: 50%;
           margin: 0;
           display: block;
-          font-size: 13px;
+          font-size: 15px;
           margin-bottom: 6px; }
           .utk-resources-menu--services-primary ul li > a {
             display: inline-flex;
@@ -1673,9 +1673,10 @@ a:hover {
   /* desktop and large desktop */ }
   @media (max-width: 767px) {
     .utk-resources-menu--help {
+      background-color: #006c93;
       margin-right: 0;
       border-radius: 0;
-      padding: 18px;
+      padding: 29px 18px;
       margin-left: -18px;
       width: calc(100% + 36px);
       margin-bottom: 18px; } }
@@ -1694,8 +1695,13 @@ a:hover {
     /* desktop and large desktop */ }
     @media (max-width: 767px) {
       .utk-resources-menu--help h3 {
+        color: #ebea64;
+        font-weight: 400;
         font-size: 15px;
-        line-height: inherit; } }
+        line-height: inherit;
+        text-align: center;
+        flex-direction: column-reverse;
+        justify-content: center; } }
     .utk-resources-menu--help h3:after {
       content: "\E814";
       font-family: fontello;
@@ -1718,7 +1724,12 @@ a:hover {
       /* desktop and large desktop */ }
       @media (max-width: 767px) {
         .utk-resources-menu--help h3:after {
-          content: none; } }
+          color: #ebea64;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: inherit;
+          text-align: center;
+          justify-content: center; } }
   .utk-resources-menu--help ul {
     margin: 0;
     padding: 0;
@@ -1745,13 +1756,32 @@ a:hover {
       /* desktop and large desktop */ }
       @media (max-width: 767px) {
         .utk-resources-menu--help ul li {
-          width: 50%; } }
+          width: 100%;
+          text-align: center; } }
       .utk-resources-menu--help ul li a,
       .utk-resources-menu--help ul li a:visited {
-        color: #006c93; }
+        color: #006c93;
+        /* Mobile Devices for Mice */
+        /* Landscape phones and down */
+        /* Landscape phone to portrait tablet */
+        /* Portrait tablet to landscape and desktop */
+        /* desktop and large desktop */ }
+        @media (max-width: 767px) {
+          .utk-resources-menu--help ul li a,
+          .utk-resources-menu--help ul li a:visited {
+            color: #fff; } }
       .utk-resources-menu--help ul li a:hover,
       .utk-resources-menu--help ul li a:focus {
-        color: #8d2048; }
+        color: #8d2048;
+        /* Mobile Devices for Mice */
+        /* Landscape phones and down */
+        /* Landscape phone to portrait tablet */
+        /* Portrait tablet to landscape and desktop */
+        /* desktop and large desktop */ }
+        @media (max-width: 767px) {
+          .utk-resources-menu--help ul li a:hover,
+          .utk-resources-menu--help ul li a:focus {
+            color: #fff; } }
 
 .utk-resources-menu--services-speciality {
   width: calc(67.777777% - 29px);
@@ -1793,7 +1823,16 @@ a:hover {
       width: 50%;
       padding: 0;
       list-style: none;
-      margin-bottom: 18px; }
+      margin-bottom: 18px;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        .utk-resources-menu--services-speciality ul li {
+          width: 100%;
+          margin-right: 0; } }
       .utk-resources-menu--services-speciality ul li a,
       .utk-resources-menu--services-speciality ul li a:visited {
         display: block;
@@ -1809,7 +1848,23 @@ a:hover {
         @media (max-width: 767px) {
           .utk-resources-menu--services-speciality ul li a,
           .utk-resources-menu--services-speciality ul li a:visited {
-            font-size: 13px; } }
+            font-size: 13px; }
+            .utk-resources-menu--services-speciality ul li a:before,
+            .utk-resources-menu--services-speciality ul li a:visited:before {
+              content: "\E812";
+              font-family: fontello;
+              font-style: normal;
+              speak: none;
+              text-decoration: inherit;
+              text-align: center;
+              font-variant: normal;
+              text-transform: none;
+              -webkit-font-smoothing: antialiased;
+              font-size: 11px;
+              align-content: center;
+              align-items: center;
+              margin-right: 6px;
+              color: #a7a9ac; } }
         .utk-resources-menu--services-speciality ul li a span,
         .utk-resources-menu--services-speciality ul li a:visited span {
           display: block;
