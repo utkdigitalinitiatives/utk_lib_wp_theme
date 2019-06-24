@@ -1297,7 +1297,7 @@ body.utk-search-open .utk-search {
 /* Mobile Devices for Mice */
 /* Landscape phones and down */
 @media (max-width: 767px) {
-  #utk-lib-header .utk-hours {
+  .utk-hours {
     background-color: #e0e0e0;
     margin-top: 0;
     border-left: 0;
@@ -1308,10 +1308,10 @@ body.utk-search-open .utk-search {
     left: 0;
     margin-bottom: 0;
     height: 121px; }
-    #utk-lib-header .utk-hours .utk-hours-header {
+    .utk-hours .utk-hours-header {
       width: 100%;
       text-align: center; }
-      #utk-lib-header .utk-hours .utk-hours-header h3 {
+      .utk-hours .utk-hours-header h3 {
         font-size: 13px;
         color: #58595b;
         margin: 2px 29px;
@@ -1321,11 +1321,11 @@ body.utk-search-open .utk-search {
         /* Portrait tablet to landscape and desktop */
         /* desktop and large desktop */ } }
       @media (max-width: 767px) and (max-width: 767px) {
-        #utk-lib-header .utk-hours .utk-hours-header h3 {
+        .utk-hours .utk-hours-header h3 {
           margin: 2px 18px; } }
 
 @media (max-width: 767px) {
-    #utk-lib-header .utk-hours .utk-hours--listing {
+    .utk-hours .utk-hours--listing {
       overflow-x: scroll;
       overflow-y: hidden;
       width: calc(100%);
@@ -1336,7 +1336,7 @@ body.utk-search-open .utk-search {
       /* Portrait tablet to landscape and desktop */
       /* desktop and large desktop */ } }
     @media (max-width: 767px) and (max-width: 767px) {
-      #utk-lib-header .utk-hours .utk-hours--listing::after {
+      .utk-hours .utk-hours--listing::after {
         display: block;
         width: 18px;
         height: 90px;
@@ -1352,15 +1352,15 @@ body.utk-search-open .utk-search {
         background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%); } }
 
 @media (max-width: 767px) {
-      #utk-lib-header .utk-hours .utk-hours--listing--col {
+      .utk-hours .utk-hours--listing--col {
         display: flex;
         flex-direction: row;
         width: auto;
         padding-left: 0 !important; }
-      #utk-lib-header .utk-hours .utk-hours--listing--item {
+      .utk-hours .utk-hours--listing--item {
         display: flex;
         margin-bottom: 0; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item--more {
+        .utk-hours .utk-hours--listing--item--more {
           width: 123px !important;
           min-width: 123px !important;
           padding: 0 18px !important;
@@ -1381,22 +1381,22 @@ body.utk-search-open .utk-search {
           /* Portrait tablet to landscape and desktop */
           /* desktop and large desktop */ } }
         @media (max-width: 767px) and (max-width: 767px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item--more {
+          .utk-hours .utk-hours--listing--item--more {
             width: 76px !important;
             min-width: 76px !important;
             padding: 0 !important; } }
 
 @media (max-width: 767px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item--more span {
+          .utk-hours .utk-hours--listing--item--more span {
             display: block;
             text-align: center;
             font-size: 15px;
             color: #006c93;
             background-color: #fff;
             margin: 0 auto 11px; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item > a {
+        .utk-hours .utk-hours--listing--item > a {
           min-width: 175px; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+        .utk-hours .utk-hours--listing--item--child {
           padding-left: 0 !important;
           margin-top: 0;
           margin-bottom: 0;
@@ -1411,20 +1411,20 @@ body.utk-search-open .utk-search {
           /* Portrait tablet to landscape and desktop */
           /* desktop and large desktop */ } }
         @media (max-width: 767px) and (max-width: 767px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+          .utk-hours .utk-hours--listing--item--child {
             display: none; } }
         @media (max-width: 767px) and (min-width: 768px) and (max-width: 991px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+          .utk-hours .utk-hours--listing--item--child {
             display: none; } }
 
 @media (max-width: 767px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item--child > a {
+          .utk-hours .utk-hours--listing--item--child > a {
             min-width: auto; }
-            #utk-lib-header .utk-hours .utk-hours--listing--item--child > a .library-title {
+            .utk-hours .utk-hours--listing--item--child > a .library-title {
               font-weight: 700; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item--child::before, #utk-lib-header .utk-hours .utk-hours--listing--item--child::after {
+          .utk-hours .utk-hours--listing--item--child::before, .utk-hours .utk-hours--listing--item--child::after {
             content: none; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item--child a::after {
+          .utk-hours .utk-hours--listing--item--child a::after {
             height: 29px;
             content: ' ';
             display: block;
@@ -1436,7 +1436,7 @@ body.utk-search-open .utk-search {
             bottom: 0;
             left: 0;
             text-align: center; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item a {
+        .utk-hours .utk-hours--listing--item a {
           display: flex;
           flex-grow: 1;
           padding: 11px 29px;
@@ -1451,27 +1451,27 @@ body.utk-search-open .utk-search {
           /* Portrait tablet to landscape and desktop */
           /* desktop and large desktop */ } }
         @media (max-width: 767px) and (max-width: 767px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item a {
+          .utk-hours .utk-hours--listing--item a {
             padding: 11px 18px; } }
 
 @media (max-width: 767px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item a figure {
+          .utk-hours .utk-hours--listing--item a figure {
             width: 30px;
             height: 30px;
             margin-right: 11px;
             margin-bottom: 32px; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
+          .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
             padding-left: 0; }
-            #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
+            .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
               white-space: nowrap; }
-            #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
+            .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
               color: #333;
               font-weight: 400;
               font-size: 13px !important;
               white-space: nowrap;
               bottom: 0;
               left: 0; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
+          .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
             font-size: 13px;
             white-space: nowrap; } }
 
@@ -1482,7 +1482,7 @@ body.utk-search-open .utk-search {
 /* Landscape phones and down */
 /* Landscape phone to portrait tablet */
 @media (min-width: 768px) and (max-width: 991px) {
-  #utk-lib-header .utk-hours {
+  .utk-hours {
     background-color: #e0e0e0;
     margin-top: 0;
     border-left: 0;
@@ -1493,10 +1493,10 @@ body.utk-search-open .utk-search {
     left: 0;
     margin-bottom: 0;
     height: 121px; }
-    #utk-lib-header .utk-hours .utk-hours-header {
+    .utk-hours .utk-hours-header {
       width: 100%;
       text-align: center; }
-      #utk-lib-header .utk-hours .utk-hours-header h3 {
+      .utk-hours .utk-hours-header h3 {
         font-size: 13px;
         color: #58595b;
         margin: 2px 29px;
@@ -1506,11 +1506,11 @@ body.utk-search-open .utk-search {
         /* Portrait tablet to landscape and desktop */
         /* desktop and large desktop */ } }
       @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
-        #utk-lib-header .utk-hours .utk-hours-header h3 {
+        .utk-hours .utk-hours-header h3 {
           margin: 2px 18px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    #utk-lib-header .utk-hours .utk-hours--listing {
+    .utk-hours .utk-hours--listing {
       overflow-x: scroll;
       overflow-y: hidden;
       width: calc(100%);
@@ -1521,7 +1521,7 @@ body.utk-search-open .utk-search {
       /* Portrait tablet to landscape and desktop */
       /* desktop and large desktop */ } }
     @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
-      #utk-lib-header .utk-hours .utk-hours--listing::after {
+      .utk-hours .utk-hours--listing::after {
         display: block;
         width: 18px;
         height: 90px;
@@ -1537,15 +1537,15 @@ body.utk-search-open .utk-search {
         background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%); } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-      #utk-lib-header .utk-hours .utk-hours--listing--col {
+      .utk-hours .utk-hours--listing--col {
         display: flex;
         flex-direction: row;
         width: auto;
         padding-left: 0 !important; }
-      #utk-lib-header .utk-hours .utk-hours--listing--item {
+      .utk-hours .utk-hours--listing--item {
         display: flex;
         margin-bottom: 0; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item--more {
+        .utk-hours .utk-hours--listing--item--more {
           width: 123px !important;
           min-width: 123px !important;
           padding: 0 18px !important;
@@ -1566,22 +1566,22 @@ body.utk-search-open .utk-search {
           /* Portrait tablet to landscape and desktop */
           /* desktop and large desktop */ } }
         @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item--more {
+          .utk-hours .utk-hours--listing--item--more {
             width: 76px !important;
             min-width: 76px !important;
             padding: 0 !important; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item--more span {
+          .utk-hours .utk-hours--listing--item--more span {
             display: block;
             text-align: center;
             font-size: 15px;
             color: #006c93;
             background-color: #fff;
             margin: 0 auto 11px; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item > a {
+        .utk-hours .utk-hours--listing--item > a {
           min-width: 175px; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+        .utk-hours .utk-hours--listing--item--child {
           padding-left: 0 !important;
           margin-top: 0;
           margin-bottom: 0;
@@ -1596,20 +1596,20 @@ body.utk-search-open .utk-search {
           /* Portrait tablet to landscape and desktop */
           /* desktop and large desktop */ } }
         @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+          .utk-hours .utk-hours--listing--item--child {
             display: none; } }
         @media (min-width: 768px) and (max-width: 991px) and (min-width: 768px) and (max-width: 991px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item--child {
+          .utk-hours .utk-hours--listing--item--child {
             display: none; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item--child > a {
+          .utk-hours .utk-hours--listing--item--child > a {
             min-width: auto; }
-            #utk-lib-header .utk-hours .utk-hours--listing--item--child > a .library-title {
+            .utk-hours .utk-hours--listing--item--child > a .library-title {
               font-weight: 700; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item--child::before, #utk-lib-header .utk-hours .utk-hours--listing--item--child::after {
+          .utk-hours .utk-hours--listing--item--child::before, .utk-hours .utk-hours--listing--item--child::after {
             content: none; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item--child a::after {
+          .utk-hours .utk-hours--listing--item--child a::after {
             height: 29px;
             content: ' ';
             display: block;
@@ -1621,7 +1621,7 @@ body.utk-search-open .utk-search {
             bottom: 0;
             left: 0;
             text-align: center; }
-        #utk-lib-header .utk-hours .utk-hours--listing--item a {
+        .utk-hours .utk-hours--listing--item a {
           display: flex;
           flex-grow: 1;
           padding: 11px 29px;
@@ -1636,27 +1636,27 @@ body.utk-search-open .utk-search {
           /* Portrait tablet to landscape and desktop */
           /* desktop and large desktop */ } }
         @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item a {
+          .utk-hours .utk-hours--listing--item a {
             padding: 11px 18px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-          #utk-lib-header .utk-hours .utk-hours--listing--item a figure {
+          .utk-hours .utk-hours--listing--item a figure {
             width: 30px;
             height: 30px;
             margin-right: 11px;
             margin-bottom: 32px; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
+          .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta {
             padding-left: 0; }
-            #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
+            .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-title {
               white-space: nowrap; }
-            #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
+            .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--meta .library-subtitle {
               color: #333;
               font-weight: 400;
               font-size: 13px !important;
               white-space: nowrap;
               bottom: 0;
               left: 0; }
-          #utk-lib-header .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
+          .utk-hours .utk-hours--listing--item a .utk-hours--listing--item--hours {
             font-size: 13px;
             white-space: nowrap; } }
 
