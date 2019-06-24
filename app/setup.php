@@ -24,20 +24,20 @@ add_action('wp_enqueue_scripts', function () {
     else :
         wp_enqueue_style('ut/subsite-menu.css', asset_path('styles/subsite-menu.css'), false, null);
         wp_enqueue_script('ut/subsite-menu.js', asset_path('scripts/subsite-menu.js'), [], null, true);
+
+        wp_enqueue_script(
+            'ut/libcal',
+            'https://v2.libanswers.com/load_chat.php?hash=' . App::getLibChatHash(),
+            [],
+            null,
+            true
+        );
     endif;
 
     wp_enqueue_script('ut/main.js', asset_path('scripts/main.js'), [], null, true);
 
     wp_enqueue_style('ut/social-slider.css', asset_path('styles/social-slider.css'), false, null);
     wp_enqueue_script('ut/social-slider.js', asset_path('scripts/social-slider.js'), [], null, true);
-
-    wp_enqueue_script(
-        'ut/libcal',
-        'https://v2.libanswers.com/load_chat.php?hash=' . App::getLibChatHash(),
-        [],
-        null,
-        true
-    );
 
     if (get_current_blog_id() === 91 && isset($_GET['gcs'])) {
         wp_add_inline_script(
