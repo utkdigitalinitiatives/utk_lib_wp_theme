@@ -34,6 +34,7 @@
 
     @include respond(xs, sm) {
       flex-direction: column-reverse !important;
+      max-height: none !important;
     }
 
     .utk-callout--content {
@@ -64,11 +65,20 @@
         font-size: $type-4;
         line-height: 1.18em;
         margin-bottom: $golden-ratio-1;
+
+        @include respond(xs, sm, md) {
+          font-weight: 700;
+          font-size: $type-3;
+        }
       }
 
       p {
         font-size: $type-3;
         margin: 0 0 $golden-ratio-2;
+
+        @include respond(xs, sm, md) {
+          font-size: $type-2;
+        }
       }
     }
 
