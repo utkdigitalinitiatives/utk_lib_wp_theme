@@ -1166,6 +1166,8 @@ body.utk-search-open .utk-search {
       padding: 0;
       width: auto;
       margin-bottom: 11px; }
+      .utk-hours--listing--item--more {
+        display: none !important; }
       .utk-hours--listing--item:last-child {
         margin-bottom: 0; }
       .utk-hours--listing--item a,
@@ -1326,7 +1328,30 @@ body.utk-search-open .utk-search {
     #utk-lib-header .utk-hours .utk-hours--listing {
       overflow-x: scroll;
       overflow-y: hidden;
-      width: calc(100%); }
+      width: calc(100%);
+      position: relative;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ } }
+    @media (max-width: 767px) and (max-width: 767px) {
+      #utk-lib-header .utk-hours .utk-hours--listing::after {
+        display: block;
+        width: 18px;
+        height: 90px;
+        content: ' ';
+        position: fixed;
+        right: 0;
+        z-index: 1;
+        background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
+        background: -webkit-gradient(linear, left, bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(51, 51, 51, 0.15)));
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
+        background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
+        background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%); } }
+
+@media (max-width: 767px) {
       #utk-lib-header .utk-hours .utk-hours--listing--col {
         display: flex;
         flex-direction: row;
@@ -1335,6 +1360,40 @@ body.utk-search-open .utk-search {
       #utk-lib-header .utk-hours .utk-hours--listing--item {
         display: flex;
         margin-bottom: 0; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item--more {
+          width: 123px !important;
+          min-width: 123px !important;
+          padding: 0 18px !important;
+          line-height: 1.47em;
+          text-align: center;
+          font-weight: 700;
+          background-color: #fff !important;
+          font-size: 11px !important;
+          display: flex !important;
+          align-content: center;
+          align-items: flex-end !important;
+          color: #333 !important;
+          text-transform: uppercase;
+          flex-wrap: wrap;
+          /* Mobile Devices for Mice */
+          /* Landscape phones and down */
+          /* Landscape phone to portrait tablet */
+          /* Portrait tablet to landscape and desktop */
+          /* desktop and large desktop */ } }
+        @media (max-width: 767px) and (max-width: 767px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item--more {
+            width: 76px !important;
+            min-width: 76px !important;
+            padding: 0 !important; } }
+
+@media (max-width: 767px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item--more span {
+            display: block;
+            text-align: center;
+            font-size: 15px;
+            color: #006c93;
+            background-color: #fff;
+            margin: 0 auto 11px; }
         #utk-lib-header .utk-hours .utk-hours--listing--item > a {
           min-width: 175px; }
         #utk-lib-header .utk-hours .utk-hours--listing--item--child {
@@ -1454,7 +1513,30 @@ body.utk-search-open .utk-search {
     #utk-lib-header .utk-hours .utk-hours--listing {
       overflow-x: scroll;
       overflow-y: hidden;
-      width: calc(100%); }
+      width: calc(100%);
+      position: relative;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ } }
+    @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
+      #utk-lib-header .utk-hours .utk-hours--listing::after {
+        display: block;
+        width: 18px;
+        height: 90px;
+        content: ' ';
+        position: fixed;
+        right: 0;
+        z-index: 1;
+        background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
+        background: -webkit-gradient(linear, left, bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(51, 51, 51, 0.15)));
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
+        background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
+        background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%); } }
+
+@media (min-width: 768px) and (max-width: 991px) {
       #utk-lib-header .utk-hours .utk-hours--listing--col {
         display: flex;
         flex-direction: row;
@@ -1463,6 +1545,40 @@ body.utk-search-open .utk-search {
       #utk-lib-header .utk-hours .utk-hours--listing--item {
         display: flex;
         margin-bottom: 0; }
+        #utk-lib-header .utk-hours .utk-hours--listing--item--more {
+          width: 123px !important;
+          min-width: 123px !important;
+          padding: 0 18px !important;
+          line-height: 1.47em;
+          text-align: center;
+          font-weight: 700;
+          background-color: #fff !important;
+          font-size: 11px !important;
+          display: flex !important;
+          align-content: center;
+          align-items: flex-end !important;
+          color: #333 !important;
+          text-transform: uppercase;
+          flex-wrap: wrap;
+          /* Mobile Devices for Mice */
+          /* Landscape phones and down */
+          /* Landscape phone to portrait tablet */
+          /* Portrait tablet to landscape and desktop */
+          /* desktop and large desktop */ } }
+        @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item--more {
+            width: 76px !important;
+            min-width: 76px !important;
+            padding: 0 !important; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+          #utk-lib-header .utk-hours .utk-hours--listing--item--more span {
+            display: block;
+            text-align: center;
+            font-size: 15px;
+            color: #006c93;
+            background-color: #fff;
+            margin: 0 auto 11px; }
         #utk-lib-header .utk-hours .utk-hours--listing--item > a {
           min-width: 175px; }
         #utk-lib-header .utk-hours .utk-hours--listing--item--child {
@@ -1631,7 +1747,7 @@ a:hover {
           width: 50%;
           margin: 0;
           display: block;
-          font-size: 15px;
+          font-size: 13px;
           margin-bottom: 6px; }
           .utk-resources-menu--services-primary ul li > a {
             display: inline-flex;
@@ -1725,13 +1841,12 @@ a:hover {
       /* desktop and large desktop */ }
       @media (max-width: 767px) {
         .utk-resources-menu--help h3:after {
-          color: #fff;
+          color: #b9e1e2;
           font-weight: 400;
           font-size: 29px;
           line-height: inherit;
           text-align: center;
           justify-content: center;
-          opacity: 0.18;
           margin-bottom: 6px; } }
   .utk-resources-menu--help ul {
     margin: 0;
@@ -1772,7 +1887,7 @@ a:hover {
         @media (max-width: 767px) {
           .utk-resources-menu--help ul li a,
           .utk-resources-menu--help ul li a:visited {
-            color: #fff; } }
+            color: #fff !important; } }
       .utk-resources-menu--help ul li a:hover,
       .utk-resources-menu--help ul li a:focus {
         color: #8d2048;
@@ -1784,7 +1899,7 @@ a:hover {
         @media (max-width: 767px) {
           .utk-resources-menu--help ul li a:hover,
           .utk-resources-menu--help ul li a:focus {
-            color: #fff; } }
+            color: #fff !important; } }
 
 .utk-resources-menu--services-speciality {
   width: calc(67.777777% - 29px);
