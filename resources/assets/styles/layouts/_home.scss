@@ -11,5 +11,13 @@ body.page-id-393 #utk-lib-midsection .section-callout {
     height: auto !important;
     overflow: auto;
     padding-bottom: $golden-ratio-4 !important;
+
+    .utk-header-main-menu {
+      padding-top: $golden-ratio-2;
+
+      @include respond(xs, sm) {
+        padding-top: 0 !important;
+      }
+    }
   }
 }
