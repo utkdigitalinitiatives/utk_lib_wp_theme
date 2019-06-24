@@ -1648,7 +1648,7 @@ a:hover {
             -webkit-font-smoothing: antialiased;
             margin-right: 11px;
             color: #a7a9ac;
-            font-size: 11px;
+            font-size: 13px;
             display: inline-flex;
             align-content: center;
             align-items: center;
@@ -1696,7 +1696,8 @@ a:hover {
     @media (max-width: 767px) {
       .utk-resources-menu--help h3 {
         color: #ebea64;
-        font-weight: 400;
+        font-weight: 700;
+        text-transform: uppercase;
         font-size: 15px;
         line-height: inherit;
         text-align: center;
@@ -1724,12 +1725,14 @@ a:hover {
       /* desktop and large desktop */ }
       @media (max-width: 767px) {
         .utk-resources-menu--help h3:after {
-          color: #ebea64;
+          color: #fff;
           font-weight: 400;
-          font-size: 18px;
+          font-size: 29px;
           line-height: inherit;
           text-align: center;
-          justify-content: center; } }
+          justify-content: center;
+          opacity: 0.18;
+          margin-bottom: 6px; } }
   .utk-resources-menu--help ul {
     margin: 0;
     padding: 0;
@@ -1807,7 +1810,7 @@ a:hover {
     .utk-resources-menu--services-speciality {
       width: 100%;
       margin-right: 0;
-      padding: 0;
+      padding: 11px 0;
       border: none;
       border-radius: 0; } }
   .utk-resources-menu--services-speciality h3 {
