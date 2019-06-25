@@ -649,7 +649,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
             text-transform: uppercase; } }
       .utk-search .utk-search-tabs > .ui.menu a,
       .utk-search .utk-search-tabs > .ui.menu a:visited {
-        color: #b9e1e2 !important;
+        color: #fff !important;
         font-size: 18px;
         white-space: inherit;
         font-weight: 400;
@@ -685,10 +685,10 @@ body .utk-research-tools .ui.dropdown .menu > .item {
         .utk-search .utk-search-tabs > .ui.menu a:hover, .utk-search .utk-search-tabs > .ui.menu a:focus,
         .utk-search .utk-search-tabs > .ui.menu a:visited:hover,
         .utk-search .utk-search-tabs > .ui.menu a:visited:focus {
-          color: #b9e1e2 !important; }
+          color: #fff !important; }
         .utk-search .utk-search-tabs > .ui.menu a.active,
         .utk-search .utk-search-tabs > .ui.menu a:visited.active {
-          color: #b9e1e2 !important; }
+          color: #fff !important; }
           .utk-search .utk-search-tabs > .ui.menu a.active::after,
           .utk-search .utk-search-tabs > .ui.menu a:visited.active::after {
             content: " "; }
@@ -828,10 +828,10 @@ body .utk-research-tools .ui.dropdown .menu > .item {
   /* desktop and large desktop */ }
   @media (max-width: 767px) {
     .utk-research-tools {
-      padding-bottom: 18px; } }
+      padding-bottom: 29px; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .utk-research-tools {
-      padding-bottom: 18px; } }
+      padding-bottom: 29px; } }
   .utk-research-tools h3 {
     font-size: 23px;
     font-weight: 400;
@@ -1344,8 +1344,8 @@ body {
     overflow: hidden; }
     #utk-panel .utk-panel-wrap > .utk-panel-underlay > img {
       width: 100%;
-      filter: blur(11px);
-      opacity: 0.76;
+      filter: blur(6px);
+      opacity: 0.47;
       position: absolute;
       transition: all 290ms ease-in-out;
       transform: scale3d(1, 1, 1); }
@@ -1356,12 +1356,12 @@ body {
       width: 100%;
       height: 100%;
       z-index: 1;
-      background: -moz-linear-gradient(left, rgba(33, 151, 169, 0.29) 0%, #333 61.8%);
-      background: -webkit-gradient(linear, left, bottom, color-stop(0%, rgba(33, 151, 169, 0.29)), color-stop(61.8%, #333));
-      background: -webkit-linear-gradient(left, rgba(33, 151, 169, 0.29) 0%, #333 61.8%);
-      background: -o-linear-gradient(left, rgba(33, 151, 169, 0.29) 0%, #333 61.8%);
-      background: -ms-linear-gradient(left, rgba(33, 151, 169, 0.29) 0%, #333 61.8%);
-      background: linear-gradient(to right, rgba(33, 151, 169, 0.29) 0%, #333 61.8%); }
+      background: -moz-linear-gradient(left, rgba(88, 89, 91, 0.11) 0%, #333 61.8%);
+      background: -webkit-gradient(linear, left, bottom, color-stop(0%, rgba(88, 89, 91, 0.11)), color-stop(61.8%, #333));
+      background: -webkit-linear-gradient(left, rgba(88, 89, 91, 0.11) 0%, #333 61.8%);
+      background: -o-linear-gradient(left, rgba(88, 89, 91, 0.11) 0%, #333 61.8%);
+      background: -ms-linear-gradient(left, rgba(88, 89, 91, 0.11) 0%, #333 61.8%);
+      background: linear-gradient(to right, rgba(88, 89, 91, 0.11) 0%, #333 61.8%); }
     #utk-panel .utk-panel-wrap > .utk-panel-underlay .utk-panel-underlay--fade-vert {
       top: 0;
       left: 0;
@@ -1369,12 +1369,12 @@ body {
       width: 100%;
       height: 100%;
       z-index: 1;
-      background: -moz-linear-gradient(top, rgba(33, 151, 169, 0.18) 0, #333 400px);
-      background: -webkit-gradient(linear, top, bottom, color-stop(0, rgba(33, 151, 169, 0.18)), color-stop(400px, #333));
-      background: -webkit-linear-gradient(top, rgba(33, 151, 169, 0.18) 0, #333 400px);
-      background: -o-linear-gradient(top, rgba(33, 151, 169, 0.18) 0, #333 400px);
-      background: -ms-linear-gradient(top, rgba(33, 151, 169, 0.18) 0, #333 400px);
-      background: linear-gradient(to bottom, rgba(33, 151, 169, 0.18) 0, #333 400px); }
+      background: -moz-linear-gradient(top, rgba(88, 89, 91, 0.18) 0, #333 400px);
+      background: -webkit-gradient(linear, top, bottom, color-stop(0, rgba(88, 89, 91, 0.18)), color-stop(400px, #333));
+      background: -webkit-linear-gradient(top, rgba(88, 89, 91, 0.18) 0, #333 400px);
+      background: -o-linear-gradient(top, rgba(88, 89, 91, 0.18) 0, #333 400px);
+      background: -ms-linear-gradient(top, rgba(88, 89, 91, 0.18) 0, #333 400px);
+      background: linear-gradient(to bottom, rgba(88, 89, 91, 0.18) 0, #333 400px); }
   #utk-panel .utk-panel-wrap .utk-panel {
     font-size: 18px;
     padding: 76px 0 0;
@@ -1422,13 +1422,13 @@ body {
         align-items: center; } }
     @media (max-width: 767px) {
       #utk-panel .utk-panel-wrap .utk-panel {
-        padding: 18px 0 0; } }
+        padding: 29px 0 11px; } }
     #utk-panel .utk-panel-wrap .utk-panel > div {
       display: flex;
       transition: opacity 290ms ease-in-out;
       flex-direction: column; }
   #utk-panel .utk-panel-wrap.utk-panel-focus-search {
-    background-color: #2197a9;
+    background-color: #754a7e;
     color: #fff; }
     #utk-panel .utk-panel-wrap.utk-panel-focus-search .utk-panel--search {
       width: calc(100% / 1.61803);
