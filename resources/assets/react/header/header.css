@@ -350,6 +350,19 @@ body {
   font-weight: 400;
   line-height: 1.5em;
   letter-spacing: -0.015em; }
+  body ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 6px;
+    height: 2px; }
+  body ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 2px;
+    background: #a7a9ac;
+    -webkit-transition: color .2s ease;
+    transition: color .2s ease; }
+  body ::-webkit-scrollbar-track {
+    background: #cacaca;
+    border-radius: 0; }
   body.utk-menu-open {
     overflow: hidden; }
     body.utk-menu-open .utk-body-overlay {
@@ -1329,29 +1342,7 @@ body.utk-search-open .utk-search {
       overflow-x: scroll;
       overflow-y: hidden;
       width: calc(100%);
-      position: relative;
-      /* Mobile Devices for Mice */
-      /* Landscape phones and down */
-      /* Landscape phone to portrait tablet */
-      /* Portrait tablet to landscape and desktop */
-      /* desktop and large desktop */ } }
-    @media (max-width: 767px) and (max-width: 767px) {
-      .utk-hours .utk-hours--listing::after {
-        display: block;
-        width: 18px;
-        height: 90px;
-        content: ' ';
-        position: fixed;
-        right: 0;
-        z-index: 1;
-        background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
-        background: -webkit-gradient(linear, left, bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(51, 51, 51, 0.15)));
-        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
-        background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
-        background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
-        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%); } }
-
-@media (max-width: 767px) {
+      position: relative; }
       .utk-hours .utk-hours--listing--col {
         display: flex;
         flex-direction: row;
@@ -1514,29 +1505,7 @@ body.utk-search-open .utk-search {
       overflow-x: scroll;
       overflow-y: hidden;
       width: calc(100%);
-      position: relative;
-      /* Mobile Devices for Mice */
-      /* Landscape phones and down */
-      /* Landscape phone to portrait tablet */
-      /* Portrait tablet to landscape and desktop */
-      /* desktop and large desktop */ } }
-    @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
-      .utk-hours .utk-hours--listing::after {
-        display: block;
-        width: 18px;
-        height: 90px;
-        content: ' ';
-        position: fixed;
-        right: 0;
-        z-index: 1;
-        background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
-        background: -webkit-gradient(linear, left, bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(51, 51, 51, 0.15)));
-        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
-        background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
-        background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%);
-        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(51, 51, 51, 0.15) 100%); } }
-
-@media (min-width: 768px) and (max-width: 991px) {
+      position: relative; }
       .utk-hours .utk-hours--listing--col {
         display: flex;
         flex-direction: row;
@@ -2171,13 +2140,13 @@ a:hover {
           .utk-resources-menu--about ul li a:focus {
             color: #fff; } }
 
-.utk-header-resources {
+body .utk-header-resources {
   width: 100%;
   z-index: 999;
   position: fixed;
   display: none;
   max-height: calc(100% - 82px);
-  overflow: scroll;
+  overflow-y: scroll;
   padding: 0 0 18px;
   background-color: #fff;
   /* Mobile Devices for Mice */
@@ -2196,21 +2165,21 @@ a:hover {
   /* Portrait tablet to landscape and desktop */
   /* desktop and large desktop */ }
   @media (min-width: 992px) and (max-width: 1199px) {
-    .utk-header-resources {
+    body .utk-header-resources {
       max-height: calc(100% - 82px); } }
   @media (min-width: 768px) and (max-width: 991px) {
-    .utk-header-resources {
+    body .utk-header-resources {
       height: calc(100% - 82px);
       max-height: calc(100% - 82px);
       padding-top: 121px;
       padding-bottom: 0; } }
   @media (max-width: 767px) {
-    .utk-header-resources {
+    body .utk-header-resources {
       height: calc(100% - 66px);
       max-height: calc(100% - 66px);
       padding-top: 121px;
       padding-bottom: 0; } }
-  .utk-header-resources .utk-header-main-menu > .container {
+  body .utk-header-resources .utk-header-main-menu > .container {
     display: flex;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
@@ -2223,19 +2192,19 @@ a:hover {
     /* Portrait tablet to landscape and desktop */
     /* desktop and large desktop */ }
     @media (max-width: 767px) {
-      .utk-header-resources .utk-header-main-menu > .container {
+      body .utk-header-resources .utk-header-main-menu > .container {
         flex-wrap: wrap;
         flex-direction: column; } }
     @media (min-width: 768px) and (max-width: 991px) {
-      .utk-header-resources .utk-header-main-menu > .container {
+      body .utk-header-resources .utk-header-main-menu > .container {
         flex-wrap: wrap;
         flex-direction: column; } }
-  .utk-header-resources::before {
+  body .utk-header-resources::before {
     width: 100%;
     height: 1px;
     content: ' ';
     position: absolute; }
-  .utk-header-resources.utk-header-expand-menu {
+  body .utk-header-resources.utk-header-expand-menu {
     display: block; }
 
 .utk-header.utk-header-shrink:not(.utk-header-expand-menu) .utk-header-expand-menu {

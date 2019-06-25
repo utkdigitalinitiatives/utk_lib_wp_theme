@@ -726,7 +726,25 @@ body ::-webkit-scrollbar-track {
       color: #ff8200; }
 
 .utk-panel-focus-research-tools .utk-research-tools {
-  padding-right: 76px; }
+  padding-right: 76px;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .utk-panel-focus-research-tools .utk-research-tools {
+      padding-right: 0; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .utk-panel-focus-research-tools .utk-research-tools {
+      padding-right: 0; } }
   .utk-panel-focus-research-tools .utk-research-tools .utk-collapse-research-tools {
     opacity: 1; }
   .utk-panel-focus-research-tools .utk-research-tools--option {
@@ -736,7 +754,25 @@ body ::-webkit-scrollbar-track {
   transition: all 290ms ease-in-out;
   opacity: 1;
   max-height: 100%;
-  padding: 47px 0; }
+  padding: 47px 0;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .utk-recently-viewed {
+      display: none; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .utk-recently-viewed {
+      display: none; } }
   .utk-recently-viewed h5 {
     color: #fff !important;
     text-transform: uppercase;
@@ -1140,9 +1176,11 @@ body {
       /* desktop and large desktop */ }
       @media (max-width: 767px) {
         #utk-panel .utk-panel-wrap.utk-panel-focus-search .utk-panel--search {
+          height: auto;
           width: 100% !important; } }
       @media (min-width: 768px) and (max-width: 991px) {
         #utk-panel .utk-panel-wrap.utk-panel-focus-search .utk-panel--search {
+          height: auto;
           width: 100% !important; } }
     #utk-panel .utk-panel-wrap.utk-panel-focus-search .utk-panel--research-tools {
       width: calc(100% - (100% / 1.61803));
@@ -1182,16 +1220,74 @@ body {
       opacity: 0;
       padding-right: 0;
       padding-left: 0;
-      transition: all 290ms ease-in-out; }
+      transition: all 290ms ease-in-out;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--search {
+          height: 0;
+          width: auto; } }
+      @media (min-width: 768px) and (max-width: 991px) {
+        #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--search {
+          height: 0;
+          width: auto; } }
     #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--research-tools {
       width: calc(100% - (100% / 1.61803));
       padding-right: 0;
-      transition: all 290ms ease-in-out; }
+      transition: all 290ms ease-in-out;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--research-tools {
+          width: 100%;
+          margin-bottom: 47px; } }
+      @media (min-width: 768px) and (max-width: 991px) {
+        #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--research-tools {
+          width: 100%;
+          margin-bottom: 47px; } }
     #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--subject-guide {
       width: calc(100% / 1.61803);
       opacity: 1;
       padding-left: 0;
-      transition: all 290ms ease-in-out; }
+      transition: all 290ms ease-in-out;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--subject-guide {
+          width: 100%; } }
+      @media (min-width: 768px) and (max-width: 991px) {
+        #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--subject-guide {
+          width: 100%; } }
   #utk-panel .utk-panel-wrap > .container {
     position: relative;
     z-index: 1; }
