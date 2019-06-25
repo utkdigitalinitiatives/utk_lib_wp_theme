@@ -252,16 +252,13 @@ body .utk-research-tools .ui.dropdown .scrolling.menu {
   min-width: 100% !important;
   width: auto !important;
   border-bottom-right-radius: 6px !important;
-  border-bottom-left-radius: 6px !important; }
+  border-bottom-left-radius: 6px !important;
+  max-height: 38.2vh; }
 
 body .utk-research-tools .ui.dropdown .scrolling.menu,
 body .utk-research-tools .ui.scrolling.dropdown .menu {
   overflow-x: hidden;
   overflow-y: auto; }
-
-@media only screen and (min-width: 992px) {
-  body .utk-research-tools .ui.dropdown .scrolling.menu, body .utk-research-tools .ui.scrolling.dropdown .menu {
-    max-height: 20.57142857rem; } }
 
 body .utk-research-tools .ui.dropdown .menu > .item {
   position: relative;
@@ -279,22 +276,6 @@ body .utk-research-tools .ui.dropdown .menu > .item {
   color: #333;
   padding: 11px 18px !important;
   font-size: 15px; }
-
-body ::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 10px;
-  height: 10px; }
-
-body ::-webkit-scrollbar-thumb {
-  cursor: pointer;
-  border-radius: 5px;
-  background: #a7a9ac;
-  -webkit-transition: color .2s ease;
-  transition: color .2s ease; }
-
-body ::-webkit-scrollbar-track {
-  background: #e0e0e0;
-  border-radius: 0; }
 
 .utk-search .ui.input {
   font-size: 1em; }
