@@ -1056,7 +1056,7 @@ body.utk-search-open .utk-search {
         justify-content: flex-start; } }
   @media (max-width: 767px) {
     .utk-header-super {
-      margin-bottom: 18px; } }
+      background-color: #fff; } }
   .utk-header-super .utk-menu-options {
     position: relative;
     /* Mobile Devices for Mice */
@@ -1717,12 +1717,14 @@ a:hover {
           margin: 0;
           display: block;
           font-size: 13px;
-          margin-bottom: 6px; }
+          margin-bottom: 6px;
+          padding-left: 18px; }
           .utk-resources-menu--services-primary ul li > a {
             display: inline-flex;
-            align-self: center; }
+            align-self: center;
+            line-height: 1.47em; }
           .utk-resources-menu--services-primary ul li:before {
-            content: "\F105";
+            content: "\E812";
             font-family: fontello;
             font-style: normal;
             speak: none;
@@ -1733,11 +1735,12 @@ a:hover {
             -webkit-font-smoothing: antialiased;
             margin-right: 11px;
             color: #a7a9ac;
-            font-size: 13px;
+            font-size: 11px;
             display: inline-flex;
             align-content: center;
             align-items: center;
-            margin-top: -2px; } }
+            position: absolute;
+            margin-left: -18px; } }
       .utk-resources-menu--services-primary ul li a,
       .utk-resources-menu--services-primary ul li a:visited {
         color: #006c93; }
@@ -1936,7 +1939,8 @@ a:hover {
         @media (max-width: 767px) {
           .utk-resources-menu--services-speciality ul li a,
           .utk-resources-menu--services-speciality ul li a:visited {
-            font-size: 13px; }
+            font-size: 13px;
+            padding-left: 18px; }
             .utk-resources-menu--services-speciality ul li a:before,
             .utk-resources-menu--services-speciality ul li a:visited:before {
               content: "\E812";
@@ -1952,7 +1956,10 @@ a:hover {
               align-content: center;
               align-items: center;
               margin-right: 6px;
-              color: #a7a9ac; } }
+              color: #a7a9ac;
+              position: absolute;
+              margin-left: -18px;
+              font-size: 11px; } }
         .utk-resources-menu--services-speciality ul li a span,
         .utk-resources-menu--services-speciality ul li a:visited span {
           display: block;
