@@ -5,12 +5,12 @@ body.page-id-393 #utk-lib-midsection .section-callout {
 .utk-home {
   .utk-header-resources {
     display: block !important;
-    position: relative;
-    z-index: 0;
+    position: static !important;
     max-height: none !important;
     height: auto !important;
     overflow: auto;
     padding-bottom: $golden-ratio-4 !important;
+    z-index: auto !important;
 
     .utk-header-main-menu {
       padding-top: $golden-ratio-2;
@@ -26,6 +26,12 @@ body.page-id-393 #utk-lib-midsection .section-callout {
       .utk-hours {
         display: none;
       }
+    }
+  }
+
+  @include respond(xs, sm) {
+    .utk-header-super .utk-menu-options {
+      z-index: 1099;
     }
   }
 }
