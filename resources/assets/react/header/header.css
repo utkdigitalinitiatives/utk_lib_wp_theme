@@ -1270,7 +1270,41 @@ body.utk-search-open .utk-search {
           border-radius: 2px; }
         .utk-hours--listing--item--child a .utk-hours--listing--item--meta span.library-title {
           font-size: 13px !important;
-          font-weight: 700; }
+          font-weight: 700;
+          /* Mobile Devices for Mice */
+          /* Landscape phones and down */
+          /* Landscape phone to portrait tablet */
+          /* Portrait tablet to landscape and desktop */
+          /* desktop and large desktop */
+          /* Mobile Devices for Mice */
+          /* Landscape phones and down */
+          /* Landscape phone to portrait tablet */
+          /* Portrait tablet to landscape and desktop */
+          /* desktop and large desktop */ }
+          @media (max-width: 767px) {
+            .utk-hours--listing--item--child a .utk-hours--listing--item--meta span.library-title {
+              font-size: 15px !important; } }
+          @media (min-width: 768px) and (max-width: 991px) {
+            .utk-hours--listing--item--child a .utk-hours--listing--item--meta span.library-title {
+              font-size: 15px !important; } }
+        .utk-hours--listing--item--child a .utk-hours--listing--item--meta span.library-subtitle {
+          display: none;
+          /* Mobile Devices for Mice */
+          /* Landscape phones and down */
+          /* Landscape phone to portrait tablet */
+          /* Portrait tablet to landscape and desktop */
+          /* desktop and large desktop */
+          /* Mobile Devices for Mice */
+          /* Landscape phones and down */
+          /* Landscape phone to portrait tablet */
+          /* Portrait tablet to landscape and desktop */
+          /* desktop and large desktop */ }
+          @media (max-width: 767px) {
+            .utk-hours--listing--item--child a .utk-hours--listing--item--meta span.library-subtitle {
+              display: block !important; } }
+          @media (min-width: 768px) and (max-width: 991px) {
+            .utk-hours--listing--item--child a .utk-hours--listing--item--meta span.library-subtitle {
+              display: block !important; } }
       .utk-hours--listing--item--simple {
         margin-right: 1em; }
       .utk-hours--listing--item--hours {
@@ -1352,45 +1386,50 @@ body.utk-search-open .utk-search {
         display: flex;
         margin-bottom: 0; }
         .utk-hours .utk-hours--listing--item--more {
-          width: 123px !important;
-          min-width: 123px !important;
-          padding: 0 18px !important;
-          line-height: 1.47em;
+          width: 76px !important;
+          min-width: 76px !important;
+          line-height: 1.29em;
           text-align: center;
-          font-weight: 700;
-          background-color: #fff !important;
           font-size: 11px !important;
           display: flex !important;
           align-content: center;
           align-items: flex-end !important;
-          color: #333 !important;
-          text-transform: uppercase;
+          color: #58595b !important;
+          flex-direction: column;
           flex-wrap: wrap;
-          /* Mobile Devices for Mice */
-          /* Landscape phones and down */
-          /* Landscape phone to portrait tablet */
-          /* Portrait tablet to landscape and desktop */
-          /* desktop and large desktop */ } }
-        @media (max-width: 767px) and (max-width: 767px) {
-          .utk-hours .utk-hours--listing--item--more {
-            width: 76px !important;
-            min-width: 76px !important;
-            padding: 0 !important; } }
-
-@media (max-width: 767px) {
+          cursor: pointer !important;
+          justify-content: center;
+          padding: 0 !important;
+          background-color: #fff !important; }
           .utk-hours .utk-hours--listing--item--more span {
+            font-weight: 700;
             display: block;
             text-align: center;
-            font-size: 15px;
-            color: #006c93;
+            font-size: 13px;
+            color: #fff;
             background-color: #fff;
-            margin: 0 auto 11px; }
-        .utk-hours .utk-hours--listing--item > a {
-          min-width: 175px; }
+            margin: 0 auto 6px;
+            width: 30px;
+            height: 30px;
+            box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
+            text-align: center;
+            padding-top: 2px;
+            line-height: 28px;
+            border-radius: 30px;
+            background-color: #006c93;
+            transition: all 290ms ease-in-out;
+            margin-top: 7px; }
+            .utk-hours .utk-hours--listing--item--more span::before {
+              margin-right: 0;
+              margin-left: -2px;
+              font-size: 11px; }
+          .utk-hours .utk-hours--listing--item--more-collapse span {
+            background-color: #a7a9ac !important; }
         .utk-hours .utk-hours--listing--item--child {
           padding-left: 0 !important;
           margin-top: 0;
           margin-bottom: 0;
+          max-width: 0;
           /* Mobile Devices for Mice */
           /* Landscape phones and down */
           /* Landscape phone to portrait tablet */
@@ -1400,17 +1439,21 @@ body.utk-search-open .utk-search {
           /* Landscape phones and down */
           /* Landscape phone to portrait tablet */
           /* Portrait tablet to landscape and desktop */
-          /* desktop and large desktop */ } }
+          /* desktop and large desktop */ }
+          .utk-hours .utk-hours--listing--item--child:first-of-type a {
+            box-shadow: inset 5px 0 5px rgba(51, 51, 51, 0.11) !important; }
+          .utk-hours .utk-hours--listing--item--child:last-of-type a {
+            box-shadow: inset -5px 0 5px rgba(51, 51, 51, 0.11) !important; } }
         @media (max-width: 767px) and (max-width: 767px) {
           .utk-hours .utk-hours--listing--item--child {
-            display: none; } }
+            transition: all 290ms ease-in-out; } }
         @media (max-width: 767px) and (min-width: 768px) and (max-width: 991px) {
           .utk-hours .utk-hours--listing--item--child {
-            display: none; } }
+            transition: all 290ms ease-in-out; } }
 
 @media (max-width: 767px) {
           .utk-hours .utk-hours--listing--item--child > a {
-            min-width: auto; }
+            padding: 0 18px; }
             .utk-hours .utk-hours--listing--item--child > a .library-title {
               font-weight: 700; }
           .utk-hours .utk-hours--listing--item--child::before, .utk-hours .utk-hours--listing--item--child::after {
@@ -1427,6 +1470,8 @@ body.utk-search-open .utk-search {
             bottom: 0;
             left: 0;
             text-align: center; }
+        .utk-hours .utk-hours--listing--item-showchildren .utk-hours--listing--item--child {
+          max-width: 290px; }
         .utk-hours .utk-hours--listing--item a {
           display: flex;
           flex-grow: 1;
@@ -1515,45 +1560,50 @@ body.utk-search-open .utk-search {
         display: flex;
         margin-bottom: 0; }
         .utk-hours .utk-hours--listing--item--more {
-          width: 123px !important;
-          min-width: 123px !important;
-          padding: 0 18px !important;
-          line-height: 1.47em;
+          width: 76px !important;
+          min-width: 76px !important;
+          line-height: 1.29em;
           text-align: center;
-          font-weight: 700;
-          background-color: #fff !important;
           font-size: 11px !important;
           display: flex !important;
           align-content: center;
           align-items: flex-end !important;
-          color: #333 !important;
-          text-transform: uppercase;
+          color: #58595b !important;
+          flex-direction: column;
           flex-wrap: wrap;
-          /* Mobile Devices for Mice */
-          /* Landscape phones and down */
-          /* Landscape phone to portrait tablet */
-          /* Portrait tablet to landscape and desktop */
-          /* desktop and large desktop */ } }
-        @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
-          .utk-hours .utk-hours--listing--item--more {
-            width: 76px !important;
-            min-width: 76px !important;
-            padding: 0 !important; } }
-
-@media (min-width: 768px) and (max-width: 991px) {
+          cursor: pointer !important;
+          justify-content: center;
+          padding: 0 !important;
+          background-color: #fff !important; }
           .utk-hours .utk-hours--listing--item--more span {
+            font-weight: 700;
             display: block;
             text-align: center;
-            font-size: 15px;
-            color: #006c93;
+            font-size: 13px;
+            color: #fff;
             background-color: #fff;
-            margin: 0 auto 11px; }
-        .utk-hours .utk-hours--listing--item > a {
-          min-width: 175px; }
+            margin: 0 auto 6px;
+            width: 30px;
+            height: 30px;
+            box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
+            text-align: center;
+            padding-top: 2px;
+            line-height: 28px;
+            border-radius: 30px;
+            background-color: #006c93;
+            transition: all 290ms ease-in-out;
+            margin-top: 7px; }
+            .utk-hours .utk-hours--listing--item--more span::before {
+              margin-right: 0;
+              margin-left: -2px;
+              font-size: 11px; }
+          .utk-hours .utk-hours--listing--item--more-collapse span {
+            background-color: #a7a9ac !important; }
         .utk-hours .utk-hours--listing--item--child {
           padding-left: 0 !important;
           margin-top: 0;
           margin-bottom: 0;
+          max-width: 0;
           /* Mobile Devices for Mice */
           /* Landscape phones and down */
           /* Landscape phone to portrait tablet */
@@ -1563,17 +1613,21 @@ body.utk-search-open .utk-search {
           /* Landscape phones and down */
           /* Landscape phone to portrait tablet */
           /* Portrait tablet to landscape and desktop */
-          /* desktop and large desktop */ } }
+          /* desktop and large desktop */ }
+          .utk-hours .utk-hours--listing--item--child:first-of-type a {
+            box-shadow: inset 5px 0 5px rgba(51, 51, 51, 0.11) !important; }
+          .utk-hours .utk-hours--listing--item--child:last-of-type a {
+            box-shadow: inset -5px 0 5px rgba(51, 51, 51, 0.11) !important; } }
         @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
           .utk-hours .utk-hours--listing--item--child {
-            display: none; } }
+            transition: all 290ms ease-in-out; } }
         @media (min-width: 768px) and (max-width: 991px) and (min-width: 768px) and (max-width: 991px) {
           .utk-hours .utk-hours--listing--item--child {
-            display: none; } }
+            transition: all 290ms ease-in-out; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
           .utk-hours .utk-hours--listing--item--child > a {
-            min-width: auto; }
+            padding: 0 18px; }
             .utk-hours .utk-hours--listing--item--child > a .library-title {
               font-weight: 700; }
           .utk-hours .utk-hours--listing--item--child::before, .utk-hours .utk-hours--listing--item--child::after {
@@ -1590,6 +1644,8 @@ body.utk-search-open .utk-search {
             bottom: 0;
             left: 0;
             text-align: center; }
+        .utk-hours .utk-hours--listing--item-showchildren .utk-hours--listing--item--child {
+          max-width: 290px; }
         .utk-hours .utk-hours--listing--item a {
           display: flex;
           flex-grow: 1;
