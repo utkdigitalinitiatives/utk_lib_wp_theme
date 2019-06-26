@@ -1,6 +1,10 @@
 p {
   font-family: $sans;
   font-size: $type-3;
-  line-height: 1.5em;
+  line-height: 1.47em;
   margin-bottom: 1em;
+
+  @include respond(xs, sm) {
+    font-size: $type-2;
+  }
 }
