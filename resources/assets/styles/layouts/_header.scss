@@ -255,11 +255,15 @@ header.utk-header {
 
       .page-header--title-wrap {
         margin-left: 0;
+        flex-grow: 1;
       }
 
       h2.page-header--title {
+        margin-top: $golden-ratio-1;
+        padding-left: 65px;
         color: $white;
         font-size: $type-2 !important;
+        line-height: 1.47em !important;
       }
     }
   }

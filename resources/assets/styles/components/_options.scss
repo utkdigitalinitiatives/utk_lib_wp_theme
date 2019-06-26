@@ -13,6 +13,7 @@
     position: fixed;
     right: 81px;
     bottom: $golden-ratio-2;
+    display: none !important;
   }
 
   @include respond(sm) {

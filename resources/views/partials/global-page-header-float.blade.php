@@ -47,7 +47,7 @@
         @php echo $post->post_title; @endphp
     </div>
     <div id="page-header-subsite-menu-mobile-expand" class="page-header--current-page-expand">
-        <span class="icon-sort"></span>
+        <span class="icon-menu"></span>
     </div>
     <div id="page-header-subsite-menu-mobile-close" class="page-header--current-page-close">
         <span class="icon-cancel"></span>

@@ -178,23 +178,19 @@
   cursor: pointer !important;
   background-color: $smokeyx !important;
   position: fixed;
-  bottom: 0;
-  right: $golden-ratio-2;
+  bottom: 11px;
+  left: 18px;
   width: 47px;
   height: 47px;
   display: none;
   text-align: center;
   line-height: 47px;
-  margin-bottom: 18px;
   font-size: $type-3 !important;
   border-radius: 47px;
+  box-shadow: $box-shadow-float;
 
   @include respond(xs, sm) {
     display: block;
-  }
-
-  @include respond(sm) {
-    right: $golden-ratio-3;
   }
 }
 
