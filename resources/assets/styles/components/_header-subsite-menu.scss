@@ -155,28 +155,7 @@
   height: 47px;
 
   @include respond(xs, sm) {
-    display: block !important;
-    color: $white !important;
-    padding: 10px 15px !important;
-    margin-left: -15px !important;
-    margin-right: -15px !important;
-    width: calc(100% + 30px) !important;
-    cursor: pointer !important;
-    height: auto;
-    background-color: $smokey !important;
-    box-shadow: $box-shadow-float;
-    border-top: 1px solid lighten($smokey, 5);
-  }
-
-  .icon-sort {
-    font-size: $type-2;
-    margin-right: $golden-ratio-0;
-    color: $white !important;
-    display: none;
-
-    @include respond(xs, sm) {
-      display: inline-block;
-    }
+    display: none !important;
   }
 
   &.page-header--current-page-close {
@@ -191,6 +170,37 @@
       display: none;
     }
   }
+}
+
+.page-header--current-page-expand,
+.page-header--current-page-close {
+  color: $white !important;
+  cursor: pointer !important;
+  background-color: $smokeyx !important;
+  position: fixed;
+  bottom: 0;
+  right: $golden-ratio-2;
+  width: 47px;
+  height: 47px;
+  display: none;
+  text-align: center;
+  line-height: 47px;
+  margin-bottom: 18px;
+  font-size: $type-3 !important;
+  border-radius: 47px;
+
+  @include respond(xs, sm) {
+    display: block;
+  }
+
+  @include respond(sm) {
+    right: $golden-ratio-3;
+  }
+}
+
+.page-header--current-page-close {
+  background-color: $torch !important;
+  display: none;
 }
 
 .header-scroll-down {

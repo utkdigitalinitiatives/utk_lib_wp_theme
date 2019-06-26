@@ -43,13 +43,14 @@
     <div id="page-header-subsite-menu">
       @include('partials.components.subsite-menu-dropdown')
     </div>
-    <div id="page-header-subsite-menu-mobile-expand" class="page-header--current-page page-header--current-page-expand">
-        <span class="icon-sort"></span>
+    <div class="page-header--current-page">
         @php echo $post->post_title; @endphp
     </div>
-    <div id="page-header-subsite-menu-mobile-close" class="page-header--current-page page-header--current-page-close">
-        <span class="icon-left-open"></span>
-        Back to Current Page
+    <div id="page-header-subsite-menu-mobile-expand" class="page-header--current-page-expand">
+        <span class="icon-sort"></span>
+    </div>
+    <div id="page-header-subsite-menu-mobile-close" class="page-header--current-page-close">
+        <span class="icon-cancel"></span>
     </div>
     <div class="page-header--options">
       {{--@include('partials.components.help')--}}

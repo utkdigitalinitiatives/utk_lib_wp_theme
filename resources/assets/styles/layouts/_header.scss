@@ -222,9 +222,9 @@ header.utk-header {
 }
 
 /*
- * default behaviors at sm (tablet)
+ * default behaviors at sm (tablet) and xs (mobile)
  */
-@include respond(sm) {
+@include respond(xs, sm) {
   .container {
     max-width: 100% !important;
   }
@@ -248,63 +248,8 @@ header.utk-header {
       height: 47px;
       background-color: $smokey;
       position: fixed;
-      top: 82px;
-      bottom: auto;
-      transition: $transition-all;
-
-      .page-header--title-wrap {
-        margin-left: 0;
-      }
-
-      h2.page-header--title {
-        margin-left: 0;
-        color: $white;
-        font-size: 18px !important;
-      }
-    }
-  }
-
-  .header-scroll-down:not(.header-show) {
-    header.utk-header {
-      top: -82px;
-      box-shadow: none !important;
-    }
-
-    .page-header .page-header--float {
-      top: 0 !important;
-    }
-
-    .aside-subsite-menu.preload #utk-subsite-menu {
-      top: 94px !important;
-    }
-  }
-}
-
-/*
- * default behaviors at xs (mobile)
- */
-@include respond(xs) {
-  .page-header {
-    z-index: auto;
-
-    .page-body--aside {
-      z-index: 3 !important;
-    }
-
-    .page-body--container {
-      position: static;
-    }
-
-    .page-body--content {
-      z-index: 0;
-    }
-
-    .page-header--float {
-      height: 47px;
-      background-color: $smokey;
-      position: fixed;
-      top: 66px;
-      bottom: auto;
+      top: auto;
+      bottom: 0;
       z-index: 4;
       transition: $transition-all;
 
@@ -313,25 +258,9 @@ header.utk-header {
       }
 
       h2.page-header--title {
-        margin-left: 0;
         color: $white;
-        font-size: 18px !important;
+        font-size: $type-2 !important;
       }
-    }
-  }
-
-  .header-scroll-down:not(.header-show) {
-    header.utk-header {
-      top: -66px;
-      box-shadow: none !important;
-    }
-
-    .page-header .page-header--float {
-      top: 0 !important;
-    }
-
-    .aside-subsite-menu.preload #utk-subsite-menu {
-      top: 94px !important;
     }
   }
 }
