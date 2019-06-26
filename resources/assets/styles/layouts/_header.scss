@@ -248,10 +248,13 @@ header.utk-header {
       height: 47px;
       background-color: $smokey;
       position: fixed;
-      top: auto;
-      bottom: 0;
+      top: 82px;
       z-index: 4;
       transition: $transition-all;
+
+      @include respond(xs) {
+        top: 66px;
+      }
 
       .page-header--title-wrap {
         margin-left: 0;
@@ -259,11 +262,18 @@ header.utk-header {
       }
 
       h2.page-header--title {
-        margin-top: $golden-ratio-1;
-        padding-left: 65px;
+        margin-top: 12px;
         color: $white;
-        font-size: $type-2 !important;
+        font-size: $type-3 !important;
         line-height: 1.47em !important;
+        padding-left: 65px;
+        font-weight: 400;
+
+        @include respond(xs) {
+          margin-top: 13px;
+          font-size: $type-2 !important;
+          padding-left: 41px;
+        }
       }
     }
   }

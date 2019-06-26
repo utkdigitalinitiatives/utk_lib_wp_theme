@@ -177,20 +177,30 @@
   color: $white !important;
   cursor: pointer !important;
   background-color: $smokeyx !important;
-  position: fixed;
-  bottom: 11px;
-  left: 18px;
-  width: 47px;
-  height: 47px;
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 8px;
   display: none;
   text-align: center;
-  line-height: 47px;
-  font-size: $type-3 !important;
+  line-height: 30px;
+  font-size: $type-2 !important;
   border-radius: 47px;
   box-shadow: $box-shadow-float;
 
   @include respond(xs, sm) {
     display: block;
+  }
+
+  @include respond(sm) {
+    width: 47px;
+    height: 47px;
+    margin-bottom: 0;
+    border-radius: 0;
+    line-height: 47px;
+    font-size: $type-3 !important;
+    box-shadow: none;
   }
 }
 
