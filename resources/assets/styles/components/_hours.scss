@@ -138,6 +138,7 @@ section.utk-hours-section {
       padding: $golden-ratio-2 0;
       top: 0;
       right: 0;
+      margin-right: -1px;
 
       @include respond(xs) {
         width: 100%;
