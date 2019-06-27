@@ -109,8 +109,8 @@ section.utk-hours-section {
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat;
-      opacity: 0.47;
-      filter: blur($golden-ratio-0);
+      opacity: 1;
+      filter: blur($golden-ratio-1);
       margin: 15px 0 0 15px;
       left: -$golden-ratio-3;
       top: -$golden-ratio-3;
