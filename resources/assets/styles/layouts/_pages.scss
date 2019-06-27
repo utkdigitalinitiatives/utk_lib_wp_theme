@@ -1,4 +1,8 @@
 .page-body {
+  @include respond(xs, sm) {
+    padding-top: $golden-ratio-4;
+  }
+
   &--flex {
     display: flex;
     flex-direction: row;
@@ -27,8 +31,7 @@
     width: calc(100% - 332px);
     position: relative;
     z-index: 1;
-    margin-bottom: $golden-ratio-5;
-    padding-right: $golden-ratio-2;
+    margin-bottom: $golden-ratio-4;
 
     @include standard-body-link();
 
@@ -44,6 +47,21 @@
 
     &.page-body--content-full {
       width: 100%;
+    }
+
+    .page-body--hide-title {
+      .page-body--content--body {
+        > div:first-child,
+        > h2:first-child,
+        > h3:first-child,
+        > h4:first-child,
+        > h5:first-child,
+        > h6:first-child,
+        > ul:first-child,
+        > p:first-child {
+          margin-top: 0;
+        }
+      }
     }
   }
 
