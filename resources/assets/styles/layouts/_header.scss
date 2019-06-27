@@ -282,3 +282,15 @@ body.utk-search-open {
     filter: blur(11px);
   }
 }
+
+//@include respond(xs) {
+//  body.header-scroll-down:not(.header-show) {
+//    #utk-lib-header .utk-header .utk-header-main {
+//      top: -66px;
+//    }
+//
+//    .page-header .page-header--float {
+//      top: 6px !important;
+//    }
+//  }
+//}

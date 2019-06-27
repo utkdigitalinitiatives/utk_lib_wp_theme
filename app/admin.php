@@ -31,17 +31,25 @@ add_action('wp_head', function () {
         echo "
 <style type='text/css' media='screen'> 
     html {
-        margin-top: 129px !important;
+        margin-top: 114px !important;
         font-size: 18px
     }
     @media (min-width: 768px) and (max-width: 991px) {
         html {
-            margin-top: 82px !important;
+            margin-top: 114px !important;
+        }
+        
+        #wpadminbar {
+            position: fixed;
         }
     }
     @media (max-width:767px){ 
         html {
-            margin-top: 66px !important;
+            margin-top: 112px !important;
+        }
+        
+        #wpadminbar {
+            position: fixed;
         }
     }
 </style>
