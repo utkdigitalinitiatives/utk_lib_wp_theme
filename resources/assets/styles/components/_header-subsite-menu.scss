@@ -176,36 +176,27 @@
 .page-header--current-page-close {
   color: $white !important;
   cursor: pointer !important;
-  background-color: $smokeyx !important;
+  background-color: transparent !important;
   position: absolute;
   bottom: 0;
-  width: 30px;
-  height: 30px;
-  margin-bottom: 8px;
+  width: $golden-ratio-4;
+  height: $golden-ratio-4;
   display: none;
   text-align: center;
-  line-height: 30px;
-  font-size: $type-2 !important;
-  border-radius: 47px;
-  box-shadow: $box-shadow-float;
+  line-height: $golden-ratio-4;
+  font-size: 24px !important;
+  margin-left: -8.5px;
 
   @include respond(xs, sm) {
     display: block;
   }
 
   @include respond(sm) {
-    width: 47px;
-    height: 47px;
-    margin-bottom: 0;
-    border-radius: 0;
-    line-height: 47px;
-    font-size: $type-3 !important;
-    box-shadow: none;
+    margin-left: 0;
   }
 }
 
 .page-header--current-page-close {
-  background-color: $torch !important;
   display: none;
 }
 

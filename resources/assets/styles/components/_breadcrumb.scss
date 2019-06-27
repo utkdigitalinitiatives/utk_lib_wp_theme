@@ -1,8 +1,9 @@
 .page-body--content--breadcrumb {
   padding: $golden-ratio-1 0;
-  background-color: $gray-0;
-  font-size: 13px;
-  margin-bottom: $golden-ratio-4;
+  font-size: $type-1;
+  background-color: $white;
+  margin-bottom: $golden-ratio-3;
+  box-shadow: $box-shadow;
 
   @include muted-body-link();
 
