@@ -1,7 +1,7 @@
 section.utk-hours-section {
   background-color: $smokeyx;
 
-  @include filter-gradient-horizontal($smokeyx, 49.999999%, $switchgrass, 50%);
+  @include filter-gradient-horizontal($smokeyx, 49.999999%, $smokeyx, 50%);
 
   @include respond(xs) {
     background-color: $gray-0;
@@ -94,7 +94,7 @@ section.utk-hours-section {
     flex-grow: 1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 15px 100%);
     overflow: hidden;
-    background-color: $switchgrass;
+    background-color: $smokeyx;
 
     @include respond(xs) {
       clip-path: polygon(0 0, 100% 15px, 100% 100%, 0 100%) !important;
