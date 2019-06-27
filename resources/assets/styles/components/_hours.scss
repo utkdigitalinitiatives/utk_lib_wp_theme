@@ -5,11 +5,11 @@ section.utk-hours-section {
 
   @include respond(xs) {
     background-color: $smokeyx !important;
-    //position: fixed;
-    //width: 100%;
-    //height: 47px;
-    //bottom: 0;
-    //z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 47px;
+    bottom: 0;
+    z-index: 999;
   }
 }
 
