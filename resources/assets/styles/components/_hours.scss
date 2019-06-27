@@ -1,6 +1,8 @@
 section.utk-hours-section {
   background-color: $smokeyx;
 
+  @include filter-gradient-horizontal($smokeyx, 49.999999%, $switchgrass, 50%);
+
   @include respond(xs) {
     background-color: $gray-0;
   }
@@ -23,7 +25,7 @@ section.utk-hours-section {
     flex-shrink: 1;
     flex-grow: 0;
     flex-wrap: wrap;
-    padding: $golden-ratio-2 $golden-ratio-3 $golden-ratio-2 0;
+    padding: $golden-ratio-1 $golden-ratio-3 $golden-ratio-1 0;
 
     @include respond(xs) {
       flex-direction: row;
@@ -46,7 +48,7 @@ section.utk-hours-section {
     &--range {
       color: $white !important;
       display: block;
-      font-size: $type-4;
+      font-size: $type-3;
       font-weight: 700;
       text-transform: uppercase;
       position: relative;
@@ -58,9 +60,9 @@ section.utk-hours-section {
 
       &::before {
         display: inline-block;
-        width: 15px;
-        height: 15px;
-        margin-top: 5px;
+        width: 13px;
+        height: 13px;
+        margin-top: 7px;
         content: ' ';
         border-radius: 100%;
         background-color: $smokey;
@@ -92,6 +94,7 @@ section.utk-hours-section {
     flex-grow: 1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 15px 100%);
     overflow: hidden;
+    background-color: $switchgrass;
 
     @include respond(xs) {
       clip-path: polygon(0 0, 100% 15px, 100% 100%, 0 100%) !important;
@@ -106,8 +109,8 @@ section.utk-hours-section {
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat;
-      opacity: 1;
-      filter: blur($golden-ratio-3);
+      opacity: 0.47;
+      filter: blur($golden-ratio-0);
       margin: 15px 0 0 15px;
       left: -$golden-ratio-3;
       top: -$golden-ratio-3;
@@ -120,18 +123,16 @@ section.utk-hours-section {
 
     &--overlay {
       position: absolute;
-      display: flex;
+      //display: flex;
       align-items: flex-end;
       justify-content: flex-end;
       height: 100%;
       width: 61.8%;
       z-index: 1;
-      background-color: $smokeyx;
+      background-color: $switchgrass;
       padding: $golden-ratio-2 0;
       top: 0;
       right: 0;
-
-      @include filter-gradient-horizontal(rgba($smokeyx, 0), 0, rgba($smokeyx, 1), 61.8%);
 
       @include respond(xs) {
         width: 100%;
@@ -143,6 +144,7 @@ section.utk-hours-section {
       a:visited {
         color: $white;
         font-size: $type-2;
+        display: none;
 
         @include respond(xs) {
           color: $smokey !important;
