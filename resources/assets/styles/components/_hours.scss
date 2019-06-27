@@ -4,7 +4,12 @@ section.utk-hours-section {
   @include filter-gradient-horizontal($smokeyx, 49.999999%, $smokeyx, 50%);
 
   @include respond(xs) {
-    background-color: $gray-0;
+    background-color: $smokeyx !important;
+    //position: fixed;
+    //width: 100%;
+    //height: 47px;
+    //bottom: 0;
+    //z-index: 999;
   }
 }
 
@@ -29,7 +34,11 @@ section.utk-hours-section {
 
     @include respond(xs) {
       flex-direction: row;
-      padding: $golden-ratio-1 $golden-ratio-2 $golden-ratio-1 0;
+      padding: $golden-ratio-1 $golden-ratio-3 $golden-ratio-1 0;
+      background-color: $smokeyx;
+      clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 100%, 0 100%);
+      position: relative;
+      z-index: 1;
     }
 
     &--label {
@@ -41,7 +50,8 @@ section.utk-hours-section {
 
       @include respond(xs) {
         margin-right: $golden-ratio-2;
-        color: $smokey;
+        font-size: $type-1;
+        text-transform: none;
       }
     }
 
@@ -55,7 +65,6 @@ section.utk-hours-section {
 
       @include respond(xs) {
         font-size: $type-2;
-        color: $smokeyx !important;
       }
 
       &::before {
@@ -97,7 +106,8 @@ section.utk-hours-section {
     background-color: $smokeyx;
 
     @include respond(xs) {
-      clip-path: polygon(0 0, 100% 15px, 100% 100%, 0 100%) !important;
+      z-index: 0;
+      margin-left: -15px;
       background-color: transparent;
     }
 
@@ -114,11 +124,6 @@ section.utk-hours-section {
       margin: 15px 0 0 15px;
       left: -$golden-ratio-3;
       top: -$golden-ratio-3;
-
-      @include respond(xs) {
-        opacity: 0.47;
-        display: none;
-      }
     }
 
     &--overlay {
@@ -136,45 +141,7 @@ section.utk-hours-section {
 
       @include respond(xs) {
         width: 100%;
-        background: transparent !important;
-        padding: $golden-ratio-1 0;
-      }
-
-      a,
-      a:visited {
-        color: $white;
-        font-size: $type-2;
-        display: none;
-
-        @include respond(xs) {
-          color: $smokey !important;
-        }
-
-        strong {
-          display: block;
-        }
-
-        em {
-          font-size: $type-2;
-          font-style: normal;
-
-          @include respond(xs) {
-            font-size: $type-1 !important;
-          }
-        }
-
-        span {
-          color: $orange;
-        }
-      }
-
-      a:hover,
-      a:focus {
-        color: $white;
-
-        @include respond(xs) {
-          color: $smokey !important;
-        }
+        background-color: transparent !important;
       }
     }
   }

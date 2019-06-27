@@ -68,6 +68,10 @@
                         <span class="{{$hoursRangeClass}}">
                             @php echo $hoursRange @endphp
                         </span>
+                        {{--<a href="@php echo $hoursPage @endphp">--}}
+                            {{--<em>More Hours</em>--}}
+                            {{--<span class="icon-right-big"></span>--}}
+                        {{--</a>--}}
                     </a>
                     <div class="utk-hours--more" style="background-color: {{$setAccentColor}}">
                         @php
@@ -83,12 +87,7 @@
                                 background: -webkit-linear-gradient(left, {{$start}} {{$startPercent}}, {{$end}} {{$endPercent}});
                                 background: -o-linear-gradient(left, {{$start}} {{$startPercent}}, {{$end}} {{$endPercent}});
                                 background: -ms-linear-gradient(left, {{$start}} {{$startPercent}}, {{$end}} {{$endPercent}});
-                                background: linear-gradient(to right, {{$start}} {{$startPercent}}, {{$end}} {{$endPercent}});">
-                            <a href="@php echo $hoursPage @endphp">
-                                <em>More Hours</em>
-                                <span class="icon-right-big"></span>
-                            </a>
-                        </div>
+                                background: linear-gradient(to right, {{$start}} {{$startPercent}}, {{$end}} {{$endPercent}});"></div>
                         <div class="utk-hours--more--image"
                              style="background-image: url('@php print $hoursImageRender; @endphp')"></div>
                     </div>
