@@ -258,12 +258,12 @@ body.utk-search-open {
       }
 
       h2.page-header--title {
-        margin-top: 12px;
+        margin-top: 11px;
         color: $white;
         font-size: $type-3 !important;
         line-height: 1.47em !important;
         padding-left: 65px;
-        font-weight: 400;
+        font-weight: 700;
 
         @include respond(xs) {
           margin-top: 13px;

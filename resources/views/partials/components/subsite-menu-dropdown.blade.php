@@ -12,7 +12,7 @@ $defaults = [
 @endphp
 
 <a id="menu-subsite-dropdown-trigger" class="menu-subsite-trigger" href="#" role="menuitem">
-  Submenu <span class="icon-angle-down"></span>
+  <span class="icon-menu"></span>
 </a>
 <div id="menu-subsite-dropdown-wrap">
 @php wp_nav_menu($defaults); @endphp

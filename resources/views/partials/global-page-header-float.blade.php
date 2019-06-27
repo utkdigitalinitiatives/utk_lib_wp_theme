@@ -18,6 +18,9 @@
 
 <div id="page-header-trigger" class="page-header--float">
   <div class="container">
+    <div id="page-header-subsite-menu">
+      @include('partials.components.subsite-menu-dropdown')
+    </div>
     @if ($long_title != '')
       <a href="{{$siteURL}}"
          role="heading"
@@ -40,9 +43,6 @@
         </h2>
       </a>
     @endif
-    <div id="page-header-subsite-menu">
-      @include('partials.components.subsite-menu-dropdown')
-    </div>
     <div class="page-header--current-page">
         @php echo $post->post_title; @endphp
     </div>
