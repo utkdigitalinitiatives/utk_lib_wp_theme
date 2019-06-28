@@ -21,6 +21,10 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_enqueue_style('ut/main.css', asset_path('styles/main.css'), false, null);
 
+    if (UT_LIBRARIES_ENTITY === 'volopedia') :
+        wp_enqueue_style('ut/volopedia.css', asset_path('styles/volopedia.css'), false, null);
+    endif;
+
     wp_enqueue_style('ut/header.css', asset_path('styles/header.css'), false, null);
     wp_enqueue_script('ut/header.js', asset_path('scripts/header.js'), [], null, true);
 

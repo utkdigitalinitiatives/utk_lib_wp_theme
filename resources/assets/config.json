@@ -7,6 +7,9 @@
     "admin": [
       "./styles/admin.scss"
     ],
+    "volopedia": [
+      "./styles/volopedia.scss"
+    ],
     "header": [
       "./react/header/header.js",
       "./react/header/header.css"

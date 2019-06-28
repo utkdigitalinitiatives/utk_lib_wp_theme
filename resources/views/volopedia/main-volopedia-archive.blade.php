@@ -1,6 +1,6 @@
 @include('partials.components.breadcrumb')
 @php ecms_alpha_menu() @endphp
-<div class="container page-body--container">x
+<div class="container page-body--container">
     <div class="page-body--flex">
         <main class="page-body--content">
             <div class="facetwp-template">
