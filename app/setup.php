@@ -11,13 +11,18 @@ use Roots\Sage\Template\BladeProvider;
 /**
  * Theme assets
  */
+
 add_action('wp_enqueue_scripts', function () {
+
+    $miniPanelSites = [
+        24, // agvet
+        25  // music
+    ];
+
     wp_enqueue_script('wp/polyfill', '/wp-includes/js/dist/vendor/wp-polyfill.min.js', [], null, true);
     wp_enqueue_script('wp/react', '/wp-includes/js/dist/vendor/react.min.js', [], null, true);
     wp_enqueue_script('wp/reactdom', '/wp-includes/js/dist/vendor/react-dom.min.js', [], null, true);
     wp_enqueue_script('wp/lodash', '/wp-includes/js/dist/vendor/lodash.min.js', [], null, true);
-
-    wp_enqueue_script('ut/header.js', asset_path('scripts/header.js'), [], null, true);
 
     wp_enqueue_style('ut/main.css', asset_path('styles/main.css'), false, null);
 
@@ -42,6 +47,11 @@ add_action('wp_enqueue_scripts', function () {
             null,
             true
         );
+    endif;
+
+    if (is_front_page() && in_array(get_current_blog_id(), $miniPanelSites)) :
+        wp_enqueue_style('ut/panel.css', asset_path('styles/panel.css'), false, null);
+        wp_enqueue_script('ut/panel.js', asset_path('scripts/panel.js'), [], null, true);
     endif;
 
     wp_enqueue_script('ut/main.js', asset_path('scripts/main.js'), [], null, true);
