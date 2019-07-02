@@ -6,7 +6,7 @@
                 <li class="active"><a href="/search">Search Website</a></li>
                 <li><a href="https://libguides.utk.edu/az.php?q=">Articles &amp; Databases</a></li>
                 <li><a href="https://digital.lib.utk.edu/collections/islandora/search">Digital Collections</a></li>
-                <li><a href="https://dlc.lib.utk.edu/spc/search">SCOUT</a></li>
+                <li><a href="https://dlc.lib.utk.edu/spc/search">Special Collections</a></li>
             </ul>
         </div>
     </div>
