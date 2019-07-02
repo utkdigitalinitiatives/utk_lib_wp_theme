@@ -1322,6 +1322,8 @@ body .utk-research-tools .ui.dropdown .menu > .item {
   flex-grow: 1;
   display: flex;
   justify-content: space-between; }
+  #utk-panel-mini .utk-subject-guide .ui.secondary.menu a.item:last-child {
+    margin-right: 0; }
   #utk-panel-mini .utk-subject-guide .ui.secondary.menu a.item .ui.label {
     color: #58595b; }
 
