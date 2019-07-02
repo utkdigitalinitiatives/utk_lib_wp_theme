@@ -49,7 +49,7 @@ add_action('wp_enqueue_scripts', function () {
         );
     endif;
 
-    if (is_front_page() && in_array(get_current_blog_id(), $miniPanelSites)) :
+    if ((is_front_page() && in_array(get_current_blog_id(), $miniPanelSites)) || is_404()) :
         wp_enqueue_style('ut/panel.css', asset_path('styles/panel.css'), false, null);
         wp_enqueue_script('ut/panel.js', asset_path('scripts/panel.js'), [], null, true);
     endif;

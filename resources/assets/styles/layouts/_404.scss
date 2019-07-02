@@ -1,0 +1,36 @@
+.utk-404 {
+  display: flex;
+  padding: $golden-ratio-4 0 0;
+  flex-direction: row;
+
+  @include respond(xs, sm) {
+    flex-direction: column;
+  }
+
+  &--message {
+    width: $gr-short;
+    padding-right: $golden-ratio-5;
+    padding-bottom: $golden-ratio-4;
+
+    @include respond(xs, sm) {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  &--panel {
+    width: $gr-long;
+
+    #utk-panel-mini {
+      margin-bottom: 0;
+    }
+
+    @include respond(xs, sm) {
+      width: 100%;
+    }
+  }
+}
