@@ -2,8 +2,7 @@
     $allowedSites = [
         24 => [
             ['id' => 39783, 'title' => 'Agriculture'],
-            ['id' => 39811, 'title' => 'Veterinary Medicine'],
-            ['id' => 39812, 'title' => 'Music']
+            ['id' => 39811, 'title' => 'Veterinary Medicine']
         ],
         25 => [
             ['id' => 39812, 'title' => 'Music']
