@@ -19,6 +19,7 @@
   &--float {
     z-index: 4;
     position: absolute;
+    top: auto;
     bottom: 0;
     background-color: transparent;
     margin-bottom: $golden-ratio-2;

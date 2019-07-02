@@ -17,6 +17,14 @@ body.admin-bar {
       margin-top: 46px;
     }
   }
+
+  &.header-scroll-down .page-header .page-header--float {
+    top: 114px !important;
+
+    @include respond(xs) {
+      top: 112px !important;
+    }
+  }
 }
 
 #placeholder {
