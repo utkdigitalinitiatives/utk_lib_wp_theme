@@ -18,9 +18,8 @@
 <div class="container page-body--container">
     <div class="page-body--flex">
         <main class="page-body--content">
-            @include('partials.components.google-custom-search')
-            @include('partials.components.panel-mini')
             @include('partials.content-'.get_post_type())
+            @include('partials.components.google-custom-search')
         </main>
     </div>
     <div id="detach-sticky-bottom"></div>
