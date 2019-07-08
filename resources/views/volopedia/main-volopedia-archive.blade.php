@@ -1,4 +1,3 @@
-@include('partials.components.breadcrumb')
 @include('volopedia.partials.glossary-nav')
 <div class="container page-body--container">
     <div class="page-body--flex">

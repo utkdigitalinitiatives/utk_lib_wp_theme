@@ -1,1 +1,13 @@
-//
+body {
+  .page-body--content {
+    .ecms-encyclopedia {
+      flex-direction: column;
+
+      header {
+        .entry-title {
+          display: block;
+        }
+      }
+    }
+  }
+}

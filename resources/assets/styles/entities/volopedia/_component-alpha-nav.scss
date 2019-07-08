@@ -4,8 +4,10 @@ body {
   }
 
   .utk-volopedia--glossary-nav {
-    background-color: $gray-1;
+    background-color: $gray-0;
     margin-bottom: $golden-ratio-4;
+    border-top: $golden-ratio-0 solid $white;
+    box-shadow: inset $box-shadow;
 
     #ecms-quick-browse.ecms-qb {
       border-bottom: 0;
@@ -21,20 +23,52 @@ body {
         justify-content: space-between;
 
         li {
-          font-size: $type-2;
-          font-weight: 700;
+          font-size: $type-4;
+          font-weight: 400;
           flex-grow: 1;
 
           a,
           a:visited {
             display: flex;
-            height: $golden-ratio-4;
+            height: $golden-ratio-5;
             padding: 0;
             text-align: center;
             align-content: center;
             align-items: center;
             justify-content: center;
+            color: $globe;
+            position: relative;
+
+            &::after {
+              position: absolute;
+              content: ' ';
+              width: 0;
+              height: 6px;
+              left: 0;
+              top: -6px;
+              background-color: $rock;
+            }
+
+            &.active-item {
+              color: $smokeyx !important;
+              font-weight: 700;
+
+              &::after {
+                width: 100%;
+                background-color: $orange;
+              }
+            }
+          }
+
+          a:hover,
+          a:focus {
+            background-color: transparent;
             color: $smokeyx !important;
+
+            &::after {
+              width: 100%;
+              background-color: $globe;
+            }
           }
         }
       }
