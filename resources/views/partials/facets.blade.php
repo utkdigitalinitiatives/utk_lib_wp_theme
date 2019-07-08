@@ -12,17 +12,17 @@ Namespace App\Controllers;
             @while ( have_rows('site_facetwp_site_facetwp_facets', 'options') )
 
                 @php
-
                     the_row();
                     $facet = get_sub_field('site_facetwp_select', 'options');
                     $label = get_sub_field('site_facetwp_label', 'options');
-
                 @endphp
 
-                <div class="page-body--aside--facets--item">
-                    <h4>@php echo $label; @endphp</h4>
-                    @php echo facetwp_display('facet', $facet); @endphp
-                </div>
+                @if ($label !== 'Volopedia A-Z')
+                    <div class="page-body--aside--facets--item">
+                        <h4>@php echo $label; @endphp</h4>
+                        @php echo facetwp_display('facet', $facet); @endphp
+                    </div>
+                @endif
 
             @endwhile
         @endif

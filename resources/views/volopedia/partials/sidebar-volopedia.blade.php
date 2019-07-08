@@ -1,5 +1,5 @@
 <div class="aside-subsite-custom-widgets">
-    @todo: add ECMS widgets
+    @include('partials.facets')
     @php
         dynamic_sidebar('sidebar-primary')
     @endphp

@@ -1,6 +1,7 @@
 body {
   .page-body--content {
-    .ecms-encyclopedia {
+    article.ecms-encyclopedia,
+    article.ecms-grid {
       flex-direction: column;
 
       header {
