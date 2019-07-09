@@ -1206,14 +1206,14 @@ body .utk-research-tools .ui.dropdown .menu > .item {
         border-radius: 15px;
         line-height: 15px;
         text-align: center;
-        font-size: 9px;
+        font-size: 15px;
         font-family: 'fontello';
-        background-color: #ff8200;
-        color: #fff;
-        box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
+        background-color: transparent;
+        color: #58595b;
         margin-left: 6px;
-        position: relative;
-        margin-bottom: 7px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
         text-decoration: none !important; }
       @media (max-width: 767px) {
         .utk-subject-guide--databases ul li, .utk-subject-guide--guides ul li {
@@ -1268,6 +1268,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
           margin-top: 0 !important;
           align-content: flex-end;
           align-items: flex-end;
+          padding-right: 15px;
           /* Mobile Devices for Mice */
           /* Landscape phones and down */
           /* Landscape phones and down */
@@ -1278,7 +1279,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
             .utk-subject-guide--databases ul li > a > h5,
             .utk-subject-guide--databases ul li > a:visited > h5, .utk-subject-guide--guides ul li > a > h5,
             .utk-subject-guide--guides ul li > a:visited > h5 {
-              display: block;
+              display: flex;
               line-height: 1.47em;
               white-space: normal; } }
       .utk-subject-guide--databases ul li > div, .utk-subject-guide--guides ul li > div {
