@@ -85,7 +85,7 @@
     "file-loader": "^1.1.6",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "imagemin-mozjpeg": "~7.0.0",
-    "imagemin-webpack-plugin": "^2.3.0",
+    "imagemin-webpack-plugin": "^2.4.2",
     "import-glob": "~1.5",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.2",
