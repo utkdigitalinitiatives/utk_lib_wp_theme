@@ -154,7 +154,12 @@ body .ui.labeled.icon.buttons > .button > .icon {
   background-color: rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: -1px 0 0 0 transparent inset;
   box-shadow: -1px 0 0 0 transparent inset;
-  line-height: 45px; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  body .ui.labeled.icon.button > .icon::before,
+  body .ui.labeled.icon.buttons > .button > .icon::before {
+    margin-top: -3px; }
 
 body .utk-research-tools .ui.dropdown .menu {
   cursor: auto;
@@ -633,7 +638,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
         transition: all 290ms ease-in-out;
         text-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
         margin-top: 0;
-        color: #e0e0e0 !important;
+        color: #fff !important;
         margin-right: 29px;
         /* Mobile Devices for Mice */
         /* Landscape phones and down */
@@ -807,28 +812,66 @@ body .utk-research-tools .ui.dropdown .menu > .item {
 .utk-panel-focus-research-tools .utk-search-tabs {
   opacity: 0 !important; }
 
-#utk-panel-mini .utk-search .utk-search-tabs .ui.action.input {
-  box-shadow: none; }
-
-#utk-panel-mini .utk-search form {
-  border-radius: 47px;
-  box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15); }
-
-#utk-panel-mini .utk-search .ui.input > input {
-  border: 1px solid #e0e0e0;
-  box-shadow: none;
-  background-color: #fff; }
-
-#utk-panel-mini .utk-search .utk-search-tabs .ui.action.input .ui.selection.dropdown {
-  background-color: #f6f6f6;
-  border: 1px solid #e0e0e0;
-  border-left: 0; }
-
-#utk-panel-mini .utk-search .utk-search-tabs .ui.action.input button.ui.button {
-  background-color: #f6f6f6;
-  border: 1px solid #e0e0e0;
-  border-left: 0;
-  color: #333; }
+#utk-panel-mini {
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    #utk-panel-mini {
+      margin-top: 18px !important; } }
+  #utk-panel-mini .utk-search .utk-search-tabs {
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      #utk-panel-mini .utk-search .utk-search-tabs {
+        margin-bottom: 0;
+        padding: 0 18px !important; } }
+    #utk-panel-mini .utk-search .utk-search-tabs .ui.action.input {
+      box-shadow: none; }
+      #utk-panel-mini .utk-search .utk-search-tabs .ui.action.input .ui.selection.dropdown {
+        /* Mobile Devices for Mice */
+        /* Landscape phones and down */
+        /* Landscape phones and down */
+        /* Landscape phone to portrait tablet */
+        /* Portrait tablet to landscape and desktop */
+        /* desktop and large desktop */ }
+        @media (max-width: 767px) {
+          #utk-panel-mini .utk-search .utk-search-tabs .ui.action.input .ui.selection.dropdown > .text {
+            color: #58595b !important; } }
+  #utk-panel-mini .utk-search form {
+    border-radius: 47px;
+    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      #utk-panel-mini .utk-search form {
+        box-shadow: none;
+        display: flex;
+        flex-direction: column; } }
+  #utk-panel-mini .utk-search .ui.input > input {
+    border: 1px solid #e0e0e0;
+    box-shadow: none;
+    background-color: #fff; }
+  #utk-panel-mini .utk-search .utk-search-tabs .ui.action.input .ui.selection.dropdown {
+    background-color: #f6f6f6;
+    border: 1px solid #e0e0e0;
+    border-left: 0; }
+  #utk-panel-mini .utk-search .utk-search-tabs .ui.action.input button.ui.button {
+    background-color: #f6f6f6;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+    color: #333; }
 
 .utk-research-tools {
   position: relative;
@@ -942,14 +985,35 @@ body .utk-research-tools .ui.dropdown .menu > .item {
 
 .utk-research-tools-mini--options {
   font-size: 18px;
-  display: flex; }
+  display: flex;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .utk-research-tools-mini--options {
+      font-size: 15px;
+      flex-wrap: wrap;
+      padding: 0 18px; } }
   .utk-research-tools-mini--options a,
   .utk-research-tools-mini--options a:visited {
     margin-right: 18px;
     padding-right: 18px;
     color: #006c93 !important;
     border-right: 2px solid #e0e0e0;
-    margin-bottom: 18px; }
+    margin-bottom: 18px;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-research-tools-mini--options a,
+      .utk-research-tools-mini--options a:visited {
+        margin-bottom: 0; } }
     .utk-research-tools-mini--options a:last-child,
     .utk-research-tools-mini--options a:visited:last-child {
       margin-right: 0;
@@ -1019,7 +1083,6 @@ body .utk-research-tools .ui.dropdown .menu > .item {
   transition: all 290ms ease-in-out;
   padding: 0;
   width: 100%;
-  padding-right: 15px;
   /* Mobile Devices for Mice */
   /* Landscape phones and down */
   /* Landscape phones and down */
@@ -1331,6 +1394,19 @@ body .utk-research-tools .ui.dropdown .menu > .item {
   height: auto;
   padding: 0 0 47px; }
 
+#utk-panel-mini .utk-subject-guide {
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    #utk-panel-mini .utk-subject-guide {
+      background-color: transparent;
+      margin-left: 0;
+      width: 100%; } }
+
 #utk-panel-mini .utk-subject-guide--header {
   margin-bottom: 0; }
 
@@ -1343,7 +1419,16 @@ body .utk-research-tools .ui.dropdown .menu > .item {
   #utk-panel-mini .utk-subject-guide--assets .utk-subject-guide--asset--header {
     margin-bottom: 0; }
     #utk-panel-mini .utk-subject-guide--assets .utk-subject-guide--asset--header h5 {
-      color: #58595b; }
+      color: #58595b;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        #utk-panel-mini .utk-subject-guide--assets .utk-subject-guide--asset--header h5 {
+          margin-top: 0; } }
     #utk-panel-mini .utk-subject-guide--assets .utk-subject-guide--asset--header a,
     #utk-panel-mini .utk-subject-guide--assets .utk-subject-guide--asset--header a:visited {
       color: #006c93 !important; }
@@ -1754,9 +1839,27 @@ body {
         width: 100% !important;
         opacity: 1 !important;
         margin-right: 0 !important;
-        margin-top: 47px; }
+        margin-top: 47px;
+        /* Mobile Devices for Mice */
+        /* Landscape phones and down */
+        /* Landscape phones and down */
+        /* Landscape phone to portrait tablet */
+        /* Portrait tablet to landscape and desktop */
+        /* desktop and large desktop */ }
+        @media (max-width: 767px) {
+          #utk-panel-mini .utk-panel-wrap.utk-panel-mini-wrap .utk-panel > div {
+            margin-top: 29px !important; } }
         #utk-panel-mini .utk-panel-wrap.utk-panel-mini-wrap .utk-panel > div:first-child {
-          margin-top: 0; }
+          margin-top: 0;
+          /* Mobile Devices for Mice */
+          /* Landscape phones and down */
+          /* Landscape phones and down */
+          /* Landscape phone to portrait tablet */
+          /* Portrait tablet to landscape and desktop */
+          /* desktop and large desktop */ }
+          @media (max-width: 767px) {
+            #utk-panel-mini .utk-panel-wrap.utk-panel-mini-wrap .utk-panel > div:first-child {
+              margin-top: 0 !important; } }
       #utk-panel-mini .utk-panel-wrap.utk-panel-mini-wrap .utk-panel .utk-panel--research-tools .utk-research-tools {
         flex-direction: column !important; }
     #utk-panel-mini .utk-panel-wrap.utk-panel-mini-wrap .utk-search-tabs {
