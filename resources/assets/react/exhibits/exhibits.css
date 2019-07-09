@@ -67,11 +67,12 @@
     padding: 47px;
     width: 100%; }
     .utk-exhibits--pane--meta h3 {
-      font-size: 29px;
+      font-size: 23px;
       font-weight: 700;
       line-height: 1.11em;
       margin-bottom: 18px;
-      margin-top: 0; }
+      margin-top: 0;
+      color: #fff !important; }
       .utk-exhibits--pane--meta h3:before {
         content: ' ';
         display: block;
@@ -108,16 +109,17 @@
   justify-content: flex-end; }
   .ui.vertical.menu:before {
     content: 'Exhibits';
-    font-size: 23px;
+    font-size: 29px;
     color: #fff;
     margin-bottom: 11px;
-    font-weight: 400; }
+    font-weight: 700; }
   .ui.vertical.menu > .item {
     font-weight: 400;
     color: #fff;
     font-size: 15px;
     position: relative;
-    margin-bottom: 11px; }
+    margin-bottom: 11px;
+    line-height: 1.29em; }
     .ui.vertical.menu > .item:hover {
       text-decoration: underline; }
     .ui.vertical.menu > .item.active {
