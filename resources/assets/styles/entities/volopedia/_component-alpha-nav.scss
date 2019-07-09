@@ -4,10 +4,8 @@ body {
   }
 
   .utk-volopedia--glossary-nav {
-    background-color: $gray-0;
     margin-bottom: $golden-ratio-4;
-    border-top: $golden-ratio-0 solid $white;
-    box-shadow: inset $box-shadow;
+    border-bottom: $golden-ratio-1 solid $gray-1;
 
     #ecms-quick-browse.ecms-qb {
       border-bottom: 0;
@@ -23,7 +21,7 @@ body {
         justify-content: space-between;
 
         li {
-          font-size: $type-4;
+          font-size: $type-3;
           font-weight: 400;
           flex-grow: 1;
 
@@ -36,21 +34,21 @@ body {
             align-content: center;
             align-items: center;
             justify-content: center;
-            color: $globe;
+            color: $gray-1;
             position: relative;
 
             &::after {
               position: absolute;
               content: ' ';
               width: 0;
-              height: 6px;
+              height: 11px;
               left: 0;
-              top: -6px;
+              bottom: -11px;
               background-color: $rock;
             }
 
             &.active-item {
-              color: $smokeyx !important;
+              color: $white !important;
               font-weight: 700;
 
               &::after {
@@ -63,7 +61,7 @@ body {
           a:hover,
           a:focus {
             background-color: transparent;
-            color: $smokeyx !important;
+            color: $white !important;
 
             &::after {
               width: 100%;

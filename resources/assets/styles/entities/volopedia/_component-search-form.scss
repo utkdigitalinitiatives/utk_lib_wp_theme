@@ -1,0 +1,34 @@
+.utk-volopedia--search--form {
+  display: flex;
+  margin: 0;
+  padding-top: 58px;
+
+  &--value {
+    flex-grow: 1;
+    height: $golden-ratio-4;
+    font-family: $sans;
+    font-size: $type-2;
+    border-radius: $golden-ratio-4;
+    border: none;
+    outline: none;
+    padding: 0 $golden-ratio-2 !important;
+    box-shadow: $box-shadow;
+  }
+
+  &--submit {
+    background-color: $globe;
+    border: none;
+    color: $white;
+    height: $golden-ratio-4;
+    padding: 0 $golden-ratio-2 !important;
+    margin-left: $golden-ratio-2;
+    font-size: $type-2;
+    font-family: $sans;
+    border-radius: $golden-ratio-4;
+    display: none;
+  }
+
+  &--facetwp {
+    display: none !important;
+  }
+}

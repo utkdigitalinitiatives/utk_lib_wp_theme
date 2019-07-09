@@ -1,13 +1,17 @@
-@include('volopedia.partials.glossary-nav')
 <div class="container page-body--container">
     <div class="page-body--flex">
         <main class="page-body--content">
             <div class="facetwp-template">
                 @if (!have_posts())
+                    @include('volopedia.partials.archive-meta')
                     <div class="alert alert-warning">
-                        {{ __('Sorry, no results were found.', 'sage') }}
+                        {{ __('No entries are available for this volume.', 'sage') }}
                     </div>
                 @else
+                    @include('volopedia.partials.archive-meta')
+                    <div class="facetwp-pager">
+                        @php echo facetwp_display('pager') @endphp
+                    </div>
                     @while (have_posts()) @php the_post() @endphp
                         @include('volopedia.partials.content')
                     @endwhile

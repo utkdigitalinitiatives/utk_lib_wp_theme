@@ -17,12 +17,10 @@ Namespace App\Controllers;
                     $label = get_sub_field('site_facetwp_label', 'options');
                 @endphp
 
-                @if ($label !== 'Volopedia A-Z')
-                    <div class="page-body--aside--facets--item">
-                        <h4>@php echo $label; @endphp</h4>
-                        @php echo facetwp_display('facet', $facet); @endphp
-                    </div>
-                @endif
+                <div class="page-body--aside--facets--item page-body--aside--facets--item-@php print strtolower(sanitize_html_class($facet)); @endphp">
+                    <h4>@php echo $label; @endphp</h4>
+                    @php echo facetwp_display('facet', $facet); @endphp
+                </div>
 
             @endwhile
         @endif
