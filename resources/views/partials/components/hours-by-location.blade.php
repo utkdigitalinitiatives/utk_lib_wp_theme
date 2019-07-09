@@ -36,11 +36,9 @@
             $location = $response->locations->$location;
             $hoursRangeClass = 'utk-hours--today--range';
 
-            if ($location->copen) {
+            if ($location->open) {
                 $hoursRangeClass .= ' utk-hours--open';
             } else {
-                $setAccentColor = '#a7a9ac';
-                $end = '#a7a9ac';
                 $hoursRangeClass .= ' utk-hours--closed';
             }
 
