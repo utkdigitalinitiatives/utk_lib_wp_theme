@@ -75,6 +75,9 @@ a.btn:visited {
       line-height: $golden-ratio-4;
       background-color: $orange;
       color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     &.btn-default:not(.btn-inverse) {
