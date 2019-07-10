@@ -1,0 +1,15 @@
+.edit-post-sidebar {
+  .editor-panel-color-settings {
+    .editor-color-palette-control {
+      display: none;
+
+      &:first-of-type {
+        display: block;
+      }
+    }
+
+    .editor-contrast-checker {
+      display: none;
+    }
+  }
+}

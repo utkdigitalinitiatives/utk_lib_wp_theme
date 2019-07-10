@@ -25,10 +25,12 @@
  * Admin
  */
 @import "wordpress/editor";
+@import "wordpress/block-settings";
 
 /**
  * Gutenberg
  */
+@import "gutenburg/wp-block-button";
 @import "gutenburg/acf-wysiwig";
 @import "gutenburg/block-accordion";
 @import "gutenburg/block-card";
