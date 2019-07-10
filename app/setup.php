@@ -94,16 +94,6 @@ add_action('admin_enqueue_scripts', function () {
     wp_enqueue_script('ut/accordion.js', asset_path('scripts/accordion.js'), [], null, true);
 });
 
-add_filter('upload_dir', function ($upload) {
-
-    if (is_multisite()) {
-        $upload['baseurl'] = network_site_url() . 'wp-content/blogs.dir/' . get_current_blog_id() . '/files';
-        $upload['url'] = $upload['baseurl'] . $upload['subdir'];
-    }
-
-    return $upload;
-}, 100);
-
 /**
  * Image Sizes
  */
