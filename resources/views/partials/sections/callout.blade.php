@@ -1,8 +1,11 @@
 @php
   $fields = UTKLibrary\Library\Models\Callout::render_callout();
   $current = get_current_blog_id();
+  $hide_callout = [
+    30
+  ];
 @endphp
-@if($fields)
+@if($fields && !in_array($current, $hide_callout))
   @php
     $type = $fields['fields']['callout_type'];
   @endphp
