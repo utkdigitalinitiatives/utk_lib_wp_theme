@@ -49,6 +49,10 @@
     width: $gr-short;
     padding: $golden-ratio-2 $golden-ratio-3;
 
+    @include respond(xs) {
+      padding: $golden-ratio-2;
+    }
+
     p,
     ul,
     ol,
@@ -145,6 +149,10 @@
   border-top-width: $golden-ratio-1;
   border-top-style: solid;
 
+  @include respond(xs) {
+    border: none !important;
+  }
+
   .utk-card--content {
     width: 100%;
 
@@ -159,6 +167,10 @@
     p {
       margin-top: 0;
       font-size: $type-2;
+
+      @include respond(xs) {
+        font-size: $type-1;
+      }
     }
   }
 
@@ -206,9 +218,13 @@ body:not(.wp-admin) {
       max-width: 100%;
 
       @include respond(xs) {
-        width: 100% !important;
+        width: calc(100% + 36px) !important;
+        max-width: calc(100% + 36px) !important;
         float: none !important;
-        margin: 0 0 $golden-ratio-2 !important;
+        margin-top: $golden-ratio-2 !important;
+        margin-right: 0 !important;
+        margin-bottom: $golden-ratio-3 !important;
+        margin-left: -$golden-ratio-2 !important;
       }
     }
 
