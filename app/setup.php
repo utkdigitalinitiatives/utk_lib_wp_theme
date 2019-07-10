@@ -59,7 +59,6 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('ut/social-slider.css', asset_path('styles/social-slider.css'), false, null);
     wp_enqueue_script('ut/social-slider.js', asset_path('scripts/social-slider.js'), [], null, true);
 
-
     if (get_current_blog_id() === 30) {
         wp_enqueue_style('ut/exhibits.css', asset_path('styles/exhibits.css'), false, null);
         wp_enqueue_script('ut/exhibits.js', asset_path('scripts/exhibits.js'), [], null, true);

@@ -1,0 +1,82 @@
+.utk-hours-block {
+  margin: $golden-ratio-3 0;
+  font-size: $type-2;
+
+  table {
+    border-collapse: collapse;
+
+    thead {
+      background-color: $gray-0;
+      border-bottom: 1px solid $gray-1;
+
+      th {
+        font-size: $type-0;
+        padding: $golden-ratio-1;
+        text-align: left;
+        vertical-align: bottom;
+        text-transform: uppercase;
+        color: $smokeyx;
+
+        span {
+          color: $smokey;
+          font-size: $type-1;
+          display: block;
+          margin-bottom: $golden-ratio-0;
+          text-transform: none;
+        }
+
+        &:first-child {
+          display: flex;
+          justify-content: flex-end;
+          height: 100% !important;
+
+          .btn {
+            flex-grow: 1;
+            width: $golden-ratio-4 !important;
+            height: $golden-ratio-4 !important;
+            cursor: pointer !important;
+            font-size: $type-4 !important;
+            display: flex !important;
+            padding: 0 !important;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background-color: $white;
+            color: $globe;
+            margin-right: $golden-ratio-1;
+            box-shadow: $box-shadow;
+            border-radius: $golden-ratio-1;
+            transition: $transition-all-fast;
+
+            &:hover,
+            &:focus {
+              box-shadow: inset $box-shadow;
+              background-color: $gray-1;
+              color: $smokey;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    tr {
+      td {
+        font-size: $type-1;
+        padding: $golden-ratio-1;
+        text-align: left;
+        vertical-align: top;
+        line-height: 1.29em;
+        color: $smokeyx;
+        border-top: 1px solid $gray-1;
+
+        a {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
