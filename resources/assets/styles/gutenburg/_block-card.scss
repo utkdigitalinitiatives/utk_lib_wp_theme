@@ -204,6 +204,12 @@ body:not(.wp-admin) {
     &[class*="utk-card-align-"] {
       width: $gr-short;
       max-width: 100%;
+
+      @include respond(xs) {
+        width: 100% !important;
+        float: none !important;
+        margin: 0 0 $golden-ratio-2 !important;
+      }
     }
 
     &-align-right {
