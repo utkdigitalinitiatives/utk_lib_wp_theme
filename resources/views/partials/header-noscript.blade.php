@@ -42,18 +42,6 @@
                     </div>
                 </div>
             </div>
-            <div class="utk-header-super">
-                <div class="container">
-                    <ul class="utk-header-super--menu">
-                        <li><a href="https://www.lib.utk.edu/hours/" tabindex="2">Hours</a></li>
-                        <li><a href="https://libguides.utk.edu/databases" tabindex="2">Articles &amp;
-                                Databases</a></li>
-                        <li><a href="https://www.lib.utk.edu/about/" tabindex="2">A-Z</a></li>
-                        <li><a href="https://www.lib.utk.edu/about/" tabindex="2">About</a></li>
-                        <li><a href="https://www.lib.utk.edu/about/" tabindex="2">Give</a></li>
-                    </ul>
-                </div>
-            </div>
         </header>
     </div>
 </noscript>
