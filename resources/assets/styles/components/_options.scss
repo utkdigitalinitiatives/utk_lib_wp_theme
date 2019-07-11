@@ -11,16 +11,45 @@
 
   @include respond(xs, sm) {
     position: fixed;
-    top: auto !important;
-    right: $golden-ratio-2 !important;
-    bottom: $golden-ratio-2 !important;
+    top: 113px !important;
+    left: 0 !important;
+    width: 100% !important;
     display: none;
+    background-color: $smokey;
+
+    .utk-libchat button {
+      border-radius: 0 !important;
+      width: 100% !important;
+      text-align: left !important;
+      font-size: $type-2 !important;
+      padding-left: 58px !important;
+      color: $smokey !important;
+
+      &.libchat_online::after,
+      &.libchat_offline::after {
+        clip: unset !important;
+        clip-path: unset !important;
+        text-align: center !important;
+        border-radius: 0 !important;
+        right: auto !important;
+        left: 18px !important;
+        width: 30px !important;
+        background-color: $white !important;
+        color: $rock !important;
+      }
+
+      &.libchat_online::after {
+        color: $rock !important;
+      }
+
+      &.libchat_offline::after {
+        color: $rock !important;
+      }
+    }
   }
 
   @include respond(sm) {
-    top: auto !important;
-    right: $golden-ratio-3 !important;
-    bottom: $golden-ratio-3 !important;
+    top: 129px !important;
   }
 }
 
