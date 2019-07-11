@@ -1241,8 +1241,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
     .utk-subject-guide--assets a:focus {
       color: #ff8200; }
   .utk-subject-guide--databases.utk-show-all, .utk-subject-guide--guides.utk-show-all {
-    display: none !important;
-    margin-top: 11px; }
+    display: none !important; }
     .utk-subject-guide--databases.utk-show-all.utk-show-all-enabled, .utk-subject-guide--guides.utk-show-all.utk-show-all-enabled {
       display: block !important; }
   .utk-subject-guide--databases ul, .utk-subject-guide--guides ul {
