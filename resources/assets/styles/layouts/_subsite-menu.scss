@@ -42,6 +42,15 @@
           min-width: 0;
         }
 
+        li .subsite-menu--item--collapse span,
+        li .subsite-menu--item--expand span {
+          margin-right: $golden-ratio-2;
+
+          @include respond(sm) {
+            margin-right: $golden-ratio-3;
+          }
+        }
+
         li a .subsite-menu--item--label,
         li a:visited .subsite-menu--item--label {
           padding: 14px 29px 13px;
@@ -147,38 +156,40 @@
   }
 }
 
-body.subsite-menu-mobile-expand {
-  overflow: hidden;
+@include respond(xs, sm) {
+  body.subsite-menu-mobile-expand {
+    overflow: hidden;
 
-  .utk-hours-section {
-    display: none;
-  }
-
-  .page-header--options {
-    @include respond(xs, sm) {
-      display: block !important;
+    .utk-hours-section {
+      display: none;
     }
-  }
 
-  .aside-subsite-menu.preload {
-    #utk-subsite-menu {
-      display: block;
-    }
-  }
-
-  .page-header--current-page-expand {
-    display: none !important;
-  }
-
-  .page-header--current-page-close {
-    display: flex !important;
-
-    .icon-left-open {
-      display: inline-block !important;
-      color: $white !important;
-
+    .page-header--options {
       @include respond(xs, sm) {
+        display: block !important;
+      }
+    }
+
+    .aside-subsite-menu.preload {
+      #utk-subsite-menu {
+        display: block;
+      }
+    }
+
+    .page-header--current-page-expand {
+      display: none !important;
+    }
+
+    .page-header--current-page-close {
+      display: flex !important;
+
+      .icon-left-open {
         display: inline-block !important;
+        color: $white !important;
+
+        @include respond(xs, sm) {
+          display: inline-block !important;
+        }
       }
     }
   }

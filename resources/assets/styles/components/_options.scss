@@ -25,6 +25,10 @@
       padding-left: 58px !important;
       color: $smokey !important;
 
+      @include respond(sm) {
+        padding-left: 94px !important;
+      }
+
       &.libchat_online::after,
       &.libchat_offline::after {
         clip: unset !important;
@@ -36,6 +40,11 @@
         width: 30px !important;
         background-color: $white !important;
         color: $rock !important;
+
+        @include respond(sm) {
+          left: 29px !important;
+          width: 47px !important;
+        }
       }
 
       &.libchat_online::after {
