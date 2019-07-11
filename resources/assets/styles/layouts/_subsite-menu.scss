@@ -37,10 +37,6 @@
         margin-left: 0;
         width: 100%;
 
-        @include respond(xs) {
-          height: calc(100% - 113px) !important;
-        }
-
         * {
           min-height: 0;
           min-width: 0;
