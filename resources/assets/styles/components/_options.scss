@@ -6,34 +6,21 @@
   margin-top: 0;
   top: 0;
   position: relative;
-  z-index: 1010;
+  z-index: 1050;
   transition: $transition-top;
 
   @include respond(xs, sm) {
     position: fixed;
-    right: 81px;
-    bottom: $golden-ratio-2;
-    display: none !important;
+    top: auto !important;
+    right: $golden-ratio-2 !important;
+    bottom: $golden-ratio-2 !important;
+    display: none;
   }
 
   @include respond(sm) {
-    right: 92px;
-  }
-
-  @include respond(xs) {
-    .utk-libchat {
-      button {
-        font-size: 0 !important;
-        padding: 0 !important;
-        background-color: transparent !important;
-        border: none !important;
-
-        &::after {
-          clip-path: unset !important;
-          border-radius: $golden-ratio-4 !important;
-        }
-      }
-    }
+    top: auto !important;
+    right: $golden-ratio-3 !important;
+    bottom: $golden-ratio-3 !important;
   }
 }
 

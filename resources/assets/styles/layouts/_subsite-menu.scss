@@ -24,10 +24,12 @@
       display: none;
       overflow-y: scroll;
       z-index: 99;
+      padding-bottom: 105px;
 
       @include respond(xs) {
         top: 113px !important;
         height: calc(100% - 113px) !important;
+        padding-bottom: 83px;
       }
 
       .subsite-menu-wrap {
@@ -144,6 +146,12 @@ body.subsite-menu-mobile-expand {
 
   .utk-hours-section {
     display: none;
+  }
+
+  .page-header--options {
+    @include respond(xs, sm) {
+      display: block !important;
+    }
   }
 
   .aside-subsite-menu.preload {
