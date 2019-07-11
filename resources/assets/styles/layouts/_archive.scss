@@ -71,7 +71,6 @@
   .page-body--aside {
     &--facets {
       margin-bottom: $golden-ratio-3;
-      padding-left: $golden-ratio-2;
 
       &--item {
         margin-bottom: $golden-ratio-2 !important;
@@ -84,7 +83,7 @@
           color: $smokey;
           font-size: $type-1;
           text-transform: uppercase;
-          margin-bottom: $golden-ratio-1;
+          margin-bottom: $golden-ratio-0;
         }
       }
     }
