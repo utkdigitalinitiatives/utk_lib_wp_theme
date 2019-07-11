@@ -1,3 +1,8 @@
+.page-body--content--body img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
 img[data-lazy-src] {
   opacity: 0;
 }
