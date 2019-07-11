@@ -1418,7 +1418,10 @@ body.utk-search-open .utk-search {
             border-radius: 30px;
             background-color: #006c93;
             transition: all 290ms ease-in-out;
-            margin-top: 7px; }
+            margin-top: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
             .utk-hours .utk-hours--listing--item--more span::before {
               margin-right: 0;
               margin-left: -2px;
@@ -1592,7 +1595,10 @@ body.utk-search-open .utk-search {
             border-radius: 30px;
             background-color: #006c93;
             transition: all 290ms ease-in-out;
-            margin-top: 7px; }
+            margin-top: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
             .utk-hours .utk-hours--listing--item--more span::before {
               margin-right: 0;
               margin-left: -2px;
