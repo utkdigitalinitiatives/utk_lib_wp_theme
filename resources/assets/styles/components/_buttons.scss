@@ -1,7 +1,7 @@
 .btn-default {
   display: inline-flex;
   background-color: $globe;
-  color: $white;
+  color: $white !important;
   padding: $golden-ratio-1 $golden-ratio-2;
   margin-right: $golden-ratio-2;
   font-size: $type-2;
@@ -18,7 +18,7 @@ a.btn:visited {
 
   &a:hover,
   &a:focus {
-    color: $white;
+    color: $white !important;
   }
 
   &.btn-inverse {
@@ -28,7 +28,7 @@ a.btn:visited {
 
   &.btn-outline {
     background-color: transparent;
-    color: $globe;
+    color: $globe !important;
     border: 2px solid $globe;
     padding: calc(#{$golden-ratio-1 - 2}) calc(#{$golden-ratio-2 - 2});
     box-shadow: none !important;
@@ -49,7 +49,7 @@ a.btn:visited {
     }
 
     &.btn-outline {
-      color: $gray-1;
+      color: $smokey !important;
       background-color: transparent !important;
       border-color: $rock;
     }
