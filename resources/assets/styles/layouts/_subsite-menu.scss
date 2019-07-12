@@ -37,11 +37,6 @@
         margin-left: 0;
         width: 100%;
 
-        * {
-          min-height: 0;
-          min-width: 0;
-        }
-
         li .subsite-menu--item--collapse span,
         li .subsite-menu--item--expand span {
           margin-right: $golden-ratio-2;
