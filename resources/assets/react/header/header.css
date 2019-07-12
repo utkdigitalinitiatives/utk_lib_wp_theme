@@ -1480,7 +1480,6 @@ body.utk-search-open .utk-search {
           flex-grow: 1;
           padding: 11px 29px;
           border-right: 1px solid #e0e0e0;
-          height: 100%;
           position: relative;
           background-color: #fff;
           align-items: flex-end;
@@ -1657,7 +1656,6 @@ body.utk-search-open .utk-search {
           flex-grow: 1;
           padding: 11px 29px;
           border-right: 1px solid #e0e0e0;
-          height: 100%;
           position: relative;
           background-color: #fff;
           align-items: flex-end;
