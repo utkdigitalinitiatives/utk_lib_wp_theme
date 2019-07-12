@@ -106,6 +106,19 @@
         -webkit-font-smoothing: antialiased;
         display: block;
 
+        @include respond(xs, sm) {
+          padding: $golden-ratio-6 $golden-ratio-4 $golden-ratio-4 45%;
+          text-align: right;
+        }
+
+        @include respond(xs) {
+          font-size: $type-0;
+          position: relative;
+          padding: $golden-ratio-1 $golden-ratio-3;
+          background: $smokey !important;
+          background-color: $smokey !important;
+        }
+
         @include filter-gradient(rgba($smokeyx, 0), 0, rgba($smokeyx, 0.76), 47%);
         @include inverted-body-link();
 
