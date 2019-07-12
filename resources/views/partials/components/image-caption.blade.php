@@ -1,8 +1,14 @@
+@php
+    $captionEnabled = $fields['fields']['callout_media']['callout_image_caption'];
+    $captionLink = $fields['fields']['callout_media']['callout_image_caption_link'];
+@endphp
 @if( ! empty( $image ) )
-    @if( ! empty( isset($image['caption']) && ! empty( $image['caption'] ) ) )
+    @if( ! empty( isset($image['caption']) && ! empty( $image['caption'] ) && $captionEnabled === true ) )
         <div class="utk-image--caption">
             <span>@php echo $image['caption'] @endphp</span>
-            <a href="#"><strong>More</strong> <span class="icon-right-big"></span></a>
+            @if( ! empty($captionLink) )
+                <a href="#"><strong>More</strong> <span class="icon-right-big"></span></a>
+            @endif
         </div>
     @endif
 @endif
