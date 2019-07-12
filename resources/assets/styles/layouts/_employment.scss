@@ -4,6 +4,20 @@
 
     h2 {
       font-size: $type-3 !important;
+
+      .article--header--title--new {
+        background-color: $globe !important;
+        color: $white;
+        font-size: $type-0;
+        line-height: 1em;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: $golden-ratio-0;
+        padding: 3px $golden-ratio-0;
+        position: relative;
+        margin-top: -2px;
+        top: -3px;
+      }
     }
 
     .article--employment-teaser--main {

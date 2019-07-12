@@ -15,9 +15,8 @@ $department         = get_term($department_id);
 // check this...
 $application_url    = get_field('employment_application_url');
 
-$continue = '...';
-
 $new = Employment::is_position_new($dateline);
+$continue = '...';
 
 @endphp
 
