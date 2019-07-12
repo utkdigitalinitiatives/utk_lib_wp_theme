@@ -1,5 +1,7 @@
 @php
 
+Use \UTKLibrary\Library\Models\Employment;
+
 $size = 'post-thumbnail';
 $thumbnail  = get_the_post_thumbnail_url($post->ID,$size);
 $dateline   = date('F j, Y', strtotime($post->post_date));
@@ -15,13 +17,7 @@ $application_url    = get_field('employment_application_url');
 
 $continue = '...';
 
-
-// @todo check this
-$string =  strtotime($dateline);
-$now =  time();
-if ($now - (604800 * 4) < $string) {
-    print 'new';
-}
+$new = Employment::is_position_new($dateline);
 
 @endphp
 
@@ -29,7 +25,12 @@ if ($now - (604800 * 4) < $string) {
     <div class="article--context">
         <header class="article--header">
             <h2 class="article--header--title entry-title">
-                <a href="@php the_permalink() @endphp">@php the_title() @endphp</a>
+                <a href="@php the_permalink() @endphp">
+                    @php the_title() @endphp
+                    @if($new)
+                        <span class="article--header--title--new">New</span>
+                    @endif
+                </a>
             </h2>
         </header>
         <main class="article--employment-teaser--main">
