@@ -2,6 +2,18 @@
   border-radius: $golden-ratio-0;
   overflow: hidden;
 
+  @include respond(sm) {
+    margin-left: -$golden-ratio-3;
+    width: calc(100% + (#{$golden-ratio-3} * 2)) !important;
+    border-radius: 0;
+  }
+
+  @include respond(xs) {
+    margin-left: -$golden-ratio-2;
+    width: calc(100% + (#{$golden-ratio-2} * 2)) !important;
+    border-radius: 0;
+  }
+
   &--style {
     &-default {
       background-color: $gray-0;
@@ -43,11 +55,11 @@
       min-width: $gr-short;
 
       @include respond(sm) {
-        padding: $golden-ratio-2 $golden-ratio-4 $golden-ratio-4;
+        padding: $golden-ratio-2 $golden-ratio-3 $golden-ratio-4;
       }
 
       @include respond(xs) {
-        padding: $golden-ratio-2 $golden-ratio-3 $golden-ratio-4;
+        padding: $golden-ratio-2 $golden-ratio-2 $golden-ratio-3;
       }
 
       &::before {
@@ -83,6 +95,7 @@
       min-width: $gr-long;
       max-width: 100%;
       align-self: flex-end;
+      background-color: $rock;
       clip-path: polygon(0 0, 100% 0, 100% 100%, $golden-ratio-4 100%);
       position: relative;
 
@@ -94,7 +107,7 @@
         position: absolute;
         z-index: 2;
         bottom: 0;
-        padding: $golden-ratio-6 45% $golden-ratio-4 $golden-ratio-4;
+        padding: $golden-ratio-6 47% $golden-ratio-4 $golden-ratio-4;
         line-height: 1.47em;
         font-size: $type-1;
         width: 100%;
@@ -103,21 +116,22 @@
         -webkit-font-smoothing: antialiased;
         display: block;
 
+        @include filter-gradient(rgba($smokeyx, 0), 0, rgba($smokeyx, 0.76), 47%);
+        @include inverted-body-link();
+
         @include respond(xs, sm) {
-          padding: $golden-ratio-6 $golden-ratio-4 $golden-ratio-4 45%;
+          bottom: auto;
+          top: 0;
+          padding: $golden-ratio-3 $golden-ratio-3 $golden-ratio-6 47% !important;
           text-align: right;
+
+          @include filter-gradient(rgba($smokeyx, 0.76), 53%, rgba($smokeyx, 0), 100%);
         }
 
         @include respond(xs) {
           font-size: $type-0;
-          position: relative;
-          padding: $golden-ratio-1 $golden-ratio-3;
-          background: $smokey !important;
-          background-color: $smokey !important;
+          padding: $golden-ratio-2 $golden-ratio-2 $golden-ratio-5 29% !important;
         }
-
-        @include filter-gradient(rgba($smokeyx, 0), 0, rgba($smokeyx, 0.76), 47%);
-        @include inverted-body-link();
 
         > span {
           margin-right: $golden-ratio-0;
@@ -163,8 +177,12 @@
         clip-path: polygon(0 0, 100% 0, 100% 100%, $golden-ratio-4 100%);
 
         .utk-image--caption {
-          padding: $golden-ratio-6 $golden-ratio-4 $golden-ratio-4 45%;
+          padding: $golden-ratio-6 $golden-ratio-4 $golden-ratio-4 47%;
           text-align: right;
+
+          @include respond(sm) {
+            padding: $golden-ratio-6 $golden-ratio-3 $golden-ratio-4 47%;
+          }
         }
       }
     }

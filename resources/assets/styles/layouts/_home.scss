@@ -46,3 +46,11 @@
     }
   }
 }
+
+body.home.page-id-393 {
+  @include respond(xs, sm) {
+    #utk-lib-midsection {
+      margin-top: -$golden-ratio-4;
+    }
+  }
+}
