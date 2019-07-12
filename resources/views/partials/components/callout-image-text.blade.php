@@ -22,6 +22,7 @@
         @endif
     </div>
     <div class="utk-callout--image">
+        @include('partials.components.image-caption')
         @include('partials.components.image')
     </div>
 </div>
