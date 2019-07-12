@@ -61,7 +61,7 @@
       }
 
       h3 {
-        font-weight: 400;
+        font-weight: 700;
         font-size: $type-4;
         line-height: 1.18em;
         margin-bottom: $golden-ratio-1;
@@ -73,12 +73,8 @@
       }
 
       p {
-        font-size: $type-3;
+        font-size: $type-2;
         margin: 0 0 $golden-ratio-2;
-
-        @include respond(xs, sm, md) {
-          font-size: $type-2;
-        }
       }
     }
 
@@ -164,6 +160,11 @@
 
       .utk-callout--image {
         clip-path: polygon(0 0, 100% 0, 100% 100%, $golden-ratio-4 100%);
+
+        .utk-image--caption {
+          padding: $golden-ratio-6 $golden-ratio-4 $golden-ratio-4 45%;
+          text-align: right;
+        }
       }
     }
   }
