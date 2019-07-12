@@ -65,11 +65,10 @@
 
   .utk-card--image {
     display: flex;
-    position: relative;
     width: $gr-long;
     padding-top: $gr-short;
-    height: $gr-short;
     background-color: $gray-1;
+    position: relative;
 
     img {
       min-width: 100%;
@@ -178,7 +177,6 @@
     width: 100%;
     padding-right: 0;
     padding-top: $gr-long;
-    height: $gr-long;
 
     img {
       left: 0;
