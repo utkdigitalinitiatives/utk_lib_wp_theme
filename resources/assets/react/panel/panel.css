@@ -799,6 +799,8 @@ body .utk-research-tools .ui.dropdown .menu > .item {
         border-bottom-right-radius: 47px;
         background-color: #fff;
         color: #333;
+        height: 47px;
+        margin-left: 0;
         /* Mobile Devices for Mice */
         /* Landscape phones and down */
         /* Landscape phones and down */
