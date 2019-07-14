@@ -16,6 +16,8 @@
         font-weight: 700;
         display: flex;
         color: $smokeyx;
+        line-height: 1.29em;
+        position: relative;
 
         &::before {
           font-size: $type-0;
@@ -25,6 +27,8 @@
           display: block;
           color: $orange;
           margin-right: $golden-ratio-0;
+          position: absolute;
+          margin-left: -18px;
         }
       }
 
