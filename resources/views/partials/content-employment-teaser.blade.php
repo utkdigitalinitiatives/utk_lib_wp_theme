@@ -25,10 +25,10 @@ $continue = '...';
         <header class="article--header">
             <h2 class="article--header--title entry-title">
                 <a href="@php the_permalink() @endphp">
-                    @php the_title() @endphp
                     @if($new)
                         <span class="article--header--title--new">New</span>
                     @endif
+                    @php the_title() @endphp
                 </a>
             </h2>
         </header>
