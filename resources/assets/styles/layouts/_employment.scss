@@ -1,21 +1,71 @@
 .utk-employment {
+  &--body {
+    display: block;
+  }
+
   &--options {
-    &--head {
-      display: flex;
-      justify-content: space-between;
-      margin: $golden-ratio-3 0 $golden-ratio-2;
-
-      .btn {
-        height: $golden-ratio-4 !important;
-      }
-    }
-
     &--item {
+      font-size: $type-2;
+
       strong {
         display: block;
         font-size: $type-1;
         text-transform: uppercase;
         color: $smokey;
+      }
+    }
+
+    &--head {
+      display: flex;
+      justify-content: flex-start;
+      margin: $golden-ratio-3 0 0;
+
+      > div {
+        padding-right: $golden-ratio-4;
+        flex-shrink: 1;
+        flex-grow: 0;
+        line-height: 1.47em;
+        margin-bottom: $golden-ratio-2;
+      }
+
+      .btn {
+        height: $golden-ratio-4 !important;
+        flex-grow: 0;
+        flex-shrink: 0;
+        display: flex;
+        white-space: nowrap;
+        align-self: flex-end;
+        margin: 0 0 $golden-ratio-3 auto;
+      }
+    }
+
+    &--meta {
+      background-color: $gray-0;
+      padding: $golden-ratio-3 $golden-ratio-3 $golden-ratio-1;
+      border-radius: $golden-ratio-0;
+      display: flex;
+      flex-wrap: wrap;
+
+      div,
+      p {
+        font-size: $type-2;
+      }
+
+      > div {
+        padding-right: $golden-ratio-4;
+        margin-bottom: $golden-ratio-2;
+        width: 33%;
+        max-width: $gr-long;
+        flex-grow: 1;
+        flex-shrink: 0;
+        line-height: 1.29em;
+
+        strong {
+          font-size: $type-1 !important;
+          text-transform: none !important;
+          margin-bottom: $golden-ratio-0;
+          display: block;
+        }
       }
     }
   }
@@ -26,6 +76,11 @@
       font-size: $type-1;
       color: $smokey;
     }
+  }
+
+  h2 {
+    font-size: $type-3;
+    margin: $golden-ratio-3 0 0;
   }
 }
 

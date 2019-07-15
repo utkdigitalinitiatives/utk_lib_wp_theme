@@ -1,10 +1,10 @@
-<div class="page-body--content--inner">
+<div class="page-body--content--inner utk-employment">
     @if(get_the_title())
         <div class="page-body--content--title">
             <h1>@php echo get_the_title(); @endphp</h1>
         </div>
     @endif
-    <div class="page-body--content--body">
+    <div class="page-body--content--body utk-employment--body">
         @php
 
         /*
@@ -62,10 +62,17 @@
             <a class="btn btn-default btn-with-icon" href="@php echo $apply; @endphp">Apply for Position <span class="icon-right-open"></span></a>
         </div>
 
+        @if (!empty($appointment_rank) || !empty($reports_tp) || !empty($pay_grade) || !empty($salary) || !empty($available) || !empty($hours) || !empty($location))
         <div class="utk-employment--options utk-employment--options--meta">
+            @if (!empty($appointment_rank))
+                <div class="utk-employment--options--item">
+                    <strong>Appointment Rank</strong>
+                    @php echo $appointment_rank; @endphp
+                </div>
+            @endif
             @if (!empty($reports_tp))
                 <div class="utk-employment--options--item">
-                    <strong>Reports To:</strong>
+                    <strong>Reports To</strong>
                     @php echo $reports_tp; @endphp
                 </div>
             @endif
@@ -100,6 +107,7 @@
                 </div>
             @endif
         </div>
+        @endif
 
         @if (!empty($description))
             <h2>Description</h2>
