@@ -20,12 +20,24 @@
       justify-content: flex-start;
       margin: $golden-ratio-3 0 0;
 
+      @include respond(sm, md) {
+        flex-wrap: wrap;
+      }
+
+      @include respond(xs) {
+        flex-direction: column;
+      }
+
       > div {
         padding-right: $golden-ratio-4;
         flex-shrink: 1;
         flex-grow: 0;
         line-height: 1.47em;
         margin-bottom: $golden-ratio-2;
+
+        @include respond(sm, md) {
+          width: 45%;
+        }
       }
 
       .btn {
@@ -36,6 +48,11 @@
         white-space: nowrap;
         align-self: flex-end;
         margin: 0 0 $golden-ratio-3 auto;
+
+        @include respond(xs, sm, md) {
+          align-self: flex-start !important;
+          margin-left: 0;
+        }
       }
     }
 
@@ -45,6 +62,19 @@
       border-radius: $golden-ratio-0;
       display: flex;
       flex-wrap: wrap;
+
+      @include respond(sm) {
+        margin-left: -$golden-ratio-3;
+        width: calc(100% + #{$golden-ratio-3 * 2});
+        border-radius: 0;
+      }
+
+      @include respond(xs) {
+        margin-left: -$golden-ratio-2;
+        width: calc(100% + #{$golden-ratio-2 * 2});
+        padding: $golden-ratio-2 $golden-ratio-2 $golden-ratio-1;
+        border-radius: 0;
+      }
 
       div,
       p {
@@ -59,6 +89,16 @@
         flex-grow: 1;
         flex-shrink: 0;
         line-height: 1.29em;
+
+        @include respond(sm, md) {
+          width: 50%;
+          max-width: 100%;
+        }
+
+        @include respond(xs) {
+          width: 100%;
+          max-width: 100%;
+        }
 
         strong {
           font-size: $type-1 !important;
