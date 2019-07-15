@@ -46,7 +46,7 @@
 
        @endphp
 
-        <div class="utk-employment--options">
+        <div class="utk-employment--options utk-employment--options--head">
             @if (!empty($department->name))
                 <div class="utk-employment--options--item utk-employment--category">
                     <strong>Department</strong>

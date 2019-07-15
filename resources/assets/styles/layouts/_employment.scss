@@ -1,3 +1,26 @@
+.utk-employment {
+  &--options {
+    &--head {
+      display: flex;
+      justify-content: space-between;
+      margin: $golden-ratio-3 0 $golden-ratio-2;
+
+      .btn {
+        height: $golden-ratio-4 !important;
+      }
+    }
+
+    &--item {
+      strong {
+        display: block;
+        font-size: $type-1;
+        text-transform: uppercase;
+        color: $smokey;
+      }
+    }
+  }
+}
+
 .facetwp-template {
   article.employment {
     margin-bottom: $golden-ratio-4;
