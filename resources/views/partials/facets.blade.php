@@ -25,11 +25,7 @@ Namespace App\Controllers;
             @endwhile
         @endif
 
-        <span class="utk-end">
-            <span class="utk-end--dot"></span>
-            <span class="utk-end--dot"></span>
-            <span class="utk-end--dot"></span>
-        </span>
+        @php echo App::renderEndDots() @endphp
 
     </div>
 

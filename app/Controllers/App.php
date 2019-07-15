@@ -86,4 +86,13 @@ class App extends Controller
 
         return $hash;
     }
+
+    public static function renderEndDots () {
+        return '<span class="utk-end">
+                    <span class="utk-end--dot"></span>
+                    <span class="utk-end--dot"></span>
+                    <span class="utk-end--dot"></span>
+                </span>
+                ';
+    }
 }

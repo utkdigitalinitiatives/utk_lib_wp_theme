@@ -1,3 +1,8 @@
+@php
+
+    Namespace App\Controllers;
+
+@endphp
 <div class="page-body--content--inner utk-employment">
     @if(get_the_title())
         <div class="page-body--content--title">
@@ -146,11 +151,7 @@
 
         <a class="btn btn-default btn-with-icon" href="@php echo $apply; @endphp">Apply for Position <span class="icon-right-open"></span></a>
 
-        <span class="utk-end">
-            <span class="utk-end--dot"></span>
-            <span class="utk-end--dot"></span>
-            <span class="utk-end--dot"></span>
-        </span>
+        @php echo App::renderEndDots() @endphp
 
         <div class="utk-employment--eeo">
             @php print wpautop(get_option('options_employment_options_statement')); @endphp
