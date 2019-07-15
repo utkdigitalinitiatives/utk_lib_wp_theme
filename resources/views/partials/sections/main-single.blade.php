@@ -10,7 +10,11 @@
   @include('partials.components.notice')
   <div class="page-body--flex">
     <aside class="page-body--aside">
-      @include('partials.sidebar-single')
+      @if (get_post_type() === 'post')
+        @include('partials.sidebar-single')
+      @else
+        @include('partials.sidebar')
+      @endif
     </aside>
     <main class="page-body--content">
       @include('partials.components.google-custom-search')
