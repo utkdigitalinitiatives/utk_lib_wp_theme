@@ -72,6 +72,10 @@
     &--facets {
       margin-bottom: $golden-ratio-3;
 
+      @include respond(xs, sm) {
+        display: none;
+      }
+
       &--item {
         margin-bottom: $golden-ratio-2 !important;
 
