@@ -34,12 +34,17 @@
         $reports_tp         = get_field('employment_reports');
         $available          = get_field('employment_available');
 
+        $method             = get_field('employment_apply_method');
+        $email              = get_field('employment_email');
         $application_url    = get_field('employment_application_url');
 
+        if ($method === 'email') :
+            $apply = 'mailto:' . $email;
+        elseif ($method === 'url') :
+            $apply = $application_url;
+        endif;
 
        @endphp
-
-
 
         <div class="utk-employment--options">
             @if (!empty($department->name))
@@ -56,6 +61,7 @@
             @endif
             <a class="btn btn-default btn-with-icon" href="@php echo $apply; @endphp">Apply for Position <span class="icon-right-open"></span></a>
         </div>
+
         <div class="utk-employment--options utk-employment--options--meta">
             @if (!empty($reports_tp))
                 <div class="utk-employment--options--item">
