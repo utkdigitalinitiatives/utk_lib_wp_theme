@@ -25,6 +25,14 @@
         }
       }
 
+      .article--body {
+        &--summary {
+          p {
+            font-size: $type-2;
+          }
+        }
+      }
+
       .article--thumbnail {
         margin-left: $golden-ratio-3;
         background-color: $gray-1;
