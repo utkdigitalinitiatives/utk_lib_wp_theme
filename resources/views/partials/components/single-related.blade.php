@@ -2,6 +2,9 @@
 
     Namespace App\Controllers;
 
+@endphp
+@php
+
     $related = App::utk_get_single_aside(get_the_ID(), 5);
 
 @endphp
