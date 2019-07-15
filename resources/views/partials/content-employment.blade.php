@@ -136,6 +136,12 @@
             @php echo $instructions; @endphp
         @endif
 
+        <span class="utk-end">
+            <span class="utk-end--dot"></span>
+            <span class="utk-end--dot"></span>
+            <span class="utk-end--dot"></span>
+        </span>
+
         <div class="utk-employment--eeo">
             @php print wpautop(get_option('options_employment_options_statement')); @endphp
         </div>

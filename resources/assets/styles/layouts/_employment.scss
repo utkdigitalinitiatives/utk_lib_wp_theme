@@ -19,6 +19,14 @@
       }
     }
   }
+
+  &--eeo {
+    p,
+    li {
+      font-size: $type-1;
+      color: $smokey;
+    }
+  }
 }
 
 .facetwp-template {
