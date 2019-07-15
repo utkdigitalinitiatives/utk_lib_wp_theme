@@ -13,7 +13,7 @@
 
         $category_id        = get_field('employment_category');
         $category           = get_term($category_id);
-        
+
         $pay_grade          = get_field('employment_pay_grade');
         $salary             = get_field('employment_salary');
         $hours              = get_field('employment_hours');
@@ -39,73 +39,61 @@
 
        @endphp
 
-        <a class="btn btn-default" href="@php echo $apply; @endphp">Apply for Position</a>
 
-        <div class="employment-options employment-options-flex">
-            @if (!empty($appointment_rank))
-            <div class="employment-options--item employment-category">
-                <strong>Appointment Rank</strong><br>
-                @php echo $appointment_rank; @endphp
-            </div>
-            @endif
-        </div>
 
-        <div class="employment-options">
+        <div class="utk-employment--options">
             @if (!empty($department->name))
-            <div class="employment-options--item employment-category">
-                <strong>Department</strong><br>
-                @php echo $department->name; @endphp
-            </div>
+                <div class="utk-employment--options--item utk-employment--category">
+                    <strong>Department</strong>
+                    @php echo $department->name; @endphp
+                </div>
             @endif
+            @if (!empty($category->name))
+                <div class="utk-employment--options--item utk-employment--category">
+                    <strong>Position Type</strong>
+                    @php echo $category->name; @endphp
+                </div>
+            @endif
+            <a class="btn btn-default btn-with-icon" href="@php echo $apply; @endphp">Apply for Position <span class="icon-right-open"></span></a>
         </div>
-
-        <div class="employment-options">
+        <div class="utk-employment--options utk-employment--options--meta">
             @if (!empty($reports_tp))
-            <div class="employment-options--item employment-category">
-                <strong>Reports To:</strong><br>
-                @php echo $reports_tp; @endphp
-            </div>
+                <div class="utk-employment--options--item">
+                    <strong>Reports To:</strong>
+                    @php echo $reports_tp; @endphp
+                </div>
             @endif
-        </div>
-
-        <div class="employment-options employment-options-flex">
             @if (!empty($pay_grade))
-            <div class="employment-options--item employment-category">
-                <strong>Pay Grade</strong><br>
-                @php echo $pay_grade; @endphp
-            </div>
+                <div class="utk-employment--options--item">
+                    <strong>Pay Grade</strong>
+                    @php echo $pay_grade; @endphp
+                </div>
             @endif
             @if (!empty($salary))
-            <div class="employment-options--item employment-category">
-                <strong>Salary</strong><br>
-                @php echo $salary; @endphp
-            </div>
+                <div class="utk-employment--options--item">
+                    <strong>Salary</strong>
+                    @php echo $salary; @endphp
+                </div>
             @endif
             @if (!empty($available))
-            <div class="employment-options--item employment-category">
-                <strong>Available</strong><br>
-                @php echo $available; @endphp
-            </div>
+                <div class="utk-employment--options--item">
+                    <strong>Available</strong>
+                    @php echo $available; @endphp
+                </div>
             @endif
-            @if ($category->name != 'Faculty')
-                @if (!empty($category->name))
-                    <div class="employment-options--item employment-category">
-                        <strong>Position Type</strong><br>
-                        @php echo $category->name; @endphp
-                    </div>
-                @endif
+            @if (!empty($hours))
+                <div class="utk-employment--options--item">
+                    <strong>Hours</strong>
+                    @php echo $hours; @endphp
+                </div>
+            @endif
+            @if (!empty($location))
+                <div class="utk-employment--options--item">
+                    <strong>Location</strong>
+                    @php echo $location; @endphp
+                </div>
             @endif
         </div>
-
-        @if (!empty($hours))
-            <h2>Hours</h2>
-            @php echo $hours; @endphp
-        @endif
-
-        @if (!empty($location))
-            <h2>Location</h2>
-            @php echo $location; @endphp
-        @endif
 
         @if (!empty($description))
             <h2>Description</h2>
@@ -142,7 +130,7 @@
             @php echo $instructions; @endphp
         @endif
 
-        <div class="employment-eeo">
+        <div class="utk-employment--eeo">
             @php print wpautop(get_option('options_employment_options_statement')); @endphp
         </div>
 
