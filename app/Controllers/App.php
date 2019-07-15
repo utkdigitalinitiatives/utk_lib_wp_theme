@@ -87,7 +87,8 @@ class App extends Controller
         return $hash;
     }
 
-    public static function renderEndDots () {
+    public static function renderEndDots()
+    {
         return '<span class="utk-end">
                     <span class="utk-end--dot"></span>
                     <span class="utk-end--dot"></span>
@@ -96,25 +97,28 @@ class App extends Controller
                 ';
     }
 
-    public static function utk_get_single_aside( $post_id, $count) {
+    public static function utkGetSingleAside($post_id, $count)
+    {
 
-        $terms = get_the_terms( $post_id, 'category' );
+        $terms = get_the_terms($post_id, 'category');
 
         if (is_array($terms)) :
-            return self::utk_get_related_posts($post_id, $count);
-        else:
-            return self::utk_get_recent_posts($post_id, $count);
+            return self::utkGetRelatedPosts($post_id, $count);
+        else :
+            return self::utkGetRecentPosts($post_id, $count);
         endif;
-
     }
 
-    public static function utk_get_related_posts( $post_id, $count) {
+    public static function utkGetRelatedPosts($post_id, $count)
+    {
 
-        $terms = get_the_terms( $post_id, 'category' );
+        $terms = get_the_terms($post_id, 'category');
 
-        if ( empty( $terms ) ) $terms = array();
+        if (empty($terms)) {
+            $terms = array();
+        }
 
-        $term_list = wp_list_pluck( $terms, 'slug' );
+        $term_list = wp_list_pluck($terms, 'slug');
 
         $this_year = date("Y");
         $last_year = $this_year - 1;
@@ -139,11 +143,11 @@ class App extends Controller
             )
         );
 
-        return new \WP_Query( $related_args );
-
+        return new \WP_Query($related_args);
     }
 
-    public static function utk_get_recent_posts( $post_id, $count) {
+    public static function utkGetRecentPosts($post_id, $count)
+    {
 
         $related_args = array(
             'post_type' => 'post',
@@ -154,7 +158,6 @@ class App extends Controller
             'order' => 'DESC'
         );
 
-        return new \WP_Query( $related_args );
-
+        return new \WP_Query($related_args);
     }
 }
