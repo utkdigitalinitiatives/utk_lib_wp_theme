@@ -144,6 +144,8 @@
             @php echo $instructions; @endphp
         @endif
 
+        <a class="btn btn-default btn-with-icon" href="@php echo $apply; @endphp">Apply for Position <span class="icon-right-open"></span></a>
+
         <span class="utk-end">
             <span class="utk-end--dot"></span>
             <span class="utk-end--dot"></span>
