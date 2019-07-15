@@ -4,19 +4,19 @@
   margin: $golden-ratio-3 0;
 
   &--dot {
-    background-color: $gray-1;
+    background-color: $orange;
     width: $golden-ratio-0;
     height: $golden-ratio-0;
     margin: 0 $golden-ratio-1;
     border-radius: $golden-ratio-0;
 
     &:first-child {
-      background-color: $orange;
+      background-color: $smokey;
       margin: 0;
     }
 
     &:last-child {
-      background-color: $smokey;
+      background-color: $gray-1;
       margin: 0;
     }
   }
