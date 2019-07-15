@@ -1,4 +1,8 @@
 .aside-subsite-custom-widgets {
+  @include respond(xs, sm) {
+    padding-bottom: $golden-ratio-4;
+  }
+
   .widget {
     margin-bottom: $golden-ratio-3;
 
@@ -29,6 +33,11 @@
           margin-right: $golden-ratio-0;
           position: absolute;
           margin-left: -18px;
+
+          @include respond(xs, sm) {
+            margin-left: 0;
+            position: relative;
+          }
         }
       }
 
