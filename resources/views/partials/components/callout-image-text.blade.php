@@ -9,7 +9,7 @@
     $preload_size = 'preload_gr_horz';
     $image_post_id = $fields['fields']['callout_media']['callout_image']['id'];
     $image  = $fields['fields']['callout_media']['callout_image'];
-    $srcset = wp_get_attachment_image_srcset($image_post_id);
+    $srcset = wp_get_attachment_image_srcset($image_post_id, 'callout_image');
 
 @endphp
 <div class="utk-callout--inner utk-callout--style-{{$containerStyle}} utk-callout--orientation-{{$orientation}}">
