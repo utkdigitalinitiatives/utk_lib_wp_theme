@@ -6,7 +6,7 @@
 <div class="page-body--content--inner utk-employment">
     @if(get_the_title())
         <div class="page-body--content--title">
-            <h1>@php echo get_the_title(); @endphp</h1>
+            <span class="utk-heading-1" role="heading" aria-level="1">@php echo get_the_title(); @endphp</span>
         </div>
     @endif
     <div class="page-body--content--body utk-employment--body">
