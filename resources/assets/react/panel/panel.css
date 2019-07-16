@@ -1559,12 +1559,27 @@ body {
     left: 0;
     top: 0;
     overflow: hidden; }
+    #utk-panel .utk-panel-wrap > .utk-panel-underlay .utk-panel-overlay--fade,
+    #utk-panel-mini .utk-panel-wrap > .utk-panel-underlay .utk-panel-overlay--fade {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      transition: all 110ms ease-in-out;
+      background: -moz-linear-gradient(top, rgba(117, 74, 126, 0.76) 0, rgba(117, 74, 126, 0) 47%);
+      background: -webkit-gradient(linear, top, bottom, color-stop(0, rgba(117, 74, 126, 0.76)), color-stop(47%, rgba(117, 74, 126, 0)));
+      background: -webkit-linear-gradient(top, rgba(117, 74, 126, 0.76) 0, rgba(117, 74, 126, 0) 47%);
+      background: -o-linear-gradient(top, rgba(117, 74, 126, 0.76) 0, rgba(117, 74, 126, 0) 47%);
+      background: -ms-linear-gradient(top, rgba(117, 74, 126, 0.76) 0, rgba(117, 74, 126, 0) 47%);
+      background: linear-gradient(to bottom, rgba(117, 74, 126, 0.76) 0, rgba(117, 74, 126, 0) 47%); }
     #utk-panel .utk-panel-wrap > .utk-panel-underlay > img,
     #utk-panel-mini .utk-panel-wrap > .utk-panel-underlay > img {
       width: 100%;
-      filter: blur(6px);
-      opacity: 0.47;
       position: absolute;
+      opacity: 0.47;
+      margin-top: -150px;
       transition: all 290ms ease-in-out;
       transform: scale3d(1, 1, 1); }
     #utk-panel .utk-panel-wrap > .utk-panel-underlay .utk-panel-underlay--fade-horz,
@@ -1575,12 +1590,12 @@ body {
       width: 100%;
       height: 100%;
       z-index: 1;
-      background: -moz-linear-gradient(left, rgba(88, 89, 91, 0.11) 0%, #333 61.8%);
-      background: -webkit-gradient(linear, left, bottom, color-stop(0%, rgba(88, 89, 91, 0.11)), color-stop(61.8%, #333));
-      background: -webkit-linear-gradient(left, rgba(88, 89, 91, 0.11) 0%, #333 61.8%);
-      background: -o-linear-gradient(left, rgba(88, 89, 91, 0.11) 0%, #333 61.8%);
-      background: -ms-linear-gradient(left, rgba(88, 89, 91, 0.11) 0%, #333 61.8%);
-      background: linear-gradient(to right, rgba(88, 89, 91, 0.11) 0%, #333 61.8%); }
+      background: -moz-linear-gradient(left, rgba(88, 89, 91, 0) 0%, #333333 61.8%);
+      background: -webkit-gradient(linear, left, bottom, color-stop(0%, rgba(88, 89, 91, 0)), color-stop(61.8%, #333333));
+      background: -webkit-linear-gradient(left, rgba(88, 89, 91, 0) 0%, #333333 61.8%);
+      background: -o-linear-gradient(left, rgba(88, 89, 91, 0) 0%, #333333 61.8%);
+      background: -ms-linear-gradient(left, rgba(88, 89, 91, 0) 0%, #333333 61.8%);
+      background: linear-gradient(to right, rgba(88, 89, 91, 0) 0%, #333333 61.8%); }
     #utk-panel .utk-panel-wrap > .utk-panel-underlay .utk-panel-underlay--fade-vert,
     #utk-panel-mini .utk-panel-wrap > .utk-panel-underlay .utk-panel-underlay--fade-vert {
       top: 0;
@@ -1589,12 +1604,12 @@ body {
       width: 100%;
       height: 100%;
       z-index: 1;
-      background: -moz-linear-gradient(top, rgba(88, 89, 91, 0.18) 0, #333 400px);
-      background: -webkit-gradient(linear, top, bottom, color-stop(0, rgba(88, 89, 91, 0.18)), color-stop(400px, #333));
-      background: -webkit-linear-gradient(top, rgba(88, 89, 91, 0.18) 0, #333 400px);
-      background: -o-linear-gradient(top, rgba(88, 89, 91, 0.18) 0, #333 400px);
-      background: -ms-linear-gradient(top, rgba(88, 89, 91, 0.18) 0, #333 400px);
-      background: linear-gradient(to bottom, rgba(88, 89, 91, 0.18) 0, #333 400px); }
+      background: -moz-linear-gradient(top, rgba(88, 89, 91, 0) 0, #333 323px);
+      background: -webkit-gradient(linear, top, bottom, color-stop(0, rgba(88, 89, 91, 0)), color-stop(323px, #333));
+      background: -webkit-linear-gradient(top, rgba(88, 89, 91, 0) 0, #333 323px);
+      background: -o-linear-gradient(top, rgba(88, 89, 91, 0) 0, #333 323px);
+      background: -ms-linear-gradient(top, rgba(88, 89, 91, 0) 0, #333 323px);
+      background: linear-gradient(to bottom, rgba(88, 89, 91, 0) 0, #333 323px); }
   #utk-panel .utk-panel-wrap .utk-panel,
   #utk-panel-mini .utk-panel-wrap .utk-panel {
     font-size: 18px;
@@ -1721,9 +1736,23 @@ body {
   #utk-panel-mini .utk-panel-wrap.utk-panel-focus-research-tools {
     color: #fff;
     background-color: #2197a9; }
+    #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools > .utk-panel-underlay > .utk-panel-overlay--fade,
+    #utk-panel-mini .utk-panel-wrap.utk-panel-focus-research-tools > .utk-panel-underlay > .utk-panel-overlay--fade {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      background: -moz-linear-gradient(top, rgba(33, 151, 169, 0.47) 0, rgba(33, 151, 169, 0) 18%);
+      background: -webkit-gradient(linear, top, bottom, color-stop(0, rgba(33, 151, 169, 0.47)), color-stop(18%, rgba(33, 151, 169, 0)));
+      background: -webkit-linear-gradient(top, rgba(33, 151, 169, 0.47) 0, rgba(33, 151, 169, 0) 18%);
+      background: -o-linear-gradient(top, rgba(33, 151, 169, 0.47) 0, rgba(33, 151, 169, 0) 18%);
+      background: -ms-linear-gradient(top, rgba(33, 151, 169, 0.47) 0, rgba(33, 151, 169, 0) 18%);
+      background: linear-gradient(to bottom, rgba(33, 151, 169, 0.47) 0, rgba(33, 151, 169, 0) 18%); }
     #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools > .utk-panel-underlay > img,
     #utk-panel-mini .utk-panel-wrap.utk-panel-focus-research-tools > .utk-panel-underlay > img {
-      transform: scale(1.11, 1.11); }
+      transform: scale3d(1.11, 1.11, 1.11); }
     #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--search,
     #utk-panel-mini .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--search {
       width: 0;
