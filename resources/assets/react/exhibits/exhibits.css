@@ -36,6 +36,64 @@
  * utilities
  */
 /*
+ * bootstrap globals
+ */
+/*
+ * define bootstrap vars according to externally hosted bootstrap library
+ */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 47px !important;
+  padding-right: 47px !important;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (min-width: breakpoint-min((sm: 540px, md: 720px, lg: 1000px, xl: 1280px), (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))) {
+    .container {
+      max-width: !important; } }
+  @media (min-width: breakpoint-min(!important, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))) {
+    .container {
+      max-width: !important; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+      padding-left: 29px !important;
+      padding-right: 29px !important; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      padding-left: 29px !important;
+      padding-right: 29px !important; } }
+  @media (max-width: 767px) {
+    .container {
+      padding-left: 18px !important;
+      padding-right: 18px !important; } }
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+/*
  * semantic ui
  */
 /*
@@ -60,14 +118,41 @@
     position: relative;
     z-index: 1;
     padding: 47px;
-    width: 100%; }
+    width: 100%;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .utk-exhibits--pane--meta {
+        padding: 47px 29px; } }
+    @media (max-width: 767px) {
+      .utk-exhibits--pane--meta {
+        padding: 47px 18px 29px; } }
     .utk-exhibits--pane--meta h3 {
       font-size: 23px;
       font-weight: 700;
       line-height: 1.11em;
       margin-bottom: 18px;
       margin-top: 0;
-      color: #fff !important; }
+      color: #fff !important;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        .utk-exhibits--pane--meta h3 {
+          font-size: 18px; } }
       .utk-exhibits--pane--meta h3:before {
         content: ' ';
         display: block;
@@ -88,7 +173,16 @@
       font-weight: 400;
       color: #fff;
       margin-bottom: 18px;
-      font-weight: 700; }
+      font-weight: 700;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        .utk-exhibits--pane--meta--location, .utk-exhibits--pane--meta--curators {
+          font-size: 13px; } }
     .utk-exhibits--pane--meta--curators {
       font-size: 13px;
       margin-bottom: 0;
@@ -106,7 +200,16 @@
     font-size: 29px;
     color: #fff;
     margin-bottom: 11px;
-    font-weight: 700; }
+    font-weight: 700;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .ui.vertical.menu:before {
+        font-size: 23px; } }
   .ui.vertical.menu > .item {
     font-weight: 400;
     color: #fff;
@@ -169,7 +272,27 @@
  * layout
  */
 .utk-exhibits {
-  font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+  font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .utk-exhibits {
+      margin-left: -29px;
+      width: calc(100% + 58px); } }
+  @media (max-width: 767px) {
+    .utk-exhibits {
+      margin-left: -18px;
+      width: calc(100% + 36px); } }
   .utk-exhibits--display {
     display: flex;
     background-color: #262626;
@@ -179,12 +302,50 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width: 100%; }
+      width: 100%;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        .utk-exhibits--display .ui.grid {
+          flex-direction: column-reverse; } }
+      @media (min-width: 768px) and (max-width: 991px) {
+        .utk-exhibits--display .ui.grid {
+          flex-direction: column-reverse; } }
       .utk-exhibits--display .ui.grid .column:first-child {
         width: calc(100% / 1.61803);
         flex-shrink: 0;
         flex-grow: 0;
-        color: #fff; }
+        color: #fff;
+        /* Mobile Devices for Mice */
+        /* Landscape phones and down */
+        /* Landscape phones and down */
+        /* Landscape phone to portrait tablet */
+        /* Portrait tablet to landscape and desktop */
+        /* desktop and large desktop */
+        /* Mobile Devices for Mice */
+        /* Landscape phones and down */
+        /* Landscape phones and down */
+        /* Landscape phone to portrait tablet */
+        /* Portrait tablet to landscape and desktop */
+        /* desktop and large desktop */ }
+        @media (max-width: 767px) {
+          .utk-exhibits--display .ui.grid .column:first-child {
+            width: 100%;
+            flex-shrink: 1; } }
+        @media (min-width: 768px) and (max-width: 991px) {
+          .utk-exhibits--display .ui.grid .column:first-child {
+            width: 100%;
+            flex-shrink: 1; } }
       .utk-exhibits--display .ui.grid .column:last-child {
         width: calc(100% - (100% / 1.61803));
         flex-grow: 0;
@@ -195,13 +356,31 @@
         padding-left: 76px;
         display: flex;
         background-color: #333;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 47px 100%); }
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 47px 100%);
+        /* Mobile Devices for Mice */
+        /* Landscape phones and down */
+        /* Landscape phones and down */
+        /* Landscape phone to portrait tablet */
+        /* Portrait tablet to landscape and desktop */
+        /* desktop and large desktop */
+        /* Mobile Devices for Mice */
+        /* Landscape phones and down */
+        /* Landscape phones and down */
+        /* Landscape phone to portrait tablet */
+        /* Portrait tablet to landscape and desktop */
+        /* desktop and large desktop */ }
+        @media (min-width: 768px) and (max-width: 991px) {
+          .utk-exhibits--display .ui.grid .column:last-child {
+            padding: 29px;
+            width: 100%;
+            clip-path: none;
+            flex-shrink: 1; } }
+        @media (max-width: 767px) {
+          .utk-exhibits--display .ui.grid .column:last-child {
+            padding: 29px 18px;
+            width: 100%;
+            clip-path: none;
+            flex-shrink: 1; } }
       .utk-exhibits--display .ui.grid .column .ui.vertical.menu {
         display: flex;
         flex-direction: column; }
-    .utk-exhibits--display--main {
-      width: calc(100% / 1.61803);
-      padding: 29px; }
-    .utk-exhibits--display--aside {
-      width: calc(100% - (100% / 1.61803));
-      padding: 29px; }
