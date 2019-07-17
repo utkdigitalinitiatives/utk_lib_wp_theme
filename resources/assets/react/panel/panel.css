@@ -431,6 +431,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
 .utk-subject-guide .ui.secondary.menu,
 .utk-search .ui.secondary.menu {
   margin-bottom: 18px;
+  display: flex;
   /* Mobile Devices for Mice */
   /* Landscape phones and down */
   /* Landscape phones and down */
@@ -450,14 +451,27 @@ body .utk-research-tools .ui.dropdown .menu > .item {
     height: 47px;
     padding: 0 18px;
     border-radius: 6px !important;
-    background-color: #58595b;
+    background-color: transparent;
     margin-right: 18px;
+    justify-content: space-between;
+    border: 2px solid rgba(255, 255, 255, 0.11);
+    font-weight: 700;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
     /* Landscape phones and down */
     /* Landscape phone to portrait tablet */
     /* Portrait tablet to landscape and desktop */
     /* desktop and large desktop */ }
+    .utk-subject-guide .ui.secondary.menu a.item:hover, .utk-subject-guide .ui.secondary.menu a.item:focus,
+    .utk-search .ui.secondary.menu a.item:hover,
+    .utk-search .ui.secondary.menu a.item:focus {
+      border: none;
+      padding: 2px calc(18px + 2px);
+      background-color: rgba(0, 0, 0, 0.29);
+      color: #fff; }
+    .utk-subject-guide .ui.secondary.menu a.item:last-child,
+    .utk-search .ui.secondary.menu a.item:last-child {
+      margin-right: 0; }
     @media (max-width: 767px) {
       .utk-subject-guide .ui.secondary.menu a.item,
       .utk-search .ui.secondary.menu a.item {
@@ -473,12 +487,11 @@ body .utk-research-tools .ui.dropdown .menu > .item {
       padding: 0;
       text-align: center;
       border-radius: 18px;
-      color: #a7a9ac; }
+      color: #e0e0e0; }
     .utk-subject-guide .ui.secondary.menu a.item.active,
     .utk-search .ui.secondary.menu a.item.active {
-      background-color: #e0e0e0;
-      color: #333;
-      font-weight: 700; }
+      background-color: #fff;
+      color: #333; }
       .utk-subject-guide .ui.secondary.menu a.item.active .ui.label,
       .utk-search .ui.secondary.menu a.item.active .ui.label {
         color: #333; }
@@ -1568,12 +1581,12 @@ body {
       height: 100%;
       z-index: 3;
       transition: all 110ms ease-in-out;
-      background: -moz-linear-gradient(top, #754a7e 0, rgba(117, 74, 126, 0) 400px);
-      background: -webkit-gradient(linear, top, bottom, color-stop(0, #754a7e), color-stop(400px, rgba(117, 74, 126, 0)));
-      background: -webkit-linear-gradient(top, #754a7e 0, rgba(117, 74, 126, 0) 400px);
-      background: -o-linear-gradient(top, #754a7e 0, rgba(117, 74, 126, 0) 400px);
-      background: -ms-linear-gradient(top, #754a7e 0, rgba(117, 74, 126, 0) 400px);
-      background: linear-gradient(to bottom, #754a7e 0, rgba(117, 74, 126, 0) 400px); }
+      background: -moz-linear-gradient(top, #754a7e 0, rgba(117, 74, 126, 0) 199px);
+      background: -webkit-gradient(linear, top, bottom, color-stop(0, #754a7e), color-stop(199px, rgba(117, 74, 126, 0)));
+      background: -webkit-linear-gradient(top, #754a7e 0, rgba(117, 74, 126, 0) 199px);
+      background: -o-linear-gradient(top, #754a7e 0, rgba(117, 74, 126, 0) 199px);
+      background: -ms-linear-gradient(top, #754a7e 0, rgba(117, 74, 126, 0) 199px);
+      background: linear-gradient(to bottom, #754a7e 0, rgba(117, 74, 126, 0) 199px); }
     #utk-panel .utk-panel-wrap > .utk-panel-underlay .utk-panel-underlay--fade-horz,
     #utk-panel-mini .utk-panel-wrap > .utk-panel-underlay .utk-panel-underlay--fade-horz {
       top: 0;
@@ -1582,12 +1595,12 @@ body {
       width: 100%;
       height: 100%;
       z-index: 4;
-      background: -moz-linear-gradient(left, rgba(88, 89, 91, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%);
-      background: -webkit-gradient(linear, left, bottom, color-stop(6%, rgba(88, 89, 91, 0)), color-stop(61.8%, rgba(51, 51, 51, 0.76)));
-      background: -webkit-linear-gradient(left, rgba(88, 89, 91, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%);
-      background: -o-linear-gradient(left, rgba(88, 89, 91, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%);
-      background: -ms-linear-gradient(left, rgba(88, 89, 91, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%);
-      background: linear-gradient(to right, rgba(88, 89, 91, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%); }
+      background: -moz-linear-gradient(left, rgba(51, 51, 51, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%);
+      background: -webkit-gradient(linear, left, bottom, color-stop(6%, rgba(51, 51, 51, 0)), color-stop(61.8%, rgba(51, 51, 51, 0.76)));
+      background: -webkit-linear-gradient(left, rgba(51, 51, 51, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%);
+      background: -o-linear-gradient(left, rgba(51, 51, 51, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%);
+      background: -ms-linear-gradient(left, rgba(51, 51, 51, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%);
+      background: linear-gradient(to right, rgba(51, 51, 51, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%); }
     #utk-panel .utk-panel-wrap > .utk-panel-underlay .utk-panel-underlay--fade-vert,
     #utk-panel-mini .utk-panel-wrap > .utk-panel-underlay .utk-panel-underlay--fade-vert {
       top: 0;
@@ -1596,12 +1609,12 @@ body {
       width: 100%;
       height: 100%;
       z-index: 2;
-      background: -moz-linear-gradient(top, rgba(88, 89, 91, 0) 0, #333 323px);
-      background: -webkit-gradient(linear, top, bottom, color-stop(0, rgba(88, 89, 91, 0)), color-stop(323px, #333));
-      background: -webkit-linear-gradient(top, rgba(88, 89, 91, 0) 0, #333 323px);
-      background: -o-linear-gradient(top, rgba(88, 89, 91, 0) 0, #333 323px);
-      background: -ms-linear-gradient(top, rgba(88, 89, 91, 0) 0, #333 323px);
-      background: linear-gradient(to bottom, rgba(88, 89, 91, 0) 0, #333 323px); }
+      background: -moz-linear-gradient(top, rgba(51, 51, 51, 0) 0, #333 323px);
+      background: -webkit-gradient(linear, top, bottom, color-stop(0, rgba(51, 51, 51, 0)), color-stop(323px, #333));
+      background: -webkit-linear-gradient(top, rgba(51, 51, 51, 0) 0, #333 323px);
+      background: -o-linear-gradient(top, rgba(51, 51, 51, 0) 0, #333 323px);
+      background: -ms-linear-gradient(top, rgba(51, 51, 51, 0) 0, #333 323px);
+      background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 0, #333 323px); }
   #utk-panel .utk-panel-wrap .utk-panel,
   #utk-panel-mini .utk-panel-wrap .utk-panel {
     font-size: 18px;
@@ -1730,12 +1743,12 @@ body {
     background-color: #2197a9; }
     #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools > .utk-panel-underlay > .utk-panel-overlay--fade,
     #utk-panel-mini .utk-panel-wrap.utk-panel-focus-research-tools > .utk-panel-underlay > .utk-panel-overlay--fade {
-      background: -moz-linear-gradient(top, #2197a9 0, rgba(33, 151, 169, 0) 400px);
-      background: -webkit-gradient(linear, top, bottom, color-stop(0, #2197a9), color-stop(400px, rgba(33, 151, 169, 0)));
-      background: -webkit-linear-gradient(top, #2197a9 0, rgba(33, 151, 169, 0) 400px);
-      background: -o-linear-gradient(top, #2197a9 0, rgba(33, 151, 169, 0) 400px);
-      background: -ms-linear-gradient(top, #2197a9 0, rgba(33, 151, 169, 0) 400px);
-      background: linear-gradient(to bottom, #2197a9 0, rgba(33, 151, 169, 0) 400px); }
+      background: -moz-linear-gradient(top, #2197a9 0, rgba(33, 151, 169, 0) 199px);
+      background: -webkit-gradient(linear, top, bottom, color-stop(0, #2197a9), color-stop(199px, rgba(33, 151, 169, 0)));
+      background: -webkit-linear-gradient(top, #2197a9 0, rgba(33, 151, 169, 0) 199px);
+      background: -o-linear-gradient(top, #2197a9 0, rgba(33, 151, 169, 0) 199px);
+      background: -ms-linear-gradient(top, #2197a9 0, rgba(33, 151, 169, 0) 199px);
+      background: linear-gradient(to bottom, #2197a9 0, rgba(33, 151, 169, 0) 199px); }
     #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--search,
     #utk-panel-mini .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--search {
       width: 0;
