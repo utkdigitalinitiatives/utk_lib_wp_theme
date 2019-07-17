@@ -51,9 +51,9 @@
     right: 0;
     top: 0;
     object-fit: cover !important;
-    object-position: top;
+    object-position: center;
     z-index: 0;
-    opacity: 0.29;
+    opacity: 0.18;
     filter: blur(29px); }
   .utk-exhibits--pane--meta {
     align-self: flex-end;
@@ -80,8 +80,7 @@
       font-size: 15px;
       line-height: 1.47em; }
     .utk-exhibits--pane--meta--thumb {
-      max-width: 199px;
-      max-height: 199px;
+      height: 199px;
       margin-bottom: 47px; }
     .utk-exhibits--pane--meta--location, .utk-exhibits--pane--meta--curators {
       display: block;
@@ -101,7 +100,7 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; }
+  justify-content: flex-start; }
   .ui.vertical.menu:before {
     content: 'Exhibits';
     font-size: 29px;
@@ -136,7 +135,7 @@
         margin-top: -35px;
         padding: 6px 18px 6px 47px;
         background-color: transparent;
-        color: #e0e0e0;
+        color: #a7a9ac;
         flex-direction: column;
         justify-content: center; }
     .ui.vertical.menu > .item.utk-exhibits--tab-Current::before {
