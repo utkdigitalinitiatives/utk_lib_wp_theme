@@ -1,4 +1,4 @@
-<div id="utk-lib-midsection">
+<div id="utk-lib-mid">
   @include('partials.sections.callout')
   @include('partials.sections.news-events')
   @include('partials.sections.social')
