@@ -7,7 +7,7 @@
         <div class="utk-image--caption">
             <span>@php echo $image['caption'] @endphp</span>
             @if( ! empty($captionLink) )
-                <a href="@php echo $captionLink; @endphp"><strong>More</strong> <span class="icon-right-big"></span></a>
+                <a href="@php echo $captionLink; @endphp" aria-label="read more about this image"><strong>More</strong> <span class="icon-right-big"></span></a>
             @endif
         </div>
     @endif
