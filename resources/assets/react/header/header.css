@@ -1176,7 +1176,57 @@ body.utk-search-open .utk-search {
     font-size: 15px;
     font-weight: 400;
     color: #58595b;
-    position: relative; }
+    position: relative;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-hours--loading {
+        background: #fff;
+        width: 100%;
+        position: relative;
+        color: #58595b;
+        font-weight: 700;
+        font-size: 13px;
+        display: flex; }
+        .utk-hours--loading.spinner::before {
+          position: relative !important;
+          margin-right: 11px; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .utk-hours--loading {
+        background: #fff;
+        width: 100%;
+        position: relative;
+        color: #58595b;
+        font-weight: 700;
+        font-size: 13px;
+        display: flex; }
+        .utk-hours--loading.spinner::before {
+          position: relative !important;
+          margin-right: 11px; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .utk-hours--loading {
+        padding: 29px !important; } }
+    @media (max-width: 767px) {
+      .utk-hours--loading {
+        padding: 29px 18px !important; } }
   .utk-hours--listing {
     margin: 0;
     display: flex;
@@ -1356,9 +1406,15 @@ body.utk-search-open .utk-search {
   width: 29px;
   height: 29px;
   border-radius: 50%;
-  border: 2px solid #e0e0e0;
-  border-top-color: #a7a9ac;
+  border: 6px solid #e0e0e0;
+  border-top-color: #ff8200;
   animation: spinner 1s linear infinite; }
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 /* Mobile Devices for Mice */
 /* Landscape phones and down */
