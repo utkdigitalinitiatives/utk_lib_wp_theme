@@ -1070,7 +1070,8 @@ body.utk-search-open .utk-search {
         justify-content: flex-start; } }
   @media (max-width: 767px) {
     .utk-header-super {
-      background-color: #fff; } }
+      padding: 11px 0;
+      margin-bottom: 18px; } }
   .utk-header-super .utk-menu-options {
     position: relative;
     /* Mobile Devices for Mice */
@@ -1205,7 +1206,10 @@ body.utk-search-open .utk-search {
         color: #58595b;
         font-weight: 700;
         font-size: 13px;
-        display: flex; }
+        display: flex;
+        height: 90px;
+        align-items: center;
+        justify-content: center; }
         .utk-hours--loading.spinner::before {
           position: relative !important;
           margin-right: 11px; } }
@@ -1217,16 +1221,19 @@ body.utk-search-open .utk-search {
         color: #58595b;
         font-weight: 700;
         font-size: 13px;
-        display: flex; }
+        display: flex;
+        height: 90px;
+        align-items: center;
+        justify-content: center; }
         .utk-hours--loading.spinner::before {
           position: relative !important;
           margin-right: 11px; } }
     @media (min-width: 768px) and (max-width: 991px) {
       .utk-hours--loading {
-        padding: 29px !important; } }
+        padding: 0 29px !important; } }
     @media (max-width: 767px) {
       .utk-hours--loading {
-        padding: 29px 18px !important; } }
+        padding: 0 18px !important; } }
   .utk-hours--listing {
     margin: 0;
     display: flex;
@@ -1420,7 +1427,7 @@ body.utk-search-open .utk-search {
 /* Landscape phones and down */
 @media (max-width: 767px) {
   .utk-hours {
-    background-color: #e0e0e0;
+    background-color: #fff;
     margin-top: 0;
     border-left: 0;
     width: calc(100%);
@@ -1432,10 +1439,11 @@ body.utk-search-open .utk-search {
     height: 121px; }
     .utk-hours .utk-hours-header {
       width: 100%;
-      text-align: center; }
+      text-align: center;
+      background-color: #58595b; }
       .utk-hours .utk-hours-header h3 {
         font-size: 13px;
-        color: #58595b;
+        color: #e0e0e0;
         margin: 2px 29px;
         /* Mobile Devices for Mice */
         /* Landscape phones and down */
@@ -1600,7 +1608,7 @@ body.utk-search-open .utk-search {
 /* Landscape phone to portrait tablet */
 @media (min-width: 768px) and (max-width: 991px) {
   .utk-hours {
-    background-color: #e0e0e0;
+    background-color: #fff;
     margin-top: 0;
     border-left: 0;
     width: calc(100%);
@@ -1612,10 +1620,11 @@ body.utk-search-open .utk-search {
     height: 121px; }
     .utk-hours .utk-hours-header {
       width: 100%;
-      text-align: center; }
+      text-align: center;
+      background-color: #58595b; }
       .utk-hours .utk-hours-header h3 {
         font-size: 13px;
-        color: #58595b;
+        color: #e0e0e0;
         margin: 2px 29px;
         /* Mobile Devices for Mice */
         /* Landscape phones and down */
@@ -1908,7 +1917,8 @@ a:hover {
       padding: 29px 18px;
       margin-left: -18px;
       width: calc(100% + 36px);
-      margin-bottom: 18px; } }
+      margin-bottom: 18px;
+      box-shadow: inset 0 2px 5px rgba(51, 51, 51, 0.15); } }
   .utk-resources-menu--help h3 {
     font-size: 15px;
     font-weight: 700;
@@ -2121,13 +2131,15 @@ a:hover {
       background-color: #58595b;
       padding: 29px;
       margin-left: -29px;
-      width: calc(100% + 58px); } }
+      width: calc(100% + 58px);
+      box-shadow: inset 0 2px 5px rgba(51, 51, 51, 0.15); } }
   @media (min-width: 768px) and (max-width: 991px) {
     .utk-resources-menu--about {
       background-color: #58595b;
       padding: 29px;
       margin-left: -29px;
-      width: calc(100% + 58px); } }
+      width: calc(100% + 58px);
+      box-shadow: inset 0 2px 5px rgba(51, 51, 51, 0.15); } }
   @media (max-width: 767px) {
     .utk-resources-menu--about {
       padding: 29px 18px 18px;
@@ -2152,12 +2164,12 @@ a:hover {
     /* desktop and large desktop */ }
     @media (max-width: 767px) {
       .utk-resources-menu--about h3 {
-        color: #fff;
+        color: #e0e0e0;
         font-weight: 700;
         margin: 0 0 11px; } }
     @media (min-width: 768px) and (max-width: 991px) {
       .utk-resources-menu--about h3 {
-        color: #fff;
+        color: #e0e0e0;
         font-weight: 700;
         margin: 0 0 11px; } }
     .utk-resources-menu--about h3::before {
@@ -2397,7 +2409,7 @@ body .utk-header-resources {
         margin-bottom: 0; }
         .utk-resources-menu--row:first-child h3 {
           font-size: 15px !important;
-          border-bottom: 1px solid #e0e0e0; } }
+          border-bottom: 2px solid #e0e0e0; } }
   @media (max-width: 767px) {
     .utk-resources-menu {
       width: 100%;
