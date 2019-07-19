@@ -7,7 +7,7 @@
 
 @section('content')
   @include('partials.page-header')
-  <div class="page-body page-body--archive @if($postStyleClass)page-body-archive-{{$postStyleClass}}@endif">
+  <div class="page-body page-body--archive @if($postStyleClass)page-body--archive-{{$postStyleClass}}@endif">
 
     @if('Blog' === $postStyle)
       @include('partials.sections.main-archive-blog')
