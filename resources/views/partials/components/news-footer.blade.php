@@ -11,10 +11,13 @@
     'posts_per_page' => 8
   ];
 
-  switch_to_blog(46);
-
-  // get news posts
-  $news = Model::utk_library_wp_query($args);
+  if (function_exists('switch_to_blog')) {
+    switch_to_blog(46);
+    $news = Model::utk_library_wp_query($args);
+  } else {
+    // @todo: build rest api get.
+    $news = [];
+  }
 
 @endphp
 
@@ -46,7 +49,10 @@
   @php
 
     wp_reset_query();
-    restore_current_blog();
+
+    if (function_exists('switch_to_blog')) {
+      restore_current_blog();
+    }
 
   @endphp
 
