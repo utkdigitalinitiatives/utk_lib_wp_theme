@@ -18,7 +18,6 @@
   $endpoint = 'https://www.lib.utk.edu/news/wp-json/model/recent?type=post&count=8';
   $news = Model::utk_lib_get_recent_posts($args, $endpoint);
 
-
 @endphp
 
 <div class="section-news news-wrap">
@@ -32,8 +31,15 @@
 
     <ul class="news-wrap--list">
       @foreach($news as $item)
+        @php
+          if (isset($item->url)) :
+            $url = $item->url;
+          else :
+            $url = get_the_permalink($item->ID);
+          endif;
+        @endphp
         <li class="news-wrap--list--item">
-          <a href="@php echo $item->url @endphp">@php echo $item->post_title @endphp</a>
+          <a href="@php echo $url @endphp">@php echo $item->post_title @endphp</a>
         </li>
       @endforeach
     </ul>
