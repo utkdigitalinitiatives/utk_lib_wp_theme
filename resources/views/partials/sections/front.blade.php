@@ -1,7 +1,15 @@
-{{--<link--}}
-{{--rel="stylesheet"--}}
-{{--href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"--}}
-{{--/>--}}
-<div id="utk-lib-home-hours"></div>
-<div id="utk-panel"></div>
-<section class="utk-home" id="utk-lib-home"></section>
+<div id="utk-lib-home-hours">
+    <noscript>
+        @include('partials.noscript.noscript-lib-home-hours')
+    </noscript>
+</div>
+<div id="utk-panel">
+    <noscript>
+        @include('partials.noscript.noscript-lib-home-panel')
+    </noscript>
+</div>
+<section class="utk-home" id="utk-lib-home">
+    <noscript>
+        @include('partials.noscript.noscript-lib-home')
+    </noscript>
+</section>

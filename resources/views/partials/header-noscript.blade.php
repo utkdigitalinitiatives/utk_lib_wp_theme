@@ -17,7 +17,7 @@
                             </a>
                             <a href="https://www.lib.utk.edu"
                                class="utk-logo-unit"
-                               tabindex="1">Libraries</a>
+                               tabindex="1">University Libraries</a>
                         </div>
                     </div>
                     <div class="utk-header-actions">
