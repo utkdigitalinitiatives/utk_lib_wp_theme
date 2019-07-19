@@ -25,4 +25,11 @@
         filter: none !important;
         opacity: 1;
     }
+    #utk-lib-home-hours .utk-hours .utk-hours--listing--item--more {
+        display: none !important;
+    }
+
+    #utk-lib-home-hours .utk-hours .utk-hours--listing--item--child {
+        max-width: 100%;
+    }
 </style>
