@@ -23,9 +23,7 @@
                 </div>
                 <div class="utk-menu-options">
                     <div class="utk-menu-help">
-                        <div id="libchat_8a9fa354ff9adc8c085107bc41e587c8" class="utk-libchat">
-                            <button class="libchat_online">Chat with Us</button>
-                        </div>
+                        <a href="/contact" class="btn btn-secondary">Ask Us Now</a>
                     </div>
                 </div>
             </div>
@@ -137,6 +135,4 @@
             </div>
         </div>
     </div>
-    <a class="utk-resources-close" data-event="option-resources-close"><span class="icon-cancel"
-                                                                             data-event="option-resources-close"></span></a>
 </div>
