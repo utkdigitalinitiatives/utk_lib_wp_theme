@@ -23,7 +23,7 @@
                 </div>
                 <div class="utk-menu-options">
                     <div class="utk-menu-help">
-                        <a href="/contact" class="btn btn-secondary">Ask Us Now</a>
+                        <a href="/info" class="btn btn-with-icon">Find Resources <span class="icon-right-open"></span></a>
                     </div>
                 </div>
             </div>
