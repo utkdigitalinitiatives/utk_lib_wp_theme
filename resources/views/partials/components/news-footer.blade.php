@@ -11,8 +11,10 @@
     'posts_per_page' => 8
   ];
 
+  switch_to_blog(46);
+
   // get news posts
-  $news = Model::utk_library_wp_query($blog_id, $args);
+  $news = Model::utk_library_wp_query($args);
 
 @endphp
 
@@ -41,6 +43,11 @@
 
   @endif
 
-  @php( wp_reset_query() )
+  @php
+
+    wp_reset_query();
+    restore_current_blog();
+
+  @endphp
 
 </div>
