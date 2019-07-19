@@ -13,11 +13,11 @@
 
   if (function_exists('switch_to_blog')) {
     switch_to_blog(46);
-    $news = Model::utk_library_wp_query($args);
-  } else {
-    // @todo: build rest api get.
-    $news = [];
   }
+
+  $endpoint = 'https://www.lib.utk.edu/news/wp-json/model/recent?type=post&count=8';
+  $news = Model::utk_lib_get_recent_posts($args, $endpoint);
+
 
 @endphp
 
@@ -30,14 +30,12 @@
 
   @if($news)
 
-
     <ul class="news-wrap--list">
-      @while ($news->have_posts())
-        @php $news->the_post() @endphp
+      @foreach($news as $item)
         <li class="news-wrap--list--item">
-          <a href="@php echo get_the_permalink() @endphp">@php echo get_the_title() @endphp</a>
+          <a href="@php echo $item->url @endphp">@php echo $item->post_title @endphp</a>
         </li>
-      @endwhile
+      @endforeach
     </ul>
 
   @else
@@ -47,8 +45,6 @@
   @endif
 
   @php
-
-    wp_reset_query();
 
     if (function_exists('switch_to_blog')) {
       restore_current_blog();
