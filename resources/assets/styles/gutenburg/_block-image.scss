@@ -4,5 +4,10 @@
     font-size: $type-2;
     font-family: $sans;
     font-style: italic;
+    line-height: 1.47em;
+
+    @include respond(xs) {
+      font-size: $type-1;
+    }
   }
 }

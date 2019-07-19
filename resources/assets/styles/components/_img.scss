@@ -54,6 +54,11 @@ img.lazyloaded {
     margin-left: -$golden-ratio-5;
     width: calc(100% + #{$golden-ratio-5 * 2});
 
+    @include respond(xs, sm) {
+      margin-left: 0;
+      width: 100%;
+    }
+
     figure {
       width: inherit;
 
@@ -72,6 +77,12 @@ img.lazyloaded {
       margin-left: $golden-ratio-4;
       margin-bottom: $golden-ratio-2;
 
+      @include respond(xs, sm) {
+        margin-right: 0;
+        width: $gr-short;
+        margin-left: $golden-ratio-3;
+      }
+
       img {
         margin-top: -10px;
       }
@@ -86,6 +97,12 @@ img.lazyloaded {
       margin-right: $golden-ratio-4;
       margin-left: -$golden-ratio-5;
       margin-bottom: $golden-ratio-2;
+
+      @include respond(xs, sm) {
+        margin-left: 0;
+        width: $gr-short;
+        margin-right: $golden-ratio-3;
+      }
 
       img {
         margin-top: -10px;

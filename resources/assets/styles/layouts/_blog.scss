@@ -3,12 +3,42 @@
     max-width: 740px;
     margin: 0 auto $golden-ratio-4;
 
+    @include respond(xs) {
+      max-width: 100%;
+    }
+
     h1 {
       font-family: $serif;
       font-weight: 400;
-      line-height: 1.25;
-      font-size: $type-6;
+      line-height: 1.29;
+      font-size: $type-7;
+      letter-spacing: -0.023em;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+
+      &::before {
+        width: $golden-ratio-5;
+        height: $golden-ratio-0;
+        display: block;
+        background-color: $orange;
+        content: ' ';
+        margin: 0 auto $golden-ratio-3;
+      }
+
+      @include respond(sm) {
+        font-size: $type-6;
+      }
+
+      @include respond(xs) {
+        font-size: $type-5;
+      }
     }
+  }
+
+  .page-body-blog--author,
+  .page-body-blog--meta {
+    text-align: center;
+    font-size: $type-2;
   }
 
   .page-body--content--body {
@@ -22,10 +52,17 @@
     h6 {
       margin-top: $golden-ratio-4;
       margin-bottom: $golden-ratio-2;
+      -webkit-font-smoothing: antialiased;
     }
 
     p {
+      -webkit-font-smoothing: antialiased;
+
       @include serif-body-rendering();
+
+      @include respond(xs, sm) {
+        font-size: $type-3;
+      }
     }
 
     blockquote.blockquote-long {
