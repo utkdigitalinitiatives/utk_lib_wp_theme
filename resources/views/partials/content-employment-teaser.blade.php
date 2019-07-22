@@ -12,8 +12,15 @@ $description        = get_field('employment_description');
 $department_id      = get_field('employment_department');
 $department         = get_term($department_id);
 
-// check this...
+$method             = get_field('employment_apply_method');
+$email              = get_field('employment_email');
 $application_url    = get_field('employment_application_url');
+
+if ($method === 'email') :
+    $apply = 'mailto:' . $email;
+elseif ($method === 'url') :
+    $apply = $application_url;
+endif;
 
 $new = Employment::is_position_new($dateline);
 $continue = '...';
@@ -36,7 +43,8 @@ $continue = '...';
             <div class="article--employment-teaser--main--description">
                 <p>@php echo wp_trim_words($description, '30', $continue) @endphp</p>
                 <a href="{{get_the_permalink()}}" class="btn btn-secondary">Read More</a>
-                <a href="{{$application_url}}" class="btn btn-secondary btn-outline">Apply</a>
+
+                <a class="btn btn-secondary btn-outline" href="@php echo $apply; @endphp">Apply</a>
             </div>
             <div class="article--meta article--employment-teaser--main--meta">
                 <span><strong>Posted</strong> @php echo $dateline @endphp</span>
