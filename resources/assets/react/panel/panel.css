@@ -591,6 +591,8 @@ body .utk-research-tools .ui.dropdown .menu > .item {
   width: 100%;
   display: flex;
   flex-direction: column; }
+  .utk-search .utk-search-method-hidden {
+    display: none !important; }
   .utk-search h3 {
     font-size: 23px;
     font-weight: 400;
