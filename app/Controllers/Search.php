@@ -12,7 +12,7 @@ class Search extends Controller
         if (isset($_GET['go']) && isset($_POST['method'])) :
             if ($_POST['method'] === 'libraries') :
                 wp_redirect('search?gcs=' . $_POST['value']);
-            elseif ($_POST['method'] === 'onesearch') :
+            elseif ($_POST['method'] === 'onesearch' && isset($_POST['primo'])) :
                 self::handleOneSearch();
             endif;
         else :
@@ -24,11 +24,31 @@ class Search extends Controller
 
     public function handleOneSearch()
     {
+
+        switch ($_POST['primo']) {
+            case 'onesearch':
+                $scope = 'OneSearch';
+                $tab = 'default_tab';
+                break;
+            case 'ut-collections':
+                $scope = 'default_scope';
+                $tab = 'local_tab';
+                break;
+            case 'course-reserves':
+                $scope = 'UTK_CR';
+                $tab = 'cr_tab';
+                break;
+            default:
+                $scope = 'OneSearch';
+                $tab = 'default_tab';
+        }
+
         // base url for primo
         $url="https://utk-almaprimo.hosted.exlibrisgroup.com/primo-explore";
         $url.="/search?vid=01UTK&institution=01UTK";
         $url.="&facet=rtype,exclude,reviews&facet=rtype,exclude,reference_entrys";
-        $url.="&search_scope=OneSearch&tab=default_tab&onCampus=false&group=GUEST";
+        $url.="&search_scope=" . $scope . '&tab=' . $tab;
+        $url.="&onCampus=false&group=GUEST";
 
         // sanitize before passing to primo
         if (isset($_POST['value'])) {
@@ -40,6 +60,7 @@ class Search extends Controller
         }
 
         $url .= "&query=any,contains,$bx";
+
         header("Location: $url");
         exit();
     }
