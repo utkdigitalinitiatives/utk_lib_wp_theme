@@ -33,7 +33,7 @@
   font-size: 18px;
   font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Gotham-Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 1px solid #e0e0e0;
-  border-radius: 11px;
+  border-radius: 6px;
   overflow: hidden; }
   .accordion .title {
     font-weight: 400;
@@ -59,16 +59,19 @@
         margin-right: 11px; }
     .accordion .title a:hover,
     .accordion .title a:focus {
-      color: #006c93; }
-    .accordion .title:hover a,
-    .accordion .title:hover a i, .accordion .title:focus-within a,
-    .accordion .title:focus-within a i {
-      color: #006c93; }
+      color: #333; }
+      .accordion .title a:hover i,
+      .accordion .title a:focus i {
+        color: #ff8200; }
+    .accordion .title:hover a, .accordion .title:focus-within a {
+      color: #333; }
+      .accordion .title:hover a i, .accordion .title:focus-within a i {
+        color: #ff8200; }
     .accordion .title.active {
-      font-weight: 700;
+      font-weight: 700 !important;
       display: block;
       border-bottom: none;
-      border-right-color: #ff8200;
+      border-right-color: #a7a9ac;
       color: #333; }
       .accordion .title.active i {
         color: #333; }
@@ -77,13 +80,16 @@
     padding: 6px 18px 18px;
     border-bottom: 1px solid #e0e0e0;
     border-right: 6px solid #e0e0e0; }
+    .accordion .content figure {
+      margin: 0;
+      padding: 0; }
     .accordion .content *:first-child {
       margin-top: 0 !important; }
     .accordion .content *:last-child {
       margin-bottom: 0 !important; }
     .accordion .content.active {
       display: block;
-      border-right-color: #ff8200; }
+      border-right-color: #a7a9ac; }
 
 /*
  * layout
