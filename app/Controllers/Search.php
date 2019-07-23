@@ -24,9 +24,9 @@ class Search extends Controller
 
     public function handleOneSearch()
     {
-        if (isset($_POST['primo'])) :
 
-            switch ($_POST['primo']) {
+        if (isset($_POST['primo'])) :
+            switch ($_POST['primo']) :
                 case 'onesearch':
                     $scope = 'OneSearch';
                     $tab = 'default_tab';
@@ -39,13 +39,10 @@ class Search extends Controller
                     $scope = 'UTK_CR';
                     $tab = 'cr_tab';
                     break;
-            }
-
-        else:
-
+            endswitch;
+        else :
             $scope = 'OneSearch';
             $tab = 'default_tab';
-
         endif;
 
         // base url for primo
