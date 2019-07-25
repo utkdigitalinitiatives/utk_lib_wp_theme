@@ -8,14 +8,15 @@
   // set wp_query args
   $args = [
     'post_type' => 'post',
-    'posts_per_page' => 8
+    'posts_per_page' => 8,
+    'post_status' => 'publish'
   ];
 
   if (function_exists('switch_to_blog')) {
     switch_to_blog(46);
   }
 
-  $endpoint = 'https://www.lib.utk.edu/news/wp-json/model/recent?type=post&count=8';
+  $endpoint = 'https://www.lib.utk.edu/news/wp-json/model/recent?type=post&count=8&status=publish';
   $news = Model::utk_lib_get_recent_posts($args, $endpoint);
 
 @endphp
