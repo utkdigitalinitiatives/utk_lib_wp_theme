@@ -590,7 +590,104 @@ body .utk-research-tools .ui.dropdown .menu > .item {
   position: relative;
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .utk-search {
+      flex-direction: column-reverse; } }
+  .utk-search form {
+    position: relative; }
+    .utk-search form .utk-search--icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 47px;
+      height: 47px;
+      background-color: transparent;
+      z-index: 2;
+      border-top-left-radius: 29px;
+      border-bottom-left-radius: 29px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center; }
+      .utk-search form .utk-search--icon > span {
+        color: #a7a9ac;
+        font-size: 15px; }
+  .utk-search--links {
+    position: absolute;
+    right: 0;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    text-align: right;
+    padding-right: 123px;
+    margin-top: 3px;
+    text-transform: uppercase;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .utk-search--links {
+        padding-right: 47px; } }
+    @media (max-width: 767px) {
+      .utk-search--links {
+        padding-right: 6px; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .utk-search--links {
+        padding-right: 6px; } }
+    @media (max-width: 767px) {
+      .utk-search--links {
+        position: static;
+        justify-content: flex-end;
+        margin-top: 11px;
+        padding-right: 6px; } }
+    .utk-search--links a,
+    .utk-search--links a:visited {
+      color: #fff;
+      margin-left: 11px;
+      text-decoration: none;
+      display: flex; }
+      .utk-search--links a span,
+      .utk-search--links a:visited span {
+        color: #ff8200;
+        font-size: 9px;
+        margin-left: 2px;
+        margin-top: -1px; }
+      .utk-search--links a:hover, .utk-search--links a:focus,
+      .utk-search--links a:visited:hover,
+      .utk-search--links a:visited:focus {
+        color: #fff; }
+        .utk-search--links a:hover span, .utk-search--links a:focus span,
+        .utk-search--links a:visited:hover span,
+        .utk-search--links a:visited:focus span {
+          color: #ff8200; }
   .utk-search .utk-search-method-hidden {
     display: none !important; }
   .utk-search h3 {
@@ -625,15 +722,14 @@ body .utk-research-tools .ui.dropdown .menu > .item {
     /* desktop and large desktop */ }
     @media (min-width: 992px) and (max-width: 1199px) {
       .utk-search .utk-search-tabs {
-        padding-right: 76px; } }
+        padding-right: 47px; } }
     @media (min-width: 768px) and (max-width: 991px) {
       .utk-search .utk-search-tabs {
         padding-right: 0;
         padding-bottom: 47px; } }
     @media (max-width: 767px) {
       .utk-search .utk-search-tabs {
-        padding-right: 0;
-        padding-bottom: 29px; } }
+        padding-right: 0; } }
     .utk-search .utk-search-tabs > .ui.menu {
       margin-bottom: 18px;
       /* Mobile Devices for Mice */
@@ -653,7 +749,8 @@ body .utk-research-tools .ui.dropdown .menu > .item {
         transition: all 290ms ease-in-out;
         text-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
         margin-top: 0;
-        color: #fff !important;
+        opacity: 0.88;
+        color: #fff;
         margin-right: 29px;
         /* Mobile Devices for Mice */
         /* Landscape phones and down */
@@ -729,7 +826,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
         font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
         height: 47px;
         border: none;
-        padding-left: 18px;
+        padding-left: 47px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-radius: 47px !important;
@@ -839,6 +936,22 @@ body .utk-research-tools .ui.dropdown .menu > .item {
   @media (max-width: 767px) {
     #utk-panel-mini {
       margin-top: 0 !important; } }
+  #utk-panel-mini .utk-search--links {
+    padding-right: 0; }
+    #utk-panel-mini .utk-search--links a,
+    #utk-panel-mini .utk-search--links a:visited {
+      color: #006c93; }
+      #utk-panel-mini .utk-search--links a span,
+      #utk-panel-mini .utk-search--links a:visited span {
+        color: #006c93; }
+      #utk-panel-mini .utk-search--links a:hover, #utk-panel-mini .utk-search--links a:focus,
+      #utk-panel-mini .utk-search--links a:visited:hover,
+      #utk-panel-mini .utk-search--links a:visited:focus {
+        color: #006c93; }
+        #utk-panel-mini .utk-search--links a:hover span, #utk-panel-mini .utk-search--links a:focus span,
+        #utk-panel-mini .utk-search--links a:visited:hover span,
+        #utk-panel-mini .utk-search--links a:visited:focus span {
+          color: #006c93; }
   #utk-panel-mini .utk-search .utk-search-tabs {
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
@@ -920,6 +1033,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
     transition: all 290ms ease-in-out;
     text-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
     margin-top: 0;
+    opacity: 0.88;
     color: #fff !important;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
@@ -1742,15 +1856,15 @@ body {
   #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools,
   #utk-panel-mini .utk-panel-wrap.utk-panel-focus-research-tools {
     color: #fff;
-    background-color: #2197a9; }
+    background-color: #006c93; }
     #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools > .utk-panel-underlay > .utk-panel-overlay--fade,
     #utk-panel-mini .utk-panel-wrap.utk-panel-focus-research-tools > .utk-panel-underlay > .utk-panel-overlay--fade {
-      background: -moz-linear-gradient(top, #2197a9 0, rgba(33, 151, 169, 0) 199px);
-      background: -webkit-gradient(linear, top, bottom, color-stop(0, #2197a9), color-stop(199px, rgba(33, 151, 169, 0)));
-      background: -webkit-linear-gradient(top, #2197a9 0, rgba(33, 151, 169, 0) 199px);
-      background: -o-linear-gradient(top, #2197a9 0, rgba(33, 151, 169, 0) 199px);
-      background: -ms-linear-gradient(top, #2197a9 0, rgba(33, 151, 169, 0) 199px);
-      background: linear-gradient(to bottom, #2197a9 0, rgba(33, 151, 169, 0) 199px); }
+      background: -moz-linear-gradient(top, #006c93 0, rgba(0, 108, 147, 0) 199px);
+      background: -webkit-gradient(linear, top, bottom, color-stop(0, #006c93), color-stop(199px, rgba(0, 108, 147, 0)));
+      background: -webkit-linear-gradient(top, #006c93 0, rgba(0, 108, 147, 0) 199px);
+      background: -o-linear-gradient(top, #006c93 0, rgba(0, 108, 147, 0) 199px);
+      background: -ms-linear-gradient(top, #006c93 0, rgba(0, 108, 147, 0) 199px);
+      background: linear-gradient(to bottom, #006c93 0, rgba(0, 108, 147, 0) 199px); }
     #utk-panel .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--search,
     #utk-panel-mini .utk-panel-wrap.utk-panel-focus-research-tools .utk-panel--search {
       width: 0;
