@@ -10,10 +10,11 @@ class Search extends Controller
     {
 
         if (isset($_GET['go']) && isset($_POST['method'])) :
+            $searchValue = urlencode(stripslashes($_POST['value']));
             if ($_POST['method'] === 'libraries') :
-                wp_redirect('search?gcs=' . $_POST['value']);
+                wp_redirect('search?gcs=' . $searchValue);
             elseif ($_POST['method'] === 'onesearch') :
-                self::handleOneSearch();
+                self::handleOneSearch($searchValue);
             endif;
         else :
             return;
@@ -22,7 +23,7 @@ class Search extends Controller
         return;
     }
 
-    public function handleOneSearch()
+    public function handleOneSearch($value)
     {
 
         if (isset($_POST['primo'])) :
@@ -53,15 +54,14 @@ class Search extends Controller
         $url.="&onCampus=false&group=GUEST";
 
         // sanitize before passing to primo
-        if (isset($_POST['value'])) {
-            $box=urlencode($_POST['value']);
-            $box=trim($box);
-            $box=htmlentities($box);
-            $box=stripslashes($box);
-            $bx=$box;
+        if (isset($value)) {
+            $box = trim($value);
+            $box = htmlentities($box);
+            $box = stripslashes($box);
+            $val = $box;
         }
 
-        $url .= "&query=any,contains,$bx";
+        $url .= "&query=any,contains,$val";
 
         header("Location: $url");
         exit();
