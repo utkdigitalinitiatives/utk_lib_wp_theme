@@ -38,6 +38,7 @@
       background-color: $gray-0;
       border: 1px solid $gray-0;
       overflow: hidden;
+      margin-right: $golden-ratio-2;
 
       @include respond(xs) {
         width: $golden-ratio-5;
@@ -53,7 +54,6 @@
     }
 
     &--content {
-      margin-left: $golden-ratio-2;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
