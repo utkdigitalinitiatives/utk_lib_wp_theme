@@ -182,12 +182,12 @@ let webpackConfig = {
 
     new CompressionPlugin(),
 
-    // new CleanPlugin([config.paths.dist], {
-    //   root: config.paths.root,
-    //   verbose: true,
-    //   cleanStaleWebpackAssets: true,
-    //   protectWebpackAssets: true,
-    // }),
+    new CleanPlugin([config.paths.dist], {
+      root: config.paths.root,
+      verbose: true,
+      cleanStaleWebpackAssets: true,
+      protectWebpackAssets: true,
+    }),
   ],
 };
 
@@ -205,13 +205,13 @@ if (config.enabled.cacheBusting) {
   const WebpackAssetsManifest = require('webpack-assets-manifest');
 
   webpackConfig.plugins.push(
-    new WebpackAssetsManifest({
-      output: 'assets.json',
-      space: 2,
-      writeToDisk: false,
-      assets: config.manifest,
-      replacer: require('./util/assetManifestsFormatter'),
-    })
+      new WebpackAssetsManifest({
+        output: 'assets.json',
+        space: 2,
+        writeToDisk: false,
+        assets: config.manifest,
+        replacer: require('./util/assetManifestsFormatter'),
+      })
   );
 }
 
