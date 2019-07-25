@@ -10,11 +10,11 @@ class Search extends Controller
     {
 
         if (isset($_GET['go']) && isset($_POST['method'])) :
-            $searchValue = urlencode(stripslashes($_POST['value']));
             if ($_POST['method'] === 'libraries') :
-                wp_redirect('search?gcs=' . $searchValue);
+                $path = 'search?gcs=' . urlencode(stripslashes($_POST['value']));
+                wp_redirect($path);
             elseif ($_POST['method'] === 'onesearch') :
-                self::handleOneSearch($searchValue);
+                self::handleOneSearch();
             endif;
         else :
             return;
@@ -23,7 +23,7 @@ class Search extends Controller
         return;
     }
 
-    public function handleOneSearch($value)
+    public function handleOneSearch()
     {
 
         if (isset($_POST['primo'])) :
@@ -54,7 +54,8 @@ class Search extends Controller
         $url.="&onCampus=false&group=GUEST";
 
         // sanitize before passing to primo
-        if (isset($value)) {
+        if (isset($_POST['value'])) {
+            $value = urlencode(stripslashes($_POST['value']));
             $box = trim($value);
             $box = htmlentities($box);
             $box = stripslashes($box);
