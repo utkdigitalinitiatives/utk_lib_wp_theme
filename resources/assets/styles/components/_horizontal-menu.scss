@@ -9,15 +9,29 @@
     flex-direction: row;
     height: $golden-ratio-4;
 
+    @include respond(xs) {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      margin-left: -$golden-ratio-2;
+      padding: 0 $golden-ratio-2;
+      width: calc(100% + #{$golden-ratio-2 * 2});
+      position: relative;
+    }
+
     li {
       margin: 0 $golden-ratio-2 0 0;
       padding: 0;
       font-size: $type-1;
       display: flex;
       align-items: center;
+      white-space: nowrap;
 
       &:last-child {
         margin-right: 0;
+
+        @include respond(xs) {
+          margin-right: $golden-ratio-2;
+        }
       }
 
       a,
@@ -45,6 +59,10 @@
           border-left: 12px solid transparent;
           border-right: 12px solid transparent;
           border-bottom: 8px solid $white;
+
+          @include respond(xs) {
+            border-bottom: 8px solid $rock;
+          }
         }
 
         > a {
