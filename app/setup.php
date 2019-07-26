@@ -54,7 +54,7 @@ add_action('wp_enqueue_scripts', function () {
         wp_enqueue_script('ut/panel.js', asset_path('scripts/panel.js'), [], null, true);
     endif;
 
-    wp_enqueue_script( 'ut/gtm', asset_path('scripts/gtm.js'), [], '', false );
+    wp_enqueue_script('ut/gtm', asset_path('scripts/gtm.js'), [], '', false);
 
     wp_enqueue_script('ut/main.js', asset_path('scripts/main.js'), [], null, true);
 
