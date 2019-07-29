@@ -39,10 +39,15 @@
 
 <div id="utk-subsite-menu"
      data-url="@php echo network_site_url(); @endphp"
-     data-subsite-slug="@php echo $subsite_path; @endphp"
+     @if(!is_multisite())
+        data-subsite-entity="@php echo strtolower(get_bloginfo('name')); @endphp"
+        data-subsite-slug="/"
+     @else
+        data-subsite-slug="@php echo $subsite_path; @endphp"
+     @endif
      data-menu-api-slug="subsite"
      @if($post_id)
-     data-initial-post="@php echo $post_id; @endphp"
+        data-initial-post="@php echo $post_id; @endphp"
      @endif
      data-initial-menu-id="@php echo $initial_menu_id; @endphp"
      data-initial-depth="@php echo $initial_depth; @endphp"
