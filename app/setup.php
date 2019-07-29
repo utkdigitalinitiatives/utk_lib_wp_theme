@@ -33,9 +33,10 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('ut/header.css', asset_path('styles/header.css'), false, null);
     wp_enqueue_script('ut/header.js', asset_path('scripts/header.js'), [], null, true);
 
-    if (is_main_site() && is_front_page()) :
+    if (is_main_site() && is_front_page() && is_multisite()) :
         wp_enqueue_style('ut/panel.css', asset_path('styles/panel.css'), false, null);
         wp_enqueue_script('ut/panel.js', asset_path('scripts/panel.js'), [], null, true);
+
     else :
         wp_enqueue_style('ut/subsite-menu.css', asset_path('styles/subsite-menu.css'), false, null);
         wp_enqueue_script('ut/subsite-menu.js', asset_path('scripts/subsite-menu.js'), [], null, true);
