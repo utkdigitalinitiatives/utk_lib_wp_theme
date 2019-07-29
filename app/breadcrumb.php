@@ -30,10 +30,17 @@ class SubsiteBreadcumb
 
     public static function breadcrumbGetTrunk($details)
     {
-        return [
-            '<a href="' . network_site_url() .'">Libraries</a>',
-            '<a href="' . $details->siteurl . '">' . $details->blogname  .'</a>'
-        ];
+        if (is_multisite()) :
+            return [
+                '<a href="' . network_site_url() .'">Libraries</a>',
+                '<a href="' . $details->siteurl . '">' . $details->blogname  .'</a>'
+            ];
+        else :
+            return [
+                '<a href="https://www.lib.utk.edu">Libraries</a>',
+                '<a href="' . get_bloginfo('url') . '">' . get_bloginfo('name') . '</a>'
+            ];
+        endif;
     }
 
     public static function breadcrumbRender($details, $items)
