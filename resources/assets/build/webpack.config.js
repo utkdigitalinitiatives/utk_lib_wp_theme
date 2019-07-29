@@ -135,10 +135,6 @@ let webpackConfig = {
     jquery: 'jQuery',
   },
   plugins: [
-    new CleanPlugin([config.paths.dist], {
-      root: config.paths.root,
-      verbose: false,
-    }),
     /**
      * It would be nice to switch to copy-webpack-plugin, but
      * unfortunately it doesn't provide a reliable way of
@@ -185,6 +181,13 @@ let webpackConfig = {
     new FriendlyErrorsWebpackPlugin(),
 
     new CompressionPlugin(),
+
+    // new CleanPlugin([config.paths.dist], {
+    //   root: config.paths.root,
+    //   verbose: true,
+    //   cleanStaleWebpackAssets: true,
+    //   protectWebpackAssets: true,
+    // }),
   ],
 };
 
@@ -195,7 +198,7 @@ if (config.enabled.optimize) {
 }
 
 if (config.env.production) {
-  webpackConfig.plugins.push(new webpack.NoEmitOnErrorsPlugin());
+  // webpackConfig.plugins.push(new webpack.NoEmitOnErrorsPlugin());
 }
 
 if (config.enabled.cacheBusting) {

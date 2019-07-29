@@ -86,4 +86,78 @@ class App extends Controller
 
         return $hash;
     }
+
+    public static function renderEndDots()
+    {
+        return '<span class="utk-end">
+                    <span class="utk-end--dot"></span>
+                    <span class="utk-end--dot"></span>
+                    <span class="utk-end--dot"></span>
+                </span>
+                ';
+    }
+
+    public static function utkGetSingleAside($post_id, $count)
+    {
+
+        $terms = get_the_terms($post_id, 'category');
+
+        if (is_array($terms)) :
+            return self::utkGetRelatedPosts($post_id, $count);
+        else :
+            return self::utkGetRecentPosts($post_id, $count);
+        endif;
+    }
+
+    public static function utkGetRelatedPosts($post_id, $count)
+    {
+
+        $terms = get_the_terms($post_id, 'category');
+
+        if (empty($terms)) {
+            $terms = array();
+        }
+
+        $term_list = wp_list_pluck($terms, 'slug');
+
+        $this_year = date("Y");
+        $last_year = $this_year - 1;
+
+        $related_args = array(
+            'post_type' => 'post',
+            'posts_per_page' => $count,
+            'post_status' => 'publish',
+            'post__not_in' => array( $post_id ),
+            'orderby' => 'rand',
+            'date_query' => array(
+                'relation' => 'OR',
+                array('year' => $this_year),
+                array('year' => $last_year)
+            ),
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'category',
+                    'field' => 'slug',
+                    'terms' => $term_list
+                )
+            )
+        );
+
+        return new \WP_Query($related_args);
+    }
+
+    public static function utkGetRecentPosts($post_id, $count)
+    {
+
+        $related_args = array(
+            'post_type' => 'post',
+            'posts_per_page' => $count,
+            'post_status' => 'publish',
+            'post__not_in' => array( $post_id ),
+            'orderby' => 'post_date',
+            'order' => 'DESC'
+        );
+
+        return new \WP_Query($related_args);
+    }
 }

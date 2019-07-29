@@ -25,6 +25,8 @@ Namespace App\Controllers;
             @endwhile
         @endif
 
+        @php echo App::renderEndDots() @endphp
+
     </div>
 
 @endif

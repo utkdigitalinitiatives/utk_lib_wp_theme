@@ -16,6 +16,9 @@
                 <div class="page-body-blog--meta">
                     <span>{{$dateline}}</span>
                 </div>
+                <div class="article--meta article--meta-categories">
+                    @php echo get_the_category_list() @endphp
+                </div>
             </div>
         </header>
         <div class="article--body">

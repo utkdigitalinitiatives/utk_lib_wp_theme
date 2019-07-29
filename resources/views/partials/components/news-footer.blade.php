@@ -8,11 +8,16 @@
   // set wp_query args
   $args = [
     'post_type' => 'post',
-    'posts_per_page' => 8
+    'posts_per_page' => 8,
+    'post_status' => 'publish'
   ];
 
-  // get news posts
-  $news = Model::utk_library_wp_query($blog_id, $args);
+  if (function_exists('switch_to_blog')) {
+    switch_to_blog(46);
+  }
+
+  $endpoint = 'https://www.lib.utk.edu/news/wp-json/model/recent?type=post&count=8&status=publish';
+  $news = Model::utk_lib_get_recent_posts($args, $endpoint);
 
 @endphp
 
@@ -25,14 +30,19 @@
 
   @if($news)
 
-
     <ul class="news-wrap--list">
-      @while ($news->have_posts())
-        @php $news->the_post() @endphp
+      @foreach($news as $item)
+        @php
+          if (isset($item->url)) :
+            $url = $item->url;
+          else :
+            $url = get_the_permalink($item->ID);
+          endif;
+        @endphp
         <li class="news-wrap--list--item">
-          <a href="@php echo get_the_permalink() @endphp">@php echo get_the_title() @endphp</a>
+          <a href="@php echo $url @endphp">@php echo $item->post_title @endphp</a>
         </li>
-      @endwhile
+      @endforeach
     </ul>
 
   @else
@@ -41,6 +51,12 @@
 
   @endif
 
-  @php( wp_reset_query() )
+  @php
+
+    if (function_exists('switch_to_blog')) {
+      restore_current_blog();
+    }
+
+  @endphp
 
 </div>

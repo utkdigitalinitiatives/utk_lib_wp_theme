@@ -1,6 +1,6 @@
 .section-news {
   &--header {
-    border-bottom: 1px solid $gray-1;
+    border-bottom: 2px solid $gray-1;
     padding-bottom: $golden-ratio-0;
     display: flex;
     flex-direction: row;
@@ -36,6 +36,21 @@
       padding: 0;
       list-style: none;
       margin-bottom: $golden-ratio-1;
+      line-height: 1.47;
+      padding-left: $golden-ratio-1;
+
+      &::before {
+        font-size: $type-0;
+        content: "\F105";
+        font-family: fontello, monospace;
+        -webkit-font-smoothing: antialiased;
+        display: block;
+        color: $rock;
+        margin-right: $golden-ratio-0;
+        position: absolute;
+        margin-left: -11px;
+        margin-top: 2px;
+      }
 
       @include standard-body-link();
 

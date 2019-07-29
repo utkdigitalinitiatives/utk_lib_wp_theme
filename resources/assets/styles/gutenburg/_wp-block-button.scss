@@ -1,0 +1,66 @@
+.wp-block-button {
+  height: $golden-ratio-4 !important;
+
+  &__link {
+    @extend .btn;
+    @extend .btn-default;
+
+    display: inline-block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    height: $golden-ratio-4 !important;
+    line-height: $golden-ratio-4 !important;
+    overflow: hidden !important;
+    color: $white !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    flex-wrap: nowrap !important;
+    text-align: left !important;
+    margin-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    padding-right: $golden-ratio-4 !important;
+    position: relative !important;
+
+    &::after {
+      width: $golden-ratio-4;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-align: center;
+      line-height: $golden-ratio-4;
+      background-color: transparent;
+      color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: fontello, monospace;
+      content: "\E802";
+      -webkit-font-smoothing: antialiased;
+    }
+
+    &.has-orange-background-color {
+      background-color: $white !important;
+      box-shadow: $box-shadow !important;
+      color: $smokeyx !important;
+      position: relative;
+      padding-right: calc(#{$golden-ratio-2 + $golden-ratio-4}) !important;
+
+      &::after {
+        width: $golden-ratio-4;
+        background-color: $orange;
+      }
+    }
+
+    &.has-smokey-background-color {
+      background-color: $smokey;
+    }
+
+    &.has-globe-background-color {
+      background-color: $globe;
+    }
+  }
+}

@@ -16,11 +16,20 @@
           h2.article--header--title {
             font-size: $type-4;
             margin-bottom: $golden-ratio-1;
+            margin-top: 0;
           }
 
           .article--meta {
-            font-size: $type-2;
+            font-size: $type-1;
             color: $smokey;
+          }
+        }
+      }
+
+      .article--body {
+        &--summary {
+          p {
+            font-size: $type-2;
           }
         }
       }
@@ -71,7 +80,10 @@
   .page-body--aside {
     &--facets {
       margin-bottom: $golden-ratio-3;
-      padding-left: $golden-ratio-2;
+
+      @include respond(xs, sm) {
+        display: none;
+      }
 
       &--item {
         margin-bottom: $golden-ratio-2 !important;
@@ -84,7 +96,59 @@
           color: $smokey;
           font-size: $type-1;
           text-transform: uppercase;
-          margin-bottom: $golden-ratio-1;
+          margin-bottom: $golden-ratio-0;
+        }
+      }
+    }
+  }
+
+  &-blog {
+    background-color: $gray-1 !important;
+
+    .page-body--flex {
+      flex-direction: column !important;
+
+      .page-body--content {
+        width: 100% !important;
+
+        .facetwp-template {
+          display: flex;
+          flex: 1;
+          flex-flow: row wrap;
+
+          article.post {
+            width: $gr-short;
+            display: flex;
+            flex-flow: column;
+            padding: $golden-ratio-4;
+            background-color: $white;
+            box-shadow: $box-shadow;
+            margin-bottom: $golden-ratio-2;
+
+            .article--thumbnail {
+              order: -1;
+              margin-bottom: $golden-ratio-3;
+              margin-left: -$golden-ratio-4;
+              margin-top: -$golden-ratio-4;
+            }
+
+            &:first-child {
+              width: $gr-long !important;
+            }
+
+            &:nth-child(4n) {
+              max-width: $gr-long !important;
+            }
+
+            &:nth-child(3n) {
+              width: $gr-long !important;
+              margin-left: $gr-short;
+            }
+
+            &:nth-child(even) {
+              margin-top: -$golden-ratio-5;
+            }
+          }
         }
       }
     }

@@ -30,7 +30,7 @@
         <h2 class="page-header--title" id="subsite-title">
             @php echo $title @endphp
         </h2>
-        <p id="subsite-long-title">@php echo $long_title; @endphp</p>
+        <span id="subsite-long-title">@php echo $long_title; @endphp</span>
       </a>
     @else
       <a href="{{$siteURL}}"

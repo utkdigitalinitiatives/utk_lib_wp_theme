@@ -2,6 +2,7 @@
     $allowedSites = [
         91
     ];
+
 @endphp
 @if (is_front_page() && in_array(get_current_blog_id(), $allowedSites))
     <div class="utk-gcs-wrap @if(isset($_GET['gcs'])) utk-gcs-active @endif">
@@ -11,7 +12,7 @@
                     <input name="gcs"
                            type="text"
                            placeholder="Find hours, services, and more..."
-                           value="@php echo $_GET['gcs'] @endphp"
+                           value='@php print esc_attr(stripcslashes($_GET['gcs'])) @endphp'
                            class="utk-gcs--search" />
                     @if(isset($_GET['gcs']))
                         <input type="submit"

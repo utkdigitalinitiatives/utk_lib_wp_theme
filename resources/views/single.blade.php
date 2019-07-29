@@ -14,10 +14,10 @@
                 @include('partials.sections.main-blog')
 
             @elseif('Standard' === $postStyle)
-                @include('partials.sections.main')
+                @include('partials.sections.main-single')
 
             @else
-                @include('partials.sections.main')
+                @include('partials.sections.main-single')
 
             @endif
 

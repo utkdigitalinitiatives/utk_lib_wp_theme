@@ -1,0 +1,59 @@
+.aside-subsite-single {
+  .utk-aside--widget {
+    background-color: $white;
+    padding: 0 $golden-ratio-3 0 0;
+    margin-bottom: $golden-ratio-3;
+
+    > h3 {
+      font-size: $type-2;
+      margin: 0 0 $golden-ratio-1;
+      font-weight: 700;
+      display: flex;
+      color: $smokey;
+      line-height: 1.29em;
+      position: relative;
+
+      &::before {
+        font-size: $type-0;
+        content: "\E812";
+        font-family: fontello, monospace;
+        -webkit-font-smoothing: antialiased;
+        display: block;
+        color: $orange;
+        margin-right: $golden-ratio-0;
+        position: absolute;
+        margin-left: -18px;
+
+        @include respond(xs, sm) {
+          margin-left: 0;
+          position: relative;
+        }
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    p,
+    li {
+      font-size: $type-2;
+      color: $smokey;
+      line-height: 1.47em;
+      list-style: none;
+      margin: 0 0 $golden-ratio-1;
+      padding: 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include standard-body-link();
+  }
+}

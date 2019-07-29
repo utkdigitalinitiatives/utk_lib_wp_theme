@@ -13,10 +13,18 @@
   &.utk-gcs-active {
     .utk-gcs-results {
       width: $gr-long;
+
+      @include respond(xs, sm, md) {
+        width: 100%;
+      }
     }
 
     .utk-gcs-aside {
       width: $gr-short;
+
+      @include respond(xs, sm, md) {
+        width: 0;
+      }
     }
   }
 }

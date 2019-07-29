@@ -49,6 +49,10 @@
     width: $gr-short;
     padding: $golden-ratio-2 $golden-ratio-3;
 
+    @include respond(xs) {
+      padding: $golden-ratio-2;
+    }
+
     p,
     ul,
     ol,
@@ -61,16 +65,14 @@
 
   .utk-card--image {
     display: flex;
-    position: relative;
     width: $gr-long;
     padding-top: $gr-short;
-    height: $gr-short;
     background-color: $gray-1;
+    position: relative;
 
     img {
       min-width: 100%;
       max-width: 100%;
-      height: auto;
       position: absolute;
       right: 0;
       top: 0;
@@ -145,6 +147,10 @@
   border-top-width: $golden-ratio-1;
   border-top-style: solid;
 
+  @include respond(xs) {
+    border: none !important;
+  }
+
   .utk-card--content {
     width: 100%;
 
@@ -152,13 +158,18 @@
       h4 {
         font-size: $type-2;
         text-transform: none;
-        margin-bottom: $golden-ratio-0;
+        margin: 0 !important;
+        line-height: 1.29em;
       }
     }
 
     p {
-      margin-top: 0;
+      margin-top: $golden-ratio-0;
       font-size: $type-2;
+
+      @include respond(xs) {
+        font-size: $type-1;
+      }
     }
   }
 
@@ -166,7 +177,6 @@
     width: 100%;
     padding-right: 0;
     padding-top: $gr-long;
-    height: $gr-long;
 
     img {
       left: 0;
@@ -204,6 +214,16 @@ body:not(.wp-admin) {
     &[class*="utk-card-align-"] {
       width: $gr-short;
       max-width: 100%;
+
+      @include respond(xs) {
+        width: calc(100% + 36px) !important;
+        max-width: calc(100% + 36px) !important;
+        float: none !important;
+        margin-top: $golden-ratio-2 !important;
+        margin-right: 0 !important;
+        margin-bottom: $golden-ratio-3 !important;
+        margin-left: -$golden-ratio-2 !important;
+      }
     }
 
     &-align-right {

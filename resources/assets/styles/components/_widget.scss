@@ -1,0 +1,57 @@
+.aside-subsite-custom-widgets {
+  @include respond(xs, sm) {
+    padding-bottom: $golden-ratio-4;
+  }
+
+  .widget {
+    margin-top: $golden-ratio-3;
+
+    &_text {
+      background-color: $white;
+      padding: 0 $golden-ratio-3 0 0;
+
+      > h3 {
+        font-size: $type-2;
+        margin: $golden-ratio-1 0;
+        font-weight: 700;
+        display: flex;
+        color: $smokey;
+        line-height: 1.29em;
+        position: relative;
+
+        &::before {
+          font-size: $type-0;
+          content: "\E812";
+          font-family: fontello, monospace;
+          -webkit-font-smoothing: antialiased;
+          display: block;
+          color: $orange;
+          margin-right: $golden-ratio-0;
+          position: absolute;
+          margin-left: -18px;
+
+          @include respond(xs, sm) {
+            margin-left: 0;
+            position: relative;
+          }
+        }
+      }
+
+      p,
+      li {
+        font-size: $type-1;
+        color: $smokey;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @include standard-body-link();
+    }
+  }
+}

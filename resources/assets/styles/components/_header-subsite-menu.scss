@@ -8,7 +8,6 @@
   a.menu-subsite-trigger:focus {
     position: relative;
     color: $white;
-    display: block;
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
@@ -19,6 +18,9 @@
     text-align: center;
     cursor: pointer;
     margin-right: $golden-ratio-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include respond(xs, sm) {
       display: none;
@@ -193,9 +195,11 @@
   line-height: $golden-ratio-4;
   font-size: 24px !important;
   margin-left: -8.5px;
+  align-items: center;
+  justify-content: center;
 
   @include respond(xs, sm) {
-    display: block;
+    display: flex;
   }
 
   @include respond(sm) {

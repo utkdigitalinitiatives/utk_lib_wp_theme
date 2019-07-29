@@ -20,36 +20,24 @@
   background-color: $white;
   padding: $golden-ratio-4 0;
 
-  @include respond(xs, sm) {
-    padding: $golden-ratio-4 0;
+  @include respond(md) {
+    padding: $golden-ratio-4 0 0;
   }
 
   .row .col-lg {
     &:first-of-type .col--component {
-      margin-right: 10px;
+      margin-right: 14.5px;
 
-      @include respond(sm) {
+      @include respond(xs, sm) {
         margin-right: 0;
-        padding: 0 32px;
-      }
-
-      @include respond(xs) {
-        margin-right: 0;
-        padding: 0 14px;
       }
     }
 
     &:last-of-type .col--component {
-      margin-left: 10px;
+      margin-left: 14.5px;
 
-      @include respond(sm) {
+      @include respond(xs, sm) {
         margin-left: 0;
-        padding: 0 32px;
-      }
-
-      @include respond(xs) {
-        margin-left: 0;
-        padding: 0 14px;
       }
     }
   }
@@ -60,5 +48,6 @@
 }
 
 .section-social {
-  background-color: $gray-1;
+  background-color: $gray-0;
+  box-shadow: inset $box-shadow;
 }

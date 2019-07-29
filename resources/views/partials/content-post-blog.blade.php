@@ -12,8 +12,7 @@ Namespace App\Controllers;
             $author     = get_the_author_meta('display_name', $post->post_author);
             $estimate   = App::estimateReadTime($post->post_content)
         @endphp
-        <h1>@php echo get_the_title(); @endphp</h1>
-
+        <span class="utk-heading-1" role="heading" aria-level="1">@php echo get_the_title(); @endphp</span>
         <div class="page-body-blog--article">
             <div class="page-body-blog--author">
                 <div>by <strong><a>{{$author}}</a></strong></div>
@@ -29,9 +28,9 @@ Namespace App\Controllers;
                 <span>{{$estimate}} minute read</span>
             </div>
         </div>
-
     </div>
     <div class="page-body--content--body">
         @php the_content() @endphp
+        @php echo App::renderEndDots() @endphp
     </div>
 </div>

@@ -55,10 +55,17 @@ add_action('wp_enqueue_scripts', function () {
         wp_enqueue_script('ut/panel.js', asset_path('scripts/panel.js'), [], null, true);
     endif;
 
+    wp_enqueue_script('ut/gtm', asset_path('scripts/gtm.js'), [], '', false);
+
     wp_enqueue_script('ut/main.js', asset_path('scripts/main.js'), [], null, true);
 
     wp_enqueue_style('ut/social-slider.css', asset_path('styles/social-slider.css'), false, null);
     wp_enqueue_script('ut/social-slider.js', asset_path('scripts/social-slider.js'), [], null, true);
+
+    if (get_current_blog_id() === 30) {
+        wp_enqueue_style('ut/exhibits.css', asset_path('styles/exhibits.css'), false, null);
+        wp_enqueue_script('ut/exhibits.js', asset_path('scripts/exhibits.js'), [], null, true);
+    }
 
     if (get_current_blog_id() === 91 && isset($_GET['gcs'])) {
         wp_add_inline_script(
@@ -91,12 +98,10 @@ add_action('admin_enqueue_scripts', function () {
 });
 
 add_filter('upload_dir', function ($upload) {
-
-    if (is_multisite()) {
+    if (is_multisite() && is_main_site() === false) {
         $upload['baseurl'] = network_site_url() . 'wp-content/blogs.dir/' . get_current_blog_id() . '/files';
         $upload['url'] = $upload['baseurl'] . $upload['subdir'];
     }
-
     return $upload;
 }, 100);
 

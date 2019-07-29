@@ -1,5 +1,8 @@
 {
   "entry": {
+    "gtm": [
+      "./scripts/gtm.js"
+    ],
     "main": [
       "./scripts/main.js",
       "./styles/main.scss"
@@ -29,6 +32,10 @@
     "social-slider": [
       "./react/social-slider/social-slider.js",
       "./react/social-slider/social-slider.css"
+    ],
+    "exhibits": [
+      "./react/exhibits/exhibits.js",
+      "./react/exhibits/exhibits.css"
     ],
     "customizer": [
       "./scripts/customizer.js"

@@ -1,5 +1,4 @@
-@include('partials.global-midsection')
-<footer id="utk-lib-footer" class="utk-lib-footer"  class="content-info">
+<footer>
   <section class="utk-footer footer-libraries">
     @include('partials.sections.footer-libraries')
   </section>
@@ -9,4 +8,5 @@
   <section class="utk-footer footer-system">
     @include('partials.sections.footer-system')
   </section>
+  @include('partials.triggers')
 </footer>

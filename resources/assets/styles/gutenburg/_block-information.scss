@@ -1,0 +1,42 @@
+.utk-information {
+  &--category {
+    &--description {
+      font-size: $type-2;
+    }
+
+    &--list {
+      columns: 2;
+      margin: 0;
+      padding: 0;
+
+      @include respond(xs) {
+        columns: 1;
+      }
+
+      > li {
+        list-style: none;
+        margin: 0;
+        padding: 0 0 0 $golden-ratio-2;
+        position: relative;
+
+        &::before {
+          content: "\F105";
+          font-family: fontello, monospace;
+          font-style: normal;
+          speak: none;
+          text-decoration: inherit;
+          text-align: center;
+          font-variant: normal;
+          text-transform: none;
+          font-size: $type-2;
+          align-content: center;
+          align-items: center;
+          color: $rock;
+          position: absolute;
+          margin-left: -$type-2;
+          -webkit-font-smoothing: antialiased;
+        }
+      }
+    }
+  }
+}

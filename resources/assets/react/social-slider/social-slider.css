@@ -44,14 +44,11 @@
 /*
  * layout
  */
-#utk-social-slider {
-  background-color: #f6f6f6 !important; }
-
 .utk-social {
   display: flex;
   flex-direction: row;
   font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: calc(61.5px) 0;
+  padding: 47px 0;
   /* Mobile Devices for Mice */
   /* Landscape phones and down */
   /* Landscape phone to portrait tablet */
@@ -116,28 +113,27 @@
           text-decoration: none;
           color: #006c93 !important; }
   .utk-social--items {
-    flex-grow: 1;
-    /* Mobile Devices for Mice */
-    /* Landscape phones and down */
-    /* Landscape phone to portrait tablet */
-    /* Portrait tablet to landscape and desktop */
-    /* desktop and large desktop */
-    /* Mobile Devices for Mice */
-    /* Landscape phones and down */
-    /* Landscape phone to portrait tablet */
-    /* Portrait tablet to landscape and desktop */
-    /* desktop and large desktop */ }
-    @media (max-width: 767px) {
-      .utk-social--items {
-        margin: calc(14.5px) !important; } }
-    @media (min-width: 768px) and (max-width: 991px) {
-      .utk-social--items {
-        margin: calc(14.5px) !important; } }
+    flex-flow: row wrap; }
 
 .utk-social--items {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; }
+  align-content: space-between;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .utk-social--items {
+      margin-left: 29px !important; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .utk-social--items {
+      margin-left: 29px !important; } }
 
 .utk-social--item {
   width: 20%;
@@ -170,32 +166,19 @@
   .utk-social--item > a {
     display: block;
     position: relative;
-    margin-top: calc(14.5px);
-    margin-bottom: calc(14.5px);
+    width: calc(100% - 29px);
     margin-right: 29px;
-    overflow: hidden;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
-    /* Mobile Devices for Mice */
-    /* Landscape phones and down */
-    /* Landscape phone to portrait tablet */
-    /* Portrait tablet to landscape and desktop */
-    /* desktop and large desktop */
-    /* Mobile Devices for Mice */
-    /* Landscape phones and down */
-    /* Landscape phone to portrait tablet */
-    /* Portrait tablet to landscape and desktop */
-    /* desktop and large desktop */ }
-    @media (max-width: 767px) {
-      .utk-social--item > a {
-        margin: calc(14.5px) !important; } }
-    @media (min-width: 768px) and (max-width: 991px) {
-      .utk-social--item > a {
-        margin: calc(14.5px) !important; } }
-  .utk-social--item img {
-    display: block;
-    width: 100%;
-    height: auto; }
+    margin-bottom: 29px; }
+    .utk-social--item > a img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 6px; }
+  .utk-social--item:nth-child(6) > a, .utk-social--item:nth-child(7) > a, .utk-social--item:nth-child(8) > a, .utk-social--item:nth-child(9) > a, .utk-social--item:nth-child(10) > a {
+    margin-bottom: 0; }
+  .utk-social--item:nth-child(5) > a, .utk-social--item:nth-child(10) > a {
+    margin-right: 0; }
   .utk-social--item--metadata {
     position: absolute;
     width: 100%;

@@ -29,6 +29,7 @@
 @import "components/blockquote";
 @import "components/callout";
 @import "components/comments";
+@import "components/end";
 @import "components/event-footer";
 @import "components/forms";
 @import "components/google-custom-search";
@@ -46,6 +47,8 @@
 @import "components/paragraph";
 @import "components/table";
 @import "components/wp-classes";
+@import "components/widget";
+@import "components/widget-recent";
 
 /**
  * Layouts
@@ -54,7 +57,7 @@
 @import "layouts/archive";
 @import "layouts/blog";
 @import "layouts/body-content";
-@import "layouts/call-to-action";
+@import "layouts/employment";
 @import "layouts/header";
 @import "layouts/header-noscript";
 @import "layouts/home";
@@ -76,8 +79,13 @@
  */
 @import "gutenburg/block-accordion";
 @import "gutenburg/block-card";
+@import "gutenburg/block-form";
 @import "gutenburg/block-image";
+@import "gutenburg/block-information";
 @import "gutenburg/block-directory";
+@import "gutenburg/block-hours";
+@import "gutenburg/wp-block-button";
+@import "gutenburg/wp-block-column";
 
 /**
  * WordPress Mysticism
