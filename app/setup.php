@@ -36,7 +36,6 @@ add_action('wp_enqueue_scripts', function () {
     if (is_main_site() && is_front_page() && is_multisite()) :
         wp_enqueue_style('ut/panel.css', asset_path('styles/panel.css'), false, null);
         wp_enqueue_script('ut/panel.js', asset_path('scripts/panel.js'), [], null, true);
-
     else :
         wp_enqueue_style('ut/subsite-menu.css', asset_path('styles/subsite-menu.css'), false, null);
         wp_enqueue_script('ut/subsite-menu.js', asset_path('scripts/subsite-menu.js'), [], null, true);
