@@ -1,5 +1,8 @@
 {
   "entry": {
+    "gtm": [
+      "./scripts/gtm.js"
+    ],
     "main": [
       "./scripts/main.js",
       "./styles/main.scss"

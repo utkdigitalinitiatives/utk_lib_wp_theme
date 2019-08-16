@@ -42,17 +42,18 @@
             align-items: center;
             border: none;
             background-color: $white;
-            color: $globe;
+            color: $globe !important;
             margin-right: $golden-ratio-1;
             box-shadow: $box-shadow;
             border-radius: $golden-ratio-1;
             transition: $transition-all-fast;
+            line-height: $type-4;
 
             &:hover,
             &:focus {
               box-shadow: inset $box-shadow;
               background-color: $gray-1;
-              color: $smokey;
+              color: $smokey !important;
             }
 
             &:last-child {

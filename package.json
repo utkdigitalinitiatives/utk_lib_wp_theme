@@ -53,6 +53,7 @@
   "scripts": {
     "build": "webpack --progress --config resources/assets/build/webpack.config.js && node clear-wp-rocket",
     "build:production": "webpack --env.production --progress --config resources/assets/build/webpack.config.js && node clear-wp-rocket",
+    "build:production-clean": "webpack --env.production --progress --config resources/assets/build/webpack.config.clean.js && node clear-wp-rocket",
     "build:profile": "webpack --progress --profile --json --config resources/assets/build/webpack.config.js",
     "start": "webpack --hide-modules --watch --config resources/assets/build/webpack.config.js",
     "dev": "webpack --progress --watch --config resources/assets/build/webpack.config.dev.js",

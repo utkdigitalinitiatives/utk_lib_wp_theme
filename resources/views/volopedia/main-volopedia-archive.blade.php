@@ -1,5 +1,8 @@
 <div class="container page-body--container">
     <div class="page-body--flex">
+        <aside class="page-body--aside">
+            @include('volopedia.partials.sidebar-volopedia')
+        </aside>
         <main class="page-body--content">
             <div class="facetwp-template">
                 @if (!have_posts())
@@ -21,9 +24,6 @@
                 @php echo facetwp_display('pager') @endphp
             </div>
         </main>
-        <aside class="page-body--aside">
-            @include('volopedia.partials.sidebar-volopedia')
-        </aside>
     </div>
     <div id="detach-sticky-bottom"></div>
 </div>

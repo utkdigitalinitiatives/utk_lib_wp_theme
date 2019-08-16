@@ -13,7 +13,7 @@
         <p>
           1015 Volunteer Boulevard<br/>
           Knoxville, TN 37996<br/>
-          <a href="tel:865-974-1000" title="Call The University of Tennessee - 865-974-1000">865-974-1000</a>
+          <a href="tel:865-974-4351" title="Call The University of Tennessee - 865-974-4351">865-974-4351</a>
         </p>
       </div>
       <div class="footer-libraries--menu-extras">

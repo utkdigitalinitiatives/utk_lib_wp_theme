@@ -1,5 +1,8 @@
+@include('partials.facets')
+<div class="aside-subsite-menu preload">
+    @include('partials.components.subsite-menu-sidebar')
+</div>
 <div class="aside-subsite-custom-widgets">
-    @include('partials.facets')
     @php
         dynamic_sidebar('sidebar-primary')
     @endphp
