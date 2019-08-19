@@ -4,7 +4,7 @@
   box-shadow: $box-shadow;
   border-left: $golden-ratio-2 solid $rock;
   border-radius: $golden-ratio-1;
-  margin: $golden-ratio-2 0;
+  margin: -$golden-ratio-2 0 $golden-ratio-3;
 
   &--content {
     padding: $golden-ratio-2;
@@ -38,7 +38,7 @@
   }
 
   &.library-notice-general {
-    border-color: $rock;
+    border-color: $orange;
   }
 
   &.library-notice-weather {
@@ -51,6 +51,7 @@
     h3 {
       font-size: $type-4;
       font-weight: 700 !important;
+      line-height: 1.47em;
     }
 
     p {
