@@ -1,5 +1,10 @@
 .section-notice {
   background-color: $gray-0;
+  padding: $golden-ratio-2;
+
+  .library-notice {
+    margin: 0;
+  }
 }
 
 .library-notice {
@@ -7,8 +12,8 @@
   color: $smokey;
   box-shadow: $box-shadow;
   border-left: $golden-ratio-2 solid $rock;
-  margin: $golden-ratio-2;
   border-radius: $golden-ratio-1;
+  margin: $golden-ratio-2;
 
   &--content {
     padding: $golden-ratio-2;
