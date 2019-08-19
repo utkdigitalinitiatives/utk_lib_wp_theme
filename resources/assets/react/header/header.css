@@ -1169,6 +1169,12 @@ body.utk-search-open .utk-search {
       text-transform: none;
       font-size: 18px;
       color: #58595b; }
+    .utk-hours .utk-hours-header--date-select {
+      font-size: 13px;
+      color: #006c93;
+      cursor: pointer; }
+      .utk-hours .utk-hours-header--date-select span.icon-angle-down {
+        color: #58595b; }
   .utk-hours--loading {
     margin: 0;
     padding: 0;
