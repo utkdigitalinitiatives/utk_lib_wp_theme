@@ -1,19 +1,10 @@
-.section-notice {
-  background-color: $gray-0;
-  padding: $golden-ratio-2;
-
-  .library-notice {
-    margin: 0;
-  }
-}
-
 .library-notice {
   background-color: $white;
   color: $smokey;
   box-shadow: $box-shadow;
   border-left: $golden-ratio-2 solid $rock;
   border-radius: $golden-ratio-1;
-  margin: $golden-ratio-2;
+  margin: $golden-ratio-2 0;
 
   &--content {
     padding: $golden-ratio-2;
@@ -94,5 +85,14 @@
 body.library-notice-override {
   .page-header-hero {
     height: $golden-ratio-8;
+  }
+}
+
+.section-notice {
+  background-color: $gray-0;
+  padding: $golden-ratio-2 0;
+
+  .library-notice {
+    margin: 0;
   }
 }
