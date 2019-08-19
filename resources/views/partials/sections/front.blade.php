@@ -1,4 +1,3 @@
-@include('partials.components.notice')
 <div id="utk-lib-home-hours">
     <noscript>
         @include('partials.noscript.noscript-lib-home-hours')
@@ -9,6 +8,7 @@
         @include('partials.noscript.noscript-lib-home-panel')
     </noscript>
 </div>
+@include('partials.components.notice')
 <section class="utk-home" id="utk-lib-home">
     <noscript>
         @include('partials.noscript.noscript-lib-home')
