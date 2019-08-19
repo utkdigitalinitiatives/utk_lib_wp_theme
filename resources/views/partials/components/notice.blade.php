@@ -10,7 +10,7 @@
     $message  = $notice['fields']['notice_message'];
 
   @endphp
-  @if(is_front_page())
+  @if(is_front_page() && is_main_site())
     <div class="section-notice">
       <div class="container">
   @endif
@@ -24,7 +24,7 @@
             </div>
           </div>
         </div>
-  @if(is_front_page())
+  @if(is_front_page() && is_main_site())
       </div>
     </div>
   @endif
