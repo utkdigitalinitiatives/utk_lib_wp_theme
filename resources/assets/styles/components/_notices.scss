@@ -3,9 +3,8 @@
   color: $smokey;
   box-shadow: $box-shadow;
   border-left: $golden-ratio-2 solid $rock;
-  margin-bottom: $golden-ratio-4;
-  margin-top: -$golden-ratio-2;
   border-radius: $golden-ratio-1;
+  margin: -$golden-ratio-2 0 $golden-ratio-3;
 
   &--content {
     padding: $golden-ratio-2;
@@ -14,10 +13,10 @@
   h3 {
     margin: 0 0 $golden-ratio-0;
     padding: 0;
-    font-size: $type-2;
+    font-size: $type-3;
     font-weight: 700;
-    text-transform: uppercase;
     color: inherit;
+    line-height: 1.29em;
   }
 
   p {
@@ -39,7 +38,7 @@
   }
 
   &.library-notice-general {
-    border-color: $rock;
+    border-color: $orange;
   }
 
   &.library-notice-weather {
@@ -86,5 +85,14 @@
 body.library-notice-override {
   .page-header-hero {
     height: $golden-ratio-8;
+  }
+}
+
+.section-notice {
+  background-color: $gray-0;
+  padding: $golden-ratio-3 0 $golden-ratio-0;
+
+  .library-notice {
+    margin: 0;
   }
 }
