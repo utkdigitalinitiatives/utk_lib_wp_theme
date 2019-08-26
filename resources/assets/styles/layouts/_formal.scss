@@ -1,3 +1,30 @@
 .page-body--content-formal {
+  .page-body--content--title {
+    text-align: center;
+    margin-top: $golden-ratio-3;
+    -webkit-font-smoothing: antialiased !important;
 
+    * {
+      -webkit-font-smoothing: antialiased !important;
+    }
+
+    &::before {
+      content: '';
+      width: $golden-ratio-6;
+      height: $golden-ratio-0;
+      display: block;
+      background-color: $orange;
+      margin: auto auto $golden-ratio-2;
+    }
+  }
+
+  .page-body--content--body {
+    p[style="text-align:center"]:first-child {
+      font-size: $type-3;
+      color: $smokey !important;
+      max-width: $gr-long;
+      margin: auto;
+      -webkit-font-smoothing: antialiased !important;
+    }
+  }
 }
