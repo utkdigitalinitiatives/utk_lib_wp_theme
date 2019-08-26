@@ -33,6 +33,7 @@
             $end = $setAccentColor;
             $endPercent = '50%';
 
+            $lid = $location;
             $location = $response->locations->$location;
             $hoursRangeClass = 'utk-hours--today--range';
 
@@ -53,7 +54,10 @@
                     background: linear-gradient(to right, {{$start}} {{$startPercent}}, {{$end}} {{$endPercent}});">
             <div class="container">
                 <div class="utk-hours--wrap">
-                    <a class="utk-hours--today" href="@php echo $hoursPage @endphp">
+                    <a id="utk-hours--location--lid"
+                       class="utk-hours--today"
+                       href="@php echo $hoursPage @endphp"
+                       data-lid="{{$lid}}">
                         <span class="utk-hours--today--label">
                             Hours Today
                         </span>
