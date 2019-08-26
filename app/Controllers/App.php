@@ -160,4 +160,21 @@ class App extends Controller
 
         return new \WP_Query($related_args);
     }
+
+    public static function utkGetFormalHeader($post_id)
+    {
+        $content_post = get_post($post_id);
+        $title = $content_post->post_title;
+        $content = $content_post->post_content;
+        $content = apply_filters('the_content', $content);
+        $content = str_replace(']]>', ']]&gt;', $content);
+
+        $header = '
+        <div class="page-body--content--title">
+          <span class="utk-heading-1" role="heading" aria-level="1">' . $title .'</span>
+        </div>
+        <div class="page-body--content--body">' . $content . '</div>';
+
+        return $header;
+    }
 }
