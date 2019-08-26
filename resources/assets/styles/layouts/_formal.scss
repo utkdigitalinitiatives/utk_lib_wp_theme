@@ -27,4 +27,32 @@
       -webkit-font-smoothing: antialiased !important;
     }
   }
+
+  .facetwp-template {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: auto;
+
+    article {
+      width: $golden-ratio-7;
+      margin-right: $golden-ratio-3;
+
+      .article--grid--image {
+        display: block;
+        background-color: $rock;
+        width: $golden-ratio-7;
+        height: $golden-ratio-6;
+      }
+
+      .article--header {
+        &--title {
+          font-size: $type-2 !important;
+          line-height: 1.29em !important;
+          margin: $golden-ratio-1 0 0 !important;
+        }
+      }
+    }
+  }
 }
