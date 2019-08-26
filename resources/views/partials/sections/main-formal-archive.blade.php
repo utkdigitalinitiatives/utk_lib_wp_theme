@@ -2,7 +2,7 @@
 
     Namespace App\Controllers;
 
-    $header_post = get_option('options_competency_header');
+    $header_post = get_option('options_formal_header');
 
 @endphp
 <div id="detach-sticky-top"></div>
@@ -11,6 +11,7 @@
     <div class="page-body--flex">
         <main class="page-body--content page-body--content-formal">
             @php print \App::utkGetFormalHeader($header_post) @endphp
+            @include('partials.facets-formal')
             <div class="facetwp-template">
                 @if (!have_posts())
                     <div class="alert alert-warning">
