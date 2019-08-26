@@ -15,12 +15,8 @@ Namespace App\Controllers;
         <span class="utk-heading-1" role="heading" aria-level="1">@php echo get_the_title(); @endphp</span>
         <div class="page-body-blog--article">
             <div class="page-body-blog--author">
-                <div>by <strong><a>{{$author}}</a></strong></div>
-                @if($post->post_author == 4)
-                    <div><em>Special Collections</em></div>
-                    @else
-                    <div><em>Digital Initiatives</em></div>
-                @endif
+                <div>by <strong>{{$author}}</strong></div>
+                {{--<div><em>Digital Initiatives</em></div>--}}
             </div>
             <div class="page-body-blog--meta" style="font-size: 13px">
                 <span>{{$dateline}}</span>
