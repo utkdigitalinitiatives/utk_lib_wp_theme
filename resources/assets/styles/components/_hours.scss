@@ -7,7 +7,7 @@ section.utk-hours-section {
     background-color: $smokeyx !important;
     position: fixed;
     width: 100%;
-    height: 47px;
+    height: auto;
     bottom: 0;
     z-index: 999;
   }
@@ -34,7 +34,7 @@ section.utk-hours-section {
 
     @include respond(xs) {
       flex-direction: row;
-      padding: $golden-ratio-1 $golden-ratio-3 $golden-ratio-1 0;
+      padding: $golden-ratio-1 $golden-ratio-3 $golden-ratio-2 0;
       background-color: $smokeyx;
       clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 100%, 0 100%);
       position: relative;
@@ -49,9 +49,11 @@ section.utk-hours-section {
       color: $rock;
 
       @include respond(xs) {
+        margin-top: $golden-ratio-0;
         margin-right: $golden-ratio-2;
         font-size: $type-1;
         text-transform: none;
+        line-height: 1.29em;
       }
     }
 
@@ -60,11 +62,12 @@ section.utk-hours-section {
       display: block;
       font-size: $type-3;
       font-weight: 700;
-      text-transform: uppercase;
       position: relative;
 
       @include respond(xs) {
-        font-size: $type-2;
+        font-size: $type-1;
+        line-height: 1.29em;
+        margin-top: $golden-ratio-0;
       }
 
       &::before {
@@ -109,6 +112,7 @@ section.utk-hours-section {
       z-index: 0;
       margin-left: -15px;
       background-color: transparent;
+      min-width: 47px;
     }
 
     &--image {
