@@ -14,6 +14,7 @@ export default class Formal {
                 $('.facetwp-template > article').removeClass('article--trigger-expand');
                 var postId = $(this).attr('data-id');
                 var target = '.facetwp-template > .post-' + postId;
+                var populate = target + ' .article--populate-' + postId;
                 $(target).addClass('article--trigger-expand');
 
                 // eslint-disable-next-line no-undef
@@ -32,7 +33,8 @@ export default class Formal {
                     beforeSend : function () {
                     },
                     success : function(response) {
-                        log(response);
+                        console.log(response);
+                        $(populate).html(response);
                     },
                 });
             });
