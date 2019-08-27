@@ -32,26 +32,113 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: auto;
+
+    .article--grid--image {
+      display: block;
+      width: 100%;
+      padding-top: $gr-percent;
+      background-color: $gray-1;
+      position: relative;
+
+      figure {
+        margin: 0;
+
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          align-content: center;
+          justify-content: center;
+          -webkit-font-smoothing: antialiased;
+          color: $rock;
+          letter-spacing: 0 !important;
+          font-size: $type-4;
+        }
+      }
+    }
+
+    .article--header {
+      &--title {
+        font-size: $type-2 !important;
+        line-height: 1.29em !important;
+        margin: $golden-ratio-1 0 0 !important;
+      }
+    }
 
     article {
       display: block;
-      width: calc((100% - 87px) / 4);
+      width: calc((100% - 116px) / 5);
+      margin-right: $golden-ratio-3;
       position: relative;
 
-      .article--grid--image {
-        display: block;
-        width: 100%;
-        padding-top: $gr-percent;
-        background-color: $rock;
+      &:nth-child(5n) {
+        margin-right: 0;
       }
 
-      .article--header {
-        &--title {
-          font-size: $type-2 !important;
-          line-height: 1.29em !important;
-          margin: $golden-ratio-1 0 0 !important;
+      @include respond(md) {
+        width: calc((100% - 87px) / 4);
+
+        &:nth-child(5n),
+        &:nth-child(3n),
+        &:nth-child(2n) {
+          margin-right: $golden-ratio-3;
+        }
+
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+      }
+
+      @include respond(sm) {
+        width: calc((100% - 58px) / 3);
+
+        &:nth-child(5n),
+        &:nth-child(4n),
+        &:nth-child(2n) {
+          margin-right: $golden-ratio-3;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+
+      @include respond(xs) {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-bottom: $golden-ratio-3;
+
+        &:nth-child(5n),
+        &:nth-child(4n),
+        &:nth-child(3n) {
+          margin-right: 0 !important;
+        }
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+
+        .article--context {
+          display: flex;
+
+          .article--grid--image {
+            width: $golden-ratio-6;
+            height: $golden-ratio-5;
+            padding-top: 0;
+            flex-shrink: 0;
+            margin-right: $golden-ratio-1;
+          }
+
+          .article--header h2 {
+            margin-top: $golden-ratio-0 !important;
+          }
         }
       }
     }
