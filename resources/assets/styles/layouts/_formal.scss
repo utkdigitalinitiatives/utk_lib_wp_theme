@@ -34,49 +34,55 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: auto;
-
-    .article--grid--image {
-      display: block;
-      width: 100%;
-      padding-top: $gr-percent;
-      background-color: $gray-1;
-      position: relative;
-
-      figure {
-        margin: 0;
-
-        span {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          text-align: center;
-          display: flex;
-          align-items: center;
-          align-content: center;
-          justify-content: center;
-          -webkit-font-smoothing: antialiased;
-          color: $rock;
-          letter-spacing: 0 !important;
-          font-size: $type-4;
-        }
-      }
-    }
-
-    .article--header {
-      &--title {
-        font-size: $type-2 !important;
-        line-height: 1.29em !important;
-        margin: $golden-ratio-1 0 0 !important;
-      }
-    }
+    position: relative;
 
     article {
       display: block;
       width: calc((100% - 116px) / 5);
       margin-right: $golden-ratio-3;
-      position: relative;
+
+      .article--trigger {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .article--grid--image {
+          display: block;
+          width: 100%;
+          padding-top: $gr-percent;
+          background-color: $rock;
+          position: relative;
+
+          figure {
+            margin: 0;
+
+            span {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              display: flex;
+              align-items: center;
+              align-content: center;
+              justify-content: center;
+              -webkit-font-smoothing: antialiased;
+              color: $smokey;
+              letter-spacing: 0 !important;
+              font-size: $type-4;
+            }
+          }
+        }
+
+        .article--header {
+          &--title {
+            font-size: $type-2 !important;
+            line-height: 1.29em !important;
+            margin: $golden-ratio-1 0 0 !important;
+          }
+        }
+      }
 
       &:nth-child(5n) {
         margin-right: 0;
@@ -140,6 +146,25 @@
             margin-top: $golden-ratio-0 !important;
           }
         }
+      }
+
+      .article--populate {
+        display: none;
+        background-color: $gray-0;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        margin-top: $golden-ratio-2;
+        height: $golden-ratio-8;
+        z-index: 1;
+      }
+    }
+
+    .article--trigger-expand {
+      margin-bottom: calc(#{$golden-ratio-8 + $golden-ratio-4});
+
+      .article--populate {
+        display: block;
       }
     }
   }
