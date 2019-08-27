@@ -116,5 +116,8 @@
     "jquery": "^3.4.0",
     "popper.js": "^1.14.4",
     "tunnel-agent": "0.6.0"
+  },
+  "rules": {
+    "no-console": "off"
   }
 }

@@ -60,7 +60,7 @@ add_action('wp_enqueue_scripts', function () {
 
     $ajax_params = array(
         'ajax_url' => admin_url('admin-ajax.php'),
-        'ajax_nonce' => wp_create_nonce('my_nonce'),
+        'ajax_nonce' => wp_create_nonce('utk_nonce'),
     );
 
     wp_localize_script('ut/main.js', 'ajax_object', $ajax_params);
