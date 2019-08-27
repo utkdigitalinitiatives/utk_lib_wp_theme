@@ -32,18 +32,19 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin: auto;
 
     article {
-      width: $golden-ratio-7;
-      margin-right: $golden-ratio-3;
+      display: block;
+      width: calc((100% - 87px) / 4);
+      position: relative;
 
       .article--grid--image {
         display: block;
+        width: 100%;
+        padding-top: $gr-percent;
         background-color: $rock;
-        width: $golden-ratio-7;
-        height: $golden-ratio-6;
       }
 
       .article--header {
