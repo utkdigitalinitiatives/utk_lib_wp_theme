@@ -155,14 +155,15 @@
         width: 100%;
         left: 0;
         margin-top: $golden-ratio-2;
-        height: $golden-ratio-8;
         z-index: 1;
+
+        &--inner {
+          padding: $golden-ratio-4;
+        }
       }
     }
 
     .article--trigger-expand {
-      margin-bottom: calc(#{$golden-ratio-8 + $golden-ratio-4});
-
       .article--populate {
         display: block;
       }

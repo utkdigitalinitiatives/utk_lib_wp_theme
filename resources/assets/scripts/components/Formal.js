@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /* Formal */
 
 export default class Formal {
@@ -11,7 +13,9 @@ export default class Formal {
         (function($, log) {
             $('.article--trigger').click(function (e) {
                 e.preventDefault();
+                $('.facetwp-template > article').css('margin-bottom', 29);
                 $('.facetwp-template > article').removeClass('article--trigger-expand');
+
                 var postId = $(this).attr('data-id');
                 var target = '.facetwp-template > .post-' + postId;
                 var populate = target + ' .article--populate-' + postId;
@@ -19,8 +23,6 @@ export default class Formal {
 
                 // eslint-disable-next-line no-undef
                 var ajax = ajax_object;
-
-                log(postId);
 
                 $.ajax({ // you can also use $.post here
                     url : ajax.ajax_url, // AJAX handler
@@ -33,8 +35,11 @@ export default class Formal {
                     beforeSend : function () {
                     },
                     success : function(response) {
-                        console.log(response);
                         $(populate).html(response);
+                    },
+                    complete: function () {
+                        var height = $(populate).height();
+                        $(target).css('margin-bottom', height + 47);
                     },
                 });
             });
