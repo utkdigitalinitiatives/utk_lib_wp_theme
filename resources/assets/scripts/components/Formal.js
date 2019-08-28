@@ -17,8 +17,10 @@ export default class Formal {
                 $('.facetwp-template > article').removeClass('article--trigger-expand');
 
                 var postId = $(this).attr('data-id');
+                var template = '.facetwp-template';
                 var target = '.facetwp-template > .post-' + postId;
                 var populate = target + ' .article--populate-' + postId;
+                $(template).addClass('facetwp-template-focus');
                 $(target).addClass('article--trigger-expand');
 
                 // eslint-disable-next-line no-undef
