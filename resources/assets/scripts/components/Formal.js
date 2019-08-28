@@ -13,7 +13,6 @@ export default class Formal {
         (function($, log) {
             $('.article--trigger').click(function (e) {
                 e.preventDefault();
-                $('.facetwp-template > article').css('margin-bottom', 29);
                 $('.facetwp-template > article').removeClass('article--trigger-expand');
 
                 var postId = $(this).attr('data-id');
@@ -42,6 +41,7 @@ export default class Formal {
                     complete: function () {
                         var height = $(populate).height();
                         $(populate).css('height', height);
+                        $('.facetwp-template > article').css('margin-bottom', 29);
                         $(target).css('margin-bottom', height + 47);
                     },
                 });
