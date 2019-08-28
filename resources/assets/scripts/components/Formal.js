@@ -25,8 +25,8 @@ export default class Formal {
                 // eslint-disable-next-line no-undef
                 var ajax = ajax_object;
 
-                $.ajax({ // you can also use $.post here
-                    url : ajax.ajax_url, // AJAX handler
+                $.ajax({
+                    url : ajax.ajax_url,
                     data : {
                         action: 'get_competency_post',
                         security: ajax.ajax_nonce,
