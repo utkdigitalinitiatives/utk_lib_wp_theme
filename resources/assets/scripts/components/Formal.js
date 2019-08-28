@@ -9,7 +9,6 @@ export default class Formal {
     }
 
     formalListener () {
-
         (function($, log) {
             $('.article--trigger').click(function (e) {
                 e.preventDefault();
@@ -47,7 +46,5 @@ export default class Formal {
                 });
             });
         })(jQuery, console.log);
-
     }
-
 }
