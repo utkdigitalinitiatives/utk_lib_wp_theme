@@ -40,6 +40,7 @@
       transition: $transition-all;
       margin-bottom: 0;
       box-shadow: none;
+      position: relative;
     }
 
     &-focus {
@@ -55,7 +56,6 @@
           margin-top: $golden-ratio-3;
           margin-bottom: -$golden-ratio-3;
           z-index: 2;
-          position: relative;
           background-color: $white;
           box-shadow: $box-shadow;
         }
@@ -67,6 +67,28 @@
       width: calc((100% - 116px) / 5);
       margin-right: $golden-ratio-3;
       transition: $transition-all-load;
+
+      .article--close {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background-color: $torch;
+        border-radius: $golden-ratio-4;
+        width: $golden-ratio-4;
+        height: $golden-ratio-4;
+        color: $white;
+        box-shadow: none;
+        transform: scale3d(0, 0, 0);
+        transition: $transition-all;
+        position: absolute;
+        opacity: 0;
+        z-index: 3;
+        left: 50%;
+        margin-left: -23.5px;
+        margin-top: -47px;
+      }
 
       .article--trigger {
         width: 100%;
@@ -196,6 +218,13 @@
     }
 
     .article--trigger-expand {
+      .article--close {
+        box-shadow: $box-shadow-float;
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+        margin-top: -29px;
+      }
+
       .article--populate {
         box-shadow: 0 0 29px $white;
 

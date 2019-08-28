@@ -10,7 +10,7 @@ export default class Formal {
 
     formalAjaxPopulate () {
         (function($, log) {
-            $('.article--trigger').click(function (e) {
+            $('article > a.article--trigger').click(function (e) {
 
                 e.preventDefault();
 
@@ -49,6 +49,15 @@ export default class Formal {
                         $(target).css('margin-bottom', height + 47);
                     },
                 });
+            });
+
+            $('.article--close').click(function (e) {
+
+                e.preventDefault();
+                e.stopPropagation();
+
+                $('.facetwp-template > article').removeClass('article--trigger-expand');
+                $('.facetwp-template > article').css('margin-bottom', 29);
             });
         })(jQuery, console.log);
     }

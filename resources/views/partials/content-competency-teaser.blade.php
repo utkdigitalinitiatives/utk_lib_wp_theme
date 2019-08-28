@@ -28,6 +28,7 @@
        data-id="@php echo get_the_ID() @endphp"
        href="@php the_permalink() @endphp">
         <div class="article--context">
+            <span class="article--close"><span class="icon-cancel"></span></span>
             <div class="article--grid--image"
                  href="@php the_permalink() @endphp">
                 <figure>
