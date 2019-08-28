@@ -66,6 +66,7 @@
       display: block;
       width: calc((100% - 116px) / 5);
       margin-right: $golden-ratio-3;
+      transition: $transition-all-load;
 
       .article--trigger {
         width: 100%;
@@ -177,18 +178,18 @@
       }
 
       .article--populate {
-        display: block;
         position: absolute;
         width: 100%;
         overflow: hidden;
         left: 0;
         margin-top: $golden-ratio-2;
         z-index: 1;
+        transition: $transition-all-load;
 
         &--inner {
           padding: $golden-ratio-4;
           background-color: $white;
-          transition: $transition-all;
+          transition: $transition-all-load;
           opacity: 0;
         }
       }

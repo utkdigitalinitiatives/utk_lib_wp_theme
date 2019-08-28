@@ -41,6 +41,7 @@ export default class Formal {
                     },
                     complete: function () {
                         var height = $(populate).height();
+                        $(populate).css('height', height);
                         $(target).css('margin-bottom', height + 47);
                     },
                 });
