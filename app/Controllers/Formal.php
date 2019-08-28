@@ -6,13 +6,13 @@ use Sober\Controller\Controller;
 
 class Formal extends Controller
 {
-    public static function get_formal_post($post_id = null, $post_type = null)
+    public static function getFormalPost($post_id = null, $post_type = null)
     {
         if (isset($_POST['security'])) :
             check_ajax_referer('utk_nonce', 'security');
+
             $post_id = $_POST['id'];
             $post_type = $_POST['type'];
-
         endif;
 
         $data['id'] = $post_id;
@@ -20,44 +20,42 @@ class Formal extends Controller
         $data['fields'] = get_fields($post_id);
 
         $populate = '<div class="article--populate--inner">';
-        $populate .= self::render_inner($data, $post_type);
+        $populate .= self::renderInner($data, $post_type);
         $populate .= '</div>';
 
         if (isset($_POST['security'])) :
             print $populate;
             wp_die();
-
         else :
             return $populate;
-
         endif;
     }
 
-    static function render_inner($data, $type)
+    private static function renderInner($data, $type)
     {
-        switch ($type):
+        switch ($type) :
             case 'competency':
-                $inner = self::render_competency_inner($data);
+                $inner = self::renderCompetencyInner($data);
                 break;
             default:
-                $inner = self::render_post_inner($data);
+                $inner = self::renderPostInner($data);
         endswitch;
 
         return $inner;
     }
 
-    static function render_post_inner($post, $content = null)
+    private static function renderPostInner($post, $content = null)
     {
-        $content .= '<h1>' . $post['title'] .'</h1>';
+        $content .= '<h1>' . $post['title'] . '</h1>';
         $content .= get_the_content($post['id']);
 
         return $content;
     }
 
-    static function render_competency_inner($post, $content = null)
+    private static function renderCompetencyInner($post, $content = null)
     {
-        $content .= '<h1>' . $post['title'] .'</h1>';
-        $content .= $post['fields']['competency_description'] .'</h3>';
+        $content .= '<h1>' . $post['title'] . '</h1>';
+        $content .= $post['fields']['competency_description'] . '</h3>';
 
         return $content;
     }

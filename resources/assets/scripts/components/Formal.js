@@ -19,7 +19,6 @@ export default class Formal {
                 var postId = $(this).attr('data-id');
                 var postType = $(this).attr('data-type');
 
-                var ajaxAction = 'get_formal_post';
                 var template = '.facetwp-template';
                 var target = '.facetwp-template > .post-' + postId;
                 var populate = target + ' .article--populate-' + postId;
@@ -32,7 +31,7 @@ export default class Formal {
                 $.ajax({
                     url : ajax.ajax_url,
                     data : {
-                        action: ajaxAction,
+                        action: 'getFormalPost',
                         security: ajax.ajax_nonce,
                         id: postId,
                         type: postType,
