@@ -27,6 +27,12 @@
     font-weight: 700;
     color: $smokey;
 
+    &.utk-button-nav--link-active {
+      background-color: $smokey;
+      color: $white !important;
+      border-color: $smokey !important;
+    }
+
     @include respond(xs) {
       border-bottom: 0;
       border-right: 2px solid $gray-1;
