@@ -15,6 +15,7 @@ class Formal extends Controller
 
         endif;
 
+        $data['id'] = $post_id;
         $data['title'] = get_the_title($post_id);
         $data['fields'] = get_fields($post_id);
 
@@ -45,15 +46,19 @@ class Formal extends Controller
         return $inner;
     }
 
-    static function render_post_inner($post)
+    static function render_post_inner($post, $content = null)
     {
-        $content = 'hello';
+        $content .= '<h1>' . $post['title'] .'</h1>';
+        $content .= get_the_content($post['id']);
+
         return $content;
     }
 
-    static function render_competency_inner($post)
+    static function render_competency_inner($post, $content = null)
     {
-        $content = 'hi';
+        $content .= '<h1>' . $post['title'] .'</h1>';
+        $content .= $post['fields']['competency_description'] .'</h3>';
+
         return $content;
     }
 }
