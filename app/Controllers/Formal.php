@@ -6,20 +6,54 @@ use Sober\Controller\Controller;
 
 class Formal extends Controller
 {
-    function get_competency_post()
+    public static function get_formal_post($post_id = null, $post_type = null)
     {
-        check_ajax_referer('utk_nonce', 'security');
+        if (isset($_POST['security'])) :
+            check_ajax_referer('utk_nonce', 'security');
+            $post_id = $_POST['id'];
+            $post_type = $_POST['type'];
 
-        $post['title'] = get_the_title($_POST['id']);
-        $post['fields'] = get_fields($_POST['id']);
+        endif;
+
+        $data['title'] = get_the_title($post_id);
+        $data['fields'] = get_fields($post_id);
 
         $populate = '<div class="article--populate--inner">';
-        $populate .= '<h3>' . $post['title'] . '</h3>';
-        $populate .= $post['fields']['competency_description'];
+        $populate .= self::render_inner($data, $post_type);
         $populate .= '</div>';
 
-        print $populate;
+        if (isset($_POST['security'])) :
+            print $populate;
+            wp_die();
 
-        wp_die();
+        else :
+            return $populate;
+
+        endif;
+    }
+
+    static function render_inner($data, $type)
+    {
+        switch ($type):
+            case 'competency':
+                $inner = self::render_competency_inner($data);
+                break;
+            default:
+                $inner = self::render_post_inner($data);
+        endswitch;
+
+        return $inner;
+    }
+
+    static function render_post_inner($post)
+    {
+        $content = 'hello';
+        return $content;
+    }
+
+    static function render_competency_inner($post)
+    {
+        $content = 'hi';
+        return $content;
     }
 }

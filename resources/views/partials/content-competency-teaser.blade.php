@@ -24,6 +24,7 @@
 
 <article @php post_class() @endphp>
     <a class="article--trigger"
+       data-type="@php echo get_post_type() @endphp"
        data-id="@php echo get_the_ID() @endphp"
        href="@php the_permalink() @endphp">
         <div class="article--context">
