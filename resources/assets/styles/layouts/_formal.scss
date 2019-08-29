@@ -53,8 +53,8 @@
         }
 
         &.article--trigger-expand .article--context {
-          margin-top: $golden-ratio-3;
-          margin-bottom: -$golden-ratio-3;
+          margin-top: $golden-ratio-2;
+          margin-bottom: 0;
           z-index: 2;
           background-color: $white;
           box-shadow: $box-shadow;
