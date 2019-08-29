@@ -54,8 +54,26 @@ class Formal extends Controller
 
     private static function renderCompetencyInner($post, $content = null)
     {
+        $content .= '<span class="article--populate--label">Competency</span>';
         $content .= '<h1>' . $post['title'] . '</h1>';
-        $content .= $post['fields']['competency_description'] . '</h3>';
+        $content .= '<div class="article--competency--definition">';
+        $content .= '<h2>Definition</h2>';
+        $content .= $post['fields']['competency_description'];
+        $content .= '</div>';
+
+        if (isset($post['fields']['competency_examples'])) :
+            $examples = $post['fields']['competency_examples'];
+            if (count($examples) > 0) :
+                $content .= '<div class="article--competency--examples">';
+                $content .= '<h2>Examples</h2>';
+                $content .= '<ul>';
+                foreach ($examples as $example) :
+                    $content .= '<li>' . $example['competency_examples_name'] . '</li>';
+                endforeach;
+                $content .= '</ul>';
+                $content .= '</div>';
+            endif;
+        endif;
 
         return $content;
     }

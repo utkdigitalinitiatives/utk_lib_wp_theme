@@ -1,0 +1,59 @@
+article.competency {
+  .article--populate--inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .article--populate--label {
+      background-color: $fountain;
+    }
+
+    h1 {
+      font-size: $type-5;
+      margin-bottom: $golden-ratio-1;
+      width: 100%;
+
+      &::before {
+        display: block;
+        width: $golden-ratio-5;
+        height: $golden-ratio-0;
+        background-color: $orange;
+        content: '';
+        margin-bottom: $golden-ratio-2;
+      }
+    }
+
+    h2 {
+      font-size: $type-3;
+      margin-bottom: $golden-ratio-1;
+    }
+
+    .article--competency--definition,
+    .article--competency--examples {
+      width: 50%;
+      padding-right: $golden-ratio-4;
+
+      p,
+      li {
+        font-size: $type-2;
+        color: $smokeyx;
+      }
+
+      ul {
+        columns: 2;
+        padding-left: 23px;
+
+        li {
+          line-height: 1.29em;
+          margin-bottom: $golden-ratio-0;
+          padding-right: $golden-ratio-1;
+        }
+      }
+
+      ul:first-of-type,
+      p:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+}

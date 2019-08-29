@@ -1,9 +1,21 @@
 .facetwp-template {
   article {
     .article--populate {
-      h3 {
+      &--label {
+        display: inline-block;
+        width: auto;
+        padding: 0 $golden-ratio-1;
+        line-height: $golden-ratio-3;
+        height: $golden-ratio-3;
+        font-size: $type-0;
         font-weight: 700;
-        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        background-color: $smokey;
+        color: $white;
+        position: absolute;
+        right: $golden-ratio-2;
+        top: $golden-ratio-2;
       }
     }
   }

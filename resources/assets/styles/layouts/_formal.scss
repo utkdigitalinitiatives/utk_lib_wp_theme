@@ -206,11 +206,13 @@
         margin-top: $golden-ratio-2;
         z-index: 1;
         transition: $transition-all-load;
+        box-shadow: none;
 
         &--inner {
           padding: $golden-ratio-4;
           background-color: $white;
           transition: $transition-all-load;
+          position: relative;
           opacity: 0;
         }
       }
@@ -225,10 +227,10 @@
       }
 
       .article--populate {
-        box-shadow: 0 0 29px $white;
+        box-shadow: $box-shadow;
 
         &--inner {
-          background-color: $gray-0;
+          background-color: $white;
           opacity: 1;
         }
       }
