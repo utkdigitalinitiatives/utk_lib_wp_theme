@@ -1,3 +1,4 @@
+body.single-competency,
 article.competency {
   .article--populate--inner {
     display: flex;
@@ -28,9 +29,16 @@ article.competency {
       margin-bottom: $golden-ratio-1;
     }
 
+    .article--competency--definition {
+      width: $gr-long;
+    }
+
+    .article--competency--examples {
+      width: $gr-short;
+    }
+
     .article--competency--definition,
     .article--competency--examples {
-      width: 50%;
       padding-right: $golden-ratio-4;
 
       p,
@@ -55,5 +63,11 @@ article.competency {
         margin-top: 0;
       }
     }
+  }
+}
+
+body.single-competency {
+  .page-body--content {
+    position: relative;
   }
 }

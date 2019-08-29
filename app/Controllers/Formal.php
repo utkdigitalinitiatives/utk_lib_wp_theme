@@ -54,7 +54,7 @@ class Formal extends Controller
 
     private static function renderCompetencyInner($post, $content = null)
     {
-        $content .= '<span class="article--populate--label">Competency</span>';
+        $content .= '<span class="article--populate--inner--label">Competency</span>';
         $content .= '<h1>' . $post['title'] . '</h1>';
         $content .= '<div class="article--competency--definition">';
         $content .= '<h2>Definition</h2>';
