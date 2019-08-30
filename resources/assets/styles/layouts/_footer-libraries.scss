@@ -30,6 +30,7 @@
 
     p {
       font-size: $type-2;
+      line-height: 1.58em;
 
       @include respond(xs, sm) {
         font-size: $type-1;
