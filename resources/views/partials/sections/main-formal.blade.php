@@ -3,7 +3,7 @@
 <div class="container page-body--container">
     <div class="page-body--flex">
         <main class="page-body--content page-body--content-formal">
-            @include('partials.content-'.get_post_type())
+            @include('partials.content-page--formal')
         </main>
     </div>
     <div id="detach-sticky-bottom"></div>

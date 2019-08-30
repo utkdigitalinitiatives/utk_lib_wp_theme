@@ -10,7 +10,7 @@
 <div class="container page-body--container">
     <div class="page-body--flex">
         <main class="page-body--content page-body--content-formal">
-            @php print \App::utkGetFormalHeader($header_post) @endphp
+            @php print \Formal::getFormalHeader($header_post) @endphp
             @include('partials.facets-formal')
             <div class="facetwp-template">
                 @if (!have_posts())

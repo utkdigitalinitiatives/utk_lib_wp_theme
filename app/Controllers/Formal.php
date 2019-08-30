@@ -6,6 +6,26 @@ use Sober\Controller\Controller;
 
 class Formal extends Controller
 {
+
+    public static function getFormalHeader($post_id)
+    {
+
+        $content_post = get_post($post_id);
+
+        $title = $content_post->post_title;
+        $content = $content_post->post_content;
+        $content = apply_filters('the_content', $content);
+        $content = str_replace(']]>', ']]&gt;', $content);
+
+        $header = '
+        <div class="page-body--content--title">
+          <span class="utk-heading-1" role="heading" aria-level="1">' . $title .'</span>
+        </div>
+        <div class="page-body--content--body">' . $content . '</div>';
+
+        return $header;
+    }
+
     public static function getFormalPost($post_id = null, $post_type = null)
     {
         if (isset($_POST['security'])) :
