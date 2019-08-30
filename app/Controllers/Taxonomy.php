@@ -12,6 +12,14 @@ class Taxonomy extends Controller
         $terms = get_terms([
             'taxonomy' => $name,
             'hide_empty' => false,
+            'orderby' => 'meta_value_num',
+            'order' => 'ASC',
+            'meta_query' => [
+                [
+                    'key' => 'taxonomy_weight',
+                    'type' => 'NUMERIC',
+                ]
+            ],
         ]);
 
         $content .= '<div class="utk-taxonomy">';
