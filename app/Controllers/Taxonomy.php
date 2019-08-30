@@ -36,7 +36,7 @@ class Taxonomy extends Controller
             $term_content .= '</div>';
             $term_content .= '<div class="utk-taxonomy--term--posts">';
                 $term_content .= '<h3>' . get_field('taxonomy_post_label') .'</h3>';
-                $term_content .= '<ul>' . $term_posts . '</ul>';
+                $term_content .= '<ul class="utk-taxonomy--term--posts--items">' . $term_posts . '</ul>';
             $term_content .= '</div>';
         $term_content .= '</div>';
 

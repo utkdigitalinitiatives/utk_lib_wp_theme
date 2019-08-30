@@ -27,7 +27,6 @@
 
       p {
         font-size: $type-3;
-        letter-spacing: 0;
         margin: 0;
         color: $smokey;
         -webkit-font-smoothing: antialiased;
@@ -44,14 +43,14 @@
         margin: 0;
       }
 
-      ul {
-        columns: 4;
+      ul.utk-taxonomy--term--posts--items {
+        columns: 3;
         padding-left: 23px;
 
         > li {
           font-size: $type-2 !important;
           line-height: 1.29em;
-          margin-bottom: $golden-ratio-0;
+          margin-bottom: $golden-ratio-1 !important;
           padding-right: $golden-ratio-2;
         }
       }
