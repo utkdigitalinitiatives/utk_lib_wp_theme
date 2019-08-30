@@ -1,3 +1,62 @@
 .utk-taxonomy {
-  background-color: red;
+  &--term {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: $golden-ratio-2;
+
+    > h2 {
+      width: 100%;
+      margin-bottom: $golden-ratio-2;
+      -webkit-font-smoothing: antialiased;
+
+      &::before {
+        display: block;
+        width: $golden-ratio-5;
+        height: $golden-ratio-0;
+        background-color: $orange;
+        content: '';
+        margin-bottom: $golden-ratio-2;
+      }
+    }
+
+    &--description {
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding-right: $golden-ratio-4;
+
+      p {
+        @include serif-body-rendering;
+
+        font-size: $type-3;
+        letter-spacing: 0;
+        margin: 0;
+        color: $smokey;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+
+    &--posts {
+      margin-top: $golden-ratio-3;
+
+      > h3 {
+        font-size: $type-1;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      ul {
+        columns: 3;
+        padding-left: 23px;
+
+        > li {
+          font-size: $type-2 !important;
+          line-height: 1.29em;
+          margin-bottom: $golden-ratio-0;
+          padding-right: $golden-ratio-1;
+        }
+      }
+    }
+  }
 }
