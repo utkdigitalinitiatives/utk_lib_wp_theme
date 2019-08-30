@@ -1,7 +1,7 @@
 .utk-button-nav {
   display: flex;
   width: 100%;
-  margin: $golden-ratio-4 0 $golden-ratio-3;
+  margin: $golden-ratio-4 0;
   padding: 0;
   flex-direction: row;
   justify-content: space-between;
@@ -10,7 +10,6 @@
   @include respond(xs) {
     flex-direction: column;
     width: $gr-long;
-    margin: $golden-ratio-4 auto $golden-ratio-3;
   }
 
   > a {
