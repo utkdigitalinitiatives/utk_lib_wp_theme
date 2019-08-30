@@ -14,7 +14,7 @@ class Taxonomy extends Controller
             'hide_empty' => false,
         ]);
 
-        $content .= '<div class="utk-taxonomy>';
+        $content .= '<div class="utk-taxonomy">';
 
         foreach ($terms as $term) :
             $content .= self::getTaxonomyTerm($term, $name);
