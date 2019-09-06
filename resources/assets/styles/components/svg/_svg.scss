@@ -4,6 +4,7 @@ svg.utk-svg {
   opacity: 0;
   transform: translateY(4em) rotateZ(-3deg);
   transition: transform 1.23s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.47s 0.25s ease-out;
+  fill: inherit !important;
 
   > * {
     fill: inherit !important;
