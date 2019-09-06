@@ -1,0 +1,111 @@
+svg.utk-svg {
+  transition: $transition-all;
+  width: 199px;
+  margin: 0 auto;
+
+  &.utk-svg-animated {
+    transition: $transition-all-fast;
+
+    &.utk-svg-animated-burst {
+      .cls-1 {
+        animation: loading-burst 0.29s ease-in-out 0s 1;
+        transform-origin: center;
+      }
+
+      .cls-2 {
+        animation: loading-burst 0.47s ease-in-out 0s 1;
+        transform-origin: center;
+      }
+
+      .cls-a {
+        animation-duration: 0.47s !important;
+      }
+
+      .cls-b {
+        animation-duration: 0.76s !important;
+      }
+
+      .cls-c {
+        animation-duration: 1.05s !important;
+      }
+
+      .cls-left {
+        transform-origin: left;
+        animation: post-loading-slideX 0.47s ease-in-out 0s 1;
+      }
+
+      .cls-right {
+        transform-origin: right;
+        animation: post-loading-slideX 0.47s ease-in-out 0s 1;
+      }
+
+      .cls-top {
+        transform-origin: top;
+        animation: post-loading-slideY 0.47s ease-in-out 0s 1;
+      }
+
+      .cls-bottom {
+        transform-origin: bottom;
+        animation: post-loading-slideY 0.47s ease-in-out 0s 1;
+      }
+
+      .cls-white {
+        fill: $white !important;
+      }
+    }
+  }
+}
+
+@keyframes loading-burst {
+  0% {
+    transform: scale3d(0, 0, 0);
+  }
+
+  81% {
+    transform: scale3d(1.11, 1.11, 1.11);
+  }
+
+  92% {
+    transform: scale3d(0.95, 0.95, 0.95);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes post-loading-slideX {
+  0% {
+    transform: scale3d(0, 0, 0) translateX(500px);
+  }
+
+  81% {
+    transform: scale3d(1.04, 1.04, 1.04) translateX(-3px);
+  }
+
+  92% {
+    transform: scale3d(0.99, 0.99, 0.99) translateX(1px);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1) translateX(0);
+  }
+}
+
+@keyframes post-loading-slideY {
+  0% {
+    transform: scale3d(0, 0, 0) translateY(500px);
+  }
+
+  81% {
+    transform: scale3d(1.04, 1.04, 1.04) translateY(-3px);
+  }
+
+  92% {
+    transform: scale3d(0.99, 0.99, 0.99) translateY(1px);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1) translateY(0);
+  }
+}
