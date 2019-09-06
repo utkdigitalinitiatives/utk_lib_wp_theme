@@ -6,7 +6,10 @@ export default class Formal {
 
     constructor() {
         this.formalAjaxPopulate();
+        this.checkSVGs();
+    }
 
+    checkSVGs () {
         // Detect request animation frame
         var scroll = window.requestAnimationFrame ||
             // IE Fallback
@@ -14,8 +17,7 @@ export default class Formal {
         var elementsToShow = document.querySelectorAll('.utk-svg');
 
         function loop() {
-
-            Array.prototype.forEach.call(elementsToShow, function(element){
+            Array.prototype.forEach.call(elementsToShow, function (element) {
                 if (isElementInViewport(element)) {
                     element.classList.add('utk-svg-visible');
                 } else {
@@ -51,7 +53,7 @@ export default class Formal {
 
     formalAjaxPopulate () {
         (function($, log) {
-            $('article > a.article--trigger').click(function (e) {
+            $('article > a.article--trigger').on('click', function (e) {
 
                 e.preventDefault();
 
@@ -86,13 +88,14 @@ export default class Formal {
                     complete: function () {
                         var height = $(populate).height();
                         $(populate).css('height', height);
+                        $(populate).find('.utk-svg').addClass('utk-svg-visible');
                         $('.facetwp-template > article').css('margin-bottom', 29);
                         $(target).css('margin-bottom', height + 47);
                     },
                 });
             });
 
-            $('.article--close').click(function (e) {
+            $('.article--close').on('click', function (e) {
 
                 e.preventDefault();
                 e.stopPropagation();

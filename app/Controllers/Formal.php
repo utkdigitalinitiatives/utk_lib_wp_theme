@@ -74,11 +74,21 @@ class Formal extends Controller
 
     private static function renderCompetencyInner($post, $content = null)
     {
+        $model = wp_get_post_terms($post['id'], 'competency_models', array("fields" => "all"));
+
+        $term_id = $model[0]->term_id;
+
+        $term_svg = get_term_meta($term_id, 'taxonomy_svg', 1);
+        $term_color = get_term_meta($term_id, 'taxonomy_color', 1);
+
+        $term_svg_wrap = '<figure class="utk-svg-wrap" style="fill: #' . $term_color . ';">' . $term_svg . '</figure>';
+
         $content .= '<span class="article--populate--inner--label">Competency</span>';
         $content .= '<h1>' . $post['title'] . '</h1>';
         $content .= '<div class="article--competency--definition">';
         $content .= '<h2>Definition</h2>';
         $content .= $post['fields']['competency_description'];
+        $content .= $term_svg_wrap;
         $content .= '</div>';
 
         if (isset($post['fields']['competency_examples'])) :
