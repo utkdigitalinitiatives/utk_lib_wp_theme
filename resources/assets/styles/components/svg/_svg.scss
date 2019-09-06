@@ -1,52 +1,55 @@
 svg.utk-svg {
-  transition: $transition-all;
   width: 199px;
   margin: 0 auto;
+  opacity: 0;
+  transform: translateY(4em) rotateZ(-3deg);
+  transition: transform 1.23s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.47s 0.25s ease-out;
 
-  &.utk-svg-animated {
-    transition: $transition-all-fast;
+  &.utk-svg-animated.utk-svg-visible {
+    opacity: 1;
+    transform: rotateZ(0deg);
 
     &.utk-svg-animated-burst {
       .cls-1 {
-        animation: loading-burst 0.29s ease-in-out 0s 1;
+        animation: loading-burst 0.47s cubic-bezier(0, 1, 0.3, 1) 0s 1;
         transform-origin: center;
       }
 
       .cls-2 {
-        animation: loading-burst 0.47s ease-in-out 0s 1;
+        animation: loading-burst 0.76s cubic-bezier(0, 1, 0.3, 1) 0s 1;
         transform-origin: center;
       }
 
       .cls-a {
-        animation-duration: 0.47s !important;
-      }
-
-      .cls-b {
         animation-duration: 0.76s !important;
       }
 
-      .cls-c {
+      .cls-b {
         animation-duration: 1.05s !important;
+      }
+
+      .cls-c {
+        animation-duration: 1.34s !important;
       }
 
       .cls-left {
         transform-origin: left;
-        animation: post-loading-slideX 0.47s ease-in-out 0s 1;
+        animation: post-loading-slideX 0.76s ease-in-out 0s 1;
       }
 
       .cls-right {
         transform-origin: right;
-        animation: post-loading-slideX 0.47s ease-in-out 0s 1;
+        animation: post-loading-slideX 0.76s ease-in-out 0s 1;
       }
 
       .cls-top {
         transform-origin: top;
-        animation: post-loading-slideY 0.47s ease-in-out 0s 1;
+        animation: post-loading-slideY 0.76s ease-in-out 0s 1;
       }
 
       .cls-bottom {
         transform-origin: bottom;
-        animation: post-loading-slideY 0.47s ease-in-out 0s 1;
+        animation: post-loading-slideY 0.76s ease-in-out 0s 1;
       }
 
       .cls-white {

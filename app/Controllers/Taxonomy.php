@@ -36,7 +36,7 @@ class Taxonomy extends Controller
     public static function getTaxonomyTerm($term, $taxonomy, $term_content = null)
     {
         $term_posts = self::getPostsByTerm($term->term_id, $taxonomy);
-        
+
         $term_svg = get_term_meta($term->term_id, 'taxonomy_svg', 1);
         $term_color = get_term_meta($term->term_id, 'taxonomy_color', 1);
 
@@ -44,7 +44,7 @@ class Taxonomy extends Controller
 
         $term_content .= '<div class="utk-taxonomy--term">';
             $term_content .= $term_svg_wrap;
-            $term_content .= '<h2>' . $term->name . '</h2>';
+            $term_content .= '<h2 style="border-color:#' . $term_color .'!important;">' . $term->name . '</h2>';
             $term_content .= '<div class="utk-taxonomy--term--description">';
                 $term_content .= '<p>' . $term->description . '</p>';
             $term_content .= '</div>';
