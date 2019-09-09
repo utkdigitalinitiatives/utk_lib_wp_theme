@@ -21,7 +21,6 @@ export default class FacetWP {
                 if (facets.competency_model.length) {
                     if (facets.competency_model.length !== 0) {
                         meta = '<a data-facet="competency_model">' + facets.competency_model[0] + '</a>';
-
                     }
                 }
 
@@ -32,14 +31,9 @@ export default class FacetWP {
                         string = null;
                     }
                 }
-
-                if (meta !== null) {
-                    $('.utk-facets--label-meta').html(meta);
-                }
-
-                if (string !== null) {
-                    $('.utk-facets--label-string').html(string);
-                }
+                
+                $('.utk-facets--label-meta').html(meta);
+                $('.utk-facets--label-string').html(string);
 
             });
 
