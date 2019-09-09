@@ -51,51 +51,95 @@ export default class Formal {
         }
     }
 
+    static getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+    };
+
+    static formalAjaxPopulateProcess(id, type) {
+
+        $('.facetwp-template > article').removeClass('article--trigger-expand');
+
+        var postId = id;
+        var postType = type;
+
+        var template = '.facetwp-template';
+        var target = '.facetwp-template > .post-' + postId;
+        var populate = target + ' .article--populate-' + postId;
+        $(template).addClass('facetwp-template-focus');
+        $(target).addClass('article--trigger-expand');
+
+        // eslint-disable-next-line no-undef
+        var ajax = ajax_object;
+
+        $.ajax({
+            url : ajax.ajax_url,
+            data : {
+                action: 'getFormalPost',
+                security: ajax.ajax_nonce,
+                id: postId,
+                type: postType,
+            },
+            type : 'POST',
+            beforeSend : function () {
+            },
+            success : function(response) {
+                $(populate).html(response);
+            },
+            complete: function () {
+                var height = $(populate).height();
+                $(populate).css('height', height);
+                $(populate).find('.utk-svg').addClass('utk-svg-visible');
+                $('.facetwp-template > article').css('margin-bottom', 29);
+                $(target).css('margin-bottom', height + 47);
+            },
+        });
+
+    };
+
     formalAjaxPopulate () {
         (function($, log) {
-            $(document).on('click', 'article > a.article--trigger', function (e) {
+
+            $( document ).ready(function() {
+                if (Formal.getUrlParameter('populate')) {
+
+                    var populate = Formal.getUrlParameter('populate');
+                    var type = Formal.getUrlParameter('type');
+                    var scrollto = "#article-formal-" + populate;
+
+                    $('html, body').animate({
+                        scrollTop: $(scrollto).offset().top - 199
+                    }, 760);
+
+                    Formal.formalAjaxPopulateProcess(populate, type)
+
+                } else {
+                    // nada
+                }
+            });
+
+            $(document).on('click', 'article > a.article--trigger', function(e) {
 
                 e.preventDefault();
-
-                $('.facetwp-template > article').removeClass('article--trigger-expand');
 
                 var postId = $(this).attr('data-id');
                 var postType = $(this).attr('data-type');
 
-                var template = '.facetwp-template';
-                var target = '.facetwp-template > .post-' + postId;
-                var populate = target + ' .article--populate-' + postId;
-                $(template).addClass('facetwp-template-focus');
-                $(target).addClass('article--trigger-expand');
+                Formal.formalAjaxPopulateProcess(postId, postType);
 
-                // eslint-disable-next-line no-undef
-                var ajax = ajax_object;
-
-                $.ajax({
-                    url : ajax.ajax_url,
-                    data : {
-                        action: 'getFormalPost',
-                        security: ajax.ajax_nonce,
-                        id: postId,
-                        type: postType,
-                    },
-                    type : 'POST',
-                    beforeSend : function () {
-                    },
-                    success : function(response) {
-                        $(populate).html(response);
-                    },
-                    complete: function () {
-                        var height = $(populate).height();
-                        $(populate).css('height', height);
-                        $(populate).find('.utk-svg').addClass('utk-svg-visible');
-                        $('.facetwp-template > article').css('margin-bottom', 29);
-                        $(target).css('margin-bottom', height + 47);
-                    },
-                });
             });
 
-            $(document).on('click').on('click', '.article--close', function (e) {
+            $(document).on('click').on('click', '.article--close', function(e) {
 
                 e.preventDefault();
                 e.stopPropagation();
