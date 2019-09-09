@@ -28,7 +28,6 @@
     border: 2px solid $gray-1;
     border-right: none;
     background-color: $white;
-    font-weight: 700;
     color: $smokey;
 
     @include respond(xs) {
