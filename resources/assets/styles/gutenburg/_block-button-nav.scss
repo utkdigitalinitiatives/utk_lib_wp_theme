@@ -1,21 +1,26 @@
 .utk-button-nav {
   display: flex;
-  width: 100%;
-  margin: $golden-ratio-4 0;
+  margin: $golden-ratio-4 auto;
   padding: 0;
   flex-direction: row;
   justify-content: space-between;
   border-radius: $golden-ratio-1;
+  width: $gr-long;
+  max-width: 100%;
+  box-shadow: $box-shadow;
 
   @include respond(xs) {
     flex-direction: column;
     width: $gr-long;
+    margin: $golden-ratio-4 auto;
+    box-shadow: $box-shadow;
   }
 
   > a {
     display: flex;
     flex-grow: 1;
     height: $golden-ratio-4;
+    font-size: $type-2;
     align-content: center;
     align-items: center;
     justify-content: center;
@@ -25,6 +30,10 @@
     background-color: $white;
     font-weight: 700;
     color: $smokey;
+
+    @include respond(xs) {
+      font-size: $type-2;
+    }
 
     &.utk-button-nav--link-active {
       background-color: $smokey;
