@@ -53,7 +53,7 @@ export default class Formal {
 
     formalAjaxPopulate () {
         (function($, log) {
-            $('article > a.article--trigger').on('click', function (e) {
+            $(document).on('click', 'article > a.article--trigger', function (e) {
 
                 e.preventDefault();
 
@@ -95,7 +95,7 @@ export default class Formal {
                 });
             });
 
-            $('.article--close').on('click', function (e) {
+            $(document).on('click').on('click', '.article--close', function (e) {
 
                 e.preventDefault();
                 e.stopPropagation();
