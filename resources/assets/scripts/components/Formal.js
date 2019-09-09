@@ -7,6 +7,7 @@ export default class Formal {
     constructor() {
         this.formalAjaxPopulate();
         this.checkSVGs();
+        this.watchFacets();
     }
 
     checkSVGs () {
@@ -73,10 +74,9 @@ export default class Formal {
         var postId = id;
         var postType = type;
 
-        var template = '.facetwp-template';
         var target = '.facetwp-template > .post-' + postId;
         var populate = target + ' .article--populate-' + postId;
-        $(template).addClass('facetwp-template-focus');
+        $('.facetwp-template').addClass('facetwp-template-focus');
         $(target).addClass('article--trigger-expand');
 
         // eslint-disable-next-line no-undef
@@ -144,9 +144,20 @@ export default class Formal {
                 e.preventDefault();
                 e.stopPropagation();
 
+                $('.facetwp-template').removeClass('facetwp-template-focus');
                 $('.facetwp-template > article').removeClass('article--trigger-expand');
                 $('.facetwp-template > article').css('margin-bottom', 29);
             });
         })(jQuery, console.log);
+    }
+
+    watchFacets() {
+        (function($) {
+            $(document).on('facetwp-refresh', function() {
+                $('.facetwp-template').removeClass('facetwp-template-focus');
+                $('.facetwp-template > article').removeClass('article--trigger-expand');
+                $('.facetwp-template > article').css('margin-bottom', 29);
+            });
+        })(jQuery);
     }
 }
