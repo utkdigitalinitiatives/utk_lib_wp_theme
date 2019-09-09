@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: $golden-ratio-4 !important;
 }
 
 .utk-facets--label {
@@ -14,7 +15,7 @@
   .utk-facets--label-data {
     > a {
       display: flex;
-      font-size: $type-2;
+      font-size: $type-3;
       font-weight: 400;
       line-height: $type-3;
       margin-right: $golden-ratio-2;
@@ -33,7 +34,7 @@
         background-color: $rock;
         font-size: $type-0;
         color: $white;
-        border-radius: 2px;
+        border-radius: $type-2;
         font-weight: 400 !important;
         margin-right: $golden-ratio-0;
       }
@@ -81,7 +82,7 @@
   }
 
   &::after {
-    content: "\E808";
+    content: "\E816";
     font-family: fontello, monospace;
     color: $white !important;
     background-color: $rock;
@@ -104,8 +105,13 @@
   }
 
   &.utk-facets--toggle::after {
-    content: "\E808";
-    background-color: $orange;
+    content: "\E816";
+    background-color: $smokey;
+  }
+
+  &.utk-facets--reset::after {
+    content: "\E817";
+    background-color: $rock;
   }
 }
 

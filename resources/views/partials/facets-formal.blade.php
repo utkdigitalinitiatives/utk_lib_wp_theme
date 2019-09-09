@@ -15,7 +15,7 @@ $facets = 'formal_facets__' . get_post_type();
             </div>
             <div class="utk-facets--tray">
                 <button class="utk-facets--button utk-facets--toggle">
-                    Filter Competencies
+                    Filter
                 </button>
                 <button class="utk-facets--button utk-facets--reset">
                     Reset
