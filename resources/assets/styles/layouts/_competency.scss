@@ -2,48 +2,44 @@ body.single-competency,
 article.competency {
   .article--populate--inner {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
 
-    .article--populate--label {
-      background-color: $fountain;
+    .utk-svg-wrap {
+      margin-top: -$golden-ratio-3;
+      margin-left: -$golden-ratio-3;
+      margin-right: $golden-ratio-2;
+      padding: 0;
+
+      .utk-svg {
+        width: $golden-ratio-6 !important;
+      }
     }
 
-    .utk-svg {
-      width: $golden-ratio-5 !important;
+    .article--competency--wrap {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
     }
 
     h1 {
       font-size: $type-5;
-      margin-bottom: $golden-ratio-1;
+      margin-bottom: 0;
       width: 100%;
-
-      &::before {
-        display: block;
-        width: $golden-ratio-5;
-        height: $golden-ratio-0;
-        background-color: $orange;
-        content: '';
-        margin-bottom: $golden-ratio-2;
-      }
+      font-weight: 700;
     }
 
     h2 {
-      font-size: $type-3;
+      font-size: $type-1;
       margin-bottom: $golden-ratio-1;
-    }
-
-    .article--competency--definition {
-      width: $gr-long;
-    }
-
-    .article--competency--examples {
-      width: $gr-short;
+      margin-top: $golden-ratio-2;
+      text-transform: uppercase;
+      color: $smokeyx;
     }
 
     .article--competency--definition,
     .article--competency--examples {
-      padding-right: $golden-ratio-4;
+      width: 50%;
+      padding-right: $golden-ratio-3;
 
       p,
       li {
