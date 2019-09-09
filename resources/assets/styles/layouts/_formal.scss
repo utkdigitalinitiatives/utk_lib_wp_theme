@@ -131,6 +131,16 @@
             font-size: $type-2 !important;
             line-height: 1.29em !important;
             margin: $golden-ratio-1 0 0 !important;
+
+            @include respond(xs) {
+              font-size: $type-1 !important;
+            }
+          }
+
+          .article--meta-categories {
+            @include respond(xs) {
+              font-size: $type-0 !important;
+            }
           }
         }
       }
