@@ -1,20 +1,33 @@
+/* eslint-disable */
+
 /* FacetWP */
 
 export default class FacetWP {
 
     constructor() {
-        // this.watchSearches();
+        this.toggleFacetModal();
     }
 
-    watchSearches() {
-        (function($, log, window) {
-            $(document).on('facetwp-refresh', function() {
-                var searchVal = $('.facetwp-facet-volopedia_search input.facetwp-search').val();
-                if (searchVal !== undefined && searchVal !== '') {
-                    var url = window.location.origin + '/entries/?fwp_volopedia_search=' + searchVal;
-                    window.location.replace(url);
-                }
+    toggleFacetModal() {
+        (function($, log) {
+            $(document).on('click', '.utk-facets--reset', function(e) {
+                FWP.reset();
             });
-        })(jQuery, console.log, window);
+
+            $(document).on('click', '.utk-facets--toggle', function(e) {
+                $('.utk-facets--modal').addClass('utk-facets--modal-active');
+                $('body').addClass('utk-modal-open');
+            });
+
+            $(document).on('click', '.utk-facets--close', function(e) {
+                $('.utk-facets--modal').removeClass('utk-facets--modal-active');
+                $('body').removeClass('utk-modal-open');
+            });
+
+            $(document).on('click', '.utk-modal-overlay', function(e) {
+                $('.utk-facets--modal').removeClass('utk-facets--modal-active');
+                $('body').removeClass('utk-modal-open');
+            });
+        })(jQuery, console.log);
     }
 }

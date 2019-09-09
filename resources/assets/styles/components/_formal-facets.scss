@@ -1,0 +1,86 @@
+.page-body--content-formal .page-body--aside--facets {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.utk-facets--description {
+  font-size: $type-2;
+  font-weight: 700;
+  color: $smokeyx;
+}
+
+.utk-facets--tray {
+  display: flex;
+}
+
+.utk-facets--button {
+  height: $golden-ratio-4;
+  box-shadow: $box-shadow;
+  border: none;
+  background: none;
+  background-color: $white;
+  color: $smokeyx;
+  font-family: $sans;
+  cursor: pointer;
+  font-size: $type-2;
+  font-weight: 700;
+  padding: 0 64px 0 $golden-ratio-2 !important;
+  border-radius: $golden-ratio-4;
+  display: flex;
+  align-items: center;
+  margin-left: $golden-ratio-3;
+  position: relative;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &::after {
+    content: "\E808";
+    font-family: fontello, monospace;
+    color: $white !important;
+    background-color: $rock;
+    font-style: normal;
+    font-size: $type-3;
+    speak: none;
+    font-weight: 400;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: $golden-ratio-4 !important;
+    line-height: $golden-ratio-4 !important;
+    width: $golden-ratio-4 !important;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 6px 100%) !important;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 6px 100%) !important;
+    border-top-right-radius: 47px !important;
+    border-bottom-right-radius: 47px !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &.utk-facets--toggle::after {
+    content: "\E808";
+    background-color: $orange;
+  }
+}
+
+.utk-facets--modal {
+  background-color: $white;
+  position: fixed;
+  z-index: 100000;
+  transition: all 290ms ease-in-out;
+  transform: scale3d(0, 0, 0) translate(0, 0);
+  transform-origin: center;
+  box-shadow: $box-shadow-float-submenu;
+  padding: $golden-ratio-3;
+  max-width: $gr-long;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+
+  &-active {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translate(-50%, -50%);
+  }
+}

@@ -24,6 +24,9 @@
 
 @php do_action('get_footer') @endphp
 @include('partials.footer')
+
+<div class="utk-modal-overlay"></div>
+
 @php wp_footer() @endphp
 
 </body>

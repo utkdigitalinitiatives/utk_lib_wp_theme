@@ -1,4 +1,6 @@
 .page-body--content-formal {
+  z-index: unset !important;
+
   .page-body--content--title {
     text-align: center;
     margin-top: $golden-ratio-3;
