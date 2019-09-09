@@ -20,14 +20,14 @@ export default class FacetWP {
 
                 if (facets.competency_model.length) {
                     if (facets.competency_model.length !== 0) {
-                        meta = '<a data-facet="competency_model"><em>Tagged:</em> ' + facets.competency_model[0] + '</a>';
+                        meta = '<a data-facet="competency_model">' + facets.competency_model[0] + '</a>';
 
                     }
                 }
 
                 if (facets.filter_competencies.length) {
                     if (facets.filter_competencies !== null  || facets.filter_competencies !== '') {
-                        string = '<a data-facet="filter_competencies"><em>Contains:</em> "' + facets.filter_competencies + '"</a>';
+                        string = '<a data-facet="filter_competencies">"' + facets.filter_competencies + '"</a>';
                     } else {
                         string = null;
                     }
@@ -48,10 +48,10 @@ export default class FacetWP {
                 e.stopPropagation();
 
                 var facet = $(this).attr('data-facet');
-                $(this).html('');
 
                 FWP.facets[facet] = [];
                 FWP.fetch_data();
+                $(this).remove();
             });
 
             $(document).on('click', '.utk-facets--reset', function(e) {

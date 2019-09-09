@@ -4,10 +4,54 @@
   align-items: center;
 }
 
-.utk-facets--description {
+.utk-facets--label {
   font-size: $type-2;
   font-weight: 700;
   color: $smokeyx;
+  display: flex;
+  flex-wrap: wrap;
+
+  .utk-facets--label-data {
+    > a {
+      display: flex;
+      font-size: $type-2;
+      font-weight: 400;
+      line-height: $type-3;
+      margin-right: $golden-ratio-2;
+      color: $smokey !important;
+      align-items: center;
+      justify-content: flex-start;
+
+      &::before {
+        content: "\E801";
+        font-family: fontello, monospace;
+        speak: none;
+        width: $type-2;
+        height: $type-2;
+        text-align: center;
+        line-height: $type-1;
+        background-color: $rock;
+        font-size: $type-0;
+        color: $white;
+        border-radius: 2px;
+        font-weight: 400 !important;
+        margin-right: $golden-ratio-0;
+      }
+
+      &:hover,
+      &:focus {
+        color: $globe;
+
+        &::before {
+          background-color: $torch !important;
+        }
+      }
+    }
+
+    &.utk-facets--label-meta > a {
+      text-transform: capitalize;
+    }
+  }
 }
 
 .utk-facets--tray {
