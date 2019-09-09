@@ -2,6 +2,12 @@
 
     $model = wp_get_post_terms(get_the_ID(), 'competency_models', array("fields" => "all"));
 
+    $term_id = $model[0]->term_id;
+
+    $term_svg = get_term_meta($term_id, 'taxonomy_svg', 1);
+    $term_color = get_term_meta($term_id, 'taxonomy_color', 1);
+    $term_color_style = '#' . $term_color . ';';
+
     $words = preg_split("/[\s,_-]+/", get_the_title());
     $acronym = "";
 
@@ -30,6 +36,7 @@
         <div class="article--context">
             <span class="article--close"><span class="icon-cancel"></span></span>
             <div class="article--grid--image"
+                 style="border-color: {{$term_color_style}}"
                  href="@php the_permalink() @endphp">
                 <figure>
                     <span>{{$acronym}}</span>
@@ -42,6 +49,8 @@
                 </h2>
                 <div class="article--meta article--meta-excerpt">
                     <div class="article--meta article--meta-categories">
+                        <span class="article--meta-categories--dimple"
+                              style="background-color: {{$term_color_style}}"></span>
                         @php print $model[0]->name @endphp
                     </div>
                 </div>

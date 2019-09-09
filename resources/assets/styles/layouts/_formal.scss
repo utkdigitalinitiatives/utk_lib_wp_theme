@@ -98,8 +98,9 @@
           display: block;
           width: 100%;
           padding-top: $gr-percent;
-          background-color: $rock;
+          background-color: $gray-1;
           position: relative;
+          border-bottom: $golden-ratio-0 solid $rock;
 
           figure {
             margin: 0;
