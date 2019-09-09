@@ -4,6 +4,12 @@
     margin-top: $golden-ratio-3;
     -webkit-font-smoothing: antialiased !important;
 
+    > .utk-heading-1 {
+      font-weight: 700;
+      font-size: $type-6;
+      letter-spacing: -0.029em;
+    }
+
     * {
       -webkit-font-smoothing: antialiased !important;
     }

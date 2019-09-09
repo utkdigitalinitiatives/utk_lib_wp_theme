@@ -18,10 +18,12 @@ class Formal extends Controller
         $content = str_replace(']]>', ']]&gt;', $content);
 
         $header = '
-        <div class="page-body--content--title">
-          <span class="utk-heading-1" role="heading" aria-level="1">' . $title .'</span>
-        </div>
-        <div class="page-body--content--body">' . $content . '</div>';
+        <div class="page-body--formal-header page-body--formal-header-' . $post_id . '">
+            <div class="page-body--content--title">
+              <span class="utk-heading-1" role="heading" aria-level="1">' . $title .'</span>
+            </div>
+            <div class="page-body--content--body">' . $content . '</div>
+        </div>';
 
         return $header;
     }
