@@ -62,6 +62,8 @@ class Taxonomy extends Controller
         $args = [
             'post_type' => get_field('taxonomy_post_type'),
             'numberposts' => -1,
+            'orderby' => 'name',
+            'order' => 'ASC',
             'tax_query' => array(
                 array(
                     'taxonomy' => $taxonomy,
