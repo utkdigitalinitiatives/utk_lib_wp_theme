@@ -168,34 +168,14 @@
       }
 
       @include respond(xs) {
-        width: 100%;
-        margin-right: 0 !important;
-        margin-bottom: $golden-ratio-3;
+        width: calc((100% - 18px) / 2);
 
-        &:nth-child(5n),
-        &:nth-child(4n),
-        &:nth-child(3n) {
+        &:nth-child(odd) {
+          margin-right: $golden-ratio-2 !important;
+        }
+
+        &:nth-child(even) {
           margin-right: 0 !important;
-        }
-
-        &:nth-child(2n) {
-          margin-right: 0;
-        }
-
-        .article--context {
-          display: flex;
-
-          .article--grid--image {
-            width: $golden-ratio-6;
-            height: $golden-ratio-5;
-            padding-top: 0;
-            flex-shrink: 0;
-            margin-right: $golden-ratio-1;
-          }
-
-          .article--header h2 {
-            margin-top: $golden-ratio-0 !important;
-          }
         }
       }
 
