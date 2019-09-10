@@ -4,8 +4,11 @@
   margin-bottom: $golden-ratio-4 !important;
   background-color: $gray-0;
   padding: $golden-ratio-2;
-  border-radius: $golden-ratio-4;
+  border-radius: 41px;
   box-shadow: inset $box-shadow;
+  transition: $transition-all;
+  position: relative;
+  height: 82px;
 
   @include respond(xs, sm) {
     display: flex !important;
@@ -132,12 +135,21 @@
 
 .utk-facets--modal {
   background-color: transparent;
+  transition: $transition-all;
+  transform-origin: center;
+  display: block;
+  position: absolute;
+  top: 65px;
+  opacity: 0;
+
+  &-active {
+    opacity: 1;
+  }
 
   @include respond(xs) {
     background-color: $white;
     position: fixed;
     z-index: 100000;
-    transition: all 290ms ease-in-out;
     transform: scale3d(0, 0, 0) translate(0, 0);
     transform-origin: center;
     box-shadow: $box-shadow-float-submenu;

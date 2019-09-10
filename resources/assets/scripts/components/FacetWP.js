@@ -34,7 +34,6 @@ export default class FacetWP {
 
                 $('.utk-facets--label-meta').html(meta);
                 $('.utk-facets--label-string').html(string);
-
             });
 
             $(document).on('click', '.utk-facets--label-data > a', function(e) {
@@ -57,11 +56,22 @@ export default class FacetWP {
             $(document).on('click', '.utk-facets--toggle', function(e) {
                 $('.utk-facets--modal').addClass('utk-facets--modal-active');
                 $('body').addClass('utk-modal-open');
+
+                var facetsEl = '.page-body--aside--facets';
+                var modalEl = '.utk-facets--modal';
+                var height = $(modalEl).height() + 36 + 47;
+
+                $(facetsEl).css('height', height);
             });
 
             $(document).on('click', '.utk-facets--close', function(e) {
                 $('.utk-facets--modal').removeClass('utk-facets--modal-active');
                 $('body').removeClass('utk-modal-open');
+
+                var facetsEl = '.page-body--aside--facets';
+                var height = 36 + 47;
+
+                $(facetsEl).css('height', height);
             });
 
             $(document).on('click', '.utk-modal-overlay', function(e) {
