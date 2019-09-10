@@ -85,7 +85,6 @@ class Formal extends Controller
 
         $term_svg_wrap = '<figure class="utk-svg-wrap" style="fill: #' . $term_color . ';">' . $term_svg . '</figure>';
 
-        $content .= '<span class="article--populate--inner--label">Competency</span>';
         $content .= $term_svg_wrap;
         $content .= '<div class="article--competency--wrap">';
         $content .= '<h1 style="color: #' . $term_color .';">' . $post['title'] . '</h1>';
