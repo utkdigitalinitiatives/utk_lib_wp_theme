@@ -14,13 +14,25 @@
   body.utk-modal-open {
     overflow: hidden;
 
+    .page-body--aside--facets {
+      height: auto;
+    }
+
     .utk-modal-overlay {
       opacity: 0.76;
       height: 100%;
     }
+  }
+}
 
-    .page-body--aside--facets {
-      height: auto;
+body.utk-modal-open {
+  .utk-facets--filter {
+    .utk-facets--close {
+      transform: scale3d(1, 1, 1);
+
+      @include respond(xs) {
+        display: none;
+      }
     }
   }
 }

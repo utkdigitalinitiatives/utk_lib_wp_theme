@@ -15,17 +15,20 @@ $facets = 'formal_facets__' . get_post_type();
                     <span class="utk-facets--label-data utk-facets--label-string"></span>
                 </div>
                 <div class="utk-facets--filter">
-                    <button class="utk-facets--button utk-facets--toggle">
-                        Filter
+                    <button class="utk-facets--button utk-facets--close"
+                            aria-label="Close">
                     </button>
                     <button class="utk-facets--button utk-facets--reset">
                         Reset
                     </button>
+                    <button class="utk-facets--button utk-facets--toggle">
+                        Filter
+                    </button>
                 </div>
             </div>
             <div class="utk-facets--modal">
-                <button class="utk-facets--close">
-                    Close
+                <button class="utk-facets--button utk-facets--close"
+                        aria-label="Close">
                 </button>
                 @while ( have_rows($facets, 'options') )
 
