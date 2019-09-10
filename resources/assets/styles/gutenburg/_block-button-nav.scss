@@ -7,13 +7,11 @@
   border-radius: $golden-ratio-1;
   width: $gr-long;
   max-width: 100%;
-  box-shadow: $box-shadow;
 
   @include respond(xs) {
     flex-direction: column;
     width: $gr-long;
     margin: $golden-ratio-4 auto;
-    box-shadow: $box-shadow;
   }
 
   > a {
@@ -35,9 +33,9 @@
     }
 
     &.utk-button-nav--link-active {
-      background-color: $smokey;
-      color: $white !important;
-      border-color: $smokey !important;
+      background-color: $gray-1;
+      color: $smokey !important;
+      font-weight: 700;
     }
 
     @include respond(xs) {
