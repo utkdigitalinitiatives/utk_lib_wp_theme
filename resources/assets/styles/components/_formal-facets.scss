@@ -1,8 +1,12 @@
 .page-body--content-formal .page-body--aside--facets {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   margin-bottom: $golden-ratio-4 !important;
+  background-color: $gray-0;
+  padding: $golden-ratio-2;
+  border-radius: $golden-ratio-7;
+  box-shadow: inset $box-shadow;
 }
 
 .utk-facets--label {
@@ -13,6 +17,8 @@
   flex-wrap: wrap;
 
   .utk-facets--label-data {
+    padding-left: $golden-ratio-1;
+
     > a {
       display: flex;
       font-size: $type-3;
