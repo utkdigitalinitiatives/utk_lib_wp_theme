@@ -56,13 +56,17 @@
         width: $type-2;
         height: $type-2;
         text-align: center;
-        line-height: $type-2;
+        line-height: 11px;
         background-color: $rock;
         font-size: $type-0;
         color: $white;
         border-radius: $type-2;
         font-weight: 400 !important;
         margin-right: $golden-ratio-0;
+        box-shadow: $box-shadow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       &:hover,
@@ -216,6 +220,22 @@
     &-active {
       opacity: 1;
       transform: scale3d(1, 1, 1) translate(-50%, -50%);
+    }
+  }
+
+  .facetwp-facet {
+    &.facetwp-type-dropdown {
+      .facetwp-dropdown {
+        cursor: pointer;
+        font-family: $sans;
+        font-size: $type-3;
+      }
+    }
+
+    &.facetwp-type-search {
+      .facetwp-search {
+        background-color: $white;
+      }
     }
   }
 }
