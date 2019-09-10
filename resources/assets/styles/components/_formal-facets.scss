@@ -98,9 +98,15 @@
   @include respond(xs) {
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
 
     .utk-facets--close {
       display: none;
+    }
+
+    .utk-facets--reset {
+      margin-left: 0;
+      margin-bottom: $golden-ratio-2;
     }
   }
 }

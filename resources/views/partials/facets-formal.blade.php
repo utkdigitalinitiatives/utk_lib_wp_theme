@@ -2,7 +2,10 @@
 
 Namespace App\Controllers;
 
-$facets = 'formal_facets__' . get_post_type();
+$type = get_post_type();
+$type_object = get_post_type_object($type);
+
+$facets = 'formal_facets__' . $type;
 
 @endphp
 
@@ -22,7 +25,7 @@ $facets = 'formal_facets__' . get_post_type();
                         Reset
                     </button>
                     <button class="utk-facets--button utk-facets--toggle">
-                        Filter
+                        Filter {{$type_object->labels->name}}
                     </button>
                 </div>
             </div>
