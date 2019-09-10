@@ -6,6 +6,10 @@
   padding: $golden-ratio-2;
   border-radius: $golden-ratio-4;
   box-shadow: inset $box-shadow;
+
+  @include respond(xs, sm) {
+    display: flex !important;
+  }
 }
 
 .utk-facets--label {
