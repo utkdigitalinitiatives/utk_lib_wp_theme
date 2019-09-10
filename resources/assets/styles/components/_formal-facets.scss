@@ -1,11 +1,10 @@
 .page-body--content-formal .page-body--aside--facets {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   margin-bottom: $golden-ratio-4 !important;
   background-color: $gray-0;
   padding: $golden-ratio-2;
-  border-radius: $golden-ratio-7;
+  border-radius: $golden-ratio-4;
   box-shadow: inset $box-shadow;
 }
 
@@ -62,6 +61,12 @@
 }
 
 .utk-facets--tray {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.utk-facets--filter {
   display: flex;
 }
 
@@ -122,18 +127,22 @@
 }
 
 .utk-facets--modal {
-  background-color: $white;
-  position: fixed;
-  z-index: 100000;
-  transition: all 290ms ease-in-out;
-  transform: scale3d(0, 0, 0) translate(0, 0);
-  transform-origin: center;
-  box-shadow: $box-shadow-float-submenu;
-  padding: $golden-ratio-3;
-  max-width: $gr-long;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
+  background-color: transparent;
+
+  @include respond(xs) {
+    background-color: $white;
+    position: fixed;
+    z-index: 100000;
+    transition: all 290ms ease-in-out;
+    transform: scale3d(0, 0, 0) translate(0, 0);
+    transform-origin: center;
+    box-shadow: $box-shadow-float-submenu;
+    padding: $golden-ratio-3;
+    max-width: $gr-long;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+  }
 
   &-active {
     opacity: 1;

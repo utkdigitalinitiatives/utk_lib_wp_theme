@@ -9,17 +9,19 @@ $facets = 'formal_facets__' . get_post_type();
 @if(get_field($facets, 'option'))
     <div class="page-body--aside--facets">
         @if(have_rows($facets, 'options'))
-            <div class="utk-facets--label">
-                <span class="utk-facets--label-data utk-facets--label-meta"></span>
-                <span class="utk-facets--label-data utk-facets--label-string"></span>
-            </div>
             <div class="utk-facets--tray">
-                <button class="utk-facets--button utk-facets--toggle">
-                    Filter
-                </button>
-                <button class="utk-facets--button utk-facets--reset">
-                    Reset
-                </button>
+                <div class="utk-facets--label">
+                    <span class="utk-facets--label-data utk-facets--label-meta"></span>
+                    <span class="utk-facets--label-data utk-facets--label-string"></span>
+                </div>
+                <div class="utk-facets--filter">
+                    <button class="utk-facets--button utk-facets--toggle">
+                        Filter
+                    </button>
+                    <button class="utk-facets--button utk-facets--reset">
+                        Reset
+                    </button>
+                </div>
             </div>
             <div class="utk-facets--modal">
                 <button class="utk-facets--close">
