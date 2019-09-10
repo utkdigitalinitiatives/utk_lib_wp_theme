@@ -10,11 +10,13 @@
   transition: opacity 290ms ease-in-out;
 }
 
-body.utk-modal-open {
-  overflow: hidden;
+@include respond(xs) {
+  body.utk-modal-open {
+    overflow: hidden;
 
-  .utk-modal-overlay {
-    opacity: 0.76;
-    height: 100%;
+    .utk-modal-overlay {
+      opacity: 0.76;
+      height: 100%;
+    }
   }
 }
