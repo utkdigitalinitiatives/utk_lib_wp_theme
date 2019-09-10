@@ -34,6 +34,10 @@
   padding-left: $golden-ratio-1;
   line-height: $type-4;
 
+  @include respond(xs) {
+    display: none;
+  }
+
   em {
     margin-right: $golden-ratio-0;
     font-style: normal;
@@ -44,10 +48,6 @@
   .utk-facets--label-data {
     margin-right: $golden-ratio-0;
     height: $type-4;
-
-    @include respond(xs) {
-      display: none;
-    }
 
     > a {
       display: inline-flex;

@@ -4,14 +4,32 @@ article.competency {
     display: flex;
     flex-direction: row;
 
+    @include respond(xs, sm) {
+      flex-direction: column;
+      position: relative;
+    }
+
     .utk-svg-wrap {
       margin-top: -$golden-ratio-3;
       margin-left: -$golden-ratio-3;
       margin-right: $golden-ratio-2;
       padding: 0;
 
+      @include respond(xs, sm) {
+        position: absolute;
+        margin-left: 0;
+        margin-top: $golden-ratio-3;
+        margin-right: $golden-ratio-3;
+        right: 0;
+        top: 0;
+      }
+
       .utk-svg {
         width: $golden-ratio-6 !important;
+
+        @include respond(xs, sm) {
+          width: $golden-ratio-5 !important;
+        }
       }
     }
 
@@ -27,6 +45,11 @@ article.competency {
       width: 100%;
       font-weight: 700;
       letter-spacing: -0.029em;
+
+      @include respond(xs, sm) {
+        font-size: $type-4;
+        padding-right: $golden-ratio-5;
+      }
     }
 
     h2 {
@@ -42,6 +65,11 @@ article.competency {
       width: 50%;
       padding-right: $golden-ratio-3;
 
+      @include respond(sm, xs) {
+        width: 100%;
+        padding-right: 0;
+      }
+
       p,
       li {
         font-size: $type-2;
@@ -49,7 +77,6 @@ article.competency {
       }
 
       ul {
-        columns: 2;
         padding-left: 23px;
 
         li {
