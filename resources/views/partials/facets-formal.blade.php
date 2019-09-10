@@ -14,7 +14,9 @@ $facets = 'formal_facets__' . $type;
         @if(have_rows($facets, 'options'))
             <div class="utk-facets--tray">
                 <div class="utk-facets--label">
-                    <span class="utk-facets--label-data utk-facets--label-meta"></span>
+                    <em>Showing</em>
+                    <span class="utk-facets--label-data utk-facets--label-meta">all</span>
+                    <em>{{$type_object->labels->name}}</em>
                     <span class="utk-facets--label-data utk-facets--label-string"></span>
                 </div>
                 <div class="utk-facets--filter">

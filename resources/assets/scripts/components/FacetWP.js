@@ -12,11 +12,9 @@ export default class FacetWP {
         (function($, log) {
             $(document).on('facetwp-refresh', function() {
 
-                var meta = null;
+                var meta = ' all ';
                 var string = null;
                 var facets = FWP.facets;
-
-                log(facets);
 
                 if (facets.competency_model.length) {
                     if (facets.competency_model.length !== 0) {
@@ -26,7 +24,7 @@ export default class FacetWP {
 
                 if (facets.filter_competencies.length) {
                     if (facets.filter_competencies !== null  || facets.filter_competencies !== '') {
-                        string = '<a data-facet="filter_competencies">"' + facets.filter_competencies + '"</a>';
+                        string = 'referencing <a data-facet="filter_competencies">"' + facets.filter_competencies + '"</a>';
                     } else {
                         string = null;
                     }
@@ -42,6 +40,12 @@ export default class FacetWP {
 
                 var facet = $(this).attr('data-facet');
 
+                if ($(this).parent().hasClass('utk-facets--label-meta')) {
+                    $('.utk-facets--label-meta').html('all');
+                } else if ($(this).parent().hasClass('utk-facets--label-string')) {
+                    $('.utk-facets--label-string').html('');
+                }
+
                 FWP.facets[facet] = [];
                 FWP.fetch_data();
                 $(this).remove();
@@ -49,7 +53,7 @@ export default class FacetWP {
 
             $(document).on('click', '.utk-facets--reset', function(e) {
                 FWP.reset();
-                $('.utk-facets--label-meta').html('');
+                $('.utk-facets--label-meta').html('all');
                 $('.utk-facets--label-string').html('');
             });
 

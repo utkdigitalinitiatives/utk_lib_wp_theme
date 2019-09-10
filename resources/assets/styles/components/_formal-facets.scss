@@ -27,27 +27,38 @@
 
 .utk-facets--label {
   font-size: $type-2;
-  font-weight: 700;
-  color: $smokeyx;
+  font-weight: 400;
+  color: $smokey;
   display: flex;
   flex-wrap: wrap;
+  padding-left: $golden-ratio-1;
+  line-height: $type-4;
+
+  em {
+    margin-right: $golden-ratio-0;
+    font-style: normal;
+    display: inline-flex;
+    height: $type-4;
+  }
 
   .utk-facets--label-data {
-    padding-left: $golden-ratio-1;
+    margin-right: $golden-ratio-0;
+    height: $type-4;
 
     @include respond(xs) {
       display: none;
     }
 
     > a {
-      display: flex;
-      font-size: $type-3;
-      font-weight: 400;
-      line-height: $type-3;
-      margin-right: $golden-ratio-2;
-      color: $smokey !important;
+      display: inline-flex;
+      font-size: $type-2;
+      font-weight: 700;
+      color: $smokeyx !important;
       align-items: center;
       justify-content: flex-start;
+      height: $type-4;
+      position: relative;
+      padding-left: $golden-ratio-2;
 
       &::before {
         content: "\E801";
@@ -62,11 +73,14 @@
         color: $white;
         border-radius: $type-2;
         font-weight: 400 !important;
-        margin-right: $golden-ratio-0;
+        margin-right: 3px;
         box-shadow: $box-shadow;
         display: flex;
         align-items: center;
         justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 4px;
       }
 
       &:hover,
