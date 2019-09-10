@@ -12,8 +12,17 @@
       margin-top: $golden-ratio-3;
       margin-bottom: -$golden-ratio-4;
 
+      @include respond(xs) {
+        margin-top: 0;
+        margin-bottom: -$golden-ratio-3;
+      }
+
       > svg.utk-svg {
         width: $golden-ratio-7 !important;
+
+        @include respond(xs) {
+          width: $golden-ratio-6 !important;
+        }
       }
     }
 
@@ -25,6 +34,10 @@
       display: flex;
       align-items: center;
       color: $smokey;
+
+      @include respond(xs) {
+        font-size: $type-4 !important;
+      }
 
       &::before,
       &::after {
@@ -39,10 +52,18 @@
 
       &::before {
         margin-right: $golden-ratio-4;
+
+        @include respond(xs) {
+          margin-right: $golden-ratio-2;
+        }
       }
 
       &::after {
         margin-left: $golden-ratio-4;
+
+        @include respond(xs) {
+          margin-left: $golden-ratio-2;
+        }
       }
     }
 
@@ -56,6 +77,10 @@
         margin: 0;
         color: $smokey;
         -webkit-font-smoothing: antialiased;
+
+        @include respond(xs) {
+          font-size: $type-2 !important;
+        }
       }
     }
 
@@ -66,17 +91,33 @@
         font-size: $type-4;
         font-weight: 400;
         margin: 0;
+
+        @include respond(xs) {
+          font-size: $type-3 !important;
+        }
       }
 
       ul.utk-taxonomy--term--posts--items {
         columns: 3;
         padding-left: 23px;
 
+        @include respond(sm) {
+          columns: 2;
+        }
+
+        @include respond(xs) {
+          columns: 1;
+        }
+
         > li {
           font-size: $type-2 !important;
           line-height: 1.47em;
           margin-bottom: $golden-ratio-0 !important;
           padding-right: $golden-ratio-2;
+
+          @include respond(xs) {
+            font-size: $type-1 !important;
+          }
         }
       }
     }

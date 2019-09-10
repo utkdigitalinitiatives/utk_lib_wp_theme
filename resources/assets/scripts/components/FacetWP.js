@@ -31,7 +31,7 @@ export default class FacetWP {
                         string = null;
                     }
                 }
-                
+
                 $('.utk-facets--label-meta').html(meta);
                 $('.utk-facets--label-string').html(string);
 
