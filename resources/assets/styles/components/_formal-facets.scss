@@ -110,19 +110,10 @@
 .utk-facets--filter {
   display: flex;
 
-  .utk-facets--close {
-    transition: $transition-all-fast;
-    transform: scale3d(0, 0, 0);
-  }
-
   @include respond(xs) {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
-
-    .utk-facets--close {
-      display: none;
-    }
 
     .utk-facets--reset {
       margin-left: 0;
@@ -215,6 +206,14 @@
   .page-body--aside--facets--item {
     margin-right: $golden-ratio-3;
 
+    @include respond(xs) {
+      margin-right: 0;
+
+      h4 {
+        text-align: center;
+      }
+    }
+
     &:last-of-type {
       flex-grow: 1;
       margin-right: 0;
@@ -222,7 +221,14 @@
   }
 
   .utk-facets--close {
-    display: none;
+    transition: $transition-all-fast;
+    transform: scale3d(0, 0, 0);
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-top: -$golden-ratio-3;
+    margin-left: -23.5px;
   }
 
   &-active {
@@ -230,22 +236,20 @@
   }
 
   @include respond(xs) {
-    background-color: $white;
+    background-color: $gray-0;
     position: fixed;
     z-index: 100000;
     transform: scale3d(0, 0, 0) translate(0, 0);
     transform-origin: center;
     box-shadow: $box-shadow-float-submenu;
     padding: $golden-ratio-3;
-    max-width: $gr-long;
-    width: auto;
+    width: $gr-long;
+    max-width: 100%;
+    min-width: $golden-ratio-8;
     top: 50%;
     left: 50%;
     opacity: 0;
-
-    .utk-facets--close {
-      display: block;
-    }
+    flex-direction: column;
 
     &-active {
       opacity: 1;
@@ -264,12 +268,21 @@
 
     &.facetwp-type-fselect {
       .fs-wrap {
+        @include respond(xs) {
+          display: flex;
+          position: relative;
+        }
+
         .fs-label-wrap {
           height: $golden-ratio-4;
           border-radius: 29px;
           box-shadow: none;
           background-color: $white;
           transition: $transition-all-fast;
+
+          @include respond(xs) {
+            width: 100%;
+          }
 
           .fs-label {
             font-size: $type-2;
@@ -288,6 +301,11 @@
           border-radius: $golden-ratio-0;
           border: none;
           box-shadow: $box-shadow-float;
+
+          @include respond(xs) {
+            margin-top: 52px;
+            right: 0;
+          }
 
           .fs-search {
             padding: 0 $golden-ratio-1;

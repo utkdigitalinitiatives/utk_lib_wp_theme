@@ -21,14 +21,11 @@ $facets = 'formal_facets__' . $type;
                     <a href="#" class="utk-facets--toggle">Modify</a>
                 </div>
                 <div class="utk-facets--filter">
-                    <button class="utk-facets--button utk-facets--close"
-                            aria-label="Close">
-                    </button>
                     <button class="utk-facets--button utk-facets--reset">
                         Reset
                     </button>
                     <button class="utk-facets--button utk-facets--toggle">
-                        Filter {{$type_object->labels->name}}
+                        Filter
                     </button>
                 </div>
             </div>
