@@ -19,7 +19,8 @@ body.admin-bar {
   }
 
   &.utk-search-open .utk-header-search,
-  &.header-scroll-down .page-header .page-header--float {
+  &.header-scroll-down .page-header .page-header--float,
+  .page-header.page-header-truncate .page-header--float {
     top: 114px !important;
 
     @include respond(xs) {

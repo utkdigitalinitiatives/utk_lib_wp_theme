@@ -211,7 +211,8 @@
   display: none;
 }
 
-.header-scroll-down {
+.header-scroll-down,
+.page-header-truncate {
   #page-header-subsite-menu,
   .page-header--current-page {
     display: block;

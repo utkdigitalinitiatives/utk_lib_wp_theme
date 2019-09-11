@@ -15,7 +15,7 @@ Namespace App\Controllers;
 
 @section('content')
 @while(have_posts()) @php the_post() @endphp
-@include('partials.page-header')
+@include('partials.page-header-truncate')
 <div class="page-body page-body-nosidebar">
     @include('partials.sections.main-formal')
 </div>
