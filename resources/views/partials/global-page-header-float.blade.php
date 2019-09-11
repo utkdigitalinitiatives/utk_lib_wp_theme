@@ -44,7 +44,11 @@
       </a>
     @endif
     <div class="page-header--current-page">
-        @php echo $post->post_title; @endphp
+        @if(is_page())
+          @php echo $post->post_title; @endphp
+        @elseif(is_archive())
+          @php echo post_type_archive_title( '', false ); @endphp
+        @endif
     </div>
     <div id="page-header-subsite-menu-mobile-expand" class="page-header--current-page-expand">
         <span class="icon-menu"></span>
