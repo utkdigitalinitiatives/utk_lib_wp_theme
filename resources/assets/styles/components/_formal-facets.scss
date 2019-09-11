@@ -38,8 +38,8 @@
 
   > a {
     text-decoration: underline !important;
-    font-size: $type-0;
-    text-transform: uppercase;
+    font-size: $type-1;
+    font-weight: 700;
   }
 
   @include respond(xs) {
