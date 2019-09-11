@@ -50,7 +50,9 @@ class Taxonomy extends Controller
             $term_content .= '<h2 style="border-color:#' . $term_color .'!important;">' . $term->name . '</h2>';
             $term_content .= '<div class="utk-taxonomy--term--description">';
                 $term_content .= '<p>' . $term->description . '</p>';
-                $term_content .= '<a href="' . $archive_filter . '" class="btn btn-secondary btn-outline">Browse ' . $term->name . ' ' . get_field('taxonomy_post_label') .'</a>';
+                $term_content .= '<a href="' . $archive_filter . '" class="btn btn-secondary btn-outline">';
+                $term_content .= 'View ' . get_field('taxonomy_post_label');
+                $term_content .= '</a>';
             $term_content .= '</div>';
 //            $term_content .= '<div class="utk-taxonomy--term--posts">';
 //                $term_content .= '<h3>' . get_field('taxonomy_post_label') .'</h3>';
