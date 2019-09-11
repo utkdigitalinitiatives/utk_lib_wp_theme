@@ -9,6 +9,9 @@
 @include('partials.components.breadcrumb')
 <div class="container page-body--container">
     <div class="page-body--flex">
+        <aside class="page-body--aside page-body--aside-hidden">
+            @include('partials.sidebar')
+        </aside>
         <main class="page-body--content page-body--content-formal">
             @php print \Formal::getFormalHeader($header_post) @endphp
             @include('partials.facets-formal')

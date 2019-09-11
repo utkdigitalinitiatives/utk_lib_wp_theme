@@ -66,6 +66,12 @@
     z-index: 3;
     margin-bottom: $golden-ratio-5;
 
+    @include respond(md, lg, xl) {
+      &-hidden {
+        display: none;
+      }
+    }
+
     @include respond(xs, sm) {
       width: 100%;
       margin: 0;

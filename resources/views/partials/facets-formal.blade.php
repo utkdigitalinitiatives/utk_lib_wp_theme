@@ -48,6 +48,7 @@ $facets = 'formal_facets__' . $type;
                     </div>
 
                 @endwhile
+                @php wp_reset_query(); @endphp
             </div>
         @endif
     </div>
