@@ -20,3 +20,10 @@
     color: $rock;
   }
 }
+
+.page-body-truncate .page-body--content--breadcrumb {
+  margin-top: $golden-ratio-5;
+  margin-bottom: $golden-ratio-2;
+  text-align: center;
+  box-shadow: none;
+}
