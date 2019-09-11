@@ -63,7 +63,7 @@ export default class FacetWP {
 
                 var facetsEl = '.page-body--aside--facets';
                 var modalEl = '.utk-facets--modal';
-                var height = $(modalEl).height() + 36 + 47;
+                var height = $(modalEl).height() + 18 + 47;
 
                 $(facetsEl).css('height', height);
             });
@@ -73,7 +73,7 @@ export default class FacetWP {
                 $('body').removeClass('utk-modal-open');
 
                 var facetsEl = '.page-body--aside--facets';
-                var height = 36 + 47;
+                var height = 18 + 47;
 
                 $(facetsEl).css('height', height);
             });
