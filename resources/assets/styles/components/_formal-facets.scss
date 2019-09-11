@@ -200,13 +200,26 @@
 }
 
 .utk-facets--modal {
-  background-color: transparent;
   transition: $transition-all;
   transform-origin: center;
-  display: block;
+  display: flex;
   position: absolute;
   top: 65px;
   opacity: 0;
+  width: 100%;
+  padding: $golden-ratio-1 $golden-ratio-3 $golden-ratio-0;
+  background-color: $gray-0;
+  border-radius: 29px;
+  box-shadow: inset $box-shadow;
+
+  .page-body--aside--facets--item {
+    margin-right: $golden-ratio-3;
+
+    &:last-of-type {
+      flex-grow: 1;
+      margin-right: 0;
+    }
+  }
 
   .utk-facets--close {
     display: none;
@@ -225,6 +238,7 @@
     box-shadow: $box-shadow-float-submenu;
     padding: $golden-ratio-3;
     max-width: $gr-long;
+    width: auto;
     top: 50%;
     left: 50%;
     opacity: 0;
@@ -248,9 +262,116 @@
       }
     }
 
+    &.facetwp-type-fselect {
+      .fs-wrap {
+        .fs-label-wrap {
+          height: $golden-ratio-4;
+          border-radius: 29px;
+          box-shadow: none;
+          background-color: $white;
+          transition: $transition-all-fast;
+
+          .fs-label {
+            font-size: $type-2;
+            padding: 0 $golden-ratio-3 0 $golden-ratio-2;
+            height: $golden-ratio-4;
+            display: flex;
+            align-items: center;
+
+            .facetwp-counter {
+              margin-left: $golden-ratio-0;
+            }
+          }
+        }
+
+        .fs-dropdown {
+          border-radius: $golden-ratio-0;
+          border: none;
+          box-shadow: $box-shadow-float;
+
+          .fs-search {
+            padding: 0 $golden-ratio-1;
+
+            > input {
+              height: $type-6;
+              font-size: $type-1;
+              padding: 0;
+            }
+          }
+
+          .fs-options {
+            .fs-option {
+              height: $golden-ratio-3;
+              padding: $golden-ratio-0 $golden-ratio-1;
+              font-size: $type-1;
+              line-height: 16px;
+
+              &.selected {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+
+        &.fs-open {
+          .fs-label-wrap {
+            box-shadow: inset $box-shadow;
+          }
+
+          .fs-dropdown {
+            animation: post-loading-slideY 470ms ease-in-out 0s 1;
+            transform-origin: top;
+          }
+        }
+      }
+    }
+
     &.facetwp-type-search {
-      .facetwp-search {
-        background-color: $white;
+      width: 100%;
+
+      .facetwp-search-wrap {
+        display: flex;
+
+        .facetwp-btn {
+          right: auto;
+          opacity: 1;
+          left: 0;
+          top: 0;
+          width: $golden-ratio-4;
+          height: $golden-ratio-4;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &::before {
+            background: none;
+            content: "\E800";
+            font-family: fontello, monospace;
+            font-style: normal;
+            font-weight: 400;
+            speak: none;
+            display: inline-block;
+            text-decoration: inherit;
+            width: 1em;
+            margin-right: 0.2em;
+            text-align: center;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1em;
+            margin-left: 0.2em;
+            color: $rock;
+          }
+        }
+
+        .facetwp-search {
+          flex-grow: 1;
+          background-color: $white;
+          padding: 0 $golden-ratio-2 0 $golden-ratio-4;
+          height: $golden-ratio-4;
+          border-radius: $golden-ratio-3;
+          font-size: $type-2;
+          color: $smokeyx;
+        }
       }
     }
   }

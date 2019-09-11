@@ -18,7 +18,7 @@ $facets = 'formal_facets__' . $type;
                     <span class="utk-facets--label-data utk-facets--label-meta">all</span>
                     <em>{{$type_object->labels->name}}</em>
                     <span class="utk-facets--label-data utk-facets--label-string"></span>
-                    <a href="#" class="utk-facets--toggle">Edit</a>
+                    <a href="#" class="utk-facets--toggle">Modify</a>
                 </div>
                 <div class="utk-facets--filter">
                     <button class="utk-facets--button utk-facets--close"
