@@ -16,14 +16,15 @@ export default class FacetWP {
                 var string = null;
                 var facets = FWP.facets;
 
-                if (facets.competency_model.length) {
+                if (typeof facets.competency_model != "undefined") {
                     if (facets.competency_model.length !== 0) {
                         meta = '<a data-facet="competency_model">' + facets.competency_model[0] + '</a>';
                     }
                 }
 
-                if (facets.filter_competencies.length) {
-                    if (facets.filter_competencies !== null  || facets.filter_competencies !== '') {
+                if (typeof facets.filter_competencies != "undefined") {
+                    log(facets.filter_competencies);
+                    if (facets.filter_competencies.length !== 0) {
                         string = 'referencing <a data-facet="filter_competencies">"' + facets.filter_competencies + '"</a>';
                     } else {
                         string = null;
