@@ -5,7 +5,7 @@ Namespace App\Controllers;
 $type = get_post_type();
 $type_object = get_post_type_object($type);
 
-$facets = 'formal_facets__' . $type;
+$facets = 'formal_facets';
 
 @endphp
 
