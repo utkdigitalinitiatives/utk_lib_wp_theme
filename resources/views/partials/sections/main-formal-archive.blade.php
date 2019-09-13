@@ -4,12 +4,14 @@
 
     $header_post = get_option('options_formal_header');
 
-    $group_by_term = true;
-    $group_taxonomy = 'competency_models';
+    $archive_layout = get_option('options_formal_default_layout');
 
-    if ($group_by_term) :
+    if ($archive_layout === 'taxonomy') :
+        $group_by_term = true;
+        $group_taxonomy = get_option('options_formal_default_layout_taxonomy');
         $terms = Taxonomy::getTaxonomyTerms($group_taxonomy);
     endif;
+        print_r ($group_taxonomy);
 
 
 @endphp
