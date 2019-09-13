@@ -7,9 +7,9 @@ use Sober\Controller\Controller;
 class Taxonomy extends Controller
 {
 
-    public static function getTaxonomyListing($name = 'default', $content = null)
+    public static function getTaxonomyTerms($name = 'default', $content = null)
     {
-        $terms = get_terms([
+        return get_terms([
             'taxonomy' => $name,
             'hide_empty' => false,
             'orderby' => 'meta_value_num',
@@ -21,6 +21,11 @@ class Taxonomy extends Controller
                 ]
             ],
         ]);
+    }
+
+    public static function getTaxonomyListing($name = 'default', $content = null)
+    {
+        $terms = self::getTaxonomyTerms($name);
 
         $content .= '<div class="utk-taxonomy">';
 
@@ -35,10 +40,6 @@ class Taxonomy extends Controller
 
     public static function getTaxonomyTerm($term, $taxonomy, $term_content = null)
     {
-//        $term_posts = self::getPostsByTerm($term->term_id, $taxonomy);
-
-        $archive = get_post_type_archive_link(get_field('taxonomy_post_type'));
-        $archive_filter = $archive . '?fwp_competency_model=' .  $term->slug;
 
         $term_svg = get_term_meta($term->term_id, 'taxonomy_svg', 1);
         $term_color = get_term_meta($term->term_id, 'taxonomy_color', 1);
@@ -50,14 +51,8 @@ class Taxonomy extends Controller
             $term_content .= '<h2 style="border-color:#' . $term_color .'!important;">' . $term->name . '</h2>';
             $term_content .= '<div class="utk-taxonomy--term--description">';
                 $term_content .= '<p>' . $term->description . '</p>';
-                $term_content .= '<a href="' . $archive_filter . '" class="btn btn-secondary btn-outline">';
-                $term_content .= 'View ' . get_field('taxonomy_post_label');
                 $term_content .= '</a>';
             $term_content .= '</div>';
-//            $term_content .= '<div class="utk-taxonomy--term--posts">';
-//                $term_content .= '<h3>' . get_field('taxonomy_post_label') .'</h3>';
-//                $term_content .= '<ul class="utk-taxonomy--term--posts--items">' . $term_posts . '</ul>';
-//            $term_content .= '</div>';
         $term_content .= '</div>';
 
         return $term_content;

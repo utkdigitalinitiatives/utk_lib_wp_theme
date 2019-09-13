@@ -4,6 +4,14 @@
 
     $header_post = get_option('options_formal_header');
 
+    $group_by_term = true;
+    $group_taxonomy = 'competency_models';
+
+    if ($group_by_term) :
+        $terms = Taxonomy::getTaxonomyTerms($group_taxonomy);
+    endif;
+
+
 @endphp
 <div id="detach-sticky-top"></div>
 @include('partials.components.breadcrumb')
@@ -13,19 +21,47 @@
             @include('partials.sidebar')
         </aside>
         <main class="page-body--content page-body--content-formal">
-            @php print \Formal::getFormalHeader($header_post) @endphp
+            @php print Formal::getFormalHeader($header_post) @endphp
             @include('partials.facets-formal')
-            <div class="facetwp-template">
-                @if (!have_posts())
-                    <div class="alert alert-warning">
-                        {{ __('Sorry, no results were found.', 'sage') }}
+            @if($group_by_term)
+                @foreach($terms as $term)
+                    @php
+                        echo Taxonomy::getTaxonomyTerm($term, $group_taxonomy);
+                    @endphp
+                    @php
+                        $args = array(
+                            'post_type' => get_post_type(),
+                            'posts_per_page' => -1,
+                            'orderby' => 'title',
+                            'order' => 'ASC',
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => $group_taxonomy,
+                                    'field'    => 'slug',
+                                    'terms'    => $term->slug,
+                                ),
+                            ),
+                        );
+                        $group_query = new \WP_Query( $args );
+                    @endphp
+                    <div class="facetwp-template">
+                        @if (!$group_query->have_posts())
+                            <div class="alert alert-warning">
+                                {{ __('Sorry, no results were found.', 'sage') }}
+                            </div>
+                        @else
+                            @while ($group_query->have_posts()) @php $group_query->the_post() @endphp
+                                @include('partials.content-'.get_post_type() . '-teaser')
+                            @endwhile
+                        @endif
                     </div>
-                @else
-                    @while (have_posts()) @php the_post() @endphp
-                        @include('partials.content-'.get_post_type() . '-teaser')
-                    @endwhile
-                @endif
-            </div>
+                    @php
+                        wp_reset_postdata();
+                    @endphp
+                @endforeach
+            @else
+                @include('partials.components.facetwp-template')
+            @endif
             <div class="facetwp-pager">
                 @php echo facetwp_display('pager') @endphp
             </div>
