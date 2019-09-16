@@ -42,5 +42,4 @@
             </header>
         </div>
     </a>
-    <div class="article--populate article--populate-@php echo get_the_ID() @endphp"></div>
 </article>

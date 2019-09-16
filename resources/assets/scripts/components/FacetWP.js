@@ -60,7 +60,7 @@ export default class FacetWP {
 
             $(document).on('click', '.utk-facets--toggle', function(e) {
                 $('.utk-facets--modal').addClass('utk-facets--modal-active');
-                $('body').addClass('utk-modal-open');
+                $('body').addClass('utk-modal-open-xs');
 
                 var facetsEl = '.page-body--aside--facets';
                 var modalEl = '.utk-facets--modal';
@@ -71,7 +71,7 @@ export default class FacetWP {
 
             $(document).on('click', '.utk-facets--close', function(e) {
                 $('.utk-facets--modal').removeClass('utk-facets--modal-active');
-                $('body').removeClass('utk-modal-open');
+                $('body').removeClass('utk-modal-open-xs utk-modal-open');
 
                 var facetsEl = '.page-body--aside--facets';
                 var height = 47;
@@ -80,8 +80,11 @@ export default class FacetWP {
             });
 
             $(document).on('click', '.utk-modal-overlay', function(e) {
+                $('.utk-modal-populate').removeClass('loaded loading');
+                $('.utk-modal-populate .article--populate--inner').remove();
+
                 $('.utk-facets--modal').removeClass('utk-facets--modal-active');
-                $('body').removeClass('utk-modal-open');
+                $('body').removeClass('utk-modal-open-xs utk-modal-open');
             });
         })(jQuery, console.log);
     }

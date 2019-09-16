@@ -41,7 +41,7 @@ class Formal extends Controller
         $data['title'] = get_the_title($post_id);
         $data['fields'] = get_fields($post_id);
 
-        $populate = '<div class="article--populate--inner">';
+        $populate = '<div class="article--populate--inner article--populate--inner-' . $post_type .'">';
         $populate .= self::renderInner($data, $post_type);
         $populate .= '</div>';
 
@@ -58,6 +58,9 @@ class Formal extends Controller
         switch ($type) :
             case 'competency':
                 $inner = self::renderCompetencyInner($data);
+                break;
+            case 'space':
+                $inner = self::renderSpaceInner($data);
                 break;
             default:
                 $inner = self::renderPostInner($data);
@@ -108,6 +111,14 @@ class Formal extends Controller
         endif;
 
         $content .= '</div>';
+
+        return $content;
+    }
+
+    private static function renderSpaceInner($post, $content = null)
+    {
+        $content .= '<h1>' . $post['title'] . '</h1>';
+        $content .= get_the_content($post['id']);
 
         return $content;
     }

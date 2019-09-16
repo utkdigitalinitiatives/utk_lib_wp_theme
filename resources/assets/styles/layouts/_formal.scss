@@ -248,14 +248,6 @@
           z-index: 1;
           transition: $transition-all;
           box-shadow: none;
-
-          &--inner {
-            padding: $golden-ratio-4;
-            background-color: $white;
-            transition: $transition-all;
-            position: relative;
-            opacity: 0;
-          }
         }
       }
 
@@ -269,11 +261,6 @@
 
         .article--populate {
           box-shadow: $box-shadow;
-
-          &--inner {
-            background-color: $white;
-            opacity: 1;
-          }
         }
       }
     }

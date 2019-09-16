@@ -61,10 +61,10 @@ export default class Formal {
         var postId = id;
         var postType = type;
 
-        var target = '.facetwp-template .post-' + postId;
-        var populate = target + ' .article--populate-' + postId;
+        var target = '.utk-modal-populate';
+        $(target).removeClass('loaded loading');
 
-        $('.facetwp-template').addClass('facetwp-template-focus');
+        $('body').addClass('utk-modal-open');
         $(target).addClass('article--trigger-expand');
 
         // eslint-disable-next-line no-undef
@@ -80,16 +80,16 @@ export default class Formal {
             },
             type : 'POST',
             beforeSend : function () {
+                $(target).addClass('loading');
             },
             success : function(response) {
-                $(populate).html(response);
+                $(target).html(response);
             },
             complete: function () {
-                var height = $(populate).height();
-                $(populate).css('height', height);
-                $(populate).find('.utk-svg').addClass('utk-svg-visible');
+                $(target).addClass('loaded');
+                $(target).removeClass('loading');
+                $(target).find('.utk-svg').addClass('utk-svg-visible');
                 $('.facetwp-template article').css('margin-bottom', 29);
-                $(target).css('margin-bottom', height + 47);
             },
         });
 
@@ -126,6 +126,9 @@ export default class Formal {
 
                 e.preventDefault();
 
+                $('.utk-modal-populate').removeClass('loaded loading');
+                $('.utk-modal-populate .article--populate--inner').remove();
+
                 Formal.updateHistory(['populate', 'title', 'type']);
 
                 var postId = $(this).attr('data-id');
@@ -140,9 +143,11 @@ export default class Formal {
                 e.preventDefault();
                 e.stopPropagation();
 
+                $('.utk-modal-populate').removeClass('loaded loading');
+                $('.utk-modal-populate .article--populate--inner').remove();
+
                 Formal.updateHistory(['populate', 'title', 'type']);
 
-                $('.facetwp-template').removeClass('facetwp-template-focus');
                 $('.facetwp-template article').removeClass('article--trigger-expand');
                 $('.facetwp-template article').css('margin-bottom', 29);
 
@@ -154,7 +159,6 @@ export default class Formal {
         (function($) {
             $(document).on('facetwp-loaded', function() {
 
-                $('.facetwp-template').removeClass('facetwp-template-focus');
                 $('.facetwp-template article').removeClass('article--trigger-expand');
                 $('.facetwp-template article').css('margin-bottom', 29);
 
