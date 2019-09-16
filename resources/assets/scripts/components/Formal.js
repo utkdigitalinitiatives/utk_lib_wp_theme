@@ -7,7 +7,6 @@ export default class Formal {
     constructor() {
         this.formalAjaxPopulate();
         this.checkSVGs();
-        this.watchFacets();
     }
 
     checkSVGs () {
@@ -56,8 +55,6 @@ export default class Formal {
 
     static formalAjaxPopulateProcess(id, type) {
 
-        $('.facetwp-template article').removeClass('article--trigger-expand');
-
         var postId = id;
         var postType = type;
 
@@ -65,7 +62,6 @@ export default class Formal {
         $(target).removeClass('loaded loading');
 
         $('body').addClass('utk-modal-open');
-        $(target).addClass('article--trigger-expand');
 
         // eslint-disable-next-line no-undef
         var ajax = ajax_object;
@@ -89,7 +85,6 @@ export default class Formal {
                 $(target).addClass('loaded');
                 $(target).removeClass('loading');
                 $(target).find('.utk-svg').addClass('utk-svg-visible');
-                $('.facetwp-template article').css('margin-bottom', 29);
             },
         });
 
@@ -98,17 +93,14 @@ export default class Formal {
     formalAjaxPopulate () {
         (function($, log) {
 
-            $(document).on('click', 'body.post-type-archive', function(e) {
-
-                Formal.updateHistory(['populate', 'title', 'type']);
-
-            });
-
-            $( document ).ready(function() {
+            $( document ).ready(function(e) {
                 if (Formal.getUrlParameter('populate')) {
 
+                    // https://utklibrary.test/hours/spaces/?label=starbucks&populate=709&cpt=space
+
                     var populate = Formal.getUrlParameter('populate');
-                    var type = Formal.getUrlParameter('type');
+                    var label = Formal.getUrlParameter('label');
+                    var type = Formal.getUrlParameter('cpt');
                     var scrollto = "#article-formal-" + populate;
 
                     $('html, body').animate({
@@ -129,10 +121,10 @@ export default class Formal {
                 $('.utk-modal-populate').removeClass('loaded loading');
                 $('.utk-modal-populate .article--populate--inner').remove();
 
-                Formal.updateHistory(['populate', 'title', 'type']);
-
                 var postId = $(this).attr('data-id');
                 var postType = $(this).attr('data-type');
+
+                // var params = '?title=hello' + '&populate=' + postId + '&type=' + postType;
 
                 Formal.formalAjaxPopulateProcess(postId, postType);
 
@@ -146,24 +138,8 @@ export default class Formal {
                 $('.utk-modal-populate').removeClass('loaded loading');
                 $('.utk-modal-populate .article--populate--inner').remove();
 
-                Formal.updateHistory(['populate', 'title', 'type']);
-
-                $('.facetwp-template article').removeClass('article--trigger-expand');
-                $('.facetwp-template article').css('margin-bottom', 29);
-
             });
         })(jQuery, console.log);
-    }
-
-    watchFacets() {
-        (function($) {
-            $(document).on('facetwp-loaded', function() {
-
-                $('.facetwp-template article').removeClass('article--trigger-expand');
-                $('.facetwp-template article').css('margin-bottom', 29);
-
-            });
-        })(jQuery);
     }
 
     static getUrlParameter(sParam) {
@@ -200,6 +176,4 @@ export default class Formal {
 
         return {url: base, query: search ? '?' + search : ''}
     }
-
-
 }
