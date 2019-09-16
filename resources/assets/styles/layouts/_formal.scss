@@ -81,6 +81,10 @@
         margin-right: $golden-ratio-4;
         transition: $transition-all;
 
+        &.flex-populate {
+          width: 100%;
+        }
+
         .article--close {
           display: flex;
           align-content: center;
@@ -113,6 +117,10 @@
             padding-top: $gr-percent;
             background-color: $smokey;
             position: relative;
+            overflow: hidden;
+            box-shadow: none;
+            transform: scale3d(1, 1, 1);
+            transition: $transition-all-fast;
 
             .utk-lazyload {
               position: absolute;
@@ -128,13 +136,16 @@
               left: 0;
               width: 100%;
               z-index: 1;
+              transition: $transition-all-fast;
+              transform-origin: center;
+              filter: brightness(1) saturate(1) contrast(1);
             }
 
             &--overlay {
               position: absolute;
               z-index: 1;
               bottom: 0;
-              height: 61.8%;
+              height: 38.2%;
               font-size: $type-1;
               width: 100%;
               color: $gray-1;
@@ -142,17 +153,25 @@
               -webkit-font-smoothing: antialiased;
               display: block;
 
-              @include filter-gradient(rgba($smokeyx, 0), 29px, rgba($smokeyx, 0.76), 100%);
+              @include filter-gradient(rgba($smokeyx, 0), 0%, rgba($smokeyx, 0.85), 61.8%);
             }
 
             &-border {
               background-color: $gray-1;
-              border-bottom: $golden-ratio-0 solid $rock;
+              box-shadow: none !important;
+              transform: scale3d(1, 1, 1) !important;
+              filter: brightness(1);
+
+              &:hover,
+              &:focus {
+                filter: brightness(0.9);
+              }
             }
 
             figure {
               margin: 0;
 
+              h2,
               span {
                 position: absolute;
                 top: 0;
@@ -165,9 +184,13 @@
                 align-content: center;
                 justify-content: center;
                 -webkit-font-smoothing: antialiased;
-                color: $smokey;
+                color: $white;
                 letter-spacing: 0 !important;
-                font-size: $type-4;
+                font-size: $type-3;
+                font-weight: 400;
+                line-height: 1.29em;
+                margin: 0;
+                padding: 0 $golden-ratio-2;
               }
             }
           }
@@ -191,6 +214,18 @@
 
               @include respond(xs) {
                 font-size: $type-0 !important;
+              }
+            }
+          }
+
+          &:hover,
+          &:focus {
+            .article--grid--image {
+              transform: scale3d(1.06, 1.06, 1.06);
+              box-shadow: $box-shadow-float;
+
+              img {
+                filter: brightness(1.06) saturate(1.06) contrast(1.06);
               }
             }
           }

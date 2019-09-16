@@ -27,7 +27,12 @@
             <div class="article--grid--image"
                  href="@php the_permalink() @endphp">
                 @include('partials.components.image')
-                <div class="article--grid--image--overlay"></div>
+                <div class="article--grid--image--overlay">
+                    <div class="utk-space--time">
+                        <span class="utk-space--time--indicator"></span>
+                        <span class="utk-space--time--span">8am - 6pm</span>
+                    </div>
+                </div>
             </div>
             <header class="article--header">
                 <h2 class="article--header--title entry-title">

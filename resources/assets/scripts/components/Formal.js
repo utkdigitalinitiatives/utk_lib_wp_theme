@@ -116,7 +116,11 @@ export default class Formal {
 
             $(document).on('click', 'article > a.article--trigger', function(e) {
 
+                $('article').removeClass('flex-populate');
+
                 e.preventDefault();
+
+                // $(this).closest('article').addClass('flex-populate');
 
                 $('.utk-modal-populate').removeClass('loaded loading');
                 $('.utk-modal-populate .article--populate--inner').remove();
@@ -132,6 +136,8 @@ export default class Formal {
 
                 e.preventDefault();
                 e.stopPropagation();
+
+                $('article').removeClass('flex-populate');
 
                 $('.utk-modal-populate').removeClass('loaded loading');
                 $('body').removeClass('utk-modal-open');

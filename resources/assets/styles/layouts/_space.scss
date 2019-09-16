@@ -1,0 +1,28 @@
+article.space {
+  .utk-space {
+    &--time {
+      font-weight: 700;
+      font-style: normal;
+      font-size: $type-1;
+      text-shadow: $box-shadow-float;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
+      &--indicator {
+        display: block;
+        width: 9px;
+        height: 9px;
+        border-radius: 9px;
+        background-color: $switchgrass;
+        margin-right: $golden-ratio-0;
+      }
+    }
+  }
+
+  .article--grid--image .utk-space--time {
+    position: absolute;
+    left: $golden-ratio-2;
+    bottom: $golden-ratio-0;
+  }
+}

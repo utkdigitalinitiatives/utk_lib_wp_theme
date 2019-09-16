@@ -37,17 +37,14 @@
         <div class="article--context">
             <span class="article--close"><span class="icon-cancel"></span></span>
             <div class="article--grid--image article--grid--image-border"
-                 style="border-color: {{$term_color_style}}"
+                 style="background-color: {{$term_color_style}}"
                  href="@php the_permalink() @endphp">
                 <figure>
-                    <span>{{$acronym}}</span>
+                    <h2>
+                        @php the_title() @endphp
+                    </h2>
                 </figure>
             </div>
-            <header class="article--header">
-                <h2 class="article--header--title entry-title">
-                    @php the_title() @endphp
-                </h2>
-            </header>
         </div>
     </a>
     <div class="article--populate article--populate-@php echo get_the_ID() @endphp"></div>
