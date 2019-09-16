@@ -56,13 +56,14 @@ export default class Formal {
 
     static formalAjaxPopulateProcess(id, type) {
 
-        $('.facetwp-template > article').removeClass('article--trigger-expand');
+        $('.facetwp-template article').removeClass('article--trigger-expand');
 
         var postId = id;
         var postType = type;
 
-        var target = '.facetwp-template > .post-' + postId;
+        var target = '.facetwp-template .post-' + postId;
         var populate = target + ' .article--populate-' + postId;
+
         $('.facetwp-template').addClass('facetwp-template-focus');
         $(target).addClass('article--trigger-expand');
 
@@ -87,7 +88,7 @@ export default class Formal {
                 var height = $(populate).height();
                 $(populate).css('height', height);
                 $(populate).find('.utk-svg').addClass('utk-svg-visible');
-                $('.facetwp-template > article').css('margin-bottom', 29);
+                $('.facetwp-template article').css('margin-bottom', 29);
                 $(target).css('margin-bottom', height + 47);
             },
         });
@@ -112,7 +113,7 @@ export default class Formal {
 
                     $('html, body').animate({
                         scrollTop: $(scrollto).offset().top - 199
-                    }, 760);
+                    }, 470);
 
                     Formal.formalAjaxPopulateProcess(populate, type)
 
@@ -142,8 +143,8 @@ export default class Formal {
                 Formal.updateHistory(['populate', 'title', 'type']);
 
                 $('.facetwp-template').removeClass('facetwp-template-focus');
-                $('.facetwp-template > article').removeClass('article--trigger-expand');
-                $('.facetwp-template > article').css('margin-bottom', 29);
+                $('.facetwp-template article').removeClass('article--trigger-expand');
+                $('.facetwp-template article').css('margin-bottom', 29);
 
             });
         })(jQuery, console.log);
@@ -154,8 +155,8 @@ export default class Formal {
             $(document).on('facetwp-loaded', function() {
 
                 $('.facetwp-template').removeClass('facetwp-template-focus');
-                $('.facetwp-template > article').removeClass('article--trigger-expand');
-                $('.facetwp-template > article').css('margin-bottom', 29);
+                $('.facetwp-template article').removeClass('article--trigger-expand');
+                $('.facetwp-template article').css('margin-bottom', 29);
 
             });
         })(jQuery);

@@ -5,12 +5,10 @@
 
 img[data-lazy-src] {
   opacity: 0;
+  transition: $transition-all-load;
 }
 
 img.lazyloaded {
-  -webkit-transition: $transition-all-fast;
-  -moz-transition: $transition-all-fast;
-  transition: $transition-all-fast;
   opacity: 1;
 }
 

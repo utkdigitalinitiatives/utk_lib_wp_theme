@@ -36,7 +36,7 @@
        href="@php the_permalink() @endphp">
         <div class="article--context">
             <span class="article--close"><span class="icon-cancel"></span></span>
-            <div class="article--grid--image"
+            <div class="article--grid--image article--grid--image-border"
                  style="border-color: {{$term_color_style}}"
                  href="@php the_permalink() @endphp">
                 <figure>

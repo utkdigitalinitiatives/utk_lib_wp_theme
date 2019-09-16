@@ -2,6 +2,19 @@
 
     $location = wp_get_post_terms(get_the_ID(), 'location', array("fields" => "all"));
 
+    $images = get_field('space_images');
+    $image_count = count($images);
+
+    if ($image_count > 0) {
+        $render_size = 'card_image';
+        $preload_size = 'preload_gr_horz';
+        $image_post_id = $images[0]['ID'];
+        $image  = $images[0];
+        $srcset = wp_get_attachment_image_srcset($image_post_id, 'card_image');
+    } else {
+        //
+    }
+
 @endphp
 <article @php post_class() @endphp>
     <a class="article--trigger"
@@ -13,9 +26,7 @@
             <span class="article--close"><span class="icon-cancel"></span></span>
             <div class="article--grid--image"
                  href="@php the_permalink() @endphp">
-                <figure>
-                    <span></span>
-                </figure>
+                @include('partials.components.image')
                 <div class="article--grid--image--overlay"></div>
             </div>
             <header class="article--header">
