@@ -8,11 +8,13 @@
                 {{ __('Sorry, no results were found.', 'sage') }}
             </div>
         @else
-            @while (have_posts()) @php the_post() @endphp
-            @if(has_term($term, $group_taxonomy))
-                @include('partials.content-'.get_post_type() . '-teaser')
-            @endif
-            @endwhile
+            <div class="facetwp-template--articles">
+                @while (have_posts()) @php the_post() @endphp
+                    @if(has_term($term, $group_taxonomy))
+                        @include('partials.content-'.get_post_type() . '-teaser')
+                    @endif
+                @endwhile
+            </div>
         @endif
     @endforeach
 </div>
