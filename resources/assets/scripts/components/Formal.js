@@ -124,8 +124,6 @@ export default class Formal {
                 var postId = $(this).attr('data-id');
                 var postType = $(this).attr('data-type');
 
-                // var params = '?title=hello' + '&populate=' + postId + '&type=' + postType;
-
                 Formal.formalAjaxPopulateProcess(postId, postType);
 
             });
