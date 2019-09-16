@@ -10,16 +10,6 @@
   display: flex;
   align-items: center;
 
-  &--dimple {
-    display: block;
-    width: 9px;
-    height: 9px;
-    content: '';
-    border-radius: $golden-ratio-1;
-    margin-right: $golden-ratio-0;
-    margin-top: -1px;
-  }
-
   .post-categories {
     display: flex;
     flex-wrap: wrap;

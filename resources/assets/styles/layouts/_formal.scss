@@ -41,8 +41,6 @@
   .facetwp-template {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    margin: auto;
 
     .article--context {
       transition: $transition-all-fast;
@@ -80,7 +78,7 @@
       article {
         display: block;
         width: calc((100% - 116px) / 5);
-        margin-right: $golden-ratio-3;
+        margin-right: $golden-ratio-4;
         transition: $transition-all;
 
         .article--close {
@@ -175,10 +173,11 @@
           }
 
           .article--header {
-            padding: 0 $golden-ratio-1 $golden-ratio-0;
+            padding: 0 0 $golden-ratio-0;
 
             &--title {
               font-size: $type-2 !important;
+              font-weight: 400;
               line-height: 1.29em !important;
               margin: $golden-ratio-1 0 0 !important;
 
@@ -188,6 +187,8 @@
             }
 
             .article--meta-categories {
+              font-weight: 700;
+
               @include respond(xs) {
                 font-size: $type-0 !important;
               }
@@ -199,13 +200,13 @@
           margin-right: 0;
         }
 
-        @include respond(md) {
-          width: calc((100% - 87px) / 4);
+        @include respond(md, lg, xl) {
+          width: calc((100% - 141px) / 4);
 
           &:nth-child(5n),
           &:nth-child(3n),
           &:nth-child(2n) {
-            margin-right: $golden-ratio-3;
+            margin-right: $golden-ratio-4;
           }
 
           &:nth-child(4n) {

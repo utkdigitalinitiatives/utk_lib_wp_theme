@@ -47,13 +47,6 @@
                 <h2 class="article--header--title entry-title">
                     @php the_title() @endphp
                 </h2>
-                <div class="article--meta article--meta-excerpt">
-                    <div class="article--meta article--meta-categories">
-                        <span class="article--meta-categories--dimple"
-                              style="background-color: {{$term_color_style}}"></span>
-                        @php print $model[0]->name @endphp
-                    </div>
-                </div>
             </header>
         </div>
     </a>
