@@ -128,15 +128,16 @@ export default class Formal {
 
             });
 
-            $(document).on('click').on('click', '.article--close', function(e) {
+            $(document).on('click', '.utk-modal-close', function(e) {
 
                 e.preventDefault();
                 e.stopPropagation();
 
                 $('.utk-modal-populate').removeClass('loaded loading');
+                $('body').removeClass('utk-modal-open');
                 $('.utk-modal-populate .article--populate--inner').remove();
-
             });
+
         })(jQuery, console.log);
     }
 

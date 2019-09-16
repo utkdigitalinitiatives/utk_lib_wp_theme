@@ -35,6 +35,54 @@ body.utk-modal-open-xs {
   }
 }
 
+.utk-modal-close {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: $torch;
+  border-radius: $golden-ratio-4;
+  width: $golden-ratio-4;
+  height: $golden-ratio-4;
+  color: $white;
+  box-shadow: $box-shadow;
+  transition: $transition-all-fast;
+  position: absolute;
+  opacity: 1;
+  z-index: 1;
+  left: 50%;
+  top: 0;
+  margin-left: -23.5px;
+  margin-top: -23.5px;
+  border: none;
+  cursor: pointer;
+  transform: scale3d(1, 1, 1);
+
+  &::before {
+    content: "\E801";
+    font-family: fontello, monospace;
+    border-radius: $golden-ratio-4;
+    font-style: normal;
+    font-size: $type-3;
+    speak: none;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: $golden-ratio-4 !important;
+    width: $golden-ratio-4 !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $box-shadow-float;
+    transform: scale3d(1.11, 1.11, 1.11);
+  }
+}
+
 .utk-modal-populate {
   position: fixed;
   left: 50%;
@@ -53,10 +101,11 @@ body.utk-modal-open-xs {
   .article--populate--inner {
     opacity: 0;
     transition: $transition-all;
-    padding: $golden-ratio-3 $golden-ratio-4;
+    padding: $golden-ratio-4;
   }
 
   &.loaded {
+    z-index: 100000;
     opacity: 1;
     transform: rotateZ(0deg) translate(-50%, -50%);
 

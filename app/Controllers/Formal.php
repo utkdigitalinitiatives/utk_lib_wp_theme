@@ -45,7 +45,7 @@ class Formal extends Controller
         $populate .= self::renderInner($data, $post_type);
         $populate .= '</div>';
 
-        $populate .= '<button class="utk-modal-close">Close</button>';
+        $populate .= '<button class="utk-modal-close"></button>';
 
         if (isset($_POST['security'])) :
             print $populate;
