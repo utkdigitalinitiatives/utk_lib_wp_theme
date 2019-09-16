@@ -42,7 +42,6 @@
                 <figure>
                     <span>{{$acronym}}</span>
                 </figure>
-                <div class="article--grid--image--overlay"></div>
             </div>
             <header class="article--header">
                 <h2 class="article--header--title entry-title">
