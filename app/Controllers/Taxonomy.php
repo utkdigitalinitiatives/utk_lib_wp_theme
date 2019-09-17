@@ -44,6 +44,9 @@ class Taxonomy extends Controller
         $term_svg = get_term_meta($term->term_id, 'taxonomy_svg', 1);
         $term_color = get_term_meta($term->term_id, 'taxonomy_color', 1);
 
+        if ($term_color === 'default')
+            $term_color = '58595b';
+
         $term_svg_wrap = '<figure class="utk-svg-wrap" style="fill: #' . $term_color . ';">' . $term_svg . '</figure>';
 
         $term_content .= '<div class="utk-taxonomy--term">';

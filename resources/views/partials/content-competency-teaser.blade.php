@@ -6,6 +6,10 @@
 
     $term_svg = get_term_meta($term_id, 'taxonomy_svg', 1);
     $term_color = get_term_meta($term_id, 'taxonomy_color', 1);
+
+    if ($term_color === 'default')
+        $term_color = '58595b';
+
     $term_color_style = '#' . $term_color . ';';
 
     $words = preg_split("/[\s,_-]+/", get_the_title());
