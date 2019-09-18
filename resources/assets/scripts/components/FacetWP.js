@@ -20,6 +20,10 @@ export default class FacetWP {
                     articleCountClass = articleCountClass + 'article-threshold-one';
                 }
 
+                if (articleCount >= 12) {
+                    articleCountClass = articleCountClass + ' article-threshold-two';
+                }
+
                 $(".facetwp-template--articles").addClass(articleCountClass);
 
             });
