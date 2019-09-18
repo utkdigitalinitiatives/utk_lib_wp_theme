@@ -15,8 +15,14 @@
         //
     }
 
+    $classes = [];
+    $featured = get_field('space_featured');
+    
+    if ($featured)
+        array_push($classes, 'space-featured');
+
 @endphp
-<article @php post_class() @endphp>
+<article @php post_class($classes) @endphp>
     <a class="article--trigger"
        id="article-formal-@php echo get_the_ID() @endphp"
        data-type="@php echo get_post_type() @endphp"
