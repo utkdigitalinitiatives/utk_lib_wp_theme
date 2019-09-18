@@ -79,7 +79,6 @@
         display: block;
         width: calc((100% - 116px) / 5);
         margin-right: $golden-ratio-4;
-        transition: $transition-all;
 
         &.flex-populate {
           width: 100%;
@@ -200,7 +199,7 @@
 
             &--title {
               font-size: $type-2 !important;
-              font-weight: 400;
+              font-weight: 700;
               line-height: 1.29em !important;
               margin: $golden-ratio-1 0 0 !important;
 
@@ -210,7 +209,7 @@
             }
 
             .article--meta-categories {
-              font-weight: 700;
+              font-weight: 400;
 
               @include respond(xs) {
                 font-size: $type-0 !important;
@@ -221,11 +220,11 @@
           &:hover,
           &:focus {
             .article--grid--image {
-              transform: scale3d(1.06, 1.06, 1.06);
+              transform: scale3d(1.04, 1.04, 1.04);
               box-shadow: $box-shadow-float;
 
               img {
-                filter: brightness(1.06) saturate(1.06) contrast(1.06);
+                filter: brightness(1.06) saturate(1.06) contrast(1.11);
               }
             }
           }

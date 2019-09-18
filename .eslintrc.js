@@ -32,6 +32,7 @@ module.exports = {
     ]
   },
   "rules": {
+    "no-descending-specificity": 0,
     "no-console": 0,
     "comma-dangle": [
       "error",
@@ -42,6 +43,6 @@ module.exports = {
         "exports": "always-multiline",
         "functions": "ignore"
       }
-    ]
+    ],
   }
-}
+};

@@ -17,7 +17,7 @@
 
     $classes = [];
     $featured = get_field('space_featured');
-    
+
     if ($featured)
         array_push($classes, 'space-featured');
 
