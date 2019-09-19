@@ -46,16 +46,10 @@ article.space {
     flex-basis: calc(100% / 2);
 
     .article--header {
-      text-align: center;
-
       > h2 {
         margin: 18px 0 0 !important;
         font-size: $type-3 !important;
         font-weight: 700;
-      }
-
-      .article--meta-categories {
-        justify-content: center;
       }
     }
   }
@@ -66,16 +60,10 @@ article.space {
     flex-basis: calc(100% / 2);
 
     .article--header {
-      text-align: center;
-
       > h2 {
         margin: 18px 0 0 !important;
         font-size: $type-3 !important;
         font-weight: 700;
-      }
-
-      .article--meta-categories {
-        justify-content: center;
       }
     }
   }
