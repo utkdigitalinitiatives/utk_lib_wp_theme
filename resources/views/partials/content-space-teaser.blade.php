@@ -1,6 +1,7 @@
 @php
 
-    $location = wp_get_post_terms(get_the_ID(), 'location', array("fields" => "all"));
+    $primary_location = wp_get_post_terms(get_the_ID(), 'location', array( 'parent' => 0 ));
+    $secondary_location = wp_get_post_terms(get_the_ID(), 'location', array( 'parent' => $primary_location[0]->term_id ));
 
     $images = get_field('space_images');
     $image_count = count($images);
@@ -47,7 +48,10 @@
                 <div class="article--meta article--meta-excerpt">
                     <div class="article--meta article--meta-categories">
                         <span class="article--meta-categories--dimple"></span>
-                        @php print $location[0]->name @endphp
+                        @php echo $primary_location[0]->name; @endphp
+                        @if(count($secondary_location) > 0)
+                            > @php print $secondary_location[0]->name; @endphp
+                        @endif
                     </div>
                 </div>
             </header>
