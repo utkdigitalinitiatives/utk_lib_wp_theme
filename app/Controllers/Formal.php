@@ -7,7 +7,7 @@ use Sober\Controller\Controller;
 class Formal extends Controller
 {
 
-    public static function getFormalHeader($post_id)
+    public static function getFormalHeader($post_id, $heading = false)
     {
 
         $content_post = get_post($post_id);
@@ -17,11 +17,15 @@ class Formal extends Controller
         $content = apply_filters('the_content', $content);
         $content = str_replace(']]>', ']]&gt;', $content);
 
+        if ($heading === false) :
+            $render_header = ' <span class="utk-heading-1" role="heading" aria-level="1">' . $title .'</span>';
+        else:
+            $render_header = ' <h1 class="utk-heading-1" role="heading" aria-level="1">' . $title .'</h1>';
+        endif;
+
         $header = '
         <div class="page-body--formal-header page-body--formal-header-' . $post_id . '">
-            <div class="page-body--content--title">
-              <span class="utk-heading-1" role="heading" aria-level="1">' . $title .'</span>
-            </div>
+            <div class="page-body--content--title">' . $render_header . '</div>
             <div class="page-body--content--body">' . $content . '</div>
         </div>';
 

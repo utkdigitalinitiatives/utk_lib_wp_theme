@@ -6,7 +6,11 @@
             @include('partials.sidebar')
         </aside>
         <main class="page-body--content page-body--content-formal">
-            @include('partials.content-page--formal')
+            @if (get_post_type() === 'space')
+                @include('partials.content-space--formal')
+            @else
+                @include('partials.content-page--formal')
+            @endif
         </main>
     </div>
     <div id="detach-sticky-bottom"></div>
