@@ -8,7 +8,7 @@
 @endphp
 
 @if($image_count > 1)
-    <div class="utk-space-slider-display">
+    <div class="utk-space-slider-nav">
         @foreach($images as $image)
             @php
                 $image_post_id = $image['ID'];
@@ -17,7 +17,7 @@
             @include('partials.components.image')
         @endforeach
     </div>
-    <div class="utk-space-slider-nav">
+    <div class="utk-space-slider-display">
         @foreach($images as $image)
             @php
                 $image_post_id = $image['ID'];
@@ -38,6 +38,7 @@
     (function($, log) {
         $(document).ready(function(){
             $('.utk-space-slider-display').slick({
+                lazyLoad: 'ondemand',
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: false,
@@ -45,14 +46,16 @@
                 asNavFor: '.utk-space-slider-nav'
             });
             $('.utk-space-slider-nav').slick({
+                lazyLoad: 'ondemand',
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 asNavFor: '.utk-space-slider-display',
+                variableWidth: true,
                 dots: false,
-                centerMode: true,
                 focusOnSelect: true,
                 autoplay: true,
-                autoplaySpeed: 5000
+                autoplaySpeed: 5000,
+                arrows: false
             });
         });
     })(jQuery, console.log);
