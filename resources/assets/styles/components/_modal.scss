@@ -1,5 +1,5 @@
 .utk-modal-overlay {
-  background-color: $rock;
+  background-color: $smokey;
   width: 100%;
   height: 0;
   position: fixed;
@@ -90,18 +90,20 @@ body.utk-modal-open-xs {
   z-index: -1;
   background: $white;
   box-shadow: $box-shadow-float-submenu;
-  width: $gr-long;
-  height: 470px;
+  width: 80%;
   opacity: 0;
   transform: translate(-18%, -29%) rotateZ(-6deg);
   transition: transform 470ms 0s cubic-bezier(0, 1, 0.3, 1), opacity 290ms 0s ease-out;
   transform-origin: center;
-  border-bottom: 11px solid $orange;
+  border-radius: $golden-ratio-1;
 
   .article--populate--inner {
     opacity: 0;
     transition: $transition-all;
     padding: $golden-ratio-4;
+    width: 100%;
+    height: 470px;
+    position: relative;
   }
 
   &.loaded {
@@ -125,5 +127,54 @@ body.utk-modal-open {
 
   .utk-modal-populate {
     z-index: 100000;
+  }
+}
+
+.utk-modal-meta {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: $golden-ratio-3;
+
+  &--item {
+    display: flex;
+    flex-direction: column;
+    margin-left: $golden-ratio-3;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &--label {
+      font-size: $type-0;
+      text-transform: uppercase;
+      line-height: 1.47em;
+      margin-bottom: $golden-ratio-0;
+      color: $smokey;
+    }
+
+    &--value {
+      font-size: $type-1;
+      font-weight: 700;
+      line-height: 1.47em;
+      color: $smokey;
+
+      @include standard-body-link();
+    }
+  }
+}
+
+.utk-modal-separator {
+  display: block;
+  height: 2px;
+  margin-bottom: $golden-ratio-3;
+
+  &::before {
+    display: block;
+    content: '';
+    background-color: $gray-1;
+    margin-left: -$golden-ratio-3;
+    position: absolute;
+    height: 2px;
+    width: calc(100% + (#{$golden-ratio-3 * 2}));
   }
 }

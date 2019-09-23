@@ -1,7 +1,6 @@
 @php
 
-    $primary_location = wp_get_post_terms(get_the_ID(), 'location', array( 'parent' => 0 ));
-    $secondary_location = wp_get_post_terms(get_the_ID(), 'location', array( 'parent' => $primary_location[0]->term_id ));
+    Namespace UTKLibrary\Library\Models;
 
     $images = get_field('space_images');
     $image_count = count($images);
@@ -48,10 +47,7 @@
                 <div class="article--meta article--meta-excerpt">
                     <div class="article--meta article--meta-categories">
                         <span class="article--meta-categories--dimple"></span>
-                        @php echo $primary_location[0]->name; @endphp
-                        @if(count($secondary_location) > 0)
-                            > @php print $secondary_location[0]->name; @endphp
-                        @endif
+                        @php echo Space::getSpaceLocations(get_the_ID()); @endphp
                     </div>
                 </div>
             </header>

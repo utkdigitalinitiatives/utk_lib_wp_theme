@@ -64,3 +64,33 @@ article.space {
     }
   }
 }
+
+.utk-modal .article--populate--inner-space {
+  padding: 0;
+
+  article {
+    height: 100%;
+    display: flex;
+
+    .utk-space--content {
+      width: $gr-short;
+      padding: $golden-ratio-3;
+      position: relative;
+
+      header > h3 {
+        margin: 0 0 $golden-ratio-2;
+        padding: 0;
+        font-size: $type-4;
+        line-height: 1.29em;
+        font-weight: 700;
+        letter-spacing: -0.029em;
+      }
+    }
+
+    .utk-space--media {
+      width: $gr-long;
+      background-color: $rock;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, $golden-ratio-4 100%);
+    }
+  }
+}

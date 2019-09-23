@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use function App\template;
 use Sober\Controller\Controller;
 
 class Formal extends Controller
@@ -52,7 +53,7 @@ class Formal extends Controller
         $populate .= '<button class="utk-modal-close"></button>';
 
         if (isset($_POST['security'])) :
-            print $populate;
+            echo $populate;
             wp_die();
         else :
             return $populate;
@@ -126,8 +127,7 @@ class Formal extends Controller
 
     private static function renderSpaceInner($post, $content = null)
     {
-        $content .= '<h1>' . $post['title'] . '</h1>';
-        $content .= get_the_content($post['id']);
+        $content =  template('partials.content-space-modal', ['data' => $post]);
 
         return $content;
     }
