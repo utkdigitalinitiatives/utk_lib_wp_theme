@@ -6,7 +6,6 @@ article.space {
       font-weight: 700;
       font-style: normal;
       font-size: $type-1;
-      text-shadow: $box-shadow-float;
       display: flex;
       justify-content: left;
       align-items: center;
@@ -38,6 +37,10 @@ article.space {
     flex-basis: calc(100% / 4);
     margin-right: 0 !important;
     padding: 0 23.5px;
+
+    .utk-space--time {
+      text-shadow: $box-shadow-float;
+    }
   }
 }
 
@@ -85,6 +88,35 @@ article.space {
         font-weight: 700;
         letter-spacing: -0.029em;
       }
+
+      &--description {
+        p {
+          font-size: $type-2;
+        }
+      }
+    }
+
+    .utk-space-actions {
+      display: flex;
+      margin-bottom: $golden-ratio-2;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .utk-date-picker {
+        font-size: $type-1;
+
+        .utk-date-picker-select {
+          line-height: 1.47em;
+          display: flex;
+          align-items: center;
+
+          > span {
+            font-size: 0.76em;
+            color: $rock;
+            margin-left: $golden-ratio-0;
+          }
+        }
+      }
     }
 
     .utk-space--media {
@@ -104,9 +136,19 @@ article.space {
           bottom: 0;
           height: $golden-ratio-6;
           width: 100%;
-          display: block;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          align-content: flex-end;
+          padding: 0 $golden-ratio-3 $golden-ratio-3;
 
-          @include filter-gradient(rgba($smokeyx, 0), 0%, rgba($smokeyx, 0.85), calc(100% - 18px));
+          @include filter-gradient(rgba($smokeyx, 0), 0%, rgba($smokeyx, 0.92), calc(100% - 47px));
+
+          .btn {
+            margin-right: 0 !important;
+            height: $golden-ratio-4;
+            margin-left: $golden-ratio-2 !important;
+          }
         }
       }
 

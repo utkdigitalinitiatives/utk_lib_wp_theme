@@ -181,8 +181,15 @@ body.utk-modal-open {
         font-size: $type-1;
         font-weight: 700;
         text-transform: unset;
-        width: $golden-ratio-5;
-        min-width: $golden-ratio-5;
+        width: 100px;
+        min-width: 100px;
+
+        svg {
+          height: $type-1;
+          fill: $rock;
+          margin-right: $golden-ratio-0;
+          margin-bottom: -1px;
+        }
       }
 
       &--value {
@@ -195,7 +202,7 @@ body.utk-modal-open {
 .utk-modal-separator {
   display: block;
   height: 2px;
-  margin-bottom: $golden-ratio-3;
+  margin-bottom: $golden-ratio-2;
 
   &::before {
     display: block;

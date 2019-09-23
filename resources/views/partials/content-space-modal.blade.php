@@ -25,11 +25,21 @@
     }
 
 @endphp
-<article @php post_class(null, $id) @endphp>
+<article @php post_class('space', $id) @endphp>
     <div class="utk-space--content">
         <header>
             <h3>@php echo $data['title']; @endphp</h3>
         </header>
+        <div class="utk-space-actions">
+            <div class="utk-date-picker">
+                <a  class="utk-date-picker-select" href="#">Monday 9/23/19 <span class="icon-down-open"></span></a>
+                <div class="utk-space--time">
+                    <span class="utk-space--time--indicator"></span>
+                    <span class="utk-space--time--span">8am - 6pm</span>
+                </div>
+            </div>
+        </div>
+        <span class="utk-modal-separator"></span>
         <div class="utk-modal-meta">
             <div class="utk-modal-meta--item">
                 <span class="utk-modal-meta--item--label">Location</span>
@@ -39,15 +49,22 @@
             @php echo Space::getSpaceRooms($rooms); @endphp
         </div>
         <span class="utk-modal-separator"></span>
-        @php // date-picker-js; @endphp
-        @php // reservations @endphp
-        <div class="utk-modal-meta utk-modal-meta-list">
-            <div class="utk-modal-meta--item">
-                <span class="utk-modal-meta--item--label">Type:</span>
-                <span class="utk-modal-meta--item--value">@php echo Space::getSpaceType($id, true); @endphp</span>
+        <div class="utk-space--content--wrap">
+            <div class="utk-modal-meta utk-modal-meta-list">
+                <div class="utk-modal-meta--item">
+                    <span class="utk-modal-meta--item--label">
+                        @include('partials.svg.svg-space')
+                        Type:
+                    </span>
+                    <span class="utk-modal-meta--item--value">@php echo Space::getSpaceType($id, true); @endphp</span>
+                </div>
+                @php echo Space::getSpaceCapacity($seats); @endphp
+                @php echo Space::getSpaceVolume($volume); @endphp
             </div>
-            @php echo Space::getSpaceCapacity($seats); @endphp
-            @php echo Space::getSpaceVolume($volume); @endphp
+            <div class="utk-space--content--description">
+                <p>Fusce tortor ante, 80+ congue vel erat a, dapibus convallis orci. Ut pharetra, urna at mattis dignissim, massa neque gravida purus, alma 200 id sagittis diam. In et nibh semper sapien vehicula dictum.</p>
+                <p>Ut pharetra, urna at mattis dignissim, massa neque gravida purus, alma 200 id sagittis diam. In et nibh semper sapien vehicula dictum.</p>
+            </div>
         </div>
     </div>
     <div class="utk-space--media">
@@ -55,6 +72,13 @@
              href="@php the_permalink() @endphp">
             @include('partials.components.image')
             <div class="utk-space--media--slider--overlay">
+                <a href="#" class="btn btn-inverse btn-outline btn-secondary">
+                    Reserve Space
+                </a>
+                <a href="#" class="btn btn-with-icon">
+                    Read More
+                    <span class="icon-right-open"></span>
+                </a>
             </div>
         </div>
     </div>
