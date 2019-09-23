@@ -4,7 +4,9 @@
       "./scripts/gtm.js"
     ],
     "slick": [
-      "./scripts/slick.js"
+      "./vendor/slick/slick.js",
+      "./vendor/slick/slick.css",
+      "./vendor/slick/slick-theme.css"
     ],
     "main": [
       "./scripts/main.js",

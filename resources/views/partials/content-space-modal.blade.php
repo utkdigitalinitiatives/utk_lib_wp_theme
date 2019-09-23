@@ -11,19 +11,6 @@
 
     $volume = $data['fields']['space_volume'];
 
-    $images = $data['fields']['space_images'];
-    $image_count = count($images);
-
-    if ($image_count > 0) {
-        $render_size = 'card_image';
-        $preload_size = 'preload_gr_horz';
-        $image_post_id = $images[0]['ID'];
-        $image  = $images[0];
-        $srcset = wp_get_attachment_image_srcset($image_post_id, 'card_image');
-    } else {
-        //
-    }
-
 @endphp
 <article @php post_class('space', $id) @endphp>
     <div class="utk-space--content">
