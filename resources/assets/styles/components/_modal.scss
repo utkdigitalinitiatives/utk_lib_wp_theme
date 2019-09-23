@@ -160,6 +160,10 @@ body.utk-modal-open {
 
       @include standard-body-link();
     }
+
+    span[class*='icon-'] {
+      color: $rock;
+    }
   }
 }
 

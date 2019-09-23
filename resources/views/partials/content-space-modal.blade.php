@@ -6,6 +6,19 @@
     $floor = $data['fields']['space_floor'];
     $rooms = $data['fields']['space_rooms'];
 
+    $images = $data['fields']['space_images'];
+    $image_count = count($images);
+
+    if ($image_count > 0) {
+        $render_size = 'card_image';
+        $preload_size = 'preload_gr_horz';
+        $image_post_id = $images[0]['ID'];
+        $image  = $images[0];
+        $srcset = wp_get_attachment_image_srcset($image_post_id, 'card_image');
+    } else {
+        //
+    }
+
 @endphp
 <article @php post_class() @endphp>
     <div class="utk-space--content">
@@ -22,11 +35,17 @@
         </div>
         <span class="utk-modal-separator"></span>
         <div>
-            more...
             @php // date-picker-js; @endphp
             @php // reservations @endphp
         </div>
     </div>
     <div class="utk-space--media">
+        <div class="utk-space--media--slider"
+             href="@php the_permalink() @endphp">
+            @include('partials.components.image')
+            <div class="utk-space--media--slider--overlay">
+                ..
+            </div>
+        </div>
     </div>
 </article>
