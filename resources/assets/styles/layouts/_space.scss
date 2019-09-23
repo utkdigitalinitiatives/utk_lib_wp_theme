@@ -142,12 +142,13 @@ article.space {
           align-content: flex-end;
           padding: 0 $golden-ratio-3 $golden-ratio-3;
 
-          @include filter-gradient(rgba($smokeyx, 0), 0%, rgba($smokeyx, 0.92), calc(100% - 47px));
+          @include filter-gradient(rgba($smokeyx, 0), 0%, rgba($smokeyx, 0.85), calc(100% - 47px));
 
           .btn {
             margin-right: 0 !important;
             height: $golden-ratio-4;
             margin-left: $golden-ratio-2 !important;
+            box-shadow: $box-shadow-float;
           }
         }
       }

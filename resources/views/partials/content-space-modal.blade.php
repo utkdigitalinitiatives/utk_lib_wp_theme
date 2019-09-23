@@ -72,10 +72,10 @@
              href="@php the_permalink() @endphp">
             @include('partials.components.image')
             <div class="utk-space--media--slider--overlay">
-                <a href="#" class="btn btn-inverse btn-outline btn-secondary">
-                    Reserve Space
+                <a href="#" class="btn btn-primary">
+                    Reserve
                 </a>
-                <a href="#" class="btn btn-with-icon">
+                <a href="#"  class="btn btn-with-icon">
                     Read More
                     <span class="icon-right-open"></span>
                 </a>
