@@ -69,7 +69,7 @@
     </div>
     <div class="utk-space--media">
         <div class="utk-space--media--slider">
-            @include('partials.components.image')
+            @include('partials.components.image-slider')
             <div class="utk-space--media--slider--overlay">
                 <a href="#" class="btn btn-primary">
                     Reserve

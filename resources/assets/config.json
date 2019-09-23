@@ -3,6 +3,9 @@
     "gtm": [
       "./scripts/gtm.js"
     ],
+    "slick": [
+      "./scripts/slick.js"
+    ],
     "main": [
       "./scripts/main.js",
       "./styles/main.scss"
