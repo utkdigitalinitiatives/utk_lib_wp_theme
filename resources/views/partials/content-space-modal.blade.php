@@ -19,11 +19,7 @@
                 <h3>@php echo $data['title']; @endphp</h3>
             </header>
             <div class="utk-space-actions">
-                <div class="utk-space--hours"
-                     data-daypicker="show"
-                     data-hours="inherit"
-                     data-hours-lid="226">
-                </div>
+                @include('partials.components.space-hours')
             </div>
             <span class="utk-modal-separator"></span>
             <div class="utk-modal-meta">

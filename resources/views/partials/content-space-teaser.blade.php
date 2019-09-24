@@ -34,10 +34,7 @@
                  href="@php the_permalink() @endphp">
                 @include('partials.components.image')
                 <div class="article--grid--image--overlay">
-                    <div class="utk-space--hours"
-                         data-hours="inherit"
-                         data-hours-lid="226">
-                    </div>
+                    @include('partials.components.space-hours')
                 </div>
             </div>
             <header class="article--header">
