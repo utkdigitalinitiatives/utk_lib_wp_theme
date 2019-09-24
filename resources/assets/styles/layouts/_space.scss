@@ -160,23 +160,32 @@ article.space {
           z-index: 2;
           padding-left: 9px;
 
-          @include filter-gradient(rgba($smokeyx, 0.85), 0%, rgba($smokeyx, 0), 100%);
+          @include filter-gradient(rgba($white, 0.85), 0%, rgba($white, 0), 100%);
 
           .slick-slide {
-            padding: $golden-ratio-2 9px;
             cursor: pointer !important;
             width: $golden-ratio-6;
+            padding: $golden-ratio-2 9px;
+            transition: $transition-all-fast;
 
             img {
               box-shadow: $box-shadow-float;
-              transform: scale3d(1, 1, 1);
               transition: $transition-all-fast;
+              transform: scale3d(1, 1, 1);
+              filter: brightness(0.76) saturate(0.76);
+            }
+
+            &.slick-current {
+              img {
+                filter: brightness(1) saturate(1) contrast(1);
+              }
             }
 
             &:hover,
             &:focus {
               img {
                 transform: scale3d(1.11, 1.11, 1.11);
+                filter: brightness(1) saturate(1);
               }
             }
           }

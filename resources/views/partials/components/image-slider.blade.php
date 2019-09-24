@@ -38,7 +38,6 @@
     (function($, log) {
         $(document).ready(function(){
             $('.utk-space-slider-display').slick({
-                lazyLoad: 'ondemand',
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: false,
@@ -46,7 +45,6 @@
                 asNavFor: '.utk-space-slider-nav'
             });
             $('.utk-space-slider-nav').slick({
-                lazyLoad: 'ondemand',
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 asNavFor: '.utk-space-slider-display',
