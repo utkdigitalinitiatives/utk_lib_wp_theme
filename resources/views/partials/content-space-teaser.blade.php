@@ -34,9 +34,9 @@
                  href="@php the_permalink() @endphp">
                 @include('partials.components.image')
                 <div class="article--grid--image--overlay">
-                    <div class="utk-space--time">
-                        <span class="utk-space--time--indicator"></span>
-                        <span class="utk-space--time--span">8am - 6pm</span>
+                    <div class="utk-space--hours"
+                         data-hours="inherit"
+                         data-hours-lid="226">
                     </div>
                 </div>
             </div>

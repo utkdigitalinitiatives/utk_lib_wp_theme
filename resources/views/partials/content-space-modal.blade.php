@@ -19,12 +19,10 @@
                 <h3>@php echo $data['title']; @endphp</h3>
             </header>
             <div class="utk-space-actions">
-                <div class="utk-space--date-picker">
-                    <div class="utk-space--day-picker--select"
-                         data-daypicker="show"
-                         data-hours="inherit"
-                         data-hours-lid="226">
-                    </div>
+                <div class="utk-space--hours"
+                     data-daypicker="show"
+                     data-hours="inherit"
+                     data-hours-lid="226">
                 </div>
             </div>
             <span class="utk-modal-separator"></span>
