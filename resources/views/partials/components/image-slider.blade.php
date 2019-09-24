@@ -42,7 +42,8 @@
                 slidesToScroll: 1,
                 arrows: false,
                 fade: true,
-                asNavFor: '.utk-space-slider-nav'
+                asNavFor: '.utk-space-slider-nav',
+                accessibility: true
             });
             $('.utk-space-slider-nav').slick({
                 slidesToShow: 3,
@@ -53,7 +54,8 @@
                 focusOnSelect: true,
                 autoplay: true,
                 autoplaySpeed: 5000,
-                arrows: false
+                arrows: false,
+                accessibility: true
             });
         });
     })(jQuery, console.log);

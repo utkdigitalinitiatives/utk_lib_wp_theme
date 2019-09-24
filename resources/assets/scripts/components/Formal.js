@@ -54,40 +54,40 @@ export default class Formal {
     }
 
     static formalAjaxPopulateProcess(id, type) {
+        (function($, console) {
+            var postId = id;
+            var postType = type;
 
-        var postId = id;
-        var postType = type;
+            var target = '.utk-modal-populate';
+            $(target).removeClass('loaded loading');
 
-        var target = '.utk-modal-populate';
-        $(target).removeClass('loaded loading');
+            $('body').addClass('utk-modal-open');
 
-        $('body').addClass('utk-modal-open');
+            // eslint-disable-next-line no-undef
+            var ajax = ajax_object;
 
-        // eslint-disable-next-line no-undef
-        var ajax = ajax_object;
-
-        $.ajax({
-            url : ajax.ajax_url,
-            data : {
-                action: 'getFormalPost',
-                security: ajax.ajax_nonce,
-                id: postId,
-                type: postType,
-            },
-            type : 'POST',
-            beforeSend : function () {
-                $(target).addClass('loading');
-            },
-            success : function(response) {
-                $(target).html(response);
-            },
-            complete: function () {
-                $(target).addClass('loaded');
-                $(target).removeClass('loading');
-                $(target).find('.utk-svg').addClass('utk-svg-visible');
-            },
-        });
-
+            $.ajax({
+                url : ajax.ajax_url,
+                data : {
+                    action: 'getFormalPost',
+                    security: ajax.ajax_nonce,
+                    id: postId,
+                    type: postType,
+                },
+                type : 'POST',
+                beforeSend : function () {
+                    $(target).addClass('loading');
+                },
+                success : function(response) {
+                    $(target).html(response);
+                },
+                complete: function () {
+                    $(target).addClass('loaded');
+                    $(target).removeClass('loading');
+                    $(target).find('.utk-svg').addClass('utk-svg-visible');
+                },
+            });
+        })(jQuery, console);
     };
 
     formalAjaxPopulate () {

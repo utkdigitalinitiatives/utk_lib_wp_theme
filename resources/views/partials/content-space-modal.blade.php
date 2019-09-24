@@ -19,8 +19,8 @@
                 <h3>@php echo $data['title']; @endphp</h3>
             </header>
             <div class="utk-space-actions">
-                <div class="utk-date-picker">
-                    <a  class="utk-date-picker-select" href="#">Monday 9/23/19 <span class="icon-down-open"></span></a>
+                <div class="utk-space--date-picker">
+                    <div class="utk-space--day-picker--select"></div>
                     <div class="utk-space--time">
                         <span class="utk-space--time--indicator"></span>
                         <span class="utk-space--time--span">8am - 6pm</span>

@@ -13,6 +13,7 @@ $facets = 'formal_facets';
     <div class="page-body--aside--facets">
         @if(have_rows($facets, 'options'))
             <div class="utk-facets--tray">
+                <div class="utk-space--day-picker--select"></div>
                 <div class="utk-facets--label">
                     <em>Showing</em>
                     <span class="utk-facets--label-data utk-facets--label-meta">all</span>
