@@ -1,14 +1,78 @@
 /* eslint-disable */
 
+.utk-space {
+  &--hours {
+    .DayPickerInput {
+      position: relative;
+      box-shadow: inset $box-shadow;
+      height: $golden-ratio-4;
+      background-color: $gray-0;
+      border-radius: $golden-ratio-4;
+
+      > input {
+        border: none;
+        color: $smokey;
+        font-family: $sans;
+        font-weight: 700;
+        font-size: $type-2;
+        cursor: pointer;
+        height: $golden-ratio-4;
+        position: relative;
+        z-index: 1;
+        background: transparent !important;
+        padding: 0 $golden-ratio-4 0 $golden-ratio-2;
+      }
+
+      &::after {
+        right: 0;
+        top: 0;
+        content: "\E805";
+        font-family: fontello, monospace;
+        border-radius: $golden-ratio-4;
+        font-style: normal;
+        font-size: $type-2;
+        color: $rock;
+        speak: none;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: $golden-ratio-4 !important;
+        width: $golden-ratio-4 !important;
+        -webkit-font-smoothing: antialiased;
+        z-index: 0;
+      }
+    }
+  }
+}
+
 article.space {
   .utk-space {
+    &--hours {
+      .DayPickerInput {
+        height: 39px;
+
+        > input {
+          font-size: $type-2;
+          height: 39px !important;
+        }
+
+        &::after {
+          height: 39px !important;
+          width: 39px !important;
+        }
+      }
+    }
+
     &--time {
       font-weight: 700;
       font-style: normal;
-      font-size: $type-1;
+      font-size: $type-2;
       display: flex;
       justify-content: left;
       align-items: center;
+      margin-top: $golden-ratio-1;
 
       &--indicator {
         display: block;
