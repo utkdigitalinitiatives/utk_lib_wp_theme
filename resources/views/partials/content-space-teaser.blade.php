@@ -21,6 +21,9 @@
     if ($featured)
         array_push($classes, 'space-featured');
 
+    $space_hours = 'inherit';
+    $space_lid = Space::getLocationLID(get_the_ID());
+
 @endphp
 <article @php post_class($classes) @endphp>
     <a class="article--trigger"

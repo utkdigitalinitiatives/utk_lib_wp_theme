@@ -1,5 +1,6 @@
 <div class="utk-space--hours"
-     data-daypicker="show"
-     data-hours="inherit"
-     data-hours-lid="226">
+     data-daypicker="{{$space_daypicker}}"
+     data-hours="{{$space_hours}}"
+     data-hours-lid="{{$space_lid}}"
+     data-hours-message="{{$space_message}}">
 </div>

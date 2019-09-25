@@ -14,6 +14,10 @@ $facets = 'formal_facets';
         @if(have_rows($facets, 'options'))
             <div class="utk-facets--tray">
                 @if($type === 'space')
+                    @php
+                        $space_daypicker = 'show';
+                        $space_hours = 'none';
+                    @endphp
                     @include('partials.components.space-hours')
                 @endif
                 <div class="utk-facets--label">

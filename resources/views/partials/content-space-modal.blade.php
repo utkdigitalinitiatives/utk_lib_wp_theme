@@ -11,6 +11,10 @@
 
     $volume = $data['fields']['space_volume'];
 
+    $space_daypicker = 'show';
+    $space_hours = 'inherit';
+    $space_lid = Space::getLocationLID($id);
+
 @endphp
 <article @php post_class('space', $id) @endphp>
     <div class="utk-space--content">
