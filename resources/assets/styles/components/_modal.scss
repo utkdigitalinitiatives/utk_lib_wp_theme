@@ -207,10 +207,11 @@ body.utk-modal-open {
   &::before {
     display: block;
     content: '';
-    background-color: $gray-0;
     margin-left: -$golden-ratio-3;
-    position: absolute;
+    position: relative;
     height: 2px;
     width: calc(100% + (#{$golden-ratio-3 * 2}));
+
+    @include filter-gradient-horizontal($white, 0, $gray-0, 38.2%);
   }
 }
