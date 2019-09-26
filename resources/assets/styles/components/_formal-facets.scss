@@ -24,6 +24,11 @@
 .utk-facets--tray {
   display: flex;
   justify-content: space-between;
+
+  @include respond(xs) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
 
 .utk-facets--label {
