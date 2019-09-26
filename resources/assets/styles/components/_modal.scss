@@ -189,6 +189,10 @@ body.utk-modal-open {
           fill: $rock;
           margin-right: $golden-ratio-0;
           margin-bottom: -1px;
+
+          * {
+            fill: $rock !important;
+          }
         }
       }
 
