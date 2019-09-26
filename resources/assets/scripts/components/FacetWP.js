@@ -10,24 +10,6 @@ export default class FacetWP {
 
     toggleFacetModal() {
         (function($, log) {
-            $(document).on('facetwp-loaded', function() {
-
-                var articleCount = $(".facetwp-template--articles").children().length;
-
-                var articleCountClass = '';
-
-                if (articleCount >= 5) {
-                    articleCountClass = articleCountClass + 'article-threshold-one';
-                }
-
-                if (articleCount >= 12) {
-                    articleCountClass = articleCountClass + ' article-threshold-two';
-                }
-
-                $(".facetwp-template--articles").addClass(articleCountClass);
-
-            });
-
             $(document).on('facetwp-refresh', function() {
 
                 var meta = ' all ';
