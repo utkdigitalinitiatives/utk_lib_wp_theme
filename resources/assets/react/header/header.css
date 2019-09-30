@@ -3247,27 +3247,42 @@ body.utk-search-open .utk-header-search {
       height: auto !important; } }
 
 .utk-skip {
-  background-color: #fed535;
+  background-color: #333;
   width: 100%;
   margin: 0;
   list-style: none;
   position: fixed;
   left: -5000px;
   z-index: 99998;
-  min-height: 47px;
   display: flex;
   align-items: center;
   align-content: flex-end;
   top: 50px; }
   .utk-skip:focus-within {
     top: 82px;
-    left: auto; }
+    left: auto;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-skip:focus-within {
+        top: 66px; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .utk-skip:focus-within {
+        top: 66px; } }
   .utk-skip > ul {
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
     display: flex;
+    flex-direction: column;
+    padding: 29px 0;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
     /* Landscape phone to portrait tablet */
@@ -3289,17 +3304,34 @@ body.utk-search-open .utk-header-search {
         padding-top: 11px;
         padding-bottom: 11px; } }
     .utk-skip > ul > li {
-      font-size: 15px;
+      font-size: 18px;
       font-weight: 700;
       list-style: none;
-      margin-right: 29px; }
+      margin-bottom: 6px;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        .utk-skip > ul > li {
+          font-size: 15px; } }
+      @media (min-width: 768px) and (max-width: 991px) {
+        .utk-skip > ul > li {
+          font-size: 15px; } }
       .utk-skip > ul > li:last-child {
-        margin-right: 0; }
+        margin-bottom: 0; }
       .utk-skip > ul > li a, .utk-skip > ul > li a:visited {
-        color: #333;
-        text-decoration: none; }
+        color: #fff;
+        text-decoration: underline; }
         .utk-skip > ul > li a:hover, .utk-skip > ul > li a:focus, .utk-skip > ul > li a:visited:hover, .utk-skip > ul > li a:visited:focus {
-          color: #333; }
+          color: #fed535;
+          text-decoration: underline; }
 
 /*
  * vendor
