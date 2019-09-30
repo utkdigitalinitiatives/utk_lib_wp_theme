@@ -174,6 +174,41 @@ body.utk-search-open {
       }
     }
 
+    .utk-home .utk-header-super {
+      height: 47px;
+      position: fixed;
+      top: 82px;
+      bottom: auto;
+      z-index: 99996;
+      padding: 0;
+      background-color: $smokey;
+
+      .utk-menu-options {
+        margin-top: $golden-ratio-2;
+      }
+
+      .utk-resources-menu--services-primary {
+        height: $golden-ratio-4;
+
+        ul {
+          li {
+            font-size: $type-2;
+            font-weight: 400;
+
+            a,
+            a:visited {
+              color: $white;
+            }
+
+            a:hover,
+            a:focus {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
     .utk-logo-wrapper {
       .utk-logo-primary {
         top: -3000px;

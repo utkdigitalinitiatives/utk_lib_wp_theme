@@ -626,7 +626,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
     font-weight: 700;
     display: flex;
     text-align: right;
-    padding-right: 123px;
+    padding-right: 76px;
     margin-top: 3px;
     text-transform: uppercase;
     /* Mobile Devices for Mice */
@@ -699,7 +699,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
     margin-top: 0;
     color: #b9e1e2 !important; }
   .utk-search .utk-search-tabs {
-    padding-right: 123px;
+    padding-right: 76px;
     transition: all 110ms ease-in-out;
     opacity: 1;
     /* Mobile Devices for Mice */
@@ -767,16 +767,15 @@ body .utk-research-tools .ui.dropdown .menu > .item {
       .utk-search .utk-search-tabs > .ui.menu a,
       .utk-search .utk-search-tabs > .ui.menu a:visited {
         color: #fff !important;
-        font-size: 18px;
+        font-size: 13px;
         white-space: inherit;
-        font-weight: 400;
         text-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
-        text-transform: none !important;
-        margin: 0;
+        text-transform: uppercase !important;
+        margin-top: 6px;
+        -webkit-font-smoothing: subpixel-antialiased;
         cursor: pointer;
         padding: 0 0;
         margin-right: 18px;
-        margin-bottom: 0px;
         /* Mobile Devices for Mice */
         /* Landscape phones and down */
         /* Landscape phones and down */
@@ -786,7 +785,8 @@ body .utk-research-tools .ui.dropdown .menu > .item {
         @media (max-width: 767px) {
           .utk-search .utk-search-tabs > .ui.menu a,
           .utk-search .utk-search-tabs > .ui.menu a:visited {
-            font-size: 15px; } }
+            font-size: 13px;
+            margin-top: -2px; } }
         .utk-search .utk-search-tabs > .ui.menu a::after,
         .utk-search .utk-search-tabs > .ui.menu a:visited::after {
           width: 100%;
@@ -794,7 +794,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
           display: block;
           position: absolute;
           left: 0;
-          bottom: -4px;
+          bottom: -2px;
           background-color: #ff8200; }
         .utk-search .utk-search-tabs > .ui.menu a:hover, .utk-search .utk-search-tabs > .ui.menu a:focus,
         .utk-search .utk-search-tabs > .ui.menu a:visited:hover,
@@ -1697,12 +1697,12 @@ body {
       height: 100%;
       z-index: 3;
       transition: all 110ms ease-in-out;
-      background: -moz-linear-gradient(top, #754a7e 0, rgba(117, 74, 126, 0) 199px);
-      background: -webkit-gradient(linear, top, bottom, color-stop(0, #754a7e), color-stop(199px, rgba(117, 74, 126, 0)));
-      background: -webkit-linear-gradient(top, #754a7e 0, rgba(117, 74, 126, 0) 199px);
-      background: -o-linear-gradient(top, #754a7e 0, rgba(117, 74, 126, 0) 199px);
-      background: -ms-linear-gradient(top, #754a7e 0, rgba(117, 74, 126, 0) 199px);
-      background: linear-gradient(to bottom, #754a7e 0, rgba(117, 74, 126, 0) 199px); }
+      background: -moz-linear-gradient(top, #006c93 0, rgba(88, 89, 91, 0) 199px);
+      background: -webkit-gradient(linear, top, bottom, color-stop(0, #006c93), color-stop(199px, rgba(88, 89, 91, 0)));
+      background: -webkit-linear-gradient(top, #006c93 0, rgba(88, 89, 91, 0) 199px);
+      background: -o-linear-gradient(top, #006c93 0, rgba(88, 89, 91, 0) 199px);
+      background: -ms-linear-gradient(top, #006c93 0, rgba(88, 89, 91, 0) 199px);
+      background: linear-gradient(to bottom, #006c93 0, rgba(88, 89, 91, 0) 199px); }
     #utk-panel .utk-panel-wrap > .utk-panel-underlay .utk-panel-underlay--fade-horz,
     #utk-panel-mini .utk-panel-wrap > .utk-panel-underlay .utk-panel-underlay--fade-horz {
       top: 0;
@@ -1734,7 +1734,7 @@ body {
   #utk-panel .utk-panel-wrap .utk-panel,
   #utk-panel-mini .utk-panel-wrap .utk-panel {
     font-size: 18px;
-    padding: 76px 0 0;
+    padding: 47px 0 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -1791,7 +1791,7 @@ body {
       flex-direction: column; }
   #utk-panel .utk-panel-wrap.utk-panel-focus-search,
   #utk-panel-mini .utk-panel-wrap.utk-panel-focus-search {
-    background-color: #754a7e;
+    background-color: #006c93;
     color: #fff; }
     #utk-panel .utk-panel-wrap.utk-panel-focus-search .utk-panel--search,
     #utk-panel-mini .utk-panel-wrap.utk-panel-focus-search .utk-panel--search {

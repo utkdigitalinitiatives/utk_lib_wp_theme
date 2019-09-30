@@ -1280,6 +1280,7 @@ body.utk-search-open .utk-search {
   width: 100%;
   background-color: #f6f6f6;
   padding: 18px 0;
+  transition: all 110ms ease-in-out;
   /* Mobile Devices for Mice */
   /* Landscape phones and down */
   /* Landscape phone to portrait tablet */

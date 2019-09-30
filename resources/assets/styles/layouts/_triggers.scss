@@ -14,7 +14,7 @@
   }
 
   @include respond(md, lg, xl) {
-    top: 181px;
+    top: 199px;
   }
 }
 
@@ -32,6 +32,6 @@ body.admin-bar #utk-trigger-header {
   }
 
   @include respond(md, lg, xl) {
-    top: calc(181px + 32px);
+    top: calc(199px + 32px);
   }
 }
