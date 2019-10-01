@@ -4,7 +4,6 @@
   margin-bottom: $golden-ratio-4 !important;
   transition: $transition-all;
   position: relative;
-  height: 47px;
 
   @include respond(xs, sm) {
     display: flex !important;
@@ -24,6 +23,7 @@
 .utk-facets--tray {
   display: flex;
   justify-content: space-between;
+  margin-bottom: $golden-ratio-3;
 
   @include respond(xs) {
     flex-wrap: wrap;
@@ -32,7 +32,7 @@
 }
 
 .utk-facets--label {
-  font-size: $type-1;
+  font-size: $type-2;
   font-weight: 400;
   color: $smokey;
   display: flex;
@@ -59,7 +59,7 @@
   }
 
   .utk-facets--label-data {
-    margin-right: $golden-ratio-0;
+    margin-right: 0.4em;
     height: $type-4;
 
     > a {
@@ -199,14 +199,6 @@
   transition: $transition-all;
   transform-origin: center;
   display: flex;
-  position: absolute;
-  top: 65px;
-  opacity: 0;
-  width: 100%;
-  padding: $golden-ratio-1 $golden-ratio-3 $golden-ratio-0;
-  background-color: $gray-0;
-  border-radius: 29px;
-  box-shadow: inset $box-shadow;
 
   .page-body--aside--facets--item {
     margin-right: $golden-ratio-3;
