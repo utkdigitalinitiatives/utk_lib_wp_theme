@@ -1,7 +1,6 @@
 .page-body--content--breadcrumb {
   padding: $golden-ratio-1 0;
   font-size: $type-1;
-  background-color: $white;
   margin-bottom: $golden-ratio-4;
   box-shadow: $box-shadow;
 
@@ -26,4 +25,9 @@
   margin-bottom: $golden-ratio-2;
   text-align: center;
   box-shadow: none;
+
+  a,
+  a:visited {
+    color: $white !important;
+  }
 }

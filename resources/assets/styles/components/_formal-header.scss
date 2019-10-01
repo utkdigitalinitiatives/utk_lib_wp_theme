@@ -8,7 +8,7 @@
 
 .utk-formal--header--background {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   margin-top: -$golden-ratio-3;
   overflow: hidden;
   height: 335px;
@@ -19,7 +19,7 @@
   img {
     max-width: 100%;
     width: 100%;
-    opacity: 0.11;
+    opacity: 0.11 !important;
     object-fit: cover;
     object-position: center;
     margin-top: -29%;

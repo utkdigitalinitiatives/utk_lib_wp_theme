@@ -11,6 +11,7 @@
       font-size: $type-6;
       letter-spacing: -0.029em;
       line-height: 1.18em;
+      color: $white !important;
     }
 
     * {
@@ -30,7 +31,7 @@
   .page-body--content--body {
     p[style="text-align:center"]:first-child {
       font-size: $type-3;
-      color: $smokey !important;
+      color: $gray-1 !important;
       max-width: $gr-long;
       margin: auto;
       -webkit-font-smoothing: antialiased !important;

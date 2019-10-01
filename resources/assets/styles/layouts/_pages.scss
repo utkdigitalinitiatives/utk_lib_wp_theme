@@ -38,8 +38,6 @@
 
   &--content {
     width: calc(100% - 332px);
-    position: relative;
-    z-index: 1;
     margin-bottom: $golden-ratio-4;
 
     @include standard-body-link();
