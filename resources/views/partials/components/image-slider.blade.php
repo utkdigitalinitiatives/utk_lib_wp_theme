@@ -51,9 +51,13 @@
                 asNavFor: '.utk-space-slider-display',
                 variableWidth: true,
                 dots: false,
+                touchMove: true,
+                touchThreshold: 2,
+                verticalSwiping: true,
+                draggable: false,
+                centerMode: true,
                 focusOnSelect: true,
-                autoplay: true,
-                autoplaySpeed: 5000,
+                autoplay: false,
                 arrows: false,
                 accessibility: true
             });
