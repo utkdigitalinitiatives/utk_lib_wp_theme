@@ -1,4 +1,10 @@
 <div id="detach-sticky-top"></div>
+<div class="utk-formal--header--background">
+    @php
+        $background = wp_get_attachment_image(832, 'hero_image');
+        print $background;
+    @endphp
+</div>
 @include('partials.components.breadcrumb')
 <div class="container page-body--container">
     <div class="page-body--flex">
