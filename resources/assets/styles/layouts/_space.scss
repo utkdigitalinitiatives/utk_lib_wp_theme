@@ -93,14 +93,32 @@ article.space {
 }
 
 .page-body--content-formal .facetwp-template > .facetwp-template--articles {
-  margin-left: -23.5px;
-  width: calc(100% + 47px);
+  margin-left: -18px;
+  width: calc(100% + 36px);
+
+  @include respond(xs) {
+    flex-basis: 100%;
+    padding: 0;
+  }
 
   article.space {
     width: auto;
     flex-basis: calc(100% / 4);
     margin-right: 0 !important;
     padding: 0 23.5px;
+
+    @include respond(md) {
+      flex-basis: calc(100% / 3);
+    }
+
+    @include respond(sm) {
+      flex-basis: calc(100% / 2);
+    }
+
+    @include respond(xs) {
+      flex-basis: 100%;
+      padding: 0;
+    }
 
     .utk-space--time {
       text-shadow: $box-shadow-float;
