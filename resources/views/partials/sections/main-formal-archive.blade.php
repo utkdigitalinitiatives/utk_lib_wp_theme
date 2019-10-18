@@ -5,6 +5,7 @@
     $header_post = get_option('options_formal_header');
 
     $archive_layout = get_option('options_formal_default_layout');
+    $archive_description = get_option('options_formal_archive_description');
 
     if ($archive_layout === 'taxonomy') :
         $group_by_term = true;
@@ -29,6 +30,9 @@
         <main class="page-body--content page-body--content-formal">
             @php print Formal::getFormalHeader($header_post) @endphp
             @include('partials.facets-formal')
+            @if($archive_description)
+                @php echo $archive_description @endphp
+            @endif
             @if($group_by_term)
                 @include('partials.components.facetwp-template-grouping')
             @else
