@@ -58,6 +58,16 @@ export default class FacetWP {
                 $('.utk-facets--label-string').html('');
             });
 
+            $(document).on('click', '.utk-facets--toggle', function(e) {
+                $('.utk-facets--modal').addClass('utk-facets--modal-active');
+                $('body').addClass('utk-modal-open-xs');
+            });
+
+            $(document).on('click', '.utk-facets--close', function(e) {
+                $('.utk-facets--modal').removeClass('utk-facets--modal-active');
+                $('body').removeClass('utk-modal-open-xs utk-modal-open');
+            });
+
             $(document).on('click', '.utk-modal-overlay', function(e) {
                 $('.utk-modal-populate').removeClass('loaded loading');
                 $('.utk-modal-populate .article--populate--inner').remove();
