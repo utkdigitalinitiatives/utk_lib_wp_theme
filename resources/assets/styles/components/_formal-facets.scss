@@ -184,9 +184,17 @@
     }
   }
 
-  &.utk-facets--toggle::after {
-    content: "\E816";
-    background-color: $orange;
+  &.utk-facets--toggle {
+    display: none;
+
+    @include respond(xs) {
+      display: block;
+    }
+
+    &::after {
+      content: "\E816";
+      background-color: $orange;
+    }
   }
 
   &.utk-facets--reset::after {
