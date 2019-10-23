@@ -23,7 +23,7 @@
 .utk-facets--tray {
   display: flex;
   justify-content: space-between;
-  margin-bottom: $golden-ratio-3;
+  margin-bottom: $golden-ratio-2;
 
   @include respond(xs) {
     flex-wrap: wrap;
