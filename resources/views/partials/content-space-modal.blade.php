@@ -10,6 +10,8 @@
     $seats['approximate'] = $data['fields']['space_seats_approximate'];
 
     $volume = $data['fields']['space_volume'];
+    $reserve = $data['fields']['space_reserve'];
+    $reserve_url = $data['fields']['space_reseve_url'];
 
     $space_daypicker = 'show';
     $space_hours = 'inherit';
@@ -29,9 +31,15 @@
     <div class="utk-space--content">
         <div class="utk-space--content--wrap">
             <header>
-                <a href="@php the_permalink($id) @endphp">
+                <a href="@php the_permalink($id) @endphp" class="utk-space--permalink">
                     <h3>@php echo $data['title']; @endphp</h3>
                 </a>
+                <div class="utk-space--content--wrap--funnel">
+                    <a href="@php the_permalink($id) @endphp">More Details <span class="icon-right-big"></span></a>
+                    @if($reserve)
+                        <a href="{{$reserve_url}}">Reserve Space <span class="icon-right-big"></span></a>
+                    @endif
+                </div>
             </header>
             <span class="utk-modal-separator"></span>
             <div class="utk-modal-meta">

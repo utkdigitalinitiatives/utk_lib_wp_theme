@@ -195,9 +195,38 @@ article.space {
         @include respond(xs) {
           padding: $golden-ratio-3;
         }
+
+        &--funnel {
+          font-size: $type-1;
+          display: flex;
+          margin-bottom: $golden-ratio-2;
+
+          > a {
+            display: flex;
+            line-height: 1em;
+            color: $globe;
+            font-weight: 700;
+            margin-right: $golden-ratio-2;
+
+            span {
+              font-size: $type-0;
+              color: $rock;
+              margin-left: 2px;
+            }
+
+            &:visited {
+              color: $globe;
+            }
+
+            &:hover,
+            &:focus {
+              color: $leconte;
+            }
+          }
+        }
       }
 
-      header a {
+      header > a.utk-space--permalink {
         h3 {
           margin: 0 0 $golden-ratio-2;
           padding: 0;
