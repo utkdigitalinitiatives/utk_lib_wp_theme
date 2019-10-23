@@ -4,23 +4,52 @@
   &--hours {
     .DayPickerInput {
       position: relative;
-      box-shadow: inset $box-shadow;
       height: $golden-ratio-4;
-      background-color: $gray-0;
+      background-color: $white;
+      transition: $transition-all;
       border-radius: $golden-ratio-4;
+      box-shadow: none;
+
+      &:hover,
+      &:focus {
+        background-color: $gray-0;
+        box-shadow: inset $box-shadow;
+      }
 
       > input {
         border: none;
         color: $smokey;
         font-family: $sans;
-        font-weight: 700;
-        font-size: $type-2;
+        font-weight: 400;
+        font-size: $type-4;
         cursor: pointer;
         height: $golden-ratio-4;
         position: relative;
         z-index: 1;
         background: transparent !important;
-        padding: 0 $golden-ratio-4 0 $golden-ratio-2;
+        padding: 0 $golden-ratio-4 0 $golden-ratio-4;
+        letter-spacing: -0.018em;
+      }
+
+      &::before {
+        left: 0;
+        top: 0;
+        content: "\E81C";
+        font-family: fontello, monospace;
+        border-radius: $golden-ratio-4;
+        font-style: normal;
+        font-size: $type-3;
+        color: $smokey;
+        speak: none;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: $golden-ratio-4 !important;
+        width: $golden-ratio-4 !important;
+        -webkit-font-smoothing: antialiased;
+        z-index: 0;
       }
 
       &::after {
@@ -30,7 +59,7 @@
         font-family: fontello, monospace;
         border-radius: $golden-ratio-4;
         font-style: normal;
-        font-size: $type-2;
+        font-size: $type-1;
         color: $rock;
         speak: none;
         font-weight: 400;
@@ -58,6 +87,11 @@ article.space {
           height: 39px !important;
         }
 
+        &::before {
+          font-size: $type-2;
+        }
+
+        &::before,
         &::after {
           height: 39px !important;
           width: 39px !important;

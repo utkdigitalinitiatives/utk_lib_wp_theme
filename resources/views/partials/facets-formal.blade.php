@@ -20,12 +20,12 @@ $facets = 'formal_facets';
                     @endphp
                     @include('partials.components.space-hours')
                 @endif
-                <div class="utk-facets--label">
-                    <em>Showing</em>
-                    <span class="utk-facets--label-data utk-facets--label-meta">all</span>
-                    <em>{{$type_object->labels->name}}</em>
-                    <span class="utk-facets--label-data utk-facets--label-string"></span>
-                </div>
+                {{--<div class="utk-facets--label">--}}
+                    {{--<em>Showing</em>--}}
+                    {{--<span class="utk-facets--label-data utk-facets--label-meta">all</span>--}}
+                    {{--<em>{{$type_object->labels->name}}</em>--}}
+                    {{--<span class="utk-facets--label-data utk-facets--label-string"></span>--}}
+                {{--</div>--}}
                 <div class="utk-facets--filter">
                     <button class="utk-facets--button utk-facets--reset">
                         Reset
