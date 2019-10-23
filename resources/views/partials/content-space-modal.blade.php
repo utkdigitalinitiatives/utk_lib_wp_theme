@@ -36,7 +36,7 @@
                 </a>
                 <div class="utk-space--content--wrap--funnel">
                     <a href="@php the_permalink($id) @endphp">More Details <span class="icon-right-big"></span></a>
-                    @if($reserve)
+                    @if($reserve === 'Yes')
                         <a href="{{$reserve_url}}">Reserve Space <span class="icon-right-big"></span></a>
                     @endif
                 </div>
