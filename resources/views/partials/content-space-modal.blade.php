@@ -17,19 +17,14 @@
 
 @endphp
 <article @php post_class('space', $id) @endphp>
+    <div class="utk-space-actions">
+        @include('partials.components.space-hours')
+    </div>
     <div class="utk-space--media">
         <div class="utk-space--media--slider">
             @include('partials.components.image-slider')
-            <div class="utk-space--media--slider--overlay">
-                <a href="#" class="btn btn-with-icon">
-                    Read More
-                    <span class="icon-right-open"></span>
-                </a>
-                <a href="@php the_permalink($id) @endphp"  class="btn btn-secondary btn-inverse btn-outline">
-                    Reserve Space
-                </a>
-            </div>
         </div>
+        <div class="utk-space--media--slider--overlay"></div>
     </div>
     <div class="utk-space--content">
         <div class="utk-space--content--wrap">
@@ -38,9 +33,6 @@
                     <h3>@php echo $data['title']; @endphp</h3>
                 </a>
             </header>
-            <div class="utk-space-actions">
-                @include('partials.components.space-hours')
-            </div>
             <span class="utk-modal-separator"></span>
             <div class="utk-modal-meta">
                 <div class="utk-modal-meta--item">

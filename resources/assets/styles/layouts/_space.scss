@@ -79,16 +79,18 @@
 article.space {
   .utk-space {
     &--hours {
+      display: flex;
+
       .DayPickerInput {
         height: 39px;
+        background-color: $gray-0 !important;
+        box-shadow: inset $box-shadow;
+        border-radius: $golden-ratio-4;
 
         > input {
           font-size: $type-2;
           height: 39px !important;
           padding: 0 39px;
-          background-color: $gray-0;
-          box-shadow: inset $box-shadow;
-          border-radius: $golden-ratio-4;
         }
 
         &::before {
@@ -106,11 +108,10 @@ article.space {
     &--time {
       font-weight: 700;
       font-style: normal;
-      font-size: $type-2;
+      font-size: $type-1;
       display: flex;
       justify-content: left;
       align-items: center;
-      margin-top: $golden-ratio-1;
 
       &--indicator {
         display: block;
@@ -200,14 +201,10 @@ article.space {
         h3 {
           margin: 0 0 $golden-ratio-2;
           padding: 0;
-          font-size: $type-4;
+          font-size: $type-3;
           line-height: 1.29em;
           font-weight: 700;
           letter-spacing: -0.029em;
-
-          @include respond(xs, sm) {
-            font-size: $type-3;
-          }
         }
 
         &:hover,
@@ -234,6 +231,11 @@ article.space {
       margin-bottom: $golden-ratio-2;
       flex-wrap: wrap;
       justify-content: space-between;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      padding: $golden-ratio-2 0 0 $golden-ratio-2;
 
       .utk-date-picker {
         font-size: $type-1;
@@ -250,12 +252,26 @@ article.space {
           }
         }
       }
+
+      .utk-space--time--span {
+        height: 39px !important;
+        margin-left: -$golden-ratio-5;
+        padding-left: calc(#{$golden-ratio-5 + $golden-ratio-2});
+        padding-right: $golden-ratio-2;
+        font-size: $type-2;
+        font-weight: 700;
+        color: $smokey;
+        display: flex;
+        align-items: center;
+        background-color: $gray-1;
+        border-radius: $golden-ratio-3;
+      }
     }
 
     .utk-space--media {
       width: $gr-long;
       background-color: $smokey;
-      clip-path: polygon(0 0, calc(100% - #{$golden-ratio-4}) 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 0, calc(100% - #{$golden-ratio-3}) 0, 100% 100%, 0 100%);
       position: relative;
       z-index: 1;
 
@@ -277,7 +293,7 @@ article.space {
         }
 
         .utk-space-slider-display {
-          position: absolute;
+          position: relative;
           left: 0;
           top: 0;
           z-index: 0;
@@ -298,34 +314,49 @@ article.space {
 
         .utk-space-slider-nav {
           z-index: 2;
+          margin-top: -76px;
 
           .slick-slide {
             cursor: pointer !important;
             width: $golden-ratio-6;
-            height: calc(#{$golden-ratio-5} + 2px);
+            height: calc(#{$golden-ratio-5} + 6px);
             transition: $transition-all-fast;
-            background-color: $smokey;
-            border-bottom: 2px solid $gray-1;
+            background-color: $white;
+            border-top: 6px solid $orange;
+            margin-top: 0;
 
             img {
               transition: $transition-all-fast;
-              filter: brightness(0.76) saturate(0.76) blur(0);
+              filter: contrast(0.76) brightness(1) blur(0);
               opacity: 1;
-            }
-
-            &.slick-current {
-              img {
-                filter: brightness(1) saturate(1) blur(-4px) !important;
-                opacity: 0.47;
-              }
-
-              border-bottom: 2px solid $orange;
             }
 
             &:hover,
             &:focus {
               img {
-                filter: brightness(1) saturate(1);
+                filter: contrast(1) brightness(1);
+                opacity: 1;
+              }
+            }
+
+            &.slick-current {
+              background-color: $white !important;
+              border-top: 6px solid $orange;
+              margin-top: -6px;
+
+              img {
+                filter: contrast(0.76) brightness(1) blur(2px) !important;
+                opacity: 0.29;
+              }
+
+              &:hover,
+              &:focus {
+                background-color: $white !important;
+
+                img {
+                  filter: contrast(0.47) brightness(1) blur(2px) !important;
+                  opacity: 0.29;
+                }
               }
             }
           }
@@ -334,8 +365,8 @@ article.space {
         &--overlay {
           position: absolute;
           z-index: 1;
-          bottom: 0;
-          height: $golden-ratio-6;
+          top: 0;
+          height: $golden-ratio-5;
           width: 100%;
           display: flex;
           justify-content: flex-start;
@@ -343,7 +374,7 @@ article.space {
           align-content: flex-end;
           padding: $golden-ratio-2;
 
-          @include filter-gradient(rgba($smokey, 0), 0%, rgba(black, 0.76), calc(100% - 47px));
+          @include filter-gradient(rgba($smokey, 0.76), 0, rgba($smokey, 0), 100%);
 
           .btn {
             height: $golden-ratio-4;

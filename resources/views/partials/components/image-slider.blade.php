@@ -8,7 +8,7 @@
 @endphp
 
 @if($image_count > 1)
-    <div class="utk-space-slider-nav">
+    <div class="utk-space-slider-display">
         @foreach($images as $image)
             @php
                 $image_post_id = $image['ID'];
@@ -17,7 +17,7 @@
             @include('partials.components.image')
         @endforeach
     </div>
-    <div class="utk-space-slider-display">
+    <div class="utk-space-slider-nav">
         @foreach($images as $image)
             @php
                 $image_post_id = $image['ID'];

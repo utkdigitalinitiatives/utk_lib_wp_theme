@@ -120,8 +120,6 @@ body.utk-modal-open-xs {
     height: 470px;
     position: relative;
     box-shadow: $box-shadow-float-submenu;
-    border-radius: $golden-ratio-1;
-    overflow: hidden;
 
     @include respond(xs) {
       height: 100%;
