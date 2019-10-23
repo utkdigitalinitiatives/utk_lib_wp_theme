@@ -27,7 +27,7 @@
         position: relative;
         z-index: 1;
         background: transparent !important;
-        padding: 0 $golden-ratio-4 0 $golden-ratio-4;
+        padding: 0 $golden-ratio-4;
         letter-spacing: -0.018em;
       }
 
@@ -85,6 +85,10 @@ article.space {
         > input {
           font-size: $type-2;
           height: 39px !important;
+          padding: 0 39px;
+          background-color: $gray-0;
+          box-shadow: inset $box-shadow;
+          border-radius: $golden-ratio-4;
         }
 
         &::before {
