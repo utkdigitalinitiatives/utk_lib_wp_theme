@@ -48,7 +48,7 @@ body:not(.header-scroll-down) {
       margin-top: $golden-ratio-5;
 
       h2 {
-        font-size: $type-6 !important;
+        font-size: $type-5 !important;
         font-family: $font-volumes;
         letter-spacing: -0.029em;
         text-shadow: $box-shadow;
@@ -126,6 +126,10 @@ body:not(.header-scroll-down) {
         @include filter-gradient(rgba(saturate(darken($leconte, 15), 10), 0.76), 47px, rgba(darken($leconte, 15), 0), 100%);
       }
     }
+    //
+    //.utk-formal--header--background::after {
+    //  @include filter-gradient(rgba(black, 0), 0, rgba(black, 0.76), calc(100% - 123px));
+    //}
   }
 
   //legacy
@@ -135,5 +139,9 @@ body:not(.header-scroll-down) {
         @include filter-gradient(rgba(saturate(darken($legacy, 15), 10), 0.76), 47px, rgba(darken($legacy, 15), 0), 100%);
       }
     }
+    //
+    //.utk-formal--header--background::after {
+    //  @include filter-gradient(rgba(black, 0), 0, rgba(black, 0.76), calc(100% - 123px));
+    //}
   }
 }

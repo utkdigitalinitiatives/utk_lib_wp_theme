@@ -11,5 +11,52 @@
       margin-top: 0;
       filter: none;
     }
+
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: $golden-ratio-8;
+      left: 0;
+      bottom: 0;
+      content: '';
+      background-color: transparent;
+      z-index: 0;
+
+      @include filter-gradient(rgba(black, 0), 0, rgba(black, 0.76), calc(100% - 123px));
+    }
+  }
+
+  .utk-volume--title {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    margin-bottom: $golden-ratio-5;
+    color: $white;
+    width: 100%;
+    left: 0;
+
+    &--series {
+      font-weight: 700;
+      font-size: $type-0;
+      text-transform: uppercase;
+      display: block;
+      opacity: 0.85;
+    }
+
+    h1 {
+      font-size: $type-7 !important;
+      font-family: $font-volumes !important;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: -0.029em;
+      text-shadow: $box-shadow;
+      line-height: 1.29em;
+      color: $white !important;
+    }
+
+    &--description {
+      font-size: $type-1;
+      line-height: 1.29em;
+    }
   }
 }
