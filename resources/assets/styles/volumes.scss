@@ -1,0 +1,26 @@
+@import "common/variables";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+/**
+ * Variables, Bootstrap Grid and Mixins
+ */
+@import "common/global";
+@import "common/mixins";
+
+$font-volumes: 'Vollkorn', serif;
+
+/**
+ * components
+ */
+@import "entities/volumes/components/header";
+
+/**
+ * layout
+ */
+@import "entities/volumes/layout/volume";
