@@ -16,7 +16,7 @@
 @section('content')
     @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header-truncate')
-    <div class="page-body page-body-truncate page-body-nosidebar">
+    <div class="page-body page-body-truncate">
         @include('partials.sections.main-volume')
     </div>
     @endwhile
