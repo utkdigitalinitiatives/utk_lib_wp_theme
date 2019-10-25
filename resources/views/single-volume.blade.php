@@ -15,9 +15,9 @@
 
 @section('content')
     @while(have_posts()) @php the_post() @endphp
-    @include('partials.page-header-volumes')
-    <div class="page-body page-body-truncate">
-        @include('partials.sections.main-volume')
-    </div>
+        @include('partials.page-header-volumes')
+        <div class="page-body page-body-truncate">
+            @include('volumes.main-volume')
+        </div>
     @endwhile
 @endsection

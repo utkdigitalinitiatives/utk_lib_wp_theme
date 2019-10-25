@@ -1,16 +1,7 @@
-@php
-    if (UT_LIBRARIES_ENTITY === 'volumes') :
-        if(get_post_type() === 'volume') :
-            $color = 'utk-color-' . get_field('volume_color');
-        else :
-            //
-        endif;
-    endif;
-@endphp
 <!DOCTYPE html>
 <html {!! get_language_attributes() !!}>
 @include('partials.head')
-<body @php body_class($color) @endphp>
+<body @php body_class(Volumes::getVolumeColor()) @endphp>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MB99NS"
