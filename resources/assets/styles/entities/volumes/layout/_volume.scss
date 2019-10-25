@@ -36,6 +36,10 @@
     width: 100%;
     left: 0;
 
+    &--inner {
+      width: $gr-short;
+    }
+
     &--series {
       font-weight: 700;
       font-size: $type-0;
@@ -51,13 +55,27 @@
       margin: 0;
       letter-spacing: -0.029em;
       text-shadow: $box-shadow;
-      line-height: 1.29em;
+      line-height: 1.06em;
       color: $white !important;
     }
 
-    &--description {
-      font-size: $type-1;
+    h2 {
+      font-size: $type-2 !important;
+      font-family: $sans !important;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0 0 $golden-ratio-1;
+      letter-spacing: 0.15em;
+      text-shadow: $box-shadow;
       line-height: 1.29em;
+      color: $sunsphere !important;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    &--intro {
+      display: block;
+      font-size: $type-2;
+      line-height: 1.47em;
     }
   }
 }

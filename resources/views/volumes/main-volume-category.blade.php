@@ -2,6 +2,7 @@
 
     // set featured item for taxonomy mastheads
     $featured_item = Volumes::getFeaturedItem();
+    $content = Volumes::getTermContent();
 
 @endphp
 <div id="detach-sticky-top"></div>
@@ -20,6 +21,7 @@
             @endif
         </main>
         <aside class="page-body--aside">
+            @php print $content; @endphp
             @include('partials.sidebar')
         </aside>
     </div>

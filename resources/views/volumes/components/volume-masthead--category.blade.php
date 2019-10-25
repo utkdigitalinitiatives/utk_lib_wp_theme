@@ -1,9 +1,11 @@
 <div class="utk-formal--header--background">
     <div class="utk-volume--title">
         <div class="container">
-            <span class="utk-volume--title--series">Boundless Series</span>
-            <h1>Boundless: Artists in the Archives </h1>
-            <span class="utk-volume--title--intro">Artists in the Archives</span>
+            <div class="utk-volume--title--inner">
+                <h1>Boundless</h1>
+                <h2>Artists in the Archives</h2>
+                <span class="utk-volume--title--intro">Fifteen or less words describing the set of volumes under this category.</span>
+            </div>
         </div>
     </div>
     @php

@@ -54,4 +54,22 @@ class Volumes extends Controller
 
         return $id;
     }
+
+    public static function getTermContent($term = null)
+    {
+        $id = null;
+
+        if ($term === null) {
+            $term = get_query_var('volume_category');
+        }
+
+        while( have_rows('volume_categories', 'option') ): the_row();
+            $category = get_sub_field('category');
+            if ($category->slug === $term) :
+                $id = get_sub_field('content');
+            endif;
+        endwhile;
+
+        return $id;
+    }
 }
