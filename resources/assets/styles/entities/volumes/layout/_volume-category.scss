@@ -1,0 +1,45 @@
+.page-body--flex-volumes {
+  margin-top: $golden-ratio-5;
+}
+
+.utk-volume--teaser {
+  display: block;
+  margin-bottom: $golden-ratio-3;
+  margin-right: $golden-ratio-3;
+
+  &--thumb {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &-- {
+    font-weight: 700;
+    font-size: $type-3;
+    font-family: $font-volumes !important;
+    margin: 0;
+    letter-spacing: -0.029em;
+    line-height: 1.29em;
+    text-align: center;
+  }
+
+  &--vol {
+    text-transform: uppercase;
+    font-size: $type-0;
+    letter-spacing: 0.029em;
+    display: block;
+    text-align: center;
+  }
+
+  &--title {
+    font-weight: 700;
+    font-size: $type-4;
+    font-family: $font-volumes !important;
+    margin: 0;
+    letter-spacing: -0.029em;
+    line-height: 1.29em;
+    text-align: center;
+    color: $smokeyx;
+  }
+}

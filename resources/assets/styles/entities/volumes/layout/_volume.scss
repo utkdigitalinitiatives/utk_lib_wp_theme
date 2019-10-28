@@ -79,3 +79,22 @@
     }
   }
 }
+
+.page-body--content-volumes {
+  p {
+    &:first-child {
+      margin-top: 0;
+
+      &::first-letter {
+        float: left;
+        font-size: 3.3em;
+        font-weight: 700;
+        line-height: 0.9em;
+        margin-right: 6px;
+        text-transform: none;
+      }
+    }
+
+    @include serif-body-rendering();
+  }
+}
