@@ -4,8 +4,19 @@
             <div class="utk-volume--title--inner">
                 <span class="utk-volume--title--series">Boundless Series {{$featured_id}}</span>
                 <h1>@php echo get_the_title($featured_item) @endphp</h1>
-                <span class="utk-volume--title--intro">Donec venenatis risus at ligula vestibulum malesuada. Mauris vitae orci. </span>
+                @if(get_field('volume_intro'))
+                    <span class="utk-volume--title--intro">
+                        @php echo get_field('volume_intro') @endphp
+                    </span>
+                @endif
             </div>
+            @if(get_field('volume_splash'))
+                <div class="utk-volume--splash">
+                    <div class="container">
+                        @php echo get_field('volume_splash') @endphp
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
     @php
