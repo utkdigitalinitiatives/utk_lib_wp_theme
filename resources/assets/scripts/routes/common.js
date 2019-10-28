@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Subsite from '../components/Subsite'
 import Formal from '../components/Formal'
 import FacetWP from '../components/FacetWP'
+import Volumes from '../components/Volumes'
 
 export default {
     init() {
@@ -12,6 +13,7 @@ export default {
         new Subsite();
         new Formal();
         new FacetWP();
+        new Volumes();
     },
     finalize() {
         // JavaScript to be fired on all pages, after page specific JS is fired

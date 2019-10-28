@@ -1,7 +1,9 @@
-.page-header-truncate .page-header--float {
+body.header-scroll-down .page-header-truncate .page-header--float {
   .page-header--title-wrap {
+    opacity: 1 !important;
+
     h2 {
-      font-size: $type-4 !important;
+      font-size: $type-3 !important;
       font-family: $font-volumes;
       letter-spacing: -0.029em;
       line-height: 44px !important;
@@ -13,7 +15,7 @@ body:not(.header-scroll-down) {
   .page-header-truncate .page-header--float {
     background-color: transparent;
 
-    &::before {
+    .page-header--float--optional-overlay {
       position: absolute;
       width: 100%;
       height: $golden-ratio-8;
@@ -122,7 +124,7 @@ body:not(.header-scroll-down) {
   //leconte
   &.utk-color-8d2048 {
     .page-header-truncate .page-header--float {
-      &::before {
+      .page-header--float--optional-overlay {
         @include filter-gradient(rgba(saturate(darken($leconte, 15), 10), 0.76), 47px, rgba(darken($leconte, 15), 0), 100%);
       }
     }
@@ -135,7 +137,7 @@ body:not(.header-scroll-down) {
   //legacy
   &.utk-color-00746f {
     .page-header-truncate .page-header--float {
-      &::before {
+      .page-header--float--optional-overlay {
         @include filter-gradient(rgba(saturate(darken($legacy, 15), 10), 0.76), 47px, rgba(darken($legacy, 15), 0), 100%);
       }
     }
