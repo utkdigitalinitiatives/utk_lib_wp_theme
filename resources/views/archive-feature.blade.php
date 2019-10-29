@@ -9,7 +9,7 @@
   @if($postStyleClass === 'blog')
     @include('partials.page-header-volumes')
     <div class="page-body page-body-blog page-body-post page-body-truncate">
-      @include('partials.sections.main-archive-volumes')
+      @include('partials.sections.main-archive-feature')
     </div>
   @else
     @include('partials.page-header')
@@ -17,5 +17,4 @@
       @include('partials.sections.main-archive')
     </div>
   @endif
-  @include('partials.page-header')
 @endsection
