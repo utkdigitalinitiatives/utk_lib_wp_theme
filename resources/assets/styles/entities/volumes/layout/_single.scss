@@ -1,6 +1,8 @@
 body:not(.header-scroll-down) {
   .page-header-truncate .page-header--float {
     .page-header--float--optional-overlay {
+      height: $golden-ratio-8;
+
       @include filter-gradient(rgba($smokey, 0.76), 18px, rgba($smokey, 0), 100%);
     }
   }
@@ -8,6 +10,8 @@ body:not(.header-scroll-down) {
 
 .page-body-blog.page-body-truncate {
   .utk-formal--header--background {
+    height: calc(#{$golden-ratio-8 + 15px});
+
     img {
       filter: blur(11px) contrast(1.18) saturate(1.29) grayscale(1);
       opacity: 0.29 !important;
@@ -21,12 +25,34 @@ body:not(.header-scroll-down) {
   .page-body--content--title {
     .utk-heading-1,
     h1 {
-      margin-top: $golden-ratio-4 !important;
+      margin-top: $golden-ratio-5 !important;
       font-family: $font-volumes !important;
       letter-spacing: -0.029em;
       line-height: 1.18em;
       font-weight: 700;
+
+      &::before {
+        content: none;
+      }
     }
+  }
+
+  .page-body--tag {
+    position: absolute;
+    background-color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: $type-1;
+    letter-spacing: 0.029em;
+    -webkit-font-smoothing: subpixel-antialiased;
+    line-height: 1em;
+    padding: 11px 18px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: $box-shadow;
+    color: $smokey;
+    border-top: 2px solid $orange;
+    z-index: 2;
   }
 }
 
@@ -54,7 +80,7 @@ body:not(.header-scroll-down) {
       font-weight: 700;
 
       &::before {
-        margin: 0 0 $golden-ratio-2;
+        content: none;
       }
     }
   }
