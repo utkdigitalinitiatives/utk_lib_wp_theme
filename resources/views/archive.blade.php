@@ -17,5 +17,4 @@
       @include('partials.sections.main-archive')
     </div>
   @endif
-  @include('partials.page-header')
 @endsection

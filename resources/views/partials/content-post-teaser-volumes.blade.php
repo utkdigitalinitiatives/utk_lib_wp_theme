@@ -1,12 +1,17 @@
 @php
 
     $size = 'post-thumbnail';
-    $thumbnail  = get_the_post_thumbnail_url($post->ID,$size);
+    $thumbnail  = get_the_post_thumbnail_url($post->ID, $size);
     $dateline   = date('F j, Y', strtotime($post->post_date));
 
 @endphp
 
 <article @php post_class() @endphp>
+    @if($thumbnail)
+        <a href="@php the_permalink() @endphp">
+            @include('partials.components.post-thumbnail')
+        </a>
+    @endif
     <div class="article--context">
         <header class="article--header">
             <h2 class="article--header--title entry-title">
@@ -27,7 +32,4 @@
             </div>
         </div>
     </div>
-    @if($thumbnail)
-        @include('partials.components.post-thumbnail')
-    @endif
 </article>
