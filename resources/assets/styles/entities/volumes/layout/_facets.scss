@@ -1,0 +1,15 @@
+.page-body--aside--facets {
+  &--item {
+    h4 {
+      font-size: $type-1;
+      letter-spacing: 0.029em;
+      margin: $golden-ratio-3 0 $golden-ratio-1;
+    }
+
+    &:first-child {
+      h4 {
+        margin-top: 0;
+      }
+    }
+  }
+}

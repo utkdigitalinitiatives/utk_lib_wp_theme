@@ -20,7 +20,7 @@ class Formal extends Controller
 
         if ($heading === false) :
             $render_header = ' <span class="utk-heading-1" role="heading" aria-level="1">' . $title .'</span>';
-        else:
+        else :
             $render_header = ' <h1 class="utk-heading-1" role="heading" aria-level="1">' . $title .'</h1>';
         endif;
 
@@ -93,8 +93,9 @@ class Formal extends Controller
         $term_svg = get_term_meta($term_id, 'taxonomy_svg', 1);
         $term_color = get_term_meta($term_id, 'taxonomy_color', 1);
 
-        if ($term_color === 'default')
+        if ($term_color === 'default') :
             $term_color = '58595b';
+        endif;
 
         $term_svg_wrap = '<figure class="utk-svg-wrap" style="fill: #' . $term_color . ';">' . $term_svg . '</figure>';
 

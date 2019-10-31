@@ -17,6 +17,7 @@
 @endphp
 
 <div id="page-header-trigger" class="page-header--float">
+  <span class="page-header--float--optional-overlay"></span>
   <div class="container">
     <div id="page-header-subsite-menu">
       @include('partials.components.subsite-menu-dropdown')

@@ -18,6 +18,9 @@
     "volopedia": [
       "./styles/volopedia.scss"
     ],
+    "volumes": [
+      "./styles/volumes.scss"
+    ],
     "header": [
       "./react/header/header.js",
       "./react/header/header.css"

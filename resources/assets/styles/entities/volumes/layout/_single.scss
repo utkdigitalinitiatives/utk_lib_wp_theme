@@ -1,0 +1,109 @@
+body:not(.header-scroll-down) {
+  .page-header-truncate .page-header--float {
+    .page-header--float--optional-overlay {
+      height: $golden-ratio-8;
+
+      @include filter-gradient(rgba($smokey, 0.76), 18px, rgba($smokey, 0), 100%);
+    }
+  }
+}
+
+.page-body-blog.page-body-truncate {
+  .utk-formal--header--background {
+    height: calc(#{$golden-ratio-8 + 15px});
+
+    img {
+      filter: blur(11px) contrast(1.18) saturate(1.29) grayscale(1);
+      opacity: 0.29 !important;
+    }
+  }
+
+  .page-body--flex {
+    padding-top: $golden-ratio-8;
+  }
+
+  .page-body--content--title {
+    .utk-heading-1,
+    h1 {
+      margin-top: $golden-ratio-5 !important;
+      font-family: $font-volumes !important;
+      letter-spacing: -0.029em;
+      line-height: 1.18em;
+      font-weight: 700;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  .page-body--tag {
+    position: absolute;
+    background-color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: $type-1;
+    letter-spacing: 0.029em;
+    -webkit-font-smoothing: subpixel-antialiased;
+    line-height: 1em;
+    padding: 11px 18px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: $box-shadow;
+    color: $smokey;
+    border-top: 2px solid $orange;
+    z-index: 2;
+  }
+}
+
+.page-body-blog.page-body-post {
+  .page-body--aside {
+    margin-top: $golden-ratio-5;
+
+    .aside-subsite-single .utk-aside--widget {
+      background-color: transparent;
+    }
+  }
+
+  .page-body--content--title {
+    margin: 0;
+    max-width: 100%;
+
+    .utk-heading-1,
+    h1 {
+      text-align: left;
+      font-size: $type-5;
+      margin-top: $golden-ratio-5 !important;
+      font-family: $sans !important;
+      letter-spacing: -0.029em;
+      line-height: 1.18em;
+      font-weight: 700;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  .page-body-blog--meta {
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.029em;
+    font-size: $type-0 !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page-body--content--body {
+    margin: 0;
+    max-width: 100%;
+
+    p,
+    ol:not(.wp-block-gallery) li,
+    ul:not(.wp-block-gallery) li {
+      font-family: $sans;
+      font-size: $type-2;
+      line-height: 1.8em;
+      margin-bottom: $golden-ratio-2;
+    }
+  }
+}

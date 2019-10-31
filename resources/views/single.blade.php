@@ -7,20 +7,16 @@
 
 @section('content')
     @while(have_posts()) @php the_post() @endphp
-    @include('partials.page-header')
-        <div class="page-body @if($postStyleClass)page-body-{{$postStyleClass}}@endif">
-
-            @if('Blog' == $postStyle)
-                @include('partials.sections.main-blog')
-
-            @elseif('Standard' === $postStyle)
+        @if($postStyleClass === 'blog')
+            @include('partials.page-header-volumes')
+            <div class="page-body page-body-blog page-body-post page-body-truncate">
+                @include('partials.sections.main-blog-single')
+            </div>
+        @else
+            @include('partials.page-header')
+            <div class="page-body">
                 @include('partials.sections.main-single')
-
-            @else
-                @include('partials.sections.main-single')
-
-            @endif
-
-        </div>
+            </div>
+        @endif
     @endwhile
 @endsection

@@ -8,8 +8,7 @@
 
 .utk-formal--header--background {
   position: absolute;
-  z-index: -1;
-  margin-top: -$golden-ratio-3;
+  z-index: 0;
   overflow: hidden;
   height: 335px;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 29px), 0 100%);
@@ -22,7 +21,6 @@
     opacity: 0.11 !important;
     object-fit: cover;
     object-position: center;
-    margin-top: -29%;
     filter: blur(6px) contrast(1.18) saturate(1.29);
   }
 }

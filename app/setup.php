@@ -28,6 +28,9 @@ add_action('wp_enqueue_scripts', function () {
 
     if (UT_LIBRARIES_ENTITY === 'volopedia') :
         wp_enqueue_style('ut/volopedia.css', asset_path('styles/volopedia.css'), false, null);
+    elseif (UT_LIBRARIES_ENTITY === 'volumes') :
+        wp_enqueue_style('ut/volumes.css', asset_path('styles/volumes.css'), false, null);
+        wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Vollkorn:400,700', array(), null);
     endif;
 
     wp_enqueue_style('ut/header.css', asset_path('styles/header.css'), false, null);
