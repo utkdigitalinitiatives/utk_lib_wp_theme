@@ -1,5 +1,5 @@
 <div id="detach-sticky-top"></div>
-@include('volumes.components.single-masthead')
+@include('volumes.components.feaure-masthead--category')
 <div class="container page-body--container">
     <div class="page-body--flex">
         <span class="page-body--tag">Features</span>
@@ -14,7 +14,7 @@
                     </div>
                 @else
                     @while (have_posts()) @php the_post() @endphp
-                        @include('partials.content-'.get_post_type() . '-teaser')
+                        @include('volumes.content-feature-teaser')
                     @endwhile
                 @endif
             </div>

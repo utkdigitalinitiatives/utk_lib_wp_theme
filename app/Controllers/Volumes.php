@@ -7,22 +7,24 @@ use Sober\Controller\Controller;
 class Volumes extends Controller
 {
 
-    public static function getVolumeColor()
+    public static function getVolumeClasses()
     {
-        $color = null;
+        $classes = null;
 
         if (UT_LIBRARIES_ENTITY === 'volumes') :
+            $classes = 'utk-entity-volumes ';
+
             if(get_post_type() === 'volume' && !is_tax()) :
-                $color = 'utk-color-' . get_field('volume_color');
+                $classes .= ' utk-color-' . get_field('volume_color');
             elseif (get_post_type() === 'volume' && is_tax('volume_category')) :
                 $term = get_query_var('volume_category');
-                $color = self::getVolumeColorByTerm($term);
+                $classes .= self::getVolumeColorByTerm($term);
             else :
                 //
             endif;
         endif;
 
-        return $color;
+        return $classes;
     }
 
     public static function getVolumeColorByTerm($term = null)

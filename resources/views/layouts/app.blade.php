@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html {!! get_language_attributes() !!}>
 @include('partials.head')
-<body @php body_class(Volumes::getVolumeColor()) @endphp>
+<body @php body_class(Volumes::getVolumeClasses()) @endphp>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MB99NS"

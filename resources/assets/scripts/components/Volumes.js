@@ -15,19 +15,19 @@ export default class Volumes {
                 let trigger = document.getElementById('utk-trigger-header');
                 let triggerBounds = Header.getBounds(trigger);
 
-                $('.page-header--title-wrap').css({
+                $('.utk-entity-volumes .page-header--title-wrap').css({
                     opacity: function() {
                         return triggerBounds.top / 200;
                     }
                 });
 
-                $('.page-header-truncate .page-header--float .page-header--float--optional-overlay').css({
+                $('.utk-entity-volumes .page-header-truncate .page-header--float .page-header--float--optional-overlay').css({
                     opacity: function() {
                         return triggerBounds.top / 200;
                     }
                 });
 
-                $('#menu-subsite-dropdown-wrap').css({
+                $('.utk-entity-volumes #menu-subsite-dropdown-wrap').css({
                     opacity: function() {
                         return triggerBounds.top / 200;
                     }

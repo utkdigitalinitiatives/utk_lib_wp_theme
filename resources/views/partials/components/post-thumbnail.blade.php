@@ -5,7 +5,7 @@
  */
 
 $id         = get_post_thumbnail_id();
-$img        = get_the_post_thumbnail();
+$img        = get_the_post_thumbnail(null, $size);
 $pre        = wp_get_attachment_image_src($id, 'preload_square')[0];
 
 @endphp
