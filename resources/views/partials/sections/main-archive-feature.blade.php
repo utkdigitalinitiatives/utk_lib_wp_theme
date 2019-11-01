@@ -19,7 +19,7 @@
                     </div>
                 @else
                     @while (have_posts()) @php the_post() @endphp
-                        @if(get_the_ID() !== $featured_item)
+                        @if(get_the_ID() != $featured_item)
                             @include('volumes.content-feature-teaser')
                         @endif
                     @endwhile
