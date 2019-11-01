@@ -11,6 +11,33 @@
   .page-body--flex {
     padding-top: 0;
   }
+
+  .utk-volume--title--inner {
+    width: 61.8%;
+
+    h2 {
+      font-size: $golden-ratio-4 !important;
+      font-family: $font-volumes !important;
+      font-weight: 700;
+      letter-spacing: -0.029em;
+      text-shadow: $box-shadow;
+      line-height: 1.06em;
+      color: $white !important;
+      text-transform: none;
+      -webkit-font-smoothing: subpixel-antialiased;
+      margin: 0 0 $golden-ratio-2;
+
+      &::before {
+        content: ' ';
+        height: $golden-ratio-0;
+        width: $golden-ratio-6;
+        display: block;
+        background-color: $orange;
+        margin-bottom: $golden-ratio-3;
+      }
+    }
+  }
+
   //
   //.page-body--content--title {
   //  .utk-heading-1,

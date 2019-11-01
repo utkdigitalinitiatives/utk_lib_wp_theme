@@ -2,8 +2,12 @@
     <div class="utk-volume--title">
         <div class="container">
             <div class="utk-volume--title--inner">
-                <span class="utk-volume--title--series">Boundless Series {{$featured_id}}</span>
-                <h1>@php echo get_the_title($featured_item) @endphp</h1>
+                <span class="utk-volume--title--series"></span>
+                <a href="@php echo get_the_permalink($featured_item) @endphp">
+                    <h2>@php echo get_the_title($featured_item) @endphp</h2>
+                </a>
+                <a href="@php echo get_the_permalink($featured_item) @endphp"
+                   class="btn btn-with-icon">Read More <span class="icon-right-open"></span></a>
                 @if(get_field('volume_intro'))
                     <span class="utk-volume--title--intro">
                         @php echo get_field('volume_intro') @endphp
