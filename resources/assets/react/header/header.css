@@ -1513,7 +1513,7 @@ body.utk-search-open .utk-search {
           margin-top: 3px;
           position: relative;
           background-color: #58595b;
-          z-index: 1;
+          z-index: 0;
           flex-shrink: 0;
           overflow: hidden; }
           .utk-hours--listing--item a figure img,
@@ -1567,7 +1567,6 @@ body.utk-search-open .utk-search {
           position: absolute;
           left: 23px;
           top: 8px;
-          content: '';
           background-color: #f6f6f6;
           height: 2px;
           width: 23px;
@@ -1577,7 +1576,6 @@ body.utk-search-open .utk-search {
           position: absolute;
           left: 23px;
           top: -66px;
-          content: '';
           background-color: #f6f6f6;
           height: 76px;
           width: 2px;
@@ -1627,17 +1625,23 @@ body.utk-search-open .utk-search {
         font-weight: 700;
         font-size: 13px;
         color: #333 !important;
-        align-items: center; }
+        line-height: 1.29em;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-top: 5px; }
         .utk-hours--listing--item--hours::before {
           margin-right: 6px;
-          z-index: 1;
+          z-index: 0;
           display: block;
           content: '';
           width: 9px;
           height: 9px;
           border-radius: 11px;
           border: 2px solid #a7a9ac;
-          background-color: #fff; }
+          background-color: #fff;
+          margin-top: 4px; }
 
 .utk-hours--listing--item a.library-open .utk-hours--listing--item--hours::before {
   background-color: #abc178;
