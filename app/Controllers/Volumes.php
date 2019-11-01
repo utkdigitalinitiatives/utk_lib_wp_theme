@@ -39,7 +39,14 @@ class Volumes extends Controller
         return $color;
     }
 
-    public static function getFeaturedItem($term = null)
+    public static function getFeaturedFeature()
+    {
+        $post = get_site_option('options_feature_featured_item');
+
+        return $post;
+    }
+
+    public static function getFeaturedVolume($term = null)
     {
         $id = null;
 

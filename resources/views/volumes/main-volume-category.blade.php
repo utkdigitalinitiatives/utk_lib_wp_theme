@@ -1,7 +1,7 @@
 @php
 
     // set featured item for taxonomy mastheads
-    $featured_item = Volumes::getFeaturedItem();
+    $featured_item = Volumes::getFeaturedVolume();
     $content = Volumes::getTermContent();
 
 @endphp
