@@ -38,6 +38,55 @@
     }
   }
 
+  .facetwp-template {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    > article {
+      width: auto;
+      flex-basis: 33.333333%;
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      position: relative;
+      text-align: center;
+      padding: 0 23.5px;
+      margin-bottom: $golden-ratio-4;
+
+      a {
+        color: $smokey;
+
+        &:hover,
+        &:focus {
+          color: $globe;
+        }
+      }
+
+      h2 {
+        font-size: $type-3;
+        letter-spacing: -0.029em;
+        line-height: 1.29em;
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .page-body-blog--meta {
+        span {
+          font-size: $type-0;
+          text-transform: uppercase;
+          letter-spacing: 0.029em;
+          font-weight: 400;
+          color: $smokey;
+        }
+      }
+    }
+  }
+
   //
   //.page-body--content--title {
   //  .utk-heading-1,

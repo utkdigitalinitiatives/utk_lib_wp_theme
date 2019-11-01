@@ -26,10 +26,10 @@
                 </div>
             </div>
         </header>
-        <div class="article--body">
-            <div class="article--body--summary entry-summary">
-                @php the_excerpt() @endphp
-            </div>
-        </div>
+        {{--<div class="article--body">--}}
+            {{--<div class="article--body--summary entry-summary">--}}
+                {{--@php the_excerpt() @endphp--}}
+            {{--</div>--}}
+        {{--</div>--}}
     </div>
 </article>
