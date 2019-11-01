@@ -32,7 +32,7 @@ class Volumes extends Controller
         $color = null;
 
         if (have_rows('volume_categories', 'option')) :
-            $featured_item = self::getFeaturedItem($term);
+            $featured_item = self::getFeaturedVolume($term);
             $color = 'utk-color-' . get_field('volume_color', $featured_item);
         endif;
 
