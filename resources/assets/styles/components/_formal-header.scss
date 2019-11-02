@@ -1,4 +1,7 @@
 .page-body--formal-header {
+  position: relative;
+  z-index: 0;
+
   &.page-body--formal-header-2589 {
     > .page-body--content--title > .utk-heading-1 {
       color: $smokey;
