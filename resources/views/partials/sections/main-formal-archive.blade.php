@@ -17,7 +17,7 @@
 
 @endphp
 <div id="detach-sticky-top"></div>
-@include('partials.components.breadcrumb')
+{{--@include('partials.components.breadcrumb')--}}
 @php print \Formal::getFormalHeader($formal_header) @endphp
 <div class="container page-body--container">
     <div class="page-body--flex">

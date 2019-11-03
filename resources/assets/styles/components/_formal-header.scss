@@ -1,7 +1,7 @@
 .page-body--formal-header {
   position: relative;
   z-index: 0;
-  padding: $golden-ratio-5 0 0;
+  padding: $golden-ratio-6 0 0;
 
   &--context {
     position: relative;
@@ -55,7 +55,7 @@
 .utk-formal--header--background {
   position: absolute;
   z-index: 0;
-  top: 0;
+  top: -9px;
   overflow: hidden;
   height: 100%;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 29px), 0 100%);
