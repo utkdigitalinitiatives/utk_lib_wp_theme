@@ -1,43 +1,6 @@
 .page-body--content-formal {
   position: unset !important;
 
-  .page-body--content--title {
-    text-align: center;
-    margin-top: $golden-ratio-3;
-    -webkit-font-smoothing: antialiased !important;
-
-    > .utk-heading-1 {
-      font-weight: 700;
-      font-size: $type-6;
-      letter-spacing: -0.029em;
-      line-height: 1.18em;
-      color: $white !important;
-    }
-
-    * {
-      -webkit-font-smoothing: antialiased !important;
-    }
-
-    &::before {
-      content: '';
-      width: $golden-ratio-6;
-      height: $golden-ratio-0;
-      display: block;
-      background-color: $orange;
-      margin: auto auto $golden-ratio-2;
-    }
-  }
-
-  .page-body--content--body {
-    p[style="text-align:center"]:first-child {
-      font-size: $type-3;
-      color: $gray-1 !important;
-      max-width: $gr-long;
-      margin: auto;
-      -webkit-font-smoothing: antialiased !important;
-    }
-  }
-
   .facetwp-template {
     display: flex;
     flex-direction: column;

@@ -4,7 +4,6 @@ Namespace App\Controllers;
 
 @endphp
 <div class="page-body--content--inner">
-    @php print \Formal::getFormalHeader(get_the_ID(), true) @endphp
     <div class="page-body--content--inner--interactions">
         <button>Back Button</button>
     </div>

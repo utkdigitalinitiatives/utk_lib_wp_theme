@@ -1,11 +1,19 @@
+@php
+
+    Namespace App\Controllers;
+
+    $formal_type = get_field('formal_type', null, false);
+
+    if (strtolower($formal_type) === 'page') :
+        $formal_header = get_field('formal_header', null, false);
+    else :
+        $formal_header = get_the_ID();
+    endif;
+
+@endphp
 <div id="detach-sticky-top"></div>
-<div class="utk-formal--header--background">
-    @php
-        $background = wp_get_attachment_image(832, 'hero_image');
-        print $background;
-    @endphp
-</div>
-@include('partials.components.breadcrumb')
+@php print \Formal::getFormalHeader($formal_header) @endphp
+{{--@include('partials.components.breadcrumb')--}}
 <div class="container page-body--container">
     <div class="page-body--flex">
         <aside class="page-body--aside page-body--aside-hidden">

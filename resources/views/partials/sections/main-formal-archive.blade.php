@@ -2,7 +2,7 @@
 
     Namespace App\Controllers;
 
-    $header_post = get_option('options_formal_header');
+    $formal_header = get_option('options_formal_header');
 
     $archive_layout = get_option('options_formal_default_layout');
     $archive_description = get_option('options_formal_archive_description');
@@ -13,22 +13,18 @@
         $terms = Taxonomy::getTaxonomyTerms($group_taxonomy);
     endif;
 
+    $formal_type = get_field('formal_type', null, false);
+
 @endphp
 <div id="detach-sticky-top"></div>
-<div class="utk-formal--header--background">
-    @php
-        $background = wp_get_attachment_image(832, 'hero_image');
-        print $background;
-    @endphp
-</div>
 @include('partials.components.breadcrumb')
+@php print \Formal::getFormalHeader($formal_header) @endphp
 <div class="container page-body--container">
     <div class="page-body--flex">
         <aside class="page-body--aside page-body--aside-hidden">
             @include('partials.sidebar')
         </aside>
         <main class="page-body--content page-body--content-formal">
-            @php print Formal::getFormalHeader($header_post) @endphp
             @include('partials.facets-formal')
             @if($archive_description)
                 @php echo $archive_description @endphp

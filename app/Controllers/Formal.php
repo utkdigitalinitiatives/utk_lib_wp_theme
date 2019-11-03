@@ -26,8 +26,11 @@ class Formal extends Controller
 
         $header = '
         <div class="page-body--formal-header page-body--formal-header-' . $post_id . '">
-            <div class="page-body--content--title">' . $render_header . '</div>
-            <div class="page-body--content--body">' . $content . '</div>
+            <div class="page-body--formal-header--context">
+                <div class="page-body--content--title">' . $render_header . '</div>
+                <div class="page-body--content--body">' . $content . '</div>
+            </div>
+            <div class="utk-formal--header--background"></div>
         </div>';
 
         return $header;
