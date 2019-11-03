@@ -1,7 +1,13 @@
 .page-body--formal-header {
   position: relative;
   z-index: 0;
-  padding: $golden-ratio-6 0 0;
+  padding: $golden-ratio-5 0 0;
+  margin-top: $golden-ratio-4;
+
+  @include respond(xs, sm) {
+    margin-top: -23px;
+    padding-top: $golden-ratio-4;
+  }
 
   &--context {
     position: relative;
@@ -12,6 +18,11 @@
     text-align: center;
     margin-top: $golden-ratio-3;
     -webkit-font-smoothing: antialiased !important;
+    padding: 0 $golden-ratio-4;
+
+    @include respond(xs, sm) {
+      padding: 0 $golden-ratio-4;
+    }
 
     > .utk-heading-1 {
       font-weight: 700;
@@ -19,6 +30,14 @@
       letter-spacing: -0.029em;
       line-height: 1.18em;
       color: $white !important;
+
+      @include respond(sm) {
+        font-size: $type-5;
+      }
+
+      @include respond(xs) {
+        font-size: $type-4;
+      }
     }
 
     * {

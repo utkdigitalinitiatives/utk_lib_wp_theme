@@ -437,5 +437,13 @@ article.space {
 .single-space {
   .page-body--formal-header {
     padding-bottom: $golden-ratio-7;
+
+    @include respond(sm) {
+      padding-bottom: $golden-ratio-6;
+    }
+
+    @include respond(xs) {
+      padding-bottom: $golden-ratio-5;
+    }
   }
 }
