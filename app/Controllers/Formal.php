@@ -18,6 +18,12 @@ class Formal extends Controller
         $content = apply_filters('the_content', $content);
         $content = str_replace(']]>', ']]&gt;', $content);
 
+        if (has_post_thumbnail($post_id)) :
+            $post_thumbnail = get_the_post_thumbnail();
+        else :
+            $post_thumbnail = null;
+        endif;
+
         if ($heading === false) :
             $render_header = ' <span class="utk-heading-1" role="heading" aria-level="1">' . $title .'</span>';
         else :
@@ -30,7 +36,7 @@ class Formal extends Controller
                 <div class="page-body--content--title">' . $render_header . '</div>
                 <div class="page-body--content--body">' . $content . '</div>
             </div>
-            <div class="utk-formal--header--background"></div>
+            <div class="utk-formal--header--background">' . $post_thumbnail. '</div>
         </div>';
 
         return $header;
