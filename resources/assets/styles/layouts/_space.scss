@@ -433,3 +433,9 @@ article.space {
     }
   }
 }
+
+.single-space {
+  .page-body--formal-header {
+    padding-bottom: $golden-ratio-7;
+  }
+}
