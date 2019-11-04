@@ -2,8 +2,9 @@ body:not(.header-scroll-down) {
   .page-header-truncate .page-header--float {
     .page-header--float--optional-overlay {
       height: $golden-ratio-8;
+      top: auto;
 
-      @include filter-gradient(rgba($smokey, 0.76), 18px, rgba($smokey, 0), 100%);
+      @include filter-gradient(rgba($smokey, 0.76), 123px, rgba($smokeyx, 0), 100%);
     }
   }
 }
@@ -11,6 +12,7 @@ body:not(.header-scroll-down) {
 .page-body-blog.page-body-truncate {
   .utk-formal--header--background {
     height: calc(#{$golden-ratio-8 + 15px});
+    top: auto;
 
     img {
       filter: blur(11px) contrast(1.18) saturate(1.29) grayscale(1);
@@ -35,24 +37,6 @@ body:not(.header-scroll-down) {
         content: none;
       }
     }
-  }
-
-  .page-body--tag {
-    position: absolute;
-    background-color: $white;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: $type-1;
-    letter-spacing: 0.029em;
-    -webkit-font-smoothing: subpixel-antialiased;
-    line-height: 1em;
-    padding: 11px 18px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: $box-shadow;
-    color: $smokey;
-    border-top: 2px solid $orange;
-    z-index: 2;
   }
 }
 
