@@ -46,6 +46,29 @@ class Volumes extends Controller
         return $post;
     }
 
+    public static function getQuickPosts($type, $exclude = null, $count = 3)
+    {
+
+        $args = [
+            'post_type'     => array($type),
+            'post_status'   => 'publish',
+            'posts_per_page'=> $count,
+            'post__not_in' => array($exclude)
+        ];
+
+        $post_ids = [];
+
+        $posts = new \WP_Query( $args );
+        if ( $posts->have_posts() ) {
+            while ( $posts->have_posts() ) {
+                $posts->the_post();
+                $post_ids[] = get_the_ID();
+            }
+        }
+
+        return $post_ids;
+    }
+
     public static function getFeaturedVolume($term = null)
     {
         $id = null;
@@ -53,7 +76,6 @@ class Volumes extends Controller
         if ($term === null) {
             $term = get_query_var('volume_category');
         }
-
         while( have_rows('volume_categories', 'option') ): the_row();
             $category = get_sub_field('category');
             if ($category->slug === $term) :

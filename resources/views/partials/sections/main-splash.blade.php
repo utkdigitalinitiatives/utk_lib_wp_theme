@@ -2,27 +2,20 @@
 
     Namespace App\Controllers;
 
-    if (strtolower($formal_type) === 'page') :
-        $formal_header = get_field('formal_header', null, false);
-    else :
-        $formal_header = get_the_ID();
-    endif;
+    $featured_item = Volumes::getFeaturedVolume('boundless');
 
 @endphp
 <div id="detach-sticky-top"></div>
-@php print \Formal::getFormalHeader($formal_header) @endphp
+@include('volumes.components.volume-masthead--category')
 {{--@include('partials.components.breadcrumb')--}}
 <div class="container page-body--container">
-    <div class="page-body--flex">
+    <div class="page-body--flex page-body--flex-volumes">
         <aside class="page-body--aside page-body--aside-hidden">
             @include('partials.sidebar')
         </aside>
-        <main class="page-body--content page-body--content-formal">
-            @if (get_post_type() === 'space')
-                @include('partials.content-space--formal')
-            @else
-                @include('partials.content-page--formal')
-            @endif
+        <main class="page-body--content page-body--content-formal page-body--content-splash">
+            @include('volumes.components.splash-feature')
+            @include('volumes.components.splash-volume-secondary')
         </main>
     </div>
     <div id="detach-sticky-bottom"></div>
