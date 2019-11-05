@@ -10,8 +10,6 @@
         $formal_header = get_the_ID();
     endif;
 
-print $formal_header;
-
 @endphp
 <div id="detach-sticky-top"></div>
 @php print \Formal::getFormalHeader($formal_header) @endphp
