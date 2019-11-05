@@ -7,6 +7,16 @@ export default class Formal {
     constructor() {
         this.formalAjaxPopulate();
         this.checkSVGs();
+
+        (function($, log) {
+            $(document).on('facetwp-refresh', function() {
+                setInterval(function() {
+                    $('.utk-svg').each(function () {
+                        $(this).addClass('utk-svg-visible');
+                    });
+                },100);
+            });
+        })(jQuery, console.log);
     }
 
     checkSVGs () {
