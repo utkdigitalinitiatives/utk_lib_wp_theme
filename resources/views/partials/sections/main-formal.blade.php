@@ -2,11 +2,15 @@
 
     Namespace App\Controllers;
 
+    $formal_type = get_field('formal_type', null, false);
+
     if (strtolower($formal_type) === 'page') :
         $formal_header = get_field('formal_header', null, false);
     else :
         $formal_header = get_the_ID();
     endif;
+
+print $formal_header;
 
 @endphp
 <div id="detach-sticky-top"></div>
