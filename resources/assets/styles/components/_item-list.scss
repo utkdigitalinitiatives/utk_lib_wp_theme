@@ -1,0 +1,43 @@
+.utk-item-list {
+  header {
+    h3 {
+      text-transform: uppercase;
+      margin: 0;
+      padding: $golden-ratio-0 $golden-ratio-1;
+      font-size: $type-0;
+      letter-spacing: 0.029em;
+      background-color: $gray-0;
+      font-weight: 700;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    margin-bottom: $golden-ratio-2;
+  }
+
+  ul {
+    margin: 0 0 $golden-ratio-4;
+    padding: 0;
+
+    li {
+      margin: 0;
+      padding: $golden-ratio-2 $golden-ratio-1;
+      list-style: none !important;
+      border-bottom: 2px solid $gray-0;
+      font-size: $type-2;
+      line-height: 1.29em;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      > a {
+        font-weight: 700;
+      }
+    }
+  }
+}

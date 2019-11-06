@@ -19,5 +19,10 @@
         <div class="page-body page-body-truncate">
             @include('volumes.main-volume')
         </div>
+        <div class="page-body-related">
+            <div class="container">
+                <center>[more from boundless, ex: count this penny]</center>
+            </div>
+        </div>
     @endwhile
 @endsection
