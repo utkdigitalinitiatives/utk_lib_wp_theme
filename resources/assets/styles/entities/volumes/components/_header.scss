@@ -34,7 +34,7 @@ body:not(.header-scroll-down) {
       left: 0;
       top: 0;
       content: '';
-      background-color: rgba(black, 0.18);
+      background-color: rgba($smokeyx, 0.67);
       z-index: 0;
     }
 
@@ -126,6 +126,19 @@ body:not(.header-scroll-down) {
     .page-header-truncate .page-header--float {
       .page-header--float--optional-overlay {
         @include filter-gradient(rgba(saturate(darken($leconte, 15), 10), 0.76), 47px, rgba(darken($leconte, 15), 0), 100%);
+      }
+    }
+    //
+    //.utk-formal--header--background::after {
+    //  @include filter-gradient(rgba(black, 0), 0, rgba(black, 0.76), calc(100% - 123px));
+    //}
+  }
+
+  //sunsphere
+  &.utk-color-fed535 {
+    .page-header-truncate .page-header--float {
+      .page-header--float--optional-overlay {
+        @include filter-gradient(rgba(saturate(darken($sunsphere, 15), 10), 0.76), 47px, rgba(darken($sunsphere, 15), 0), 100%);
       }
     }
     //

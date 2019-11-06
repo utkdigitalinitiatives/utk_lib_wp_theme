@@ -10,6 +10,11 @@
                     </span>
                 @endif
             </div>
+            @if(get_field('volume_svg'))
+                <div class="utk-svg">
+                    @php echo get_field('volume_svg') @endphp
+                </div>
+            @endif
             @if(get_field('volume_splash'))
                 <div class="utk-volume--splash">
                     <div class="container">
