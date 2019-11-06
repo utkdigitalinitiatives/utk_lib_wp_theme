@@ -2,9 +2,6 @@
   height: $golden-ratio-4 !important;
 
   &__link {
-    @extend .btn;
-    @extend .btn-default;
-
     display: inline-block !important;
     width: auto !important;
     max-width: 100% !important;
@@ -23,6 +20,9 @@
     white-space: nowrap !important;
     padding-right: $golden-ratio-4 !important;
     position: relative !important;
+    text-transform: uppercase;
+    font-size: $type-2;
+    font-weight: 700;
 
     &::after {
       width: $golden-ratio-4;
