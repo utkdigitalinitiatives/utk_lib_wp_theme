@@ -1,9 +1,18 @@
+@php
+
+    $term = get_terms(array('taxonomy' => 'volume_category'));
+    $acf_id = $term[0]->taxonomy . '_' . $term[0]->term_id;
+    $series = get_field('taxonomy_grouping_label', $acf_id);
+
+@endphp
 <div class="utk-formal--header--background">
     <div class="utk-volume--title">
         <div class="container">
             <div class="utk-volume--title--inner">
-                <span class="utk-volume--title--series">Boundless Series {{$featured_id}}</span>
-                <h1>@php echo get_the_title($featured_item) @endphp</h1>
+                @if ($series)
+                    <span class="utk-volume--title--series">@php echo $series @endphp</span>
+                @endif
+                <h1>@php echo get_the_title() @endphp</h1>
                 @if(get_field('volume_intro'))
                     <span class="utk-volume--title--intro">
                         @php echo get_field('volume_intro') @endphp

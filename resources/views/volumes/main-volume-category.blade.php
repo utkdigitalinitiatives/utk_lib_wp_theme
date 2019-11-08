@@ -1,9 +1,6 @@
 @php
-
-    // set featured item for taxonomy mastheads
-    $featured_item = Volumes::getFeaturedVolume();
-    $content = Volumes::getTermContent();
-
+    $id = get_queried_object()->term_id;
+    $term = get_term($id);
 @endphp
 <div id="detach-sticky-top"></div>
 @include('volumes.components.volume-masthead--category')
@@ -22,7 +19,7 @@
             {{--@include('partials.sidebar')--}}
         </aside>
         <main class="page-body--content page-body--content-volumes">
-            @php print $content; @endphp
+            @php print term_description() ; @endphp
             @php echo App::renderEndDots() @endphp
         </main>
     </div>
