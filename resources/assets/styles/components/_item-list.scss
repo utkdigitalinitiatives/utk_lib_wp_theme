@@ -9,6 +9,14 @@
       background-color: $gray-0;
       font-weight: 700;
       -webkit-font-smoothing: subpixel-antialiased;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      span {
+        font-size: $type-0;
+        color: $rock;
+      }
     }
 
     margin-bottom: $golden-ratio-2;
@@ -20,11 +28,23 @@
 
     li {
       margin: 0;
-      padding: $golden-ratio-2 $golden-ratio-1;
+      padding: $golden-ratio-2 $golden-ratio-1 $golden-ratio-2 $golden-ratio-3;
       list-style: none !important;
       border-bottom: 2px solid $gray-0;
       font-size: $type-2;
       line-height: 1.29em;
+
+      &::before {
+        font-size: $type-0;
+        content: "\E812";
+        font-family: fontello, monospace;
+        -webkit-font-smoothing: antialiased;
+        display: block;
+        color: $orange;
+        margin-right: $golden-ratio-0;
+        position: absolute;
+        margin-left: -$golden-ratio-2;
+      }
 
       &:first-child {
         padding-top: 0;
