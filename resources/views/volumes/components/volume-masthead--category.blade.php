@@ -2,6 +2,8 @@
     $id = get_queried_object()->term_id;
     $term = get_term($id);
     $acf_id = $term->taxonomy . '_' . $id;
+
+    $featured = get_field('taxonomy_featured', $acf_id);
 @endphp
 <div class="utk-formal--header--background">
     <div class="utk-volume--title">
@@ -18,6 +20,6 @@
         </div>
     </div>
     @php
-        print get_the_post_thumbnail($featured_item, 'hero_image');
+        print get_the_post_thumbnail($featured, 'hero_image');
     @endphp
 </div>

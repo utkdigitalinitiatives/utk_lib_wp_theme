@@ -31,10 +31,12 @@ class Volumes extends Controller
     {
         $color = null;
 
-        if (have_rows('volume_categories', 'option')) :
-            $featured_item = self::getFeaturedVolume($term);
-            $color = 'utk-color-' . get_field('volume_color', $featured_item);
-        endif;
+        $id = get_queried_object()->term_id;
+        $term = get_term($id);
+        $acf_id = $term->taxonomy . '_' . $id;
+
+        $id = get_field('taxonomy_featured', $acf_id);
+        $color = 'utk-color-' . get_field('volume_color', $id);
 
         return $color;
     }
