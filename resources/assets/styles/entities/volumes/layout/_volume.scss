@@ -4,9 +4,8 @@
 .page-template-page-splash {
   .utk-formal--header--background {
     width: 100%;
-    height: 61.8%;
+    height: 600px;
     min-height: 500px;
-    max-height: calc(90vh - 82px);
     position: relative;
     overflow: visible;
 
@@ -31,6 +30,18 @@
     }
   }
 
+  .utk-volume--splash {
+    position: absolute;
+    margin-top: -303px;
+    width: 100%;
+    z-index: 10;
+
+    > .container {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
   .utk-volume--title {
     position: absolute;
     bottom: 0;
@@ -44,11 +55,6 @@
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-    }
-
-    .utk-volume--splash {
-      width: $gr-long;
-      padding-left: $golden-ratio-6;
     }
 
     &--inner {
@@ -91,6 +97,19 @@
       display: block;
       font-size: $type-2;
       line-height: 1.47em;
+    }
+
+    .utk-svg {
+      width: $golden-ratio-6;
+      position: absolute;
+      margin-top: -$golden-ratio-3;
+
+      svg,
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
