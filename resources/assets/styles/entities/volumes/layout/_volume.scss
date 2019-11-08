@@ -42,6 +42,27 @@
     }
   }
 
+  .utk-volume--about {
+    background-color: $gray-0;
+    padding: $golden-ratio-3;
+    margin-top: $golden-ratio-3;
+
+    h3 {
+      font-size: $type-3;
+      font-family: $font-volumes;
+      margin: 0 0 $golden-ratio-1;
+      font-weight: 700;
+      line-height: 1.29em;
+      letter-spacing: -0.029em;
+    }
+
+    &--description {
+      font-size: $type-1;
+      margin: 0;
+      line-height: 1.47em;
+    }
+  }
+
   .utk-volume--title {
     position: absolute;
     bottom: 0;

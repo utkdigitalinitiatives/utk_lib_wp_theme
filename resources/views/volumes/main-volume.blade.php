@@ -8,6 +8,7 @@
         <aside class="page-body--aside page-body--aside-right">
             @include('volumes.partials.related-content')
             @include('volumes.partials.related-media')
+            @include('volumes.partials.about-volume-category')
         </aside>
     </div>
     <div id="detach-sticky-bottom"></div>
