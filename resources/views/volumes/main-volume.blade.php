@@ -7,10 +7,7 @@
         </main>
         <aside class="page-body--aside page-body--aside-right">
             @include('volumes.partials.related-content')
-            <iframe style="border: 0; height: 470px;"
-                    src="https://bandcamp.com/EmbeddedPlayer/album=1216554894/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/track=3620167624/transparent=true/"
-                    seamless><a href="http://utklibraries.bandcamp.com/album/boundless">Boundless by R.B. Morris</a>
-            </iframe>
+            @include('volumes.partials.related-media')
         </aside>
     </div>
     <div id="detach-sticky-bottom"></div>
