@@ -16,13 +16,9 @@
 @section('content')
     @while(have_posts()) @php the_post() @endphp
         @include('partials.page-header-volumes')
-        <div class="page-body page-body-truncate">
+            <div class="page-body page-body-truncate">
             @include('volumes.main-volume')
         </div>
-        <div class="page-body-related">
-            <div class="container">
-                <center>[more from boundless, ex: count this penny]</center>
-            </div>
-        </div>
+        @include('volumes.partials.related-posts')
     @endwhile
 @endsection

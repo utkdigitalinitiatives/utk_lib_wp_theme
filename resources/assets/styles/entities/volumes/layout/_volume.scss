@@ -48,18 +48,46 @@
     margin-top: $golden-ratio-3;
 
     h3 {
-      font-size: $type-3;
+      font-size: $type-4;
       font-family: $font-volumes;
       margin: 0 0 $golden-ratio-1;
       font-weight: 700;
       line-height: 1.29em;
       letter-spacing: -0.029em;
+
+      &::before {
+        content: '';
+        width: $golden-ratio-5;
+        height: $golden-ratio-0;
+        background-color: $orange;
+        display: block;
+        margin-bottom: $golden-ratio-2;
+      }
     }
 
     &--description {
       font-size: $type-1;
-      margin: 0;
+      margin: 0 0 $golden-ratio-0;
       line-height: 1.47em;
+    }
+
+    > a {
+      font-size: $type-0;
+      font-weight: 700;
+      line-height: 1.29em;
+      color: $globe;
+      text-transform: uppercase;
+      letter-spacing: 0.029em;
+      -webkit-font-smoothing: subpixel-antialiased;
+
+      &:visited {
+        color: $globe;
+      }
+
+      &:hover,
+      &:focus {
+        color: $leconte;
+      }
     }
   }
 

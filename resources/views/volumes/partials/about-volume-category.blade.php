@@ -8,6 +8,7 @@
 @if($description)
     <div class="utk-volume--about">
         <h3>About @php print $term[0]->name; @endphp</h3>
-        <p  class="utk-volume--about--description">@php print $description; @endphp</p>
+        <p class="utk-volume--about--description">@php print $description; @endphp</p>
+        <a href="/@php print $term[0]->slug; @endphp">Learn More</a>
     </div>
 @endif
