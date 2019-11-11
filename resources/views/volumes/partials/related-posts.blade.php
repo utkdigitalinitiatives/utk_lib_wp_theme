@@ -23,11 +23,11 @@
                 <a href="@php echo get_the_permalink() @endphp"
                    class="page-body-related--post">
                     <div class="page-body-related--post--content">
+                        @include('volumes.partials.secondary-image')
                         <h3>@php echo get_the_title() @endphp</h3>
                         @if(get_field('volume_intro'))
                             <p>@php echo get_field('volume_intro') @endphp</p>
                         @endif
-                        @include('volumes.partials.secondary-image')
                     </div>
                     <div class="page-body-related--post--media">
                         @php echo get_the_post_thumbnail(null, 'callout_image') @endphp

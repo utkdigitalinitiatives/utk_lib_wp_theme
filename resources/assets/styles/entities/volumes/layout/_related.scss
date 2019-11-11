@@ -53,6 +53,19 @@
         margin: 0 0 $golden-ratio-0;
         line-height: 1.47em;
       }
+
+      .utk-svg {
+        width: $golden-ratio-6;
+        position: absolute;
+        margin-top: -$golden-ratio-3;
+
+        svg,
+        img {
+          max-width: 100%;
+          width: 100%;
+          height: auto;
+        }
+      }
     }
   }
 }
