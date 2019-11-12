@@ -5,7 +5,6 @@
 @include('volumes.components.feaure-masthead--category')
 <div class="container page-body--container">
     <div class="page-body--flex">
-        <span class="page-body--tag">Features</span>
         <aside class="page-body--aside page-body--aside-hidden">
             @include('partials.sidebar')
         </aside>
