@@ -36,6 +36,14 @@ img.lazyloaded {
 }
 
 .wp-block-image {
+  figure.alignleft {
+    margin: $golden-ratio-0 $golden-ratio-3 $golden-ratio-1 0;
+  }
+
+  figure.alignright {
+    margin: $golden-ratio-0 0 $golden-ratio-1 $golden-ratio-3;
+  }
+
   &.full {
     width: 100%;
 

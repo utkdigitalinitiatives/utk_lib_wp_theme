@@ -54,10 +54,11 @@
 
 @mixin serif-body-rendering() {
   font-family: $serif;
-  font-size: 21px;
-  line-height: 1.58;
+  font-size: 20px;
+  line-height: 1.76em;
   word-break: break-word;
-  letter-spacing: -0.003em;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  margin-bottom: $type-4;
 }
 
 // Named Breakpoints are phone, tablet-portrait, tablet-landscape-desktop, large-desktop, non-retina, retina
