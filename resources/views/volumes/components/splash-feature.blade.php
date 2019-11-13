@@ -6,7 +6,7 @@
     <div class="utk-splash---feature--primary">
         <a class="feature-post"
            href="@php echo get_the_permalink($primary) @endphp">
-            @php echo get_the_post_thumbnail($primary, 'callout_image') @endphp
+            @php echo get_the_post_thumbnail($primary, 'card_image') @endphp
             <h3>@php echo get_the_title($primary); @endphp</h3>
             <span class="utk-splash---feature--meta">
                         @if (get_field('feature_custom_author', $id))
@@ -21,7 +21,7 @@
         @foreach($secondary as $id)
             <a class="feature-post"
                href="@php echo get_the_permalink($id) @endphp">
-                @php echo get_the_post_thumbnail($id, 'callout_image') @endphp
+                @php echo get_the_post_thumbnail($id, 'gr_thumb') @endphp
                 <div>
                     <h3>@php echo get_the_title($id); @endphp</h3>
                     <span class="utk-splash---feature--meta">
