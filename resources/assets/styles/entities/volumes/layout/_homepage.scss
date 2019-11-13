@@ -1,14 +1,27 @@
 .utk-splash---feature {
   display: flex;
 
+  a {
+    color: $smokey;
+    display: flex;
+    position: relative;
+
+    &:visited {
+      color: $smokey;
+    }
+
+    &:hover,
+    &:focus {
+      color: $globe;
+    }
+  }
+
   &--primary {
     width: $gr-long;
     padding-right: $golden-ratio-4;
 
-    a {
-      display: flex;
+    > .feature-post {
       flex-direction: column;
-      position: relative;
       margin-bottom: $golden-ratio-2;
 
       img {
@@ -17,10 +30,14 @@
       }
 
       h3 {
-        margin: $golden-ratio-3 0 0;
+        margin: $golden-ratio-2 0 0;
         font-size: $type-4;
+        line-height: 1.29em;
         font-family: $font-volumes;
         font-weight: 700;
+        letter-spacing: -0.029em;
+        word-spacing: 0.018em;
+        color: inherit;
       }
     }
   }
@@ -28,23 +45,32 @@
   &--secondary {
     width: $gr-short;
 
-    a {
-      display: flex;
-      position: relative;
+    > .feature-post {
       margin-bottom: $golden-ratio-3;
 
       img {
-        width: $golden-ratio-7;
-        height: $golden-ratio-6;
+        width: $golden-ratio-6;
+        height: $golden-ratio-5;
         margin-right: $golden-ratio-2;
       }
 
       h3 {
-        font-size: $type-3;
+        font-size: $type-2;
         font-family: $font-volumes;
+        line-height: 1.29em;
         font-weight: 700;
         margin: 0;
+        letter-spacing: -0.029em;
+        word-spacing: 0.018em;
+        color: inherit;
       }
     }
+  }
+
+  &--meta {
+    font-size: $type-0;
+    text-transform: uppercase;
+    letter-spacing: 0.029em;
+    color: $smokeyx !important;
   }
 }
