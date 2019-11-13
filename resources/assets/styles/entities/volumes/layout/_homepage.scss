@@ -1,0 +1,50 @@
+.utk-splash---feature {
+  display: flex;
+
+  &--primary {
+    width: $gr-long;
+    padding-right: $golden-ratio-4;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-bottom: $golden-ratio-2;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      h3 {
+        margin: $golden-ratio-3 0 0;
+        font-size: $type-4;
+        font-family: $font-volumes;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &--secondary {
+    width: $gr-short;
+
+    a {
+      display: flex;
+      position: relative;
+      margin-bottom: $golden-ratio-3;
+
+      img {
+        width: $golden-ratio-7;
+        height: $golden-ratio-6;
+        margin-right: $golden-ratio-2;
+      }
+
+      h3 {
+        font-size: $type-3;
+        font-family: $font-volumes;
+        font-weight: 700;
+        margin: 0;
+      }
+    }
+  }
+}
