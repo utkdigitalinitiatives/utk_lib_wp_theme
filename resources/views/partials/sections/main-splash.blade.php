@@ -15,8 +15,8 @@
         </aside>
         <main class="page-body--content page-body--content-formal page-body--content-splash">
             @include('volumes.components.splash-feature')
-            @include('volumes.components.splash-volume-secondary')
         </main>
     </div>
     <div id="detach-sticky-bottom"></div>
 </div>
+@include('volumes.components.splash-volume-secondary')

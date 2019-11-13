@@ -1,9 +1,21 @@
 @php
 
+    if ($set_post_type) :
+        $post_type = $set_post_type;
+    else :
+        $post_type = get_post_type();
+    endif;
+
+    if ($featured_item) :
+        $exclude_post_ids = $featured_item;
+    else :
+        $exclude_post_ids = get_the_ID();
+    endif;
+
     $args = [
-        'post_type' => get_post_type(),
+        'post_type' => $post_type,
         'posts_per_page' => 1,
-        'post__not_in' => [get_the_ID()],
+        'post__not_in' => [$exclude_post_ids],
         'tax_query' => [
             [
                 'taxonomy' => 'volume_category',

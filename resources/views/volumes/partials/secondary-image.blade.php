@@ -1,5 +1,5 @@
 @php
-    if ($featured_item) :
+    if ($featured_item && !$exclude_features) :
         $post_id = $featured_item;
     else :
         $post_id = get_the_ID();
