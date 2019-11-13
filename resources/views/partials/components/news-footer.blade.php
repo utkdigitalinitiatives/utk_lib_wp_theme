@@ -2,21 +2,8 @@
 
   use UTKLibrary\Library\Core\Model;
 
-  // hardcode the blog_id for news posts
-  $blog_id = 46;
-
-  // set wp_query args
-  $args = [
-    'post_type' => 'post',
-    'posts_per_page' => 8,
-    'post_status' => 'publish'
-  ];
-
-  if (function_exists('switch_to_blog')) {
-    switch_to_blog(46);
-  }
-
-  $endpoint = 'https://www.lib.utk.edu/news/wp-json/model/recent?type=post&count=8&status=publish';
+  $site = 'https://volumes.lib.utk.edu';
+  $endpoint = $site . '/wp-json/model/recent?type=post&count=8&status=publish';
   $news = Model::utk_lib_get_recent_posts($args, $endpoint);
 
 @endphp
@@ -25,7 +12,7 @@
 
   <div class="section-news--header">
     <h3 class="section-news--header--title">Recent News</h3>
-    <a class="section-news--header--url" href="@php echo get_home_url($blog_id); @endphp">More News</a>
+    <a class="section-news--header--url" href="@php echo $site . '/news'; @endphp">More News</a>
   </div>
 
   @if($news)
@@ -50,13 +37,5 @@
     <p class="section-news--no-result">No recent news.</p>
 
   @endif
-
-  @php
-
-    if (function_exists('switch_to_blog')) {
-      restore_current_blog();
-    }
-
-  @endphp
 
 </div>
