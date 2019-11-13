@@ -19,6 +19,9 @@ class Volumes extends Controller
             elseif (get_post_type() === 'volume' && is_tax('volume_category')) :
                 $term = get_query_var('volume_category');
                 $classes .= self::getVolumeColorByTerm($term);
+            elseif (get_post_type() === 'page' && is_front_page()) :
+                $item = Volumes::getFeaturedVolume('boundless');
+                $classes .= ' utk-color-' . get_field('volume_color', $item);
             else :
                 //
             endif;
