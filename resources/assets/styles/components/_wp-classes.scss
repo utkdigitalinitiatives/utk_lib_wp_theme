@@ -54,3 +54,9 @@
   //@extend .sr-only;
   //@extend .sr-only-focusable;
 }
+
+.wp-block-embed-youtube {
+  display: flex;
+  justify-content: center;
+  padding: $golden-ratio-2 $golden-ratio-4;
+}
