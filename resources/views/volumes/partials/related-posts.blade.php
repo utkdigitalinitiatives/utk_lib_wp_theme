@@ -43,6 +43,7 @@
                     </div>
                     <div class="page-body-related--post--media">
                         @php echo get_the_post_thumbnail(null, 'callout_image') @endphp
+                        <span class="page-body-related--post--media--caption">@php echo get_the_post_thumbnail_caption() @endphp</span>
                     </div>
                 </a>
             @endwhile

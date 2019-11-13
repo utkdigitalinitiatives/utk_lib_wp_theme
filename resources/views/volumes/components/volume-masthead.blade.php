@@ -18,6 +18,11 @@
                         @php echo get_field('volume_intro') @endphp
                     </span>
                 @endif
+                @if(get_the_post_thumbnail_caption())
+                    <span class="utk-volume--title--caption">
+                        @php echo get_the_post_thumbnail_caption() @endphp
+                    </span>
+                @endif
             </div>
             @include('volumes.partials.secondary-image')
         </div>

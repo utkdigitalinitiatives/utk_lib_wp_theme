@@ -149,6 +149,15 @@
       line-height: 1.47em;
     }
 
+    &--caption {
+      display: block;
+      margin-top: $golden-ratio-1;
+      font-size: $type-0;
+      font-weight: 700;
+      color: $summitt;
+      box-shadow: $box-shadow;
+    }
+
     .utk-svg {
       width: $golden-ratio-6;
       position: absolute;
