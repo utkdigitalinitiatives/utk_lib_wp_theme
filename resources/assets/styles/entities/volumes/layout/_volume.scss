@@ -143,6 +143,7 @@
     }
 
     &--intro {
+      margin-top: $golden-ratio-1;
       display: block;
       font-size: $type-2;
       line-height: 1.47em;
@@ -151,7 +152,8 @@
     .utk-svg {
       width: $golden-ratio-6;
       position: absolute;
-      margin-top: -$golden-ratio-3;
+      top: 0;
+      margin-top: -$golden-ratio-4;
 
       svg,
       img {
