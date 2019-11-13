@@ -6,7 +6,7 @@
 
 @endphp
 <div id="detach-sticky-top"></div>
-@include('volumes.components.volume-masthead--category')
+@include('volumes.components.splash-masthead')
 {{--@include('partials.components.breadcrumb')--}}
 <div class="container page-body--container">
     <div class="page-body--flex page-body--flex-volumes">
