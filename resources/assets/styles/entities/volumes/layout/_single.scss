@@ -4,7 +4,7 @@ body:not(.header-scroll-down) {
       height: $golden-ratio-8;
       top: auto;
 
-      @include filter-gradient(rgba($smokey, 0.76), 123px, rgba($smokeyx, 0), 100%);
+      @include filter-gradient(rgba($smokeyx, 0.76), 123px, rgba($smokeyx, 0), 100%);
     }
   }
 }
@@ -15,8 +15,9 @@ body:not(.header-scroll-down) {
     top: auto;
 
     img {
-      filter: blur(11px) contrast(1.18) saturate(1.29) grayscale(1);
-      opacity: 0.29 !important;
+      filter: blur(6px) contrast(1.18) saturate(1.29);
+      opacity: 0.47 !important;
+      transform: scale3d(1.11, 1.11, 1.11);
     }
   }
 
