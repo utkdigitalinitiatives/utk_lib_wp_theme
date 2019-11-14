@@ -1,3 +1,10 @@
+.container {
+  @include respond(xs, sm) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
 body.header-scroll-down .page-header-truncate .page-header--float {
   .page-header--title-wrap {
     opacity: 1 !important;
