@@ -1,17 +1,19 @@
 .single-feature {
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: $font-volumes;
-  }
+  .page-body--content--body {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $font-volumes;
+    }
 
-  blockquote.wp-block-quote {
-    font-family: $font-volumes !important;
+    blockquote.wp-block-quote {
+      font-family: $font-volumes !important;
 
-    p {
-      font-family: inherit !important;
+      p {
+        font-family: inherit !important;
+      }
     }
   }
 }
