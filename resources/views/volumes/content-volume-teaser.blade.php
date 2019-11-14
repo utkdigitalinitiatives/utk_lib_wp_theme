@@ -7,7 +7,6 @@
             @endphp
             </div>
             <div class="utk-volume--teaser--context">
-                <span class="utk-volume--teaser--vol">Vol. 1 - 2018</span>
                 <div class="utk-volume--teaser--title">@php echo get_the_title() @endphp</div>
             </div>
         </a>
