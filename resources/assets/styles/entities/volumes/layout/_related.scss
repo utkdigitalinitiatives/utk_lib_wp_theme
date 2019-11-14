@@ -49,8 +49,12 @@
         font-family: $font-volumes;
         margin: 0 0 $golden-ratio-1;
         font-weight: 700;
-        line-height: 1.29em;
+        line-height: 1.18em;
         letter-spacing: -0.029em;
+
+        @include respond(md) {
+          font-size: $type-4;
+        }
 
         &::before {
           content: '';
@@ -66,6 +70,10 @@
         font-size: $type-2;
         margin: 0 0 $golden-ratio-0;
         line-height: 1.47em;
+
+        @include respond(md) {
+          font-size: $type-1;
+        }
       }
 
       .utk-svg {

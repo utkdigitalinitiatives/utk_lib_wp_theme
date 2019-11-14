@@ -39,9 +39,35 @@
     width: 100%;
     z-index: 10;
 
+    @include respond(md) {
+      margin-top: -255px;
+    }
+
+    @include respond(xs, sm) {
+      position: relative;
+      margin-top: -76px;
+      z-index: 0;
+    }
+
     > .container {
       display: flex;
       justify-content: flex-end;
+
+      @include respond(md) {
+        iframe {
+          width: 475px;
+          height: 267px;
+        }
+      }
+
+      @include respond(xs, sm) {
+        justify-content: center;
+
+        iframe {
+          width: 475px;
+          height: 267px;
+        }
+      }
     }
   }
 
@@ -103,6 +129,14 @@
     width: 100%;
     left: 0;
 
+    @include respond(md) {
+      margin-bottom: $golden-ratio-4;
+    }
+
+    @include respond(xs, sm) {
+      bottom: 29px;
+    }
+
     > .container {
       display: flex;
       align-items: flex-end;
@@ -111,6 +145,10 @@
 
     &--inner {
       width: $gr-short;
+
+      @include respond(xs, sm) {
+        width: $gr-long;
+      }
     }
 
     &--series {
@@ -130,6 +168,10 @@
       text-shadow: $box-shadow;
       line-height: 1.06em;
       color: $white !important;
+
+      @include respond(md) {
+        font-size: $type-5 !important;
+      }
     }
 
     h2 {

@@ -1,6 +1,10 @@
 .utk-splash---feature {
   display: flex;
 
+  @include respond(xs, sm) {
+    flex-direction: column;
+  }
+
   a {
     color: $smokey;
     display: flex;
@@ -19,6 +23,11 @@
   &--primary {
     width: $gr-long;
     padding-right: $golden-ratio-4;
+
+    @include respond(xs, sm) {
+      width: 100%;
+      padding-right: 0;
+    }
 
     > .feature-post {
       flex-direction: column;
@@ -45,13 +54,27 @@
   &--secondary {
     width: $gr-short;
 
+    @include respond(xs, sm) {
+      width: 100%;
+      margin-top: $golden-ratio-2;
+    }
+
     > .feature-post {
       margin-bottom: $golden-ratio-3;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       img {
         width: $golden-ratio-6;
         height: $golden-ratio-5;
         margin-right: $golden-ratio-2;
+
+        @include respond(md) {
+          width: $golden-ratio-5;
+          height: $golden-ratio-4;
+        }
       }
 
       h3 {
