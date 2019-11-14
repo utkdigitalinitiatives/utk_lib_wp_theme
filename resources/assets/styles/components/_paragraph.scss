@@ -7,4 +7,12 @@ p {
   @include respond(xs, sm) {
     font-size: $type-2;
   }
+
+  &.has-small-font-size {
+    font-size: $type-2 !important;
+
+    @include respond(xs, sm) {
+      font-size: $type-1 !important;
+    }
+  }
 }

@@ -35,19 +35,64 @@ blockquote {
   &::before,
   &::after {
     position: absolute;
-    color: $gray-3;
-    font-size: $type-6;
+    color: $rock;
+    font-size: $type-5;
   }
 
   &::before {
     content: open-quote;
-    margin-left: -$golden-ratio-4;
+    margin-left: -$golden-ratio-3;
   }
 
   &::after {
     bottom: $golden-ratio-2;
     right: 0;
     content: close-quote;
-    margin-right: -$golden-ratio-4;
+    margin-right: -$golden-ratio-3;
+  }
+
+  &.wp-block-quote.has-text-align-right {
+    color: $smokey;
+    float: right;
+    width: 50%;
+    font-family: $sans;
+    font-size: 18px;
+    line-height: 1.58em;
+    word-break: break-word;
+    text-align: left;
+    margin: 0 0 $golden-ratio-4 $golden-ratio-5;
+    margin-right: -$golden-ratio-5;
+    -webkit-font-smoothing: antialiased !important;
+
+    p {
+      -webkit-font-smoothing: antialiased !important;
+    }
+
+    @include respond(sm) {
+      margin-left: $golden-ratio-4;
+      margin-right: -$golden-ratio-2 !important;
+    }
+
+    @include respond(xs) {
+      margin: $golden-ratio-4 !important;
+      float: none;
+      width: 100%;
+      clear: both;
+    }
+
+    &::before {
+      width: $golden-ratio-5;
+      height: $golden-ratio-0;
+      content: ' ';
+      display: block;
+      background-color: $orange;
+      position: relative;
+      margin-left: 0;
+      margin-bottom: $golden-ratio-2;
+    }
+
+    &::after {
+      font-family: $serif;
+    }
   }
 }
