@@ -6,4 +6,12 @@
   h6 {
     font-family: $font-volumes;
   }
+
+  blockquote.wp-block-quote {
+    font-family: $font-volumes !important;
+
+    p {
+      font-family: inherit !important;
+    }
+  }
 }
