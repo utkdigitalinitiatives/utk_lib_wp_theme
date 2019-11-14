@@ -1,10 +1,20 @@
 .page-body-related {
   margin-bottom: $golden-ratio-4;
 
+  @include respond(xs, sm) {
+    margin-bottom: 0;
+    margin-left: -$golden-ratio-2;
+    width: calc(100% + 36px);
+  }
+
   &--post {
     display: flex;
     margin-bottom: $golden-ratio-3;
     background-color: $gray-0;
+
+    @include respond(xs, sm) {
+      flex-direction: column-reverse;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -19,6 +29,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @include respond(xs, sm) {
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - #{$golden-ratio-4})) !important;
+      }
 
       img {
         width: 100%;
@@ -43,6 +58,11 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+
+      @include respond(xs, sm) {
+        width: 100%;
+        padding: 0 $golden-ratio-2 $golden-ratio-3;
+      }
 
       > h3 {
         font-size: $type-5;
