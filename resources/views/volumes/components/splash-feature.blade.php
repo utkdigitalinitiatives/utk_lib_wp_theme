@@ -9,8 +9,8 @@
             @php echo get_the_post_thumbnail($primary, 'card_image') @endphp
             <h3>@php echo get_the_title($primary); @endphp</h3>
             <span class="utk-splash---feature--meta">
-                        @if (get_field('feature_custom_author', $id))
-                    @php echo get_field('feature_custom_author', $id) @endphp
+                @if (get_field('feature_custom_author', $primary))
+                    @php echo get_field('feature_custom_author', $primary) @endphp
                 @else
                     @php echo get_the_author_meta('display_name', $post->post_author) @endphp
                 @endif
