@@ -94,6 +94,9 @@
     font-size: $type-0;
     text-transform: uppercase;
     letter-spacing: 0.029em;
-    color: $smokeyx !important;
+    color: $smokey !important;
+    line-height: 1.47em;
+    display: block;
+    margin-top: $golden-ratio-1;
   }
 }
