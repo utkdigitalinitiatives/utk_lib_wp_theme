@@ -4,7 +4,7 @@
 
   $site = 'https://volumes.lib.utk.edu';
   $endpoint = $site . '/wp-json/model/recent?type=post&count=8&status=publish';
-  $news = Model::utk_lib_get_recent_posts($args, $endpoint);
+  $news = Model::utk_lib_get_recent_posts($endpoint);
 
 @endphp
 
