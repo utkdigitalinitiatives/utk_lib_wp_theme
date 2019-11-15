@@ -38,16 +38,16 @@
       position: relative;
       margin-top: -303px;
       z-index: 10;
-    }
 
-    @include respond(md) {
-      margin-top: -255px;
-    }
+      @include respond(md) {
+        margin-top: -255px;
+      }
 
-    @include respond(xs, sm) {
-      position: relative;
-      margin-top: -76px;
-      z-index: 0;
+      @include respond(xs, sm) {
+        position: relative;
+        margin-top: -76px;
+        z-index: 0;
+      }
     }
 
     > .container {
