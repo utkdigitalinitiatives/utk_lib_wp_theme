@@ -3702,6 +3702,12 @@ body.utk-search-open .utk-header-search {
           color: #fed535;
           text-decoration: underline; }
 
+.utk-svg-orange {
+  fill: #ff8200 !important; }
+
+.utk-svg-white {
+  fill: #fff !important; }
+
 /*
  * vendor
  */
