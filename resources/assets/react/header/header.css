@@ -441,11 +441,6 @@
  * define bootstrap vars according to externally hosted bootstrap library
  */
 .container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
   padding-left: 47px !important;
   padding-right: 47px !important;
   /* Mobile Devices for Mice */
@@ -463,12 +458,6 @@
   /* Landscape phone to portrait tablet */
   /* Portrait tablet to landscape and desktop */
   /* desktop and large desktop */ }
-  @media (min-width: breakpoint-min((sm: 540px, md: 720px, lg: 1000px, xl: 1280px), (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))) {
-    .container {
-      max-width: !important; } }
-  @media (min-width: breakpoint-min(!important, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))) {
-    .container {
-      max-width: !important; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .container {
       padding-left: 29px !important;
@@ -481,13 +470,6 @@
     .container {
       padding-left: 18px !important;
       padding-right: 18px !important; } }
-
-.container-fluid {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto; }
 
 /*
  * vendor
@@ -3376,10 +3358,10 @@ html {
       max-width: 720px; } }
   @media (min-width: 992px) {
     .container {
-      max-width: 960px; } }
+      max-width: 1000px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px; } }
+      max-width: 100%; } }
 
 .container-fluid {
   width: 100%;
