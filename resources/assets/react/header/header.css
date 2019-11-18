@@ -1647,8 +1647,8 @@ body.utk-search-open .utk-search {
   display: flex; }
   .footer-university--identity--brand--logo {
     display: block; }
-    .footer-university--identity--brand--logo img {
-      height: 47px; }
+    .footer-university--identity--brand--logo svg {
+      width: 229px; }
 
 .footer-university--title {
   display: block;
