@@ -1,4 +1,4 @@
-<footer>
+<footer id="utk-lib-footer">
   <section class="utk-footer footer-libraries">
     @include('partials.sections.footer-libraries')
   </section>
