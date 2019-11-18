@@ -12,12 +12,14 @@
                 @if ($series)
                     <span class="utk-volume--title--series">@php echo $series @endphp</span>
                 @endif
-                <h1>@php echo get_the_title($featured_item) @endphp</h1>
-                @if(get_field('volume_intro', $featured_item))
-                    <span class="utk-volume--title--intro">
-                        @php echo get_field('volume_intro', $featured_item) @endphp
-                    </span>
-                @endif
+                <a href="@php echo get_the_permalink($featured_item) @endphp">
+                    <h1>@php echo get_the_title($featured_item) @endphp</h1>
+                    @if(get_field('volume_intro', $featured_item))
+                        <span class="utk-volume--title--intro">
+                            @php echo get_field('volume_intro', $featured_item) @endphp
+                        </span>
+                    @endif
+                </a>
             </div>
             @include('volumes.partials.secondary-image')
         </div>
