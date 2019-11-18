@@ -727,6 +727,39 @@ body {
 /* Landscape phone to portrait tablet */
 /* Portrait tablet to landscape and desktop */
 /* desktop and large desktop */
+footer#utk-lib-footer {
+  font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.footer-libraries {
+  padding: 47px 0;
+  background-color: #fff;
+  color: #333;
+  border-top: 6px solid #ff8200;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .footer-libraries {
+      padding: 29px 0; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .footer-libraries {
+      padding: 29px 0; } }
+
+.footer-university {
+  padding: 47px 0;
+  background-color: #f6f6f6; }
+
+.footer-system {
+  background-color: #333;
+  color: #e0e0e0; }
+
 .utk-title {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1363,6 +1396,450 @@ body.utk-search-open .utk-search {
     background-color: #abc178 !important; }
   .utk-libchat button.libchat_offline::after {
     background-color: #a7a9ac !important; }
+
+.footer-libraries--inner {
+  display: flex;
+  flex-wrap: wrap;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .footer-libraries--inner {
+      flex-direction: column;
+      align-items: center;
+      align-content: center; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .footer-libraries--inner {
+      flex-direction: column;
+      align-items: center;
+      align-content: center; } }
+
+.footer-libraries--anchor {
+  width: 303px;
+  display: flex;
+  flex-direction: column;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .footer-libraries--anchor {
+      width: 100%;
+      max-width: 100%;
+      flex-direction: row;
+      margin-bottom: 11px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .footer-libraries--anchor {
+      width: 100%;
+      max-width: 100%;
+      flex-direction: row;
+      margin-bottom: 11px; } }
+  @media (max-width: 767px) {
+    .footer-libraries--anchor {
+      border-bottom: 2px solid #f6f6f6;
+      padding-bottom: 11px;
+      margin-bottom: 18px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .footer-libraries--anchor {
+      border-bottom: 2px solid #f6f6f6;
+      padding-bottom: 11px;
+      margin-bottom: 18px; } }
+  .footer-libraries--anchor p {
+    font-size: 15px;
+    line-height: 1.58em;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .footer-libraries--anchor p {
+        font-size: 13px; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .footer-libraries--anchor p {
+        font-size: 13px; } }
+
+.footer-libraries--identity {
+  width: auto;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .footer-libraries--identity {
+      min-width: 33.333333%;
+      flex-shrink: 1;
+      padding-right: 29px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .footer-libraries--identity {
+      min-width: 33.333333%;
+      flex-shrink: 1;
+      padding-right: 29px; } }
+  @media (max-width: 767px) {
+    .footer-libraries--identity {
+      min-width: calc(100% - (100% / 1.61803)); } }
+
+.footer-libraries--identity--brand {
+  display: flex; }
+  .footer-libraries--identity--brand--unit {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .footer-libraries--identity--brand--unit {
+        font-size: 15px; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .footer-libraries--identity--brand--unit {
+        font-size: 15px; } }
+
+.footer-libraries--menu-extras {
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .footer-libraries--menu-extras {
+      flex-grow: 1; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .footer-libraries--menu-extras {
+      flex-grow: 1; } }
+  .footer-libraries--menu-extras ul.menu {
+    padding: 0;
+    margin: 0; }
+    .footer-libraries--menu-extras ul.menu li.menu-item {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      font-size: 13px; }
+      .footer-libraries--menu-extras ul.menu li.menu-item a,
+      .footer-libraries--menu-extras ul.menu li.menu-item a:visited {
+        color: #006c93 !important; }
+      .footer-libraries--menu-extras ul.menu li.menu-item a:hover,
+      .footer-libraries--menu-extras ul.menu li.menu-item a:focus {
+        color: #8d2048 !important; }
+
+.footer-libraries--menu {
+  flex-grow: 1;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .footer-libraries--menu {
+      width: 100%; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .footer-libraries--menu {
+      width: 100%; } }
+  .footer-libraries--menu #menu-drawer {
+    display: flex;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /*
+       * target second level item as title
+       */
+    /*
+       * fixes margins on first level lists
+       */
+    /*
+       * hide fourth level items and deeper
+       */
+    /*
+       * fixes margins on multiple lists in columns
+       */ }
+    @media (max-width: 767px) {
+      .footer-libraries--menu #menu-drawer {
+        flex-direction: column;
+        text-align: center; } }
+    .footer-libraries--menu #menu-drawer > li {
+      flex-grow: 1;
+      flex-basis: 0;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        .footer-libraries--menu #menu-drawer > li {
+          width: 100%;
+          margin-bottom: 18px;
+          font-size: 15px; } }
+    .footer-libraries--menu #menu-drawer > li > ul > li > a {
+      display: block;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: #333 !important;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        .footer-libraries--menu #menu-drawer > li > ul > li > a {
+          font-size: 15px; } }
+      @media (min-width: 768px) and (max-width: 991px) {
+        .footer-libraries--menu #menu-drawer > li > ul > li > a {
+          font-size: 15px; } }
+    .footer-libraries--menu #menu-drawer > li > ul {
+      margin-bottom: 0; }
+    .footer-libraries--menu #menu-drawer > li > ul > li > ul > li > ul {
+      display: none; }
+    .footer-libraries--menu #menu-drawer > li > ul > li:last-child ul {
+      margin-bottom: 0; }
+  .footer-libraries--menu ul.menu {
+    margin: 0;
+    padding: 0; }
+    .footer-libraries--menu ul.menu li.menu-item {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      .footer-libraries--menu ul.menu li.menu-item a,
+      .footer-libraries--menu ul.menu li.menu-item a:visited {
+        color: #006c93 !important; }
+      .footer-libraries--menu ul.menu li.menu-item a:hover,
+      .footer-libraries--menu ul.menu li.menu-item a:focus {
+        color: #8d2048 !important; }
+  .footer-libraries--menu ul.dropdown-menu {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 18px; }
+    .footer-libraries--menu ul.dropdown-menu li.menu-item {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 15px; }
+
+.footer-university--inner {
+  display: flex;
+  justify-content: space-between;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .footer-university--inner {
+      flex-direction: column; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .footer-university--inner {
+      flex-direction: column; } }
+
+.footer-university--anchor {
+  margin-right: 76px;
+  position: relative;
+  z-index: 0;
+  font-size: 15px;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .footer-university--anchor {
+      margin-right: 0; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .footer-university--anchor {
+      margin-right: 0; } }
+  .footer-university--anchor p {
+    font-size: inherit;
+    line-height: 1.58em; }
+
+.footer-university--identity--brand {
+  display: flex; }
+  .footer-university--identity--brand--logo {
+    display: block; }
+    .footer-university--identity--brand--logo img {
+      height: 47px; }
+
+.footer-university--title {
+  display: block;
+  margin-bottom: 11px; }
+
+.footer-university--options .options--item {
+  color: #333;
+  margin: 0 0 18px;
+  width: auto;
+  float: left;
+  clear: left; }
+  .footer-university--options .options--item:visited, .footer-university--options .options--item:focus, .footer-university--options .options--item:hover {
+    color: #333; }
+  .footer-university--options .options--item:last-child {
+    margin: 0; }
+
+.footer-university--menu {
+  flex-grow: 1; }
+  .footer-university--menu #menu-university {
+    display: flex;
+    justify-content: space-between;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /*
+       * fixes margins on first level lists
+       */ }
+    @media (max-width: 767px) {
+      .footer-university--menu #menu-university {
+        flex-wrap: wrap; } }
+    .footer-university--menu #menu-university > li {
+      flex-grow: 1;
+      font-size: 13px;
+      margin-right: 47px;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        .footer-university--menu #menu-university > li {
+          width: 50%;
+          margin-right: 0;
+          flex-grow: 0; } }
+      .footer-university--menu #menu-university > li a,
+      .footer-university--menu #menu-university > li a:visited,
+      .footer-university--menu #menu-university > li a:focus,
+      .footer-university--menu #menu-university > li a:hover {
+        color: #333; }
+      .footer-university--menu #menu-university > li:last-child {
+        margin-right: 0; }
+    .footer-university--menu #menu-university > li > ul {
+      margin-bottom: 0; }
+  .footer-university--menu ul.menu {
+    margin: 0;
+    padding: 0; }
+    .footer-university--menu ul.menu li.menu-item {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+  .footer-university--menu ul.dropdown-menu {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 18px; }
+    .footer-university--menu ul.dropdown-menu li.menu-item {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+
+.footer-university--search {
+  margin-bottom: 29px; }
+  .footer-university--search--form {
+    display: flex; }
+    .footer-university--search--form .form-group {
+      flex-grow: 1; }
+      .footer-university--search--form .form-group > input {
+        height: 47px;
+        font-size: 15px;
+        color: #333;
+        font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-indent: 18px;
+        width: 100%;
+        border: 1px solid #cacaca;
+        border-right: none; }
+    .footer-university--search--form input[type=submit] {
+      border: none; }
+
+.footer-system--inner {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px; }
+  .footer-system--inner p {
+    font-size: inherit;
+    margin: 11px 0; }
+    .footer-system--inner p a,
+    .footer-system--inner p a:visited,
+    .footer-system--inner p a:hover,
+    .footer-system--inner p a:focus {
+      color: #fff;
+      text-decoration: underline; }
+
+.footer-system--logo {
+  font-size: inherit;
+  line-height: 1.5em;
+  margin-top: 2px; }
+  .footer-system--logo img {
+    width: 25px;
+    height: auto;
+    margin: 11px 11px 11px 0; }
 
 .utk-hours {
   margin-bottom: 29px; }
