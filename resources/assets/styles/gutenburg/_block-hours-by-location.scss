@@ -1,0 +1,24 @@
+.utk-hours-by-location-block {
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $golden-ratio-4;
+  }
+
+  section {
+    .utk-hours-location {
+      display: flex;
+      margin-bottom: $golden-ratio-3;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &--title {
+        h3 {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
