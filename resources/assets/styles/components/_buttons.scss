@@ -55,6 +55,21 @@ a.btn:visited {
     }
   }
 
+  &.btn-filter {
+    background-color: $white;
+    color: $smokey !important;
+    border-radius: $golden-ratio-4;
+    text-transform: none;
+    padding: 11px 29px;
+    box-shadow: $box-shadow;
+
+    &.btn-active {
+      background-color: $smokey;
+      color: $white !important;
+      box-shadow: none;
+    }
+  }
+
   /*
    * the following should be universal for all container styles
    */
