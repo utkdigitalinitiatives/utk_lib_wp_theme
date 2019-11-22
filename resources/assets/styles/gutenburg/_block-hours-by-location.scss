@@ -8,7 +8,7 @@
   section {
     .utk-hours-location {
       display: flex;
-      margin-bottom: $golden-ratio-3;
+      margin-bottom: $golden-ratio-4;
 
       &:last-child {
         margin-bottom: 0;
@@ -16,7 +16,10 @@
 
       &--title {
         display: flex;
-        min-width: 200px;
+        width: 303px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin-right: $golden-ratio-4;
 
         &--thumb {
           display: flex;
@@ -26,7 +29,9 @@
           margin-right: $golden-ratio-2;
           overflow: hidden;
           box-shadow: $box-shadow;
-          background-color: $rock;
+          background-color: $gray-1;
+          flex-shrink: 0;
+          flex-grow: 0;
         }
 
         h3 {
@@ -38,7 +43,7 @@
 
         &--label {
           &--sub {
-            font-size: $type-3;
+            font-size: $type-2;
             color: $smokey;
             display: block;
             -webkit-font-smoothing: antialiased;
@@ -48,6 +53,33 @@
           .utk-space--hours {
             font-size: $type-3;
             font-weight: 700;
+          }
+        }
+      }
+
+      &--details {
+        &--about {
+          background-color: $gray-0;
+          padding: $golden-ratio-3;
+          border-radius: $golden-ratio-0;
+
+          h4 {
+            margin: 0 0 $golden-ratio-0;
+            font-size: $type-0;
+            text-transform: uppercase;
+            letter-spacing: 0.029em;
+          }
+
+          > p {
+            font-size: $type-2;
+
+            &:first-of-type {
+              margin-top: 0;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
           }
         }
       }
