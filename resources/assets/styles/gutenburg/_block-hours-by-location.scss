@@ -72,14 +72,11 @@
 
           > p {
             font-size: $type-2;
+            margin: 0;
+          }
 
-            &:first-of-type {
-              margin-top: 0;
-            }
-
-            &:last-child {
-              margin-bottom: 0;
-            }
+          &--spaces {
+            margin-top: $golden-ratio-3;
           }
         }
       }
