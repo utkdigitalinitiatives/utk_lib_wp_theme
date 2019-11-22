@@ -15,10 +15,39 @@
       }
 
       &--title {
+        display: flex;
         min-width: 200px;
+
+        &--thumb {
+          display: flex;
+          width: $golden-ratio-5;
+          height: $golden-ratio-5;
+          border-radius: $golden-ratio-5;
+          margin-right: $golden-ratio-2;
+          overflow: hidden;
+          box-shadow: $box-shadow;
+        }
 
         h3 {
           margin: 0;
+          font-weight: 700;
+          letter-spacing: -0.018em;
+          line-height: 1.29em;
+        }
+
+        &--label {
+          &--sub {
+            font-size: $type-3;
+            color: $smokey;
+            display: block;
+            -webkit-font-smoothing: antialiased;
+            margin-bottom: $golden-ratio-0;
+          }
+
+          .utk-space--hours {
+            font-size: $type-3;
+            font-weight: 700;
+          }
         }
       }
     }
