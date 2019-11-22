@@ -68,8 +68,9 @@
         }
 
         &--about {
-          background-color: $gray-0;
-          padding: $golden-ratio-3;
+          border: 2px solid $gray-0;
+          background-color: transparent;
+          padding: calc(#{$golden-ratio-3 - 2px});
           border-radius: $golden-ratio-0;
 
           > p {
@@ -83,11 +84,53 @@
         }
 
         &--more {
-          border: 2px solid $gray-0;
-          background-color: transparent;
-          padding: calc(#{$golden-ratio-3 - 2px});
+          background-color: $gray-0;
+          padding: $golden-ratio-3;
           border-radius: $golden-ratio-0;
           margin-top: $golden-ratio-2;
+
+          h4 {
+            text-align: center;
+            text-transform: none;
+            letter-spacing: -0.029em;
+            font-size: $type-2;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            margin: 0 0 $golden-ratio-1;
+          }
+
+          &--list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            &--item {
+              margin-right: $golden-ratio-3;
+              margin-top: $golden-ratio-1;
+
+              &:last-child {
+                margin-right: 0;
+              }
+
+              h5 {
+                font-size: $type-2;
+                margin: 0;
+              }
+
+              &--sub {
+                font-size: $type-2;
+                color: $smokey;
+                display: block;
+                -webkit-font-smoothing: antialiased;
+                margin-bottom: 0;
+              }
+
+              .utk-space--hours {
+                font-size: $type-2;
+                font-weight: 700;
+              }
+            }
+          }
         }
       }
     }
