@@ -60,17 +60,17 @@
       &--details {
         flex-grow: 1;
 
+        h4 {
+          margin: 0 0 $golden-ratio-0;
+          font-size: $type-0;
+          text-transform: uppercase;
+          letter-spacing: 0.029em;
+        }
+
         &--about {
           background-color: $gray-0;
           padding: $golden-ratio-3;
           border-radius: $golden-ratio-0;
-
-          h4 {
-            margin: 0 0 $golden-ratio-0;
-            font-size: $type-0;
-            text-transform: uppercase;
-            letter-spacing: 0.029em;
-          }
 
           > p {
             font-size: $type-2;
@@ -80,6 +80,14 @@
           &--spaces {
             margin-top: $golden-ratio-3;
           }
+        }
+
+        &--more {
+          border: 2px solid $gray-0;
+          background-color: transparent;
+          padding: calc(#{$golden-ratio-3 - 2px});
+          border-radius: $golden-ratio-0;
+          margin-top: $golden-ratio-2;
         }
       }
     }
