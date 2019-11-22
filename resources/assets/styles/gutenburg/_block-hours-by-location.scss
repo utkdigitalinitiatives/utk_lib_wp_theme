@@ -58,6 +58,8 @@
       }
 
       &--details {
+        flex-grow: 1;
+
         &--about {
           background-color: $gray-0;
           padding: $golden-ratio-3;
