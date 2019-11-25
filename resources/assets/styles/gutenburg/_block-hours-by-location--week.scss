@@ -3,18 +3,19 @@
     font-size: $type-1;
     line-height: 1.47em;
     margin-top: -$golden-ratio-0;
-    box-shadow: $box-shadow;
+    border: 2px solid $gray-0;
+    border-radius: $golden-ratio-0;
 
     &--daysofweek {
       .utk-hours--week--dayofweek {
         text-transform: uppercase;
         font-weight: 700;
         font-size: $type-0;
+        color: $smokey;
 
         span {
           text-transform: none;
           font-weight: 400;
-          color: $smokey;
           font-size: $type-1;
         }
       }
@@ -62,7 +63,7 @@
           flex-shrink: 0;
           flex-grow: 0;
           padding: $golden-ratio-1 $golden-ratio-1;
-          overflow-x: auto;
+          overflow-x: hidden;
           overflow-y: hidden;
           margin-bottom: -2px;
 
@@ -80,6 +81,8 @@
       &--dayofweek {
         &.active {
           border-top: 6px solid $orange;
+          margin-top: -8px;
+          padding-top: 19px;
         }
       }
     }
@@ -89,6 +92,7 @@
       &--dayofweek {
         &.active {
           border-bottom: 6px solid $orange;
+          margin-bottom: -8px;
         }
       }
     }

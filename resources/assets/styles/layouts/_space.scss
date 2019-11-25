@@ -8,7 +8,7 @@
       background-color: $white;
       transition: $transition-all;
       border-radius: $golden-ratio-4;
-      box-shadow: none;
+      box-shadow: $box-shadow;
 
       &:hover,
       &:focus {
@@ -21,7 +21,7 @@
         color: $smokey;
         font-family: $sans;
         font-weight: 400;
-        font-size: $type-4;
+        font-size: $type-3;
         cursor: pointer;
         height: $golden-ratio-4;
         position: relative;
@@ -39,7 +39,7 @@
         border-radius: $golden-ratio-4;
         font-style: normal;
         font-size: $type-3;
-        color: $smokey;
+        color: $rock;
         speak: none;
         font-weight: 400;
         display: flex;
@@ -84,7 +84,6 @@ article.space {
       .DayPickerInput {
         height: 39px;
         background-color: $gray-0 !important;
-        box-shadow: inset $box-shadow;
         border-radius: $golden-ratio-4;
 
         > input {
