@@ -2001,6 +2001,13 @@ body.utk-search-open .utk-search {
           border: 2px solid #a7a9ac;
           background-color: #fff;
           margin-top: 4px; }
+  .utk-hours--week {
+    display: flex; }
+    .utk-hours--week--dayofweek {
+      display: flex;
+      flex-direction: column; }
+    .utk-hours--week .active {
+      font-weight: 700; }
 
 .utk-hours--listing--item a.library-open .utk-hours--listing--item--hours::before {
   background-color: #abc178;
