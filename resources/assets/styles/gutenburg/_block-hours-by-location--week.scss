@@ -2,7 +2,6 @@
   .utk-hours-location--details--week {
     font-size: $type-1;
     line-height: 1.47em;
-    margin-top: -$golden-ratio-0;
     border: 2px solid $gray-0;
     border-radius: $golden-ratio-0;
 
@@ -53,10 +52,6 @@
       .utk-hours--week {
         width: 100%;
 
-        &--dayofweek {
-          border-top: 6px solid $white;
-        }
-
         &--hours,
         &--dayofweek {
           flex-basis: calc(100% / 7);
@@ -68,9 +63,9 @@
           margin-bottom: -2px;
 
           &.active {
-            border-left: 6px solid $orange;
-            border-right: 6px solid $orange;
-            background-color: rgba($white, 0.47);
+            background-color: $globe;
+            color: $white !important;
+            border-bottom: 2px solid darken($globe, 2);
           }
         }
       }
@@ -80,9 +75,10 @@
       &--hours,
       &--dayofweek {
         &.active {
-          border-top: 6px solid $orange;
-          margin-top: -8px;
+          margin-top: -6px;
           padding-top: 19px;
+          border-top-left-radius: $golden-ratio-0;
+          border-top-right-radius: $golden-ratio-0;
         }
       }
     }
@@ -91,8 +87,9 @@
       &--hours,
       &--dayofweek {
         &.active {
-          border-bottom: 6px solid $orange;
-          margin-bottom: -8px;
+          margin-bottom: -6px;
+          border-bottom-left-radius: $golden-ratio-0;
+          border-bottom-right-radius: $golden-ratio-0;
         }
       }
     }
