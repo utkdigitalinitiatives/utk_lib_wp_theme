@@ -2,6 +2,8 @@
   .utk-hours-location--details--week {
     font-size: $type-1;
     line-height: 1.47em;
+    margin-top: -$golden-ratio-0;
+    box-shadow: $box-shadow;
 
     &--daysofweek {
       .utk-hours--week--dayofweek {
@@ -22,12 +24,23 @@
       display: flex;
       border-bottom: 2px solid $gray-0;
 
+      &:last-child {
+        border-bottom: none;
+      }
+
       > div:first-child {
-        width: 150px !important;
+        width: 160px !important;
         flex-shrink: 0;
         flex-grow: 0;
         color: $smokey;
-        padding: $golden-ratio-0 $golden-ratio-1;
+        padding: $golden-ratio-1 $golden-ratio-1;
+
+        h4 {
+          font-size: $type-1;
+          letter-spacing: -0.029em;
+          text-transform: none;
+          margin-bottom: 2px;
+        }
       }
 
       > div:last-child {
@@ -48,7 +61,7 @@
           flex-basis: calc(100% / 7);
           flex-shrink: 0;
           flex-grow: 0;
-          padding: $golden-ratio-0 $golden-ratio-1;
+          padding: $golden-ratio-1 $golden-ratio-1;
           overflow-x: auto;
           overflow-y: hidden;
           margin-bottom: -2px;

@@ -16,7 +16,7 @@
 
       &--title {
         display: flex;
-        width: 303px;
+        width: 250px;
         flex-shrink: 0;
         flex-grow: 0;
         margin-right: $golden-ratio-4;
@@ -35,7 +35,7 @@
         }
 
         h3 {
-          margin: 0;
+          margin: 0 0 $golden-ratio-0;
           font-weight: 700;
           letter-spacing: -0.018em;
           line-height: 1.29em;
@@ -48,6 +48,7 @@
             display: block;
             -webkit-font-smoothing: antialiased;
             margin-bottom: $golden-ratio-0;
+            line-height: 1.29em;
           }
 
           .utk-space--hours {
