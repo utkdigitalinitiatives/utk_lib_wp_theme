@@ -2,13 +2,15 @@
   header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: $golden-ratio-4;
+    margin-bottom: $golden-ratio-5;
   }
 
   section {
+    margin-bottom: $golden-ratio-3;
+
     .utk-hours-location {
       display: flex;
-      margin-bottom: $golden-ratio-4;
+      margin-bottom: $golden-ratio-5;
 
       &:last-child {
         margin-bottom: 0;
@@ -101,7 +103,7 @@
           background-color: $gray-0;
           padding: $golden-ratio-3;
           border-radius: $golden-ratio-0;
-          margin-top: $golden-ratio-2;
+          margin-top: $golden-ratio-3;
 
           h4 {
             text-align: center;
