@@ -4,13 +4,15 @@
   padding: 0;
   flex-direction: row;
   justify-content: space-between;
-  border-radius: $golden-ratio-1;
+  border-radius: $golden-ratio-4;
   width: $gr-long;
   max-width: 100%;
+  box-shadow: $box-shadow;
 
   @include respond(xs) {
     flex-direction: column;
     width: $gr-long;
+    border-radius: $golden-ratio-1;
     margin: $golden-ratio-4 auto;
   }
 
@@ -23,7 +25,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 2px solid $gray-1;
     border-right: none;
     background-color: $white;
     color: $smokey;
@@ -33,14 +34,13 @@
     }
 
     &.utk-button-nav--link-active {
-      background-color: $gray-1;
+      background-color: $gray-0;
       color: $smokey !important;
       font-weight: 700;
     }
 
     @include respond(xs) {
       border-bottom: 0;
-      border-right: 2px solid $gray-1;
     }
 
     &:link,
@@ -54,14 +54,13 @@
     }
 
     &:first-child {
-      border-top-left-radius: $golden-ratio-1;
-      border-bottom-left-radius: $golden-ratio-1;
+      border-top-left-radius: $golden-ratio-4;
+      border-bottom-left-radius: $golden-ratio-4;
     }
 
     &:last-child {
-      border-top-right-radius: $golden-ratio-1;
-      border-bottom-right-radius: $golden-ratio-1;
-      border-right: 2px solid $gray-1;
+      border-top-right-radius: $golden-ratio-4;
+      border-bottom-right-radius: $golden-ratio-4;
     }
 
     @include respond(xs) {
@@ -75,7 +74,6 @@
         border-top-right-radius: 0;
         border-bottom-left-radius: $golden-ratio-1;
         border-bottom-right-radius: $golden-ratio-1;
-        border-bottom: 2px solid $gray-1;
       }
     }
 

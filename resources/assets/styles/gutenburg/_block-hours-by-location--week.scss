@@ -2,8 +2,12 @@
   .utk-hours-location--details--week {
     font-size: $type-1;
     line-height: 1.47em;
-    border: 2px solid $gray-0;
+    border: 2px solid $gray-1;
     border-radius: $golden-ratio-0;
+
+    &--primary {
+      background-color: $gray-0;
+    }
 
     &--daysofweek {
       .utk-hours--week--dayofweek {
@@ -22,7 +26,7 @@
 
     > div {
       display: flex;
-      border-bottom: 2px solid $gray-0;
+      border-bottom: 2px solid $gray-1;
 
       &:last-child {
         border-bottom: none;
@@ -65,7 +69,7 @@
           &.active {
             background-color: $globe;
             color: $white !important;
-            border-bottom: 2px solid darken($globe, 2);
+            border-bottom: 2px solid darken($globe, 3);
           }
         }
       }
