@@ -2,7 +2,7 @@
   header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: $golden-ratio-5;
+    margin-bottom: $golden-ratio-4;
   }
 
   section {
@@ -10,7 +10,7 @@
 
     .utk-hours-location {
       display: flex;
-      margin-bottom: $golden-ratio-5;
+      margin-bottom: $golden-ratio-4;
 
       @include respond(xs, sm) {
         flex-direction: column;
