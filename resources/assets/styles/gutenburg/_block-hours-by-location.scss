@@ -3,6 +3,20 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: $golden-ratio-4;
+
+    @include respond(sm) {
+      justify-content: space-evenly;
+    }
+
+    @include respond(xs) {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      .utk-space--hours {
+        margin-bottom: $golden-ratio-3;
+      }
+    }
   }
 
   section {
