@@ -12,6 +12,10 @@
       display: flex;
       margin-bottom: $golden-ratio-5;
 
+      @include respond(xs, sm) {
+        flex-direction: column;
+      }
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -22,6 +26,17 @@
         flex-shrink: 0;
         flex-grow: 0;
         margin-right: $golden-ratio-4;
+
+        @include respond(xs, sm) {
+          width: auto;
+          margin-right: 0;
+          margin-bottom: $golden-ratio-1;
+          position: absolute;
+          background-color: $white;
+          margin-left: $golden-ratio-2;
+          padding-left: $golden-ratio-1;
+          padding-right: $golden-ratio-2;
+        }
 
         &--thumb {
           display: flex;
@@ -74,6 +89,11 @@
           background-color: transparent;
           padding: calc(#{$golden-ratio-3 - 2px});
           border-radius: $golden-ratio-0;
+
+          @include respond(xs, sm) {
+            padding-top: 60px;
+            margin-top: 44px;
+          }
 
           > p {
             font-size: $type-2;
