@@ -1,4 +1,68 @@
-.utk-hours-by-location-block {
+.utk-hours-by-location-block.utk-hours-by-location-block-view-week {
+  @include respond(xs, sm) {
+    .utk-hours-location {
+      margin-bottom: $golden-ratio-2;
+      margin-left: -$golden-ratio-3;
+      width: calc(100% + 58px);
+      position: relative;
+
+      @include respond(xs) {
+        margin-left: -$golden-ratio-2;
+        width: calc(100% + 36px);
+      }
+
+      &--title {
+        left: 0;
+        position: absolute;
+        margin-top: 16px;
+        margin-left: 0;
+        padding: 0;
+        padding-left: $golden-ratio-3;
+        padding-right: $golden-ratio-1;
+
+        @include filter-gradient-horizontal(rgba($white, 1), 76%, rgba($white, 0), 100%);
+
+        @include respond(xs) {
+          padding-left: $golden-ratio-2;
+        }
+
+        &--thumb {
+          width: $golden-ratio-3;
+          height: $golden-ratio-3;
+          margin-right: $golden-ratio-0;
+          margin-top: 2px;
+        }
+
+        &--label {
+          h3 {
+            font-size: $type-2;
+            margin-bottom: 0;
+          }
+
+          &--sub {
+            font-size: $type-0;
+          }
+        }
+      }
+
+      &--details {
+        width: 100%;
+
+        @include respond(xs) {
+          overflow-x: scroll;
+          overflow-y: hidden;
+        }
+
+        &--week {
+          border-radius: 0 !important;
+          border-left: none !important;
+          border-right: none !important;
+          min-width: 768px;
+        }
+      }
+    }
+  }
+
   .utk-hours-location--details--week {
     font-size: $type-1;
     line-height: 1.47em;
@@ -38,6 +102,15 @@
         flex-grow: 0;
         color: $smokey;
         padding: $golden-ratio-1 $golden-ratio-1;
+
+        @include respond(xs, sm) {
+          width: 200px !important;
+          padding-left: $golden-ratio-3;
+        }
+
+        @include respond(xs) {
+          padding-left: $golden-ratio-2;
+        }
 
         h4 {
           font-size: $type-1;
