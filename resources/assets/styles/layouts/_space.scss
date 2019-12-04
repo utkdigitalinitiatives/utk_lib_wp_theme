@@ -346,45 +346,34 @@ article.space {
 
           .slick-slide {
             cursor: pointer !important;
-            width: $golden-ratio-6;
-            height: calc(#{$golden-ratio-5} + 6px);
+            width: $golden-ratio-5;
+            height: $golden-ratio-4;
             transition: $transition-all-fast;
             background-color: $white;
-            border-top: 6px solid $orange;
-            margin-top: 0;
+            margin: 9px 9px 20px;
+
+            &::after {
+              content: '';
+              width: 15px;
+              height: 15px;
+              background-color: $orange;
+              border-radius: 15px;
+              position: absolute;
+              margin-top: 29px;
+              margin-left: 33px;
+              box-shadow: none;
+              transition: $transition-all-load;
+            }
 
             img {
               transition: $transition-all-fast;
-              filter: contrast(0.76) brightness(1) blur(0);
-              opacity: 1;
-            }
-
-            &:hover,
-            &:focus {
-              img {
-                filter: contrast(1) brightness(1);
-                opacity: 1;
-              }
+              box-shadow: $box-shadow-float;
             }
 
             &.slick-current {
-              background-color: $white !important;
-              border-top: 6px solid $orange;
-              margin-top: -6px;
-
-              img {
-                filter: contrast(0.76) brightness(1) blur(2px) !important;
-                opacity: 0.29;
-              }
-
-              &:hover,
-              &:focus {
-                background-color: $white !important;
-
-                img {
-                  filter: contrast(0.47) brightness(1) blur(2px) !important;
-                  opacity: 0.29;
-                }
+              &::after {
+                margin-top: -16px;
+                box-shadow: $box-shadow-float;
               }
             }
           }
@@ -393,8 +382,8 @@ article.space {
         &--overlay {
           position: absolute;
           z-index: 1;
-          top: 0;
-          height: $golden-ratio-5;
+          bottom: 0;
+          height: $golden-ratio-6;
           width: 100%;
           display: flex;
           justify-content: flex-start;
@@ -402,7 +391,7 @@ article.space {
           align-content: flex-end;
           padding: $golden-ratio-2;
 
-          @include filter-gradient(rgba($smokey, 0.76), 0, rgba($smokey, 0), 100%);
+          @include filter-gradient(rgba($smokeyx, 0), 0, rgba($smokeyx, 0.92), calc(100% - 47px));
 
           .btn {
             height: $golden-ratio-4;
