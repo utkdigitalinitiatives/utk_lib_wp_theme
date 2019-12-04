@@ -18,10 +18,10 @@
     text-align: center;
     margin-top: $golden-ratio-3;
     -webkit-font-smoothing: antialiased !important;
-    padding: 0 $golden-ratio-4;
+    padding: 0 $golden-ratio-3;
 
     @include respond(xs, sm) {
-      padding: 0 $golden-ratio-4;
+      padding: 0 $golden-ratio-2;
     }
 
     > .utk-heading-1 {
