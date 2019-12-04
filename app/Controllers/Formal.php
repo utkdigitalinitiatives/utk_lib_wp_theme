@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use function App\template;
 use Sober\Controller\Controller;
+use UTKLibrary\Library\Models\Space;
 
 class Formal extends Controller
 {
@@ -14,12 +15,20 @@ class Formal extends Controller
         $content_post = get_post($post_id);
 
         $title = $content_post->post_title;
-        $content = $content_post->post_content;
-        $content = apply_filters('the_content', $content);
-        $content = str_replace(']]>', ']]&gt;', $content);
+
+        if (get_post_type() === 'space' && !is_archive()) :
+            $location = get_the_terms($post_id, 'location');
+            $location_link = Space::getSpaceLocations($post_id, true);
+            $location_link = Space::getSpaceLocations($post_id, true);
+            $content = $location_link;
+        else:
+            $content = $content_post->post_content;
+            $content = apply_filters('the_content', $content);
+            $content = str_replace(']]>', ']]&gt;', $content);
+        endif;
 
         if (has_post_thumbnail($post_id)) :
-            $post_thumbnail = get_the_post_thumbnail();
+            $post_thumbnail = get_the_post_thumbnail(null,'gr_thumb');
         else :
             $post_thumbnail = null;
         endif;
