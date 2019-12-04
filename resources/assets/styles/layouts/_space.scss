@@ -424,12 +424,8 @@ article.space {
   .page-body--formal-header {
     padding-bottom: $golden-ratio-6;
 
-    @include respond(sm) {
+    @include respond(xs, sm) {
       padding-bottom: $golden-ratio-5;
-    }
-
-    @include respond(xs) {
-      padding-bottom: $golden-ratio-4;
     }
   }
 }
