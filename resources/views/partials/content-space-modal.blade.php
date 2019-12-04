@@ -19,17 +19,6 @@
 
 @endphp
 <article @php post_class('space', $id) @endphp>
-    <div class="utk-space-actions">
-        @include('partials.components.space-hours')
-    </div>
-    <div class="utk-space--media">
-        <div class="utk-space--media--slider">
-            @include('partials.components.image-slider')
-        </div>
-        @if (count($data['fields']['space_images']) > 1)
-            <div class="utk-space--media--slider--overlay"></div>
-        @endif;
-    </div>
     <div class="utk-space--content">
         <div class="utk-space--content--wrap">
             <header>
@@ -69,5 +58,16 @@
                 <p>Ut pharetra, urna at mattis dignissim, massa neque gravida purus, alma 200 id sagittis diam. In et nibh semper sapien vehicula dictum.</p>
             </div>
         </div>
+    </div>
+    <div class="utk-space-actions">
+        @include('partials.components.space-hours')
+    </div>
+    <div class="utk-space--media">
+        <div class="utk-space--media--slider">
+            @include('partials.components.image-slider')
+        </div>
+        @if (count($data['fields']['space_images']) > 1)
+            <div class="utk-space--media--slider--overlay"></div>
+        @endif
     </div>
 </article>
