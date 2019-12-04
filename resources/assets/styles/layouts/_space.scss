@@ -84,7 +84,6 @@ article.space {
         height: 39px;
         background-color: $white !important;
         border-radius: $golden-ratio-4;
-        box-shadow: none;
 
         > input {
           font-size: $type-2;
@@ -343,6 +342,10 @@ article.space {
         .utk-space-slider-nav {
           z-index: 2;
           margin-top: -76px;
+
+          > .slick-list {
+            padding-left: $golden-ratio-2;
+          }
 
           .slick-slide {
             cursor: pointer !important;

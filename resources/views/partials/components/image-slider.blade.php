@@ -42,11 +42,12 @@
                 slidesToScroll: 1,
                 arrows: false,
                 fade: true,
+                autoplay: false,
                 asNavFor: '.utk-space-slider-nav',
                 accessibility: true
             });
             $('.utk-space-slider-nav').slick({
-                slidesToShow: 3,
+                slidesToShow: 5,
                 slidesToScroll: 1,
                 asNavFor: '.utk-space-slider-display',
                 variableWidth: true,
@@ -56,7 +57,7 @@
                 verticalSwiping: true,
                 rtl: false,
                 draggable: false,
-                centerMode: true,
+                centerMode: false,
                 focusOnSelect: true,
                 autoplay: false,
                 arrows: false,
