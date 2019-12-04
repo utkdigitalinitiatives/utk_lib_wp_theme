@@ -26,7 +26,9 @@
         <div class="utk-space--media--slider">
             @include('partials.components.image-slider')
         </div>
-        <div class="utk-space--media--slider--overlay"></div>
+        @if (count($data['fields']['space_images']) > 1)
+            <div class="utk-space--media--slider--overlay"></div>
+        @endif;
     </div>
     <div class="utk-space--content">
         <div class="utk-space--content--wrap">
