@@ -5,7 +5,6 @@
     .DayPickerInput {
       position: relative;
       height: $golden-ratio-4;
-      background-color: $white;
       transition: $transition-all;
       border-radius: $golden-ratio-4;
       box-shadow: $box-shadow;
@@ -83,8 +82,9 @@ article.space {
 
       .DayPickerInput {
         height: 39px;
-        background-color: $gray-0 !important;
+        background-color: $white !important;
         border-radius: $golden-ratio-4;
+        box-shadow: none;
 
         > input {
           font-size: $type-2;
@@ -288,10 +288,10 @@ article.space {
         padding-right: $golden-ratio-2;
         font-size: $type-2;
         font-weight: 700;
-        color: $smokey;
+        color: $white;
         display: flex;
         align-items: center;
-        background-color: $gray-1;
+        background-color: $smokeyx;
         border-radius: $golden-ratio-3;
       }
     }
