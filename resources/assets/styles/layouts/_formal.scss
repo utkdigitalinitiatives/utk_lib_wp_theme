@@ -185,7 +185,7 @@
           &:hover,
           &:focus {
             .article--grid--image {
-              transform: scale3d(1.04, 1.04, 1.04);
+              transform: scale(1.04, 1.04);
               box-shadow: $box-shadow-float;
 
               img {
