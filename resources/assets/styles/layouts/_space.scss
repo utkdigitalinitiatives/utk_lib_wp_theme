@@ -428,4 +428,21 @@ article.space {
       padding-bottom: $golden-ratio-5;
     }
   }
+
+  .page-body--content--body {
+    font-size: $type-2;
+    font-weight: 700;
+    align-items: center;
+
+    * {
+      margin: 0 9px;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      fill: $rock;
+      margin-right: -3px;
+    }
+  }
 }

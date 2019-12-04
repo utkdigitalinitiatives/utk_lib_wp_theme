@@ -55,6 +55,20 @@
   }
 
   .page-body--content--body {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased !important;
+
+    a,
+    a:visited,
+    a:focus,
+    a:hover {
+      color: $rock;
+    }
+
     p[style="text-align:center"]:first-child {
       font-size: $type-3;
       color: $gray-1 !important;

@@ -17,10 +17,27 @@ class Formal extends Controller
         $title = $content_post->post_title;
 
         if (get_post_type() === 'space' && !is_archive()) :
-            $location = get_the_terms($post_id, 'location');
-            $location_link = Space::getSpaceLocations($post_id, true);
-            $location_link = Space::getSpaceLocations($post_id, true);
-            $content = $location_link;
+            $location_link = '<svg id="utk_svg_space_space"
+     data-name="utk_svg_space_space"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 80.116 73.463">
+    <title>space room</title>
+    <polygon points="0 51.686 0 22.334 37.324 44.735 37.324 73.463 0 51.686"/>
+    <polygon points="42.793 44.735 80.116 22.332 80.116 51.686 42.793 73.463 42.793 44.735"/>
+    <polygon points="42.727 28.725 42.727 0 76.714 19.828 52.308 34.477 42.727 28.725"/>
+    <polygon points="3.404 19.828 37.387 0 37.387 28.725 27.809 34.477 3.404 19.828"/>
+</svg>' . Space::getSpaceLocations($post_id, true);
+            $location_type = '<svg id="utk_svg_space_space"
+     data-name="utk_svg_space_space"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 80.116 73.463">
+    <title>space room</title>
+    <polygon points="0 51.686 0 22.334 37.324 44.735 37.324 73.463 0 51.686"/>
+    <polygon points="42.793 44.735 80.116 22.332 80.116 51.686 42.793 73.463 42.793 44.735"/>
+    <polygon points="42.727 28.725 42.727 0 76.714 19.828 52.308 34.477 42.727 28.725"/>
+    <polygon points="3.404 19.828 37.387 0 37.387 28.725 27.809 34.477 3.404 19.828"/>
+</svg>' . Space::getSpaceType($post_id);
+            $content = $location_link . $location_type;
         else:
             $content = $content_post->post_content;
             $content = apply_filters('the_content', $content);
@@ -28,15 +45,15 @@ class Formal extends Controller
         endif;
 
         if (has_post_thumbnail($post_id)) :
-            $post_thumbnail = get_the_post_thumbnail(null,'gr_thumb');
+            $post_thumbnail = get_the_post_thumbnail(null, 'gr_thumb');
         else :
             $post_thumbnail = null;
         endif;
 
         if ($heading === false) :
-            $render_header = ' <span class="utk-heading-1" role="heading" aria-level="1">' . $title .'</span>';
+            $render_header = ' <span class="utk-heading-1" role="heading" aria-level="1">' . $title . '</span>';
         else :
-            $render_header = ' <h1 class="utk-heading-1" role="heading" aria-level="1">' . $title .'</h1>';
+            $render_header = ' <h1 class="utk-heading-1" role="heading" aria-level="1">' . $title . '</h1>';
         endif;
 
         $header = '
@@ -47,7 +64,7 @@ class Formal extends Controller
                     <div class="page-body--content--body">' . $content . '</div>
                 </div>
             </div>
-            <div class="utk-formal--header--background">' . $post_thumbnail. '</div>
+            <div class="utk-formal--header--background">' . $post_thumbnail . '</div>
         </div>';
 
         return $header;
@@ -66,7 +83,7 @@ class Formal extends Controller
         $data['title'] = get_the_title($post_id);
         $data['fields'] = get_fields($post_id);
 
-        $populate = '<div class="article--populate--inner article--populate--inner-' . $post_type .'">';
+        $populate = '<div class="article--populate--inner article--populate--inner-' . $post_type . '">';
         $populate .= self::renderInner($data, $post_type);
         $populate .= '</div>';
 
@@ -121,7 +138,7 @@ class Formal extends Controller
 
         $content .= $term_svg_wrap;
         $content .= '<div class="article--competency--wrap">';
-        $content .= '<h1 style="color: #' . $term_color .';">' . $post['title'] . '</h1>';
+        $content .= '<h1 style="color: #' . $term_color . ';">' . $post['title'] . '</h1>';
         $content .= '<div class="article--competency--definition">';
         $content .= '<h2>Definition</h2>';
         $content .= $post['fields']['competency_description'];
@@ -148,7 +165,7 @@ class Formal extends Controller
 
     private static function renderSpaceInner($post, $content = null)
     {
-        $content =  template('partials.content-space-modal', ['data' => $post]);
+        $content = template('partials.content-space-modal', ['data' => $post]);
 
         return $content;
     }
