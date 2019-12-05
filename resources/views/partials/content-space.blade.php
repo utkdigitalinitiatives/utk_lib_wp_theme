@@ -5,6 +5,13 @@
     $data['id'] = get_the_ID();
     $data['fields'] = get_fields();
 
+    $floor = $data['fields']['space_floor'];
+    $rooms = $data['fields']['space_rooms'];
+
+    $seats['number'] = $data['fields']['space_seats'];
+    $seats['approximate'] = $data['fields']['space_seats_approximate'];
+
+    $volume = $data['fields']['space_volume'];
     $reserve = $data['fields']['space_reserve'];
     $reserve_url = $data['fields']['space_reseve_url'];
 
@@ -27,6 +34,17 @@
                            class="btn btn-sm btn-secondary btn-inverse btn-outline">Reserve Space <span class="icon-right-big"></span></a>
                     @endif
                 </div>
+            </div>
+            <div class="utk-modal-meta utk-modal-meta-list">
+                <div class="utk-modal-meta--item">
+                    <span class="utk-modal-meta--item--label">
+                        @include('partials.svg.svg-space')
+                        Type:
+                    </span>
+                    <span class="utk-modal-meta--item--value">@php echo Space::getSpaceType($data['id'], true); @endphp</span>
+                </div>
+                @php echo Space::getSpaceCapacity($seats); @endphp
+                @php echo Space::getSpaceVolume($volume); @endphp
             </div>
             <div class="utk-space--details--description">
                 <p>Fusce tortor ante, 80+ congue vel erat a, dapibus convallis orci. Ut pharetra, urna at mattis dignissim, massa neque gravida purus, alma 200 id sagittis diam. In et nibh semper sapien vehicula dictum.</p>
