@@ -1,9 +1,9 @@
 .single-space {
   .page-body--formal-header {
-    padding-bottom: $golden-ratio-6;
+    padding-bottom: $golden-ratio-7;
 
     @include respond(xs, sm) {
-      padding-bottom: $golden-ratio-5;
+      padding-bottom: $golden-ratio-6;
     }
 
     .page-body--content--body {
@@ -43,13 +43,61 @@
 
   .utk-space--sheet {
     display: flex;
+    margin: -$golden-ratio-7 0 $golden-ratio-4;
+    position: relative;
+    z-index: 1;
 
     .utk-space--details {
       width: 50%;
+
+      &--interactions {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $golden-ratio-5;
+
+        .utk-space--hours {
+          .DayPickerInput {
+            box-shadow: $box-shadow-float;
+          }
+
+          .utk-space--time--span {
+            height: 39px !important;
+            margin-left: -$golden-ratio-5;
+            padding-left: calc(#{$golden-ratio-5 + $golden-ratio-2});
+            padding-right: $golden-ratio-2;
+            font-size: $type-2;
+            font-weight: 700;
+            color: $white !important;
+            display: flex;
+            align-items: center;
+            background-color: rgba($white, 0.11);
+            border-radius: $golden-ratio-3;
+            box-shadow: $box-shadow;
+          }
+        }
+
+        &--steps {
+          display: flex;
+          flex-direction: row;
+          margin-top: $golden-ratio-3;
+
+          .btn.btn-outline {
+            color: $white !important;
+            border-color: rgba($white, 0.11);
+            display: flex;
+            align-items: center;
+
+            > span {
+              font-size: $type-0;
+              margin-left: 6px;
+              color: $orange;
+            }
+          }
+        }
+      }
     }
 
     .utk-space--media {
-      margin: -$golden-ratio-6 0 $golden-ratio-4;
       background-color: transparent;
       width: 50%;
 

@@ -21,6 +21,12 @@ a.btn:visited {
     color: $white !important;
   }
 
+  &.btn-sm {
+    padding: $golden-ratio-0 $golden-ratio-2 !important;
+    font-size: $type-1;
+    text-transform: none;
+  }
+
   &.btn-inverse {
     background-color: $white;
     color: $globe;
