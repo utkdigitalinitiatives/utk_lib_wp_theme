@@ -49,6 +49,13 @@
 
     .utk-space--details {
       width: 50%;
+      padding-right: $golden-ratio-4;
+
+      &--description {
+        p {
+          font-size: $type-2;
+        }
+      }
 
       &--interactions {
         display: flex;

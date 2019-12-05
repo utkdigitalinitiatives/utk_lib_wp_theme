@@ -28,7 +28,7 @@
                     @endif
                 </div>
             </div>
-            <div class="utk-space--content--description">
+            <div class="utk-space--details--description">
                 <p>Fusce tortor ante, 80+ congue vel erat a, dapibus convallis orci. Ut pharetra, urna at mattis dignissim, massa neque gravida purus, alma 200 id sagittis diam. In et nibh semper sapien vehicula dictum.</p>
                 <p>Ut pharetra, urna at mattis dignissim, massa neque gravida purus, alma 200 id sagittis diam. In et nibh semper sapien vehicula dictum.</p>
             </div>
