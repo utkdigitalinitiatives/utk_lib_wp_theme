@@ -35,6 +35,15 @@
                     @endif
                 </div>
             </div>
+            <div class="utk-modal-meta">
+                <div class="utk-modal-meta--item">
+                    <span class="utk-modal-meta--item--label">Location</span>
+                    <span class="utk-modal-meta--item--value">@php echo Space::getSpaceLocations($data['id'], true); @endphp</span>
+                </div>
+                @php echo Space::getSpaceFloor($floor); @endphp
+                @php echo Space::getSpaceRooms($rooms); @endphp
+            </div>
+            <span class="utk-modal-separator"></span>
             <div class="utk-modal-meta utk-modal-meta-list">
                 <div class="utk-modal-meta--item">
                     <span class="utk-modal-meta--item--label">
@@ -46,6 +55,7 @@
                 @php echo Space::getSpaceCapacity($seats); @endphp
                 @php echo Space::getSpaceVolume($volume); @endphp
             </div>
+            <span class="utk-modal-separator"></span>
             <div class="utk-space--details--description">
                 <p>Fusce tortor ante, 80+ congue vel erat a, dapibus convallis orci. Ut pharetra, urna at mattis dignissim, massa neque gravida purus, alma 200 id sagittis diam. In et nibh semper sapien vehicula dictum.</p>
                 <p>Ut pharetra, urna at mattis dignissim, massa neque gravida purus, alma 200 id sagittis diam. In et nibh semper sapien vehicula dictum.</p>

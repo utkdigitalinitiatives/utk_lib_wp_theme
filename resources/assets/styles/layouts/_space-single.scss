@@ -61,6 +61,33 @@
         }
       }
 
+      .utk-modal-meta--item {
+        &--label {
+          font-size: $type-0;
+        }
+
+        &--value {
+          font-size: $type-3;
+        }
+      }
+
+      .utk-modal-meta-list {
+        .utk-modal-meta--item--label {
+          font-size: $type-1;
+        }
+
+        .utk-modal-meta--item--value {
+          font-size: $type-1;
+        }
+      }
+
+      .utk-modal-separator {
+        &::before {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+
       &--interactions {
         display: flex;
         flex-direction: column;
