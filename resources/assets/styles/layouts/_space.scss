@@ -419,33 +419,3 @@ article.space {
     }
   }
 }
-
-.single-space {
-  .page-body--formal-header {
-    padding-bottom: $golden-ratio-6;
-
-    @include respond(xs, sm) {
-      padding-bottom: $golden-ratio-5;
-    }
-
-    .page-body--content--body {
-      font-size: $type-1;
-      font-weight: 700;
-      align-items: center;
-      color: $gray-0;
-
-      > * {
-        margin: 0 9px;
-      }
-
-      svg {
-        width: 18px;
-        height: 18px;
-        fill: $rock;
-        margin-right: 6px;
-        position: relative;
-        margin-bottom: -4px;
-      }
-    }
-  }
-}

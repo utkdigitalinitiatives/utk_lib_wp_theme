@@ -3,6 +3,7 @@
   z-index: 0;
   padding: $golden-ratio-5 0 0;
   margin-top: $golden-ratio-4;
+  margin-bottom: $golden-ratio-4;
 
   @include respond(xs, sm) {
     margin-top: -23px;
@@ -56,17 +57,10 @@
 
   .page-body--content--body {
     text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
     -webkit-font-smoothing: antialiased !important;
 
-    a,
-    a:visited,
-    a:focus,
-    a:hover {
-      color: $gray-0;
+    .utk-button-nav {
+      margin-bottom: 0;
     }
 
     p[style="text-align:center"]:first-child {
