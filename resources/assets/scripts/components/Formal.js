@@ -21,7 +21,12 @@ export default class Formal {
         (function($, log) {
             $('.utk-space--back').on('click', function(e) {
                 e.preventDefault();
-                window.history.back();
+
+                if (document.referrer.includes('/hours/spaces')) {
+                    window.history.back();
+                } else {
+                    window.location.href = 'https://www.lib.utk.edu/hours/spaces/';
+                }
             });
         })(jQuery, console.log);
     }
