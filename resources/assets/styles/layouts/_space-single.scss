@@ -82,9 +82,13 @@
       }
 
       .utk-modal-separator {
+        height: 0;
+        margin-bottom: $golden-ratio-0;
+
         &::before {
           margin-left: 0;
           width: 100%;
+          background-color: $white;
         }
       }
 
