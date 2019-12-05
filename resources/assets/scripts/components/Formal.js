@@ -17,6 +17,13 @@ export default class Formal {
                 },100);
             });
         })(jQuery, console.log);
+
+        (function($, log) {
+            $('.utk-space--back').on('click', function(e) {
+                e.preventDefault();
+                window.history.back();
+            });
+        })(jQuery, console.log);
     }
 
     checkSVGs () {

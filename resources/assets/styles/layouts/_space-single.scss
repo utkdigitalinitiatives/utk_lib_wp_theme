@@ -7,29 +7,36 @@
     }
 
     .page-body--content--body {
-      font-size: $type-1;
-      font-weight: 700;
       align-items: center;
-      color: $gray-0;
 
-      a,
-      a:visited,
-      a:focus,
-      a:hover {
-        color: $gray-0;
-      }
+      .utk-space--header {
+        &--meta {
+          display: flex;
+          justify-content: center;
 
-      > * {
-        margin: 0 9px;
-      }
+          &--item {
+            margin: 0 9px;
+            font-size: $type-1;
+            font-weight: 700;
+            color: $gray-0;
 
-      svg {
-        width: 18px;
-        height: 18px;
-        fill: $rock;
-        margin-right: 6px;
-        position: relative;
-        margin-bottom: -4px;
+            a,
+            a:visited,
+            a:focus,
+            a:hover {
+              color: $white;
+            }
+
+            svg {
+              width: 15px;
+              height: 15px;
+              fill: $orange;
+              margin-right: 6px;
+              position: relative;
+              margin-bottom: -3px;
+            }
+          }
+        }
       }
     }
   }
