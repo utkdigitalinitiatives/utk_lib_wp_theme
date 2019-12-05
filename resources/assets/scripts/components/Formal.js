@@ -18,17 +18,14 @@ export default class Formal {
             });
         })(jQuery, console.log);
 
-        (function($, log) {
+        (function($, log, referrer) {
             $('.utk-space--back').on('click', function(e) {
-                e.preventDefault();
-
-                if (document.referrer.includes('/hours/spaces')) {
-                    window.history.back();
-                } else {
-                    window.location.href = 'https://www.lib.utk.edu/hours/spaces/';
+                if (referrer.includes('/hours/spaces')) {
+                    e.preventDefault();
+                    window.location.href = document.referrer;
                 }
             });
-        })(jQuery, console.log);
+        })(jQuery, console.log, document.referrer);
     }
 
     checkSVGs () {
