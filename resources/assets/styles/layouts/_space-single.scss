@@ -40,4 +40,59 @@
       }
     }
   }
+
+  .utk-space--sheet {
+    display: flex;
+
+    .utk-space--details {
+      width: 50%;
+    }
+
+    .utk-space--media {
+      margin: -$golden-ratio-6 0 $golden-ratio-4;
+      background-color: transparent;
+      width: 50%;
+
+      .utk-space--media--slider {
+        > img {
+          background-color: $rock;
+          box-shadow: $box-shadow-float-submenu;
+        }
+
+        .utk-space-slider-display {
+          background-color: $rock;
+          box-shadow: $box-shadow-float-submenu;
+          height: unset;
+
+          > div {
+            height: unset;
+          }
+        }
+
+        .utk-space-slider-nav {
+          margin-top: $golden-ratio-2;
+
+          .slick-list {
+            padding-left: 0;
+
+            .slick-slide {
+              margin-top: 0;
+
+              &::after {
+                box-shadow: none;
+              }
+
+              img {
+                box-shadow: none !important;
+              }
+            }
+          }
+        }
+
+        &--overlay {
+          display: none;
+        }
+      }
+    }
+  }
 }

@@ -5,7 +5,16 @@
 
 @endphp
 <article @php post_class() @endphp>
-    <div>
+    <div class="utk-space--sheet">
+        <div class="utk-space--details">
+            <div class="page-body--content--inner--interactions">
+                <a href="@php echo get_post_type_archive_link('space') @endphp"
+                   class="utk-space--back btn btn-primary">Back to Spaces</a>
+            </div>
+            <div>image gallery</div>
+            <div>info</div>
+            <div>description</div>
+        </div>
         <div class="utk-space--media">
             <div class="utk-space--media--slider">
                 @include('partials.components.image-slider')
@@ -13,11 +22,6 @@
             @if (count($data['fields']['space_images']) > 1)
                 <div class="utk-space--media--slider--overlay"></div>
             @endif
-        </div>
-        <div>
-            <div>image gallery</div>
-            <div>info</div>
-            <div>description</div>
         </div>
     </div>
     <div>
