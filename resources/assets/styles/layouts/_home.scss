@@ -5,16 +5,8 @@
     max-height: none !important;
     height: auto !important;
     overflow: auto;
-    padding-bottom: $golden-ratio-4 !important;
+    padding-bottom: $golden-ratio-3 !important;
     z-index: auto !important;
-
-    .utk-header-main-menu {
-      padding-top: $golden-ratio-2;
-
-      @include respond(xs, sm) {
-        padding-top: 0 !important;
-      }
-    }
 
     @include respond(xs, sm) {
       padding-top: 0 !important;
