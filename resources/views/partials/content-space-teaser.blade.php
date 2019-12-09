@@ -2,7 +2,11 @@
 
     Namespace UTKLibrary\Library\Models;
 
-    $images = get_field('space_images');
+    if (!$space_id) :
+        $space_id = get_the_ID();
+    endif;
+
+    $images = get_field('space_images', $space_id);
     $image_count = count($images);
 
     if ($image_count > 0) {
@@ -16,25 +20,27 @@
     }
 
     $classes = [];
-    $featured = get_field('space_featured');
+    $featured = get_field('space_featured', $space_id);
 
     if ($featured)
         array_push($classes, 'space-featured');
 
+
+    $space_daypicker = null;
     $space_hours = 'inherit';
-    $space_lid = Space::getLocationLID(get_the_ID());
+    $space_lid = Space::getLocationLID($space_id);
 
 @endphp
 <article @php post_class($classes) @endphp>
     <a class="article--trigger"
-       id="article-formal-@php echo get_the_ID() @endphp"
-       data-type="@php echo get_post_type() @endphp"
-       data-id="@php echo get_the_ID() @endphp"
-       href="@php the_permalink() @endphp">
+       id="article-formal-@php echo $space_id @endphp"
+       data-type="@php echo get_post_type($space_id) @endphp"
+       data-id="@php echo $space_id @endphp"
+       href="@php the_permalink($space_id) @endphp">
         <div class="article--context">
             <span class="article--close"><span class="icon-cancel"></span></span>
             <div class="article--grid--image"
-                 href="@php the_permalink() @endphp">
+                 href="@php the_permalink($space_id) @endphp">
                 @include('partials.components.image')
                 <div class="article--grid--image--overlay">
                     @include('partials.components.space-hours')
@@ -42,12 +48,12 @@
             </div>
             <header class="article--header">
                 <h2 class="article--header--title entry-title">
-                    @php the_title() @endphp
+                    @php echo get_the_title($space_id) @endphp
                 </h2>
                 <div class="article--meta article--meta-excerpt">
                     <div class="article--meta article--meta-categories">
                         <span class="article--meta-categories--dimple"></span>
-                        @php echo Space::getSpaceLocations(get_the_ID()); @endphp
+                        @php echo Space::getSpaceLocations($space_id); @endphp
                     </div>
                 </div>
             </header>

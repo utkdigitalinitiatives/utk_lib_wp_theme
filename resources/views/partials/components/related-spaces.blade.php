@@ -5,12 +5,11 @@
     $related = Space::getRelatedSpaces($data['id'], 4);
 
 @endphp
-<div>
+<div class="utk-spaces--related">
     @foreach($related as $space)
-        <div>
-            <a href="@php echo get_the_permalink($space) @endphp">
-                @php echo get_the_title($space) @endphp
-            </a>
-        </div>
+        @php
+            $space_id = $space;
+        @endphp
+        @include('partials.content-space-teaser')
     @endforeach
 </div>
