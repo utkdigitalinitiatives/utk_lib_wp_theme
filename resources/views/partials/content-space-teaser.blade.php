@@ -4,6 +4,9 @@
 
     if (!$space_id) :
         $space_id = get_the_ID();
+        $teaser_class = 'article--link article--trigger';
+    else :
+        $teaser_class = 'article--link';
     endif;
 
     $images = get_field('space_images', $space_id);
@@ -32,7 +35,7 @@
 
 @endphp
 <article @php post_class($classes) @endphp>
-    <a class="article--trigger"
+    <a class="@php echo $teaser_class @endphp"
        id="article-formal-@php echo $space_id @endphp"
        data-type="@php echo get_post_type($space_id) @endphp"
        data-id="@php echo $space_id @endphp"
