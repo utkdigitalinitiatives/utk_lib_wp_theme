@@ -76,6 +76,6 @@
         </div>
     </div>
     <footer>
-        You may also be interested in...
+        @include('partials.components.related-spaces')
     </footer>
 </article>
