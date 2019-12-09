@@ -1744,7 +1744,6 @@ body.utk-search-open .utk-search {
     margin: 11px 11px 11px 0; }
 
 .utk-hours {
-  margin-bottom: 29px;
   font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -1775,7 +1774,8 @@ body.utk-search-open .utk-search {
       display: block;
       width: 100%;
       margin: 29px 0 11px;
-      position: relative; }
+      position: relative;
+      letter-spacing: -0.029em; }
       .utk-hours .utk-hours-teaser--title::before {
         content: "";
         width: 76px;
