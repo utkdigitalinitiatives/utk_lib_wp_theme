@@ -1422,7 +1422,7 @@ body.utk-search-open .utk-search {
       align-content: center; } }
 
 .footer-libraries--anchor {
-  width: 303px;
+  width: calc(100% - (100% / 1.61803));
   display: flex;
   flex-direction: column;
   /* Mobile Devices for Mice */
