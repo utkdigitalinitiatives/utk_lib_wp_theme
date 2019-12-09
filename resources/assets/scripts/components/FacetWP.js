@@ -9,8 +9,8 @@ export default class FacetWP {
     }
 
     toggleFacetModal() {
-        (function($, log) {
-            $(document).on('facetwp-refresh', function() {
+        (function ($, log) {
+            $(document).on('facetwp-refresh', function () {
 
                 var meta = ' all ';
                 var string = null;
@@ -35,7 +35,7 @@ export default class FacetWP {
                 $('.utk-facets--label-string').html(string);
             });
 
-            $(document).on('click', '.utk-facets--label-data > a', function(e) {
+            $(document).on('click', '.utk-facets--label-data > a', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
 
@@ -52,23 +52,23 @@ export default class FacetWP {
                 $(this).remove();
             });
 
-            $(document).on('click', '.utk-facets--reset', function(e) {
+            $(document).on('click', '.utk-facets--reset', function (e) {
                 FWP.reset();
                 $('.utk-facets--label-meta').html('all');
                 $('.utk-facets--label-string').html('');
             });
 
-            $(document).on('click', '.utk-facets--toggle', function(e) {
+            $(document).on('click', '.utk-facets--toggle', function (e) {
                 $('.utk-facets--modal').addClass('utk-facets--modal-active');
                 $('body').addClass('utk-modal-open-xs');
             });
 
-            $(document).on('click', '.utk-facets--close', function(e) {
+            $(document).on('click', '.utk-facets--close', function (e) {
                 $('.utk-facets--modal').removeClass('utk-facets--modal-active');
                 $('body').removeClass('utk-modal-open-xs utk-modal-open');
             });
 
-            $(document).on('click', '.utk-modal-overlay', function(e) {
+            $(document).on('click', '.utk-modal-overlay', function (e) {
                 $('.utk-modal-populate').removeClass('loaded loading');
                 $('.utk-modal-populate .article--populate--inner').remove();
 

@@ -17,15 +17,6 @@ export default class Formal {
                 },100);
             });
         })(jQuery, console.log);
-
-        (function($, log, referrer) {
-            $('.utk-space--back').on('click', function(e) {
-                if (referrer.includes('/hours/spaces')) {
-                    e.preventDefault();
-                    window.location.href = document.referrer;
-                }
-            });
-        })(jQuery, console.log, document.referrer);
     }
 
     checkSVGs () {
