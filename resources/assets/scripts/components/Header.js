@@ -28,16 +28,19 @@ export default class Header {
     trackScrolling() {
 
         let trigger = document.getElementById('utk-trigger-header');
-        let triggerBounds = Header.getBounds(trigger);
 
-        /*
-         * small checkpoint
-         */
+        if (trigger !== null) {
+            let triggerBounds = Header.getBounds(trigger);
 
-        if (triggerBounds.top <= 0) {
-            document.body.classList.add('header-scroll-down');
-        } else {
-            document.body.classList.remove('header-scroll-down');
+            /*
+             * small checkpoint
+             */
+
+            if (triggerBounds.top <= 0) {
+                document.body.classList.add('header-scroll-down');
+            } else {
+                document.body.classList.remove('header-scroll-down');
+            }
         }
     }
 }

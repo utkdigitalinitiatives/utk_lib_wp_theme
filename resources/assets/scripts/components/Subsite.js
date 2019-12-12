@@ -45,18 +45,21 @@ export default class Subsite {
   trackScrollingSubsite() {
 
     let subsiteScroll = document.getElementById('subsite-scroll-trigger');
-    let subsiteScrollBounds = Subsite.getBounds(subsiteScroll);
 
     let help = document.getElementById('subsite-menu-help');
     let helpTop = document.getElementById('subsite-menu-top');
     let helpBounds = Subsite.getBounds(help);
 
-    if (helpBounds.top > subsiteScrollBounds.top) {
-      $( help ).addClass( "subsite-menu-help--scrolled" );
-      $( helpTop ).addClass( "subsite-menu-help--scrolled" );
-    } else {
-      $( help ).removeClass( "subsite-menu-help--scrolled" );
-      $( helpTop ).removeClass( "subsite-menu-help--scrolled" );
+    if (subsiteScroll !== null && helpBounds !== null) {
+      let subsiteScrollBounds = Subsite.getBounds(subsiteScroll);
+
+      if (helpBounds.top > subsiteScrollBounds.top) {
+        $( help ).addClass( "subsite-menu-help--scrolled" );
+        $( helpTop ).addClass( "subsite-menu-help--scrolled" );
+      } else {
+        $( help ).removeClass( "subsite-menu-help--scrolled" );
+        $( helpTop ).removeClass( "subsite-menu-help--scrolled" );
+      }
     }
   }
 }

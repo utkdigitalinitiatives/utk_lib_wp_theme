@@ -7,6 +7,7 @@
     overflow: auto;
     padding-bottom: $golden-ratio-3 !important;
     z-index: auto !important;
+    margin-top: 0;
 
     @include respond(xs, sm) {
       padding-top: 0 !important;
@@ -22,6 +23,12 @@
     .utk-header-super .utk-menu-options {
       z-index: 1099;
     }
+  }
+}
+
+.header-scroll-down {
+  .utk-home {
+    margin-top: 83px;
   }
 }
 

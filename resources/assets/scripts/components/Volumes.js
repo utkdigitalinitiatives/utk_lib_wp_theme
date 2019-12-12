@@ -13,48 +13,54 @@ export default class Volumes {
         (function($, log) {
             $(window).scroll(function() {
                 let trigger = document.getElementById('utk-trigger-header');
-                let triggerBounds = Header.getBounds(trigger);
 
-                $('.utk-entity-volumes .page-header--title-wrap').css({
-                    opacity: function() {
-                        return triggerBounds.top / 100;
-                    }
-                });
+                if (trigger !== null) {
+                    let triggerBounds = Header.getBounds(trigger);
+                    
+                    $('.utk-entity-volumes .page-header--title-wrap').css({
+                        opacity: function() {
+                            return triggerBounds.top / 100;
+                        }
+                    });
 
-                $('.utk-entity-volumes .page-header-truncate .page-header--float .page-header--float--optional-overlay').css({
-                    opacity: function() {
-                        return triggerBounds.top / 100;
-                    }
-                });
+                    $('.utk-entity-volumes .page-header-truncate .page-header--float .page-header--float--optional-overlay').css({
+                        opacity: function() {
+                            return triggerBounds.top / 100;
+                        }
+                    });
 
-                $('.utk-entity-volumes #menu-subsite-dropdown-wrap').css({
-                    opacity: function() {
-                        return triggerBounds.top / 100;
-                    }
-                });
+                    $('.utk-entity-volumes #menu-subsite-dropdown-wrap').css({
+                        opacity: function() {
+                            return triggerBounds.top / 100;
+                        }
+                    });
+                }
             });
 
             $(document).ready(function() {
                 let trigger = document.getElementById('utk-trigger-header');
-                let triggerBounds = Header.getBounds(trigger);
 
-                $('.utk-entity-volumes .page-header--title-wrap').css({
-                    opacity: function() {
-                        return triggerBounds.top / 200;
-                    }
-                });
+                if (trigger !== null) {
+                    let triggerBounds = Header.getBounds(trigger);
 
-                $('.utk-entity-volumes .page-header-truncate .page-header--float .page-header--float--optional-overlay').css({
-                    opacity: function() {
-                        return triggerBounds.top / 200;
-                    }
-                });
+                    $('.utk-entity-volumes .page-header--title-wrap').css({
+                        opacity: function () {
+                            return triggerBounds.top / 200;
+                        }
+                    });
 
-                $('.utk-entity-volumes #menu-subsite-dropdown-wrap').css({
-                    opacity: function() {
-                        return triggerBounds.top / 200;
-                    }
-                });
+                    $('.utk-entity-volumes .page-header-truncate .page-header--float .page-header--float--optional-overlay').css({
+                        opacity: function () {
+                            return triggerBounds.top / 200;
+                        }
+                    });
+
+                    $('.utk-entity-volumes #menu-subsite-dropdown-wrap').css({
+                        opacity: function () {
+                            return triggerBounds.top / 200;
+                        }
+                    });
+                }
             });
         })(jQuery, console.log);
     }
