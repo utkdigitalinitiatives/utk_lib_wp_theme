@@ -33,7 +33,7 @@
 @endphp
 
 <article @php post_class() @endphp>
-    <a class="article--trigger"
+    <a class="article--link article--trigger"
        id="article-formal-@php echo get_the_ID() @endphp"
        data-type="@php echo get_post_type() @endphp"
        data-id="@php echo get_the_ID() @endphp"
