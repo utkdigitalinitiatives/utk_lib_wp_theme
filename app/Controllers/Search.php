@@ -29,26 +29,26 @@ class Search extends Controller
         if (isset($_POST['primo'])) :
             switch ($_POST['primo']) :
                 case 'onesearch':
-                    $scope = 'OneSearch';
+                    $scope = 'MyInst_and_CI';
                     $tab = 'default_tab';
                     break;
                 case 'ut-collections':
-                    $scope = 'default_scope';
+                    $scope = 'MyInstitution';
                     $tab = 'local_tab';
                     break;
                 case 'course-reserves':
-                    $scope = 'UTK_CR';
+                    $scope = 'CourseReserves';
                     $tab = 'cr_tab';
                     break;
             endswitch;
         else :
-            $scope = 'OneSearch';
+            $scope = 'MyInst_and_CI';
             $tab = 'default_tab';
         endif;
 
         // base url for primo
         $url="https://utk.primo.exlibrisgroup.com/discovery";
-        $url.="/search?vid=01UTK_KNOXVILLE:01UTK&institution=01UTK";
+        $url.="/search?vid=01UTN_KNOXVILLE:01UTK&institution=01UTK";
         $url.="&facet=rtype,exclude,reviews&facet=rtype,exclude,reference_entrys";
         $url.="&search_scope=" . $scope . '&tab=' . $tab;
         $url.="&onCampus=false&group=GUEST";
