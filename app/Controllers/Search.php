@@ -47,7 +47,7 @@ class Search extends Controller
         endif;
 
         // base url for primo
-        $url="https://utk-almaprimo.hosted.exlibrisgroup.com/primo-explore";
+        $url="https://utk.primo.exlibrisgroup.com/discovery";
         $url.="/search?vid=01UTK&institution=01UTK";
         $url.="&facet=rtype,exclude,reviews&facet=rtype,exclude,reference_entrys";
         $url.="&search_scope=" . $scope . '&tab=' . $tab;
