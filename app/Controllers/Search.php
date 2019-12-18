@@ -30,20 +30,20 @@ class Search extends Controller
             switch ($_POST['primo']) :
                 case 'onesearch':
                     $scope = 'MyInst_and_CI';
-                    $tab = 'default_tab';
+                    $tab = 'Everything';
                     break;
                 case 'ut-collections':
                     $scope = 'MyInstitution';
-                    $tab = 'local_tab';
+                    $tab = 'LibraryCatalog';
                     break;
                 case 'course-reserves':
                     $scope = 'CourseReserves';
-                    $tab = 'cr_tab';
+                    $tab = 'CourseReserves';
                     break;
             endswitch;
         else :
             $scope = 'MyInst_and_CI';
-            $tab = 'default_tab';
+            $tab = 'Everything';
         endif;
 
         // base url for primo
