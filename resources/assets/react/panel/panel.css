@@ -627,8 +627,10 @@ body .utk-research-tools .ui.dropdown .menu > .item {
     display: flex;
     text-align: right;
     padding-right: 76px;
+    letter-spacing: 0.029em;
     margin-top: 3px;
     text-transform: uppercase;
+    -webkit-font-smoothing: antialiased !important;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
     /* Landscape phones and down */
@@ -752,6 +754,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
         opacity: 0.88;
         color: #fff;
         margin-right: 29px;
+        -webkit-font-smoothing: antialiased !important;
         /* Mobile Devices for Mice */
         /* Landscape phones and down */
         /* Landscape phones and down */
@@ -767,12 +770,12 @@ body .utk-research-tools .ui.dropdown .menu > .item {
       .utk-search .utk-search-tabs > .ui.menu a,
       .utk-search .utk-search-tabs > .ui.menu a:visited {
         color: #fff !important;
-        font-size: 13px;
+        font-size: 15px;
         white-space: inherit;
         text-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
-        text-transform: uppercase !important;
         margin-top: 6px;
-        -webkit-font-smoothing: subpixel-antialiased;
+        -webkit-font-smoothing: antialiased !important;
+        letter-spacing: -0.018em;
         cursor: pointer;
         padding: 0 0;
         margin-right: 18px;
