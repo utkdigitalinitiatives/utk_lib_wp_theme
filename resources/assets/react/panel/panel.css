@@ -1038,6 +1038,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
     margin-top: 0;
     opacity: 0.88;
     color: #fff !important;
+    -webkit-font-smoothing: antialiased !important;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
     /* Landscape phones and down */
