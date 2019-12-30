@@ -139,6 +139,8 @@ article.space {
     position: absolute;
     left: $golden-ratio-2;
     bottom: $golden-ratio-0;
+    font-size: $type-0;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
