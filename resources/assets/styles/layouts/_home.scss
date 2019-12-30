@@ -29,6 +29,10 @@
 .header-scroll-down {
   .utk-home {
     margin-top: 83px;
+
+    @include respond(xs, sm) {
+      margin-top: 0;
+    }
   }
 }
 
