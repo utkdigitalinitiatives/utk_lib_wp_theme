@@ -2,7 +2,7 @@
   header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: $golden-ratio-4;
+    margin-bottom: $golden-ratio-5;
 
     @include respond(sm) {
       justify-content: space-evenly;
