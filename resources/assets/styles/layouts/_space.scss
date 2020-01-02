@@ -116,7 +116,8 @@ article.space {
       }
     }
 
-    &--time {
+    &--time,
+    &--hours-message {
       font-weight: 700;
       font-style: normal;
       font-size: $type-1;
@@ -135,7 +136,8 @@ article.space {
     }
   }
 
-  .article--grid--image .utk-space--time {
+  .article--grid--image .utk-space--time,
+  .article--grid--image .utk-space--hours-message {
     position: absolute;
     left: $golden-ratio-2;
     bottom: $golden-ratio-0;

@@ -33,6 +33,8 @@
     $space_hours = 'inherit';
     $space_lid = Space::getLocationLID($space_id);
 
+    $show_hours = get_field('space_show_hours', $space_id);
+
 @endphp
 <article @php post_class($classes) @endphp>
     <a class="@php echo $teaser_class @endphp"
@@ -46,7 +48,13 @@
                  href="@php the_permalink($space_id) @endphp">
                 @include('partials.components.image')
                 <div class="article--grid--image--overlay">
-                    @include('partials.components.space-hours')
+                    @if($show_hours)
+                        @include('partials.components.space-hours')
+                    @else
+                        <span class="utk-space--hours-message">
+                            @php echo get_field('space_hours_message', $space_id); @endphp
+                        </span>
+                    @endif
                 </div>
             </div>
             <header class="article--header">
