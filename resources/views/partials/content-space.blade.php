@@ -57,8 +57,7 @@
             </div>
             <span class="utk-modal-separator"></span>
             <div class="utk-space--details--description">
-                <p>Fusce tortor ante, 80+ congue vel erat a, dapibus convallis orci. Ut pharetra, urna at mattis dignissim, massa neque gravida purus, alma 200 id sagittis diam. In et nibh semper sapien vehicula dictum.</p>
-                <p>Ut pharetra, urna at mattis dignissim, massa neque gravida purus, alma 200 id sagittis diam. In et nibh semper sapien vehicula dictum.</p>
+                @php the_content() @endphp
             </div>
         </div>
         <div class="utk-space--media">
@@ -68,11 +67,6 @@
             @if (count($data['fields']['space_images']) > 1)
                 <div class="utk-space--media--slider--overlay"></div>
             @endif
-        </div>
-    </div>
-    <div>
-        <div class="entry-content">
-            @php the_content() @endphp
         </div>
     </div>
     <footer>

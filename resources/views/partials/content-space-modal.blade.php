@@ -17,16 +17,22 @@
     $space_hours = 'inherit';
     $space_lid = Space::getLocationLID($id);
 
+    $permalink = get_the_permalink($id);
+
+    $content = get_the_content(null, null, $id);
+    $content = apply_filters( 'the_content', $content );
+    $content = str_replace( ']]>', ']]&gt;', $content );
+
 @endphp
 <article @php post_class('space', $id) @endphp>
     <div class="utk-space--content">
         <div class="utk-space--content--wrap">
             <header>
-                <a href="@php the_permalink($id) @endphp" class="utk-space--permalink">
+                <a href="@php echo $permalink @endphp" class="utk-space--permalink">
                     <h3>@php echo $data['title']; @endphp</h3>
                 </a>
                 <div class="utk-space--content--wrap--funnel">
-                    <a href="@php the_permalink($id) @endphp">More Details <span class="icon-right-big"></span></a>
+                    <a href="@php echo $permalink @endphp">More Details <span class="icon-right-big"></span></a>
                     @if($reserve === 'Yes')
                         <a href="{{$reserve_url}}">Reserve Space <span class="icon-right-big"></span></a>
                     @endif
@@ -54,7 +60,7 @@
                 @php echo Space::getSpaceVolume($volume); @endphp
             </div>
             <div class="utk-space--content--description">
-                get_content();
+                @php echo $content; @endphp
             </div>
         </div>
     </div>
