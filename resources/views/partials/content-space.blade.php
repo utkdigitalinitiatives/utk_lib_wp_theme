@@ -15,10 +15,19 @@
     $reserve = $data['fields']['space_reserve'];
     $reserve_url = $data['fields']['space_reseve_url'];
 
+    $show_hours = get_field('space_show_hours', $space_id);
+    $inherit_hours = get_field('space_inherit_hours', $space_id);
+
     $space_daypicker = 'show';
-    $space_hours = 'inherit';
-    $space_lid = Space::getLocationLID($data['id']);
-    $space_message = null;
+
+    if ($show_hours && $inherit_hours) {
+        $space_hours = 'inherit';
+        $space_lid = Space::getLocationLID($data['id']);
+        $space_message = null;
+    } else if (!$show_hours) {
+        $space_hours = 'message';
+        $space_message = get_field('space_hours_message', $space_id);
+    }
 
 @endphp
 <article @php post_class() @endphp>
