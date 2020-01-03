@@ -92,7 +92,7 @@ body.utk-modal-open-xs {
   min-width: 942px;
   opacity: 0;
   transform: translate(-18%, -29%) rotateZ(-6deg);
-  transition: transform 470ms 0s cubic-bezier(0, 1, 0.3, 1), opacity 290ms 0s ease-out;
+  transition: transform 290ms 0s cubic-bezier(0, 1, 0.3, 1), opacity 180ms 0s ease-out;
   transform-origin: center;
 
   @include respond(sm) {
@@ -117,7 +117,8 @@ body.utk-modal-open-xs {
     transition: $transition-all;
     padding: $golden-ratio-4;
     width: 100%;
-    height: 470px;
+    height: 366.5px;
+    max-height: 470px;
     position: relative;
     box-shadow: $box-shadow-float-submenu;
 

@@ -147,12 +147,19 @@ article.space {
 }
 
 .page-body--content-formal .facetwp-template > .facetwp-template--articles {
-  margin-left: -18px;
-  width: calc(100% + 36px);
+  margin-left: -23.5px;
+  width: calc(100% + 47px);
+
+  @include respond(md, sm) {
+    margin-left: -14.5px;
+    width: calc(100% + 29px);
+  }
 
   @include respond(xs) {
     flex-basis: 100%;
     padding: 0;
+    margin-left: 0;
+    width: 100%;
   }
 
   article.space {
@@ -161,17 +168,34 @@ article.space {
     margin-right: 0 !important;
     padding: 0 23.5px;
 
+    &.space-featured {
+      flex-basis: calc(100% / 2);
+
+      @include respond(md, sm) {
+        flex-basis: calc(100% / 2) !important;
+        padding: 0 14.5px;
+      }
+
+      @include respond(xs) {
+        flex-basis: calc(100% / 1) !important;
+        padding: 0;
+      }
+    }
+
     @include respond(md) {
       flex-basis: calc(100% / 3);
+      padding: 0 14.5px;
     }
 
     @include respond(sm) {
-      flex-basis: calc(100% / 2);
+      flex-basis: calc(100% / 2) !important;
+      padding: 0 14.5px;
     }
 
     @include respond(xs) {
-      flex-basis: 100%;
+      flex-basis: 100% !important;
       padding: 0;
+      margin-bottom: $golden-ratio-1;
     }
 
     .utk-space--time {
