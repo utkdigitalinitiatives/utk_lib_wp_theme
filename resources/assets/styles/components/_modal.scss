@@ -121,6 +121,7 @@ body.utk-modal-open-xs {
     max-height: 470px;
     position: relative;
     box-shadow: $box-shadow-float-submenu;
+    overflow: hidden;
 
     @include respond(xs) {
       height: 100%;

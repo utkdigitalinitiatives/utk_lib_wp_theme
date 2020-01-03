@@ -301,6 +301,18 @@ article.space {
       left: $gr-short;
       padding: $golden-ratio-2 0 0 $golden-ratio-2;
 
+      @include respond(xs) {
+        left: 0;
+        position: relative;
+        align-self: flex-start;
+        order: 1;
+        top: unset;
+
+        .utk-space--hours {
+          flex-direction: column;
+        }
+      }
+
       .utk-date-picker {
         font-size: $type-1;
 
