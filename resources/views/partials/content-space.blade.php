@@ -13,7 +13,10 @@
 
     $volume = $data['fields']['space_volume'];
     $reserve = $data['fields']['space_reserve'];
+    $reserve_button = $data['fields']['space_reserve_button'];
+    $reserve_text = $data['fields']['space_reserve_button_text'];
     $reserve_url = $data['fields']['space_reseve_url'];
+    $reserve_directions = $data['fields']['space_reserve_directions'];
 
     $show_hours = get_field('space_show_hours', $space_id);
     $inherit_hours = get_field('space_inherit_hours', $space_id);
@@ -39,8 +42,10 @@
                     <a href="@php echo get_post_type_archive_link('space') @endphp"
                        class="utk-space--back btn btn-sm btn-secondary btn-inverse btn-outline">Back to Spaces</a>
                     @if($reserve === 'Yes')
-                        <a href="{{$reserve_url}}"
-                           class="btn btn-sm btn-secondary btn-inverse btn-outline">Reserve Space <span class="icon-right-big"></span></a>
+                        @if ($reserve_button)
+                            <a href="{{$reserve_url}}"
+                               class="btn btn-sm btn-secondary btn-inverse btn-outline">@php echo $reserve_text @endphp <span class="icon-right-big"></span></a>
+                        @endif
                     @endif
                 </div>
             </div>
@@ -67,6 +72,14 @@
             <span class="utk-modal-separator"></span>
             <div class="utk-space--details--description">
                 @php the_content() @endphp
+                @if ($reserve_directions)
+                    @if ($reserve_button)
+                        <a href="@php echo $reserve_url @endphp">
+                            <h5>@php echo $reserve_text @endphp</h5>
+                        </a>
+                    @endif
+                    @php echo $reserve_directions @endphp
+                @endif
             </div>
         </div>
         <div class="utk-space--media">
