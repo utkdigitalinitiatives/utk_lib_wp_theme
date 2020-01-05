@@ -265,7 +265,7 @@ article.space {
         h3 {
           margin: 0 0 $golden-ratio-2;
           padding: 0;
-          font-size: $type-3;
+          font-size: $type-4;
           line-height: 1.29em;
           font-weight: 700;
           letter-spacing: -0.029em;
@@ -292,14 +292,17 @@ article.space {
 
     .utk-space-actions {
       display: flex;
-      margin-bottom: $golden-ratio-2;
+      margin-bottom: $golden-ratio-1;
       flex-wrap: wrap;
       justify-content: space-between;
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      left: $gr-short;
-      padding: $golden-ratio-2 0 0 $golden-ratio-2;
+
+      .utk-space--hours {
+        flex-direction: column;
+
+        .DayPickerInput > input {
+          font-size: $type-1;
+        }
+      }
 
       @include respond(xs) {
         left: 0;
@@ -331,17 +334,12 @@ article.space {
 
       .utk-space--time--span,
       .utk-space--time-message {
-        height: 39px !important;
-        margin-left: -$golden-ratio-5;
-        padding-left: calc(#{$golden-ratio-5 + $golden-ratio-2});
-        padding-right: $golden-ratio-2;
         font-size: $type-2;
         font-weight: 700;
-        color: $white;
+        color: $smokey;
         display: flex;
         align-items: center;
-        background-color: $smokeyx;
-        border-radius: $golden-ratio-3;
+        margin-top: $golden-ratio-1;
       }
     }
   }

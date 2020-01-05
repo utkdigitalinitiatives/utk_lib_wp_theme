@@ -17,9 +17,19 @@
     $reserve_url = $data['fields']['space_reseve_url'];
     $reserve_directions = $data['fields']['space_reserve_directions'];
 
+    $show_hours = $data['fields']['space_show_hours'];
+    $inherit_hours = $data['fields']['space_inherit_hours'];
+
     $space_daypicker = 'show';
-    $space_hours = 'inherit';
-    $space_lid = Space::getLocationLID($id);
+
+    if ($show_hours && $inherit_hours) {
+        $space_hours = 'inherit';
+        $space_lid = Space::getLocationLID($id);
+        $space_message = null;
+    } else if (!$show_hours) {
+        $space_hours = 'message';
+        $space_message = $data['fields']['space_hours_message'];
+    }
 
     $permalink = get_the_permalink($id);
 
@@ -44,6 +54,10 @@
                     @endif
                 </div>
             </header>
+            <span class="utk-modal-separator"></span>
+            <div class="utk-space-actions">
+                @include('partials.components.space-hours')
+            </div>
             <span class="utk-modal-separator"></span>
             <div class="utk-modal-meta">
                 <div class="utk-modal-meta--item">
@@ -78,9 +92,6 @@
                 @endif
             </div>
         </div>
-    </div>
-    <div class="utk-space-actions">
-        @include('partials.components.space-hours')
     </div>
     <div class="utk-space--media">
         <div class="utk-space--media--slider">
