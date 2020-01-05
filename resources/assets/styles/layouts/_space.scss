@@ -224,16 +224,18 @@ article.space {
         line-height: 1.29em;
         font-weight: 700;
         letter-spacing: -0.029em;
-        color: $smokeyx;
+        color: $smokey;
         text-shadow: $box-shadow-float-submenu;
       }
     }
 
     .utk-space--content {
       width: $gr-short;
-      position: relative;
+      position: absolute;
+      right: 0;
+      top: 0;
       z-index: 0;
-      height: 470px;
+      height: 100%;
 
       @include respond(xs) {
         width: 100%;
@@ -365,8 +367,7 @@ article.space {
   background-color: $gray-0;
   position: relative;
   z-index: 1;
-  padding: $golden-ratio-3;
-  height: 470px;
+  padding: $golden-ratio-3 $golden-ratio-3 9px;
 
   @include respond(xs) {
     width: 100%;

@@ -117,8 +117,7 @@ body.utk-modal-open-xs {
     transition: $transition-all;
     padding: $golden-ratio-4;
     width: 100%;
-    height: 470px;
-    max-height: 470px;
+    min-height: 470px;
     position: relative;
     box-shadow: $box-shadow-float-submenu;
     overflow: hidden;
