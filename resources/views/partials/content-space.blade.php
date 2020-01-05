@@ -12,6 +12,7 @@
     $seats['approximate'] = $data['fields']['space_seats_approximate'];
 
     $volume = $data['fields']['space_volume'];
+    $access = $data['fields']['space_access'];
     $reserve = $data['fields']['space_reserve'];
     $reserve_button = $data['fields']['space_reserve_button'];
     $reserve_text = $data['fields']['space_reserve_button_text'];
@@ -68,6 +69,7 @@
                 </div>
                 @php echo Space::getSpaceCapacity($seats); @endphp
                 @php echo Space::getSpaceVolume($volume); @endphp
+                @php echo Space::getSpaceAccess($access); @endphp
             </div>
             <span class="utk-modal-separator"></span>
             <div class="utk-space--details--description">
