@@ -39,22 +39,29 @@
 
 @endphp
 <article @php post_class('space', $id) @endphp>
+    <div class="utk-space--media">
+        <header>
+            <a href="@php echo $permalink @endphp" class="utk-space--permalink">
+                <h3>@php echo $data['title']; @endphp</h3>
+            </a>
+            <div class="utk-space--content--wrap--funnel">
+                <a href="@php echo $permalink @endphp">More Details <span class="icon-right-big"></span></a>
+                @if($reserve === 'Yes')
+                    @if ($reserve_button)
+                        <a href="{{$reserve_url}}">@php echo $reserve_text @endphp <span class="icon-right-big"></span></a>
+                    @endif
+                @endif
+            </div>
+        </header>
+        <div class="utk-space--media--slider">
+            @include('partials.components.image-slider')
+        </div>
+        @if (count($data['fields']['space_images']) > 1)
+            <div class="utk-space--media--slider--overlay"></div>
+        @endif
+    </div>
     <div class="utk-space--content">
         <div class="utk-space--content--wrap">
-            <header>
-                <a href="@php echo $permalink @endphp" class="utk-space--permalink">
-                    <h3>@php echo $data['title']; @endphp</h3>
-                </a>
-                <div class="utk-space--content--wrap--funnel">
-                    <a href="@php echo $permalink @endphp">More Details <span class="icon-right-big"></span></a>
-                    @if($reserve === 'Yes')
-                        @if ($reserve_button)
-                            <a href="{{$reserve_url}}">@php echo $reserve_text @endphp <span class="icon-right-big"></span></a>
-                        @endif
-                    @endif
-                </div>
-            </header>
-            <span class="utk-modal-separator"></span>
             <div class="utk-space-actions">
                 @include('partials.components.space-hours')
             </div>
@@ -92,13 +99,5 @@
                 @endif
             </div>
         </div>
-    </div>
-    <div class="utk-space--media">
-        <div class="utk-space--media--slider">
-            @include('partials.components.image-slider')
-        </div>
-        @if (count($data['fields']['space_images']) > 1)
-            <div class="utk-space--media--slider--overlay"></div>
-        @endif
     </div>
 </article>

@@ -210,15 +210,30 @@ article.space {
   article {
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
 
     @include respond(xs) {
       flex-direction: column-reverse;
+    }
+
+    header {
+      h3 {
+        margin: 0 0 $golden-ratio-1;
+        padding: 0;
+        font-size: $type-3;
+        line-height: 1.29em;
+        font-weight: 700;
+        letter-spacing: -0.029em;
+        color: $smokeyx;
+        text-shadow: $box-shadow-float-submenu;
+      }
     }
 
     .utk-space--content {
       width: $gr-short;
       position: relative;
       z-index: 0;
+      height: 470px;
 
       @include respond(xs) {
         width: 100%;
@@ -347,9 +362,11 @@ article.space {
 
 .utk-space--media {
   width: $gr-long;
-  background-color: $smokey;
+  background-color: $gray-0;
   position: relative;
   z-index: 1;
+  padding: $golden-ratio-3;
+  height: 470px;
 
   @include respond(xs) {
     width: 100%;
@@ -364,6 +381,7 @@ article.space {
 
     > img {
       height: 100%;
+      width: 100%;
       object-fit: cover;
       overflow: hidden;
     }
@@ -374,28 +392,22 @@ article.space {
       top: 0;
       z-index: 0;
       width: 100%;
-      height: 100%;
 
       div {
         width: 100%;
-        height: 100%;
         display: flex;
       }
 
       img {
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         overflow: hidden;
       }
     }
 
     .utk-space-slider-nav {
       z-index: 2;
-      margin-top: -76px;
-
-      > .slick-list {
-        padding-left: $golden-ratio-2;
-      }
+      margin-top: 9px;
 
       .slick-slide {
         cursor: pointer !important;
@@ -437,11 +449,11 @@ article.space {
       bottom: 0;
       height: $golden-ratio-6;
       width: 100%;
-      display: flex;
       justify-content: flex-start;
       align-items: flex-end;
       align-content: flex-end;
       padding: $golden-ratio-2;
+      display: none;
 
       @include filter-gradient(rgba($smokeyx, 0), 0, rgba($smokeyx, 0.92), calc(100% - 47px));
 
