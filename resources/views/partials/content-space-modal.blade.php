@@ -44,13 +44,13 @@
             <a href="@php echo $permalink @endphp" class="utk-space--permalink">
                 <h3>@php echo $data['title']; @endphp</h3>
             </a>
-            <div class="utk-space--content--wrap--funnel">
-                <a href="@php echo $permalink @endphp">More Details <span class="icon-right-big"></span></a>
-                @if($reserve === 'Yes')
-                    @if ($reserve_button)
-                        <a href="{{$reserve_url}}">@php echo $reserve_text @endphp <span class="icon-right-big"></span></a>
-                    @endif
-                @endif
+            <div class="utk-modal-meta">
+                <div class="utk-modal-meta--item">
+                    <span class="utk-modal-meta--item--label">Location</span>
+                    <span class="utk-modal-meta--item--value">@php echo Space::getSpaceLocations($id, true); @endphp</span>
+                </div>
+                @php echo Space::getSpaceFloor($floor); @endphp
+                @php echo Space::getSpaceRooms($rooms); @endphp
             </div>
         </header>
         <div class="utk-space--media--slider">
@@ -61,18 +61,17 @@
         @endif
     </div>
     <div class="utk-space--content">
+        <div class="utk-space--content--wrap--funnel">
+            <a class="btn btn-with-icon" href="@php echo $permalink @endphp">More Details <span class="icon-right-big"></span></a>
+            @if($reserve === 'Yes')
+                @if ($reserve_button)
+                    <a class="btn btn-with-icon" href="{{$reserve_url}}">@php echo $reserve_text @endphp <span class="icon-right-big"></span></a>
+                @endif
+            @endif
+        </div>
         <div class="utk-space--content--wrap">
             <div class="utk-space-actions">
                 @include('partials.components.space-hours')
-            </div>
-            <span class="utk-modal-separator"></span>
-            <div class="utk-modal-meta">
-                <div class="utk-modal-meta--item">
-                    <span class="utk-modal-meta--item--label">Location</span>
-                    <span class="utk-modal-meta--item--value">@php echo Space::getSpaceLocations($id, true); @endphp</span>
-                </div>
-                @php echo Space::getSpaceFloor($floor); @endphp
-                @php echo Space::getSpaceRooms($rooms); @endphp
             </div>
             <span class="utk-modal-separator"></span>
             <div class="utk-modal-meta utk-modal-meta-list">

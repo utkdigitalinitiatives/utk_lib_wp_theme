@@ -206,6 +206,7 @@ article.space {
 
 .utk-modal .article--populate--inner-space {
   padding: 0;
+  background-color: $gray-0;
 
   article {
     height: 100%;
@@ -218,11 +219,12 @@ article.space {
 
     header {
       h3 {
-        margin: 0 0 $golden-ratio-1;
+        margin: 0 0 $golden-ratio-2;
         padding: 0;
-        font-size: $type-3;
+        font-size: $type-4;
         line-height: 1.29em;
-        font-weight: 700;
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
         letter-spacing: -0.029em;
         color: $smokey;
         text-shadow: $box-shadow-float-submenu;
@@ -234,8 +236,10 @@ article.space {
       position: absolute;
       right: 0;
       top: 0;
-      z-index: 0;
+      z-index: 1;
       height: 100%;
+      background-color: $white;
+      box-shadow: $box-shadow;
 
       @include respond(xs) {
         width: 100%;
@@ -247,32 +251,25 @@ article.space {
         overflow-y: scroll;
         overflow-x: hidden;
         height: 100%;
+        padding-bottom: 182px;
 
         &--funnel {
           font-size: $type-1;
           display: flex;
-          margin-bottom: $golden-ratio-2;
+          flex-direction: column;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          padding: $golden-ratio-4 $golden-ratio-3 $golden-ratio-3;
 
-          > a {
-            display: flex;
-            line-height: 1em;
-            color: $globe;
-            font-weight: 700;
-            margin-right: $golden-ratio-2;
+          @include filter-gradient(rgba($white, 0), 0, rgba($white, 1), calc(100% - 76px));
 
-            span {
-              font-size: $type-0;
-              color: $rock;
-              margin-left: 2px;
-            }
+          a {
+            margin-top: $golden-ratio-2;
+            margin-right: 0;
 
-            &:visited {
-              color: $globe;
-            }
-
-            &:hover,
-            &:focus {
-              color: $leconte;
+            &:first-child {
+              margin: 0;
             }
           }
         }
@@ -315,10 +312,6 @@ article.space {
 
       .utk-space--hours {
         flex-direction: column;
-
-        .DayPickerInput > input {
-          font-size: $type-1;
-        }
       }
 
       @include respond(xs) {
@@ -381,10 +374,10 @@ article.space {
     position: relative;
 
     > img {
-      height: 100%;
       width: 100%;
-      object-fit: cover;
+      object-fit: contain;
       overflow: hidden;
+      margin-bottom: 20px;
     }
 
     .utk-space-slider-display {
