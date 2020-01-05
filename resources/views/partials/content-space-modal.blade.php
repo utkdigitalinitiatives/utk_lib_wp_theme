@@ -10,8 +10,12 @@
     $seats['approximate'] = $data['fields']['space_seats_approximate'];
 
     $volume = $data['fields']['space_volume'];
+    $access = $data['fields']['space_access'];
     $reserve = $data['fields']['space_reserve'];
+    $reserve_button = $data['fields']['space_reserve_button'];
+    $reserve_text = $data['fields']['space_reserve_button_text'];
     $reserve_url = $data['fields']['space_reseve_url'];
+    $reserve_directions = $data['fields']['space_reserve_directions'];
 
     $space_daypicker = 'show';
     $space_hours = 'inherit';
@@ -34,7 +38,9 @@
                 <div class="utk-space--content--wrap--funnel">
                     <a href="@php echo $permalink @endphp">More Details <span class="icon-right-big"></span></a>
                     @if($reserve === 'Yes')
-                        <a href="{{$reserve_url}}">Reserve Space <span class="icon-right-big"></span></a>
+                        @if ($reserve_button)
+                            <a href="{{$reserve_url}}">@php echo $reserve_text @endphp <span class="icon-right-big"></span></a>
+                        @endif
                     @endif
                 </div>
             </header>
@@ -58,9 +64,18 @@
                 </div>
                 @php echo Space::getSpaceCapacity($seats); @endphp
                 @php echo Space::getSpaceVolume($volume); @endphp
+                @php echo Space::getSpaceAccess($access); @endphp
             </div>
             <div class="utk-space--content--description">
                 @php echo $content; @endphp
+                @if ($reserve_directions)
+                    @if ($reserve_button)
+                        <a href="@php echo $reserve_url @endphp">
+                            <h5>@php echo $reserve_text @endphp</h5>
+                        </a>
+                    @endif
+                    @php echo $reserve_directions @endphp
+                @endif
             </div>
         </div>
     </div>
