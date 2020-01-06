@@ -9,6 +9,9 @@
   color: $smokey;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  line-height: 1.58em;
+  margin-top: $golden-ratio-0;
 
   .post-categories {
     display: flex;
