@@ -10,6 +10,10 @@
           display: flex;
           justify-content: center;
 
+          @include respond(xs, sm) {
+            flex-wrap: wrap;
+          }
+
           &--item {
             margin: 0 9px;
             font-size: $type-1;
