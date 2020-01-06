@@ -171,11 +171,21 @@
           flex-direction: row;
           margin-top: $golden-ratio-3;
 
+          @include respond(xs, sm) {
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+          }
+
           .btn.btn-outline {
             color: $white !important;
             border-color: rgba($white, 0.11);
             display: flex;
             align-items: center;
+
+            @include respond(xs, sm) {
+              color: $smokey !important;
+              border-color: $gray-1;
+            }
 
             > span {
               font-size: $type-0;
