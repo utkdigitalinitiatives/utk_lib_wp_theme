@@ -15,6 +15,13 @@
   }
 
   &--hours {
+    justify-content: center;
+    text-align: center;
+
+    @include respond(xs) {
+      margin-bottom: $golden-ratio-3;
+    }
+
     .DayPickerInput {
       position: relative;
       height: $golden-ratio-4;
