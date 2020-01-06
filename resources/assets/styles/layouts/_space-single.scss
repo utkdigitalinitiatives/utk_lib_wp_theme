@@ -116,6 +116,7 @@
         @include respond(xs, sm) {
           margin-top: 20px;
           margin-bottom: $golden-ratio-2;
+          flex-direction: column-reverse;
         }
 
         .utk-space--hours {
@@ -174,6 +175,8 @@
           @include respond(xs, sm) {
             justify-content: space-evenly;
             flex-wrap: wrap;
+            margin-top: 0;
+            margin-bottom: $golden-ratio-3;
           }
 
           .btn.btn-outline {
@@ -185,6 +188,7 @@
             @include respond(xs, sm) {
               color: $smokey !important;
               border-color: $gray-1;
+              margin: 0 9px;
             }
 
             > span {
