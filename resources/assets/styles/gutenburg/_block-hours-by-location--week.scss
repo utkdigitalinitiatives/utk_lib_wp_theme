@@ -26,6 +26,10 @@
     .utk-hours-location {
       margin-bottom: $golden-ratio-2;
 
+      @include respond(xs, sm) {
+        flex-direction: column;
+      }
+
       &--title {
         left: 0;
         position: absolute;
@@ -35,7 +39,14 @@
         padding-left: $golden-ratio-3;
         padding-right: $golden-ratio-1;
 
-        @include respond(xs) {
+        @include respond(xs, sm) {
+          width: auto;
+          margin-right: 0;
+          margin-bottom: $golden-ratio-1;
+          position: absolute;
+          background-color: $white;
+          margin-left: $golden-ratio-2;
+          padding-right: $golden-ratio-2;
           padding-left: $golden-ratio-2;
         }
 

@@ -41,17 +41,6 @@
         flex-grow: 0;
         margin-right: $golden-ratio-4;
 
-        @include respond(xs, sm) {
-          width: auto;
-          margin-right: 0;
-          margin-bottom: $golden-ratio-1;
-          position: absolute;
-          background-color: $white;
-          margin-left: $golden-ratio-2;
-          padding-left: $golden-ratio-1;
-          padding-right: $golden-ratio-2;
-        }
-
         &--thumb {
           display: flex;
           width: $golden-ratio-5;
@@ -151,6 +140,10 @@
               box-shadow: $box-shadow-float;
               margin-top: -$golden-ratio-4;
 
+              @include respond(xs, sm) {
+                margin-top: 0;
+              }
+
               img {
                 object-fit: cover;
                 object-position: center;
@@ -163,11 +156,6 @@
             width: $gr-long;
             flex-shrink: 0;
             padding-right: $golden-ratio-4;
-          }
-
-          @include respond(xs, sm) {
-            padding-top: 60px;
-            margin-top: 44px;
           }
 
           p {
@@ -245,6 +233,56 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+@include respond(xs, sm) {
+  .utk-hours-by-location-block.utk-hours-by-location-block-view-day {
+    .utk-hours-location--title {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: $golden-ratio-2;
+
+      .utk-hours-location--title--thumb {
+        margin-bottom: $golden-ratio-1;
+        margin-right: 0;
+        width: $golden-ratio-4;
+        height: $golden-ratio-4;
+      }
+
+      .utk-hours-location--title--label {
+        text-align: center;
+
+        .utk-hours-location--title--label--links {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          li {
+            margin: 0 9px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include respond(xs) {
+  .utk-hours-by-location-block.utk-hours-by-location-block-view-day {
+    .utk-hours-location--details--about {
+      flex-direction: column-reverse;
+
+      .utk-hours-location--details--about--more,
+      .utk-hours-location--details--about--contact {
+        width: 100%;
+        padding: 0;
+      }
+
+      .utk-hours-location--details--about--contact {
+        margin-bottom: $golden-ratio-3;
       }
     }
   }
