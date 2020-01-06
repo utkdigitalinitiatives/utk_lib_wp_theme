@@ -119,8 +119,19 @@
         }
 
         .utk-space--hours {
+          @include respond(xs, sm) {
+            flex-direction: column;
+          }
+
           .DayPickerInput {
             box-shadow: $box-shadow-float;
+
+            @include respond(xs, sm) {
+              justify-content: flex-start;
+              align-content: flex-start;
+              align-items: flex-start;
+              text-align: left;
+            }
           }
 
           .utk-space--time--span,
@@ -137,6 +148,21 @@
             background-color: rgba($white, 0.11);
             border-radius: $golden-ratio-3;
             box-shadow: $box-shadow;
+
+            @include respond(xs, sm) {
+              color: $smokey !important;
+              font-size: $type-3;
+              font-weight: 700;
+              display: flex;
+              align-items: center;
+              box-shadow: none;
+              background-color: transparent;
+              padding: 0;
+              margin: $golden-ratio-1 0 0;
+              text-align: center;
+              justify-content: center;
+              width: 100%;
+            }
           }
         }
 
