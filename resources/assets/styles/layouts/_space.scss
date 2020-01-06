@@ -336,8 +336,11 @@ article.space {
       }
 
       &--description {
-        p {
+        p,
+        li {
           font-size: $type-2;
+          color: $smokeyx;
+          line-height: 1.58em;
 
           @include respond(sm) {
             font-size: $type-1;

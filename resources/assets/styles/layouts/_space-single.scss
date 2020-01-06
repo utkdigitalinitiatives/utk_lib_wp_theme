@@ -69,8 +69,11 @@
       }
 
       &--description {
-        p {
+        p,
+        li {
           font-size: $type-2;
+          color: $smokeyx;
+          line-height: 1.58em;
         }
       }
 
