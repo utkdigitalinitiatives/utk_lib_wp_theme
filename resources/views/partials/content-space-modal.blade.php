@@ -84,7 +84,7 @@
                 </div>
                 @php echo Space::getSpaceCapacity($seats); @endphp
                 @php echo Space::getSpaceVolume($volume); @endphp
-                @php echo Space::getSpaceAccess($access); @endphp
+                @php echo Space::getSpaceAccess($access, $id); @endphp
             </div>
             <div class="utk-space--content--description">
                 @php echo $content; @endphp
