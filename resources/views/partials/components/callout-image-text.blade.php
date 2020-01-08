@@ -11,8 +11,6 @@
     $image  = $fields['fields']['callout_media']['callout_image'];
     $srcset = wp_get_attachment_image_srcset($image_post_id, 'card_image');
 
-print_r ($image);
-
 @endphp
 <div class="utk-callout--inner utk-callout--style-{{$containerStyle}} utk-callout--orientation-{{$orientation}}">
     <div class="utk-callout--content">
