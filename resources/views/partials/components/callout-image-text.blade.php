@@ -5,7 +5,7 @@
     $containerStyle = $fields['fields']['callout_style'];
 
     // media
-    $render_size = 'callout_image';
+    $render_size = 'card_image';
     $preload_size = 'preload_gr_horz';
     $image_post_id = $fields['fields']['callout_media']['callout_image']['id'];
     $image  = $fields['fields']['callout_media']['callout_image'];
