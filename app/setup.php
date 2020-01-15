@@ -20,8 +20,8 @@ add_action('wp_enqueue_scripts', function () {
     ];
 
     wp_enqueue_script('wp/polyfill', '/wp-includes/js/dist/vendor/wp-polyfill.min.js', [], null, true);
-    wp_enqueue_script('wp/react', '/wp-includes/js/dist/vendor/react.min.js', [], null, true);
-    wp_enqueue_script('wp/reactdom', '/wp-includes/js/dist/vendor/react-dom.min.js', [], null, true);
+//    wp_enqueue_script('wp/react', '/wp-includes/js/dist/vendor/react.min.js', [], null, true);
+//    wp_enqueue_script('wp/reactdom', '/wp-includes/js/dist/vendor/react-dom.min.js', [], null, true);
     wp_enqueue_script('wp/lodash', '/wp-includes/js/dist/vendor/lodash.min.js', [], null, true);
 
     wp_enqueue_style('ut/main.css', asset_path('styles/main.css'), false, null);
