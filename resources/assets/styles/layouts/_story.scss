@@ -1,0 +1,55 @@
+.page-story {
+  background-color: $smokeyx;
+
+  &--header {
+    margin-top: $golden-ratio-4;
+    margin-bottom: $golden-ratio-4;
+
+    &--title {
+      text-align: center;
+      position: absolute;
+      z-index: 1;
+      margin-top: $golden-ratio-5;
+      width: 100%;
+
+      h1 {
+        font-size: $type-6;
+        letter-spacing: -0.047em;
+        font-weight: 700;
+        -webkit-font-smoothing: subpixel-antialiased;
+        margin: 0 0 $golden-ratio-2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+
+        &::before {
+          width: $golden-ratio-6;
+          height: $golden-ratio-0;
+          background-color: $gray-2;
+          content: '';
+          margin-bottom: $golden-ratio-2;
+        }
+      }
+
+      h2 {
+        font-size: $type-3;
+        letter-spacing: 0.047em;
+        font-weight: 400;
+        text-transform: uppercase;
+        -webkit-font-smoothing: antialiased;
+        margin: 0;
+      }
+    }
+
+    &--background {
+      width: 100%;
+      margin-top: -5vw;
+    }
+  }
+}
+
+body.page-story .utk-section.section-callout {
+  display: none;
+}
