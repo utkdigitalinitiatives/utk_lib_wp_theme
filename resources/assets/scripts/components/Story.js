@@ -4,30 +4,33 @@ export default class Story {
     this.buildGrain();
   }
 
-  buildGrain () {
-    var viewWidth,
-      viewHeight,
-      canvas = document.getElementById("story-grain"),
-      ctx;
+  buildGrain() {
+    
+    if (document.getElementById('story-grain')) {
+      var viewWidth,
+        viewHeight,
+        canvas = document.getElementById("story-grain"),
+        ctx;
 
-    // change these settings
-    var patternSize = 600,
-      patternScaleX = 4,
-      patternScaleY = 2,
-      patternRefreshInterval = 6,
-      patternAlpha = 10; // int between 0 and 255,
+      // change these settings
+      var patternSize = 600,
+        patternScaleX = 4,
+        patternScaleY = 2,
+        patternRefreshInterval = 6,
+        patternAlpha = 10; // int between 0 and 255,
 
-    var patternPixelDataLength = patternSize * patternSize * 4,
-      patternCanvas,
-      patternCtx,
-      patternData,
-      frame = 0;
+      var patternPixelDataLength = patternSize * patternSize * 4,
+        patternCanvas,
+        patternCtx,
+        patternData,
+        frame = 0;
 
-    window.onload = function () {
-      initCanvas();
-      initGrain();
-      requestAnimationFrame(loop);
-    };
+      window.onload = function () {
+        initCanvas();
+        initGrain();
+        requestAnimationFrame(loop);
+      };
+    }
 
     // create a canvas which will render the grain
     function initCanvas() {
