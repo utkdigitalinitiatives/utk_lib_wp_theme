@@ -3,6 +3,7 @@
 import Header from '../components/Header'
 import Subsite from '../components/Subsite'
 import Formal from '../components/Formal'
+import Story from '../components/Story'
 import FacetWP from '../components/FacetWP'
 import Volumes from '../components/Volumes'
 
@@ -12,6 +13,7 @@ export default {
         new Header();
         new Subsite();
         new Formal();
+        new Story();
         new FacetWP();
         new Volumes();
     },

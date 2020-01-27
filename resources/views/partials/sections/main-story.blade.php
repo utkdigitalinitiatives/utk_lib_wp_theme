@@ -22,6 +22,9 @@
       <h2>An Oral History of the 2016 Gatlinburg Fires</h2>
     </div>
     <img class="page-story--header--background" src="@php print $storyHeader; @endphp"/>
+    <canvas id="story-grain" class="page-story--grain"></canvas>
+    <div class="page-story--grain--fade-in"></div>
+    <div class="page-story--grain--fade-out"></div>
   </header>
   <div class="container page-body--container">
     <div class="page-body--flex">
