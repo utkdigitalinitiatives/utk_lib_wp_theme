@@ -5,7 +5,7 @@ export default class Story {
   }
 
   buildGrain() {
-    
+
     if (document.getElementById('story-grain')) {
       var viewWidth,
         viewHeight,
@@ -14,10 +14,10 @@ export default class Story {
 
       // change these settings
       var patternSize = 600,
-        patternScaleX = 4,
-        patternScaleY = 2,
-        patternRefreshInterval = 6,
-        patternAlpha = 10; // int between 0 and 255,
+        patternScaleX = 3,
+        patternScaleY = 1,
+        patternRefreshInterval = 4,
+        patternAlpha = 25; // int between 0 and 255,
 
       var patternPixelDataLength = patternSize * patternSize * 4,
         patternCanvas,

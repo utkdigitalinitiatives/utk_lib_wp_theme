@@ -26,7 +26,7 @@
     <div class="page-story--grain--fade-in"></div>
     <div class="page-story--grain--fade-out"></div>
   </header>
-  <div class="container page-body--container">
+  <div class="container page-body--container page-body--story">
     <div class="page-body--flex">
       <aside class="page-body--aside page-body--aside-hidden">
         @include('partials.sidebar')
