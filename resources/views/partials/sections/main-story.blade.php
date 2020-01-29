@@ -19,7 +19,7 @@
   <header class="page-story--header">
     <div class="page-story--header--title">
       <h1>Rising from the Ashes</h1>
-      <h2>An Oral History of the 2016 Gatlinburg Fires</h2>
+      <h2>An Oral History of the Chimney Tops II Wildfires</h2>
     </div>
     <img class="page-story--header--background" src="@php print $storyHeader; @endphp"/>
     <canvas id="story-grain" class="page-story--grain"></canvas>

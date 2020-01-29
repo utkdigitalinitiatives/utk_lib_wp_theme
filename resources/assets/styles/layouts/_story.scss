@@ -25,14 +25,6 @@
         align-items: center;
         align-content: center;
         justify-content: center;
-
-        &::before {
-          width: $golden-ratio-6;
-          height: $golden-ratio-0;
-          background-color: $rock;
-          content: '';
-          margin-bottom: $golden-ratio-2;
-        }
       }
 
       h2 {
