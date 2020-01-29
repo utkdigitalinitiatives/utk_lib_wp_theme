@@ -10,7 +10,7 @@
       $formal_header = get_the_ID();
   endif;
 
-  $storyHeader = \App\asset_path('images/gatlingburg-fires-background_2fbdab00.jpg');
+  $storyHeader = \App\asset_path('images/chimney-top-II-fires-background_25effa54.jpg');
 
 @endphp
 <div id="detach-sticky-top"></div>

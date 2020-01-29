@@ -76,7 +76,7 @@
       left: 0;
       position: absolute;
 
-      @include filter-gradient(rgba($smokeyx, 0), 0, rgba($smokeyx, 1), calc(100% - 200px));
+      @include filter-gradient(rgba($smokeyx, 0), 0, rgba($smokeyx, 1), 100%);
     }
   }
 }

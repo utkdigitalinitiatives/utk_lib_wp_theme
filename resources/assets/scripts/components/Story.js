@@ -16,8 +16,8 @@ export default class Story {
       var patternSize = 600,
         patternScaleX = 3,
         patternScaleY = 1,
-        patternRefreshInterval = 4,
-        patternAlpha = 25; // int between 0 and 255,
+        patternRefreshInterval = 5,
+        patternAlpha = 15; // int between 0 and 255,
 
       var patternPixelDataLength = patternSize * patternSize * 4,
         patternCanvas,
