@@ -1,0 +1,16 @@
+.wp-block-separator {
+  border: 3px solid $rock;
+  background-color: transparent;
+
+  &.has-smokey-background-color {
+    border-color: $smokey;
+  }
+
+  &.has-orange-background-color {
+    border-color: $orange;
+  }
+
+  &.has-globe-background-color {
+    border-color: $globe;
+  }
+}

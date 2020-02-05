@@ -115,6 +115,7 @@
       top: 82px;
       bottom: auto;
       z-index: 99996;
+      box-shadow: $box-shadow;
 
       .page-header--title-wrap {
         margin-left: 0;
@@ -255,6 +256,7 @@ body.utk-search-open {
         top: 82px;
         bottom: auto;
         z-index: 99996;
+        box-shadow: $box-shadow;
 
         .page-header--title-wrap {
           margin-left: 0;
@@ -306,6 +308,7 @@ body.utk-search-open {
       top: 82px;
       z-index: 4;
       transition: $transition-all;
+      box-shadow: $box-shadow;
 
       @include respond(xs) {
         top: 66px;
