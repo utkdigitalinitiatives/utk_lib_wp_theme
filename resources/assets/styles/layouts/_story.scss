@@ -1,5 +1,7 @@
-.page-story {
+.page-story .page-story {
   background-color: $smokeyx;
+  position: relative;
+  overflow: hidden;
 
   &--header {
     margin-top: $golden-ratio-4;
@@ -112,7 +114,7 @@ body.page-story {
   }
 }
 
-.page-body--story {
+.page-story .page-body--story {
   position: relative;
   z-index: 1;
   color: $white;
