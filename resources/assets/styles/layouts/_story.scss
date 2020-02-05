@@ -87,11 +87,12 @@ body.page-story .utk-section.section-callout {
 
   h2,
   h3 {
-    color: $white;
-    font-weight: 700;
+    color: $gray-1 !important;
+    font-weight: 400 !important;
     display: inline-flex;
     font-size: $type-4 !important;
     text-shadow: $box-shadow-float;
+    -webkit-font-smoothing: antialiased !important;
 
     &:first-child {
       margin-top: 0;
