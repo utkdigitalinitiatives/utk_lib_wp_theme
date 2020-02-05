@@ -1,6 +1,12 @@
 .wp-block-separator {
-  border: 3px solid $rock;
+  border: 1px solid $rock;
   background-color: transparent;
+  width: $golden-ratio-8;
+
+  &.is-style-wide {
+    width: 100%;
+    border-bottom-width: unset;
+  }
 
   &.has-smokey-background-color {
     border-color: $smokey;
@@ -12,5 +18,27 @@
 
   &.has-globe-background-color {
     border-color: $globe;
+  }
+
+  &.is-style-dots {
+    width: 100%;
+    color: $rock;
+
+    &::before {
+      font-size: $type-6;
+      letter-spacing: 1em;
+    }
+
+    &.has-smokey-background-color {
+      color: $smokey;
+    }
+
+    &.has-orange-background-color {
+      color: $orange;
+    }
+
+    &.has-globe-background-color {
+      color: $globe;
+    }
   }
 }
