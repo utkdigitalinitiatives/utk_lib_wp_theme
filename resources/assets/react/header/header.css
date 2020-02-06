@@ -1763,7 +1763,8 @@ body.utk-search-open .utk-search {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15); }
+    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
+    z-index: 0; }
     .utk-hours .utk-hours-teaser--title {
       font-size: 18px;
       color: #fff;
