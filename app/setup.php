@@ -24,11 +24,13 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_enqueue_style('ut/main.css', asset_path('styles/main.css'), false, null);
 
-    if (UT_LIBRARIES_ENTITY === 'volopedia') :
-        wp_enqueue_style('ut/volopedia.css', asset_path('styles/volopedia.css'), false, null);
-    elseif (UT_LIBRARIES_ENTITY === 'volumes') :
-        wp_enqueue_style('ut/volumes.css', asset_path('styles/volumes.css'), false, null);
-        wp_enqueue_style('adobe-fonts', 'https://use.typekit.net/ija3xwo.css', array(), null);
+    if (defined('PANTHEON_SITE_NAME')) :
+        if (PANTHEON_SITE_NAME === 'utk-volopedia') :
+            wp_enqueue_style('ut/volopedia.css', asset_path('styles/volopedia.css'), false, null);
+        elseif (PANTHEON_SITE_NAME === 'utk-volumes') :
+            wp_enqueue_style('ut/volumes.css', asset_path('styles/volumes.css'), false, null);
+            wp_enqueue_style('adobe-fonts', 'https://use.typekit.net/ija3xwo.css', array(), null);
+        endif;
     endif;
 
     wp_enqueue_style('ut/header.css', asset_path('styles/header.css'), false, null);

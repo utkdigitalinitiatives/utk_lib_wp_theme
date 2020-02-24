@@ -14,10 +14,12 @@
 @include('partials.header')
 
 <main>
-    @if (UT_LIBRARIES_ENTITY === 'volopedia')
+    @if(defined('PANTHEON_SITE_NAME'))
+      @if (PANTHEON_SITE_NAME === 'utk-volopedia')
         @include('volopedia.volopedia-main')
-    @else
+      @else
         @include('partials.libraries-main')
+      @endif
     @endif
     @include('partials.global-midsection')
 </main>

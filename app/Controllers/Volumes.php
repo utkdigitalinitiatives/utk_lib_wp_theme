@@ -11,19 +11,21 @@ class Volumes extends Controller
     {
         $classes = null;
 
-        if (UT_LIBRARIES_ENTITY === 'volumes') :
-            $classes = 'utk-entity-volumes ';
+        if (defined('PANTHEON_SITE_NAME')) :
+            if (PANTHEON_SITE_NAME === 'utk-volumes') :
+                $classes = 'utk-entity-volumes ';
 
-            if(get_post_type() === 'volume' && !is_tax()) :
-                $classes .= ' utk-color-' . get_field('volume_color');
-            elseif (get_post_type() === 'volume' && is_tax('volume_category')) :
-                $term = get_query_var('volume_category');
-                $classes .= self::getVolumeColorByTerm($term);
-            elseif (get_post_type() === 'page' && is_front_page()) :
-                $item = Volumes::getFeaturedVolume('boundless');
-                $classes .= ' utk-color-' . get_field('volume_color', $item);
-            else :
-                //
+                if (get_post_type() === 'volume' && !is_tax()) :
+                    $classes .= ' utk-color-' . get_field('volume_color');
+                elseif (get_post_type() === 'volume' && is_tax('volume_category')) :
+                    $term = get_query_var('volume_category');
+                    $classes .= self::getVolumeColorByTerm($term);
+                elseif (get_post_type() === 'page' && is_front_page()) :
+                    $item = Volumes::getFeaturedVolume('boundless');
+                    $classes .= ' utk-color-' . get_field('volume_color', $item);
+                else :
+                    //
+                endif;
             endif;
         endif;
 
