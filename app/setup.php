@@ -110,7 +110,11 @@ add_action('admin_enqueue_scripts', function () {
 
 add_filter('upload_dir', function ($upload) {
     if (is_multisite() && is_main_site() === false) {
-        $upload['baseurl'] = network_site_url() . 'wp-content/blogs.dir/' . get_current_blog_id() . '/files';
+        if (!defined('PANTHEON_ENVIRONMENT')) {
+            $upload['baseurl'] = network_site_url() . 'wp-content/blogs.dir/' . get_current_blog_id() . '/files';
+        } else {
+            $upload['baseurl'] = network_site_url() . 'wp-content/uploads/sites/' . get_current_blog_id() . '/files';
+        }
         $upload['url'] = $upload['baseurl'] . $upload['subdir'];
     }
     return $upload;
