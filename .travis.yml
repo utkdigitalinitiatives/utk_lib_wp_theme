@@ -35,7 +35,5 @@ install:
   - composer install -o --prefer-dist --no-interaction
 
 script:
-  - composer install
-  - composer test
   - yarn
   - yarn run "build:production"
