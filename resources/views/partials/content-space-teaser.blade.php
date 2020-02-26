@@ -10,7 +10,12 @@
     endif;
 
     $images = get_field('space_images', $space_id);
-    $image_count = count($images);
+
+    if (is_array($images)) :
+        $image_count = count($images);
+    else :
+        $image_count = 0;
+    endif;
 
     if ($image_count > 0) {
         $render_size = 'card_image';
