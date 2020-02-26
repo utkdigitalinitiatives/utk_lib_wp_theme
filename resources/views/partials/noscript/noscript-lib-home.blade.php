@@ -24,7 +24,7 @@
         <div class="utk-menu-options">
           <div class="utk-menu-help">
             <div id="libchat_8a9fa354ff9adc8c085107bc41e587c8" class="utk-libchat">
-              <button class="libchat_online">Chat with Us</button>
+              <a href="https://www.lib.utk.edu/askusnow/" class="libchat_online btn btn-primary">Ask us</a>
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@
               <img
                 src="/wp-content/themes/utk_lib_wp_theme/resources/assets/react/header/01254d541c35d5c76d787260cb118443.jpg">
             </div>
-            <div class="utk-hours-header"><h3>Hours for February 26, 2020</h3>
+            <div class="utk-hours-header"><h3>Hours for @php echo date('F j, Y'); @endphp</h3>
               <div class="utk-hours-header--links"><a href="https://www.lib.utk.edu/hours/"
                                                       class="utk-resources-toggle--map">More Hours</a></div>
             </div>
@@ -146,7 +146,7 @@
                   </a>
                   <div class="utk-hours--listing--item--meta"><a href="https://lib.utk.edu" class="library-open"><span
                         class="library-title">Hodges</span><span class="library-subtitle">Main Library</span><span
-                        class="utk-hours--listing--item--hours">24 Hours</span></a>
+                        class="utk-hours--listing--item--hours">@php(LibCal::the_hours_by_lid(52))</span></a>
                     <div class="utk-hours--listing--item--meta--links">
                       <div class="utk-hours--listing--item--meta--links--spaces"><a
                           href="https://www.lib.utk.edu/hours/spaces/study-carrels/"><img alt="Study Carrels"
@@ -163,26 +163,26 @@
                         href="https://commons.utk.edu" class="library-open">
                         <div class="utk-hours--listing--item--meta"><span class="library-title">The Commons</span><span
                             class="library-subtitle">Hodges 2nd Floor</span><span
-                            class="utk-hours--listing--item--hours">24 Hours</span></div>
+                            class="utk-hours--listing--item--hours">@php(LibCal::the_hours_by_lid(52))</span></div>
                       </a></li>
                     <li class="utk-hours--listing--item utk-hours--listing--item--child"><a href="https://lib.utk.edu"
                                                                                             class="library-open">
                         <div class="utk-hours--listing--item--meta"><span
                             class="library-title">Graduate Commons</span><span
-                            class="library-subtitle">Hodges 131</span><span class="utk-hours--listing--item--hours">24 Hours</span>
+                            class="library-subtitle">Hodges 131</span><span class="utk-hours--listing--item--hours">@php(LibCal::the_hours_by_lid(52))</span>
                         </div>
                       </a></li>
                     <li class="utk-hours--listing--item utk-hours--listing--item--child"><a
                         href="https://www.lib.utk.edu/studio" class="library-open">
                         <div class="utk-hours--listing--item--meta"><span class="library-title">The Studio</span><span
-                            class="library-subtitle">Hodges 235</span><span class="utk-hours--listing--item--hours">7:30am - 12am</span>
+                            class="library-subtitle">Hodges 235</span><span class="utk-hours--listing--item--hours">@php(LibCal::the_hours_by_lid(217))</span>
                         </div>
                       </a></li>
                     <li class="utk-hours--listing--item utk-hours--listing--item--child"><a
                         href="https://www.lib.utk.edu/special" class="library-open">
                         <div class="utk-hours--listing--item--meta"><span
                             class="library-title">Special Collections</span><span
-                            class="library-subtitle">Hodges 121</span><span class="utk-hours--listing--item--hours">9am - 5:30pm</span>
+                            class="library-subtitle">Hodges 121</span><span class="utk-hours--listing--item--hours">@php(LibCal::the_hours_by_lid(224))</span>
                         </div>
                       </a></li>
                   </ul>
@@ -195,7 +195,7 @@
                   </a>
                   <div class="utk-hours--listing--item--meta"><a href="https://lib.utk.edu/agvet"
                                                                  class="library-open"><span class="library-title">Pendergrass</span><span
-                        class="library-subtitle">AgVet Library</span><span class="utk-hours--listing--item--hours">7:30am - 12am</span></a>
+                        class="library-subtitle">AgVet Library</span><span class="utk-hours--listing--item--hours">@php(LibCal::the_hours_by_lid(225))</span></a>
                     <div class="utk-hours--listing--item--meta--links">
                       <div class="utk-hours--listing--item--meta--links--spaces"><a
                           href="https://www.lib.utk.edu/hours/spaces/collaborative-space/"><img
@@ -217,7 +217,7 @@
                   <div class="utk-hours--listing--item--meta"><a href="https://lib.utk.edu/music"
                                                                  class="library-open"><span
                         class="library-title">DeVine</span><span class="library-subtitle">Music Library</span><span
-                        class="utk-hours--listing--item--hours">7:30am - 10pm</span></a>
+                        class="utk-hours--listing--item--hours">@php(LibCal::the_hours_by_lid(226))</span></a>
                     <div class="utk-hours--listing--item--meta--links">
                       <div class="utk-hours--listing--item--meta--links--spaces"><a
                           href="https://www.lib.utk.edu/hours/spaces/computer-carrels/"><img alt="Computer Carrels"
@@ -239,7 +239,7 @@
                   <div class="utk-hours--listing--item--meta"><a href="https://lib.utk.edu/request/storage"
                                                                  class="library-open"><span class="library-title">Hoskins</span><span
                         class="library-subtitle">Storage &amp; Reading Room</span><span
-                        class="utk-hours--listing--item--hours">12pm - 4pm</span></a>
+                        class="utk-hours--listing--item--hours">@php(LibCal::the_hours_by_lid(227))</span></a>
                     <div class="utk-hours--listing--item--meta--links">
                       <div class="utk-hours--listing--item--meta--links--spaces"><a
                           href="https://www.lib.utk.edu/hours/spaces/storage-and-map-reading-room/"><img
