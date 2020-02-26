@@ -6,7 +6,7 @@ use Sober\Controller\Controller;
 
 class Button extends Controller
 {
-    public function buildButton($linkFields, $containerStyle)
+    public static function buildButton($linkFields, $containerStyle)
     {
 
         /*
