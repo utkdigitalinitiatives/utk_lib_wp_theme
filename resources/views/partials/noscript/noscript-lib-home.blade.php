@@ -24,7 +24,7 @@
         <div class="utk-menu-options">
           <div class="utk-menu-help">
             <div id="libchat_8a9fa354ff9adc8c085107bc41e587c8" class="utk-libchat">
-              <a href="https://www.lib.utk.edu/askusnow/" class="libchat_online btn btn-primary">Ask us</a>
+              <a href="https://www.lib.utk.edu/askusnow/" class="libchat_online btn btn-primary">Have a Question?</a>
             </div>
           </div>
         </div>
