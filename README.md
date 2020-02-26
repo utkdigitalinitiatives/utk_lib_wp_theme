@@ -1,5 +1,4 @@
 # [UT Libraries](https://www.lib.utk.edu/sage)
-[![Build Status](https://travis-ci.org/utkdigitalinitiatives/utk_lib_wp_theme.svg?style=flat-square)](https://travis-ci.org/utkdigitalinitiatives/utk_lib_wp_theme)
 
 Custom theme for UT Libraries WordPress built with Sage 9 framework with single-site or multi-site capabilities.
 
