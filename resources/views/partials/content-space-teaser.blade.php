@@ -2,7 +2,7 @@
 
     Namespace UTKLibrary\Library\Models;
 
-    if (!$space_id) :
+    if (!isset($space_id)) :
         $space_id = get_the_ID();
         $teaser_class = 'article--link article--trigger';
     else :

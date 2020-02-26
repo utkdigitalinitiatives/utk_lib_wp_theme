@@ -29,7 +29,7 @@
             @if($archive_description)
                 @php echo $archive_description @endphp
             @endif
-            @if($group_by_term)
+            @if(isset($group_by_term))
                 @include('partials.components.facetwp-template-grouping')
             @else
                 @include('partials.components.facetwp-template')
