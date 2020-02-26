@@ -1,11 +1,8 @@
-@include('partials.sections.callout')
 <style>
-    #utk-lib-mid .utk-callout {
-        display: none !important;
-    }
 
-    #utk-panel .utk-callout {
-        margin-bottom: 18px;
+    #utk-panel {
+      min-height: 0;
+      margin-bottom: 18px;
     }
 
     .utk-header-super {
