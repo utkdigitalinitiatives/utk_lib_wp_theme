@@ -1,8 +1,48 @@
 .utk-space-block {
   display: flex;
   flex-wrap: wrap;
+  margin-top: $golden-ratio-2;
+  margin-bottom: $golden-ratio-4;
+  border: 2px solid $gray-0;
+  padding: $golden-ratio-3 $golden-ratio-3 0;
 
   &--item {
     flex-basis: 50%;
+    display: flex;
+    margin-bottom: $golden-ratio-3;
+
+    &--media {
+      width: $golden-ratio-6;
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-right: $golden-ratio-2;
+    }
+
+    &--content {
+      padding-right: $golden-ratio-3;
+
+      header {
+        h4 {
+          text-transform: none;
+          margin: 0;
+        }
+      }
+
+      main {
+        margin-bottom: 0;
+
+        p {
+          margin-top: $golden-ratio-0;
+          font-size: $type-2;
+          margin-bottom: $golden-ratio-1;
+        }
+      }
+    }
+  }
+}
+
+.wp-block-column .utk-space-block {
+  &--item {
+    flex-basis: unset;
   }
 }
