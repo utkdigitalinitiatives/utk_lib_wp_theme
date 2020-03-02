@@ -250,15 +250,13 @@ body .utk-research-tools .ui.labeled.icon.button {
   align-items: center;
   align-content: center;
   background-color: #f6f6f6;
-  color: #333;
-  font-weight: 700;
-  border-radius: 6px;
-  border-top-right-radius: 18px;
-  border-bottom-right-radius: 18px;
+  color: #58595b;
+  font-weight: 400;
+  border-radius: 47px;
   font-size: 15px;
   white-space: nowrap;
   height: 47px;
-  padding: 0 calc(65px) 0 18px !important;
+  padding: 0 calc(65px) 0 29px !important;
   box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
   width: calc(100% / 1.61803);
   max-width: 100%;
@@ -1065,7 +1063,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
     transition: background-color 110ms ease-in-out;
     border: 2px solid rgba(255, 255, 255, 0.11);
     border-radius: 6px;
-    padding: 0 11px;
+    padding: 0 6px;
     height: 29px;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
@@ -1078,7 +1076,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
         display: none; } }
     .utk-research-tools .utk-collapse-research-tools:hover, .utk-research-tools .utk-collapse-research-tools:focus {
       border: none;
-      padding: 2px calc(11px + 2px);
+      padding: 2px calc(6px + 2px);
       background-color: rgba(0, 0, 0, 0.29); }
     .utk-research-tools .utk-collapse-research-tools > span {
       margin-right: 6px;
@@ -1482,7 +1480,7 @@ body .utk-research-tools .ui.dropdown .menu > .item {
         line-height: 1.47em;
         white-space: normal;
         font-size: 13px;
-        color: #e0e0e0;
+        color: #fff;
         transition: all 110ms ease-in-out; }
         .utk-subject-guide--databases ul li > div a,
         .utk-subject-guide--databases ul li > div a:visited, .utk-subject-guide--guides ul li > div a,
@@ -1625,7 +1623,7 @@ body {
     background-color: #f6f6f6;
     color: #333;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 47px;
     border-top-right-radius: 18px;
     border-bottom-right-radius: 18px;
     font-size: 15px;
@@ -1646,8 +1644,10 @@ body {
       width: 47px;
       background-color: #ff8200 !important;
       border-radius: 0;
-      border-top-right-radius: 6px;
-      border-bottom-right-radius: 6px; }
+      border-top-right-radius: 47px;
+      border-bottom-right-radius: 47px;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 6px 100%) !important;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 6px 100%) !important; }
       body .ui.labeled.icon.button > .icon::before {
         color: #fff;
         opacity: 1; }
@@ -1715,12 +1715,12 @@ body {
       width: 100%;
       height: 100%;
       z-index: 4;
-      background: -moz-linear-gradient(left, rgba(51, 51, 51, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%);
-      background: -webkit-gradient(linear, left, bottom, color-stop(6%, rgba(51, 51, 51, 0)), color-stop(61.8%, rgba(51, 51, 51, 0.76)));
-      background: -webkit-linear-gradient(left, rgba(51, 51, 51, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%);
-      background: -o-linear-gradient(left, rgba(51, 51, 51, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%);
-      background: -ms-linear-gradient(left, rgba(51, 51, 51, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%);
-      background: linear-gradient(to right, rgba(51, 51, 51, 0) 6%, rgba(51, 51, 51, 0.76) 61.8%); }
+      background: -moz-linear-gradient(left, rgba(88, 89, 91, 0) 6%, rgba(88, 89, 91, 0.76) 61.8%);
+      background: -webkit-gradient(linear, left, bottom, color-stop(6%, rgba(88, 89, 91, 0)), color-stop(61.8%, rgba(88, 89, 91, 0.76)));
+      background: -webkit-linear-gradient(left, rgba(88, 89, 91, 0) 6%, rgba(88, 89, 91, 0.76) 61.8%);
+      background: -o-linear-gradient(left, rgba(88, 89, 91, 0) 6%, rgba(88, 89, 91, 0.76) 61.8%);
+      background: -ms-linear-gradient(left, rgba(88, 89, 91, 0) 6%, rgba(88, 89, 91, 0.76) 61.8%);
+      background: linear-gradient(to right, rgba(88, 89, 91, 0) 6%, rgba(88, 89, 91, 0.76) 61.8%); }
     #utk-panel .utk-panel-wrap > .utk-panel-underlay .utk-panel-underlay--fade-vert,
     #utk-panel-mini .utk-panel-wrap > .utk-panel-underlay .utk-panel-underlay--fade-vert {
       top: 0;
