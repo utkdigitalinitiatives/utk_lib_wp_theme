@@ -6,7 +6,7 @@
     <div class="utk-lazyload">
         <img class="utk-lazyload--render"
              style="width: 100%; height: auto;"
-             src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+             src="{{$image['sizes'][$render_size]}}"
              alt="{{$image['alt']}}"
              data-lazy-srcset="{{$srcset}}"
              data-lazy-src="{{$image['sizes'][$render_size]}}"
