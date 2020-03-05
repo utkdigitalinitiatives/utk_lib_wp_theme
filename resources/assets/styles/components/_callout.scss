@@ -41,7 +41,6 @@
     flex-direction: row-reverse;
     align-items: end;
     min-height: $golden-ratio-7;
-    max-height: 400px !important;
     overflow: hidden;
 
     @include respond(xs, sm) {
