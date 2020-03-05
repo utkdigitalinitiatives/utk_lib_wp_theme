@@ -126,6 +126,7 @@ add_filter('upload_dir', function ($upload) {
 add_image_size('post-thumbnail', 521, 521, true);
 add_image_size('card_image', 521, 322, true);
 add_image_size('gr_thumb', 199, 123, true);
+add_image_size('gr_small', 76, 47, true);
 add_image_size('callout_image', 843, 521, true);
 add_image_size('hero_image', 1364, 843, false);
 add_image_size('vertical_image', 521, 843, true);
