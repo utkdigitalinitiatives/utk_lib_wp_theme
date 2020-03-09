@@ -3147,7 +3147,8 @@ a:hover {
 .utk-notice {
   background-color: #333333;
   font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 29px 0; }
+  padding: 29px 0;
+  display: none; }
   .utk-notice--title {
     display: flex;
     flex-direction: column;
