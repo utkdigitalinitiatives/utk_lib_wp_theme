@@ -5,6 +5,11 @@
   }
 }
 
+body:not(.header-scroll-down) .page-header-truncate .page-header--float {
+  position: unset !important;
+  margin-bottom: 0 !important;
+}
+
 body.header-scroll-down .page-header-truncate .page-header--float {
   .page-header--title-wrap {
     opacity: 1 !important;
