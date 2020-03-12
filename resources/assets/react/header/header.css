@@ -3372,7 +3372,7 @@ a:hover {
       content: "";
       width: 123px;
       height: 6px;
-      background-color: #ff8200;
+      background-color: #fed535;
       margin-bottom: 18px; }
   .utk-notice--content p {
     color: #ffffff;
@@ -3393,13 +3393,35 @@ a:hover {
       .utk-notice--content p a:focus:after {
         width: 100%;
         height: 2px;
-        background-color: #ff8200;
+        background-color: #58595b;
         content: '';
         margin-top: -2px; }
     .utk-notice--content p:first-child {
       margin-top: 6px; }
     .utk-notice--content p:last-child {
       margin-bottom: 0; }
+
+.notice-actions {
+  display: flex;
+  flex-wrap: wrap; }
+  .notice-actions .notice-button {
+    border: 2px solid #58595b;
+    background-color: transparent;
+    padding: 6px 18px;
+    display: inline-flex;
+    font-size: 0.7222rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    margin-right: 1rem; }
+    .notice-actions .notice-button.covid19 {
+      border-color: #fed535 !important;
+      background-color: #fed535 !important;
+      color: #333333 !important; }
+    .notice-actions .notice-button:last-child {
+      margin-right: 0; }
+    .notice-actions .notice-button:after {
+      content: unset !important;
+      display: none !important; }
 
 body .utk-header-resources {
   width: 100%;
