@@ -1,6 +1,14 @@
 .page-formal {
   .utk-notice {
     margin-top: $golden-ratio-4;
+    margin-bottom: -$golden-ratio-4;
+    border-bottom: 1px solid lighten ($smokeyx, 5);
+  }
+}
+
+.page-contigency-plan-data {
+  .utk-notice {
+    display: none;
   }
 }
 
