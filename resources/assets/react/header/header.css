@@ -1369,9 +1369,19 @@ body.utk-search-open .utk-search {
   box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
   background-color: #ffffff !important;
   color: #333333 !important;
-  padding: 0 calc(64px) 0 18px !important;
+  padding: 0 calc(58px) 0 18px !important;
   position: relative !important;
-  z-index: 0; }
+  z-index: 0;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .utk-libchat button {
+      height: 40px !important;
+      line-height: 40px !important;
+      padding: 0 calc(51px) 0 18px !important; } }
   .utk-libchat button::after {
     content: "\E808";
     font-family: fontello, monospace;
@@ -1390,11 +1400,213 @@ body.utk-search-open .utk-search {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 6px 100%) !important;
     border-top-right-radius: 47px !important;
     border-bottom-right-radius: 47px !important;
-    -webkit-font-smoothing: antialiased; }
+    -webkit-font-smoothing: antialiased;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-libchat button::after {
+        height: 40px !important;
+        width: 40px !important;
+        line-height: 40px !important; } }
   .utk-libchat button.libchat_online::after {
     background-color: #abc178 !important; }
   .utk-libchat button.libchat_offline::after {
     background-color: #a7a9ac !important; }
+
+.utk-menu-open .utk-menu-options {
+  display: flex;
+  justify-content: flex-end; }
+  .utk-menu-open .utk-menu-options .container {
+    display: flex;
+    padding-top: 11px;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-menu-open .utk-menu-options .container {
+        padding-top: 15px; } }
+    .utk-menu-open .utk-menu-options .container .utk-menu-help {
+      flex-grow: 1; }
+    .utk-menu-open .utk-menu-options .container .utk-resources-close {
+      position: static;
+      right: auto;
+      bottom: auto;
+      margin-left: 0;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        .utk-menu-open .utk-menu-options .container .utk-resources-close {
+          width: 40px;
+          height: 40px;
+          line-height: 40px; }
+          .utk-menu-open .utk-menu-options .container .utk-resources-close > span {
+            width: 40px;
+            height: 40px; } }
+
+.utk-menu-help {
+  display: flex; }
+  .utk-menu-help--item {
+    display: flex;
+    height: 47px;
+    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
+    border-radius: 47px;
+    position: relative;
+    z-index: 0;
+    line-height: 47px;
+    border-radius: 47px;
+    overflow: hidden;
+    background-color: #ffffff;
+    margin-right: 18px;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-menu-help--item {
+        height: 40px;
+        line-height: 40px;
+        margin-right: 11px; } }
+    .utk-menu-help--item > h4 {
+      margin: 0;
+      padding: 0 11px 0 18px;
+      font-size: 0.8333rem;
+      color: #333333;
+      text-transform: none !important;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        .utk-menu-help--item > h4 {
+          padding: 0 11px 0 18px; } }
+      .utk-menu-help--item > h4 > em {
+        font-weight: 400;
+        font-style: normal; }
+    .utk-menu-help--item--icon {
+      width: 47px;
+      height: 47px;
+      line-height: 47px;
+      text-align: center;
+      background-color: #a7a9ac;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 6px 100%);
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        .utk-menu-help--item--icon {
+          height: 40px;
+          width: 40px;
+          line-height: 40px; } }
+      .utk-menu-help--item--icon > span {
+        display: block;
+        color: #ffffff;
+        align-content: center;
+        text-align: center;
+        font-size: 1rem;
+        /* Mobile Devices for Mice */
+        /* Landscape phones and down */
+        /* Landscape phone to portrait tablet */
+        /* Portrait tablet to landscape and desktop */
+        /* desktop and large desktop */ }
+        @media (max-width: 767px) {
+          .utk-menu-help--item--icon > span {
+            font-size: 0.8333rem !important; } }
+
+.utk-menu-help--contingency .utk-menu-help--item--icon {
+  background-color: #ff8200; }
+
+.utk-menu-help--help-me .utk-menu-help--item--icon {
+  background-color: #a7a9ac; }
+
+.utk-menu-help--chat .utk-menu-help--item--icon {
+  background-color: #abc178; }
+
+.utk-menu-help--give .utk-menu-help--item--icon {
+  background-color: #ff8200; }
+
+.utk-menu-help--help-me--back {
+  display: none;
+  width: 47px;
+  text-align: center;
+  background-color: #58595b;
+  color: #ffffff;
+  top: 158px;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .utk-menu-help--help-me--back {
+      width: 40px;
+      height: 40px;
+      margin-top: 0;
+      top: 81px; } }
+
+.utk-header-resources.utk-help-expand .utk-resources-menu,
+.utk-header-resources.utk-help-expand .utk-resources-contact {
+  display: none; }
+
+.utk-header-resources.utk-help-expand .utk-menu-options .utk-menu-help--help-me--back {
+  display: block; }
+
+.utk-header-resources.utk-help-expand .utk-menu-options .container {
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-content: flex-end;
+  height: 100%; }
+
+.utk-help {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+  padding: 18px 0 47px;
+  display: flex;
+  align-items: center;
+  height: 100%; }
+  .utk-help.utk-help-align-top {
+    align-items: flex-start; }
+  .utk-help > div.utk-help-content {
+    width: 100%;
+    padding-bottom: 47px;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-help > div.utk-help-content {
+        padding-bottom: 15px; } }
+  .utk-help h3 {
+    color: inherit;
+    font-size: 1.2777rem;
+    margin: 0 auto 0;
+    color: #58595b; }
+  .utk-help p {
+    font-size: 0.8333rem;
+    color: #333333; }
+    .utk-help p::after {
+      display: block;
+      width: 100%;
+      height: 6px;
+      background-color: #ff8200;
+      content: ' ';
+      margin: 29px auto 0;
+      max-width: 123px; }
 
 .footer-libraries--inner {
   display: flex;
