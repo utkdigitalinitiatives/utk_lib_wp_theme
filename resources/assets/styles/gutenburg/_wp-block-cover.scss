@@ -1,4 +1,17 @@
 .wp-block-cover {
   margin-bottom: $golden-ratio-2;
   margin-top: $golden-ratio-3;
+  background-color: $smokeyx;
+
+  &.has-smokey-background-color {
+    background-color: $smokey;
+  }
+
+  &.has-orange-background-color {
+    background-color: $orange;
+  }
+
+  &.has-globe-background-color {
+    background-color: $globe;
+  }
 }
