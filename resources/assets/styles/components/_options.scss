@@ -74,3 +74,91 @@ body.utk-skip-open .page-header--options {
 body.subsite-menu-dropdown-expand .page-header--options {
   top: -500px;
 }
+
+.options--item {
+  display: flex;
+  height: $golden-ratio-4;
+  box-shadow: $box-shadow-float;
+  border-radius: $golden-ratio-4;
+  margin-right: $golden-ratio-2;
+  position: relative;
+  line-height: $golden-ratio-4;
+  text-decoration: none !important;
+  transition: $transition-all;
+  overflow: hidden;
+
+  &--title {
+    text-transform: none;
+    text-decoration: inherit !important;
+    margin: 0;
+    padding: 0 $golden-ratio-2;
+    font-size: $type-2;
+    font-weight: 700;
+    color: inherit;
+
+    > em {
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
+
+  &--icon {
+    right: 0;
+    top: 0;
+    width: $golden-ratio-4;
+    height: $golden-ratio-4;
+    background-color: $rock;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 6px 100%);
+
+    > span {
+      color: $white;
+      display: block;
+      line-height: $golden-ratio-4;
+    }
+  }
+
+  &.options--item-contingency .options--item--icon {
+    background-color: $orange;
+
+    > span {
+      margin-top: 0;
+    }
+  }
+
+  &.options--item-help .options--item--icon {
+    background-color: $orange;
+
+    > span {
+      margin-top: 0;
+    }
+  }
+
+  &.options--item-give .options--item--icon {
+    background-color: $orange;
+
+    > span {
+      margin-top: 0;
+    }
+  }
+
+  &.options--item-chat .options--item--icon {
+    background-color: $switchgrass;
+
+    > span {
+      margin-top: 0;
+    }
+  }
+}
+
+a.options--item,
+a.options--item:visited {
+  background-color: $white;
+  color: $smokeyx;
+}
+
+a.options--item:hover,
+a.options--item:focus {
+  background-color: $white;
+  color: $smokeyx;
+}

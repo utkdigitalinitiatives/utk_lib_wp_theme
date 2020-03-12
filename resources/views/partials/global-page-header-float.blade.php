@@ -59,7 +59,7 @@
     </div>
     <div class="page-header--options">
       {{--@include('partials.components.help')--}}
-      {{--@include('partials.components.give')--}}
+      @include('partials.components.contingency')
       @include('partials.components.chat')
     </div>
   </div>
