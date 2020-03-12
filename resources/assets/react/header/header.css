@@ -3407,12 +3407,15 @@ a:hover {
   .notice-actions .notice-button {
     border: 2px solid #58595b;
     background-color: transparent;
-    padding: 6px 18px;
+    padding: 11px 18px;
     display: inline-flex;
     font-size: 0.7222rem;
     font-weight: 700;
     color: #ffffff !important;
-    margin-right: 1rem; }
+    margin-right: 1rem;
+    margin-top: 11px;
+    line-height: 1.47em;
+    flex-grow: 0; }
     .notice-actions .notice-button.covid19 {
       border-color: #fed535 !important;
       background-color: #fed535 !important;
