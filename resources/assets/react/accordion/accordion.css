@@ -30,18 +30,19 @@
  * components
  */
 .accordion {
-  font-size: 18px;
+  font-size: 1rem;
   font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Gotham-Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
   overflow: hidden; }
   .accordion .title {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 0.8333rem;
     border-bottom: 1px solid #e0e0e0;
     padding: 11px 18px;
     border-right: 6px solid #e0e0e0;
-    cursor: pointer; }
+    cursor: pointer;
+    line-height: 1.29em; }
     .accordion .title a,
     .accordion .title a:visited {
       color: #58595b;
@@ -52,7 +53,7 @@
       .accordion .title a i,
       .accordion .title a:visited i {
         color: #a7a9ac;
-        font-size: 15px;
+        font-size: 0.8333rem;
         height: 1em;
         line-height: 1em;
         width: auto;
@@ -80,6 +81,9 @@
     padding: 6px 18px 18px;
     border-bottom: 1px solid #e0e0e0;
     border-right: 6px solid #e0e0e0; }
+    .accordion .content p,
+    .accordion .content li {
+      font-size: 0.8333rem; }
     .accordion .content figure {
       margin: 0;
       padding: 0; }
