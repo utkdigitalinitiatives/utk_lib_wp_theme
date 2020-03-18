@@ -26,4 +26,12 @@
   li {
     color: $white !important;
   }
+
+  a,
+  a:visited,
+  a:hover,
+  a:focus {
+    color: $white !important;
+    text-decoration: underline;
+  }
 }
