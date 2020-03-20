@@ -94,6 +94,8 @@
     .accordion .content.active {
       display: block;
       border-right-color: #a7a9ac; }
+    .accordion .content .utk-accordion-item--note {
+      font-size: 0.7222rem; }
 
 /*
  * layout
