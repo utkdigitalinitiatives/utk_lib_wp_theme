@@ -96,9 +96,9 @@
       border-right-color: #a7a9ac; }
     .accordion .content h6 {
       font-size: 0.6111rem !important;
-      text-transform: uppercase !important; }
+      text-transform: none !important; }
     .accordion .content .utk-accordion-item--note {
-      font-size: 0.7222rem; }
+      font-size: 0.6111rem; }
 
 /*
  * layout
