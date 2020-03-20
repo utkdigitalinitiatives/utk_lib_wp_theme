@@ -30,15 +30,11 @@
 /**
  * Gutenberg
  */
-@import "gutenburg/wp-block";
-@import "gutenburg/wp-block-button";
-@import "gutenburg/wp-block-column";
-@import "gutenburg/wp-block-cover";
-@import "gutenburg/wp-block-separator";
 @import "gutenburg/acf-wysiwig";
 @import "gutenburg/block-accordion";
 @import "gutenburg/block-button-nav";
 @import "gutenburg/block-card";
+@import "gutenburg/block-faq";
 @import "gutenburg/block-form";
 @import "gutenburg/block-image";
 @import "gutenburg/block-information";
@@ -48,3 +44,8 @@
 @import "gutenburg/block-hours-by-location--week";
 @import "gutenburg/block-space";
 @import "gutenburg/block-taxonomy-listing";
+@import "gutenburg/wp-block";
+@import "gutenburg/wp-block-button";
+@import "gutenburg/wp-block-column";
+@import "gutenburg/wp-block-cover";
+@import "gutenburg/wp-block-separator";
