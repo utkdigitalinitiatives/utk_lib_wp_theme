@@ -3571,13 +3571,45 @@ a:hover {
 .utk-notice {
   background-color: #333333;
   font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 18px 0; }
+  padding: 18px 0;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .utk-notice {
+      padding-bottom: 29px; } }
   .utk-notice--main {
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 0;
-    padding-right: 123px; }
+    padding-right: 123px;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .utk-notice--main {
+        padding-right: 76px; } }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .utk-notice--main {
+        padding-right: 76px; } }
+    @media (max-width: 767px) {
+      .utk-notice--main {
+        padding-right: 0; } }
   .utk-notice--title {
     display: flex;
     flex-direction: column;
@@ -3585,7 +3617,15 @@ a:hover {
     font-weight: 700;
     color: #ffffff;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.29em; }
+    line-height: 1.29em;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-notice--title {
+        font-size: 0.8333rem; } }
     .utk-notice--title::before {
       content: unset;
       width: 123px;
@@ -3597,9 +3637,16 @@ a:hover {
     height: auto; }
     .utk-notice--content p {
       color: #ffffff;
-      font-size: 0.8333rem;
       line-height: 1.47em;
-      -webkit-font-smoothing: antialiased; }
+      -webkit-font-smoothing: antialiased;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        .utk-notice--content p {
+          font-size: 0.7222rem; } }
       .utk-notice--content p a,
       .utk-notice--content p a:visited,
       .utk-notice--content p a:hover,
@@ -3634,7 +3681,18 @@ a:hover {
     padding: 0;
     margin: 0;
     transform: rotate(0);
-    transition: all 290ms ease-in-out; }
+    transition: all 290ms ease-in-out;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-notice--toggle {
+        top: unset;
+        bottom: calc(-29px + (-47px / 2));
+        right: 50%;
+        margin-right: calc(-23.5px); } }
     .utk-notice--toggle::before {
       content: "\E801";
       font-family: fontello, monospace;
@@ -3664,7 +3722,19 @@ a:hover {
       margin-right: 1rem;
       margin-top: 11px;
       line-height: 1.47em;
-      flex-grow: 0; }
+      flex-grow: 0;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (max-width: 767px) {
+        .utk-notice .notice-actions .notice-button {
+          display: flex;
+          width: 100%;
+          margin-right: 0;
+          text-align: center;
+          justify-content: center; } }
       .utk-notice .notice-actions .notice-button.covid19 {
         border-color: #fed535 !important;
         background-color: #fed535 !important;
