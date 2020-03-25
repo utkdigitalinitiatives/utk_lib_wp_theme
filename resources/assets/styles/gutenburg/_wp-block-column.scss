@@ -5,6 +5,14 @@
 
     &:nth-child(2n) {
       margin-left: 76px;
+
+      @include respond(xs) {
+        margin-left: unset;
+      }
+
+      @include respond(wpnocol) {
+        margin-left: unset;
+      }
     }
   }
 }
