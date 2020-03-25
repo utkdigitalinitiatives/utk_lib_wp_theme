@@ -3695,7 +3695,8 @@ a:hover {
         top: unset;
         bottom: calc(-29px + (-47px / 2));
         right: 50%;
-        margin-right: calc(-23.5px); } }
+        margin-right: calc(-23.5px);
+        background-color: #e65933; } }
     .utk-notice--toggle::before {
       content: "\E801";
       font-family: fontello, monospace;
@@ -3738,8 +3739,7 @@ a:hover {
           width: 100%;
           margin-right: 0;
           text-align: center;
-          justify-content: center;
-          background-color: #e65933; } }
+          justify-content: center; } }
       .utk-notice .notice-actions .notice-button.covid19 {
         border-color: #fed535 !important;
         background-color: #fed535 !important;
