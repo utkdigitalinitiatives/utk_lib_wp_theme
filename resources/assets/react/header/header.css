@@ -3572,6 +3572,8 @@ a:hover {
   background-color: #333333;
   font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 18px 0;
+  position: relative;
+  z-index: 1;
   /* Mobile Devices for Mice */
   /* Landscape phones and down */
   /* Landscape phone to portrait tablet */
@@ -3639,6 +3641,7 @@ a:hover {
       color: #ffffff;
       line-height: 1.47em;
       -webkit-font-smoothing: antialiased;
+      font-size: 0.8333rem;
       /* Mobile Devices for Mice */
       /* Landscape phones and down */
       /* Landscape phone to portrait tablet */
@@ -3723,6 +3726,7 @@ a:hover {
       margin-top: 11px;
       line-height: 1.47em;
       flex-grow: 0;
+      box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
       /* Mobile Devices for Mice */
       /* Landscape phones and down */
       /* Landscape phone to portrait tablet */
@@ -3734,7 +3738,8 @@ a:hover {
           width: 100%;
           margin-right: 0;
           text-align: center;
-          justify-content: center; } }
+          justify-content: center;
+          background-color: #e65933; } }
       .utk-notice .notice-actions .notice-button.covid19 {
         border-color: #fed535 !important;
         background-color: #fed535 !important;
