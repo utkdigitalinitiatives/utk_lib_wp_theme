@@ -2075,6 +2075,11 @@ body.utk-search-open .utk-search {
       /* Landscape phones and down */
       /* Landscape phone to portrait tablet */
       /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
       /* desktop and large desktop */ }
       @media (max-width: 767px) {
         .utk-hours .utk-hours-teaser--hours {
@@ -2082,21 +2087,23 @@ body.utk-search-open .utk-search {
       @media (min-width: 768px) and (max-width: 991px) {
         .utk-hours .utk-hours-teaser--hours {
           display: none; } }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .utk-hours .utk-hours-teaser--hours {
+          flex-direction: column; } }
       .utk-hours .utk-hours-teaser--hours dl {
         margin: 0; }
         .utk-hours .utk-hours-teaser--hours dl dt {
           margin: 0;
           padding: 0;
-          font-weight: 700;
           text-align: center;
-          font-size: 0.6111rem;
-          text-transform: uppercase;
+          font-size: 0.7222rem;
           color: #e0e0e0; }
         .utk-hours .utk-hours-teaser--hours dl dd {
           margin: 0;
           padding: 0;
           text-align: center;
-          font-size: 0.8333rem; }
+          font-size: 0.8333rem;
+          font-weight: 700; }
     .utk-hours .utk-hours-teaser--badge {
       display: block;
       background-color: #f6f6f6;
@@ -2122,6 +2129,21 @@ body.utk-search-open .utk-search {
       /* Landscape phones and down */
       /* Landscape phone to portrait tablet */
       /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
       /* desktop and large desktop */ }
       @media (max-width: 767px) {
         .utk-hours .utk-hours-teaser--badge {
@@ -2134,15 +2156,7 @@ body.utk-search-open .utk-search {
           align-items: center;
           justify-content: center;
           line-height: 1.47em;
-          background-color: #e0e0e0;
-          /* Mobile Devices for Mice */
-          /* Landscape phones and down */
-          /* Landscape phone to portrait tablet */
-          /* Portrait tablet to landscape and desktop */
-          /* desktop and large desktop */ } }
-  @media (max-width: 767px) and (max-width: 767px) {
-    .utk-hours .utk-hours-teaser--badge {
-      font-size: 0.6111rem; } }
+          background-color: #e0e0e0; } }
       @media (min-width: 768px) and (max-width: 991px) {
         .utk-hours .utk-hours-teaser--badge {
           order: 3;
@@ -2154,15 +2168,16 @@ body.utk-search-open .utk-search {
           align-items: center;
           justify-content: center;
           line-height: 1.47em;
-          background-color: #e0e0e0;
-          /* Mobile Devices for Mice */
-          /* Landscape phones and down */
-          /* Landscape phone to portrait tablet */
-          /* Portrait tablet to landscape and desktop */
-          /* desktop and large desktop */ } }
-  @media (min-width: 768px) and (max-width: 991px) and (max-width: 767px) {
-    .utk-hours .utk-hours-teaser--badge {
-      font-size: 0.6111rem; } }
+          background-color: #e0e0e0; } }
+      @media (max-width: 767px) {
+        .utk-hours .utk-hours-teaser--badge {
+          font-size: 0.6111rem; } }
+      @media (min-width: 768px) and (max-width: 991px) {
+        .utk-hours .utk-hours-teaser--badge {
+          font-size: 0.6111rem; } }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .utk-hours .utk-hours-teaser--badge {
+          font-size: 0.6111rem; } }
     .utk-hours .utk-hours-teaser--subtitle {
       font-size: 0.8333rem;
       color: #ffffff;
@@ -3548,7 +3563,15 @@ a:hover {
     font-weight: 700;
     color: #58595b;
     letter-spacing: -0.018em;
-    line-height: 1.47em; }
+    line-height: 1.47em;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .utk-resources-menu--about h3 {
+        margin-bottom: 11px !important; } }
   .utk-resources-menu--about ul {
     margin: 0;
     padding: 0;
@@ -3560,7 +3583,15 @@ a:hover {
       list-style: none;
       font-size: 0.7222rem;
       width: 50%;
-      line-height: 1.95em; }
+      line-height: 1.95em;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .utk-resources-menu--about ul li {
+          width: 100%; } }
       .utk-resources-menu--about ul li a,
       .utk-resources-menu--about ul li a:visited {
         color: #006c93; }
