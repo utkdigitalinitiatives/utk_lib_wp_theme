@@ -9,6 +9,13 @@
   }
 }
 
+@include respond(xs, sm) {
+  .utk-notice {
+    margin-top: $golden-ratio-4;
+    margin-bottom: -$golden-ratio-4;
+  }
+}
+
 .page-contigency-plan-data {
   .utk-notice {
     display: none;
