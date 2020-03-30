@@ -10,7 +10,7 @@
 }
 
 @include respond(xs, sm) {
-  .utk-notice {
+  body:not(.page-id-393) .utk-notice {
     margin-top: $golden-ratio-4;
     margin-bottom: -$golden-ratio-4;
   }
