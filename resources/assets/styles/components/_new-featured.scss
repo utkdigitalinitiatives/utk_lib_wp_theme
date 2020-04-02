@@ -51,12 +51,11 @@
 
     &--media {
       margin-bottom: $golden-ratio-2;
+      height: $golden-ratio-4;
 
-      span {
+      img {
+        height: $golden-ratio-4;
         display: flex;
-        width: 100%;
-        height: $golden-ratio-5;
-        background-color: $gray-1;
       }
     }
 

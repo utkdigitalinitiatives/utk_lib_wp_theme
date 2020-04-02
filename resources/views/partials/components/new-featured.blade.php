@@ -12,6 +12,9 @@
     // gets all the post data foreach
     $resources = Resource::build_resources($curated);
 
+    // set thumbnail size
+    $size = 'medium';
+
   @endphp
   <section class="utk-new-featured">
     <div class="container">
@@ -21,10 +24,15 @@
         </header>
         <main>
           @foreach($resources as $key => $resource)
+            @php
+              $thumbnail  = get_the_post_thumbnail_url($resource['ID'], $size);
+            @endphp
             <div class="utk-new-featured--item">
               <a href="{{ $resource['fields']['resource_url'] }}">
                 <div class="utk-new-featured--item--media">
-                  <span></span>
+                  @if($thumbnail)
+                    <img src="{{$thumbnail}}" alt="{{$resource['post_title']}}" />
+                  @endif
                 </div>
                 <div class="utk-new-featured--item--content">
                   <h4>{{ $resource['post_title'] }}</h4>
