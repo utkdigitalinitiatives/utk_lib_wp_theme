@@ -59,11 +59,25 @@
       text-transform: uppercase;
       font-size: $type-0;
       margin: 0;
+      transition: $transition-all-fast;
 
       .icon-right-big {
         font-size: 0.4rem;
         margin-left: 3px;
         color: $rock;
+        transition: $transition-all-fast;
+      }
+    }
+
+    a:hover,
+    a:focus {
+      .btn {
+        background-color: $gray-0 !important;
+
+        .icon-right-big {
+          margin-left: 6px;
+          color: $orange;
+        }
       }
     }
 
