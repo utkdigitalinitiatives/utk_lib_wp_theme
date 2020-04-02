@@ -43,7 +43,12 @@
     padding: $golden-ratio-3 $golden-ratio-3 calc(#{$golden-ratio-3 + $golden-ratio-3});
     border-top: $golden-ratio-0 solid $orange;
     position: relative;
-    border-radius: $golden-ratio-0;
+    border-radius: $golden-ratio-0 !important;
+    transition: $transition-all-fast;
+
+    &:hover {
+      box-shadow: $box-shadow-float;
+    }
 
     .btn {
       position: absolute;
