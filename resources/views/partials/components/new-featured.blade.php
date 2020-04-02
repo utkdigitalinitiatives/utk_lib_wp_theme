@@ -35,20 +35,20 @@
                 $accent = '#ff8200';
               endif;
             @endphp
-            <div class="utk-new-featured--item" @if($accent) style="border-color: {{$accent}};" @endif>
-              <a href="{{ $resource['fields']['resource_url'] }}">
-                <div class="utk-new-featured--item--media">
-                  @if($thumbnail)
-                    <img src="{{$thumbnail}}" alt="{{$resource['post_title']}}" />
-                  @endif
-                </div>
-                <div class="utk-new-featured--item--content">
-                  <h4>{{ $resource['post_title'] }}</h4>
-                  <p>{{ $resource['fields']['resource_description'] }}</p>
-                </div>
-                <span class="btn btn-secondary btn-outline btn-sm">{{ get_field('resource_button', 'option') }} <span class="icon-right-big"></span></span>
-              </a>
-            </div>
+            <a href="{{ $resource['fields']['resource_url'] }}"
+               class="utk-new-featured--item"
+               @if($accent) style="border-color: {{$accent}};" @endif>
+              <div class="utk-new-featured--item--media">
+                @if($thumbnail)
+                  <img src="{{$thumbnail}}" alt="{{$resource['post_title']}}" />
+                @endif
+              </div>
+              <div class="utk-new-featured--item--content">
+                <h4>{{ $resource['post_title'] }}</h4>
+                <p>{{ $resource['fields']['resource_description'] }}</p>
+              </div>
+              <span class="btn btn-secondary btn-outline btn-sm">{{ get_field('resource_button', 'option') }} <span class="icon-right-big"></span></span>
+            </a>
           @endforeach
         </main>
       </div>

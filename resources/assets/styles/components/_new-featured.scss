@@ -37,6 +37,7 @@
 
   &--item {
     display: flex;
+    flex-direction: column;
     flex: 0 1 calc(25% - #{$golden-ratio-2});
     background-color: $white;
     box-shadow: $box-shadow;
@@ -45,10 +46,6 @@
     position: relative;
     border-radius: $golden-ratio-0 !important;
     transition: $transition-all-fast;
-
-    &:hover {
-      box-shadow: $box-shadow-float;
-    }
 
     .btn {
       position: absolute;
@@ -74,8 +71,10 @@
       }
     }
 
-    a:hover,
-    a:focus {
+    &:hover,
+    &:focus {
+      box-shadow: $box-shadow-float;
+
       .btn {
         background-color: $gray-0 !important;
 
