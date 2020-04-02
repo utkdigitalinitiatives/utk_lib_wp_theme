@@ -1,0 +1,80 @@
+.utk-new-featured {
+  margin-bottom: $golden-ratio-4;
+  background-color: $gray-0;
+  box-shadow: inset $box-shadow;
+
+  &--container {
+    padding: $golden-ratio-4 0;
+  }
+
+  header {
+    h3 {
+      display: block;
+      font-weight: 400;
+      text-align: center;
+      color: $smokey;
+      margin: 0;
+    }
+
+    margin-bottom: $golden-ratio-4;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--item {
+    display: flex;
+    flex: 0 1 calc(25% - #{$golden-ratio-2});
+    background-color: $white;
+    box-shadow: $box-shadow;
+    padding: $golden-ratio-3;
+    border-top: $golden-ratio-0 solid $rock;
+    position: relative;
+
+    &:nth-child(1) {
+      border-color: $regalia;
+    }
+
+    &:nth-child(2) {
+      border-color: $switchgrass;
+    }
+
+    &:nth-child(3) {
+      border-color: $legacy;
+    }
+
+    &:nth-child(4) {
+      border-color: $orange;
+    }
+
+    &--media {
+      margin-bottom: $golden-ratio-2;
+
+      span {
+        display: flex;
+        width: 100%;
+        height: $golden-ratio-5;
+        background-color: $gray-1;
+      }
+    }
+
+    &--content {
+      h4 {
+        text-transform: none;
+        font-weight: 700;
+        font-size: $type-2;
+        line-height: 1.29em;
+        margin: 0 0 $golden-ratio-1;
+        color: $globe !important;
+      }
+
+      p {
+        font-size: $type-1;
+        margin: 0;
+        color: $smokey !important;
+      }
+    }
+  }
+}
