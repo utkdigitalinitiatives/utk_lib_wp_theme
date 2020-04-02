@@ -41,6 +41,7 @@
                   <h4>{{ $resource['post_title'] }}</h4>
                   <p>{{ $resource['fields']['resource_description'] }}</p>
                 </div>
+                <span class="btn btn-secondary btn-outline btn-sm">Learn More <span class="icon-right-big"></span></span>
               </a>
             </div>
           @endforeach
