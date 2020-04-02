@@ -29,8 +29,13 @@
           @foreach($resources as $key => $resource)
             @php
               $thumbnail  = get_the_post_thumbnail_url($resource['ID'], $size);
+              if ($resource['fields']['resource_color'] !== 'default') :
+                $accent = '#' . $resource['fields']['resource_color'];
+              else :
+                $accent = '#ff8200';
+              endif;
             @endphp
-            <div class="utk-new-featured--item">
+            <div class="utk-new-featured--item" @if($accent) style="border-color: {{$accent}};" @endif>
               <a href="{{ $resource['fields']['resource_url'] }}">
                 <div class="utk-new-featured--item--media">
                   @if($thumbnail)
@@ -41,7 +46,7 @@
                   <h4>{{ $resource['post_title'] }}</h4>
                   <p>{{ $resource['fields']['resource_description'] }}</p>
                 </div>
-                <span class="btn btn-secondary btn-outline btn-sm">Learn More <span class="icon-right-big"></span></span>
+                <span class="btn btn-secondary btn-outline btn-sm">{{ get_field('resource_button', 'option') }} <span class="icon-right-big"></span></span>
               </a>
             </div>
           @endforeach

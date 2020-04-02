@@ -41,7 +41,7 @@
     background-color: $white;
     box-shadow: $box-shadow;
     padding: $golden-ratio-3 $golden-ratio-3 calc(#{$golden-ratio-3 + $golden-ratio-3});
-    border-top: $golden-ratio-0 solid $rock;
+    border-top: $golden-ratio-0 solid $orange;
     position: relative;
     border-radius: $golden-ratio-0;
 
@@ -67,28 +67,14 @@
       }
     }
 
-    &:nth-child(1) {
-      border-color: $regalia;
-    }
-
-    &:nth-child(2) {
-      border-color: $switchgrass;
-    }
-
-    &:nth-child(3) {
-      border-color: $legacy;
-    }
-
-    &:nth-child(4) {
-      border-color: $orange;
-    }
-
     &--media {
       margin-bottom: $golden-ratio-2;
-      height: $golden-ratio-4;
+      height: 35px;
+      display: flex;
+      align-items: flex-end;
 
       img {
-        height: $golden-ratio-4;
+        height: 30px;
         display: flex;
       }
     }
