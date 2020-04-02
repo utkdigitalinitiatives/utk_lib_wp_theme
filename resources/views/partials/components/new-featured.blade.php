@@ -15,24 +15,26 @@
   @endphp
   <section class="utk-new-featured">
     <div class="container">
-      <header>
-        <h3>@php echo get_field('resource_title', 'option') @endphp</h3>
-      </header>
-      <main>
-        @foreach($resources as $key => $resource)
-          <div class="utk-new-featured--item">
-            <a href="{{ $resource['fields']['resource_url'] }}">
-              <div class="utk-new-featured--item--media">
-                <span></span>
-              </div>
-              <div class="utk-new-featured--item--content">
-                <h4>{{ $resource['post_title'] }}</h4>
-                <p>{{ $resource['fields']['resource_description'] }}</p>
-              </div>
-            </a>
-          </div>
-        @endforeach
-      </main>
+      <div class="utk-new-featured--container">
+        <header>
+          <h3>@php echo get_field('resource_title', 'option') @endphp</h3>
+        </header>
+        <main>
+          @foreach($resources as $key => $resource)
+            <div class="utk-new-featured--item">
+              <a href="{{ $resource['fields']['resource_url'] }}">
+                <div class="utk-new-featured--item--media">
+                  <span></span>
+                </div>
+                <div class="utk-new-featured--item--content">
+                  <h4>{{ $resource['post_title'] }}</h4>
+                  <p>{{ $resource['fields']['resource_description'] }}</p>
+                </div>
+              </a>
+            </div>
+          @endforeach
+        </main>
+      </div>
     </div>
   </section>
 @endif
