@@ -20,7 +20,10 @@
     <div class="container">
       <div class="utk-new-featured--container">
         <header>
-          <h3>@php echo get_field('resource_title', 'option') @endphp</h3>
+          <h3>{{ get_field('resource_title', 'option') }}</h3>
+          @if(get_field('resource_subtitle', 'option'))
+            <span>{{ get_field('resource_subtitle', 'option') }}</span>
+          @endif
         </header>
         <main>
           @foreach($resources as $key => $resource)

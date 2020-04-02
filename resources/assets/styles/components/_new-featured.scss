@@ -16,6 +16,17 @@
       margin: 0;
     }
 
+    span {
+      font-size: $type-2;
+      line-height: 1.47em;
+      width: $gr-long;
+      display: flex;
+      margin: $golden-ratio-2 auto 0;
+      justify-content: center;
+      text-align: center;
+      color: $smokey;
+    }
+
     margin-bottom: $golden-ratio-4;
   }
 
@@ -32,6 +43,7 @@
     padding: $golden-ratio-3;
     border-top: $golden-ratio-0 solid $rock;
     position: relative;
+    border-radius: $golden-ratio-0;
 
     &:nth-child(1) {
       border-color: $regalia;
