@@ -69,12 +69,13 @@
 
     &--media {
       margin-bottom: $golden-ratio-2;
-      height: 35px;
+      height: $golden-ratio-4;
       display: flex;
       align-items: flex-end;
 
       img {
-        height: 30px;
+        max-height: $golden-ratio-4;
+        max-width: 85%;
         display: flex;
       }
     }
