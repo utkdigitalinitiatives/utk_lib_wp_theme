@@ -114,10 +114,18 @@
       display: flex;
       align-items: center;
 
+      @include respond(xs) {
+        height: unset;
+      }
+
       img {
         max-height: $golden-ratio-4;
         max-width: 85%;
         display: flex;
+
+        @include respond(xs, sm) {
+          max-width: $gr-long;
+        }
       }
     }
 
