@@ -38,6 +38,9 @@
             <a href="{{ $resource['fields']['resource_url'] }}"
                class="utk-new-featured--item"
                @if($accent) style="border-color: {{$accent}};" @endif>
+              <span class="utk-new-featured--item--label">
+                {{ $resource['fields']['resource_type'] }}
+              </span>
               <div class="utk-new-featured--item--media">
                 @if($thumbnail)
                   <img src="{{$thumbnail}}" alt="{{$resource['post_title']}}" />

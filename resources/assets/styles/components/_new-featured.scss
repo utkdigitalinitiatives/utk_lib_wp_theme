@@ -108,6 +108,22 @@
       }
     }
 
+    &--label {
+      display: flex;
+      position: absolute;
+      top: 0;
+      font-size: $type-0;
+      font-weight: 700;
+      align-self: center;
+      margin-top: calc(#{-$golden-ratio-3 / 2} - 3px);
+      background-color: white;
+      height: $golden-ratio-3;
+      padding: 0 $golden-ratio-1;
+      border-radius: $golden-ratio-0;
+      box-shadow: $box-shadow;
+      color: $smokey !important;
+    }
+
     &--media {
       margin-bottom: $golden-ratio-2;
       height: $golden-ratio-4;
