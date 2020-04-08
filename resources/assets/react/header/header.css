@@ -2016,7 +2016,7 @@ body.utk-search-open .utk-search {
     width: 100%;
     height: 100%; }
   .utk-hours .utk-hours-teaser {
-    background-color: #333333;
+    background-color: #ffffff;
     margin-bottom: 0;
     border-radius: 6px;
     overflow: hidden;
@@ -2025,10 +2025,10 @@ body.utk-search-open .utk-search {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
     z-index: 0;
-    border-top: 11px solid #abc178;
     -webkit-font-smoothing: antialiased;
+    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15);
+    border-top: 6px solid #abc178;
     /* Mobile Devices for Mice */
     /* Landscape phones and down */
     /* Landscape phone to portrait tablet */
@@ -2049,7 +2049,7 @@ body.utk-search-open .utk-search {
         display: none !important; } }
     .utk-hours .utk-hours-teaser--title {
       font-size: 1rem;
-      color: #ffffff;
+      color: #58595b;
       z-index: 1;
       font-weight: 700;
       text-align: center;
@@ -2061,8 +2061,9 @@ body.utk-search-open .utk-search {
     .utk-hours .utk-hours-teaser--hours {
       display: flex;
       flex-direction: row;
-      color: #ffffff;
-      justify-content: space-evenly;
+      flex-wrap: wrap;
+      color: #58595b;
+      justify-content: space-around;
       position: relative;
       z-index: 2;
       margin-bottom: 18px;
@@ -2091,22 +2092,22 @@ body.utk-search-open .utk-search {
         .utk-hours .utk-hours-teaser--hours {
           flex-direction: column; } }
       .utk-hours .utk-hours-teaser--hours dl {
-        margin: 0; }
+        margin: 0;
+        flex-basis: 50%; }
         .utk-hours .utk-hours-teaser--hours dl dt {
           margin: 0;
           padding: 0;
           text-align: center;
-          font-size: 0.7222rem;
-          color: #e0e0e0; }
+          font-size: 0.8333rem; }
         .utk-hours .utk-hours-teaser--hours dl dd {
           margin: 0;
           padding: 0;
           text-align: center;
           font-size: 0.8333rem;
-          font-weight: 700; }
+          font-weight: 700;
+          margin-bottom: 6px; }
     .utk-hours .utk-hours-teaser--badge {
       display: block;
-      background-color: #f6f6f6;
       color: #58595b;
       margin: auto auto 0;
       padding: 18px;
@@ -2117,7 +2118,7 @@ body.utk-search-open .utk-search {
       line-height: 1.65em;
       border-radius: 6px;
       margin-bottom: 11px;
-      margin-top: 18px;
+      margin-top: 11px;
       position: relative;
       z-index: 0;
       /* Mobile Devices for Mice */
@@ -2241,11 +2242,11 @@ body.utk-search-open .utk-search {
       .utk-hours .utk-hours-teaser--menu a,
       .utk-hours .utk-hours-teaser--menu a:visited {
         color: #ffffff;
+        font-size: 0.7222rem;
         display: inline-flex;
         padding: 6px 11px;
-        background-color: rgba(255, 255, 255, 0.06);
-        border: 2px solid rgba(167, 169, 172, 0.11);
-        margin-right: 11px;
+        background-color: #006c93;
+        margin-right: 18px;
         transition: all 110ms ease-in-out;
         box-shadow: none;
         text-align: center;
