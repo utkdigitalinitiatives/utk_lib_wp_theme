@@ -2048,14 +2048,13 @@ body.utk-search-open .utk-search {
         border-top: none;
         display: none !important; } }
     .utk-hours .utk-hours-teaser--title {
-      font-size: 1rem;
+      font-size: 0.8333rem;
       color: #58595b;
       z-index: 1;
       font-weight: 700;
-      text-align: center;
       display: block;
       width: 100%;
-      margin: 29px 0 11px;
+      margin: 18px 29px 6px;
       position: relative;
       letter-spacing: -0.029em; }
     .utk-hours .utk-hours-teaser--hours {
@@ -2090,7 +2089,29 @@ body.utk-search-open .utk-search {
           display: none; } }
       @media (min-width: 992px) and (max-width: 1199px) {
         .utk-hours .utk-hours-teaser--hours {
-          flex-direction: column; } }
+          flex-direction: column;
+          flex-wrap: nowrap; } }
+      .utk-hours .utk-hours-teaser--hours--weekly {
+        padding: 0 29px;
+        flex-grow: 1; }
+        .utk-hours .utk-hours-teaser--hours--weekly .utk-hours--week {
+          display: flex;
+          flex-direction: column; }
+          .utk-hours .utk-hours-teaser--hours--weekly .utk-hours--week-future {
+            display: flex; }
+          .utk-hours .utk-hours-teaser--hours--weekly .utk-hours--week div {
+            font-size: 0.7222rem;
+            line-height: 1.47em;
+            flex-grow: 1;
+            margin-top: 2px; }
+          .utk-hours .utk-hours-teaser--hours--weekly .utk-hours--week--dayofweek {
+            font-weight: 400;
+            flex-basis: 50%;
+            flex-grow: 1; }
+          .utk-hours .utk-hours-teaser--hours--weekly .utk-hours--week--hours {
+            font-weight: 700;
+            flex-basis: 50%;
+            flex-grow: 1; }
       .utk-hours .utk-hours-teaser--hours dl {
         margin: 0;
         flex-basis: 50%; }
@@ -2110,9 +2131,10 @@ body.utk-search-open .utk-search {
       display: block;
       color: #58595b;
       margin: auto auto 0;
-      padding: 18px;
+      padding: 11px 29px;
       width: 100%;
-      font-size: 0.7222rem;
+      font-size: 0.6111rem;
+      font-style: italic;
       font-weight: 400;
       text-align: center;
       line-height: 1.65em;
@@ -2211,7 +2233,7 @@ body.utk-search-open .utk-search {
       justify-content: center;
       font-size: 0.8333rem;
       font-weight: 700;
-      margin: 0 11px 18px;
+      margin: 0 29px 18px;
       position: relative;
       z-index: 1;
       line-height: 1.7em;
@@ -2232,7 +2254,7 @@ body.utk-search-open .utk-search {
       /* desktop and large desktop */ }
       @media (min-width: 992px) and (max-width: 1199px) {
         .utk-hours .utk-hours-teaser--menu {
-          margin: 0 11px 11px; } }
+          margin: 0 29px 18px; } }
       @media (max-width: 767px) {
         .utk-hours .utk-hours-teaser--menu {
           display: none; } }
@@ -2249,9 +2271,11 @@ body.utk-search-open .utk-search {
         margin-right: 18px;
         transition: all 110ms ease-in-out;
         box-shadow: none;
-        text-align: center;
         align-items: center;
-        line-height: 1.29em; }
+        line-height: 1.29em;
+        flex-grow: 1;
+        text-align: center;
+        justify-content: center; }
         .utk-hours .utk-hours-teaser--menu a:hover, .utk-hours .utk-hours-teaser--menu a:focus,
         .utk-hours .utk-hours-teaser--menu a:visited:hover,
         .utk-hours .utk-hours-teaser--menu a:visited:focus {
