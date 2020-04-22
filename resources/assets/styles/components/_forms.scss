@@ -27,4 +27,8 @@
 
   box-shadow: none !important;
   cursor: pointer;
+  border: none !important;
+  display: inline-flex;
+  width: auto;
+  font-size: $type-2;
 }
