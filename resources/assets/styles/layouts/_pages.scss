@@ -101,3 +101,19 @@ body.page {
     }
   }
 }
+
+.page-clean {
+  main {
+    margin-top: $golden-ratio-4;
+
+    @include respond(xs, sm) {
+      margin-top: $golden-ratio-1;
+    }
+  }
+
+  @include respond(xs, sm) {
+    .page-body--content {
+      padding-top: 0;
+    }
+  }
+}
