@@ -13,8 +13,17 @@
   //@extend .form-control;
 }
 
+.gform_description {
+  @extend p;
+
+  font-size: $type-2;
+  font-style: italic;
+}
+
 .gform_footer .gform_button.button {
   @extend .btn;
-  @extend .btn-sm;
   @extend .btn-secondary;
+  @extend .btn-sm;
+
+  box-shadow: none !important;
 }
