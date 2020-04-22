@@ -1531,6 +1531,7 @@ body.utk-search-open .utk-search {
       font-size: 0.8333rem;
       color: #333333;
       text-transform: none !important;
+      font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
       /* Mobile Devices for Mice */
       /* Landscape phones and down */
       /* Landscape phone to portrait tablet */
@@ -3627,14 +3628,19 @@ a:hover {
 .utk-notice {
   background-color: #333333;
   font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 18px 0;
+  padding: 11px 0;
   position: relative;
   z-index: 1;
+  color: #333333;
   /* Mobile Devices for Mice */
   /* Landscape phones and down */
   /* Landscape phone to portrait tablet */
   /* Portrait tablet to landscape and desktop */
   /* desktop and large desktop */ }
+  .utk-notice-warning .notice-actions a.notice-button:first-child {
+    background-color: #fed535;
+    border-color: #fed535;
+    color: #333333 !important; }
   @media (max-width: 767px) {
     .utk-notice {
       padding-bottom: 29px; } }
@@ -3673,7 +3679,6 @@ a:hover {
     flex-direction: column;
     font-size: 1rem;
     font-weight: 700;
-    color: #ffffff;
     -webkit-font-smoothing: antialiased;
     line-height: 1.29em;
     /* Mobile Devices for Mice */
@@ -3694,7 +3699,6 @@ a:hover {
     transition: all 110ms ease-in-out;
     height: auto; }
     .utk-notice--content p {
-      color: #ffffff;
       line-height: 1.47em;
       -webkit-font-smoothing: antialiased;
       font-size: 0.8333rem;
@@ -3710,7 +3714,7 @@ a:hover {
       .utk-notice--content p a:visited,
       .utk-notice--content p a:hover,
       .utk-notice--content p a:focus {
-        color: #ffffff;
+        color: #333333;
         font-weight: 700;
         display: inline-flex;
         flex-direction: column; }
@@ -3720,7 +3724,7 @@ a:hover {
         .utk-notice--content p a:focus:after {
           width: 100%;
           height: 2px;
-          background-color: #58595b;
+          background-color: #333333;
           content: '';
           margin-top: -2px; }
       .utk-notice--content p:first-child {
@@ -3728,7 +3732,7 @@ a:hover {
       .utk-notice--content p:last-child {
         margin-bottom: 0; }
   .utk-notice--toggle {
-    background-color: #58595b;
+    background-color: #ffffff;
     border: none;
     height: 47px;
     width: 47px;
@@ -3741,22 +3745,11 @@ a:hover {
     margin: 0;
     transform: rotate(0);
     transition: all 290ms ease-in-out;
-    /* Mobile Devices for Mice */
-    /* Landscape phones and down */
-    /* Landscape phone to portrait tablet */
-    /* Portrait tablet to landscape and desktop */
-    /* desktop and large desktop */ }
-    @media (max-width: 767px) {
-      .utk-notice--toggle {
-        top: unset;
-        bottom: calc(-29px + (-47px / 2));
-        right: 50%;
-        margin-right: calc(-23.5px);
-        background-color: #e65933; } }
+    display: none; }
     .utk-notice--toggle::before {
       content: "\E801";
       font-family: fontello, monospace;
-      color: #ffffff !important;
+      color: #58595b !important;
       font-style: normal;
       font-size: 1rem;
       speak: none;
@@ -3773,17 +3766,15 @@ a:hover {
     flex-wrap: wrap; }
     .utk-notice .notice-actions .notice-button {
       border: 2px solid #58595b;
-      background-color: transparent;
-      padding: 11px 18px;
+      background-color: #333333;
+      padding: 6px 11px;
       display: inline-flex;
       font-size: 0.7222rem;
       font-weight: 700;
       color: #ffffff !important;
-      margin-right: 1rem;
-      margin-top: 11px;
+      margin-right: 11px;
       line-height: 1.47em;
       flex-grow: 0;
-      box-shadow: 0 2px 5px rgba(51, 51, 51, 0.29);
       /* Mobile Devices for Mice */
       /* Landscape phones and down */
       /* Landscape phone to portrait tablet */
@@ -3796,10 +3787,6 @@ a:hover {
           margin-right: 0;
           text-align: center;
           justify-content: center; } }
-      .utk-notice .notice-actions .notice-button.covid19 {
-        border-color: #fed535 !important;
-        background-color: #fed535 !important;
-        color: #333333 !important; }
       .utk-notice .notice-actions .notice-button:last-child {
         margin-right: 0; }
       .utk-notice .notice-actions .notice-button:after {
