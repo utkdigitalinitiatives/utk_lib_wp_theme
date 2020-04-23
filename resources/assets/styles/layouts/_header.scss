@@ -48,6 +48,7 @@
     line-height: $golden-ratio-4;
     color: $white;
     font-weight: 700;
+    white-space: nowrap;
 
     @include respond(xs, sm) {
       line-height: $golden-ratio-4;
