@@ -3637,13 +3637,13 @@ a:hover {
   /* Landscape phone to portrait tablet */
   /* Portrait tablet to landscape and desktop */
   /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .utk-notice {
+      padding: 0; } }
   .utk-notice-warning .notice-actions a.notice-button:first-child {
     background-color: #fed535;
     border-color: #fed535;
     color: #333333 !important; }
-  @media (max-width: 767px) {
-    .utk-notice {
-      padding-bottom: 29px; } }
   .utk-notice--main {
     display: flex;
     flex-direction: column;
@@ -3763,7 +3763,16 @@ a:hover {
       -webkit-font-smoothing: antialiased; }
   .utk-notice .notice-actions {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (max-width: 767px) {
+      .utk-notice .notice-actions {
+        margin-left: -18px;
+        width: calc(100% + (18px * 2)); } }
     .utk-notice .notice-actions .notice-button {
       border: 2px solid #58595b;
       background-color: #333333;
@@ -3786,7 +3795,9 @@ a:hover {
           width: 100%;
           margin-right: 0;
           text-align: center;
-          justify-content: center; } }
+          justify-content: center;
+          border-left: none;
+          border-right: none; } }
       .utk-notice .notice-actions .notice-button:last-child {
         margin-right: 0; }
       .utk-notice .notice-actions .notice-button:after {
