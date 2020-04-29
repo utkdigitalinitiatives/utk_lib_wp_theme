@@ -1,4 +1,4 @@
 <Files "dist/assets.json">
-  Header set Access-Control-Allow-Origin "*"
-  Header set Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+  Header Set Access-Control-Allow-Origin "*"
+  Header Set Access-Control-Allow-Methods: "GET"
 </Files>
